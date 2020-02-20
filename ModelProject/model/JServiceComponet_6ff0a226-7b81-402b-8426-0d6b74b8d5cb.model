@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6ff0a226-7b81-402b-8426-0d6b74b8d5cb" name="总库业务凭证接收服务组件" ename="DownloadAllFile" shared="false">
+  <jproperties id="8bc34bdc-675f-403f-856f-7dfe0f47ede8" key="GeneratedTime" value="1330483908484"/>
+  <refModule href="JModule_25d11261-dcf7-4812-b1b5-99be397ccae9.model#25d11261-dcf7-4812-b1b5-99be397ccae9"/>
+  <methods id="753e1273-e12b-4d5f-bc89-b8a683e1fac7" ename="getRecvLogBeforeDate" name="接收日志查询" codecomment="获得指定日期之前的接收日志，如果日期为空，那么查询全部接收日志" returntype="java.util.List" remark="获得指定日期之前的接收日志，如果日期为空，那么查询全部接收日志">
+    <methodParams id="712aa33c-e33e-4a30-843b-dc629f705377" name="日期yyyymmdd" ename="recvDate" type="java.lang.String" codecomment="接收日期yyyymmdd"/>
+  </methods>
+  <methods id="21bebf9f-d3ca-4ae2-95ac-0728b579586d" ename="getFileInfoBySendNo" name="根据发送流水号获得业务凭证（信息文件）的详细信息" codecomment="根据发送流水号获得业务凭证（信息文件）的详细信息，一个发送流水号可以找到一个" returntype="com.cfcc.itfe.persistence.dto.TvFilesDto" remark="根据发送流水号获得业务凭证（信息文件）的详细信息，一个发送流水号可以找到一个">
+    <methodParams id="b8181509-3108-4928-bce5-1bb28eeb0edd" name="发送流水号" ename="no" type="java.lang.String" codecomment="发送流水号"/>
+  </methods>
+  <methods id="49a65c71-fd0e-4e2c-9e1a-603cee9a5100" ename="getFileListBySendNo" name="根据发送流水号查找发送凭证的所有附件" codecomment="根据发送流水号查找发送凭证的所有附件，一个发送记录可能会有多个附件" returntype="java.util.List" remark="根据发送流水号查找发送凭证的所有附件，一个发送记录可能会有多个附件">
+    <methodParams id="3b922949-ec64-40ea-8b1c-00d4f58d3702" name="接收日志信息" ename="recvLog" type="com.cfcc.itfe.persistence.dto.TvRecvLogShowDto" codecomment="接收日志信息"/>
+    <methodParams id="cc729fb3-d93d-4e5d-9023-7a2f8cff2731" name="发送流水号" ename="sendNo" type="java.lang.String" codecomment="发送流水号"/>
+  </methods>
+  <methods id="dcfd9973-e8eb-42a1-a331-487de2501ee1" ename="updateStatus" name="修改已经下载的接收日志的处理标志" codecomment="修改已经下载的接收日志的处理标志" returntype="com.cfcc.devplatform.customtype.Void" remark="修改已经下载的接收日志的处理标志">
+    <methodParams id="330dd67c-50ef-443b-bdab-a7a32e1d3c6e" name="接收日志的集合" ename="recvLogs" type="java.util.List" codecomment="接收日志的集合"/>
+    <methodParams id="fcc3e500-86f4-44a7-a262-f34da578916b" name="处理标志" ename="status" type="java.lang.String" codecomment="处理标志"/>
+  </methods>
+  <methods id="0b8e2f60-663a-41ae-ab06-cdc698ba9992" ename="getRecvLogReport" name="getRecvLogReport" codecomment="统计指定日期各种业务凭证的接收情况" returntype="java.util.List" remark="统计指定日期各种业务凭证的接收情况">
+    <methodParams id="5f484cd7-d544-4e55-81f3-2f820fa7d910" name="日期yyyymmdd" ename="recvDate" type="java.lang.String" codecomment="日期yyyymmdd"/>
+  </methods>
+  <methods id="af3b695a-2fd3-498e-9d36-195434cd007c" ename="recvDelete" name="作废已经接收的凭证" codecomment="作废已经接收的凭证" returntype="com.cfcc.devplatform.customtype.Void" remark="作废已经接收的凭证">
+    <methodParams id="04556581-9200-43d7-9d4d-c0f9f74bf083" name="recvLog" ename="recvLog" type="com.cfcc.itfe.persistence.dto.TvRecvLogShowDto" codecomment="凭证接收日志"/>
+  </methods>
+</model:JServiceComponent>

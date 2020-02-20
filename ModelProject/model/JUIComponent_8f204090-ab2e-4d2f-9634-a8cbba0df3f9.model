@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8f204090-ab2e-4d2f-9634-a8cbba0df3f9" name="库存统计分析表(上海)" ename="StockCountAnalysicsRpt">
+  <jproperties id="ab5edafd-95dd-4289-9424-3146ab31980b" key="GeneratedTime" value="1379380304640"/>
+  <refModule href="JModule_2151f1c4-7b66-446b-8e2a-b969e8e81d52.model#2151f1c4-7b66-446b-8e2a-b969e8e81d52"/>
+  <model id="cbf44fc5-f9e7-4d3d-97ee-02ca14c46cd1" name="JModelImpl-cbf44fc5-f9e7-4d3d-97ee-02ca14c46cd1">
+    <attributes id="5e1bb678-e3d3-4a7e-b027-f6962c74d6bf" name="startqueryyear" type="java.lang.String"/>
+    <attributes id="165b6a17-2e5c-48bb-8c85-d8cbf5baa85b" name="endqueryyear" type="java.lang.String"/>
+    <attributes id="167ebb58-473d-4a0c-9f73-2482b7e93143" name="startdate" type="java.lang.String"/>
+    <attributes id="5a8d1cd0-33b5-4eb5-baaf-8322e1effb0c" name="enddate" type="java.lang.String"/>
+    <attributes id="8d6b141f-b208-41f5-a9d1-3370497a489b" name="sleTreCode" type="java.lang.String"/>
+    <attributes id="b11aa56a-90c1-4394-be0a-369af973f482" name="treList" type="java.util.List"/>
+    <attributes id="3b8bda54-ba1d-492e-b16d-70e80d239efc" name="sleOfFlag" type="java.lang.String"/>
+    <attributes id="ce6fe5c5-fc77-40df-9453-3e929e608e67" name="sleBudKind" type="java.lang.String"/>
+    <attributes id="cecbd2eb-9af6-4b17-8f09-bf945aa679e3" name="sleMoneyUnit" type="java.lang.String"/>
+    <directions id="fc0033ff-ea21-4853-97c4-9854cd97be6c" viewers="b71e0f59-8e39-40cf-bd24-9431c8970f30" name="查询" ename="queryReport"/>
+    <directions id="199f5747-10bf-47f8-844c-71e0dd34d440" viewers="ec13336e-b078-40cb-b9bf-c1e79bbb3c22" name="返回" ename="goBack"/>
+    <directions id="da8a9965-89cf-4e7c-8b6f-03c7eb607aa3" name="导出Excel文件" ename="exportExcelFile"/>
+  </model>
+  <contentAreas id="46838bbc-55f8-4948-8ea1-240cca3a7f24">
+    <contentareanode id="176aae89-cd0c-4335-96d4-5d80388eb8fd" name="库存统计分析查询条件" grouptitle="库存统计分析查询条件">
+      <widgetRefs xsi:type="model:Combo" id="c7096fe9-29bb-43fe-ba8e-935def6b38ea" name="开始年度" binding="startqueryyear" caption="开始年度">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7765b7c1-7622-4537-b00c-bdb4591fbf7f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="b85ed4d0-e9dd-426a-b65a-b3de45e1fa02" name="结束年度" binding="endqueryyear" caption="结束年度">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7765b7c1-7622-4537-b00c-bdb4591fbf7f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ba30d3b8-5094-4cf8-9d07-dc2aed5dc4e7" name="开始日期" binding="startdate" caption="开始日期" pattern="@4"/>
+      <widgetRefs xsi:type="model:Text" id="9e8a74c3-27ef-481a-9e27-81e392371dc1" name="结束日期" binding="enddate" caption="结束日期" pattern="@4"/>
+      <widgetRefs xsi:type="model:Combo" id="8dd34ed6-a0a9-4fd9-bb4b-f13371f524e3" name="国库代码" binding="sleTreCode" caption="国库代码" display="strename" underly="strecode" modelsource="treList"/>
+      <widgetRefs xsi:type="model:Combo" id="b23088b3-e5fb-4429-a327-84d8db72bb7a" name="辖属标志" binding="sleOfFlag" caption="辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8502f57a-8b74-4a2a-b358-90f359c6a43b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="7b5ea5b1-fe5c-4c20-86d2-1615677df616" name="预算种类" binding="sleBudKind" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="e0508b1d-75fd-456e-9f81-8554da27857c" name="调整期标志" binding="sleTrimFlag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="3b520cc7-0d14-485c-ae42-9b56ac450e1d" name="金额单位" binding="sleMoneyUnit" caption="金额单位">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4becbd9c-60df-4c15-aec5-13e3c4016b00"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="eacd1293-88d6-44cc-a6cb-2bb11f080a3f" name="库存统计分析查询结果" grouptitle="">
+      <jreportref id="3d612f2b-70f9-422f-81da-4448b5bd9072" name="库存统计分析查询结果" reportpath="reportPath" binding="reportList" parammap="reportMap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="ea821492-c410-4d19-825a-59ea40518351">
+    <pages id="28de438e-2c62-4ea2-a351-787ca393998f" name="库存统计分析查询界面">
+      <views id="ec13336e-b078-40cb-b9bf-c1e79bbb3c22" name="库存统计分析查询条件界面" isdefault="true" contentArea="176aae89-cd0c-4335-96d4-5d80388eb8fd">
+        <buttonArea id="4c9c4821-edcd-4176-a0d5-b7620ce0ae7b" name="JButtonAreaImpl-4c9c4821-edcd-4176-a0d5-b7620ce0ae7b">
+          <buttons id="2f8cfd0f-74fc-4ab3-8440-cbc19e326b8c" name="查询" caption="查询" direction="fc0033ff-ea21-4853-97c4-9854cd97be6c"/>
+        </buttonArea>
+      </views>
+      <views id="b71e0f59-8e39-40cf-bd24-9431c8970f30" name="库存统计分析查询结果界面" contentArea="eacd1293-88d6-44cc-a6cb-2bb11f080a3f">
+        <buttonArea id="a7e994ac-8d80-4157-85f1-d93eca098238" name="JButtonAreaImpl-a7e994ac-8d80-4157-85f1-d93eca098238">
+          <buttons id="4055297e-a673-4f36-b6a6-0a113f5271c5" name="返回" caption="返回" direction="199f5747-10bf-47f8-844c-71e0dd34d440"/>
+          <buttons id="762749c9-200b-44d2-a9b7-ce7456358ef3" name="导出标准Excel文件" caption="导出标准Excel文件" direction="da8a9965-89cf-4e7c-8b6f-03c7eb607aa3"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

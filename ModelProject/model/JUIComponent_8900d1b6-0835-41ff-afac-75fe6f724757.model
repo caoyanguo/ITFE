@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8900d1b6-0835-41ff-afac-75fe6f724757" name="修改用户密码" ename="modifyPassword" shared="true">
+  <jproperties id="92157c3f-2d07-4a66-af4e-c26c2e210389" key="GeneratedTime" value="1380093355593"/>
+  <refModule href="JModule_7a27d7a5-e628-4012-b630-4981b570f299.model#7a27d7a5-e628-4012-b630-4981b570f299"/>
+  <model id="36391b69-4ab8-4014-8a93-345041697de7" name="JModelImpl-36391b69-4ab8-4014-8a93-345041697de7">
+    <attributes id="5f41db70-5f8e-45a9-8d02-090bb54b7daf" name="password" type="java.lang.String"/>
+    <attributes id="a40f2d37-c4ae-4cfb-ae7a-caf6c1e63ac8" name="validatePassword" type="java.lang.String"/>
+    <attributes id="26d593b0-ca5e-4d2b-8182-a0afe7ca5c8a" name="oldpassword" type="java.lang.String"/>
+    <attributes id="b712fab7-028c-4efe-80ee-0cb076860d6a" name="usercode" type="java.lang.String"/>
+    <directions id="b75a8e05-7cd3-4197-8d90-606eca24fb83" name="修改密码" ename="modifyPassword"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_28b5efc8-3e7c-449e-9a12-4a522f6533be.model#28b5efc8-3e7c-449e-9a12-4a522f6533be"/>
+  <contentAreas id="3c419313-caa8-4fa9-afd1-50411bdf66b0">
+    <contentareanode id="08f38bb9-6077-48d5-8ca6-e092748dd1a4" name="修改密码" grouptitle="修改密码" columnnum="1">
+      <widgetRefs xsi:type="model:Text" id="97b7f350-35c2-45dd-a4bd-c2ff53f1be48" name="用户代码" binding="usercode" caption="用户代码" enable="false"/>
+      <widgetRefs xsi:type="model:Password" id="3f07d020-4e3c-4ef2-8091-50ad28567bd5" name="原密码" binding="oldpassword" caption="原 密 码" pattern="@32" required="true"/>
+      <widgetRefs xsi:type="model:Password" id="b329ea82-4043-4177-bb24-e7145c129f89" name="password" extpoperties="" binding="password" caption="新 密 码" pattern="@32" required="true">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#bc1adc83-d92f-4a63-84b0-5bac6d1c4a2f"/>
+        <labelStyle id="81260d34-fd2b-4304-bf51-dbfeba6b37f5" name="LabelStyleImpl-81260d34-fd2b-4304-bf51-dbfeba6b37f5" ename="LabelStyleImpl81260d34fd2b4304bf51dbfeba6b37f5"/>
+        <componentStyle id="6950afef-ebe9-4ed1-b5e3-e8ba93fac739" name="ComponentStyleImpl-6950afef-ebe9-4ed1-b5e3-e8ba93fac739" ename="ComponentStyleImpl6950afefebe94ed1b5e3e8ba93fac739"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Password" id="6f1796f2-787b-47c8-b852-c2e07f8e6240" name="validatePassword" binding="validatePassword" caption="确认密码" pattern="@32" required="true">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#bc1adc83-d92f-4a63-84b0-5bac6d1c4a2f"/>
+        <labelStyle id="b2f4f2e2-223b-4ad5-af3e-3416bbb63fae" name="LabelStyleImpl-b2f4f2e2-223b-4ad5-af3e-3416bbb63fae" ename="LabelStyleImplb2f4f2e2223b4ad5af3e3416bbb63fae"/>
+        <componentStyle id="39430068-7e4a-4040-b308-721545c3b603" name="ComponentStyleImpl-39430068-7e4a-4040-b308-721545c3b603" ename="ComponentStyleImpl394300687e4a4040b308721545c3b603"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="74a93b19-d22e-4c47-ad7a-789b81016cf1">
+    <pages id="8c981682-90e3-419d-94b2-cb4fff424981" name="用户密码修改">
+      <views id="b1f8978d-544f-487b-9e66-a3ab361a5fc7" name="修改密码" type="" path="" isdefault="true" contentArea="08f38bb9-6077-48d5-8ca6-e092748dd1a4">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="619e66ab-ad01-411d-bdfa-c6373d70b1a3" name="JButtonAreaImpl-619e66ab-ad01-411d-bdfa-c6373d70b1a3">
+          <buttons id="22ffbc2a-6450-4ba9-a2be-759f5c4aebfd" name="ok" caption="确认" checkrequired="true" direction="b75a8e05-7cd3-4197-8d90-606eca24fb83"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

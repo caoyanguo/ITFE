@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="dca438f2-0756-4510-88f3-ffa6a63c7686" name="9105自由格式报文" ename="FreeFormateMsg" shared="true">
+  <jproperties id="6ceb7e9e-62ca-4bae-b828-dc2dfca3b356" key="GeneratedTime" value="1332229633921"/>
+  <refModule href="JModule_2aa01b14-5f1d-498c-8123-0da8e5aa2806.model#2aa01b14-5f1d-498c-8123-0da8e5aa2806"/>
+  <methods id="9bb56c00-452b-47b0-a3e0-990f1d55fcb4" ename="sendFreeFormateMsg" name="发送" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="d7f3d520-4705-4fd4-82f2-b94d48d58366" name="发起机构代码" ename="sendOrgCode" type="java.lang.String"/>
+    <methodParams id="c153f7d7-2051-4cc0-a3f6-98fd45259875" name="接收机构代码" ename="rcvOrgCode" type="java.lang.String"/>
+    <methodParams id="cdab71b7-b430-4734-b38c-fc382686390d" name="内容" ename="content" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="15c4e000-c0d4-415a-a513-483e7ad1c728" name="征收机关节点对应关系维护" ename="taxorgcode" shared="true">
+  <jproperties id="a3ce1da3-a3e4-4278-b9b9-dfbed4184197" key="GeneratedTime" value="1498127946208"/>
+  <refModule href="JModule_2d124fec-002c-42d4-b0d4-16bb0640d972.model#2d124fec-002c-42d4-b0d4-16bb0640d972"/>
+  <model id="ee44d31d-bfca-456f-a9a9-a08bc2d09a43" name="JModelImpl-ee44d31d-bfca-456f-a9a9-a08bc2d09a43">
+    <attributes id="ea93debd-cf8b-400d-8038-c69e847df79e" name="dto" type="com.cfcc.itfe.persistence.dto.TsTaxorgDto"/>
+    <attributes id="5a64bf1b-2f8b-4f09-8262-825fd0b8e33b" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="22dbbd85-9320-4476-8a98-7f92fb3c3136" name="searchdto" type="com.cfcc.itfe.persistence.dto.TsTaxorgDto"/>
+    <directions id="f4f128d0-fe1c-4475-b464-de27716daa52" viewers="054ee669-34ba-4d85-8292-4d064fa209bb" name="查询" ename="search"/>
+    <directions id="4ecdbdbb-0df4-4530-9fd1-01bedbbbcb19" viewers="65b0706a-4b0b-4580-8a9f-9ac4842eb67f" name="设置" ename="adddata"/>
+    <directions id="bc5d5d1e-8cd3-4c33-b130-b28fd2ef3523" viewers="eea81f23-5d4d-4a24-bd37-ad033833349d" name="修改" ename="updatedata"/>
+    <directions id="ed5a3e2c-4277-4f3e-9207-9fd838ee1198" name="删除" ename="deletedata"/>
+    <directions id="a5db059c-b1f2-41c3-a9ad-402d4cd6fbf5" viewers="054ee669-34ba-4d85-8292-4d064fa209bb" name="返回" ename="reback"/>
+    <directions id="9d26cb45-e7bb-49ee-a8d9-37ddd6044fef" viewers="054ee669-34ba-4d85-8292-4d064fa209bb" name="保存" ename="savedata"/>
+    <directions id="dba5ed80-b8bf-4584-bf71-d27d40bc5ad7" viewers="054ee669-34ba-4d85-8292-4d064fa209bb" name="修改保存" ename="saveupdae"/>
+    <directions id="e4af429c-b95f-4556-a0a0-fc87543707a3" name="单击选择" ename="singleselect"/>
+  </model>
+  <services href="JServiceComponet_e43eb46c-7542-482a-95d5-9f84b4ddc795.model#e43eb46c-7542-482a-95d5-9f84b4ddc795"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="5dbd131c-68a4-454a-9faf-2ef3bc655aac">
+    <contentareanode id="82d32592-5454-4b98-9351-d9a390de7663" name="信息查询" grouptitle="信息查询" binding="searchdto">
+      <widgetRefs xsi:type="model:Text" id="bfb66c19-87dc-4e28-b876-878ec2b1d952" name="国库代码" binding="strecode" caption="国库代码"/>
+      <widgetRefs xsi:type="model:Text" id="ba86dc80-a431-4a76-85dd-f9e3d6b26cfd" name="征收机关代码" binding="staxorgcode" caption="征收机关代码"/>
+    </contentareanode>
+    <contentareanode id="87c071ec-fb4b-45a3-9552-088196f4cc85" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="8e5baf49-a553-457d-babe-937161e956e7" name="查询结果" binding="pagingcontext" caption="查询结果" tabletype="paging" refsingleclickdirection="e4af429c-b95f-4556-a0a0-fc87543707a3">
+        <columnlist id="b31d16b5-3f69-4d6b-9eec-8bb3e02cf60c" name="征收机关代码" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="309284a2-0d2a-445d-8856-2d67ca162ac0" name="征收机关名称" binding="staxorgname" caption="征收机关名称"/>
+        <columnlist id="85f510fa-2786-4702-b23e-5ad774cfbd8f" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="5fdaa5cd-34e6-4db2-9407-fe21588c2ba9" name="节点代码" binding="snodecode" caption="节点代码"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="9f0fc9a2-8c0c-47d9-bda1-761ba6cfa8c1" name="录入界面" grouptitle="录入界面" binding="dto">
+      <widgetRefs xsi:type="model:Text" id="954b6bfb-6014-452d-b2fd-287deec86be3" name="征收机关代码" binding="staxorgcode" caption="征收机关代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="90219445-6433-4955-a098-d1453bcba282" name="征收机关名称" binding="staxorgname" caption="征收机关名称"/>
+      <widgetRefs xsi:type="model:Text" id="07307115-c6e1-434d-a653-5f17f751393f" name="国库代码" binding="strecode" caption="国库代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="c3f39b2f-ac1c-41fe-a738-f0e1625a8f17" name="节点代码" binding="snodecode" caption="节点代码" required="true"/>
+    </contentareanode>
+    <contentareanode id="5a49572c-8dd3-4110-bffc-47f0028c0084" name="修改界面" grouptitle="修改界面" binding="dto">
+      <widgetRefs xsi:type="model:Text" id="5d7f9443-b1e9-4e03-932e-c05f153629df" name="征收机关代码" binding="staxorgcode" caption="征收机关代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="af40d6e4-e002-4e16-87cb-4b77f6e79b2a" name="征收机关名称" binding="staxorgname" caption="征收机关名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e4c2f4d9-8fe5-462a-a267-13368260c15f" name="国库代码" binding="strecode" caption="国库代码"/>
+      <widgetRefs xsi:type="model:Text" id="d42ff895-1f6b-4b61-a791-ff72dc7fca7f" name="节点代码" binding="snodecode" caption="节点代码"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="2a482a71-6473-444d-9f54-dbc99f33c28a">
+    <pages id="2d0de4fa-6d41-4c94-a68d-01a42db0c6a6" name="征收机关与节点对应关系" functioncode="S_297">
+      <views id="c37fe06d-4428-4c43-bba8-040869f5f6f8" name="征收机关与节点查询界面" isdefault="true" contentArea="82d32592-5454-4b98-9351-d9a390de7663">
+        <buttonArea id="63ccf3ea-a4a5-4a57-9ecf-40edc4d3d56c" name="JButtonAreaImpl-63ccf3ea-a4a5-4a57-9ecf-40edc4d3d56c">
+          <buttons id="d2247db8-d215-41a8-9e05-49ae573a152b" name="查询" caption="查询" direction="f4f128d0-fe1c-4475-b464-de27716daa52"/>
+        </buttonArea>
+      </views>
+      <views id="054ee669-34ba-4d85-8292-4d064fa209bb" name="征收机关与节点对应关系查询结果" contentArea="87c071ec-fb4b-45a3-9552-088196f4cc85">
+        <buttonArea id="3577d423-3d96-4008-98e1-6b3bb7913d56" name="JButtonAreaImpl-3577d423-3d96-4008-98e1-6b3bb7913d56">
+          <buttons id="27c5925d-91e8-4ddd-a874-dc27ce66ff84" name="设置" caption="设置" direction="4ecdbdbb-0df4-4530-9fd1-01bedbbbcb19"/>
+          <buttons id="ba04e743-7375-42a8-ba4d-d7b8a7a1c5cf" name="修改" caption="修改" direction="bc5d5d1e-8cd3-4c33-b130-b28fd2ef3523"/>
+          <buttons id="c75e6f27-dbce-4cac-9739-2db59847111e" name="删除" caption="删除" direction="ed5a3e2c-4277-4f3e-9207-9fd838ee1198"/>
+        </buttonArea>
+      </views>
+      <views id="65b0706a-4b0b-4580-8a9f-9ac4842eb67f" name="征收机关与节点对应关系录入界面" contentArea="9f0fc9a2-8c0c-47d9-bda1-761ba6cfa8c1">
+        <buttonArea id="0968ca2f-3423-40c3-bd23-93356d92bed3" name="JButtonAreaImpl-0968ca2f-3423-40c3-bd23-93356d92bed3">
+          <buttons id="0745c4e4-2987-4020-ab35-26d2e4b1c8b5" name="保存" caption="保存" checkrequired="true" direction="9d26cb45-e7bb-49ee-a8d9-37ddd6044fef"/>
+          <buttons id="42302641-8506-4cfc-b31d-eb6d1791034f" name="返回" caption="返回" direction="a5db059c-b1f2-41c3-a9ad-402d4cd6fbf5"/>
+        </buttonArea>
+      </views>
+      <views id="eea81f23-5d4d-4a24-bd37-ad033833349d" name="征收机关与节点对应关系修改界面" contentArea="5a49572c-8dd3-4110-bffc-47f0028c0084">
+        <buttonArea id="645a3373-4c38-4f4f-8f82-f7d58e5434c8" name="JButtonAreaImpl-645a3373-4c38-4f4f-8f82-f7d58e5434c8">
+          <buttons id="ec3d0431-6179-4b1b-89bb-536d507d4f46" name="保存" caption="保存" direction="dba5ed80-b8bf-4584-bf71-d27d40bc5ad7"/>
+          <buttons id="7c909cf2-129b-4aa6-ac0b-3af8f50ea922" name="返回" caption="返回" direction="a5db059c-b1f2-41c3-a9ad-402d4cd6fbf5"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

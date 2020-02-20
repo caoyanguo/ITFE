@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="749105b1-2d39-447b-805c-381ef9bb189d" name="回执" ename="receipt">
+  <jproperties id="97e015cf-268b-45c8-a4ff-d3bc28f56a5d" key="GeneratedTime" value="1329898890125"/>
+  <refModule href="JModule_a60b23f2-ce4c-4bfb-8501-4ea050f0bed4.model#a60b23f2-ce4c-4bfb-8501-4ea050f0bed4"/>
+  <model id="80d8e869-5299-45bf-a72d-e8d6b67bf369" name="JModelImpl-80d8e869-5299-45bf-a72d-e8d6b67bf369">
+    <directions id="0f5f995c-c2d2-4965-aa34-ecb7fc5feada" name="转导出" ename="export"/>
+  </model>
+  <contentAreas id="7937acb4-bb40-4b7a-83f4-ea14ca52a8b2">
+    <contentareanode id="0ab2cb00-3ed3-4f57-b144-49762e72f78a" name="录入">
+      <widgetRefs xsi:type="model:Text" id="9048987d-94bd-466d-96df-d8e56a6e05c1" name="录入批次" visible="true" caption="录入批次" enable="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="adb4d1c3-10ac-4241-91f5-3e2aee20050c">
+    <pages id="d27307eb-73b9-430d-95b7-30b3184b090e" name="显示页面">
+      <views id="b355370e-dc52-4cff-872a-8c008ad71b18" name="录入页面" isdefault="true" contentArea="0ab2cb00-3ed3-4f57-b144-49762e72f78a">
+        <buttonArea id="a30dacda-ead4-4e0c-bf95-5ac679dde87c" name="JButtonAreaImpl-a30dacda-ead4-4e0c-bf95-5ac679dde87c">
+          <buttons id="0b58dedf-2f10-4b2b-adbe-7292d148ebfb" name="导出" visible="true" caption="导出" enable="true" direction="0f5f995c-c2d2-4965-aa34-ecb7fc5feada"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

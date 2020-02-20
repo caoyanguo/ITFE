@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0aa8559e-c810-46e0-883d-c9e3f95c81c4" name="共享分成参数表维护服务组件" ename="TpShareDivide" shared="true">
+  <jproperties id="5a7d7957-d255-4d11-8ec6-d0257fd84ad1" key="GeneratedTime" value="1362367152198"/>
+  <refModule href="JModule_4c710e3d-eb3d-4fc2-b204-6baef234374f.model#4c710e3d-eb3d-4fc2-b204-6baef234374f"/>
+  <methods id="1f437ece-a64d-40d2-8a22-da02fcdd2eea" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="e39d58a0-ec4d-441b-a215-428d97d5f282" name="共享分成参数" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TpShareDivideDto"/>
+  </methods>
+  <methods id="17e31792-26d5-4aa4-9c00-daa75be9572c" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="d26c5875-71d2-4581-8d03-64e43fc941cb" name="共享分成参数" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TpShareDivideDto"/>
+  </methods>
+  <methods id="95761daa-b65a-4634-91f3-f170f2589fb3" ename="modInfo" name="修改" codecomment="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="0c325170-60d8-42ee-a2cc-06a7a3210369" name="共享分成参数" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TpShareDivideDto"/>
+  </methods>
+</model:JServiceComponent>

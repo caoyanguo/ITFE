@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b8e8cf59-51f2-429d-9cc2-b589cdc96848" name="征收机关合并参数维护" ename="tstaxorgcodemerger">
+  <jproperties id="be6e621b-99e6-4f0e-91a4-ff7a729f52f0" key="GeneratedTime" value="1380182861421"/>
+  <refModule href="JModule_c8b9587b-a0ee-4b87-bf10-b2b4091a6c08.model#c8b9587b-a0ee-4b87-bf10-b2b4091a6c08"/>
+  <model id="5a1dae44-ac62-47f9-9d2f-bb47657881eb" name="JModelImpl-5a1dae44-ac62-47f9-9d2f-bb47657881eb">
+    <directions id="00dd0bd9-65e9-453d-a76a-049c65965999" viewers="56ebb666-1a13-415e-808c-5dd405bd6e02" name="增加" ename="add"/>
+    <directions id="56d19278-a80f-4d47-81a0-6013b770f2fd" viewers="68a5a7e8-8f44-411b-8cd3-24347f25d38f" name="修改" ename="modify"/>
+    <directions id="d50aff5a-9acc-4e2e-a647-3bfa35f2d2c6" viewers="53db5501-5b44-4d74-b2f6-afee34f5d6b3" name="删除" ename="delete"/>
+    <directions id="f42c6153-1868-4dc6-a1b8-74058f3015b4" viewers="53db5501-5b44-4d74-b2f6-afee34f5d6b3" name="返回维护界面" ename="backmain"/>
+    <directions id="5b8db273-787e-4738-a2a3-f113c3a357c1" viewers="56ebb666-1a13-415e-808c-5dd405bd6e02" name="到录入界面" ename="toadd"/>
+    <directions id="054cc779-3aae-4e9f-a753-d3b5f3b11c71" viewers="68a5a7e8-8f44-411b-8cd3-24347f25d38f" name="到修改界面" ename="tomodify"/>
+    <directions id="a3b730ce-8b67-417b-9454-c337e7b9b5c7" name="单选" ename="singleselect"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_7f0b5d13-d378-4a00-97e0-3fa878a33638.model#7f0b5d13-d378-4a00-97e0-3fa878a33638"/>
+  <contentAreas id="63878fc9-a945-4b4c-8ef7-eed3173144f9">
+    <contentareanode id="19f56d65-d55c-4cdd-98ec-5905f204fda5" name="录入界面" grouptitle="录入界面" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="94b7e236-d915-4003-b553-d7313569339c" name="合并前征收机关代码" binding="adddto.spretaxorgcode" caption="合并前征收机关代码" required="true" display="staxorgname" underly="staxorgcode" modelsource="taxorglist">
+        <componentStyle id="ba21188a-78a7-4e87-b742-ffee9b741143" name="ComponentStyleImpl-ba21188a-78a7-4e87-b742-ffee9b741143" ename="ComponentStyleImplba21188a78a74e87b742ffee9b741143" horizontalspan="2"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ca01333d-3619-4bf7-bb61-4479ab0707d5" name="prestaxorgcode" binding="adddto.spretaxorgcode" visible="false" caption="合并前征收机关代码" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="f65ed78b-f978-46d7-a610-b5949097b002" name="saftertaxorgcode" binding="adddto.saftertaxorgcode" visible="true" caption="合并后征收机关代码" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="fa6d47b0-f814-4d95-96b5-2cc035c28f9f" name="合并后征收机关名称" binding="adddto.staxorgname" caption="合并后征收机关名称"/>
+      <widgetRefs xsi:type="model:Text" id="19f21733-5832-4e9b-bf4c-8901b2df7d0f" name="报表类型" binding="adddto.sbiztype" caption="报表类型"/>
+      <widgetRefs xsi:type="model:Label" id="5cf945b9-5d77-4907-88ad-f5cfff22f155" name="TdTaxorgMerger" caption="1收入2退库"/>
+    </contentareanode>
+    <contentareanode id="7787bd23-d840-41f4-9622-4095087973c9" name="维护界面" grouptitle="维护界面">
+      <widgetRefs xsi:type="model:Table" id="3fa8d887-4a60-4f0a-b16c-3596eaf36659" name="征收机关合并参数维护" binding="searchlist" caption="征收机关合并参数维护" selectedrows="" refsingleclickdirection="a3b730ce-8b67-417b-9454-c337e7b9b5c7">
+        <columnlist id="060dbd03-53bc-46be-8253-e1f3290bcfa4" name="spretaxorgcode" binding="spretaxorgcode" caption="合并前征收机关代码"/>
+        <columnlist id="c44e8e41-32c4-4aac-b396-ca497cbadaae" name="saftertaxorgcode" binding="saftertaxorgcode" caption="合并后征收机关代码"/>
+        <columnlist id="5f74bde5-a40b-4f8c-bcdc-7daf6ad64c73" name="staxorgname" binding="staxorgname" caption="合并后征收机关名称"/>
+        <columnlist id="307de4f6-2a8e-4c34-934d-730d75e66062" name="sbiztype" binding="sbiztype" caption="报表类型"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="adf0a09f-3398-4060-be35-250eb679cb8f" name="修改界面" grouptitle="修改界面" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="d2427f91-a2b8-4985-9856-727d91082eb3" name="合并前征收机关代码" binding="selddto.spretaxorgcode" caption="合并前征收机关代码" required="true" display="staxorgname" underly="staxorgcode" modelsource="taxorglist">
+        <componentStyle id="a71e99d4-101f-49c2-acca-3b146da5a460" name="ComponentStyleImpl-a71e99d4-101f-49c2-acca-3b146da5a460" ename="ComponentStyleImpla71e99d4101f49c2acca3b146da5a460" horizontalspan="2"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="fc1c5ddc-9c76-4cf5-91b0-ad0968ab7bcb" name="prestaxorgcode" binding="selddto.spretaxorgcode" visible="false" caption="合并前征收机关代码" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="95343e31-be70-4710-9afe-41f399207ac3" name="saftertaxorgcode" binding="selddto.saftertaxorgcode" visible="true" caption="合并后征收机关代码" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="aa6c8fac-2ed1-42d8-91ea-67fd87c66b77" name="saxorgname" binding="selddto.staxorgname" visible="true" caption="合并后征收机关名称" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="b9d81e6a-77f4-4f40-a845-f9117ced3775" name="报表类型" binding="selddto.sbiztype" caption="报表类型"/>
+      <widgetRefs xsi:type="model:Label" id="624b65b3-8ecc-4d80-89e0-9b13ed065c24" name="TdTaxorgMerger" caption="1收入2退库"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="d92e6ea7-cd6c-42e6-bbd5-a077efaaa7a3">
+    <pages id="dc5e2e33-3b27-498b-9dd3-4cc38f502c73" name="查询界面">
+      <views id="53db5501-5b44-4d74-b2f6-afee34f5d6b3" name="维护界面" isdefault="true" contentArea="7787bd23-d840-41f4-9622-4095087973c9">
+        <buttonArea id="7b511f44-4529-416b-9845-96d7798d0538" name="JButtonAreaImpl-7b511f44-4529-416b-9845-96d7798d0538">
+          <buttons id="f303eb5e-dea1-4c83-a168-de6d1e091a64" name="toadd" caption="录入" direction="5b8db273-787e-4738-a2a3-f113c3a357c1"/>
+          <buttons id="0ce19d18-fecb-4056-b666-940dbc321445" name="tomodify" caption="修改" direction="054cc779-3aae-4e9f-a753-d3b5f3b11c71"/>
+          <buttons id="ac2f554d-1503-473d-9067-253fc139bb88" name="todelete" caption="删除" direction="d50aff5a-9acc-4e2e-a647-3bfa35f2d2c6"/>
+        </buttonArea>
+      </views>
+      <views id="56ebb666-1a13-415e-808c-5dd405bd6e02" name="录入界面" contentArea="19f56d65-d55c-4cdd-98ec-5905f204fda5">
+        <buttonArea id="ad00c681-e044-4bdb-8218-4f405b57c453" name="JButtonAreaImpl-ad00c681-e044-4bdb-8218-4f405b57c453">
+          <buttons id="4b32ab4b-b0ef-4761-bbd0-7caba08b8f5e" name="add" caption="保存" checkrequired="true" direction="00dd0bd9-65e9-453d-a76a-049c65965999"/>
+          <buttons id="71bdbe46-1f56-4d49-b4fd-a805d720ca12" name="backmain" caption="返回" direction="f42c6153-1868-4dc6-a1b8-74058f3015b4"/>
+        </buttonArea>
+      </views>
+      <views id="68a5a7e8-8f44-411b-8cd3-24347f25d38f" name="修改界面" contentArea="adf0a09f-3398-4060-be35-250eb679cb8f">
+        <buttonArea id="245a71e0-75ff-4d22-a585-93ad64a2f730" name="JButtonAreaImpl-245a71e0-75ff-4d22-a585-93ad64a2f730">
+          <buttons id="62bdce2b-abaa-4285-8e43-822a9ce54da3" name="modify" caption="保存" checkrequired="true" direction="56d19278-a80f-4d47-81a0-6013b770f2fd"/>
+          <buttons id="ebf2f3a7-4dc3-4579-98c0-e2ea671e9d2a" name="backmain" caption="返回" direction="f42c6153-1868-4dc6-a1b8-74058f3015b4"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

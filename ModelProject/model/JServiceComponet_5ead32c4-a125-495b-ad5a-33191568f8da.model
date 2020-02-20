@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5ead32c4-a125-495b-ad5a-33191568f8da" name="下载报表情况检查服务" ename="checkStatusOfReportDownload">
+  <jproperties id="14627da3-3f5c-4808-8c82-aa653b2c823e" key="GeneratedTime" value="1404113279761"/>
+  <refModule href="JModule_0f5c43ef-2e17-45ce-b166-7783a752cca7.model#0f5c43ef-2e17-45ce-b166-7783a752cca7"/>
+  <methods id="b17783e2-f375-49c6-adae-0cd31a07384c" ename="searchStatusOfReportDownLoad" name="查询下载报表情况" codecomment="查询下载报表情况" returntype="com.cfcc.jaf.common.page.PageResponse" remark="查询下载报表情况">
+    <methodParams id="8ecbdfc6-db30-4767-8027-4ccd6980ee8e" name="日期" ename="searchdate" type="java.sql.Date"/>
+    <methodParams id="6a56c3d3-edd8-434f-a55f-7ef741c3ffb5" name="国库主体代码" ename="strecode" type="java.lang.String"/>
+    <methodParams id="c032fc73-c164-4ff4-87cb-88cec5ae9e30" name="参数" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+  <methods id="4383f5e9-fb99-4a19-9106-4977d094321f" ename="exportToServer" name="导出报表到服务器" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="75d3be5d-f212-441b-b480-cf0ce9fa0310" name="导出报表日期" ename="exportdate" type="java.lang.String"/>
+  </methods>
+  <methods id="b1cc0187-fcaa-46b0-a3e0-5bc30903c7e2" ename="exportBusData" name="导出业务数据到服务器" returntype="java.lang.String">
+    <methodParams id="970df5fc-a8b3-4c77-bc62-47d06ce07f1d" name="导出日期" ename="exportdate" type="java.lang.String"/>
+    <methodParams id="fe6d4fe6-115b-4351-8c20-a759c79dcc1a" name="业务类型" ename="busType" type="java.lang.String"/>
+  </methods>
+  <methods id="076ce472-07b2-4a38-b337-b1e38f962ea4" ename="downloadbus" name="下载业务数据" returntype="java.util.Map">
+    <methodParams id="fd087f2f-394f-4625-b721-45f41ac4db1a" name="导出日期" ename="exportdate" type="java.lang.String"/>
+    <methodParams id="ca9bb05f-c0fa-413a-8a66-4cc6ac1cc611" name="业务类型" ename="busType" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

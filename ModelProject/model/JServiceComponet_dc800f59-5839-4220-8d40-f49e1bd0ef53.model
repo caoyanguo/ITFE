@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="dc800f59-5839-4220-8d40-f49e1bd0ef53" name="业务凭证表单服务组件" ename="TsOperationform">
+  <jproperties id="ea6e0036-11fa-45ae-b52c-da6ca54f9fb1" key="GeneratedTime" value="1330485996281"/>
+  <refModule href="JModule_2c6e18ac-e977-4a05-8f66-5237903ebe41.model#2c6e18ac-e977-4a05-8f66-5237903ebe41"/>
+  <methods id="d4b7f918-244b-423d-b64f-f2f1a5fcbe77" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="业务凭证表单">
+    <methodParams id="ebc0143b-fcf5-452d-946a-ff9c30641749" name="业务凭证表单" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="afe0a77a-3701-4b42-ada5-c7629809905c" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a3c1972c-1b5c-4cf7-b8c2-c54c29954379" name="业务凭证表单" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="afe0a77a-3701-4b42-ada5-c7629809905c" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="19f69773-23a1-4eda-8fab-bfbba606c774" name="业务凭证表单" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

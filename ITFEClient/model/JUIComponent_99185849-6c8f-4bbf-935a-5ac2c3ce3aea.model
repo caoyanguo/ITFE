@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="99185849-6c8f-4bbf-935a-5ac2c3ce3aea" name="发起凭证统计查询" ename="SendVoucherInfoCount">
+  <jproperties id="3a215298-4af6-4888-9c12-e412a20a1d96" key="GeneratedTime" value="1508142278426"/>
+  <refModule href="JModule_1fc52fc8-0161-4253-a05e-37960983579c.model#1fc52fc8-0161-4253-a05e-37960983579c"/>
+  <model id="522f2324-d55c-41d2-b319-ce5ecfb6d5d2" name="JModelImpl-522f2324-d55c-41d2-b319-ce5ecfb6d5d2">
+    <directions id="f5097f9a-c7ef-4c93-a9fd-5ccad32b410f" name="查询" ename="searchvoucher"/>
+    <directions id="0e40c8d0-33e1-41a5-b482-7fd03d4b84cd" name="导出" ename="exportfile"/>
+  </model>
+  <contentAreas id="71f7fa09-dc0f-44c2-afd6-89dcb6d2b5ec">
+    <contentareanode id="1f9a89f4-196b-486d-a25e-4b0cc97b304e" name="查询条件选择">
+      <widgetRefs xsi:type="model:Combo" id="e85a7bf3-4a11-4ec8-b332-b2b2fb2ca753" name="国库代码" binding="strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="0383167c-0e91-4d3f-ae64-23480870d1b8" name="凭证类型" binding="searchdto.svtcode" caption="凭证类型" display="svaluecmt" underly="svalue" modelsource="vtcodelist"/>
+      <widgetRefs xsi:type="model:Text" id="ded763a1-534d-435a-86fb-4f792867f3f3" name="开始时间" binding="searchdto.shold1" caption="开始时间" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="e3449757-fedb-45e7-a0cd-57824c9e215c" name="结束时间" binding="searchdto.shold2" caption="结束时间" required="true"/>
+      <widgetRefs xsi:type="model:Button" id="d801c173-8594-4b34-ae5c-2c155157649b" name="查询" caption="查询" layout="GridLayout" checkrequired="true" direction="f5097f9a-c7ef-4c93-a9fd-5ccad32b410f"/>
+    </contentareanode>
+    <contentareanode id="bf77bd81-62fa-457a-9aa1-8c9384fc3064" name="查询结果列表">
+      <widgetRefs xsi:type="model:Table" id="98f65202-18d6-4c5e-a504-5d5442271ab1" name="查询结果列表" binding="datalist" caption="查询结果列表">
+        <columnlist id="6fcd6bb9-09dd-405b-9103-0e26f8832507" name="国库代码" binding="strecode" caption="国库代码">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+        </columnlist>
+        <columnlist id="106d7bbe-07c2-43bf-8b7c-d656a22fc327" name="凭证类型" binding="svtcode" caption="凭证类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+        </columnlist>
+        <columnlist id="f6fd07d8-dd43-4a14-9fa1-e9cb3666a24b" name="生成条数" binding="buildcount" caption="生成条数"/>
+        <columnlist id="95089991-eb4d-4661-888a-9d0d7916d4a9" name="生成金额" binding="buildamt" caption="生成金额"/>
+        <columnlist id="dbfb0f93-0a1b-440b-8ce4-8c1933fd063d" name="签章条数" binding="stampcount" caption="签章条数"/>
+        <columnlist id="5d3fc964-9f8b-442c-8afa-663231247e89" name="签章金额" binding="stampamt" caption="签章金额"/>
+        <columnlist id="5b6bfd40-84ae-4ebd-8ec1-104fe0846032" name="发送条数" binding="sendcount" caption="发送条数"/>
+        <columnlist id="cecc6869-e319-448a-9877-393816634881" name="发送金额" binding="sendamt" caption="发送金额"/>
+        <columnlist id="fab0d27c-682f-4606-bbcc-d05586e7a8da" name="合计条数" binding="allcount" caption="合计条数"/>
+        <columnlist id="88debea2-10a8-43ba-b2cb-9f2e52cb3c8b" name="合计金额" binding="allamt" caption="合计金额"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="b7c315d9-9b4c-4bcb-9e49-532655b76593">
+    <pages id="4a0b2c1b-4089-4eb1-9d8a-c4a257089887" name="发起凭证统计查询">
+      <views id="798fc151-000a-4eb6-9532-bd0cbafe8462" name="发起凭证统计查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="1f9a89f4-196b-486d-a25e-4b0cc97b304e bf77bd81-62fa-457a-9aa1-8c9384fc3064">
+        <buttonArea id="117e0c09-8a04-40ed-b461-a9d64ab85821" name="JButtonAreaImpl-117e0c09-8a04-40ed-b461-a9d64ab85821">
+          <buttons id="ce381d36-3206-4efa-9cb0-d9cbaf1ff7c6" name="导出" caption="导出" direction="0e40c8d0-33e1-41a5-b482-7fd03d4b84cd"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b67a1470-fe81-46dc-8200-0bb992b913ba" name="已入库电子税票导出服务组件" ename="ElecTaxBillExportService">
+  <jproperties id="b20c7360-52cf-4773-b15f-fcfdecec6daf" key="GeneratedTime" value="1502674903750"/>
+  <refModule href="JModule_5f3b9ebb-8f72-42cb-8810-bff8af408a58.model#5f3b9ebb-8f72-42cb-8810-bff8af408a58"/>
+  <methods id="516e9f0c-b821-42e8-850b-787277e049c2" ename="exportfile" name="查询已入库电子税票" returntype="java.lang.String">
+    <methodParams id="c61fee68-334d-426d-8c40-9a149a9fd7d3" name="查询条件" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="b01149a7-b819-40bf-ad3e-580ada1d77e2" ename="busworkcount" name="业务量统计" returntype="java.util.List">
+    <methodParams id="b68b0643-a213-4471-b0f4-9b6506798e51" name="参数" ename="paramMap" type="java.util.Map"/>
+  </methods>
+</model:JServiceComponent>

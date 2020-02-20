@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e9cebfba-d396-4e98-88eb-0426d938c2dc" name="刷新后台缓存" ename="ReFreshCacheInfo" shared="true">
+  <jproperties id="28c92260-63bf-4045-827d-8d57e7fb3052" key="GeneratedTime" value="1379820250031"/>
+  <refModule href="JModule_57d74aac-5599-4965-be54-900a36b2a15f.model#57d74aac-5599-4965-be54-900a36b2a15f"/>
+  <methods id="c26aeae0-7ca7-4e28-aea8-caa7887e72e4" ename="reloadBuffer" name="reloadBuffer" returntype="java.lang.String">
+    <methodParams id="2ce96cf8-0a78-4954-b826-ca639fe6a285" name="核算主体代码" ename="sbookorgcode" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

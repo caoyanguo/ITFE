@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e1f30ae0-6bb3-48a3-9f6d-3683c0b6edaa" name="对账结果查询" ename="voucherInfo">
+  <jproperties id="567e9eee-b992-4463-8c11-2cb64f545825" key="GeneratedTime" value="1378448853343"/>
+  <refModule href="JModule_c16044f9-89b9-4c7a-9395-551601aaf965.model#c16044f9-89b9-4c7a-9395-551601aaf965"/>
+  <model id="2c56b0bc-fc2b-4419-9001-464414179124" name="JModelImpl-2c56b0bc-fc2b-4419-9001-464414179124">
+    <attributes id="f505f331-a02d-485f-909c-f70643bbe0ef" name="searchDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+    <attributes id="ac8c2147-c2ee-4b6d-913c-0a958ed767bc" name="detailDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+    <attributes id="13eb56f8-3cf7-4ccf-a358-6c0da3109249" name="selectedDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+    <attributes id="64c17e28-08f9-49b6-92fd-dafa4fc000ad" name="dzType" type="java.lang.String"/>
+    <directions id="7fb75a8b-0d61-48fc-a343-1264451f68bb" viewers="d9fcd796-b126-49a1-b03e-f5b110b175dc" name="返回" ename="goback"/>
+    <directions id="a94942fa-26a2-409c-8095-6032e22f9c0c" name="查询" ename="queryInfo"/>
+    <directions id="4d8b9d70-b4cd-4907-826c-aa9cdd729690" viewers="2d6d2e21-7709-4cf1-9fec-e4485a6b5f68" name="双击跳转" ename="doubleTodetail"/>
+    <directions id="ec2e3db4-2e87-4dce-8446-ab71410d2d73" name="单击" ename="singleSelect"/>
+    <directions id="c2aea18f-5f80-46bd-ac74-928561d479b7" viewers="2d6d2e21-7709-4cf1-9fec-e4485a6b5f68" name="跳转至详细界面" ename="goDetail"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_1e5925c9-ca4e-4190-aa6a-ba7f5e4c7780.model#1e5925c9-ca4e-4190-aa6a-ba7f5e4c7780"/>
+  <contentAreas id="1f84467f-14ef-4415-98eb-5adcb093c8d9">
+    <contentareanode id="0555aeb6-74e0-4b6c-92d1-7e4fdaa870ed" name="查询条件" grouptitle="查询条件" binding="">
+      <widgetRefs xsi:type="model:Combo" id="a1c59dce-ffa9-409a-b848-461284d34d9f" name="对账类型" binding="dzType" caption="对账类型" editable="false" required="true" readonly="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#5b9ab7a7-4364-41de-b589-5178f42e423f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6a357ca1-974b-4241-8f82-52701ca8b60c" name="国库名称" binding="searchDto.strecode" caption="国库名称">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Date" id="e396a23b-23fd-4f60-9017-df1c58282eac" name="账务日期" binding="searchDto.screatdate" caption="账务日期"/>
+      <widgetRefs xsi:type="model:Text" id="46e0a97d-b95d-478d-bbde-4f32a7fc741b" name="财政行政区划" binding="searchDto.sadmdivcode" caption="财政行政区划"/>
+    </contentareanode>
+    <contentareanode id="a337bf16-9b1a-476c-b92c-70d9cacbec51" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="a48e9f11-4aab-4416-a0e1-d3a4ec590b8a" name="对账结果列表" binding="pagingcontext" caption="对账结果列表" tabletype="paging" refdoubleclickdirection="4d8b9d70-b4cd-4907-826c-aa9cdd729690" refsingleclickdirection="ec2e3db4-2e87-4dce-8446-ab71410d2d73">
+        <columnlist id="c0686848-8668-4953-a62c-90bd6ea3bc56" name="核算主体代码" binding="sorgcode" caption="核算主体代码" editable="false"/>
+        <columnlist id="071c1974-82e2-406f-a2cc-96cac6515a3a" name="国库名称" binding="strecode" caption="国库名称" editable="false">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+        </columnlist>
+        <columnlist id="47553a37-4506-4903-a625-b692a6e21325" name="文件名称" binding="sfilename" caption="文件名称" editable="false"/>
+        <columnlist id="9869034e-41b5-4cae-b9b4-80856bb8ef4e" name="区划代码" binding="sadmdivcode" caption="区划代码" editable="false"/>
+        <columnlist id="772a4b94-3174-47e1-9a50-bb5585d26002" name="凭证代码" binding="svtcode" caption="凭证代码" editable="false"/>
+        <columnlist id="03a2a1be-0fde-4efb-a441-b433adeef8ac" name="凭证编号" binding="svoucherno" caption="凭证编号" editable="false"/>
+        <columnlist id="f07323cc-fc61-4a4d-a801-3ce6da982ec6" name="凭证标志" binding="svoucherflag" caption="凭证标志" editable="false"/>
+        <columnlist id="ec50bc59-c80f-492c-8f01-baf8b03d3339" name="金额" binding="nmoney" caption="金额" editable="false"/>
+        <columnlist id="984d1f95-647b-4297-8f9c-404339fd9552" name="状态" binding="sstatus" caption="状态" editable="false"/>
+        <columnlist id="03651254-0324-4732-a577-197f292d08ee" name="授权用户" binding="sconfirusercode" caption="授权用户" editable="false"/>
+        <columnlist id="10795e28-fe77-429b-9792-507c68aaa8ac" name="审核用户" binding="sverifyusercode" caption="审核用户" editable="false"/>
+        <columnlist id="d499ff91-a429-42d6-a2a3-74e9ea226c5d" name="签章ID" binding="sstampid" caption="签章ID" editable="false"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="dbe1b4cd-5a71-4d68-ac38-cf1c5de542b0" name="明细信息" grouptitle="明细信息" binding="selectedDto" columnnum="3">
+      <widgetRefs xsi:type="model:Text" id="67b6a7c9-f730-4d73-b50f-d9ceb9f10714" name="序列号" binding="sdealno" caption="序列号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="a3d62020-7259-4017-a580-eba8619d1e7e" name="核算主体代码" binding="sorgcode" caption="核算主体代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="c61fa84d-db42-4a48-b2d2-23e699a0658c" name="国库名称" binding="strecode" caption="国库名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="80fa1e7f-2f33-445a-9c9e-051694a0e4f3" name="文件名称" binding="sfilename" caption="文件名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="4bfa557f-e132-4921-b6cb-e39ed5b390c8" name="区划代码" binding="sadmdivcode" caption="区划代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="2888881c-6c61-4adb-897c-5dac91a71e18" name="年度" binding="sstyear" caption="年度" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="04887922-7416-410f-99fe-8f63b6f678b2" name="凭证代码" binding="svtcode" caption="凭证代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="40aebccd-8400-477a-854a-9cea9f8bac1b" name="凭证编号" binding="svoucherno" caption="凭证编号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="82ccc710-987e-4d81-9d17-fd2a54a04be6" name="凭证标志" binding="svoucherflag" caption="凭证标志" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="c53e3ce6-f17e-4616-872f-e9692b640007" name="附加信息" binding="sattach" caption="附加信息" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="095a3081-ad61-454e-b0c0-3bea925f2d92" name="校验信息" binding="sreturnerrmsg" caption="校验信息" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="6a67c1ab-1127-41cb-818f-c1457fca3452" name="创建日期" binding="screatdate" caption="创建日期" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="62eccbd8-38ef-4afb-8f11-48721d467718" name="金额" binding="nmoney" caption="金额" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="021d7a80-baf7-42af-a4fd-908c0e42efd4" name="状态" binding="sstatus" caption="状态" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="fb76bcc0-0c3d-4fb8-b8a3-c9159148302a" name="授权用户" binding="sconfirusercode" caption="授权用户" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="19461a33-75ba-4e56-bd54-a9fb088eecc7" name="审核用户" binding="sverifyusercode" caption="审核用户" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="cf1309b1-ba1d-45ec-bb2d-0d414a586ceb" name="说明" binding="sdemo" caption="说明" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="68831894-2ad9-4cab-b91f-032afaee5e61" name="签章ID" binding="sstampid" caption="签章ID" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="fd12bd8a-4611-4acd-9b7d-e91e9a16e02b" name="包流水号" binding="spackno" caption="包流水号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="9cc5f094-48cf-4b67-b0bd-27511dcc76b0" name="凭证笔数" binding="icount" caption="凭证笔数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="0562efbb-a728-4809-b2d5-1c99bef92510" name="对账金额" binding="ncheckmoney" caption="对账金额" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="66e52853-ed21-4797-b957-da1dad035761" name="对账笔数" binding="icheckcount" caption="对账笔数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="9a2fdf01-7d0f-4d07-a218-7baad189a9c0" name="私章签章用户" binding="sstampuser" caption="私章签章用户" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="c46ca6aa-6024-4935-92e1-77eadffaa344" name="更新时间" binding="tssysupdate" caption="更新时间" editable="false"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="86cfc001-9eac-4e32-b2f7-32090f2b3b91">
+    <pages id="d50d5190-758a-4ef9-bd15-522f51f3c56c" name="对账结果查询">
+      <views id="d9fcd796-b126-49a1-b03e-f5b110b175dc" name="对账结果查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="0555aeb6-74e0-4b6c-92d1-7e4fdaa870ed a337bf16-9b1a-476c-b92c-70d9cacbec51">
+        <buttonArea id="f99a680a-438b-4cfc-aecd-3cc9baa8e7b9" name="JButtonAreaImpl-f99a680a-438b-4cfc-aecd-3cc9baa8e7b9">
+          <buttons id="6ca3235d-bf24-4479-bf55-212ad362ee3c" name="查询" caption="查询" checkrequired="true" direction="a94942fa-26a2-409c-8095-6032e22f9c0c"/>
+          <buttons id="18b33fa7-166f-4cbc-9c33-2ca2bc6d4d2f" name="明细" caption="明细" direction="c2aea18f-5f80-46bd-ac74-928561d479b7"/>
+        </buttonArea>
+      </views>
+      <views id="2d6d2e21-7709-4cf1-9fec-e4485a6b5f68" name="信息明细" contentArea="dbe1b4cd-5a71-4d68-ac38-cf1c5de542b0">
+        <buttonArea id="64d8b09f-a69b-4e69-8930-d7538d9d16f2" name="JButtonAreaImpl-64d8b09f-a69b-4e69-8930-d7538d9d16f2">
+          <buttons id="5effa9f0-1f93-41a8-98c3-cbfde96100f3" name="返回" caption="返回" direction="7fb75a8b-0d61-48fc-a343-1264451f68bb"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

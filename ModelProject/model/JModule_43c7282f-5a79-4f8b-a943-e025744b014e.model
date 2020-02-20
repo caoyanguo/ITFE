@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="43c7282f-5a79-4f8b-a943-e025744b014e" name="业务凭证处理" ename="voucherLoad"/>

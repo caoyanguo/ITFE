@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="41f8d9c8-3236-47eb-ab03-c9ac33a12ab8" name="业务凭证类型" ename="TsOperationtype" shared="true"/>

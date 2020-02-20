@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="TASBizCompare_main"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				#foreach($tabName in $BizCompareTableList)
+				<ref local="maincompare_${tabName.getSrctable()}" />
+				#end
+			</list>
+		</property>
+	</bean>
+
+
+
+	#foreach($tabName in $BizCompareTableList)
+	<bean id="maincompare_${tabName.getSrctable()}"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="sourceList">
+			<list>
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="merge into ${tabName.getSrctable()} as a using ${tabName.getDestable()} as b on( ${tabName.getStrColumns()}) when matched then update set a.s_AuditResult='1'" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="merge into tn_auditresultindex as a using ${tabName.getSrctable()} as b on(a.S_TRASRLNO=b.S_TRASRLNO and b.s_AuditResult='1' and a.S_AUDITRESULT='0') when matched then update set a.s_AuditResult='1'" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="merge into ${tabName.getDestable()} as a using ${tabName.getSrctable()} as b on( ${tabName.getStrColumns()}) when matched then update set a.s_AuditResult='1',a.s_TraSrlNo=b.s_TraSrlNo" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="update ${tabName.getDestable()} set s_TraSrlNo=char(nextval for myseq),C_AUDITSTATE='T' where C_AUDITSTATE!='2' and C_AUDITSTATE!='3' and S_AUDITRESULT!='1'" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="insert into tn_auditresultindex(S_BOOKORGCODE,S_TRECODE,S_TRASRLNO,d_Acct,S_AUDITEDTABCODE,S_TASTABCODE,S_AUDITSUBTABCODE,S_TASSUBTABCODE,S_OFAUDITTYPE,S_OFBIZKIND,C_AUDITSTATE,S_AUDITRESULT,C_AUDITKIND,ts_SysUpdate) select S_BOOKORGCODE,S_TRECODE,s_TraSrlNo,d_Acct,'${tabName.getSrctable()}','${tabName.getDestable()}','','','11',S_BIZTYPE,'2','0','1',current timestamp from ${tabName.getDestable()} where C_AUDITSTATE='T' and S_AUDITRESULT!='1'" />
+					<property name="operType" value="4" />
+				</bean>
+
+                <bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="update ${tabName.getDestable()} set C_AUDITSTATE='2' where C_AUDITSTATE='T'" />
+					<property name="operType" value="4" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	#end
+</beans>

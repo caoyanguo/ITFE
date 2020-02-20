@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a2273499-4a8d-4980-8fb8-9689267e354c" name="Tips数据导出" ename="tipsDataExport">
+  <jproperties id="9626a7c6-4ed8-42dd-aba9-22315a0ba1c0" key="GeneratedTime" value="1513909952473"/>
+  <refModule href="JModule_f1b47442-e7f5-4ac0-b519-682b9c9097b9.model#f1b47442-e7f5-4ac0-b519-682b9c9097b9"/>
+  <model id="13b03cd5-feb6-4427-9d1b-9888b500d964" name="JModelImpl-13b03cd5-feb6-4427-9d1b-9888b500d964">
+    <attributes id="43eaf9ad-0e44-4779-99a4-eeec6fff4678" name="sorgcode" type="java.lang.String"/>
+    <attributes id="948ff0af-6386-48e6-af97-532bc71014d3" name="staxorgcode" type="java.lang.String"/>
+    <attributes id="7f148437-3421-43a8-8add-13896d970442" name="strecode" type="java.lang.String"/>
+    <attributes id="a1b1dbf5-c111-4e6d-9a8c-c15eb06bcf5d" name="sbeflag" type="java.lang.String"/>
+    <attributes id="e1067366-8ab6-4d93-ab54-ab07c17e4fa3" name="startdate" type="java.sql.Date"/>
+    <attributes id="27770b05-2b7f-4c59-8808-8402ada8b55e" name="enddate" type="java.sql.Date"/>
+    <attributes id="5e1a6a98-e311-4301-b950-f8df18f7c83b" name="ifsub" type="java.lang.String"/>
+    <attributes id="3744e798-faa5-49b6-b729-98edda681689" name="exptype" type="java.lang.String"/>
+    <directions id="bbf401db-66de-4813-8cbf-adf4eda84fda" name="导出数据" ename="exportData"/>
+    <directions id="4e7ad914-07b1-4dfb-958f-6d150361e7a0" name="定时导出" ename="timerExport"/>
+  </model>
+  <services href="JServiceComponet_28160bd2-4bc3-4437-be5f-cdee74f5ff3a.model#28160bd2-4bc3-4437-be5f-cdee74f5ff3a"/>
+  <services href="JServiceComponet_45791302-f863-42cf-a397-56ef2fdf82b1.model#45791302-f863-42cf-a397-56ef2fdf82b1"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="52d2c212-b343-4ccd-8376-b3454705fc44">
+    <contentareanode id="b51ef886-6ea0-43c6-836f-eb2c2650e209" name="数据导出条件" grouptitle="数据导出条件">
+      <widgetRefs xsi:type="model:Text" id="7d731995-fc2f-4c10-9a6d-9dab6f78f126" name="财政机构代码" binding="sorgcode" caption="财政机构代码" pattern="@12"/>
+      <widgetRefs xsi:type="model:Combo" id="0d690818-e432-4fe4-8178-b524415e1c98" name="国库代码" binding="strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="23542c07-127e-4728-b5ac-1c1de2df4b7f" name="开始日期" binding="startdate" caption="开始日期"/>
+      <widgetRefs xsi:type="model:Text" id="96a86792-3307-4c91-bee7-5432a7b0f9d8" name="结束日期" binding="enddate" caption="结束日期"/>
+      <widgetRefs xsi:type="model:Text" id="26292571-696d-4962-ac21-760c307ba55a" name="征收机关代码" binding="staxorgcode" caption="征收机关代码" pattern="@12"/>
+      <widgetRefs xsi:type="model:Combo" id="34060215-2207-4866-aef0-357979180e6b" name="辖属标志" binding="sbeflag" caption="报表辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ef34e9df-ed4d-4786-a861-089c968452c7" name="是否包含下级" binding="ifsub" caption="电子税票导出范围">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4d35a42b-9325-46e9-990c-be4d850bdeb2"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="b8823d5e-686f-4488-a8e3-a34f32ebaae7" name="电子税票导出格式" binding="exptype" caption="电子税票导出格式">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9e538a99-d585-4a9b-8df8-60bedac81a50"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="76ce409f-13fd-4531-a642-379f5ece34eb" name="数据导出列表">
+      <widgetRefs xsi:type="model:Table" id="e7c9c78d-e06d-4cb4-bebb-7af0ab77a697" name="TableImpl-e7c9c78d-e06d-4cb4-bebb-7af0ab77a697" binding="typelist" showcheckbox="true" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="checklist">
+        <columnlist id="0514efe4-e8b9-4b2c-bcbd-67b8f6af0c15" name="是否导出" binding="svalue" caption="是否导出"/>
+        <columnlist id="5d31bb24-c029-4522-87d3-d9df56444355" name=" 数据导出项" binding="svaluecmt" caption=" 数据导出项"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="436eb1ad-75b1-4c83-a3b4-d81bf70d984f">
+    <pages id="c88c766a-1044-4cc8-aa20-a60bd67f74d9" name="数据导出界面">
+      <views id="359a8ad7-976a-43b2-b441-691205847a17" name="数据导出界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="b51ef886-6ea0-43c6-836f-eb2c2650e209 76ce409f-13fd-4531-a642-379f5ece34eb">
+        <buttonArea id="06179b91-a4b5-4e7d-a77b-12cef967ac5a" name="JButtonAreaImpl-06179b91-a4b5-4e7d-a77b-12cef967ac5a">
+          <buttons id="888fe671-ee40-4e5b-81ef-898a92458c42" name="重发报表" caption="重发报表" direction="4e7ad914-07b1-4dfb-958f-6d150361e7a0"/>
+          <buttons id="3a762c2a-49af-4404-9bbc-267770c5c2f2" name="导出数据" caption="导出数据" direction="bbf401db-66de-4813-8cbf-adf4eda84fda"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

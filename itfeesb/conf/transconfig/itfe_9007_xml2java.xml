@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="LoginReturn9007" beanIdRef="LoginReturn9007" />
+</jb:bean>
+<jb:bean beanId="LoginReturn9007" class="java.util.HashMap" createOnElement="LoginReturn9007">
+	<jb:value property="LoginResult" decoder="String" data="CFX/MSG/LoginReturn9007/LoginResult" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/LoginReturn9007/AddWord" />
+	<jb:value property="SysStat" decoder="String" data="CFX/MSG/LoginReturn9007/SysStat" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="70a097ae-8d34-4ba6-a1a8-89bd00db80af" name="征收机关代码维护服务组件" ename="TdTaxorgParam" shared="true">
+  <jproperties id="3be12f8e-0fb6-475f-8506-bf23aa7c0fb2" key="GeneratedTime" value="1362479589796"/>
+  <refModule href="JModule_42fde19c-2c67-4a29-bfd4-9db00325cd65.model#42fde19c-2c67-4a29-bfd4-9db00325cd65"/>
+  <methods id="2458a64e-0f82-4267-ae2c-31b602898bf5" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8b291c9b-9140-4aa0-af48-9e955dd1cd9b" name="征收机关" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="dd64b063-c043-430d-866d-c325245ab1a4" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bda045f5-027d-4163-89a8-df2906633715" name="征收机关" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="87493194-c00f-4549-b412-bfbfbdbe38f6" ename="modInfo" name="修改" codecomment="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bfdb8d1d-d997-4786-8c2b-30a55383e610" name="征收机关" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

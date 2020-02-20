@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e3b97f45-7625-4d15-bbe1-26206856b1c7" name="国库收入报解清单打印" ename="incomePrintProc" shared="false"/>

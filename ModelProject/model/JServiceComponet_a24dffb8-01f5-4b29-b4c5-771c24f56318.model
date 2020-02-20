@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a24dffb8-01f5-4b29-b4c5-771c24f56318" name="生成对账凭证" ename="createVoucherForReport" shared="true">
+  <jproperties id="81dfe186-0bf7-45fc-aa57-44f12762f476" key="GeneratedTime" value="1378979226450"/>
+  <refModule href="JModule_3c3eabb3-6ad2-4459-a463-c84944a005ed.model#3c3eabb3-6ad2-4459-a463-c84944a005ed"/>
+  <methods id="6d7bfeba-584b-4bca-834f-02af10506af6" ename="createVoucherAndSend" name="生成凭证并发送" returntype="java.lang.Integer">
+    <methodParams id="c6633dd5-d65a-42c3-a252-d447ccb04c49" name="生成凭证类型" ename="createVoucherType" type="java.lang.String"/>
+    <methodParams id="8d39a1ce-318c-4a7e-863c-8eef0799ea20" name="生成凭证子类型" ename="createSubVoucherType" type="java.lang.String"/>
+    <methodParams id="785bb898-87e9-46e6-a6fa-60f67e26afc0" name="国库代码" ename="treCode" type="java.lang.String"/>
+    <methodParams id="7c04f0df-853a-4540-82e5-f585e3eaf52c" name="生成凭证日期" ename="createVoucherDate" type="java.lang.String"/>
+    <methodParams id="e5723411-40d5-42b0-9101-427f133f7963" name="机构代码" ename="orgcode" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

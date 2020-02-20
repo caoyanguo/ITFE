@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3529d3db-c8b2-4ec9-9caf-d359410b3d2b" name="纳税人与预算单位账号" ename="CorpAcctSearchUI">
+  <jproperties id="959c5ed3-7c4f-4a06-82d2-77f96aa37cf4" key="GeneratedTime" value="1362483940159"/>
+  <refModule href="JModule_762c6f0b-5074-41fb-8a08-ed3d929c00c5.model#762c6f0b-5074-41fb-8a08-ed3d929c00c5"/>
+  <model id="c058815e-678f-4be1-8811-e88aa4065e3b" name="JModelImpl-c058815e-678f-4be1-8811-e88aa4065e3b">
+    <directions id="7c645d16-610c-4e96-a7b7-2062bd388e67" viewers="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="查询" ename="queryBudget"/>
+    <directions id="f192de23-dd9a-4da8-8956-4f652bf0c83f" viewers="f9acdb32-8f47-45ea-82a4-b845af74d23e" name="返回" ename="goBack"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="cf9a6804-d0f8-49f9-9c6d-c3f3b56bc4a4">
+    <contentareanode id="77fe103b-5874-4804-9d31-2ba6c8bd418c" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Text" id="b3d61f9a-b5d9-4833-813c-2a488925ceb8" name="法人账户" binding="querydto.scorpacct" visible="true" caption="法人账户" enable="true"/>
+      <widgetRefs xsi:type="model:Text" id="c5b61d26-118d-484f-9c8d-74580e18e858" name="账户名称" binding="querydto.scorpacctname" visible="true" caption="账户名称" enable="true"/>
+    </contentareanode>
+    <contentareanode id="9ed2254c-b1c3-43eb-b439-138406749c56" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="51b09dfe-d37a-4514-bdd6-2dac041a0574" name="维护查询结果" binding="pagingcontext" caption="维护查询结果" message="" tabletype="paging" pagingtable="">
+        <columnlist id="d2e4d7d0-80c1-43df-ab85-16fa73248f72" name=" 核算主体代码" binding="sbookorgcode" caption=" 核算主体代码"/>
+        <columnlist id="0bcc023f-5a18-4b03-9c40-41e41eb9ab98" name="所属国库主体代码" binding="softrecode" caption="所属国库主体代码"/>
+        <columnlist id="8d13b986-33af-443a-8629-d56cdb7b0c48" name="编号" binding="sdreamno" caption="编号"/>
+        <columnlist id="b46aa9b4-e601-47bb-8703-5f9cfde0c091" name="调整期标志" binding="ctrimflag" caption="调整期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#df715eda-8d3a-4871-9b8e-bd8494c02ba2"/>
+        </columnlist>
+        <columnlist id="66f07836-33ad-4c1c-bbed-5a751d106db8" name="法人账户" binding="scorpacct" caption="法人账户">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aee6ea4c-1e24-4167-88ca-28b74274d1ea"/>
+        </columnlist>
+        <columnlist id="5a8c7fa8-e67e-46d9-a58a-56374ee9997a" name="账户名称" binding="scorpacctname" caption="账户名称">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9f12ef04-1702-463b-a0b8-6af4ac3f9e95"/>
+        </columnlist>
+        <columnlist id="f82c15fa-c17b-4515-bb5b-da7e7b3af25c" name="对应法人代码" binding="scrpcorpcode" caption="对应法人代码">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c826ddbf-b705-4220-b4a5-4b33d8850769"/>
+        </columnlist>
+        <columnlist id="a7bac14c-a27e-4dc5-a1bd-ff0f687b203f" name="行号 " binding="sbnkno" caption="行号 ">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ecf0ef12-269d-481d-8deb-fb5ebc3cb903"/>
+        </columnlist>
+        <columnlist id="c355ab31-4750-4574-a159-b8b8713c975f" name="地址" binding="saddr" caption="地址">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4a2a1b30-1705-4183-8c27-9848583f3f26"/>
+        </columnlist>
+        <columnlist id="79cea8a3-4f69-4e1e-bd10-360c158acac7" name="开户银行行号 " binding="sopnbnkno" caption="开户银行行号 ">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b02bac21-1a22-4704-b4af-56d5542e9de8"/>
+        </columnlist>
+        <columnlist id="bb56bd90-2b41-485a-ba38-00ef834dcdca" name="账户属性" binding="cacctattrib" caption="账户属性">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#087554ad-fd37-41a4-8813-75127eeced90"/>
+        </columnlist>
+        <columnlist id="5a09de5a-d15d-4f75-a30a-87c9b0a4b74e" name="系统更新时间" binding="tssysupdate" caption="系统更新时间">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8425b24a-f674-46f4-b242-d035295b3b64"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="0f9c7b02-6423-42c5-93ee-a59c505cbac7">
+    <pages id="180f65c6-a5bd-415c-99ba-f1108638d07c" name="维护">
+      <views id="f9acdb32-8f47-45ea-82a4-b845af74d23e" name="信息查询" isdefault="true" contentArea="77fe103b-5874-4804-9d31-2ba6c8bd418c">
+        <buttonArea id="9f682520-342a-403e-a63a-5c1c31f17798" name="JButtonAreaImpl-9f682520-342a-403e-a63a-5c1c31f17798">
+          <buttons id="1af53126-fd11-4bf9-b891-589afea589c2" name="查询" caption="查询" direction="7c645d16-610c-4e96-a7b7-2062bd388e67"/>
+        </buttonArea>
+      </views>
+      <views id="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="查询结果" contentArea="9ed2254c-b1c3-43eb-b439-138406749c56">
+        <buttonArea id="2a129b0b-daf6-49d7-9103-b2992f61e29f" name="JButtonAreaImpl-2a129b0b-daf6-49d7-9103-b2992f61e29f">
+          <buttons id="f3bf9177-7a3e-4889-aa63-7087bf1d7f8f" name="返回" caption="返回" direction="f192de23-dd9a-4da8-8956-4f652bf0c83f"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

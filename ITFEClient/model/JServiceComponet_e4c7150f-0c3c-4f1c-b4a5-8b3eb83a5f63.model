@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e4c7150f-0c3c-4f1c-b4a5-8b3eb83a5f63" name="直接提交权限维护服务组件" ename="tsSysParas">
+  <jproperties id="37793a38-cf6c-46be-8ca5-dea934516df1" key="GeneratedTime" value="1361891300703"/>
+  <refModule href="JModule_8253aa29-2cbf-4768-8b63-fe995c2f040d.model#8253aa29-2cbf-4768-8b63-fe995c2f040d"/>
+  <methods id="e355351c-5b28-4b40-9b79-2b82ba597163" ename="modify" name="修改" codecomment="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8a2a2ef1-5862-4aab-a23f-7db0c537450e" name="修改参数" ename="dtoList" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

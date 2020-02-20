@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2abb815c-8ba3-483b-bcbf-5ccb981fa0e2" name="数据变更及文件比对" ename="datachangeAndCompare">
+  <jproperties id="3902aabf-bf4e-4101-9c43-61a2013e14eb" key="GeneratedTime" value="1514992200833"/>
+  <refModule href="JModule_4b57d516-6d96-41cb-93ca-60c01ebb585a.model#4b57d516-6d96-41cb-93ca-60c01ebb585a"/>
+  <model id="bf85af7e-f441-443b-802d-53a6c1a549a2" name="JModelImpl-bf85af7e-f441-443b-802d-53a6c1a549a2">
+    <attributes id="239cae52-b8b8-47f8-ae18-ce8b1e8a582f" name="strsql" type="java.lang.String"/>
+    <attributes id="481441c1-a7d0-4a7f-98a0-5c87b109e4a5" name="tcfile" type="java.util.List"/>
+    <attributes id="93e0640b-053f-4ebf-ad10-fd62c99b9326" name="qcfile" type="java.util.List"/>
+    <directions id="2ad2fe83-b7bb-4e3d-95d5-2ce8bb2a1e58" name="执行SQL" ename="runsql"/>
+    <directions id="20cd3915-f28e-4571-aebb-f4d49ae6011b" name="比对" ename="comparedata"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_e01b147a-6216-431c-b55c-3d05ffba51bd.model#e01b147a-6216-431c-b55c-3d05ffba51bd"/>
+  <contentAreas id="0f07f8d2-44b6-43ae-8522-f4af0323f5bd">
+    <contentareanode id="961e0380-3dd8-4a11-aacc-fbdca56a240c" name="数据变更" grouptitle="数据变更">
+      <widgetRefs xsi:type="model:Textarea" id="cce20a89-2243-43d8-bb8e-d8bf37e650e1" name="变更SQL" binding="strsql" caption="变更SQL" pattern=""/>
+    </contentareanode>
+    <contentareanode id="55bbc23c-d2df-4176-a478-b7bc3560f682" name="文件比对" grouptitle="文件比对">
+      <widgetRefs xsi:type="model:FileUploader" id="73941251-43aa-4fa7-88dd-0b1e3f1d02e9" name="TCBS法人代码文件：" binding="tcfile" caption="TCBS法人代码文件：" message="" required="true" isdirectory="false" ismult="true"/>
+      <widgetRefs xsi:type="model:FileUploader" id="57579adf-2320-4151-bb26-37845341e4eb" name="单位清册文件：" binding="qcfile" caption="单位清册文件：" required="true" isdirectory="false" ismult="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="fb6c38dc-31f9-45f9-adce-485a28575353">
+    <pages id="18541cbb-894f-4d72-b02d-416bc25cfa13" name="数据变更">
+      <views id="449b6db5-5de5-4066-a772-4606788ca521" name="数据变更" isdefault="true" contentArea="961e0380-3dd8-4a11-aacc-fbdca56a240c">
+        <buttonArea id="ba9e4ded-60f2-402e-95b4-ec209b2ecc5d" name="JButtonAreaImpl-ba9e4ded-60f2-402e-95b4-ec209b2ecc5d">
+          <buttons id="b1e117cb-1076-4ba6-9475-84622afb5593" name="执行SQL" caption="执行SQL" checkrequired="true" direction="2ad2fe83-b7bb-4e3d-95d5-2ce8bb2a1e58"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="d1e9c0c1-2176-461c-98ba-8bcdf566f452" name="文件比对">
+      <views id="5df957e6-dd28-4c3d-a6bd-b0eacade94c8" name="文件比对" isdefault="true" contentArea="55bbc23c-d2df-4176-a478-b7bc3560f682">
+        <buttonArea id="ead11cd9-0f9c-49a0-bc47-4412d0deef8f" name="JButtonAreaImpl-ead11cd9-0f9c-49a0-bc47-4412d0deef8f">
+          <buttons id="5bfdad35-0d9e-4abf-8292-c9311285c092" name="比对" caption="比对" direction="20cd3915-f28e-4571-aebb-f4d49ae6011b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

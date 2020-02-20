@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JSubSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="18a8b469-d096-488b-bbae-31443dbca4ff" name="数据审核子系统" ename="DataAudit">
+  <refModules href="JModule_de1e9ed7-43d5-41a2-9a72-c90eec5c97a2.model#de1e9ed7-43d5-41a2-9a72-c90eec5c97a2"/>
+  <refModules href="JModule_fd53f0f4-9dd7-46e1-aa44-8ab07d9fd260.model#fd53f0f4-9dd7-46e1-aa44-8ab07d9fd260"/>
+  <refModules href="JModule_34657623-ac13-4fbd-931d-3cf03cdabe06.model#34657623-ac13-4fbd-931d-3cf03cdabe06"/>
+</model:JSubSystem>

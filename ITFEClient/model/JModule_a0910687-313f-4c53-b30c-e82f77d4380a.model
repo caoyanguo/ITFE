@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a0910687-313f-4c53-b30c-e82f77d4380a" name="直接支付清算回单" ename="directPayReturnReceipt"/>

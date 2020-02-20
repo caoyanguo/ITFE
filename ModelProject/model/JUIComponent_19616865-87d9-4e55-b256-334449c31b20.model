@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="19616865-87d9-4e55-b256-334449c31b20" name="各地资金留用情况表生成" ename="voucherFundRemainGenerate">
+  <jproperties id="1c60d1a0-a288-40e2-8871-086c97ef2e77" key="GeneratedTime" value="1421819186735"/>
+  <refModule href="JModule_0a7c645b-0901-462f-ba04-abc5701a7f70.model#0a7c645b-0901-462f-ba04-abc5701a7f70"/>
+  <model id="6c809ac6-152d-40a6-bf9d-84aec1e6bee9" name="JModelImpl-6c809ac6-152d-40a6-bf9d-84aec1e6bee9">
+    <attributes id="0c21c74b-c6de-443e-aee8-2061542b714f" name="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+    <attributes id="33340662-c81c-405a-98a0-5e937ff2eb05" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="17b60c8d-9683-47a9-9d82-04c8130c29a6" name="全选" ename="selectAll"/>
+    <directions id="14fdb72c-abd3-44f2-a679-69b92488c438" name="生成凭证" ename="voucherGenerator"/>
+    <directions id="ee9e085b-c174-4a63-8bc7-084d6d6ddfcb" name="发送凭证电子凭证库" ename="voucherSend"/>
+    <directions id="d0e14521-29cc-469d-a0bd-0e50f9c951db" name="查询" ename="search"/>
+    <directions id="77485181-7d4a-4724-80a2-2d785eb8d939" viewers="bedeb892-c1b9-4408-b02b-c1386c76e79e" name="凭证查看" ename="voucherView"/>
+    <directions id="3c8ff70d-e89b-457f-9e56-f356f79082a9" name="签章" ename="voucherStamp"/>
+    <directions id="0309e32a-2893-4ae2-a42b-279c859ecbe3" name="签章撤销" ename="voucherStampCancle"/>
+  </model>
+  <services href="JServiceComponet_abb5c90f-b502-43e6-bb7b-e18011ad64e2.model#abb5c90f-b502-43e6-bb7b-e18011ad64e2"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="29e6af57-be7f-49c0-9b4d-5f59231e7932">
+    <contentareanode id="c2505ec5-12ec-45b9-a1bd-0953fa808d92" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Text" id="1dfb7da6-03db-4c78-8456-912ecbba44b1" name="国库代码" binding="dto.shold2" caption="国库代码" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="1f3c1f0f-dfc7-409d-9378-b8ba39e410d9" name="凭证状态" binding="dto.sstatus" caption="凭证状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#25991a0f-767a-495d-873a-9c6dae26c561"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="8c2e54ae-d1dc-4ced-97ab-9b87a9234d95" name="预算种类" binding="dto.shold1" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a315d91b-9428-49b0-91f0-b717f6be2d8a" name="报表日期" binding="dto.scheckdate" caption="报表日期"/>
+      <widgetRefs xsi:type="model:Combo" id="774d80cd-e9e0-4830-b2f0-60a63c956c96" name="签章类型" binding="stamp" caption="签章类型" display="sstampname" underly="sstamptype" modelsource="stampList"/>
+      <widgetRefs xsi:type="model:Button" id="a1baf526-33d8-4df6-a431-eedf76666e0c" name="查询" caption="查询" layout="GridLayout" direction="d0e14521-29cc-469d-a0bd-0e50f9c951db"/>
+    </contentareanode>
+    <contentareanode id="fbcc8e56-8b11-4e36-8289-a878efaf8a73" name="凭证查询一览表" grouptitle="凭证查询一览表">
+      <widgetRefs xsi:type="model:Table" id="9e8c3e7e-8805-4d32-b477-04cfa3ba3333" name="查询结果" binding="pagingcontext" caption="查询结果" tabletype="paging" showcheckbox="true" selectedrows="checkList">
+        <columnlist id="d581b846-f1a7-4e18-aa07-69dce981b886" name="凭证编号" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="2f6e627a-db9a-4807-9d4a-e386ebca3915" name="凭证发起日期" binding="screatdate" caption="凭证发起日期"/>
+        <columnlist id="6cfa2855-e5e5-497d-b06f-555da0547ff9" name="报表日期" binding="scheckdate" caption="报表日期"/>
+        <columnlist id="6d8846a2-7df7-445e-9b49-9682dc3562eb" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="1b56cb4c-eb11-488a-8213-9e0ff337bbe9" name="区划代码" binding="sadmdivcode" caption="区划代码"/>
+        <columnlist id="de542b05-28ea-4fe7-99de-942f0f9d9ceb" name="预算种类" binding="shold1" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="1532eab9-2379-412e-be6e-549d3796f624" name="凭证状态" binding="sstatus" caption="凭证状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#25991a0f-767a-495d-873a-9c6dae26c561"/>
+        </columnlist>
+        <columnlist id="8464d1cc-4d88-442b-92d1-28f876fde198" name="金额" binding="nmoney" caption="金额"/>
+        <columnlist id="f32c4e8a-7cc8-4eb6-acbf-3bc93fed06e4" name="详细信息" binding="sdemo" caption="详细信息"/>
+        <columnlist id="8215f91b-41cc-44e4-b437-0ff6afb0fa59" name="备注" binding="sreturnerrmsg" caption="备注"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="e2cb64bc-8eae-421b-836f-e4f91d1e9fae">
+    <pages id="07702a1d-7f70-4b9f-b998-e17b94787093" name="凭证各地资金留用情况表生成界面">
+      <views id="b1369f86-a24f-4d34-9b4f-37cc9f732677" name="维护界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="c2505ec5-12ec-45b9-a1bd-0953fa808d92 fbcc8e56-8b11-4e36-8289-a878efaf8a73">
+        <buttonArea id="a08f94ab-32a4-4306-8733-f7d470e39df7" name="JButtonAreaImpl-a08f94ab-32a4-4306-8733-f7d470e39df7">
+          <buttons id="7c802bf9-4a1e-49a8-939e-6863608b3873" name="全选" caption="全选" direction="17b60c8d-9683-47a9-9d82-04c8130c29a6"/>
+          <buttons id="54de41ae-d7d5-42e1-a0e8-38c291aa3fae" name="生成凭证" caption="生成凭证" direction="14fdb72c-abd3-44f2-a679-69b92488c438"/>
+          <buttons id="347a1d2f-e532-4181-93b2-1b6cc111a235" name="签章" caption="签章" direction="3c8ff70d-e89b-457f-9e56-f356f79082a9"/>
+          <buttons id="257e2201-b285-4c8b-a805-f2a59cb29ab8" name="签章撤销" caption="签章撤销" direction="0309e32a-2893-4ae2-a42b-279c859ecbe3"/>
+          <buttons id="08432e5c-ed58-4dcd-9c2c-3d54039c23ae" name="发送凭证" caption="发送凭证" direction="ee9e085b-c174-4a63-8bc7-084d6d6ddfcb"/>
+          <buttons id="e54678a7-e297-4234-8d53-dcb62d598fe4" name="电子凭证还原展示" caption="电子凭证还原展示" direction="77485181-7d4a-4724-80a2-2d785eb8d939"/>
+        </buttonArea>
+      </views>
+      <views id="bedeb892-c1b9-4408-b02b-c1386c76e79e" name="凭证查看界面" type="ClassName" path="com.cfcc.itfe.client.sendbiz.bizcertsend.ActiveXCompositeVoucherFundRemainGenerateOcx"/>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

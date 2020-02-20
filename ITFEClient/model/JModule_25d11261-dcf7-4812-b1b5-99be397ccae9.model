@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="25d11261-dcf7-4812-b1b5-99be397ccae9" isgenerated="false" name="凭证接收" ename="CertRec" shared="false"/>

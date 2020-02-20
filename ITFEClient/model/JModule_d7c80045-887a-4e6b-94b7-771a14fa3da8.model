@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d7c80045-887a-4e6b-94b7-771a14fa3da8" name="结算中心用户查询" ename="settleAccounts"/>

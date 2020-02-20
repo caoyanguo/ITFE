@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bea90a23-2a0c-4231-b23e-ae47dfa00a66" name="TCP发送文件" ename="socketSend">
+  <jproperties id="a3c512fc-c9c7-4bfb-8554-d649083e3c0c" key="GeneratedTime" value="1407131854066"/>
+  <refModule href="JModule_a5c1c3b4-45a8-43f3-84a3-394015a868a4.model#a5c1c3b4-45a8-43f3-84a3-394015a868a4"/>
+  <model id="a2a909c5-924f-4bd4-8cf7-0710ba0bdaf4" name="JModelImpl-a2a909c5-924f-4bd4-8cf7-0710ba0bdaf4">
+    <attributes id="e6eb7aac-82b3-4db1-87b5-1895c59eba73" name="filepath" type="java.util.List"/>
+    <directions id="e2698b33-f0fc-4cf0-80a7-bd4a30c0db82" name="发送文件" ename="sendfile"/>
+  </model>
+  <services href="JServiceComponet_710c396f-27b4-41b2-8276-92f5fea1d19d.model#710c396f-27b4-41b2-8276-92f5fea1d19d"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="b5690b11-ee78-492a-ac59-0baa662e3432">
+    <contentareanode id="8a07cbe2-b841-45c7-bbea-24b44688cc19" name="选择文件" grouptitle="选择文件">
+      <widgetRefs xsi:type="model:FileUploader" id="6d5887de-8bb1-426d-88c2-613f2d714b1d" name="选择文件" binding="filepath" caption="选择文件" pattern="" isdirectory="false" ismult="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="32020081-7267-4b27-8b3e-044d3ac38db3">
+    <pages id="5cfee1e6-0849-497a-a1b9-e887f06bd7bf" name="TCP发送文件">
+      <views id="b067f0a1-d1f8-4264-a855-70d555695ef8" name="JViewerImpl-b067f0a1-d1f8-4264-a855-70d555695ef8" isdefault="true" contentArea="8a07cbe2-b841-45c7-bbea-24b44688cc19">
+        <buttonArea id="680939eb-8b7d-4eb6-80c6-97422f6bf812" name="JButtonAreaImpl-680939eb-8b7d-4eb6-80c6-97422f6bf812">
+          <buttons id="5466dbee-fbb8-4b31-857c-fc5da8057f84" name="发送" caption="发送" direction="e2698b33-f0fc-4cf0-80a7-bd4a30c0db82"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

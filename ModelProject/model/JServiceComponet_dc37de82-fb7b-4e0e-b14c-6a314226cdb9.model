@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="dc37de82-fb7b-4e0e-b14c-6a314226cdb9" name="生成TBS文件服务组件" ename="ExportTBSFile" shared="false">
+  <jproperties id="48068022-6ab6-429f-857d-378036bf8d96" key="GeneratedTime" value="1256468439984"/>
+  <refModule href="JModule_0cf525cd-1640-4a03-b050-f9363dc5ca3a.model#0cf525cd-1640-4a03-b050-f9363dc5ca3a"/>
+  <methods id="06960816-815f-4b4c-b2b5-72f7189e73c2" ename="expTBSBillFile" name="生成TBS明细文件" codecomment="TBS明细文件" returntype="java.lang.String">
+    <methodParams id="bb7db0fd-40a6-4908-a55f-bad991f067eb" name="批次号" ename="batchNum" type="java.lang.String"/>
+  </methods>
+  <methods id="5bd433ae-0c73-4c8b-af10-3050f8b5302f" ename="expTBSSUMFile" name="生成导出汇总文件文件" codecomment="生成导出汇总文件文件,每个批次一个文件" returntype="java.lang.String">
+    <methodParams id="ade9fb7d-885f-424a-9633-f3861241c61c" name="批次号" ename="batchNum" type="java.lang.String"/>
+  </methods>
+  <methods id="e0b4d503-3025-4478-87ed-71e96ebe5277" ename="expTBSFundFile" name="生成TBS明细文件" codecomment="TBS资金文件" returntype="java.util.ArrayList">
+    <methodParams id="9d9adb37-ccc9-4f1e-8b02-ed40e8f7bca5" name="批次号" ename="batchNum" type="java.lang.String"/>
+  </methods>
+  <methods id="f87a2748-e8b2-4484-9f55-d3c6ca4d7397" ename="expTBSFile" name="生成TBS文件" codecomment="TBS文件" returntype="java.util.ArrayList">
+    <methodParams id="a296d244-888c-47f5-b69e-6ce2cfa68ba1" name="批次号列表" ename="batchNum" type="java.util.ArrayList"/>
+  </methods>
+  <methods id="434a9baa-03d4-4244-86d8-723027d27d1a" ename="writeExportLog" name="记导出发送日志" codecomment="记导出日志" returntype="java.util.ArrayList">
+    <methodParams id="5bc2e27d-7eca-4cfc-9e7c-4eee64d39117" name="文件名称" ename="fileName" type="java.lang.String"/>
+    <methodParams id="0dbaea23-9cc9-49d3-9f8c-3e0170debfae" name="总笔数" ename="totalCount" type="java.lang.Integer"/>
+    <methodParams id="5e19217c-2c61-4bcf-a549-b7d334a2caff" name="总金额" ename="sumMoney" type="java.math.BigDecimal"/>
+  </methods>
+  <methods id="2fc695fc-9333-4e8e-9f6c-60a06ba21235" ename="fillFundFileName" name="反填资金文件名" codecomment="反填资金文件名" returntype="java.lang.Void">
+    <methodParams id="122fe79c-ddc8-43ea-9e8f-5b90d0681311" name="凭证编号" ename="vouNum" type="java.lang.String"/>
+    <methodParams id="6392b1ad-9e74-48de-aa61-5eb13177c299" name="资金文件名称" ename="fundFileName"/>
+  </methods>
+  <methods id="72895dcb-319b-41b7-af36-04f4e2e8d9c1" ename="getBankInfo" name="取清算行信息" codecomment="取清算行信息" returntype="java.util.ArrayList"/>
+  <methods id="782f552a-5524-426d-b504-8f8289041b7e" ename="getBatchInfo" name="取清算行信息" codecomment="取清算行信息" returntype="java.util.ArrayList">
+    <methodParams id="c15dba6b-6fee-4cf9-8643-9e4f82ecb066" name="文件类型" ename="fileType" codecomment="区最大的批次号"/>
+  </methods>
+</model:JServiceComponent>

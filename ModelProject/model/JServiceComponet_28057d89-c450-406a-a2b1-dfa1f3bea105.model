@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="28057d89-c450-406a-a2b1-dfa1f3bea105" name="收入税票处理服务" ename="incomeBill">
+  <jproperties id="4a9f9ae3-3df2-4118-b97d-75fd9e82a3e0" key="GeneratedTime" value="1376032405781"/>
+  <refModule href="JModule_6e3e29a3-3075-4201-ae22-79da44ef4801.model#6e3e29a3-3075-4201-ae22-79da44ef4801"/>
+  <methods id="02791e19-3dfc-4583-834b-2d9434ec53d8" ename="findIncomeByPage" name="分页查询税票收入信息" codecomment="分页查询税票收入信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="5f5950bd-5cfb-491c-b512-3672d8bc63e8" name="查询收入税票信息条件DTO" ename="findDto" type="com.cfcc.itfe.persistence.dto.TvInfileDto" codecomment="查询收入税票信息条件DTO"/>
+    <methodParams id="3ad9161f-4c20-4740-9dd3-f3b88a1c0d44" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+  </methods>
+  <methods id="2e908e70-acdd-42a1-b687-21c7f4bf4d2e" ename="reSendMsg" name="丢失报文的重发" codecomment="重发TIPS没有收到的报文" returntype="java.lang.String">
+    <methodParams id="49941ebc-dcf2-4363-862b-2d359532e31f" name="委托日期" ename="scommitdate" type="java.lang.String" codecomment="委托日期"/>
+    <methodParams id="2a4be2c8-fcae-4798-8e37-acf1054b3e76" name="包流水号" ename="spackageno" type="java.lang.String"/>
+    <methodParams id="73d7cc5b-cb35-4259-a395-dafdbc7154ca" name="机构代码" ename="sorgcode" type="java.lang.String"/>
+    <methodParams id="6836c135-55c1-454f-8009-0f1efb3e5b7e" name="导入文件名称" ename="sfilename" type="java.lang.String"/>
+  </methods>
+  <methods id="2da8ad96-1b66-45b6-8228-c08a1b963fd7" ename="exportIncomeData" name="导出收入税票信息" codecomment="导出收入税票信息（以便修改后重新发送）" returntype="java.lang.String">
+    <methodParams id="ab0b637a-5af7-41b3-b258-c17d0c00006a" name="包流水号" ename="spackageno" type="java.lang.String"/>
+    <methodParams id="1be1f274-5fd7-4a41-9b48-f57a73363fd0" name="要导出数据DTO" ename="exportDto" type="com.cfcc.itfe.persistence.dto.TvInfileDto"/>
+  </methods>
+  <methods id="64a61fa5-2b64-4b14-a18c-626756de5b77" ename="findIncomeByPage" name="分页查询税票收入信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="d08fa03b-fcf9-43b2-858b-7b22744b4c64" name="查询收入税票信息条件DTO" ename="findDto" type="com.cfcc.itfe.persistence.dto.TvInfileDetailDto"/>
+    <methodParams id="cd5763be-a0cc-4352-b7cc-41e2be753dd8" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+  <methods id="c9ff11d6-4579-4268-9797-fb2aa57c9369" ename="exportSelectedIncomeData" name="导出所选择的收入税票信息" codecomment="导出所选择的收入税票信息" returntype="java.lang.String">
+    <methodParams id="aabd5a21-dac5-4dc7-899f-6cfa7e330085" name="要导出的选择列表" ename="exportSelectedList" type="java.util.List" codecomment="要导出的选择列表"/>
+    <methodParams id="d3a6fa96-bfb5-4005-a501-277bcaa594ec" name="查询类型" ename="ifdetail" type="java.lang.String" codecomment="查询类型"/>
+  </methods>
+  <methods id="ed172d11-d8aa-4462-894a-9a2f22bf4d86" ename="exportAllIncomeData" name="导出全部的收入税票信息" codecomment="导出全部的收入税票信息" returntype="java.lang.String">
+    <methodParams id="aaa737ed-cc2d-40ed-ae43-3fbf3176e3ed" name="要导出的所有查询数据" ename="exportAlldataList" type="java.util.List" codecomment="要导出的所有查询数据"/>
+    <methodParams id="e73b7ebf-cbcd-49fa-9e3b-3dbf9400f9f3" name="查询类型" ename="ifdetail" type="java.lang.String" codecomment="查询类型"/>
+  </methods>
+  <methods id="27746ef2-a79a-4885-a4e8-8699cb670017" ename="findIncomeByDto" name="查询税票收入信息" returntype="java.util.List">
+    <methodParams id="6f02473b-b5ee-40c9-9d95-31e7cdcdcf7a" name="查询收入税票信息条件DTO" ename="findDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="查询收入税票信息条件DTO"/>
+    <methodParams id="674cfef0-90f5-453e-8ddb-02b419ff1e9f" name="查询类型" ename="ifdetail" type="java.lang.String" codecomment="查询类型"/>
+  </methods>
+</model:JServiceComponent>

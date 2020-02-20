@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2f54511e-8fb3-4636-9433-e793610c3284" name="利息参数维护" ename="interestParam">
+  <jproperties id="239899f6-752e-4646-86f1-283d33e0b34c" key="GeneratedTime" value="1445590086440"/>
+  <refModule href="JModule_a8d48e51-b301-4a69-84f6-8101b3a9f677.model#a8d48e51-b301-4a69-84f6-8101b3a9f677"/>
+  <model id="a6cac8dc-efdb-418c-a753-b0540b422020" name="JModelImpl-a6cac8dc-efdb-418c-a753-b0540b422020">
+    <attributes id="422e8972-1d76-4beb-9088-7139b68e7e02" name="dto" type="com.cfcc.itfe.persistence.dto.TfInterestParamDto"/>
+    <attributes id="11fddd2c-0a98-4c13-a91d-4bd52aa8da70" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="1256aa74-d7ce-4565-8453-ed84ca10acdf" name="bankTypeList" type="java.util.List"/>
+    <attributes id="a9173a39-4139-471a-bf8b-8829eff53f15" name="msg" type="java.lang.String"/>
+    <attributes id="cfad75a3-7a85-4961-aa9a-5904b2cb17fe" name="JXDto" type="com.cfcc.itfe.persistence.dto.TsJxAcctinfoDto"/>
+    <attributes id="bf92b594-133c-405d-828d-2507c058795f" name="pagingcontextJX" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="7e125667-2684-4d74-a369-95b137f2c828" name="bankList" type="java.util.List"/>
+    <directions id="602a3cc1-4b31-4cd1-b401-a13b22bbfd04" viewers="fa336f71-69f5-460d-8620-0eb0be71f8ce" name="跳转录入界面" ename="goInput"/>
+    <directions id="a6fe28d1-7394-41e6-85fc-cce9b01ea1c2" name="录入保存" ename="inputSave"/>
+    <directions id="24f72f63-abd9-411e-9708-e4c1c1431a86" viewers="2385d3d7-c69a-4ddf-abcf-37b23b1619cc" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="9d332bc1-00b8-460b-b7a5-e90ba2bab305" name="单选" ename="singleSelect"/>
+    <directions id="dac4f051-03c1-4fe4-82d6-80e52528aa47" name="删除" ename="delete"/>
+    <directions id="0f4b1990-1f61-4628-b2ed-67057e056698" viewers="448569a4-8143-43ad-a6b2-7759bc72d6a3" name="到修改界面" ename="goModify"/>
+    <directions id="f560e482-bbf7-4d31-839a-ed405cc8a990" viewers="2385d3d7-c69a-4ddf-abcf-37b23b1619cc" name="修改保存" ename="modifySave"/>
+    <directions id="98ebe9d6-4c73-436e-afcf-60e0afd77aba" viewers="9a17d426-1619-4b39-9c51-d4f92b59eec9" name="跳转计息账户录入界面" ename="goJXInput"/>
+    <directions id="bbdbe34f-0654-4ebb-a240-f9dde14efa8b" name="计息录入保存" ename="jxInputSave"/>
+    <directions id="cde3cb8a-03d5-4340-88f8-588b08c6e1b0" viewers="1520d6c6-4b80-41cf-afdd-5909b843d4da" name="返回计息账户维护界面" ename="backJXMaintenance"/>
+    <directions id="fe0d4abd-410d-4477-a950-8f60fff590fb" name="计息单选" ename="jxSingleSelect"/>
+    <directions id="15887c8b-178c-404f-9cfd-6f14e61af4c8" name="计息账户删除" ename="jxDelete"/>
+    <directions id="a2978205-1643-4b04-8c61-eaffc4990d1b" viewers="07cbc775-6d95-4885-8fe2-d6b62c4af04e" name="到计息账户修改界面" ename="goJXModify"/>
+    <directions id="d0b23cde-c976-48f1-a5db-d1517284c557" viewers="1520d6c6-4b80-41cf-afdd-5909b843d4da" name="计息账户修改保存" ename="jxModifySave"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_185bdd2b-8ab9-4072-b304-3a299638a755.model#185bdd2b-8ab9-4072-b304-3a299638a755"/>
+  <contentAreas id="9cd8aece-b15e-4f96-91eb-2070490e8ba0">
+    <contentareanode id="1ba61e4e-41bd-4587-92e9-2db4e4dba12c" name="信息录入" grouptitle="信息录入" columnnum="2" processors="">
+      <widgetRefs xsi:type="model:Combo" id="75721acf-c4c5-49b6-a327-bee25f269b47" name="国库主体代码" binding="trecode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="637d3b66-c036-48ad-a17e-e53ad6b6d059" name="行别" binding="dto.sext2" caption="行别" display="displayValue" underly="underlyValue" modelsource="bankTypeList"/>
+      <widgetRefs xsi:type="model:Combo" id="66c1590a-42e8-4b06-a116-fc61cd386824" name="季度" binding="dto.squarter" caption="季度" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#301cf790-fe2b-4c67-b152-904ab06762b1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0abf7f44-e1a0-4912-9ad0-54e70e90bdcb" name="利率（%）" binding="dto.ninterestrates" visible="true" caption="利率（%）" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="a9b3b353-37f1-4091-848e-1bcbdc6e1a16" name="季度开始日期" binding="dto.sstartdate" visible="false" caption="季度开始日期"/>
+      <widgetRefs xsi:type="model:Text" id="e3873fab-421a-4e44-ac35-1376e4111688" name="季度截止日期" binding="dto.senddate" visible="false" caption="季度截止日期"/>
+      <widgetRefs xsi:type="model:Textarea" id="3ad98d8e-a9e5-4433-a747-bdb3ab51213f" name="说明" binding="msg" caption="说明" enable="false">
+        <componentStyle id="4dddc2e3-9efc-4d6a-803b-bb6a79f332ca" name="ComponentStyleImpl-4dddc2e3-9efc-4d6a-803b-bb6a79f332ca" ename="ComponentStyleImpl4dddc2e39efc4d6a803bbb6a79f332ca" widthhint="600" componentwidth="80" innercompositewidth="800" innercompositeheight="100"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="9f2bbfb7-0528-4ff6-a2da-cfc0455e6169" name="维护查询结果" grouptitle="参数查询一览表" columnnum="1">
+      <widgetRefs xsi:type="model:Table" id="a088ffcd-f733-4cde-8b78-775be3ee5a36" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" refsingleclickdirection="9d332bc1-00b8-460b-b7a5-e90ba2bab305">
+        <columnlist id="b505d582-82c4-497d-8883-4879796af1b5" name="国库代码" binding="sext3" caption="国库代码"/>
+        <columnlist id="8a53307f-aed3-4cd3-9d8d-a569c30187ae" name="行别" binding="sext2" caption="行别"/>
+        <columnlist id="6472bbc7-597e-4408-9199-d87a5a5a6eff" name="年度" binding="sext1" caption="年度"/>
+        <columnlist id="b2333713-dd93-45d9-aed2-5a0a9fc1b7c4" name="季度" binding="squarter" caption="季度">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#301cf790-fe2b-4c67-b152-904ab06762b1"/>
+        </columnlist>
+        <columnlist id="aa074ca7-07be-4284-9ab2-5d805cfaea9b" name="季度开始日期" binding="sstartdate" caption="季度开始日期">
+          <refmetadata href="MetadataNode_38bc2363-806d-4cd5-929e-7d32a2f8c6d7.model#4c4df15f-609a-4104-b123-51615961b4fc"/>
+        </columnlist>
+        <columnlist id="921515bf-0800-4d54-9533-dc075492f56c" name="季度截止日期" binding="senddate" caption="季度截止日期">
+          <refmetadata href="MetadataNode_38bc2363-806d-4cd5-929e-7d32a2f8c6d7.model#4c4df15f-609a-4104-b123-51615961b4fc"/>
+        </columnlist>
+        <columnlist id="c3da9a8a-da02-4a7c-8e3d-9d6eb416ddde" name="利率（%）" binding="ninterestrates" caption="利率（%）"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="97073dfa-a5af-4209-9756-de9c316c8cde" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="c090d57f-a848-490b-b2f8-3bfd375e90f0" name="国库主体代码" binding="trecode" caption="国库主体代码" enable="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="8f55baef-fe9c-414d-b43b-7ef1c943fecb" name="行别" binding="dto.sext2" caption="行别" enable="false" display="displayValue" underly="underlyValue" modelsource="bankTypeList"/>
+      <widgetRefs xsi:type="model:Combo" id="9604272e-b213-4e9f-bf41-0b8f87f64add" name="季度" binding="dto.squarter" caption="季度" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#301cf790-fe2b-4c67-b152-904ab06762b1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a3a6e3ee-723c-45e6-8398-16ff446af05e" name="利率（%）" binding="dto.ninterestrates" visible="true" caption="利率（%）" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="b994a964-93fc-4259-9474-b04da81817bf" name="季度开始日期" binding="dto.sstartdate" visible="false" caption="季度开始日期"/>
+      <widgetRefs xsi:type="model:Text" id="fbe90014-6349-4d9f-8cc7-8425a5a93b8c" name="季度截止日期" binding="dto.senddate" visible="false" caption="季度截止日期"/>
+      <widgetRefs xsi:type="model:Textarea" id="09d2ce50-84e6-4c60-80bd-b07d40fce9bc" name="说明" binding="msg" caption="说明" enable="false">
+        <componentStyle id="b26675b8-badf-4db6-b6fb-b7979bfde0e6" name="ComponentStyleImpl-4dddc2e3-9efc-4d6a-803b-bb6a79f332ca" ename="ComponentStyleImpl4dddc2e39efc4d6a803bbb6a79f332ca" widthhint="600" componentwidth="100" innercompositewidth="800" innercompositeheight="100"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="cf6f76cf-8237-4c0b-b967-b45555cbc15b" name="计息账户参数录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="72ee19a2-7cfb-432f-a972-c576ca3a95ff" name="核算主体代码" binding="JXDto.sorgcode" caption="核算主体代码" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="e9b5d1d7-1082-4cd0-844e-03a050ca1f23" name="国库主体代码" binding="JXDto.strecode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6fafbe12-6bba-42e2-9771-7f42e2c852ea" name="开户行" binding="JXDto.sopnbankcode" caption="开户行" required="true" display="displayValue" underly="underlyValue" modelsource="bankList"/>
+      <widgetRefs xsi:type="model:Text" id="80ef1b45-15bf-4e86-a900-332f1921c92e" name="计息账户" binding="JXDto.spayeeacct" caption="计息账户" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="dfff0ab0-93f5-4331-b1a4-2832e88e0b5f" name="计息账户名称" binding="JXDto.spayeename" caption="计息账户名称" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="3ed776b4-1b96-478a-b801-455c83213fcb" name="业务类型" binding="JXDto.sbiztype" caption="业务类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b9f3aa23-2b67-4086-821d-2a3b4b9c3e92"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="de01ca6a-5194-4804-b274-bd2e365916e4" name="计息账户参数查询一览表" grouptitle="计息账户参数查询一览表" columnnum="1">
+      <widgetRefs xsi:type="model:Table" id="5142cf2e-44dd-4db4-91da-1ac86f2d7057" name="计息账户维护查询结果" binding="pagingcontextJX" caption="计息账户维护查询结果" tabletype="paging" refsingleclickdirection="fe0d4abd-410d-4477-a950-8f60fff590fb">
+        <columnlist id="3523be4f-4fcd-49ae-abcc-d839be4d83e5" name="核算主体代码" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="90b41ee9-ed8f-4720-bab4-89e9a4e09863" name="国库主体代码" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="f3504a79-5751-4a9c-8474-e317c88f8074" name="开户行" binding="sopnbankcode" caption="开户行"/>
+        <columnlist id="fc012d0d-a7e4-444a-bdb1-cbff2f29b958" name="计息账户" binding="spayeeacct" caption="计息账户"/>
+        <columnlist id="418b427d-705b-47e5-9cad-de782f49f82c" name="计息账户名称" binding="spayeename" caption="计息账户名称"/>
+        <columnlist id="a1f31e6e-d652-4ddd-8ff2-8d1708d4c931" name="业务类型" binding="sbiztype" caption="业务类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b9f3aa23-2b67-4086-821d-2a3b4b9c3e92"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a48c71e3-5b0e-4b6b-ba7f-0b08e7c41ffe" name="计息账户信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="1700274a-4cfc-4443-850d-41cb9dfdce64" name="核算主体代码" binding="JXDto.sorgcode" caption="核算主体代码" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="3f795022-9459-4e73-a486-8803e57c6061" name="国库主体代码" binding="JXDto.strecode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="9c05fd8a-1c31-403a-9346-addc0e42975c" name="开户行" binding="JXDto.sopnbankcode" caption="开户行" required="true" display="displayValue" underly="underlyValue" modelsource="bankList"/>
+      <widgetRefs xsi:type="model:Text" id="9b2c4b1a-642f-43f2-8a78-04a2ae37ff3b" name="计息账户" binding="JXDto.spayeeacct" caption="计息账户" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="e8d81ce8-d48b-4b2c-8306-e0e040016597" name="计息账户名称" binding="JXDto.spayeename" caption="计息账户名称" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="ec644f82-879c-44c7-b44a-9fa1d70f4739" name="业务类型" binding="JXDto.sbiztype" caption="业务类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b9f3aa23-2b67-4086-821d-2a3b4b9c3e92"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="e710d209-5763-4585-87f1-b898dc88034a">
+    <pages id="ff591c34-de29-4ae5-b674-564dc83e0e4b" name="利息参数维护">
+      <views id="2385d3d7-c69a-4ddf-abcf-37b23b1619cc" name="维护界面" isdefault="true" contentArea="9f2bbfb7-0528-4ff6-a2da-cfc0455e6169">
+        <buttonArea id="1ebb7770-1d44-4357-ab8e-73527437f105" name="JButtonAreaImpl-1ebb7770-1d44-4357-ab8e-73527437f105">
+          <buttons id="7eccfb72-a809-4428-b657-37d5dbda7f49" name="maintenanceInput" caption="录入" direction="602a3cc1-4b31-4cd1-b401-a13b22bbfd04"/>
+          <buttons id="cbc2a779-1713-4f53-95e6-87a75139d39f" name="maintenanceDel" caption="删除" direction="dac4f051-03c1-4fe4-82d6-80e52528aa47"/>
+          <buttons id="60411626-dcc7-4c38-8cda-bc0ea8337f13" name="maintenanceMod" caption="修改" direction="0f4b1990-1f61-4628-b2ed-67057e056698"/>
+        </buttonArea>
+      </views>
+      <views id="448569a4-8143-43ad-a6b2-7759bc72d6a3" name="修改界面" contentArea="97073dfa-a5af-4209-9756-de9c316c8cde">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="fc6cdad4-62bc-4ef3-9b21-fdbd20d0fb18" name="JButtonAreaImpl-fc6cdad4-62bc-4ef3-9b21-fdbd20d0fb18">
+          <buttons id="36b83f11-d56e-42db-9131-7116dabb4fb7" name="modifySave" caption="保存" checkrequired="true" direction="f560e482-bbf7-4d31-839a-ed405cc8a990"/>
+          <buttons id="415d107f-1d79-4990-9ab1-217192fe7630" name="modifyBack" caption="返回" direction="24f72f63-abd9-411e-9708-e4c1c1431a86"/>
+        </buttonArea>
+      </views>
+      <views id="fa336f71-69f5-460d-8620-0eb0be71f8ce" name="录入界面" contentArea="1ba61e4e-41bd-4587-92e9-2db4e4dba12c">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="60007f3e-5417-48a6-9f8f-777c15fd778a" name="JButtonAreaImpl-60007f3e-5417-48a6-9f8f-777c15fd778a">
+          <buttons id="16aa8c4c-1e3d-47da-b6b0-e283ef43fd34" name="modifySave" caption="保存" checkrequired="true" direction="a6fe28d1-7394-41e6-85fc-cce9b01ea1c2"/>
+          <buttons id="48ec48d2-edb9-492e-8d13-24e74a4b3b18" name="modifyBack" caption="返回" direction="24f72f63-abd9-411e-9708-e4c1c1431a86"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="d8cbf8ec-e1c3-4c51-8e5d-6623e3d024a8" name="计息账户维护">
+      <views id="1520d6c6-4b80-41cf-afdd-5909b843d4da" name="计息账户维护界面" isdefault="true" contentArea="de01ca6a-5194-4804-b274-bd2e365916e4">
+        <buttonArea id="85547de2-ed02-4553-9b04-ed596d1ac1b1" name="JButtonAreaImpl-85547de2-ed02-4553-9b04-ed596d1ac1b1">
+          <buttons id="85583a40-3003-4fa1-b28f-ad1f1a5d98e8" name="录入" caption="录入" direction="98ebe9d6-4c73-436e-afcf-60e0afd77aba"/>
+          <buttons id="6e7982c1-d1f4-4871-ab35-aa4e63b17095" name="删除" caption="删除" direction="15887c8b-178c-404f-9cfd-6f14e61af4c8"/>
+          <buttons id="af552525-6af5-4977-a348-6caeb52c682e" name="修改" caption="修改" direction="a2978205-1643-4b04-8c61-eaffc4990d1b"/>
+        </buttonArea>
+      </views>
+      <views id="07cbc775-6d95-4885-8fe2-d6b62c4af04e" name="计息账户修改界面" contentArea="a48c71e3-5b0e-4b6b-ba7f-0b08e7c41ffe">
+        <buttonArea id="4e21f00d-b59b-4ec0-841d-2dcaabe2e2ff" name="JButtonAreaImpl-4e21f00d-b59b-4ec0-841d-2dcaabe2e2ff">
+          <buttons id="98b421f8-dc1e-4098-a7b9-cc14f3227427" name="保存" caption="保存" checkrequired="true" direction="d0b23cde-c976-48f1-a5db-d1517284c557"/>
+          <buttons id="d5a507cb-9317-4b0b-b661-4e7cb7c885b0" name="返回" caption="返回" direction="cde3cb8a-03d5-4340-88f8-588b08c6e1b0"/>
+        </buttonArea>
+      </views>
+      <views id="9a17d426-1619-4b39-9c51-d4f92b59eec9" name="计息账户录入界面" contentArea="cf6f76cf-8237-4c0b-b967-b45555cbc15b">
+        <buttonArea id="958045a7-ccc0-4d11-8d5e-85a5be14b804" name="JButtonAreaImpl-958045a7-ccc0-4d11-8d5e-85a5be14b804">
+          <buttons id="68ebf9f4-186a-4b6a-855d-e189ea1b3843" name="保存" caption="保存" checkrequired="true" direction="bbdbe34f-0654-4ebb-a240-f9dde14efa8b"/>
+          <buttons id="e6bb6e00-563a-484b-84cb-86245fbcb5f8" name="返回" caption="返回" direction="cde3cb8a-03d5-4340-88f8-588b08c6e1b0"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

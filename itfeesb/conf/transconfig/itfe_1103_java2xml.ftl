@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>	
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+	<MSG>
+		<BatchHead1103>
+			<TaxOrgCode>${cfx.MSG.BatchHead1103.TaxOrgCode}</TaxOrgCode>
+			<EntrustDate>${cfx.MSG.BatchHead1103.EntrustDate}</EntrustDate>
+			<PackNo>${cfx.MSG.BatchHead1103.PackNo}</PackNo>
+			<AllNum>${cfx.MSG.BatchHead1103.AllNum}</AllNum>
+			<AllAmt>${cfx.MSG.BatchHead1103.AllAmt}</AllAmt>
+		</BatchHead1103>
+		<TurnAccount1103>
+			<PayeeOrgCode>${cfx.MSG.TurnAccount1103.PayeeOrgCode}</PayeeOrgCode>
+			<PayeeAcct>${cfx.MSG.TurnAccount1103.PayeeAcct}</PayeeAcct>
+			<PayeeName>${cfx.MSG.TurnAccount1103.PayeeName}</PayeeName>
+		</TurnAccount1103>
+		<#list cfx.MSG.Payment1103 as var1>
+		<Payment1103>
+			<TraNo>${var1.TraNo}</TraNo>
+			<HandOrgName>${var1.HandOrgName}</HandOrgName>
+			<TraAmt>${var1.TraAmt}</TraAmt>
+			<TaxVouNo>${var1.TaxVouNo}</TaxVouNo>
+			<BillDate>${var1.BillDate}</BillDate>
+			<TaxPayCode>${var1.TaxPayCode}</TaxPayCode>
+			<TaxPayName>${var1.TaxPayName}</TaxPayName>
+			<CorpCode>${var1.CorpCode}</CorpCode>
+			<BudgetType>${var1.BudgetType}</BudgetType>
+			<TrimSign>${var1.TrimSign}</TrimSign>
+			<CorpType>${var1.CorpType}</CorpType>
+			<Remark>${var1.Remark}</Remark>
+			<Remark1>${var1.Remark1}</Remark1>
+			<Remark2>${var1.Remark2}</Remark2>
+			<TaxTypeNum>${var1.TaxTypeNum}</TaxTypeNum>
+			<#list var1.TaxTypeList1103 as var2>
+			<TaxTypeList1103>
+				<ProjectId>${var2.ProjectId}</ProjectId>
+				<BudgetSubjectCode>${var2.BudgetSubjectCode}</BudgetSubjectCode>
+				<LimitDate>${var2.LimitDate}</LimitDate>
+				<TaxTypeName>${var2.TaxTypeName}</TaxTypeName>
+				<BudgetLevelCode>${var2.BudgetLevelCode}</BudgetLevelCode>
+				<BudgetLevelName>${var2.BudgetLevelName}</BudgetLevelName>
+				<TaxStartDate>${var2.TaxStartDate}</TaxStartDate>
+				<TaxEndDate>${var2.TaxEndDate}</TaxEndDate>
+				<ViceSign>${var2.ViceSign}</ViceSign>
+				<TaxType>${var2.TaxType}</TaxType>
+				<TaxTypeAmt>${var2.TaxTypeAmt}</TaxTypeAmt>
+				<DetailNum>${var2.DetailNum}</DetailNum>
+				<#list var2.TaxSubjectList1103 as var3>
+				<TaxSubjectList1103>
+					<DetailNo>${var3.DetailNo}</DetailNo>
+					<TaxSubjectCode>${var3.TaxSubjectCode}</TaxSubjectCode>
+					<TaxSubjectName>${var3.TaxSubjectName}</TaxSubjectName>
+					<TaxNumber>${var3.TaxNumber}</TaxNumber>
+					<TaxAmt>${var3.TaxAmt}</TaxAmt>
+					<TaxRate>${var3.TaxRate}</TaxRate>
+					<ExpTaxAmt>${var3.ExpTaxAmt}</ExpTaxAmt>
+					<DiscountTaxAmt>${var3.DiscountTaxAmt}</DiscountTaxAmt>
+					<FactTaxAmt>${var3.FactTaxAmt}</FactTaxAmt>
+				</TaxSubjectList1103>
+				</#list>
+			</TaxTypeList1103>
+			</#list>
+		</Payment1103>
+		</#list>
+	</MSG>
+</CFX>

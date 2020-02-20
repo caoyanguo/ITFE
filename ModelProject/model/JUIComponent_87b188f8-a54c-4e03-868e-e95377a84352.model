@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="87b188f8-a54c-4e03-868e-e95377a84352" name="数据恢复" ename="dataRestoreUI" shared="true">
+  <jproperties id="6ee51bf7-6ba2-4ca0-9c39-141fcae89969" key="GeneratedTime" value="1443508223407"/>
+  <refModule href="JModule_3283aa5c-9dd6-4897-bb2d-c7bf526a38ab.model#3283aa5c-9dd6-4897-bb2d-c7bf526a38ab"/>
+  <model id="9048da36-fed2-4dd3-a7ad-a55d306b7ea4" name="JModelImpl-9048da36-fed2-4dd3-a7ad-a55d306b7ea4">
+    <directions id="8078654d-5fb4-4a26-aab1-3cbb4d27123a" name="数据恢复" ename="datarestore"/>
+  </model>
+  <services href="JServiceComponet_14c84d87-c344-4d51-8de5-e836e2fae970.model#14c84d87-c344-4d51-8de5-e836e2fae970"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="b6d8ae48-44a2-455f-8f31-c01dbdb5baff">
+    <contentareanode id="2e6d494a-e730-41c5-a9c4-e3ac5b909853" name="恢复条件" grouptitle="恢复条件" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="58e69d7f-765e-44e2-aec2-9d68d0d57de1" name="机构代码" binding="sorgcode" caption="机构代码" editable="false">
+        <labelStyle id="ded9a229-de4f-4d00-9e06-abf9a884b8ef" name="LabelStyleImpl-ded9a229-de4f-4d00-9e06-abf9a884b8ef" ename="LabelStyleImplded9a229de4f4d009e06abf9a884b8ef"/>
+        <componentStyle id="a5ccacc5-1f4c-4129-a104-c5f6f654dd13" name="ComponentStyleImpl-a5ccacc5-1f4c-4129-a104-c5f6f654dd13" ename="ComponentStyleImpla5ccacc51f4c4129a104c5f6f654dd13"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:FileUploader" id="f25c6430-1766-4d3f-b4ce-57a3a4dcd630" name="fileupload" binding="filelist" caption="请选择备份文件" isdirectory="false" ismult="false">
+        <labelStyle id="b9d2bcf6-aef0-4c4f-9f49-5fd4000bae91" name="LabelStyleImpl-b9d2bcf6-aef0-4c4f-9f49-5fd4000bae91" ename="LabelStyleImplb9d2bcf6aef04c4f9f495fd4000bae91"/>
+        <componentStyle id="96c4163f-cfa0-4c19-bb3c-986ffaae16ef" name="ComponentStyleImpl-96c4163f-cfa0-4c19-bb3c-986ffaae16ef" ename="ComponentStyleImpl96c4163fcfa04c19bb3c986ffaae16ef"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="18a7a48e-7954-48cc-a8b2-eb9ff51a33b5">
+    <pages id="703ed782-1ad3-4883-8e1a-d5abb00b2ace" name="数据恢复">
+      <views id="659168d3-a59f-4258-87df-95cae8fa4b66" name="数据恢复" isdefault="true" contentArea="2e6d494a-e730-41c5-a9c4-e3ac5b909853">
+        <buttonArea id="8a4fbd52-92a3-4dcd-bc05-792c9e216024" name="JButtonAreaImpl-8a4fbd52-92a3-4dcd-bc05-792c9e216024">
+          <buttons id="4b06aca7-92e5-437a-b9c5-a680ae97ec79" name="数据恢复" caption="数据恢复" direction="8078654d-5fb4-4a26-aab1-3cbb4d27123a"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

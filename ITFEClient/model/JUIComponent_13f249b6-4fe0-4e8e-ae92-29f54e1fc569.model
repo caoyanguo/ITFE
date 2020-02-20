@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="13f249b6-4fe0-4e8e-ae92-29f54e1fc569" name="收入报表和分户账数据导入" ename="trIncomeReport">
+  <jproperties id="23582c8f-d758-4d6f-b25f-50e66f1b7625" key="GeneratedTime" value="1490578466229"/>
+  <refModule href="JModule_c7258d18-ffa3-44f5-b9cc-0e85a455cd76.model#c7258d18-ffa3-44f5-b9cc-0e85a455cd76"/>
+  <model id="8056d868-6ab6-4aca-9d0a-41ed6c8bff2a" name="JModelImpl-8056d868-6ab6-4aca-9d0a-41ed6c8bff2a">
+    <attributes id="0ed0231e-9299-489c-94af-3bf07cfbe7ae" name="stockDto" type="com.cfcc.itfe.persistence.dto.TrStockdayrptDto"/>
+    <attributes id="f8c317eb-8798-455f-805d-ecd33d555bde" name="incomeDto" type="com.cfcc.itfe.persistence.dto.TrIncomedayrptDto"/>
+    <attributes id="979b6592-e0e9-4329-a711-b7cc9231caee" name="stockFilePath" type="java.util.List"/>
+    <attributes id="d93abc00-0e93-4695-be99-64e1add74a4c" name="incomeFilePath" type="java.util.List"/>
+    <directions id="6c6224a4-6901-4bf1-89f4-5a9dd937fbfe" name="TCBS收入类报表导入" ename="importFile"/>
+    <directions id="cceb9ab6-5302-403b-b85b-27e765e9979c" name="分户账查询" ename="ledgersearch"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_224d9d40-ab8b-4777-be67-c8fd446ec9c2.model#224d9d40-ab8b-4777-be67-c8fd446ec9c2"/>
+  <contentAreas id="a0d94eb6-0b71-48ea-b235-08eb1f8c1514">
+    <contentareanode id="fd667002-a80d-4e8b-9064-9b4123c589cc" name="选择报表种类" grouptitle="选择报表种类" visible="true">
+      <widgetRefs xsi:type="model:Combo" id="466099c7-d4a1-4a13-853b-6d16e21bb365" name="报表种类" binding="reportStyle" caption="报表种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#bdf8ff81-0e4e-45e3-a133-5c151b501053"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2dcfaeb5-0d2c-4ce1-abf5-4f26c4734de1" name="TCBS库存日报导入条件" grouptitle="TCBS库存日报导入条件" visible="false">
+      <widgetRefs xsi:type="model:Text" id="8068bcee-d0f9-4517-a93b-089e73c50d82" name="strecode" binding="stockDto.strecode" caption="国库代码" editable="true" required="true">
+        <labelStyle id="210e7b3c-82ee-43ae-84a9-613443e0ad21" name="LabelStyleImpl-2b2b3ecd-060b-4c0c-86c4-9f5bfba88777" ename="LabelStyleImpld2b2b3ecd-060b-4c0c-86c4-9f5bfba88777"/>
+        <componentStyle id="d4cc31f7-1a72-4828-8c53-234deeb95eb2" name="ComponentStyleImpl-5683e525-1bae-4559-ac2d-e82c08b600e9" ename="ComponentStyleImpl5683e525-1bae-4559-ac2d-e82c08b600e9"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ec422bb6-f69f-4754-9ec0-b99c734cbcb4" name="sorgcode" binding="stockDto.sorgcode" caption="财政机构代码" editable="true" required="true">
+        <labelStyle id="fd5d09a9-018f-43d6-acea-7710ed26bf49" name="LabelStyleImpl-2b2b3ecd-060b-4c0c-86c4-9f5bfba88777" ename="LabelStyleImpld2b2b3ecd-060b-4c0c-86c4-9f5bfba88777"/>
+        <componentStyle id="af67c517-80e7-4ad7-abe5-dbdfe52854a5" name="ComponentStyleImpl-5683e525-1bae-4559-ac2d-e82c08b600e9" ename="ComponentStyleImpl5683e525-1bae-4559-ac2d-e82c08b600e9"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="1fe7d0b4-73af-467f-9660-8ea84542236b" name="srptdate" binding="stockDto.srptdate" caption="报表日期" editable="true" required="true">
+        <labelStyle id="9536dd2d-d198-4fb5-be50-0921f7475e0b" name="LabelStyleImpl-30b0afd9-1237-42c5-a6b0-babfa395118c" ename="LabelStyleImpld30b0afd9-1237-42c5-a6b0-babfa395118c"/>
+        <componentStyle id="d6087e81-79fd-4f6e-b59b-e5ecedc133b8" name="ComponentStyleImpl-9a222644-8dae-47b1-b0bd-24c2e051e797" ename="ComponentStyleImpl9a222644-8dae-47b1-b0bd-24c2e051e797"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="747445d8-3488-45ca-bf6e-1baa67443345" name="saccdate" binding="stockDto.saccdate" caption="帐户日期" editable="true" required="true">
+        <labelStyle id="008c8f61-1fe5-4e70-97e9-0bb01bbfbfb2" name="LabelStyleImpl-f08d948d-f904-4811-abb5-fd0f9bb8fa07" ename="LabelStyleImplf08d948df9044811abb5fd0f9bb8fa07"/>
+        <componentStyle id="f9f454d6-64f1-4778-bc49-b4148a2762ad" name="ComponentStyleImpl-597a032b-ea9c-4b9a-b217-1f6b3906221a" ename="ComponentStyleImpl597a032bea9c4b9ab2171f6b3906221a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="17eb9876-9464-4d73-a741-314c05c8d79a" name="saccname" binding="stockDto.saccname" caption="库款账户名称"/>
+    </contentareanode>
+    <contentareanode id="0537b895-7352-426b-980b-1071030e37a3" name="TCBS分户账选择条件" grouptitle="TCBS分户账选择条件" binding="" visible="false">
+      <widgetRefs xsi:type="model:Combo" id="c94c035b-9d85-45f8-837b-7ee1fbd2836c" name="国库代码" binding="searchdto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ccd149bb-524b-4d7e-a333-99b20c8b8503" name="分户账账号" binding="searchdto.sacctno" caption="分户账账号" display="displayValue" underly="underlyValue" modelsource="ledgerlist"/>
+      <widgetRefs xsi:type="model:Text" id="3748649e-cb21-4c80-b98c-b48a271bbb40" name="开始日期" binding="searchdto.sext1" caption="开始日期"/>
+      <widgetRefs xsi:type="model:Text" id="3f214026-e652-4856-b700-f31bb3fb9b8a" name="结束日期" binding="searchdto.sext2" caption="结束日期"/>
+    </contentareanode>
+    <contentareanode id="404b0068-5770-42ea-8072-2c031c193f44" name="TCBS库存日报导入文件" grouptitle="TCBS库存日报导入文件" visible="false">
+      <widgetRefs xsi:type="model:FileUploader" id="d796809f-d6de-417d-9896-e9bcb5c9f94e" name="文件路径" binding="stockFilePath" visible="true" caption="文件路径" enable="true" pattern="" isdirectory="false" ismult="true"/>
+    </contentareanode>
+    <contentareanode id="239658db-7752-48f9-bda7-fe5d141b7f44" name="TCBS收入日报导入条件" grouptitle="TCBS收入日报导入条件" columnnum="2" visible="true">
+      <widgetRefs xsi:type="model:Text" id="a5fa3ae4-7457-49b3-86b1-3da9dd16f637" name="strecode" binding="incomeDto.strecode" caption="国库主体代码" editable="true" required="true">
+        <labelStyle id="87cc2145-3037-4a30-bed3-0b469caab132" name="LabelStyleImpl-cdea779b-1c3f-4193-8e17-efe82201a608" ename="LabelStyleImpldcdea779b-1c3f-4193-8e17-efe82201a608"/>
+        <componentStyle id="ca8762c0-8081-4455-a384-66dc6b58b468" name="ComponentStyleImpl-ee3f3a2b-c802-4af1-bcab-70e59cd17d0f" ename="ComponentStyleImplee3f3a2b-c802-4af1-bcab-70e59cd17d0f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d0e4030d-076f-43ac-b29d-b20ad642fbd9" name="sfinorgcode" binding="incomeDto.sfinorgcode" caption="财政机关代码" editable="true" required="true">
+        <labelStyle id="cfd7e81e-117b-4c5b-963b-38fb58918e6e" name="LabelStyleImpl-8f56a062-aa75-4147-afa5-c65d183af344" ename="LabelStyleImpld8f56a062-aa75-4147-afa5-c65d183af344"/>
+        <componentStyle id="de22523d-9aab-4b42-aec0-81d78ff12915" name="ComponentStyleImpl-0fb78219-71f3-451d-8d51-b976052800ca" ename="ComponentStyleImpl0fb78219-71f3-451d-8d51-b976052800ca"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="97031496-f961-42d8-a56d-48acd23b3ef4" name="staxorgcode" binding="incomeDto.staxorgcode" caption="征收机关代码" editable="true" required="true">
+        <labelStyle id="0f8c5bea-50be-4c72-84a9-9ab113691b92" name="LabelStyleImpl-8f56a062-aa75-4147-afa5-c65d183af344" ename="LabelStyleImpld8f56a062-aa75-4147-afa5-c65d183af344"/>
+        <componentStyle id="88c85ebd-3a61-4f06-8e6e-14bebda31171" name="ComponentStyleImpl-0fb78219-71f3-451d-8d51-b976052800ca" ename="ComponentStyleImpl0fb78219-71f3-451d-8d51-b976052800ca"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="32f0c024-b2c3-4e9f-889c-091ea3b7d264" name="报表日期" extpoperties="" binding="incomeDto.srptdate" caption="报表日期" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="0c6bfab5-c142-4cbb-9aab-1cc03c10aff8" name="预算种类" binding="incomeDto.sbudgettype" caption="预算种类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="524894d5-b2d2-4ccc-9378-dbe98bfd3318" name="预算级次" binding="incomeDto.sbudgetlevelcode" caption="预算级次" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4794b113-fb28-48e9-9012-ffb4ea2751ab" name="辖属标志" extpoperties="" binding="incomeDto.sbelongflag" caption="辖属标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="3659c97e-57ba-4393-bc11-4b864b047ba3" name="调整期标志" binding="incomeDto.strimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="29ae4b15-32cd-451d-a905-d2272ae78695" name="报表种类" binding="sbillkind" caption="报表种类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#bbdea100-83a4-4681-8ce9-94d18094c00d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="9cec659b-408a-434c-8e39-05cb2ccfea91" name="分成组标志" binding="incomeDto.sdividegroup" visible="false" caption="分成组标志" required="true"/>
+    </contentareanode>
+    <contentareanode id="bead9e7f-ef02-40c1-bfa3-80d58eed285b" name="TCBS收入日报导入文件" grouptitle="TCBS收入日报导入文件" visible="true">
+      <widgetRefs xsi:type="model:FileUploader" id="cda744a7-c5e4-4899-8a59-2d6daf951c2e" name="文件路径" binding="incomeFilePath" visible="true" caption="文件路径" enable="true" isdirectory="false" ismult="true"/>
+    </contentareanode>
+    <contentareanode id="710ff38b-d1c2-4140-85fb-4f8810c2daee" name="TCBS分户账查询结果" grouptitle="TCBS分户账查询结果">
+      <widgetRefs xsi:type="model:Table" id="91751ebd-0a0e-4f34-a750-bf8b1baecacf" name="TCBS分户账查询结果" binding="pagingcontext" caption="TCBS分户账查询结果" tabletype="paging">
+        <columnlist id="baac2426-cb2e-4e95-a657-4e32acd2a269" name="国库代码" binding="strecode" caption="国库代码">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+        </columnlist>
+        <columnlist id="5cbe4153-4094-49d7-9db5-babe52aa8ceb" name="账号" binding="sacctno" caption="账号"/>
+        <columnlist id="3612e307-a765-4476-9af8-a1ed20bac6a6" name="账务日期" binding="sacctdate" caption="账务日期"/>
+        <columnlist id="a2b6ad90-b56c-4c1b-8fb0-131a14716d12" name="摘要" binding="sdemo" caption="摘要"/>
+        <columnlist id="38ef7f16-b4b9-443a-a1d5-9fcdf456e898" name="借方额" binding="ndebitamt" caption="借方额"/>
+        <columnlist id="534f4389-6eee-473d-8d06-4f735c0cafe2" name="贷方额" binding="ncreditamt" caption="贷方额"/>
+        <columnlist id="ae2f8720-f56d-41b8-a319-ad02d79aacae" name="余额" binding="namt" caption="余额"/>
+        <columnlist id="3e9de967-b93b-40e0-8afd-493c3caa2e85" name="借贷标记" binding="sdebitmark" caption="借贷标记"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="608c934d-d4f4-4b4d-840d-dcecdae60f9c" name="TCBS分户账查询条件" grouptitle="TCBS分户账查询条件" binding="" visible="true">
+      <widgetRefs xsi:type="model:Combo" id="64692899-24f4-4917-91f1-f47bbde41c39" name="国库代码" binding="searchdto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="f230bd53-b229-4253-b2cc-a86c5890d5c1" name="分户账账号" binding="searchdto.sacctno" caption="分户账账号" display="displayValue" underly="underlyValue" modelsource="ledgerlist"/>
+      <widgetRefs xsi:type="model:Text" id="2c40fd8d-fee1-418b-95ad-f9f7061f6c55" name="开始日期" binding="searchdto.sext1" caption="开始日期"/>
+      <widgetRefs xsi:type="model:Text" id="c5bd38a8-0604-4cd7-addd-a448a8285b5b" name="结束日期" binding="searchdto.sext2" caption="结束日期"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="ce646d61-3118-4178-89de-ccdb5096e213">
+    <pages id="1390a673-9940-4ae8-992b-56258b742337" name="TCBS收入类报表导入">
+      <views id="4853ebca-4960-40d9-9f73-7acea79e0bbf" name="TCBS收入类报表导入" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="fd667002-a80d-4e8b-9064-9b4123c589cc 0537b895-7352-426b-980b-1071030e37a3 2dcfaeb5-0d2c-4ce1-abf5-4f26c4734de1 404b0068-5770-42ea-8072-2c031c193f44 239658db-7752-48f9-bda7-fe5d141b7f44 bead9e7f-ef02-40c1-bfa3-80d58eed285b">
+        <buttonArea id="deca8013-515d-47de-b9df-64273d932e47" name="JButtonAreaImpl-deca8013-515d-47de-b9df-64273d932e47">
+          <buttons id="bf6986ea-c71b-4ee3-8bd7-79203dc2ebe7" name="导入" caption="导入" direction="6c6224a4-6901-4bf1-89f4-5a9dd937fbfe"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="c72ae1b9-9165-4b7d-9ed9-0bc7337855cb" name="TCBS分户账查询">
+      <views id="80f4320e-f344-4acc-a08f-b0c230221baf" name="TCBS分户账查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="608c934d-d4f4-4b4d-840d-dcecdae60f9c 710ff38b-d1c2-4140-85fb-4f8810c2daee">
+        <buttonArea id="387f3d4b-3138-477f-a9ac-e55fe9e3229d" name="JButtonAreaImpl-387f3d4b-3138-477f-a9ac-e55fe9e3229d">
+          <buttons id="fc0f590d-e980-4987-8deb-783333d84576" name="查询" caption="查询" direction="cceb9ab6-5302-403b-b85b-27e765e9979c"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

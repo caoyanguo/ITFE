@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<bean id="com.cfcc.itfe.service.recbiz.certrec.IDownloadAllFileService"
+			class="com.cfcc.itfe.service.recbiz.certrec.DownloadAllFileService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.reportdownload.IRptDownloadService"
+			class="com.cfcc.itfe.service.recbiz.reportdownload.RptDownloadService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.uploadmodule.IDataUpLoadService"
+			class="com.cfcc.itfe.service.recbiz.uploadmodule.DataUpLoadService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.uploadmodule.IUploadUIService"
+			class="com.cfcc.itfe.service.recbiz.uploadmodule.UploadUIService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.fundinto.IFundIntoService"
+			class="com.cfcc.itfe.service.recbiz.fundinto.FundIntoService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.banknameenter.IBankNameEnterService"
+			class="com.cfcc.itfe.service.recbiz.banknameenter.BankNameEnterService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.voucherload.IVoucherLoadService"
+			class="com.cfcc.itfe.service.recbiz.voucherload.VoucherLoadService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.fundintoforfz.IFundintoforfzService"
+			class="com.cfcc.itfe.service.recbiz.fundintoforfz.FundintoforfzService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.voucherdatacompare.IVoucherDataCompareService"
+			class="com.cfcc.itfe.service.recbiz.voucherdatacompare.VoucherDataCompareService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.payoutreport.IPayoutReportService"
+			class="com.cfcc.itfe.service.recbiz.payoutreport.PayoutReportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.backvoucher.IBackVoucherService"
+			class="com.cfcc.itfe.service.recbiz.backvoucher.BackVoucherService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.voucherattachservice.IVoucherAttachServiceService"
+			class="com.cfcc.itfe.service.recbiz.voucherattachservice.VoucherAttachServiceService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.uploadmoduleforzj.IUploadUIForZjService"
+			class="com.cfcc.itfe.service.recbiz.uploadmoduleforzj.UploadUIForZjService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.tfunitrecordmain.ITfUnitrecordmainService"
+			class="com.cfcc.itfe.service.recbiz.tfunitrecordmain.TfUnitrecordmainService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.agentbankcountanalysedataimport.IAgentBankCountAnalyseDataImportService"
+			class="com.cfcc.itfe.service.recbiz.agentbankcountanalysedataimport.AgentBankCountAnalyseDataImportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.recbiz.bankvouchervalidate.IBankVoucherValidateService"
+			class="com.cfcc.itfe.service.recbiz.bankvouchervalidate.BankVoucherValidateService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.bizcertsend.IBizDataUploadService"
+			class="com.cfcc.itfe.service.sendbiz.bizcertsend.BizDataUploadService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.infocertsend.IMessDataUploadService"
+			class="com.cfcc.itfe.service.sendbiz.infocertsend.MessDataUploadService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.maketbsfile.IExportTBSFileService"
+			class="com.cfcc.itfe.service.sendbiz.maketbsfile.ExportTBSFileService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.exportrecp.IExpRecTotaxOrgService"
+			class="com.cfcc.itfe.service.sendbiz.exportrecp.ExpRecTotaxOrgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.payoutcheckrequest.IPayoutCheckRequestService"
+			class="com.cfcc.itfe.service.sendbiz.payoutcheckrequest.PayoutCheckRequestService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.incomecheckresendrequest.IIncomecheckresendrequestService"
+			class="com.cfcc.itfe.service.sendbiz.incomecheckresendrequest.IncomecheckresendrequestService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.finincomecheckresendrequest.IFinincomecheckresendrequestService"
+			class="com.cfcc.itfe.service.sendbiz.finincomecheckresendrequest.FinincomecheckresendrequestService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.taxorgapplyintre.ITaxorgapplyintreService"
+			class="com.cfcc.itfe.service.sendbiz.taxorgapplyintre.TaxorgapplyintreService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.check3201.ICheck3201Service"
+			class="com.cfcc.itfe.service.sendbiz.check3201.Check3201Service"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.trastatuscheck.ITraStatusCheckService"
+			class="com.cfcc.itfe.service.sendbiz.trastatuscheck.TraStatusCheckService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.freeformat.IFreeFormateMsgService"
+			class="com.cfcc.itfe.service.sendbiz.freeformat.FreeFormateMsgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.taxorgsosecry.ITaxOrgSoSecryService"
+			class="com.cfcc.itfe.service.sendbiz.taxorgsosecry.TaxOrgSoSecryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.taxbureau.ITaxBureauService"
+			class="com.cfcc.itfe.service.sendbiz.taxbureau.TaxBureauService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.createvoucherforreport.ICreateVoucherForReportService"
+			class="com.cfcc.itfe.service.sendbiz.createvoucherforreport.CreateVoucherForReportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.exporttbsfiletxt.IExportTBSfiletxtService"
+			class="com.cfcc.itfe.service.sendbiz.exporttbsfiletxt.ExportTBSfiletxtService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.socketsend.ISocketSendService"
+			class="com.cfcc.itfe.service.sendbiz.socketsend.SocketSendService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.exporttbsforbj.IExportTBSForBJService"
+			class="com.cfcc.itfe.service.sendbiz.exporttbsforbj.ExportTBSForBJService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.uploadfiletoserver.IUploadfiletoserverService"
+			class="com.cfcc.itfe.service.sendbiz.uploadfiletoserver.UploadfiletoserverService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.sendbiz.bizregister.IBizRegisterService"
+			class="com.cfcc.itfe.service.sendbiz.bizregister.BizRegisterService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tssystem.ITsSystemService"
+			class="com.cfcc.itfe.service.para.tssystem.TsSystemService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsstamptype.ITsStamptypeService"
+			class="com.cfcc.itfe.service.para.tsstamptype.TsStamptypeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconnection.ITsConnectionService"
+			class="com.cfcc.itfe.service.para.tsconnection.TsConnectionService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsoperationform.ITsOperationformService"
+			class="com.cfcc.itfe.service.para.tsoperationform.TsOperationformService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsusersfunc.ITsUsersfuncService"
+			class="com.cfcc.itfe.service.para.tsusersfunc.TsUsersfuncService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tssysbatch.ITsSysbatchService"
+			class="com.cfcc.itfe.service.para.tssysbatch.TsSysbatchService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsoperationmodel.ITsOperationmodelService"
+			class="com.cfcc.itfe.service.para.tsoperationmodel.TsOperationmodelService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconverttaxorg.ITsConverttaxorgService"
+			class="com.cfcc.itfe.service.para.tsconverttaxorg.TsConverttaxorgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsoperationtype.ITsOperationtypeService"
+			class="com.cfcc.itfe.service.para.tsoperationtype.TsOperationtypeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tssyslog.ITsSyslogService"
+			class="com.cfcc.itfe.service.para.tssyslog.TsSyslogService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsusers.ITsUsersService"
+			class="com.cfcc.itfe.service.para.tsusers.TsUsersService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconverttobank.ITsConverttobankService"
+			class="com.cfcc.itfe.service.para.tsconverttobank.TsConverttobankService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsoperationplace.ITsOperationplaceService"
+			class="com.cfcc.itfe.service.para.tsoperationplace.TsOperationplaceService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsuserstamp.ITsUserstampService"
+			class="com.cfcc.itfe.service.para.tsuserstamp.TsUserstampService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsinfoconnorgacc.ITsInfoconnorgaccService"
+			class="com.cfcc.itfe.service.para.tsinfoconnorgacc.TsInfoconnorgaccService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tstreasury.ITsTreasuryService"
+			class="com.cfcc.itfe.service.para.tstreasury.TsTreasuryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tspaybank.ITsPaybankService"
+			class="com.cfcc.itfe.service.para.tspaybank.TsPaybankService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsinfoconnorg.ITsInfoconnorgService"
+			class="com.cfcc.itfe.service.para.tsinfoconnorg.TsInfoconnorgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsorgan.ITsOrganService"
+			class="com.cfcc.itfe.service.para.tsorgan.TsOrganService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsuserstampfunction.ITsUserstampfunctionService"
+			class="com.cfcc.itfe.service.para.tsuserstampfunction.TsUserstampfunctionService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconvertassitsign.ITsConvertassitsignService"
+			class="com.cfcc.itfe.service.para.tsconvertassitsign.TsConvertassitsignService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsinfotaxorg.ITsInfotaxorgService"
+			class="com.cfcc.itfe.service.para.tsinfotaxorg.TsInfotaxorgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconvertfinorg.ITsConvertfinorgService"
+			class="com.cfcc.itfe.service.para.tsconvertfinorg.TsConvertfinorgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.modifypassword.IModifyPasswordService"
+			class="com.cfcc.itfe.service.para.modifypassword.ModifyPasswordService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsbudgetsubject.ITsBudgetsubjectService"
+			class="com.cfcc.itfe.service.para.tsbudgetsubject.TsBudgetsubjectService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsbankandpay.ITsBankandpayService"
+			class="com.cfcc.itfe.service.para.tsbankandpay.TsBankandpayService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tscoderegtype.ITsCoderegtypeService"
+			class="com.cfcc.itfe.service.para.tscoderegtype.TsCoderegtypeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsassitflagtrans.ITsAssitflagtransService"
+			class="com.cfcc.itfe.service.para.tsassitflagtrans.TsAssitflagtransService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tstaxorg.ITsTaxorgService"
+			class="com.cfcc.itfe.service.para.tstaxorg.TsTaxorgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tcbsimport.ITCBSimportService"
+			class="com.cfcc.itfe.service.para.tcbsimport.TCBSimportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsbankcode.ITsBankcodeService"
+			class="com.cfcc.itfe.service.para.tsbankcode.TsBankcodeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsdrawbackreason.ITsDrawbackreasonService"
+			class="com.cfcc.itfe.service.para.tsdrawbackreason.TsDrawbackreasonService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tscorrreason.ITsCorrReasonService"
+			class="com.cfcc.itfe.service.para.tscorrreason.TsCorrReasonService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsgenbankandreckbank.ITsGenbankandreckbankService"
+			class="com.cfcc.itfe.service.para.tsgenbankandreckbank.TsGenbankandreckbankService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tssyspara.ITsSysParasService"
+			class="com.cfcc.itfe.service.para.tssyspara.TsSysParasService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tdcorp.ITdCorpService"
+			class="com.cfcc.itfe.service.para.tdcorp.TdCorpService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsbudgetsubjectforquery.ITsBudgetsubjectForQueryService"
+			class="com.cfcc.itfe.service.para.tsbudgetsubjectforquery.TsBudgetsubjectForQueryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsmankeymode.ITsMankeymodeService"
+			class="com.cfcc.itfe.service.para.tsmankeymode.TsMankeymodeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsmankey.ITsMankeyService"
+			class="com.cfcc.itfe.service.para.tsmankey.TsMankeyService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsfinmovepaysub.ITsFinmovepaysubService"
+			class="com.cfcc.itfe.service.para.tsfinmovepaysub.TsFinmovepaysubService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.paramtransform.IParamTransformService"
+			class="com.cfcc.itfe.service.para.paramtransform.ParamTransformService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tdtaxorgparam.ITdTaxorgParamService"
+			class="com.cfcc.itfe.service.para.tdtaxorgparam.TdTaxorgParamService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tdbank.ITdBankService"
+			class="com.cfcc.itfe.service.para.tdbank.TdBankService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tpsharedivide.ITpShareDivideService"
+			class="com.cfcc.itfe.service.para.tpsharedivide.TpShareDivideService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tdbookacctmain.ITdBookacctMainService"
+			class="com.cfcc.itfe.service.para.tdbookacctmain.TdBookacctMainService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tdtaxorgmerger.ITstaxorgcodemergerService"
+			class="com.cfcc.itfe.service.para.tdtaxorgmerger.TstaxorgcodemergerService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconvertrea.ITsconvertreaService"
+			class="com.cfcc.itfe.service.para.tsconvertrea.TsconvertreaService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconvertax.ITsconvertaxService"
+			class="com.cfcc.itfe.service.para.tsconvertax.TsconvertaxService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconvertbankname.ITsconvertbanknameService"
+			class="com.cfcc.itfe.service.para.tsconvertbankname.TsconvertbanknameService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tspayacctinfo.ITspayacctinfoService"
+			class="com.cfcc.itfe.service.para.tspayacctinfo.TspayacctinfoService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsstampposition.ITsstamppositionService"
+			class="com.cfcc.itfe.service.para.tsstampposition.TsstamppositionService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.voucherauto.IVoucherAutoService"
+			class="com.cfcc.itfe.service.para.voucherauto.VoucherAutoService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tscheckfailreason.ITsCheckFailReasonService"
+			class="com.cfcc.itfe.service.para.tscheckfailreason.TsCheckFailReasonService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsbankcodeconverttype.ITsConvertbanktypeService"
+			class="com.cfcc.itfe.service.para.tsbankcodeconverttype.TsConvertbanktypeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsisnopaper.ITsIsnopaperService"
+			class="com.cfcc.itfe.service.para.tsisnopaper.TsIsnopaperService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tstaxpayacct.ITsTaxPayacctService"
+			class="com.cfcc.itfe.service.para.tstaxpayacct.TsTaxPayacctService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsconverttaxorgforzj.ITsConverttaxorgForZjService"
+			class="com.cfcc.itfe.service.para.tsconverttaxorgforzj.TsConverttaxorgForZjService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.billautosend.IBillAutoSendService"
+			class="com.cfcc.itfe.service.para.billautosend.BillAutoSendService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.interestparam.IInterestParamService"
+			class="com.cfcc.itfe.service.para.interestparam.InterestParamService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsqueryamt.ITsQueryAmtService"
+			class="com.cfcc.itfe.service.para.tsqueryamt.TsQueryAmtService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.para.tsmtofaccpt.ITsMtofAccptService"
+			class="com.cfcc.itfe.service.para.tsmtofaccpt.TsMtofAccptService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.querylogs.IQueryLogsService"
+			class="com.cfcc.itfe.service.dataquery.querylogs.QueryLogsService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.rebatedataquery.IQueryDrawbackService"
+			class="com.cfcc.itfe.service.dataquery.rebatedataquery.QueryDrawbackService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.operlogquery.ISystemdateCheckService"
+			class="com.cfcc.itfe.service.dataquery.operlogquery.SystemdateCheckService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.incomedataquery.IIncomeBillService"
+			class="com.cfcc.itfe.service.dataquery.incomedataquery.IncomeBillService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.directpayquery.IDirectPayService"
+			class="com.cfcc.itfe.service.dataquery.directpayquery.DirectPayService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.grantpayquery.IGrantPayService"
+			class="com.cfcc.itfe.service.dataquery.grantpayquery.GrantPayService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tipsmsgproc.IDealSendMsgService"
+			class="com.cfcc.itfe.service.dataquery.tipsmsgproc.DealSendMsgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.querylogconsole.IQueryLogConsoleService"
+			class="com.cfcc.itfe.service.dataquery.querylogconsole.QueryLogConsoleService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.payoutquery.IPayoutService"
+			class="com.cfcc.itfe.service.dataquery.payoutquery.PayoutService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.incomeprintproc.IDealIncomeService"
+			class="com.cfcc.itfe.service.dataquery.incomeprintproc.DealIncomeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tvdwbkquery.ITvDwbkQueryService"
+			class="com.cfcc.itfe.service.dataquery.tvdwbkquery.TvDwbkQueryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tvincorrhandbookquery.ITvInCorrhandbookQueryService"
+			class="com.cfcc.itfe.service.dataquery.tvincorrhandbookquery.TvInCorrhandbookQueryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.payoutfinancequery.IPayOutFinanceQueryService"
+			class="com.cfcc.itfe.service.dataquery.payoutfinancequery.PayOutFinanceQueryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.trincomedayrpt.ITrIncomedayrptService"
+			class="com.cfcc.itfe.service.dataquery.trincomedayrpt.TrIncomedayrptService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tvfinincomedetail.ITvFinIncomeDetailService"
+			class="com.cfcc.itfe.service.dataquery.tvfinincomedetail.TvFinIncomeDetailService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.trstockdayrpt.ITrStockdayrptService"
+			class="com.cfcc.itfe.service.dataquery.trstockdayrpt.TrStockdayrptService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tvfinincomeonline.ITvFinIncomeonlineService"
+			class="com.cfcc.itfe.service.dataquery.tvfinincomeonline.TvFinIncomeonlineService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.findatastatdown.IFinDataStatDownService"
+			class="com.cfcc.itfe.service.dataquery.findatastatdown.FinDataStatDownService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tvtaxcancel.ITvTaxCancelService"
+			class="com.cfcc.itfe.service.dataquery.tvtaxcancel.TvTaxCancelService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tipsdataexport.ITipsDataExportService"
+			class="com.cfcc.itfe.service.dataquery.tipsdataexport.TipsDataExportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tmpfilestatistics.ITmpfilestatisticsService"
+			class="com.cfcc.itfe.service.dataquery.tmpfilestatistics.TmpfilestatisticsService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.bizdatasearch.IBizdatasearchService"
+			class="com.cfcc.itfe.service.dataquery.bizdatasearch.BizdatasearchService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.pbcpayquery.IPbcpayService"
+			class="com.cfcc.itfe.service.dataquery.pbcpayquery.PbcpayService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.bizdatacollect.IBizDataCountService"
+			class="com.cfcc.itfe.service.dataquery.bizdatacollect.BizDataCountService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.findatastatdownfortj.IFinDataStatDownForTJService"
+			class="com.cfcc.itfe.service.dataquery.findatastatdownfortj.FinDataStatDownForTJService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.taxfreesearch.ITaxFreeSearchService"
+			class="com.cfcc.itfe.service.dataquery.taxfreesearch.TaxFreeSearchService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.commapplypayquery.ICommApplyPayQueryService"
+			class="com.cfcc.itfe.service.dataquery.commapplypayquery.CommApplyPayQueryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.commapplypaybackquery.ICommApplyPayBackQueryService"
+			class="com.cfcc.itfe.service.dataquery.commapplypaybackquery.CommApplyPayBackQueryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.settleaccounts.ISettleAccountsService"
+			class="com.cfcc.itfe.service.dataquery.settleaccounts.SettleAccountsService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.totalreportsearchandexport.ITotalReportSearchAndExportService"
+			class="com.cfcc.itfe.service.dataquery.totalreportsearchandexport.TotalReportSearchAndExportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.checkstatusofreportdownload.ICheckStatusOfReportDownloadService"
+			class="com.cfcc.itfe.service.dataquery.checkstatusofreportdownload.CheckStatusOfReportDownloadService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.findatastatdownforyn.IFinDataStatDownForYNService"
+			class="com.cfcc.itfe.service.dataquery.findatastatdownforyn.FinDataStatDownForYNService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.finbudgetreccountreport.IPayAndIncomeBillService"
+			class="com.cfcc.itfe.service.dataquery.finbudgetreccountreport.PayAndIncomeBillService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.budgetsubcodemonthlyreport.IBudgetsubcodemonthlyreportService"
+			class="com.cfcc.itfe.service.dataquery.budgetsubcodemonthlyreport.BudgetsubcodemonthlyreportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.voucherinfo.IVoucherInfoService"
+			class="com.cfcc.itfe.service.dataquery.voucherinfo.VoucherInfoService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.shbudgetsubcodesearch.IShbudgetsubcodesearchService"
+			class="com.cfcc.itfe.service.dataquery.shbudgetsubcodesearch.ShbudgetsubcodesearchService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.electaxbillquery.IElecTaxBillExportServiceService"
+			class="com.cfcc.itfe.service.dataquery.electaxbillquery.ElecTaxBillExportServiceService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tvincomedetailreportcheck.ITvIncomeDetailReportCheckService"
+			class="com.cfcc.itfe.service.dataquery.tvincomedetailreportcheck.TvIncomeDetailReportCheckService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.businessdetaillist.IBusinessDetailListService"
+			class="com.cfcc.itfe.service.dataquery.businessdetaillist.BusinessDetailListService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.voucherallocateincome.IVoucherAllocateIncomeService"
+			class="com.cfcc.itfe.service.dataquery.voucherallocateincome.VoucherAllocateIncomeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.trecodelargetaxandpaytable.ITrecodeLargeTaxAndPayTableService"
+			class="com.cfcc.itfe.service.dataquery.trecodelargetaxandpaytable.TrecodeLargeTaxAndPayTableService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.trincomereport.ITrIncomeReportService"
+			class="com.cfcc.itfe.service.dataquery.trincomereport.TrIncomeReportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.interestratemsg.IInterestrateMsgService"
+			class="com.cfcc.itfe.service.dataquery.interestratemsg.InterestrateMsgService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.batchbizdetailqueryforfinance.IBatchBizDetailQueryForFinanceService"
+			class="com.cfcc.itfe.service.dataquery.batchbizdetailqueryforfinance.BatchBizDetailQueryForFinanceService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tvfinincomeonlinedetailblend.ITvFinIncomeonlineDetailBlendService"
+			class="com.cfcc.itfe.service.dataquery.tvfinincomeonlinedetailblend.TvFinIncomeonlineDetailBlendService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.financedirecpayadjustvoucher.IFinanceDirecPayAdjustVoucherService"
+			class="com.cfcc.itfe.service.dataquery.financedirecpayadjustvoucher.FinanceDirecPayAdjustVoucherService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.financegrantpayadjustvoucher.IFinanceGrantPayAdjustVoucherService"
+			class="com.cfcc.itfe.service.dataquery.financegrantpayadjustvoucher.FinanceGrantPayAdjustVoucherService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.remindinfosearch.IRemindInfoSearchService"
+			class="com.cfcc.itfe.service.dataquery.remindinfosearch.RemindInfoSearchService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tbbillstore.ITbbillstoreService"
+			class="com.cfcc.itfe.service.dataquery.tbbillstore.TbbillstoreService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.selectrecord1.ISelectRecordGDService"
+			class="com.cfcc.itfe.service.dataquery.selectrecord1.SelectRecordGDService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tfrefundnotice.ITfRefundNoticeService"
+			class="com.cfcc.itfe.service.dataquery.tfrefundnotice.TfRefundNoticeService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tfreconciliation.ITfReconciliationService"
+			class="com.cfcc.itfe.service.dataquery.tfreconciliation.TfReconciliationService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tfresultreconci.ITfResultReconciService"
+			class="com.cfcc.itfe.service.dataquery.tfresultreconci.TfResultReconciService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tffundappropriation.ITfFundAppropriationService"
+			class="com.cfcc.itfe.service.dataquery.tffundappropriation.TfFundAppropriationService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tffundclearreceipt.ITfFundClearReceiptService"
+			class="com.cfcc.itfe.service.dataquery.tffundclearreceipt.TfFundClearReceiptService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataquery.tvnontaxlist.ITvNontaxlistService"
+			class="com.cfcc.itfe.service.dataquery.tvnontaxlist.TvNontaxlistService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataaudit.dataaudit.IDataCheckService"
+			class="com.cfcc.itfe.service.dataaudit.dataaudit.DataCheckService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.dataaudit.finpaystatisticalreport.IFinpaystatisticalreportService"
+			class="com.cfcc.itfe.service.dataaudit.finpaystatisticalreport.FinpaystatisticalreportService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.commonsubsys.commondbaccess.IFileResolveCommonService"
+			class="com.cfcc.itfe.service.commonsubsys.commondbaccess.FileResolveCommonService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.commonsubsys.commondbaccess.IStampDataAccessService"
+			class="com.cfcc.itfe.service.commonsubsys.commondbaccess.StampDataAccessService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.commonsubsys.commondbaccess.ISequenceHelperService"
+			class="com.cfcc.itfe.service.commonsubsys.commondbaccess.SequenceHelperService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.commonsubsys.commondbaccess.IItfeCacheService"
+			class="com.cfcc.itfe.service.commonsubsys.commondbaccess.ItfeCacheService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.commonsubsys.commondbaccess.IUploadConfirmService"
+			class="com.cfcc.itfe.service.commonsubsys.commondbaccess.UploadConfirmService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.commonsubsys.commondbaccess.ICommonDataAccessService"
+			class="com.cfcc.itfe.service.commonsubsys.commondbaccess.CommonDataAccessService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.commonsubsys.commondbaccess.IReFreshCacheInfoService"
+			class="com.cfcc.itfe.service.commonsubsys.commondbaccess.ReFreshCacheInfoService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.testconnection.ITestConnectionService"
+			class="com.cfcc.itfe.service.subsysmanage.testconnection.TestConnectionService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.loginouttips.ILogInOutTipsService"
+			class="com.cfcc.itfe.service.subsysmanage.loginouttips.LogInOutTipsService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.packdetailsendrequest.IPackDetailSendRequestService"
+			class="com.cfcc.itfe.service.subsysmanage.packdetailsendrequest.PackDetailSendRequestService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.businessstat.IBusinessStatService"
+			class="com.cfcc.itfe.service.subsysmanage.businessstat.BusinessStatService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.sysmoniter.ISysmonitorService"
+			class="com.cfcc.itfe.service.subsysmanage.sysmoniter.SysmonitorService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.databackup.IDataBackupService"
+			class="com.cfcc.itfe.service.subsysmanage.databackup.DataBackupService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.datarestore.IDataRestoreService"
+			class="com.cfcc.itfe.service.subsysmanage.datarestore.DataRestoreService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.dataquery.IDataQueryService"
+			class="com.cfcc.itfe.service.subsysmanage.dataquery.DataQueryService"
+			scope="prototype" >
+	</bean>
+
+	<bean id="com.cfcc.itfe.service.subsysmanage.datachangeandcompare.IDatachangeAndCompareService"
+			class="com.cfcc.itfe.service.subsysmanage.datachangeandcompare.DatachangeAndCompareService"
+			scope="prototype" >
+	</bean>
+
+</beans>

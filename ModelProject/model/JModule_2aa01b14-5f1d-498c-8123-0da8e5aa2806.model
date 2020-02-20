@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2aa01b14-5f1d-498c-8123-0da8e5aa2806" name="9105自由格式报文发送" ename="FreeFormat" shared="true"/>

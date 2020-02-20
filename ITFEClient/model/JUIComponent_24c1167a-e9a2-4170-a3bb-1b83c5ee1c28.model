@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="24c1167a-e9a2-4170-a3bb-1b83c5ee1c28" name="电子税票入库流水勾兑" ename="TvFinIncomeonlineDetailBlend">
+  <jproperties id="59d996b9-7181-4a85-baf5-36f5d18648bd" key="GeneratedTime" value="1513558475056"/>
+  <refModule href="JModule_93963f51-c2da-466d-9713-642d1a041102.model#93963f51-c2da-466d-9713-642d1a041102"/>
+  <model id="26a94a69-becb-4300-9752-1920c2a1569a" name="JModelImpl-26a94a69-becb-4300-9752-1920c2a1569a">
+    <attributes id="5c0ee1ce-3298-42b4-85d8-5ab628bc44c9" name="reportPath" type="java.lang.String"/>
+    <attributes id="fb463b8e-9b96-4665-a8a0-c9c6e984cd2c" name="reportRs" type="java.util.List"/>
+    <attributes id="19be35bd-78dc-4cac-8684-910c0c2d061d" name="reportMap" type="java.util.Map"/>
+    <attributes id="dfbc8f56-de5f-48ca-b058-fa3a8954613a" name="reportDetailPath" type="java.lang.String"/>
+    <attributes id="7b65e058-fa07-41a5-a00e-7cc54633bfb0" name="reportDetailRs" type="java.util.List"/>
+    <attributes id="7493c0c5-6680-45c1-ba20-8896b0c913e8" name="reportDetailMap" type="java.util.Map"/>
+    <attributes id="50bb5215-a623-44c7-8279-6fa1e51955e9" name="searchArea" type="java.lang.String"/>
+    <attributes id="560cb70e-1301-40ec-a3be-d78efd7c7966" name="detailDto" type="com.cfcc.itfe.persistence.dto.TvIncomeonlineIncomeondetailBlendDto"/>
+    <directions id="f6b615e5-2f2d-47c5-b59c-49c0b282f5f2" name="查询" ename="searchBlend"/>
+    <directions id="d13496b3-a993-491d-91e2-18682e8277a3" viewers="ceeda7cd-8ea8-4687-8b46-26a59528847a" name="勾兑" ename="searchIncomeLineDetail"/>
+    <directions id="7e67408f-1a8a-4cb9-9089-fae71c899111" name="修改备注" ename="editdemo"/>
+    <directions id="69a62c37-14fc-4d7c-b1d2-f2ab81319dfc" name="删除" ename="deleteadddata"/>
+    <directions id="d377e5bd-566e-4426-adeb-eb18bc9e9120" viewers="288ff490-d1dd-4488-8a79-0c4de5393bd2" name="修改保存" ename="editdata"/>
+    <directions id="24bf2919-ec21-435f-a79a-9e0d6e506a49" name="勾兑入库" ename="blendStorage"/>
+    <directions id="4fed7e07-2b49-4b5b-b75e-f0c02be041e5" viewers="288ff490-d1dd-4488-8a79-0c4de5393bd2" name="返回" ename="returndefault"/>
+    <directions id="8fe774f2-2ab6-4015-857a-7a3a7491f70e" viewers="c99af04d-1719-4a66-8c66-001b689e6966" name="修改页面" ename="goedit"/>
+    <directions id="451a3358-eb28-47cb-af2a-dba5ae5affda" viewers="c99af04d-1719-4a66-8c66-001b689e6966" name="录入界面" ename="goadd"/>
+    <directions id="ae118c08-a6e5-4cf8-915a-dc089aaa102c" name="不符数据查看" ename="notequalsdetail"/>
+    <directions id="6e8a15c7-e38d-42f5-aaa6-b4f0f75b7b73" name="相符数据查看" ename="equalsdetail"/>
+    <directions id="b4730997-3ac3-4d06-93d2-abc128a5a84f" name="全选反选" ename="selectall"/>
+    <directions id="2952ccb8-f051-4f94-9b50-6782955fb1fa" viewers="d096fe6e-cd82-4149-ad9f-0d365789a29c" name="勾兑入库汇总报表" ename="toSummaryReport"/>
+    <directions id="2bc118d7-cdab-44f6-ad5f-eba0db4baf27" viewers="5ad1802f-0037-435c-b881-d784cac936e6" name="勾兑入库明细报表" ename="toDetailReport"/>
+    <directions id="ef447998-8697-4f0e-8fa6-86852b61136f" viewers="288ff490-d1dd-4488-8a79-0c4de5393bd2" name="返回" ename="backToSearch"/>
+    <directions id="0ef52e41-90f0-42d2-8b3c-7d45e3a72fc9" name="单选" ename="singleSelect"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_2d485a8a-c063-4db4-a583-a58d4dcb0952.model#2d485a8a-c063-4db4-a583-a58d4dcb0952"/>
+  <contentAreas id="c718404d-4fd1-4806-853c-dce49be79847">
+    <contentareanode id="22285fb8-877d-42c2-bcc5-ae3ec33d561a" name="电子税票勾兑查询条件" grouptitle="电子税票勾兑查询条件" columnnum="3">
+      <widgetRefs xsi:type="model:Text" id="28f74423-62a5-43d9-a26c-ef3b3aef3185" name="入库日期起" binding="sintredateStart" caption="入库日期起" editable="true" required="true">
+        <labelStyle id="f2d6e754-56dd-4f68-93dc-f545d228cc57" name="LabelStyleImpl-6ceb85cf-ef91-4790-bc38-da8349e634e9" ename="LabelStyleImpld6ceb85cf-ef91-4790-bc38-da8349e634e9"/>
+        <componentStyle id="678206eb-aa06-4e87-b7d5-647408151975" name="ComponentStyleImpl-1ab22432-dff9-4ca2-a755-e19dec6b6674" ename="ComponentStyleImpl1ab22432-dff9-4ca2-a755-e19dec6b6674"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="bdcc1b95-d90b-4176-93ee-93c32018ee48" name="入库日期止" binding="sintredateEnd" caption="入库日期止" editable="true" required="true">
+        <labelStyle id="45efe6c1-e4e3-4a63-812e-7f2743b71b20" name="LabelStyleImpl-6ceb85cf-ef91-4790-bc38-da8349e634e9" ename="LabelStyleImpld6ceb85cf-ef91-4790-bc38-da8349e634e9"/>
+        <componentStyle id="84e257e7-2966-40f6-892e-29406a88f0f5" name="ComponentStyleImpl-1ab22432-dff9-4ca2-a755-e19dec6b6674" ename="ComponentStyleImpl1ab22432-dff9-4ca2-a755-e19dec6b6674"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="813e7c90-9c4f-44f8-b272-9c3a2e11ca44" name="预算科目代码" binding="dto.sbdgsbtcode" caption="预算科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="15da2012-33dc-47c1-88f7-9daae82bf174" name="税票日期起" binding="sapplydateStart" caption="税票日期起" editable="true">
+        <labelStyle id="97c8e43b-f619-47cf-bec4-90ce97bbb3cd" name="LabelStyleImpl-6ceb85cf-ef91-4790-bc38-da8349e634e9" ename="LabelStyleImpld6ceb85cf-ef91-4790-bc38-da8349e634e9"/>
+        <componentStyle id="b3301af2-e63e-4702-8d8e-514955510eba" name="ComponentStyleImpl-1ab22432-dff9-4ca2-a755-e19dec6b6674" ename="ComponentStyleImpl1ab22432-dff9-4ca2-a755-e19dec6b6674"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e93e8d70-cf8c-4a7c-a42a-0f49c4b6e405" name="税票日期止" binding="sapplydateEnd" caption="税票日期止" editable="true">
+        <labelStyle id="6ceb85cf-ef91-4790-bc38-da8349e634e9" name="LabelStyleImpl-6ceb85cf-ef91-4790-bc38-da8349e634e9" ename="LabelStyleImpld6ceb85cf-ef91-4790-bc38-da8349e634e9"/>
+        <componentStyle id="1ab22432-dff9-4ca2-a755-e19dec6b6674" name="ComponentStyleImpl-1ab22432-dff9-4ca2-a755-e19dec6b6674" ename="ComponentStyleImpl1ab22432-dff9-4ca2-a755-e19dec6b6674"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="82e1aace-b8c0-4056-b1e4-6e7d2769985d" name="cbudgettype" binding="dto.sbudgettype" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4f0fa3bd-d75c-4c72-9042-a3b2eccf0778" name="staxvouno" binding="dto.staxvouno" caption="税票号码" editable="true">
+        <labelStyle id="ee866a61-1e41-4059-a0bc-e9173d6a709d" name="LabelStyleImpl-ee866a61-1e41-4059-a0bc-e9173d6a709d" ename="LabelStyleImpldee866a61-1e41-4059-a0bc-e9173d6a709d"/>
+        <componentStyle id="a18eb2a6-a29a-48c4-88c1-eaf4c400684f" name="ComponentStyleImpl-a18eb2a6-a29a-48c4-88c1-eaf4c400684f" ename="ComponentStyleImpla18eb2a6-a29a-48c4-88c1-eaf4c400684f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="a7bfbb6b-d00b-400c-9bfa-b498fdfabb96" name="国库代码" binding="strecode" caption="国库代码" required="true" display="strename" underly="strecode" modelsource="treCodeList"/>
+      <widgetRefs xsi:type="model:Combo" id="b6acd986-14a7-4d68-a2dc-143a61219cab" name="征收机关代码" binding="dto.staxorgcode" caption="征收机关代码" display="staxorgname" underly="staxorgcode" modelsource="taxorgList"/>
+      <widgetRefs xsi:type="model:Combo" id="8df660fa-8e6c-4cc0-9d58-71a075106bc6" name="预算级次" binding="dto.sbdglevel" caption="预算级次">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="becaec27-069c-43fc-b33d-a996d85fe7c2" name="ComboImpl-becaec27-069c-43fc-b33d-a996d85fe7c2" binding="searchArea" caption="辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ae08c58a-4e90-42bb-b2b7-378ade4989d0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4c05695e-f01c-4b0f-a685-6a362f8d6bb6" name="付款行行号" binding="dto.spaybnkno" caption="付款行行号"/>
+      <widgetRefs xsi:type="model:Combo" id="655edb35-9daf-439a-b336-3965ce746f57" name="导出凭证类型" binding="dto.sblend" caption="导出凭证类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4cae6a32-36b0-428c-8e26-22cea721715d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="7ee0e2e1-6ef6-4679-a8b6-c6c472068c68" name="来源" binding="dto.svouchannel" caption="来源">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#525157a1-fd49-4220-b511-a22fb5ddd627"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="94edf4e9-aa0b-440f-85a0-6fa88abeffbd" name="查询表" binding="dto.strename" caption="查询表" display="stypecode" underly="svalue" modelsource="statelist"/>
+      <widgetRefs xsi:type="model:Text" id="30b4f7ae-cc06-477f-b151-1f339fb5e031" name="staxpayname" binding="dto.staxpayname" caption="纳税人名称" editable="true">
+        <labelStyle id="2b922f68-9770-48ee-b285-eb2a12c8e9fb" name="LabelStyleImpl-f311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7" ename="LabelStyleImpldf311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7"/>
+        <componentStyle id="c3cdaf43-fb04-4064-aba2-621b3f027eeb" name="ComponentStyleImpl-a3824a45-0648-4ef8-9b17-261b8b0875ae" ename="ComponentStyleImpla3824a45-0648-4ef8-9b17-261b8b0875ae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e79e3918-30b9-4f7c-be2a-d1869f843f7f" name="退库日期" binding="dto.setpcode" caption="退库日期"/>
+      <widgetRefs xsi:type="model:Text" id="5ab6a438-efbc-4915-aa57-4fa4f5cb4394" name="退库凭证号" binding="dto.setpname" caption="退库凭证号"/>
+      <widgetRefs xsi:type="model:Text" id="a7f3e1dd-a569-48c5-a833-3f77a04bd492" name="退库金额" binding="dto.sremark5" caption="退库金额"/>
+      <widgetRefs xsi:type="model:Text" id="3d2a61e6-91fe-4ec8-a8d8-70a98bc61c6d" name="更正日期" binding="dto.sbdgsbtname" caption="更正日期"/>
+      <widgetRefs xsi:type="model:Text" id="01e989f2-8a32-4ea4-b691-f97474c69aee" name="更正凭证号" binding="dto.sremark1" caption="更正凭证号"/>
+      <widgetRefs xsi:type="model:Text" id="ef1f3042-4142-44da-bdce-5d68ba6b549d" name="更正金额" binding="dto.sremark2" caption="更正金额"/>
+      <widgetRefs xsi:type="model:Textarea" id="948dc6e8-3c56-4034-baa2-efe58ca12fcb" name="备注" binding="dto.sremark4" caption="备注" warp="true"/>
+    </contentareanode>
+    <contentareanode id="625c6d61-fc29-49ca-9d28-abb2c067ebc8" name="入库流水信息查询结果" grouptitle="入库流水信息查询结果">
+      <widgetRefs xsi:type="model:Table" id="5ca1b715-d008-495a-83cd-84e3883f6788" name="电子税票信息查询结果" binding="pagingcontext" caption="电子税票信息查询结果" tabletype="paging" pagingtable="" selectedrows="">
+        <columnlist id="26b4504e-ad7a-430d-b0cb-a81fed1f17f2" name="sorgcode" binding="sorgcode" caption="财政机关代码"/>
+        <columnlist id="59ce7ec1-4517-49a9-a4a7-ad31e8050618" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="020bc93a-4067-42f9-917a-d6034d2433f7" name="sintredate" binding="sintredate" caption="入库日期"/>
+        <columnlist id="d8cae7c4-c918-42d7-8846-61e62c42a9d4" name="ipkgseqno" binding="ipkgseqno" caption="包流水号"/>
+        <columnlist id="58a74641-f8a8-408b-856f-fd3d3f6127f5" name="sexpvouno" binding="sexpvouno" caption="凭证编号"/>
+        <columnlist id="54b97eb8-1c64-455c-8abb-6c66323a8817" name="sexpvoutype" binding="sexpvoutype" caption="导出凭证类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4cae6a32-36b0-428c-8e26-22cea721715d"/>
+        </columnlist>
+        <columnlist id="183ecf6d-6c96-455c-bee1-5fdb9e021248" name="cbdglevel" binding="cbdglevel" caption="预算级次">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="1620a18a-73bf-4a99-9038-107c1ac63f75" name="sbdgsbtcode" binding="sbdgsbtcode" caption="预算科目代码"/>
+        <columnlist id="49e2345a-545a-48cc-a3a0-5844b1974813" name="cbdgkind" binding="cbdgkind" caption="预算种类" enumparam="">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="03205ab1-29c0-4faa-87d4-ff9548fe8b1a" name="famt" binding="famt" caption="金额"/>
+        <columnlist id="5517f0dc-d3bb-44c3-8633-59b32290e59e" name="cvouchannel" binding="cvouchannel" caption="凭证来源" enumparam="">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#525157a1-fd49-4220-b511-a22fb5ddd627"/>
+        </columnlist>
+        <columnlist id="513ede2b-ef03-4567-8be4-985282b61407" name="staxorgcode" binding="staxorgcode" caption="征收机关代码"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="b6f43e1e-c266-4b40-82d2-ee6f51990bd9" name="电子税票入库流水勾兑结果" grouptitle="电子税票入库流水勾兑结果" columnnum="3">
+      <widgetRefs xsi:type="model:Text" id="aedd2ed9-828c-426f-85ae-034a905caeb2" name="总条数" binding="allcount" caption="总条数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="d7461233-7c4c-4b43-9528-92cd8ddecd6e" name="相符条数" binding="equalscount" caption="相符条数" editable="false"/>
+      <widgetRefs xsi:type="model:Button" id="7b7f1a6a-25a9-425d-b6b2-8c82dfe6587c" name="查看" caption="查看" layout="GridLayout" direction="6e8a15c7-e38d-42f5-aaa6-b4f0f75b7b73"/>
+      <widgetRefs xsi:type="model:Text" id="8c8acf64-dc75-4bce-95e1-e7b92b651f09" name="勾兑入库条数" binding="blendcount" caption="勾兑入库条数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="ddaed1b6-45b7-4446-995c-9305d5e8e6e6" name="不符条数" binding="notequalscount" caption="不符条数" editable="false"/>
+      <widgetRefs xsi:type="model:Button" id="f36ccb9d-0bf2-40ee-b3c1-ce36dbbe61f0" name="查看" caption="查看" layout="GridLayout" direction="ae118c08-a6e5-4cf8-915a-dc089aaa102c"/>
+      <widgetRefs xsi:type="model:Textarea" id="8123e252-1e9b-4e4d-bd33-cf871b1923f1" name="备注" binding="remark" caption="备注" warp="true"/>
+    </contentareanode>
+    <contentareanode id="b502bf9b-37e2-48d3-a5ec-39454ce1230e" name="勾兑入库查询结果" grouptitle="勾兑入库查询结果">
+      <widgetRefs xsi:type="model:Table" id="a631da03-3207-4dc7-a573-d97912392cf0" name="勾兑入库查询结果" binding="pagingcontextblend" caption="勾兑入库查询结果" tabletype="paging" pagingtable="" showcheckbox="true" selectedrows="selecteddatalist" refdoubleclickdirection="8fe774f2-2ab6-4015-857a-7a3a7491f70e" refsingleclickdirection="0ef52e41-90f0-42d2-8b3c-7d45e3a72fc9">
+        <columnlist id="0f5efaf5-ddb0-4599-8aca-b9daa59c11a3" name="系统更新时间" binding="tssysupdate" caption="系统更新时间"/>
+        <columnlist id="aa680ab4-04ad-40f0-96df-3693e297b1b3" name="入库日期" binding="sintredate" caption="入库日期"/>
+        <columnlist id="0f6482db-261f-4f4e-8534-c63b4a07a214" name="税票日期" binding="sapplydate" caption="税票日期"/>
+        <columnlist id="a0a2c03b-1c16-4a0d-aa2e-b3a373cae200" name="税票号码" binding="staxvouno" caption="税票号码"/>
+        <columnlist id="b9bada5e-6de2-4505-b062-889acf66c97d" name="勾兑来源" binding="sremark3" caption="勾兑来源"/>
+        <columnlist id="73f9c32a-3f42-4cc2-80fd-5ab1bc24ac2a" name="财政机关代码" binding="sfinorgcode" caption="财政机关代码"/>
+        <columnlist id="3db7e91c-f656-4a1f-9124-3df290ba6fae" name="国库代码" binding="strecode" caption="国库代码">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+        </columnlist>
+        <columnlist id="cb8a6390-ac0a-42f8-8444-eb4352eb6254" name="征收机关代码" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="573a5449-738a-45ed-b035-ebd477a89f8d" name="预算级次" binding="sbdglevel" caption="预算级次">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="c6f64643-f27a-4e94-8ee2-2c41b4707bb0" name="调整期标志" binding="strimflag" caption="调整期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+        </columnlist>
+        <columnlist id="8973d00b-dfbf-4025-8079-04fb6d1545fd" name="纳税人编号" binding="staxpaycode" caption="纳税人编号"/>
+        <columnlist id="f82166b9-6134-4b58-afa2-fbe82d8881af" name="纳税人名称" binding="staxpayname" caption="纳税人名称"/>
+        <columnlist id="9985fe13-2ae8-4ac7-a099-729f3b1b3852" name="预算科目代码" binding="sbdgsbtcode" caption="预算科目代码"/>
+        <columnlist id="887fa3c6-832b-4f00-b326-39fc4aec8819" name="预算种类" binding="sbudgettype" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="3e1c54a7-9d0c-462d-9a02-a897d219dc0a" name="包流水号" binding="spackno" caption="包流水号"/>
+        <columnlist id="45fa16b6-5cf9-48e1-a2f1-bac8a3759051" name="付款行行号" binding="spaybnkno" caption="付款行行号"/>
+        <columnlist id="786f990d-ea2a-47ab-8386-6fb2dee5f8c7" name="交易流水号" binding="strano" caption="交易流水号"/>
+        <columnlist id="169d3cfb-1b98-4107-b8dc-363f899086ab" name="原报文编号" binding="sorimsgno" caption="原报文编号"/>
+        <columnlist id="493d27bf-52c4-45c2-a907-325a858e2311" name="税票金额" binding="ftraamt" caption="税票金额"/>
+        <columnlist id="448df483-c61e-4b6b-ad04-cbbb24ef2e62" name="入库金额" binding="famt" caption="入库金额"/>
+        <columnlist id="2fd3d6d4-6d94-43dd-8d70-f465cdc8f6aa" name="付款人开户行行号" binding="spayeropnbnkno" caption="付款人开户行行号"/>
+        <columnlist id="ee3ce3fd-3319-45c7-a175-7c0d8cd7a761" name="缴款单位名称" binding="shandorgname" caption="缴款单位名称"/>
+        <columnlist id="2152d3bc-5cff-4cc8-b700-4489a232a83c" name="付款人账号" binding="spayacct" caption="付款人账号"/>
+        <columnlist id="125961e7-5748-489d-9233-3d5c33493904" name="开票日期" binding="sbilldate" caption="开票日期"/>
+        <columnlist id="da44222f-2bad-4829-83c0-a77e395905eb" name="企业类型" binding="setptype" caption="企业类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4338e7c6-ce99-4ad0-b91a-ee0c2ce668fd"/>
+        </columnlist>
+        <columnlist id="212d3c9b-fec3-49a2-838c-6d6ca17cfb59" name="限缴日期" binding="slimit" caption="限缴日期"/>
+        <columnlist id="b507c44c-4c53-4b4f-866c-0165463be01f" name="税种代码" binding="staxtypecode" caption="税种代码"/>
+        <columnlist id="1ffeaefc-6db5-46ce-a97d-ba96507e5c2a" name="税种名称" binding="staxkindname" caption="税种名称"/>
+        <columnlist id="2e58a7cc-737d-44b7-9bd4-85bd5fcaf50d" name="税款所属日期起" binding="staxstartdate" caption="税款所属日期起"/>
+        <columnlist id="10a56123-be28-44ec-bb08-26f87202caa8" name="税款所属日期止" binding="staxenddate" caption="税款所属日期止"/>
+        <columnlist id="93e1c0df-19c0-488c-aa0e-5d79893fceab" name="辅助标志" binding="sastflag" caption="辅助标志"/>
+        <columnlist id="7a8b0476-0921-4c0d-a78c-f028c7e33dfe" name="税款类型" binding="staxtype" caption="税款类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#a431955e-840b-4016-9a7a-3145c466ebe1"/>
+        </columnlist>
+        <columnlist id="8ecce8ad-687f-4eef-95a2-0bc1834f2d3c" name="账务日期" binding="sacct" caption="账务日期"/>
+        <columnlist id="d962f782-de07-4e23-8def-4ee6811839c4" name="退库日期" binding="setpcode" caption="退库日期"/>
+        <columnlist id="83da85cc-96ce-4238-a253-e50693c9216f" name="退库凭证号" binding="setpname" caption="退库凭证号"/>
+        <columnlist id="7096da19-ba95-47e8-9fe4-d35315f45493" name="退库金额" binding="sremark5" caption="退库金额"/>
+        <columnlist id="98bad444-c99a-4b49-8e2b-60d0ff1cee25" name="更正日期" binding="sbdgsbtname" caption="更正日期"/>
+        <columnlist id="43fb49ec-8bad-462e-853c-3e362c185090" name="更正凭证号" binding="sremark1" caption="更正凭证号"/>
+        <columnlist id="008ed830-4296-4987-a669-f3d21469a0d4" name="更正金额" binding="sremark2" caption="更正金额"/>
+        <columnlist id="76df492e-dfc7-4071-a7f0-3e989088b7e4" name="备注" binding="sremark4" caption="备注"/>
+        <columnlist id="3b936777-ca5b-4fdd-82c2-6a7d68a3a5a9" name="处理状态" binding="strastate" caption="处理状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#14bd5859-08f9-466f-88d1-06ea2162f0cc"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="55a41f60-5877-4fda-90d7-a99cf68ef34e" name="勾兑入库添加修改界面" grouptitle="勾兑入库添加修改界面" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="46ddabbe-2a17-4064-a64d-b6caf9e2f674" name="税票日期" binding="editdto.sapplydate" caption="税票日期" editable="false" required="false">
+        <labelStyle id="6576a7d6-5807-452b-95f9-b450f2f4f551" name="LabelStyleImpl-6ceb85cf-ef91-4790-bc38-da8349e634e9" ename="LabelStyleImpld6ceb85cf-ef91-4790-bc38-da8349e634e9"/>
+        <componentStyle id="e1514dee-a399-4367-945e-d12eebc4b065" name="ComponentStyleImpl-1ab22432-dff9-4ca2-a755-e19dec6b6674" ename="ComponentStyleImpl1ab22432-dff9-4ca2-a755-e19dec6b6674"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="12d67186-077f-443b-ab79-01b333bb8035" name="入库日期" binding="editdto.sintredate" caption="入库日期" editable="false" required="false"/>
+      <widgetRefs xsi:type="model:Text" id="e3dec5aa-d43f-43c4-b997-4fedb65c51f5" name="勾兑日期" binding="editdto.sblend" caption="勾兑日期" editable="false" required="false"/>
+      <widgetRefs xsi:type="model:Text" id="7a82dfd6-92a5-4dde-8215-c72d176b69d3" name="staxvouno" binding="editdto.staxvouno" caption="税票号码" editable="false" required="false">
+        <labelStyle id="763687d7-983d-4624-92f4-e4cd5753612e" name="LabelStyleImpl-ee866a61-1e41-4059-a0bc-e9173d6a709d" ename="LabelStyleImpldee866a61-1e41-4059-a0bc-e9173d6a709d"/>
+        <componentStyle id="80b5fcb8-8fb6-4be7-9da9-efc03ee5d71e" name="ComponentStyleImpl-a18eb2a6-a29a-48c4-88c1-eaf4c400684f" ename="ComponentStyleImpla18eb2a6-a29a-48c4-88c1-eaf4c400684f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="82178035-53fa-4368-b1ad-1e4fff29d320" name="开票日期" binding="editdto.sbilldate" caption="开票日期" editable="false" required="false"/>
+      <widgetRefs xsi:type="model:Text" id="6fac6b23-d5f0-43b8-bef3-477a368f5ee5" name="限缴日期" binding="editdto.slimit" caption="限缴日期" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="80e9b365-c8e9-4257-b72e-608213f2fcfc" name="账务日期" binding="editdto.sacct" caption="账务日期" editable="false" required="false">
+        <labelStyle id="fe3e0645-e996-4dff-98cb-9b77a77a6b83" name="LabelStyleImpl-6ceb85cf-ef91-4790-bc38-da8349e634e9" ename="LabelStyleImpld6ceb85cf-ef91-4790-bc38-da8349e634e9"/>
+        <componentStyle id="83a31b48-2179-4449-837a-5be897b2e5a3" name="ComponentStyleImpl-1ab22432-dff9-4ca2-a755-e19dec6b6674" ename="ComponentStyleImpl1ab22432-dff9-4ca2-a755-e19dec6b6674"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="1622d48f-e941-4722-8641-d5ade9d01250" name="税款所属日期起" binding="editdto.staxstartdate" caption="税款所属日期起" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="b073dfc7-7c3a-4e55-bbd5-45b0d99d828c" name="税款所属日期止" binding="editdto.staxenddate" caption="税款所属日期止" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="a3ceffbd-a724-4c28-bdec-076970fb6f07" name="辅助标志" binding="editdto.sastflag" caption="辅助标志" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="5e2bc142-8a93-4a91-91a2-027ff305041d" name="国库代码" binding="editdto.strecode" caption="国库代码" editable="false" required="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="e0325532-16c6-4580-809f-b43e7f2e2236" name="财政机关代码" binding="editdto.sfinorgcode" caption="财政机关代码" editable="false" required="false" display="sfinorgname" underly="sfinorgcode" modelsource="finorgList"/>
+      <widgetRefs xsi:type="model:Combo" id="0e368966-e0a8-40e8-8f12-52041e30dc82" name="征收机关代码" binding="editdto.staxorgcode" caption="征收机关代码" editable="false" display="staxorgname" underly="staxorgcode" modelsource="taxorgList"/>
+      <widgetRefs xsi:type="model:Combo" id="5fb89393-4dc7-4e16-8626-7a7091e37989" name="cbudgettype" binding="editdto.sbudgettype" caption="预算种类" editable="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="f9709766-f92f-4579-bdb7-f1933030f659" name="预算级次" binding="editdto.sbdglevel" caption="预算级次" editable="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="809a938f-c945-43e1-8014-b0077049116c" name="ctrimflag" binding="editdto.strimflag" caption="调整期标志" editable="false" defaultvalue="1">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e9cee125-2fc9-4e2b-b827-54525d6fdbec" name="预算科目代码" binding="editdto.sbdgsbtcode" caption="预算科目代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="468edf6a-d48d-443c-91c5-fc5880622975" name="spackno" binding="editdto.spackno" caption="包流水号" editable="false" required="false">
+        <labelStyle id="ae7031e9-51ef-45a7-ada4-3eb7b2ee5794" name="LabelStyleImpl-cb7d1093-cd0d-4a6b-a37e-affbca3c66cd" ename="LabelStyleImpldcb7d1093-cd0d-4a6b-a37e-affbca3c66cd"/>
+        <componentStyle id="887726b7-daf0-4c56-90bc-e4c75599eb24" name="ComponentStyleImpl-ce9b3b53-ff7e-46c2-861c-a2570bc44d7b" ename="ComponentStyleImplce9b3b53-ff7e-46c2-861c-a2570bc44d7b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="365b928e-db23-4f83-95b3-cc8404e0f2f4" name="strano" binding="editdto.strano" caption="交易流水号" editable="false" required="false">
+        <labelStyle id="e9ecc7ac-41d8-4796-9616-2d129af5fbda" name="LabelStyleImpl-14b2e39c-0fad-420c-9fe4-91376fc200da" ename="LabelStyleImpld14b2e39c-0fad-420c-9fe4-91376fc200da"/>
+        <componentStyle id="d8abbe24-de72-4788-838c-f485a9ccee4d" name="ComponentStyleImpl-2afa9a12-7c61-4afb-8c4c-3e93163e1772" ename="ComponentStyleImpl2afa9a12-7c61-4afb-8c4c-3e93163e1772"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="483d2a97-c617-4871-bf8d-6d4842a1428d" name="原报文编号" binding="editdto.sorimsgno" caption="原报文编号" editable="false" required="false"/>
+      <widgetRefs xsi:type="model:Text" id="fbf69ccd-f8ae-4864-a3db-6f8596f28e72" name="staxpaycode" binding="editdto.staxpaycode" caption="纳税人编号" editable="false" required="false">
+        <labelStyle id="c53e8b98-c00d-4427-8b9c-c5119fb92415" name="LabelStyleImpl-f311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7" ename="LabelStyleImpldf311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7"/>
+        <componentStyle id="c82bb663-ef57-44b0-b91b-5970ad2a7067" name="ComponentStyleImpl-a3824a45-0648-4ef8-9b17-261b8b0875ae" ename="ComponentStyleImpla3824a45-0648-4ef8-9b17-261b8b0875ae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e31f4c2c-bfcf-4063-a20e-6fb476180b07" name="staxpayname" binding="editdto.staxpayname" caption="纳税人名称" editable="false">
+        <labelStyle id="d88e27af-1323-474e-b6ec-c2536650d5d7" name="LabelStyleImpl-f311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7" ename="LabelStyleImpldf311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7"/>
+        <componentStyle id="bca71f83-0dca-4d30-b8db-9fffdc0bc2ee" name="ComponentStyleImpl-a3824a45-0648-4ef8-9b17-261b8b0875ae" ename="ComponentStyleImpla3824a45-0648-4ef8-9b17-261b8b0875ae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="7b1a577f-29a2-4ce3-8b0b-317d6c0988c2" name="缴款单位名称" binding="editdto.shandorgname" caption="缴款单位名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="a51cec87-cfd1-4fa5-b5fa-6a499928d764" name="付款行行号" binding="editdto.spaybnkno" caption="付款行行号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="441df3b4-a40b-441a-9b3d-28221da4e7a1" name="付款人开户行行号" binding="editdto.spayeropnbnkno" caption="付款人开户行行号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="38c2a274-eea4-46cf-952f-c3a97f4d2d3f" name="付款人账号" binding="editdto.spayacct" caption="付款人账号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="3a7cd514-1356-4b0d-978e-c90abc10be4d" name="税票金额" binding="editdto.ftraamt" caption="税票金额" editable="false" required="false"/>
+      <widgetRefs xsi:type="model:Text" id="b2c8822c-f233-497d-8fca-9251ac0016ba" name="入库金额" binding="editdto.famt" caption="入库金额" editable="false" required="false"/>
+      <widgetRefs xsi:type="model:Text" id="cf2733d7-d258-455c-a933-22720a8ed4f1" name="企业类型" binding="editdto.setptype" caption="企业类型" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="f388dad5-c2f0-422d-92ad-1eca72bfd512" name="税种代码" binding="editdto.staxtypecode" caption="税种代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e49bf9d9-b201-4f8f-adb0-1d988bccc754" name="税种名称" binding="editdto.staxkindname" caption="税种名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="191904c1-f09a-419b-b344-0410ab6f3391" name="税种类型" binding="editdto.staxtype" caption="税种类型" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="b09867d4-788e-4e9e-b987-4850f16dc19a" name="退库日期" binding="editdto.setpcode" caption="退库日期"/>
+      <widgetRefs xsi:type="model:Text" id="8da4a186-c3b6-4735-85bd-ee891d7c3d50" name="退库凭证号" binding="editdto.setpname" caption="退库凭证号"/>
+      <widgetRefs xsi:type="model:Text" id="426b9dbe-a7f7-4881-957d-144efa9eecf9" name="退库金额" binding="editdto.sremark5" caption="退库金额"/>
+      <widgetRefs xsi:type="model:Text" id="84fb76ba-a108-4162-af6b-59b675230273" name="更正日期" binding="editdto.sbdgsbtname" caption="更正日期"/>
+      <widgetRefs xsi:type="model:Text" id="46c836ad-085e-409d-a5ac-0ed7ef616765" name="更正凭证号" binding="editdto.sremark1" caption="更正凭证号"/>
+      <widgetRefs xsi:type="model:Text" id="cedf001c-604e-463d-b011-477775380508" name="更正金额" binding="editdto.sremark2" caption="更正金额"/>
+      <widgetRefs xsi:type="model:Textarea" id="b5b21c5b-8470-4936-b6eb-e8effa1778ec" name="备注" binding="editdto.sremark4" caption="备注" warp="true"/>
+    </contentareanode>
+    <contentareanode id="e4ffccf3-0dfb-4e8b-8ee6-9eaef2f22e65" name="勾兑入库汇总报表" grouptitle="">
+      <jreportref id="e4058025-5017-4ed5-bd69-99aa4244c81c" name="勾兑入库汇总报表" reportpath="reportPath" binding="reportRs" parammap="reportMap"/>
+    </contentareanode>
+    <contentareanode id="992ed717-f2a6-41b2-a0a4-af1b3be0c791" name="勾兑入库明细报表" grouptitle="">
+      <jreportref id="3ec39ca0-0eac-420d-8388-f279dcb43665" name="勾兑入库明细报表" reportpath="reportDetailPath" binding="reportDetailRs" parammap="reportDetailMap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="39cc3455-becc-4feb-a7b4-06adb53d297d">
+    <pages id="56f998d0-22ec-4ccd-89e5-72cb34b9b55c" name="JPageImpl-56f998d0-22ec-4ccd-89e5-72cb34b9b55c">
+      <views id="288ff490-d1dd-4488-8a79-0c4de5393bd2" name="勾兑入库查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="22285fb8-877d-42c2-bcc5-ae3ec33d561a b502bf9b-37e2-48d3-a5ec-39454ce1230e">
+        <buttonArea id="efe939b3-a12f-49f4-9259-d06827395b70" name="JButtonAreaImpl-efe939b3-a12f-49f4-9259-d06827395b70">
+          <buttons id="06c87252-d8f1-4598-bca4-29d0b610e858" name="全选/反选" caption="全选/反选" direction="b4730997-3ac3-4d06-93d2-abc128a5a84f"/>
+          <buttons id="3962ec39-84cd-4852-b660-8e8486202c26" name="入库查询" caption="入库查询" action="" checkrequired="true" direction="f6b615e5-2f2d-47c5-b59c-49c0b282f5f2"/>
+          <buttons id="f865cae4-9c9c-49a9-82c4-fa861f9b3f6b" name="录入" visible="false" caption="录入" direction="451a3358-eb28-47cb-af2a-dba5ae5affda"/>
+          <buttons id="bef1b90f-ed46-4621-aeae-036c7d4bca58" name="修改保存" caption="修改保存" direction="7e67408f-1a8a-4cb9-9089-fae71c899111"/>
+          <buttons id="fd74768d-a1f0-4dcd-980b-bdf1849a08a4" name="删除" visible="false" caption="删除" direction="69a62c37-14fc-4d7c-b1d2-f2ab81319dfc"/>
+          <buttons id="920b0c1f-7c98-4cc8-b550-bb7fa2fb8185" name="勾兑查询" caption="勾兑查询" action="" checkrequired="true" direction="d13496b3-a993-491d-91e2-18682e8277a3"/>
+          <buttons id="a1bc204b-4fa8-478a-ad6b-c849d605796a" name="ButtonImpl-a1bc204b-4fa8-478a-ad6b-c849d605796a" caption="业务量统计" checkrequired="true" direction="2952ccb8-f051-4f94-9b50-6782955fb1fa"/>
+          <buttons id="dcd1e1e9-b561-44d7-85a9-45ff508be52e" name="ButtonImpl-dcd1e1e9-b561-44d7-85a9-45ff508be52e" caption="勾兑入库明细报表" checkrequired="true" direction="2bc118d7-cdab-44f6-ad5f-eba0db4baf27"/>
+        </buttonArea>
+      </views>
+      <views id="10fa82c7-2578-45a4-90d6-55c5f248e3cf" name="勾兑入库查询结果" contentArea="b502bf9b-37e2-48d3-a5ec-39454ce1230e">
+        <buttonArea id="93477ae5-9338-4bc3-9e56-ca5aec0b48d7" name="JButtonAreaImpl-93477ae5-9338-4bc3-9e56-ca5aec0b48d7">
+          <buttons id="be231752-53ae-4de6-8301-f0c2646ace61" name="返回" caption="返回" direction="4fed7e07-2b49-4b5b-b75e-f0c02be041e5"/>
+        </buttonArea>
+      </views>
+      <views id="ceeda7cd-8ea8-4687-8b46-26a59528847a" name="电子税票勾兑查询结果" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="b6f43e1e-c266-4b40-82d2-ee6f51990bd9 625c6d61-fc29-49ca-9d28-abb2c067ebc8">
+        <buttonArea id="7a3aa814-c839-4649-98fd-3b7545626cf4" name="JButtonAreaImpl-7a3aa814-c839-4649-98fd-3b7545626cf4">
+          <buttons id="abffbf2f-77f9-414b-b551-331a90280b19" name="勾兑入库" caption="勾兑入库" direction="24bf2919-ec21-435f-a79a-9e0d6e506a49"/>
+          <buttons id="51ac4136-9c08-4b41-bb30-d09547e985c3" name="返回" caption="返回" direction="4fed7e07-2b49-4b5b-b75e-f0c02be041e5"/>
+        </buttonArea>
+      </views>
+      <views id="c99af04d-1719-4a66-8c66-001b689e6966" name="勾兑数据录入界面" contentArea="55a41f60-5877-4fda-90d7-a99cf68ef34e">
+        <buttonArea id="dbd3f300-932d-4034-ad7a-708adc87889d" name="JButtonAreaImpl-dbd3f300-932d-4034-ad7a-708adc87889d">
+          <buttons id="e52faba9-3974-4dd7-9844-fdf750fabd1d" name="保存" caption="保存" checkrequired="true" direction="d377e5bd-566e-4426-adeb-eb18bc9e9120"/>
+          <buttons id="b5f45a97-b4c7-4fbc-be76-a6f509fc53b6" name="返回" caption="返回" direction="4fed7e07-2b49-4b5b-b75e-f0c02be041e5"/>
+        </buttonArea>
+      </views>
+      <views id="d096fe6e-cd82-4149-ad9f-0d365789a29c" name="勾兑入库汇总报表" contentArea="e4ffccf3-0dfb-4e8b-8ee6-9eaef2f22e65">
+        <buttonArea id="2d554af8-433e-4806-88b8-4e8cc9f786d8" name="JButtonAreaImpl-2d554af8-433e-4806-88b8-4e8cc9f786d8">
+          <buttons id="c29910c9-d549-4e94-905f-ec3434e8e618" name="ButtonImpl-c29910c9-d549-4e94-905f-ec3434e8e618" caption="返回" direction="ef447998-8697-4f0e-8fa6-86852b61136f"/>
+        </buttonArea>
+      </views>
+      <views id="5ad1802f-0037-435c-b881-d784cac936e6" name="勾兑入库明细报表" contentArea="992ed717-f2a6-41b2-a0a4-af1b3be0c791">
+        <buttonArea id="72e0f429-949a-4ac9-a393-5535bd3a53b4" name="JButtonAreaImpl-72e0f429-949a-4ac9-a393-5535bd3a53b4">
+          <buttons id="b1bc2af9-8ea0-49b3-ac3d-febf936e12ea" name="ButtonImpl-b1bc2af9-8ea0-49b3-ac3d-febf936e12ea" caption="返回" direction="ef447998-8697-4f0e-8fa6-86852b61136f"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

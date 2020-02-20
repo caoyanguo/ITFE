@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5d24583d-6c42-4140-8c19-08ef71e9ebf4" name="外系统参数导入" ename="TCBSimport">
+  <jproperties id="6010e971-71a4-474b-8038-5260541d5bea" key="GeneratedTime" value="1400634092921"/>
+  <refModule href="JModule_dc26b6e6-d079-474a-aeef-2bb97f2e4fe5.model#dc26b6e6-d079-474a-aeef-2bb97f2e4fe5"/>
+  <model id="73548e56-eb3e-4049-bbf2-d1d6a21963ee" name="JModelImpl-73548e56-eb3e-4049-bbf2-d1d6a21963ee">
+    <attributes id="6dbe6cc3-9def-4048-83e1-7c34884cfb8f" name="fileList" type="java.util.List"/>
+    <attributes id="ffb4c841-c481-43f5-b632-8e7c2b04cafd" name="tbsbankList" type="java.util.List"/>
+    <attributes id="2a687dde-6b84-4b69-a1b5-d281f9ddc4a7" name="bankCodeList" type="java.util.List"/>
+    <directions id="cfa55a61-ca68-4169-a7e5-9668181950b3" name="导入" ename="fileImport"/>
+    <directions id="93623b11-106d-47d6-8578-1c7fdcf86fa6" name="导入TBS格式行名行号" ename="tbsBankImport"/>
+    <directions id="0493abfb-b838-446c-8feb-ef7396df2e4b" name="导入" ename="bankCodeImport"/>
+  </model>
+  <services href="JServiceComponet_93249d0b-d23c-4ce1-947c-4a569823538d.model#93249d0b-d23c-4ce1-947c-4a569823538d"/>
+  <contentAreas id="dbfca9cc-df46-4be9-81a3-57987599c596">
+    <contentareanode id="211f6322-eb6c-4339-b9f2-dc6f9c5725c9" name="参数导入" grouptitle="参数导入">
+      <widgetRefs xsi:type="model:FileUploader" id="af9152fb-5b9d-49c6-9cf2-1ef14bcb9858" name="选择文件路径" binding="fileList" visible="true" caption="选择文件路径" enable="true" editable="true" isdirectory="false" ismult="true"/>
+      <widgetRefs xsi:type="model:Textarea" id="cbe6645e-63e3-49ae-be50-212254c70985" name="导入说明" binding="msg" caption="参数导入说明" enable="false" defaultvalue="1、支付系统行名行号只允许中心导入、2、各核算主体必须导入征收机关代码表、征收机关国库对应关系 、预算科目、法人代码参数用于业务校验 3、各核算主体可以导入TCBS共享分成参数、银行代码、会计科目代码、会计账户信息、纳税人与预算单位账号维护表后TBS格式导出给地方横联" warp="true">
+        <componentStyle id="41b4abdc-efcf-47e0-af48-61d05fa0d11b" name="ComponentStyleImpl-41b4abdc-efcf-47e0-af48-61d05fa0d11b" ename="ComponentStyleImpl41b4abdcefcf47e0af4861d05fa0d11b" width="600" height="80" componentheight="20" innercompositewidth="800" innercompositeheight="100"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="c577084e-cef0-40ba-b9ff-cf3ea1d572b1" name="tbs格式支付行号导入" grouptitle="tbs格式支付行号导入">
+      <widgetRefs xsi:type="model:FileUploader" id="27eaa697-ab4b-4811-8673-8b4ee1418bfe" name="选择文件路径" binding="tbsbankList" visible="true" caption="选择文件路径" enable="true" editable="true" isdirectory="false" ismult="false"/>
+      <widgetRefs xsi:type="model:Label" id="9e91e511-1697-44fe-9038-450d0e0e3ac1" name="导入TBS格式行名行号" caption="只用于中心导入TBS格式(*.CSV)支付行名行号"/>
+    </contentareanode>
+    <contentareanode id="59cc8730-133d-4d32-b2e7-4f6ccd36ff98" name="二代行名行号导入" grouptitle="二代行名行号导入">
+      <widgetRefs xsi:type="model:FileUploader" id="21473f45-4f67-4e40-bd8a-de53d9acf0b5" name="选择文件路径" binding="bankCodeList" visible="true" caption="选择文件路径" enable="true" editable="true" isdirectory="false" ismult="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="dd6c7d2e-0890-4fcc-be42-c1d1a7fea05e">
+    <pages id="80082990-96b5-43c8-b8cb-637a1390c4d5" name="参数导入">
+      <views id="47271da1-ee91-4b87-9cc2-707ff76a49fb" name="参数导入" isdefault="true" contentArea="211f6322-eb6c-4339-b9f2-dc6f9c5725c9">
+        <buttonArea id="4f148b26-2645-4d14-8708-5d71f10f8fc6" name="JButtonAreaImpl-4f148b26-2645-4d14-8708-5d71f10f8fc6">
+          <buttons id="6c338304-8ace-48b1-99de-1b59b372ff7c" name="导入" caption="导入" direction="cfa55a61-ca68-4169-a7e5-9668181950b3"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="cf31bdd5-4940-44af-812a-85e82679dc78" name="tbs格式支付行号导入">
+      <views id="b9a17476-0dd3-4a3f-a5d3-892a659bab93" name="tbs格式行名行号导入" isdefault="true" contentArea="c577084e-cef0-40ba-b9ff-cf3ea1d572b1">
+        <buttonArea id="98a90390-a973-4db6-8251-01c4aeeb422c" name="JButtonAreaImpl-98a90390-a973-4db6-8251-01c4aeeb422c">
+          <buttons id="68187e67-d1c4-4776-9bb2-fbd102120fdc" name="导入" caption="导入" direction="93623b11-106d-47d6-8578-1c7fdcf86fa6"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="93859a1d-f650-4404-8160-fea37837ef9a" name="二代行名行号导入">
+      <views id="b98f2a17-7868-45fa-adbd-d7214e2a7de9" name="二代行名行号导入" isdefault="true" contentArea="59cc8730-133d-4d32-b2e7-4f6ccd36ff98">
+        <buttonArea id="04309071-62ce-4989-b0eb-77310ea7a2d4" name="JButtonAreaImpl-4f148b26-2645-4d14-8708-5d71f10f8fc6">
+          <buttons id="ffad107b-8b20-4d00-8ddd-ea73fc4d6ff6" name="导入" caption="导入" direction="0493abfb-b838-446c-8feb-ef7396df2e4b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

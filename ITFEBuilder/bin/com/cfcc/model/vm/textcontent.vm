@@ -1,0 +1,10 @@
+
+    <contentareanode id="$node1" name="$ename" grouptitle="$cname" columnnum="$col" visible="false">
+    	#foreach($tabData in $widgetList)
+      <widgetRefs xsi:type="model:Text" id="${tabData.getText()}" name="${tabData.getColename()}"  caption="${tabData.getColcname()}">
+        <labelStyle id="${tabData.getLabel()}" name="LabelStyleImpl-${tabData.getLabel()}" ename="LabelStyleImpld${tabData.getLabel()}"/>
+        <componentStyle id="${tabData.getCompoent()}" name="ComponentStyleImpl-${tabData.getCompoent()}" ename="ComponentStyleImpl${tabData.getCompoent()}"/>
+      </widgetRefs>
+		#end
+    </contentareanode>
+   

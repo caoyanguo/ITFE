@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7741fe02-eef5-4677-aa2a-3021d35772ab" name="转发银行" ename="TsConverttobank" shared="true"/>

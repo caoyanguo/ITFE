@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0fd3eed5-7d01-4932-96f2-9f9295f42502" name="财政批量业务支付明细查询" ename="BatchBizDetailQueryForFinance">
+  <jproperties id="fd52ba03-4942-4e91-89e2-d09942293bbb" key="GeneratedTime" value="1415178805113"/>
+  <refModule href="JModule_5c118191-d2a4-46e9-a04b-86b1b42ca403.model#5c118191-d2a4-46e9-a04b-86b1b42ca403"/>
+  <methods id="f7fc5691-521e-42e8-93cd-cb58f3bb5a43" ename="exportFile" name="导出文件" returntype="java.lang.String">
+    <methodParams id="ad49bf47-35b6-4ef8-911e-125bbd18cc69" name="查询条件" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="d3073ea7-9490-48fc-8ebe-6e1f2996a16b" name="当前历史标志" ename="flag" type="java.lang.String"/>
+    <methodExceptions id="64ceb324-e3af-4652-810d-9da664e34dd4" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,65 @@
+package com.cfcc.test.testcommon;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import com.cfcc.itfe.persistence.dto.TsMankeyDto;
+import com.cfcc.itfe.security.TipsFileDecrypt;
+import com.cfcc.itfe.service.dataquery.tipsdataexport.TipsDataExportService;
+import com.cfcc.itfe.util.FileUtil;
+import com.cfcc.itfe.util.encrypt.Hex;
+import com.cfcc.itfe.util.encrypt.MD5Sign;
+import com.cfcc.itfe.util.encrypt.TripleDES;
+import com.cfcc.jaf.core.loader.ContextFactory;
+
+public class Test {
+	private static Log log = LogFactory.getLog(Test.class);
+
+	static {
+		ContextFactory.setContextFile("/config/ContextLoader_01.xml");
+	}
+
+	public static void main(String[] args) {
+		//HmacMD5À„∑®
+
+
+//		try {
+////			int i = tips.checkSignFile(srcfile, srcfile, key);
+//			System.out.println(1);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+		try {
+			String str0=FileUtil.getInstance().readFileUtf8("E:/2006070424330.txt");
+			System.out.println(str0);
+			String str1 = new String(Hex.encode(MD5Sign.encryptHMAC(str0, "888888888888888888888")));
+			System.out.println(str1);
+			//3DESº”√‹
+			String str2 = TripleDES.encrypt(str0+"\r\n[[["+str1+"]]]", "99999999999999999999999999999999999999999999999999999999", null);
+			System.out.println(str2);
+			FileUtil.getInstance().writeFileUtf8("e:/2006070425330.txt", str2);
+			
+			String str3 = TripleDES.decrypt(str2, "999999999999999999999999999999999999999999999999", null);
+			System.out.println(str3);
+//			
+//			TsMankeyDto  _dto  = new TsMankeyDto();
+//			_dto.setSkey("888888888888888888888888888888888888888888888888");
+//			_dto.setSencryptkey("999999999999999999999999999999999999999999999999");
+//			TipsFileDecrypt.checkDesAndMd5("e:/2006070424330.txt","e:/2006070425330.txt" , _dto);
+//			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+
+	}
+}

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="511cae02-c103-4a3b-b3c5-13016ec8f953" name="财政申请入库流水明细查询" ename="TvFinIncomeDetail" shared="true"/>

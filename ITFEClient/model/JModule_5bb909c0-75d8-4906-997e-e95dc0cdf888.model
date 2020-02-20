@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5bb909c0-75d8-4906-997e-e95dc0cdf888" name="库存日报表查询" ename="TrStockdayrpt" shared="true"/>

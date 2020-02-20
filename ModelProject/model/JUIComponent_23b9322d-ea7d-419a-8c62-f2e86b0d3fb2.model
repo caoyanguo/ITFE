@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="23b9322d-ea7d-419a-8c62-f2e86b0d3fb2" name="代理行与清算行对应关系" ename="TsGenbankandreckbank" shared="true">
+  <jproperties id="c7cf89c8-00b0-4742-972e-38616f7298a5" key="GeneratedTime" value="1368588159718"/>
+  <refModule href="JModule_d0d1f696-f645-4053-a8ba-a06a85809734.model#d0d1f696-f645-4053-a8ba-a06a85809734"/>
+  <model id="e325b565-9533-4470-b9a5-c8c04b382e42" name="JModelImpl-e325b565-9533-4470-b9a5-c8c04b382e42">
+    <attributes id="c3fca270-f6bb-4de8-ac30-ebb50c458c5a" name="dto" type="com.cfcc.itfe.persistence.dto.TsGenbankandreckbankDto"/>
+    <attributes id="8c3304d8-3bf8-4cbc-abfa-6a6b40d53316" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="9199bd6b-c3e6-4477-8cec-571e2e00caa8" viewers="fb3f86eb-d35e-4e54-ae5b-334b4a35ed2c" name="跳转录入界面" ename="goInput"/>
+    <directions id="3d634d79-7ea3-4cc2-94cd-71a8d4be941a" name="录入保存" ename="inputSave"/>
+    <directions id="56f281b5-4fcc-4c94-8bfc-c8e038d887bf" viewers="9318dbbd-57c3-468a-98cb-9b2ed49d1731" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="75a347a5-e1c9-448c-b8f5-fc2805a4dfb5" name="单选" ename="singleSelect"/>
+    <directions id="0ae10b5b-4063-4ef9-8030-ea1a404b2eea" name="删除" ename="delete"/>
+    <directions id="2daf5ae5-5a04-4b95-b8d6-ad393d46826a" viewers="a15164b6-30cc-4715-a220-d63826d8e9d4" name="到修改界面" ename="goModify"/>
+    <directions id="04553d5d-45f1-462a-943e-eb3df6a3cfa2" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_9146d5e5-b8c7-48b3-8b2a-838fb4023d47.model#9146d5e5-b8c7-48b3-8b2a-838fb4023d47"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="1a08f261-5502-4cb3-b36e-e6d115c55b65">
+    <contentareanode id="095bb712-91f6-4f54-bee7-7bad5eb970e1" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="33c3d9cf-52dc-4961-a5c3-0a5390fe8310" name="核算主体代码" binding="dto.sbookorgcode" caption="核算主体代码" enable="false" display="sorgname" underly="sorgcode" modelsource="organlist"  required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="05200b34-06cb-4f6c-8959-769b29621f45" name="国库名称" binding="dto.strecode" caption="国库名称" display="strename" underly="strecode" modelsource="list2"  required="true"/>
+      <widgetRefs xsi:type="model:Text" id="cea583e8-5232-4805-aefe-f45e1617bb7a" name="sgenbankcode" binding="dto.sgenbankcode" caption="代理银行代码" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="f314c47d-c919-4c85-9796-4398ba58b00b" name="sreckbankcode" binding="dto.sreckbankcode" caption="代理银行支付行号" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="23971171-6f21-4451-89dc-9350107e7fe1" name="sgenbankname" binding="dto.sgenbankname" caption="代理银行行名" editable="true"  required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5ad55d24-4a85-4fc4-a01a-3f620d66879f" name="sreckbankname" binding="dto.sreckbankname" caption="代理银行支付行名" editable="true"  required="true"/>
+    </contentareanode>
+    <contentareanode id="b8fedb7a-ca0a-42b7-886c-233ed36e2227" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="aec6e5a3-f824-40b1-9bfe-d7888e428765" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" refsingleclickdirection="75a347a5-e1c9-448c-b8f5-fc2805a4dfb5">
+        <columnlist id="12f122f0-442c-4f5b-bfe4-41a193e2995c" name="核算主体代码" binding="sbookorgcode" caption="核算主体代码"/>
+        <columnlist id="3824db0a-e44c-4ef6-a223-7ad417ca565b" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="7c2c2f7d-162b-49fc-9e34-1bd6f7e6f203" name="代理银行代码" binding="sgenbankcode" caption="代理银行代码"/>
+        <columnlist id="ac14fe5d-7582-48ec-b7e7-0774109719f4" name="代理银行支付行号" binding="sreckbankcode" caption="代理银行支付行号"/>
+        <columnlist id="5ed2fea6-49a3-4dcb-9c1e-e5cac0908032" name="代理银行行名" binding="sgenbankname" caption="代理银行行名"/>
+        <columnlist id="dbfd48e5-323b-4ebd-8596-46d12f33cc1f" name="代理银行支付行名" binding="sreckbankname" caption="代理银行支付行名"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="b0f3ce28-c7e9-4caf-95fb-372c659fdbe6" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="8751c232-13f5-4fa5-8e7b-8ae3e7f9d1b9" name="核算主体代码" binding="dto.sbookorgcode" caption="核算主体代码" enable="false" display="sorgname" underly="sorgcode" modelsource="organlist"  required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="d4a3eba7-6159-41a8-98f2-3d4fca8cbdb3" name="国库名称" binding="dto.strecode" caption="国库名称" display="strename" underly="strecode" modelsource="list2"  required="true"/>
+      <widgetRefs xsi:type="model:Text" id="37dbc5ec-74d2-4bcd-ba31-544753422a37" name="sgenbankcode" binding="dto.sgenbankcode" caption="代理银行代码" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="30f061a3-4643-4e55-93cd-2fe0cfd03050" name="sreckbankcode" binding="dto.sreckbankcode" caption="代理银行支付行号" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="30efe455-e587-49c6-9cf7-55986986bfd0" name="sgenbankname" binding="dto.sgenbankname" caption="代理银行行名" editable="true"  required="true"/>
+      <widgetRefs xsi:type="model:Text" id="0e496c43-cdf3-4aa6-aaec-2506491692ac" name="sreckbankname" binding="dto.sreckbankname" caption="代理银行支付行名" editable="true"  required="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="635f07e2-1c07-4e68-b9e7-9ee61d4b7c42">
+    <pages id="c305c1d2-7377-4c34-87c5-fb52529ec5c5" name="收款开户行行号对照">
+      <views id="9318dbbd-57c3-468a-98cb-9b2ed49d1731" name="维护界面" isdefault="true" contentArea="b8fedb7a-ca0a-42b7-886c-233ed36e2227">
+        <buttonArea id="ab150e0f-c1ad-451c-804c-104da08707db" name="JButtonAreaImpl-ab150e0f-c1ad-451c-804c-104da08707db">
+          <buttons id="f7609c04-8bb4-477f-92e6-3f8a1829c32d" name="maintenanceInput" caption="录入" direction="9199bd6b-c3e6-4477-8cec-571e2e00caa8"/>
+          <buttons id="1bd80695-ea53-49c8-ac2d-be3276b3b8e6" name="maintenanceDel" caption="删除" direction="0ae10b5b-4063-4ef9-8030-ea1a404b2eea"/>
+          <buttons id="1d5fd5bb-0ef8-4d46-9170-d82e4da5a475" name="maintenanceMod" caption="修改" direction="2daf5ae5-5a04-4b95-b8d6-ad393d46826a"/>
+        </buttonArea>
+      </views>
+      <views id="a15164b6-30cc-4715-a220-d63826d8e9d4" name="修改界面" contentArea="b0f3ce28-c7e9-4caf-95fb-372c659fdbe6">
+        <buttonArea id="523caf74-bda1-4d73-b9b2-ca6bb95465b7" name="JButtonAreaImpl-523caf74-bda1-4d73-b9b2-ca6bb95465b7">
+          <buttons id="0c5d6437-0a1a-4240-a47f-37dc345b78e3" name="modifySave" caption="保存" checkrequired="true" direction="04553d5d-45f1-462a-943e-eb3df6a3cfa2"/>
+          <buttons id="65e50bf5-2f00-47b3-8dc3-0fadd8001278" name="modifyBack" caption="返回" direction="56f281b5-4fcc-4c94-8bfc-c8e038d887bf"/>
+        </buttonArea>
+      </views>
+      <views id="fb3f86eb-d35e-4e54-ae5b-334b4a35ed2c" name="录入界面" contentArea="095bb712-91f6-4f54-bee7-7bad5eb970e1">
+        <buttonArea id="877664b5-1944-48a0-9859-95b14475fd67" name="JButtonAreaImpl-877664b5-1944-48a0-9859-95b14475fd67">
+          <buttons id="383e4419-d1d7-4552-bc2b-25895df67529" name="保存" caption="保存" checkrequired="true" direction="3d634d79-7ea3-4cc2-94cd-71a8d4be941a"/>
+          <buttons id="c39af7f8-71a5-4b13-84e6-ba21c09c13ae" name="modifyBack" caption="返回" direction="56f281b5-4fcc-4c94-8bfc-c8e038d887bf"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

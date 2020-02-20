@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="61aa6a87-54c0-480d-98f1-2ac54a74ac8c" name="实时冲正信息查询服务组件" ename="TvTaxCancel">
+  <jproperties id="62b95ae3-b14d-48a0-a81b-b169fa706cca" key="GeneratedTime" value="1298630986703"/>
+  <refModule href="JModule_79a71f48-2c05-4f66-827d-d539c7e85c4e.model#79a71f48-2c05-4f66-827d-d539c7e85c4e"/>
+  <methods id="ce90a45b-db5c-42f9-a10c-e85e35b0ee04" ename="query" name="查询" codecomment="查询" returntype="java.util.List">
+    <methodParams id="abdb6dfe-aba6-47fc-bdbd-8a4908af7e5f" name="实时冲正信息查询" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TvTaxCancelDto" codecomment="实时冲正dto"/>
+  </methods>
+</model:JServiceComponent>

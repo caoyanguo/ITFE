@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+	<MSG>
+		<BatchHead8000>
+			<ChkDate>${cfx.MSG.BatchHead8000.ChkDate}</ChkDate>
+			<TreCode>${cfx.MSG.BatchHead8000.TreCode}</TreCode>
+			<SendPackNum>${cfx.MSG.BatchHead8000.SendPackNum}</SendPackNum>
+			<SendPackAmt>${cfx.MSG.BatchHead8000.SendPackAmt}</SendPackAmt>
+		</BatchHead8000>
+		<#list cfx.MSG.BillCheck8000 as var1>
+		<BillCheck8000>
+			<PayoutVouType>${var1.PayoutVouType}</PayoutVouType>
+			<EntrustDate>${var1.EntrustDate}</EntrustDate>
+			<PackNo>${var1.PackNo}</PackNo>
+			<CurPackVouNum>${var1.CurPackVouNum}</CurPackVouNum>
+			<CurPackVouAmt>${var1.CurPackVouAmt}</CurPackVouAmt>
+		</BillCheck8000>
+		</#list>
+	</MSG>
+</CFX>

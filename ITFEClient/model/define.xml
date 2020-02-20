@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- =============================global============================== -->
+	<bean id="globalConfig" 
+	      class="com.cfcc.devplatform.utils.generate.GlobalGenerator" 
+	      singleton="true" lazy-init="true">
+	    <!-- %sys%:system.ename || %postfix%:当前系统的生成后缀 || %subsys%:subsystem.ename -->
+	    <!-- %module%:module.ename || %comp%:component.ename || %type%：遗留字段   -->
+	    <property name="nameCriterion" value="com.cfcc.%sys%.%postfix%.%subsys%.%module%"/>
+	    <!-- 当前客户端生成模式   若当前为开发模式需要设定mode为"frame",其他模式暂可不设置该属性 -->
+		<property name="mode" value="frame"/>
+	</bean>
+    <!-- =============================project============================= -->
+	<bean id="commonProj" 
+	      class="com.cfcc.devplatform.emf.generate.impl.project.GeneralProjectGenerator" 
+	      singleton="true" lazy-init="true">
+	    <property name="postfix" value="common"/><!-- 生成项目后缀 -->
+	</bean>
+	<bean id="serviceProj"
+	      class="com.cfcc.devplatform.emf.generate.impl.project.GeneralProjectGenerator"
+	      singleton="true" lazy-init="true">
+	    <property name="postfix" value="service"/><!-- 生成项目后缀 -->
+	    <property name="refProj" value="commonProj"/><!-- 关联项目 -->
+	</bean>
+	<bean id="rcpProj"
+	      class="com.cfcc.devplatform.emf.generate.impl.project.RcpProjectGenerator"
+	      singleton="true" lazy-init="true">
+	    <property name="postfix" value="client"/><!-- 生成项目后缀 -->
+	    <property name="refProj" value="commonProj,serviceProj"/><!-- 关联项目 -->
+	</bean>
+	<bean id="builderProj"
+	      class="com.cfcc.devplatform.emf.generate.impl.project.GeneralProjectGenerator"
+	      singleton="true" lazy-init="true">
+	      <property name="postfix" value="builder"/><!-- 生成项目后缀 -->
+	      <property name="refProj" value="commonProj,serviceProj"/><!-- 关联项目 -->
+	</bean>
+	
+	
+	<!-- ============================= ui ============================= -->
+	<bean id="modelAbstract"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.model.ModelAbstractGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="rcpProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="modelImpl"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.model.ModelImplGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="rcpProj"/><!-- 生成项目位置 -->
+	</bean>
+	
+	
+	<!-- ============================= service ============================= -->
+	<bean id="ServiceXmlGenerate"
+	      class="com.cfcc.devplatform.emf.generate.impl.files.ServiceXmlGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="commonProj/config"/><!-- 生成项目位置 -->
+		<property name="vm" value="com/cfcc/devplatform/emf/generate/impl/files/Services.xml.vm"/>
+		<property name="vmHead" value="com/cfcc/devplatform/emf/generate/impl/files/Services.xml.head.vm"/>
+	</bean>
+	<bean id="SystemServiceGenerate"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.service.SystemServiceAbstractGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="serviceProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="serviceInterface"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.service.ServiceInterfaceGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="serviceProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="ServiceAbstract"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.service.ServiceAbstractGenetator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="serviceProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="serviceImpl"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.service.ServiceImplGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="serviceProj"/><!-- 生成项目位置 -->
+	</bean>
+	
+	
+	<!-- ============================= persistence ============================= -->
+	<bean id="persistenceHelperGenerate"
+	      class="com.cfcc.devplatform.emf.generate.impl.files.PersistenceHelperGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="commonProj"/><!-- 生成项目位置 -->
+	</bean>
+		<bean id="persistenceXmlGenerate"
+	      class="com.cfcc.devplatform.emf.generate.impl.files.PersistenceXmlGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="commonProj/config"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="persistenceInterface"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.persistence.PersistenceInterfaceGenerator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="commonProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="persistenceAbstract"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.persistence.PersistenceAbstractGenetator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="commonProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="persistenceImpl"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.persistence.PersistenceImplGenerator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="commonProj"/><!-- 生成项目位置 -->
+	</bean>
+	
+	<!-- ============================= biz ============================= -->
+	<bean id="bizHelperGenerate"
+	      class="com.cfcc.devplatform.emf.generate.impl.files.BizHelperGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="commonProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="bizXmlGenerate"
+	      class="com.cfcc.devplatform.emf.generate.impl.files.BizXmlGenerator"
+	      singleton="true" lazy-init="true">
+		<property name="location" value="commonProj/config"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="bizInterface"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.biz.BizInterfaceGenerator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="commonProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="bizAbstract"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.biz.BizAbstractGenetator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="commonProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="bizImpl"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.biz.BizImplGenerator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="commonProj"/><!-- 生成项目位置 -->
+	</bean>
+	
+	<!-- ============================= resource ============================= -->
+	<bean id="EnumFactory"
+	      class="com.cfcc.devplatform.emf.generate.impl.resource.EnumFactoryGenerator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="rcpProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="Processor"
+	      class="com.cfcc.devplatform.emf.generate.impl.resource.ProcessorGenerator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="rcpProj"/><!-- 生成项目位置 -->
+	</bean>
+	<bean id="Validator"
+	      class="com.cfcc.devplatform.emf.generate.impl.resource.ValidatorGenerator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="rcpProj"/><!-- 生成项目位置 -->
+	</bean>
+
+	<!-- ============================= Ormap Builder ============================= -->
+	<bean id="BuilderGenerator"
+	      class="com.cfcc.devplatform.emf.generate.impl.classes.builderclass.BuilderGenerator"
+	      singleton="true" lazy-init="true">
+	  <property name="location" value="builderProj"/><!-- 生成项目位置 -->
+	  <property name="buildPath" value="codegen"/><!-- 自动生成的生成ormap的生成类及配置文件所在的包路径 -->
+	  <property name="exported" value="true"/><!-- 是否自动导出成jar包，并关联到项目中 -->
+	</bean>
+</beans>
+

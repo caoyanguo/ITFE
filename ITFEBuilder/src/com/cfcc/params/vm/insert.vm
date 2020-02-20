@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="TASInsert"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				#foreach($tabName in $InsTasTableList)
+<ref local="ins_${tabName.getSrctable()}" />
+				#end
+</list>
+		</property>
+	</bean>
+
+
+	#foreach($tabName in $InsTasTableList)
+<bean id="ins_${tabName.getSrctable()}" class="com.cfcc.tas.facade.data.SQLMapping">
+		<property name="operSql" value="insert into ${tabName.getSrctable()}(${tabName.getStrColumns()}) select ${tabName.getStrColumns()} from ${tabName.getDestable()} where s_BookOrgCode=?" />
+		<property name="operType" value="4" />
+	</bean>
+	#end
+</beans>

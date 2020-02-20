@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7790131b-7821-414d-9d6a-3a02133ceab2" name="商行凭证校验" ename="BankVoucherValidate">
+  <jproperties id="90c9ba65-064a-4bec-b668-404438d4eb2b" key="GeneratedTime" value="1453857737897"/>
+  <refModule href="JModule_3e195481-f316-4d4b-a14c-187931a05154.model#3e195481-f316-4d4b-a14c-187931a05154"/>
+  <model id="1889acd5-0d07-4db0-88b8-cd07fec310b9" name="JModelImpl-1889acd5-0d07-4db0-88b8-cd07fec310b9">
+    <attributes id="7411a25a-ece7-4b1b-88eb-b7660de94f3f" name="pagingContext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="5f964812-b887-4d77-87df-9cd07ea26631" viewers="fcf65fa4-17b0-4c42-9fab-984ff3b65bed" name="导入文件" ename="voucherImport"/>
+    <directions id="b2d2a895-dd64-4806-9778-9a596c2f712e" viewers="687f6a4f-e1eb-4f03-a937-bd3c96a1bbc3" name="开始比对" ename="compare"/>
+    <directions id="7d6c4565-e7b7-494f-bdd0-c2fc1ce9e0ad" viewers="687f6a4f-e1eb-4f03-a937-bd3c96a1bbc3" name="查询数据" ename="queryResult"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_a7f310b4-31a1-4afa-b1a2-5a2744c0ca11.model#a7f310b4-31a1-4afa-b1a2-5a2744c0ca11"/>
+  <contentAreas id="ed94e821-c863-4de8-9274-c3e9f48a9c99">
+    <contentareanode id="92d40228-0bda-49e6-b053-f85b29ecc725" name="数据导入区域" grouptitle="数据导入区域">
+      <widgetRefs xsi:type="model:FileUploader" id="e9d7d97e-fc2b-4658-876e-8f75b146ab01" name="加载文件路径" binding="fileList" caption="加载文件路径" required="true" isdirectory="false" ismult="true"/>
+      <widgetRefs xsi:type="model:Label" id="33af37c1-b92c-41d9-a611-80b7a5c07e2e" name="导入说明" caption="本功能目前只支持导入8202和5201报文文件，文件类型必须为xml!" enable="false"/>
+    </contentareanode>
+    <contentareanode id="24bc2c35-a661-40cf-a188-59bd2be0ff3c" name="验证结果区域" grouptitle="验证结果区域">
+      <widgetRefs xsi:type="model:Table" id="06f3702c-9024-464b-ac68-1c5a4606e3bf" name="验证结果列表" binding="pagingContext" caption="验证结果列表" tabletype="paging" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" labelprovider="com.cfcc.itfe.client.common.table.BankVoucherValidateColorProvider" selectedrows="" height="420">
+        <columnlist id="2c38f944-e08b-4dff-a494-62af9340b009" name="代理银行" binding="sagentbnkcode" caption="代理银行"/>
+        <columnlist id="36975968-0ab4-4847-945b-16aafd5c4dfa" name="账务日期" binding="dacctdate" caption="账务日期"/>
+        <columnlist id="39fadc4b-6460-4f6b-918e-6c2054fdb1cc" name="凭证编号" binding="voucherno" caption="凭证编号"/>
+        <columnlist id="612a5dfd-96e7-43f9-8065-84b64facbb3f" name="明细凭证编号" binding="detailvoucherno" caption="明细凭证编号"/>
+        <columnlist id="829ef5e8-5946-4bc6-a37a-1a5a1a700a2b" name="预算单位" binding="supdepcode" caption="预算单位"/>
+        <columnlist id="3843c826-0ee4-49b5-bd25-af39b575ba73" name="科目代码" binding="expfunccode" caption="科目代码"/>
+        <columnlist id="5eaac913-6601-40a8-bb64-3b2f28655ba4" name="金额" binding="payamt" caption="金额"/>
+        <columnlist id="b2b1c42a-864b-41fd-8fd9-2e676278d7ca" name="校验结果" binding="result" caption="校验结果"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="ddc74c5c-d448-4770-a9af-fc9d99c07a48" name="比对条件区域" grouptitle="比对条件区域" columnnum="0">
+      <widgetRefs xsi:type="model:Text" id="27119017-45dc-457e-946f-15aa78d9f298" name="开始比对日期" binding="startDate" caption="开始比对日期"/>
+      <widgetRefs xsi:type="model:Text" id="8595490d-771e-45e5-a038-5fa088441ed1" name="结束比对日期" binding="endDate" caption="结束比对日期"/>
+      <widgetRefs xsi:type="model:Combo" id="678d29c3-3c75-40b7-83f3-266918a5239c" name="比对状态" binding="compareStatus" caption="比对状态" display="displayValue" underly="underlyValue" modelsource="compareEnumList"/>
+      <widgetRefs xsi:type="model:Button" id="858813dc-2611-48a8-9396-8fca7c0776dd" name="查询" caption="查询" layout="GridLayout" direction="7d6c4565-e7b7-494f-bdd0-c2fc1ce9e0ad"/>
+      <widgetRefs xsi:type="model:Label" id="d8047275-1dc0-4d9e-9534-0740391e26f2" name="比对说明" caption="1、日期间隔不能超过7天！" enable="false"/>
+      <widgetRefs xsi:type="model:Label" id="ccde8988-ad87-4bfa-a35e-8d157d8b9ef1" name="比对说明2" caption=" 2、比对规则 : 明细凭证编号+预算单位代码+预算科目代码+金额" enable="false"/>
+    </contentareanode>
+    <contentareanode id="70253d27-171f-46d6-b59a-2662af176bf0" name="说明区域" grouptitle="说明区域" columnnum="1">
+      <widgetRefs xsi:type="model:Label" id="88bc2149-6beb-4df6-b938-d76989f1b9e0" name="比对说明" caption="1、日期间隔不能超过7天！" enable="true"/>
+      <widgetRefs xsi:type="model:Label" id="953612f8-1688-4a6c-bdff-d21da7383a7f" name="比对说明2" caption="2、比对规则 : 明细凭证编号+预算单位代码+预算科目代码+金额"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="f83d320a-6c6d-4a55-92c0-242d3609b5d2">
+    <pages id="d19a5df3-46bd-48f1-a8cd-6f50c62e8b8d" name="数据导入界面">
+      <views id="fcf65fa4-17b0-4c42-9fab-984ff3b65bed" name="数据导入界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="92d40228-0bda-49e6-b053-f85b29ecc725">
+        <buttonArea id="12204a51-119b-4229-9033-6cdf5766eaeb" name="按钮区域">
+          <buttons id="1a1f9716-cc11-4165-b416-520dfa5ca8e7" name="导入" caption="导入" direction="5f964812-b887-4d77-87df-9cd07ea26631"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="14908cb1-9910-4e10-8919-d3aad9d6f524" name="数据比对界面">
+      <views id="687f6a4f-e1eb-4f03-a937-bd3c96a1bbc3" name="数据比对界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="ddc74c5c-d448-4770-a9af-fc9d99c07a48 24bc2c35-a661-40cf-a188-59bd2be0ff3c">
+        <buttonArea id="27e47495-e0bd-4e53-a1ea-b9a1c56454ca" name="按钮区域(比对)">
+          <buttons id="893730b3-0139-4543-bfc8-d49ba9c375b1" name="开始比对" caption="开始比对" direction="b2d2a895-dd64-4806-9778-9a596c2f712e"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

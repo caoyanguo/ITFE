@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8d92364d-ff84-4177-afa3-acaee1103d0c" name="银行代码表维护" ename="TdBank" shared="true"/>

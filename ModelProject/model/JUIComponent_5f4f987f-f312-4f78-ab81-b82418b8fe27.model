@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5f4f987f-f312-4f78-ab81-b82418b8fe27" name="报表数据导出（天津）" ename="FinDataStatDownForTJ">
+  <jproperties id="abde7d9d-336a-416c-a9ac-4ecf352104d4" key="GeneratedTime" value="1366270578046"/>
+  <refModule href="JModule_7985ba8a-f8ce-49f9-ac62-ec875e986692.model#7985ba8a-f8ce-49f9-ac62-ec875e986692"/>
+  <model id="d7d140e0-a3c9-4951-9923-6f06456696e5" name="JModelImpl-d7d140e0-a3c9-4951-9923-6f06456696e5">
+    <directions id="b0bfe360-fc7d-4915-b99e-5a270c87735d" name="导出文件" ename="exportFile"/>
+    <directions id="6075e359-f70c-4f73-9cba-d278f8511f52" name="全选" ename="allSelect"/>
+    <directions id="2302c433-4b97-41f5-8be9-a2d5fde23bd2" viewers="a6a082c6-a2b3-4c7b-bfd1-b3a13f46f922" name="下辖数据导出选项" ename="goSelectExport"/>
+    <directions id="51153ba4-6d6e-464d-b5b1-903dfed98893" viewers="1d8e59d2-f5d6-4a65-b2ee-34282c86f1e6" name="返回" ename="goback"/>
+    <directions id="0ce81541-b593-4b31-bb08-f4ce0074eebc" viewers="d9045de5-e410-4c51-a2d9-5734327df36d" name="单选项输入" ename="goInput"/>
+    <directions id="8de93c06-8947-4bc5-8fbf-5ed5a685829a" viewers="1d8e59d2-f5d6-4a65-b2ee-34282c86f1e6" name="单选项输入返回" ename="inputBack"/>
+  </model>
+  <services href="JServiceComponet_28e31827-995d-48f9-8579-0be7b6c3e34a.model#28e31827-995d-48f9-8579-0be7b6c3e34a"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="c24832c1-ff6d-4cc9-bbca-a00a710b5e8b">
+    <contentareanode id="2e9c1fd6-dbe6-4122-a75f-9cb4eeac05a2" name="报表数据导出（天津）查询条件" grouptitle="选择导出条件" binding="" columnnum="0">
+      <widgetRefs xsi:type="model:Combo" id="45a0465c-5b89-431b-ac58-178f9a1aaa4f" name="调整期标志" binding="sleTrimFlag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="3dd2b730-c508-40d8-a5e2-60eaf1600004" name="预算种类" binding="sleBudKind" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="e2eb1c5e-e515-423a-b596-80251b04af78" name="国库代码" binding="sleTreCode" caption="国库代码" display="strename" underly="strecode" modelsource="treList"/>
+      <widgetRefs xsi:type="model:Combo" id="5f706fff-5a90-41a1-896c-9cd3fbc14bc6" name="征收机关代码" binding="sleTaxOrgCode" caption="征收机关代码" display="staxorgname" underly="staxorgcode" modelsource="taxorgList"/>
+      <widgetRefs xsi:type="model:Combo" id="2ded2da5-924b-4768-93dd-5baea0a5780e" name="辖属标志" binding="sleOfFlag" caption="辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="813dcd86-d51a-44ec-b04f-d8d63859ec30" name="含款合计" binding="sleSumItem" caption="是否含款合计" display="svaluecmt" underly="svalue" modelsource="sumitemlist">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#42c32f92-43e0-4e63-8fd9-2f94c4ac6e1a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="b48c2111-1fb8-4344-8290-002d4bbdba36" name="查询日期" binding="sdate" caption="人行国库报表日期"/>
+      <widgetRefs xsi:type="model:Text" id="7c9c4511-783a-452f-bcf6-d15ab478c33a" name="代理库报表日期" binding="agentDate" caption="代理国库报表日期"/>
+      <widgetRefs xsi:type="model:Checkbox" id="cfe563ca-f403-4d70-a8b6-feb917dfd464" name="是否月末" binding="bisEndMonth" caption="是否月末"/>
+      <widgetRefs xsi:type="model:Text" id="12e70736-0873-4060-b1fc-e25d472855a7" name="月末代理库报表日期" binding="agentEndDate" caption="月末报表日期"/>
+    </contentareanode>
+    <contentareanode id="356d0c54-f529-407b-8fb7-192362bd70c0" name="报表种类" grouptitle="报表种类">
+      <widgetRefs xsi:type="model:Table" id="ce89806e-b55f-42eb-8577-2cb0e9f87ceb" name="导出文件种类" binding="reportlist" caption="选择导出报表类型" showcheckbox="true" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="checklist" width="300" height="300">
+        <columnlist id="c15977bc-5d61-422d-b11d-58c95ecaeaed" name="报表代码" binding="svalue" caption="报表代码"/>
+        <columnlist id="34f005db-9fbf-4e9a-a86a-1bb7b4f8cce3" name="报表名称" binding="svaluecmt" caption="报表名称"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2437adbe-ff91-4f1e-962c-6410f22c0da0" name="下辖库数据导出选项" grouptitle="下辖库数据导出选项" columnnum="4">
+      <widgetRefs xsi:type="model:Table" id="6a870d8f-ba39-4f28-b13f-08d83d667bac" name="下辖库中央级" binding="centralTreList" caption="下辖库中央级" tabletype="" showcheckbox="true" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="chkcentralTreList" width="250" height="450">
+        <columnlist id="3039b9d6-d1a4-4096-9c25-d3039b554dae" name="中央" extpoperties="" binding="strename" caption="中央" editable="true" align="" editortype="" displaypattern="" sortrule="" sorter="" enumparam=""/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Table" id="ffa4f52c-fb83-4533-8260-ed61d0343ef1" name="下辖库省级" binding="provinceTreList" caption="下辖库省级" showcheckbox="true" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="chkprovinceTreList" width="250" height="450">
+        <columnlist id="ade20a12-605e-45da-9660-0fe8c11635ef" name="省" extpoperties="" binding="strename" caption="省" editable="true" align="" editortype="" displaypattern="" sortrule="" sorter="" enumparam=""/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Table" id="c339b543-6bef-455d-9e82-ddf3d5a2fc7a" name="下辖库市级" binding="cityTreList" caption="下辖库市级" showcheckbox="true" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="chkcityTreList" width="250" height="450">
+        <columnlist id="cab04618-b6d1-473f-aa5a-c29256cf9499" name="市" extpoperties="" binding="strename" caption="市" editable="true" align="" editortype="" displaypattern="" sortrule="" sorter="" enumparam=""/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Table" id="0368083c-8d90-4d70-be3d-348368278a5b" name="下辖库县级" binding="countyTreList" caption="下辖库县级" showcheckbox="true" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="chkcountyTreList" width="250" height="450">
+        <columnlist id="589025a8-1553-4019-93fc-92f9c2434fb8" name="县" extpoperties="" binding="strename" caption="县" editable="true" align="" editortype="" displaypattern="" sortrule="" sorter="" enumparam=""/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2830b1d9-2fad-4273-86ca-dae8235c8355" name="单选项输入一" grouptitle="单选项输入一" columnnum="1">
+      <widgetRefs xsi:type="model:Checkbox" id="f4a81aa3-7b53-4713-940d-ed66f3bae3e6" name="是否选择" binding="bisselect1" caption="是否选择"/>
+      <widgetRefs xsi:type="model:Text" id="694079c4-a191-4275-824c-8169cd6a5387" name="报表日期" binding="srptdate1" caption="报表日期" pattern="@8"/>
+      <widgetRefs xsi:type="model:Text" id="b91ad845-8435-4136-b363-345f276d6213" name="国库代码" binding="strecode1" caption="国库代码" pattern="@10"/>
+      <widgetRefs xsi:type="model:Checkbox" id="b6701192-ea31-493a-aacb-c0e8988866c7" name="中央" binding="bcentral1" caption="中央"/>
+      <widgetRefs xsi:type="model:Checkbox" id="27e379eb-b88f-4316-93cf-eaa504f44bd2" name="省" binding="bprovince1" caption="省"/>
+      <widgetRefs xsi:type="model:Checkbox" id="71a43e44-ea95-4ddb-9795-a990a8b98477" name="市" binding="bcity1" caption="市"/>
+      <widgetRefs xsi:type="model:Checkbox" id="7887ab24-b664-4d17-88ff-f0ae60bdf1de" name="县" binding="bcountry1" caption="县"/>
+    </contentareanode>
+    <contentareanode id="987ca07f-1d4c-4375-a423-2bcf65ffc4db" name="单选项输入二" grouptitle="单选项输入二" columnnum="1">
+      <widgetRefs xsi:type="model:Checkbox" id="5c3ba08a-a40d-44cf-bef4-f5f5069db667" name="是否选择" binding="bisselect2" caption="是否选择"/>
+      <widgetRefs xsi:type="model:Text" id="83a80784-2939-49e8-b367-a517e13949ab" name="报表日期" binding="srptdate2" caption="报表日期" pattern="@8"/>
+      <widgetRefs xsi:type="model:Text" id="f03b7ec6-9046-4f6d-b0bb-a9fae49e1254" name="国库代码" binding="strecode2" caption="国库代码" pattern="@10"/>
+      <widgetRefs xsi:type="model:Checkbox" id="fc7c9207-1a4f-44a7-ab0c-d862b1e984d9" name="中央" binding="bcentral2" caption="中央"/>
+      <widgetRefs xsi:type="model:Checkbox" id="7a6921c7-1894-4873-9d41-630e4580134a" name="省" binding="bprovince2" caption="省"/>
+      <widgetRefs xsi:type="model:Checkbox" id="6d0d30ef-c133-498d-b4e4-9c37b90e04e2" name="市" binding="bcity2" caption="市"/>
+      <widgetRefs xsi:type="model:Checkbox" id="444b212f-2471-4dac-85bd-b9e4ddd93f23" name="县" binding="bcountry2" caption="县"/>
+    </contentareanode>
+    <contentareanode id="171d1321-ef70-44bf-887c-2cd0b9b64a0f" name="单选项输入三" grouptitle="单选项输入三" columnnum="1">
+      <widgetRefs xsi:type="model:Checkbox" id="a508a3c9-ed4d-42ce-b5e4-0d2f9d43764f" name="是否选择" binding="bisselect3" caption="是否选择"/>
+      <widgetRefs xsi:type="model:Text" id="7d162ce2-eae8-46d0-95e0-34d86474048c" name="报表日期" binding="srptdate3" caption="报表日期" pattern="@8"/>
+      <widgetRefs xsi:type="model:Text" id="9bbcc2e1-7cb4-462c-aec2-04e4312b05d7" name="国库代码" binding="strecode3" caption="国库代码" pattern="@10"/>
+      <widgetRefs xsi:type="model:Checkbox" id="c937dc47-b715-47b5-8b1d-39cc4e86b412" name="中央" binding="bcentral3" caption="中央"/>
+      <widgetRefs xsi:type="model:Checkbox" id="2676b63d-c1ac-4f0d-9d8e-3db47f4ded55" name="省" binding="bprovince3" caption="省"/>
+      <widgetRefs xsi:type="model:Checkbox" id="4d31ffb3-32ad-4387-ba22-a7e0abbb1cd7" name="市" binding="bcity3" caption="市"/>
+      <widgetRefs xsi:type="model:Checkbox" id="f44067dd-da1d-482f-be48-c07d47c1c016" name="县" binding="bcountry3" caption="县"/>
+    </contentareanode>
+    <contentareanode id="73912c34-a95e-4582-97e1-72325ec1864e" name="单选项输入四" grouptitle="单选项输入四" columnnum="1">
+      <widgetRefs xsi:type="model:Checkbox" id="0f0e07b8-7ff1-4498-a967-bf4132ce589d" name="是否选择" binding="bisselect4" caption="是否选择"/>
+      <widgetRefs xsi:type="model:Text" id="14002699-b467-4bbe-9fd4-ff1c5f79a145" name="报表日期" binding="srptdate4" caption="报表日期" pattern="@8"/>
+      <widgetRefs xsi:type="model:Text" id="dd4d75a6-533f-46a2-8e64-2ad6293bec15" name="国库代码" binding="strecode4" caption="国库代码" pattern="@10"/>
+      <widgetRefs xsi:type="model:Checkbox" id="36dc1e69-d6ec-4a14-b803-2fbf7cade955" name="中央" binding="bcentral4" caption="中央"/>
+      <widgetRefs xsi:type="model:Checkbox" id="d9bd5b26-0f30-4b62-80b5-745c6abd4e6f" name="省" binding="bprovince4" caption="省"/>
+      <widgetRefs xsi:type="model:Checkbox" id="da412dee-a279-4fad-9cb6-d2e33714a0b8" name="市" binding="bcity4" caption="市"/>
+      <widgetRefs xsi:type="model:Checkbox" id="ffac5547-20d3-4e06-b7b6-cc1d7bb03259" name="县" binding="bcountry4" caption="县"/>
+    </contentareanode>
+    <contentareanode id="eca9710f-7002-429e-bac8-b41e1a61310b" name="单选项输入五" grouptitle="单选项输入五" columnnum="1">
+      <widgetRefs xsi:type="model:Checkbox" id="94b5d623-18cd-4efd-89c4-a010d2622163" name="是否选择" binding="bisselect5" caption="是否选择"/>
+      <widgetRefs xsi:type="model:Text" id="dc0f1ee3-c1c9-4cec-a2e7-62fa40523b39" name="报表日期" binding="srptdate5" caption="报表日期" pattern="@8"/>
+      <widgetRefs xsi:type="model:Text" id="cb6120ba-ed0e-4401-9642-03b9b9b05607" name="国库代码" binding="strecode5" caption="国库代码" pattern="@10"/>
+      <widgetRefs xsi:type="model:Checkbox" id="36df2455-d14e-4ee9-92c9-0360a4b1b25b" name="中央" binding="bcentral5" caption="中央"/>
+      <widgetRefs xsi:type="model:Checkbox" id="93bf8a97-2351-40be-be45-288fa137eccd" name="省" binding="bprovince5" caption="省"/>
+      <widgetRefs xsi:type="model:Checkbox" id="2946efa8-cb06-4dff-ae12-2640ad015337" name="市" binding="bcity5" caption="市"/>
+      <widgetRefs xsi:type="model:Checkbox" id="533971f4-a635-4a85-bdee-59f12d2e328b" name="县" binding="bcountry5" caption="县"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="c603e4b5-3ced-40e2-9a80-2cad36701c42">
+    <pages id="6ced45f8-29fc-4dac-92a4-a31482c51ba9" name="报表数据导出（天津）">
+      <views id="1d8e59d2-f5d6-4a65-b2ee-34282c86f1e6" name="报表数据导出（天津）" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="2e9c1fd6-dbe6-4122-a75f-9cb4eeac05a2 356d0c54-f529-407b-8fb7-192362bd70c0">
+        <buttonArea id="11926dae-d2c5-4d16-b844-39b20893fbff" name="JButtonAreaImpl-11926dae-d2c5-4d16-b844-39b20893fbff">
+          <buttons id="300a7251-4be2-4ed0-8439-a957f051e92d" name="下辖数据导出选项" caption="下辖数据导出选项" direction="2302c433-4b97-41f5-8be9-a2d5fde23bd2"/>
+          <buttons id="f14f56e0-7236-4af4-bf65-b0106dc49790" name="单选项输入" caption="单选项输入" direction="0ce81541-b593-4b31-bb08-f4ce0074eebc"/>
+          <buttons id="d4ddde9b-8bbc-411a-88a0-f2e4eba50352" name="全选" caption="全选" direction="6075e359-f70c-4f73-9cba-d278f8511f52"/>
+          <buttons id="00bd5c80-5ac9-4385-b37f-29c7ad49afa4" name="导出" caption="导出" direction="b0bfe360-fc7d-4915-b99e-5a270c87735d"/>
+        </buttonArea>
+      </views>
+      <views id="a6a082c6-a2b3-4c7b-bfd1-b3a13f46f922" name="下辖国库数据导出选项" contentArea="2437adbe-ff91-4f1e-962c-6410f22c0da0">
+        <buttonArea id="4a35e07c-e91a-49b3-94a1-6027b71a3feb" name="JButtonAreaImpl-4a35e07c-e91a-49b3-94a1-6027b71a3feb">
+          <buttons id="54a2b620-93a2-49e3-a51e-3761cc8ddb86" name="返回" caption="返回" direction="51153ba4-6d6e-464d-b5b1-903dfed98893"/>
+        </buttonArea>
+      </views>
+      <views id="d9045de5-e410-4c51-a2d9-5734327df36d" name="单选项输入" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="2830b1d9-2fad-4273-86ca-dae8235c8355 987ca07f-1d4c-4375-a423-2bcf65ffc4db 171d1321-ef70-44bf-887c-2cd0b9b64a0f 73912c34-a95e-4582-97e1-72325ec1864e eca9710f-7002-429e-bac8-b41e1a61310b">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="08ef7de3-9cf6-46dd-8c8f-9e7819684f50" name="JButtonAreaImpl-08ef7de3-9cf6-46dd-8c8f-9e7819684f50">
+          <buttons id="e7f0458a-9acb-4e8f-8096-07e1a9faa278" name="返回" caption="返回" direction="8de93c06-8947-4bc5-8fbf-5ed5a685829a"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

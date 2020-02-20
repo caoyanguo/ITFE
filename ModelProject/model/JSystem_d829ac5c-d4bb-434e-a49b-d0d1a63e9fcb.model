@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d829ac5c-d4bb-434e-a49b-d0d1a63e9fcb" name="国库前置系统" ename="ITFE">
+  <jproperties id="dc6521c4-eb69-473e-a767-855f37f7c068" key="DefaultException" value="com.cfcc.itfe.exception.ITFEBizException" remark="通用业务异常"/>
+  <refSubSystems href="JSubSystem_0af3960f-4bef-45fd-a07d-21881f7bbaa4.model#0af3960f-4bef-45fd-a07d-21881f7bbaa4"/>
+  <refSubSystems href="JSubSystem_f67cee50-22ac-4256-8e18-abc2aff87fc1.model#f67cee50-22ac-4256-8e18-abc2aff87fc1"/>
+  <refSubSystems href="JSubSystem_dc9b9339-ef87-48ca-88cb-3f65ffb3c0db.model#dc9b9339-ef87-48ca-88cb-3f65ffb3c0db"/>
+  <refSubSystems href="JSubSystem_b32bc32f-f6ea-4c23-be43-9603b3454b8e.model#b32bc32f-f6ea-4c23-be43-9603b3454b8e"/>
+  <refSubSystems href="JSubSystem_18a8b469-d096-488b-bbae-31443dbca4ff.model#18a8b469-d096-488b-bbae-31443dbca4ff"/>
+  <refSubSystems href="JSubSystem_72364987-d729-4074-adbd-818333c2b6e6.model#72364987-d729-4074-adbd-818333c2b6e6"/>
+  <refSubSystems href="JSubSystem_e5caf610-eccd-4186-89e3-3c345b5404db.model#e5caf610-eccd-4186-89e3-3c345b5404db"/>
+  <menu id="ccc1cb67-5a69-4b64-b8b6-a8bb4fefe132" name="主菜单">
+    <nodes id="e18de501-4bc2-43ed-876a-c50f05815c4b" text="登录" image="">
+      <leafs id="1593b78c-004b-43d0-b588-eac7d5ddfa2d" text="重新登录" type="action" classname="com.cfcc.itfe.client.login.ReLoginAction" image="icons/relogin.bmp" showontoolbar="true" toolbarimage=""/>
+      <leafs id="9299af8d-9403-423d-9fca-3ca2013f4bc2" text="系统退出" type="action" classname="com.cfcc.itfe.client.login.ExitAction" image="icons/exit.bmp" showontoolbar="true" target="" toolbarimage=""/>
+    </nodes>
+    <nodes id="570c3fbf-b6f8-4d38-87ec-874b008541f0" text="无纸化联网业务">
+      <leafs id="960ebbe7-c91f-44ef-9b89-8e1090187490" text="集中支付对账单" functioncode="B_111">
+        <uiComponent href="JUIComponent_4e6fed82-183d-4d8a-99af-74201e2e5e9d.model#4e6fed82-183d-4d8a-99af-74201e2e5e9d"/>
+      </leafs>
+      <nodes id="a7072827-bd00-4f79-b4a1-e5db2bd62156" text="凭证业务处理">
+        <leafs id="2082bed1-9d2a-42b1-ad5e-7601e5c59ecf" text="业务凭证处理" image="icons/2.ico" functioncode="B_018" showontoolbar="true">
+          <uiComponent href="JUIComponent_99d5a4d2-d6b4-4f44-8007-961c083cab09.model#99d5a4d2-d6b4-4f44-8007-961c083cab09"/>
+        </leafs>
+        <leafs id="21de0e7a-f94a-4c4f-bda9-265d0bc1b2a8" text="业务要素补录" functioncode="B_243">
+          <uiComponent href="JUIComponent_c5dc725e-2b29-42bf-9e9f-77f1b06143a4.model#c5dc725e-2b29-42bf-9e9f-77f1b06143a4"/>
+        </leafs>
+        <leafs id="6050e690-15e1-48b9-b27e-32d754422a3f" text="退回类凭证处理" functioncode="B_267">
+          <uiComponent href="JUIComponent_17048b07-cb2a-4c34-9b4f-097d369581f8.model#17048b07-cb2a-4c34-9b4f-097d369581f8"/>
+        </leafs>
+        <leafs id="e5047361-529c-4305-9155-0679edf877cd" text="国库往来票据处理" functioncode="B_265">
+          <uiComponent href="JUIComponent_2556facb-05a5-4cc6-a12e-c28ba3d09b31.model#2556facb-05a5-4cc6-a12e-c28ba3d09b31"/>
+        </leafs>
+        <leafs id="08da111e-b46f-498a-a314-86d6251fbf96" text="业务凭证比对（陕西）" functioncode="B_019">
+          <uiComponent href="JUIComponent_1e5d966a-d28c-467b-98c2-d55c4decf407.model#1e5d966a-d28c-467b-98c2-d55c4decf407"/>
+        </leafs>
+        <leafs id="6a0c8dd8-e85d-4981-a068-f3b5071f4daa" text="直接支付清算回单（上海）" functioncode="B_291">
+          <uiComponent href="JUIComponent_f72d7ae6-83bc-4e3a-bb8c-5ee562a420a3.model#f72d7ae6-83bc-4e3a-bb8c-5ee562a420a3"/>
+        </leafs>
+        <leafs id="15a96426-beb3-4ecd-a357-7858c9f92775" text="商行凭证校验" functioncode="B_310">
+          <uiComponent href="JUIComponent_7790131b-7821-414d-9d6a-3a02133ceab2.model#7790131b-7821-414d-9d6a-3a02133ceab2"/>
+        </leafs>
+        <leafs id="d4727cb8-f1b9-4baa-a7f7-180ad952ef03" text="基础数据元数据" functioncode="B_315">
+          <uiComponent href="JUIComponent_3c829b1c-d3dd-4ce7-9270-4921caf21b34.model#3c829b1c-d3dd-4ce7-9270-4921caf21b34"/>
+        </leafs>
+      </nodes>
+      <nodes id="eb0f5109-7490-4238-a352-6d793b8acc57" text="报表业务处理">
+        <leafs id="eaef3b56-e6aa-4232-be7e-46f18349d39b" text="预算收入类报表生成" functioncode="B_247">
+          <uiComponent href="JUIComponent_a8bbf8a5-b163-48da-a396-84b0eefd8a12.model#a8bbf8a5-b163-48da-a396-84b0eefd8a12"/>
+        </leafs>
+        <leafs id="aa4efc74-e3b6-4b73-8390-cf89e2c1555c" text="预算支出类报表生成" functioncode="B_262">
+          <uiComponent href="JUIComponent_284bc456-3343-4ce2-ba93-065944908213.model#284bc456-3343-4ce2-ba93-065944908213"/>
+        </leafs>
+        <leafs id="a09590ee-d704-4768-a193-988bc63e997e" text="总额分成-两税返还报表生成" functioncode="B_268">
+          <uiComponent href="JUIComponent_d7d289b8-63d8-46ed-b196-57c7f4d40e8f.model#d7d289b8-63d8-46ed-b196-57c7f4d40e8f"/>
+        </leafs>
+        <leafs id="ba30fcbe-946f-428b-b6c7-ed34a7c13494" text="各地收入年报情况表生成（吉林）" functioncode="B_269">
+          <uiComponent href="JUIComponent_32a8f353-109a-4c70-9554-52214be47d4f.model#32a8f353-109a-4c70-9554-52214be47d4f"/>
+        </leafs>
+        <leafs id="54c321a4-9a87-4134-a5e5-b9f00c633b51" text="各地资金留用情况统计表生成（吉林）" functioncode="B_271">
+          <uiComponent href="JUIComponent_19616865-87d9-4e55-b256-334449c31b20.model#19616865-87d9-4e55-b256-334449c31b20"/>
+        </leafs>
+        <leafs id="b71d3a77-72a1-4ba9-a49c-afb7bed11c0f" text="财政直接支付日报表2206" functioncode="B_299">
+          <uiComponent href="JUIComponent_96794114-ec37-4057-ba94-1f85bd840094.model#96794114-ec37-4057-ba94-1f85bd840094"/>
+        </leafs>
+      </nodes>
+      <nodes id="20c557b0-b82a-4503-bf10-bb200c440d7c" text="对账业务处理" image="" functioncode="">
+        <leafs id="28bf1fee-a712-498f-8ee5-675f0a715c59" text="发起凭证对账" functioncode="B_258">
+          <uiComponent href="JUIComponent_98e7de5c-3d97-417a-bbcf-5b6f7be701ec.model#98e7de5c-3d97-417a-bbcf-5b6f7be701ec"/>
+        </leafs>
+        <leafs id="5a115ab0-65cd-4705-b396-6a7bb8949c91" text="接收凭证对账" functioncode="B_257">
+          <uiComponent href="JUIComponent_a26cd4a1-3e22-4632-a9ca-f8e849ceae2e.model#a26cd4a1-3e22-4632-a9ca-f8e849ceae2e"/>
+        </leafs>
+        <leafs xsi:type="model:MenuSeparator"/>
+        <leafs id="e630e6bb-7c39-472a-9a26-d04adf82f30c" text="发起业务对账" functioncode="B_246">
+          <uiComponent href="JUIComponent_3530909e-1b1e-460c-b9ee-dcf2cdc382aa.model#3530909e-1b1e-460c-b9ee-dcf2cdc382aa"/>
+        </leafs>
+        <leafs xsi:type="model:MenuSeparator"/>
+        <leafs id="b59dc3cf-8e8a-4c39-ad21-1010965949ef" text="生成报表对账" functioncode="B_289">
+          <uiComponent href="JUIComponent_cc26da80-cc2d-444c-93d7-ee9c598f88da.model#cc26da80-cc2d-444c-93d7-ee9c598f88da"/>
+        </leafs>
+        <leafs id="cbe01f88-2fa5-413d-bf30-8954b2433d0e" text="生成业务对账" functioncode="B_290">
+          <uiComponent href="JUIComponent_172cbbcb-ceb2-4d12-ab5b-bbbc2bf2f93a.model#172cbbcb-ceb2-4d12-ab5b-bbbc2bf2f93a"/>
+        </leafs>
+        <leafs id="50679716-6c1d-454f-87df-fae16674c546" text="生成报表对账回单" functioncode="B_297">
+          <uiComponent href="JUIComponent_6fa4ee3f-30de-44ac-b359-8e56e625eccd.model#6fa4ee3f-30de-44ac-b359-8e56e625eccd"/>
+        </leafs>
+        <leafs id="63c97bf3-eede-4f2f-a439-58e388f6f469" text="生成业务对账回单" functioncode="B_298">
+          <uiComponent href="JUIComponent_456fe4fc-6688-45a1-a95a-034f61ea20a9.model#456fe4fc-6688-45a1-a95a-034f61ea20a9"/>
+        </leafs>
+        <leafs xsi:type="model:MenuSeparator"/>
+        <leafs id="23d2dd2e-b46d-43e0-aa14-fdd405f1bd7a" text="库款账户月度对账单（广西）" functioncode="B_266">
+          <uiComponent href="JUIComponent_e02ac3c9-23b4-4afc-9b33-48d4490aec49.model#e02ac3c9-23b4-4afc-9b33-48d4490aec49"/>
+        </leafs>
+        <leafs id="eae01741-0137-48ee-9f77-e75e924581df" text="每日业务对账单(广西)" functioncode="B_272">
+          <uiComponent href="JUIComponent_b4bcaabd-e66f-467b-aa68-00183284dff2.model#b4bcaabd-e66f-467b-aa68-00183284dff2"/>
+        </leafs>
+        <leafs id="3fba2001-d5c2-4bd2-bc74-31ee7ad59b3b" text="发送新版对账" functioncode="B_333">
+          <uiComponent href="JUIComponent_bd6026ce-cbb9-4116-968a-a76d88ad81e0.model#bd6026ce-cbb9-4116-968a-a76d88ad81e0"/>
+        </leafs>
+      </nodes>
+      <nodes id="7adaa21a-43c9-420e-91d7-f7c07b22891a" text="电子凭证打印">
+        <leafs id="0c099742-3208-4e9b-9418-056a9be39adf" text="业务清单查询打印" functioncode="B_263">
+          <uiComponent href="JUIComponent_4e6fed82-183d-4d8a-99af-74201e2e5e9d.model#4e6fed82-183d-4d8a-99af-74201e2e5e9d"/>
+        </leafs>
+        <leafs id="dd10ea20-f62b-4545-a26f-3648e460c5c6" text="电子凭证历史查询" functioncode="B_260">
+          <uiComponent href="JUIComponent_33a666d8-c199-4fe5-a785-c012e3413caf.model#33a666d8-c199-4fe5-a785-c012e3413caf"/>
+        </leafs>
+        <leafs id="51f96f2e-b0ea-469b-9d25-a2daeac104f4" text="非税业务查询打印" functioncode="B_322">
+          <uiComponent href="JUIComponent_a074e369-a362-4ce1-be95-ca3892172258.model#a074e369-a362-4ce1-be95-ca3892172258"/>
+        </leafs>
+      </nodes>
+      <nodes id="f42bd8f6-468c-42d3-9c3e-b1e50f2d236a" text="其他辅助功能">
+        <leafs id="c987ebcf-7781-49b4-99e0-eab6f02df6df" text="文件发送绿色通道" functioncode="B_270">
+          <uiComponent href="JUIComponent_988e6041-4ab1-446e-b4fa-46b4cf1b0d0f.model#988e6041-4ab1-446e-b4fa-46b4cf1b0d0f"/>
+        </leafs>
+        <leafs xsi:type="model:MenuSeparator"/>
+        <leafs id="ad8ca814-6a83-4db3-a0cd-8f4806e0b03e" text="导出TBS应急文件" functioncode="B_259">
+          <uiComponent href="JUIComponent_3bb89483-78b3-445b-97d2-0b4674b5dfa0.model#3bb89483-78b3-445b-97d2-0b4674b5dfa0"/>
+        </leafs>
+        <leafs id="3aa41c33-4079-4971-911c-6081b51e9414" text="代理库TBS数据接口(北京)" functioncode="B_000">
+          <uiComponent href="JUIComponent_de9876e3-26ec-4290-891b-c19401ad93dd.model#de9876e3-26ec-4290-891b-c19401ad93dd"/>
+        </leafs>
+        <leafs id="149ae520-1549-44e5-9e76-d7ca43c89a9f" text="上传文件到服务器" functioncode="D_000">
+          <uiComponent href="JUIComponent_ce971e15-68c8-4cad-b35b-1a2a115511ae.model#ce971e15-68c8-4cad-b35b-1a2a115511ae"/>
+        </leafs>
+        <leafs id="a3bc76cd-430a-40ed-bcac-9dba2e6fc49d" text="无纸化业务注册">
+          <uiComponent href="JUIComponent_433b3d6d-99a3-4f1a-b0a2-9973e0927427.model#433b3d6d-99a3-4f1a-b0a2-9973e0927427"/>
+        </leafs>
+      </nodes>
+    </nodes>
+    <nodes id="4d76d411-0b46-471a-9c64-70553bbc5ebf" text="磁盘导入业务">
+      <nodes id="158a91b7-78f8-4d52-95cc-9cabc8a341ab" text="地方横联数据导入">
+        <leafs id="222d851c-e53c-4f9c-8314-825af8673c85" text="电子税票数据导入" functioncode="B_001">
+          <uiComponent href="JUIComponent_efa8b97d-35a3-4151-9d3f-6e1e59ec9e19.model#efa8b97d-35a3-4151-9d3f-6e1e59ec9e19"/>
+        </leafs>
+        <leafs id="aa336c6b-31c7-45de-8a97-76322775ac42" text="实拨资金数据导入" functioncode="B_002">
+          <uiComponent href="JUIComponent_4c16c282-adf4-4199-b46b-bbf9a5314b7e.model#4c16c282-adf4-4199-b46b-bbf9a5314b7e"/>
+        </leafs>
+        <leafs id="d835b51a-9bd4-46e1-9fa7-cf222322fb00" text="实拨资金数据导入(福州)" functioncode="B_0022">
+          <uiComponent href="JUIComponent_db69cd60-ae89-44c8-a27e-8bb5e664f20b.model#db69cd60-ae89-44c8-a27e-8bb5e664f20b"/>
+        </leafs>
+        <leafs id="57e73612-3607-4315-a0b1-29dfb2cee80c" text="实拨信息数据导入" functioncode="B_0021">
+          <uiComponent href="JUIComponent_52df611a-814b-4ecb-b584-2dd8f0b268f6.model#52df611a-814b-4ecb-b584-2dd8f0b268f6"/>
+        </leafs>
+        <leafs id="f0ecd63c-9064-459f-8b19-b04bcb49f84a" text="直接支付额度导入" functioncode="B_003">
+          <uiComponent href="JUIComponent_08bf2f9f-fb3b-42af-8ce7-8577cf585234.model#08bf2f9f-fb3b-42af-8ce7-8577cf585234"/>
+        </leafs>
+        <leafs id="dcb1d2cb-f5fa-487b-8c94-645965be73cb" text="授权支付额度导入" functioncode="B_004">
+          <uiComponent href="JUIComponent_b4996e74-c743-49dc-8ea2-c949d159b42c.model#b4996e74-c743-49dc-8ea2-c949d159b42c"/>
+        </leafs>
+        <leafs id="0b146b7e-a540-4829-9d3a-3a01700f9fd8" text="退库凭证数据导入" functioncode="B_005">
+          <uiComponent href="JUIComponent_6c43fcbd-b301-4eca-8a62-ec8b7cecee40.model#6c43fcbd-b301-4eca-8a62-ec8b7cecee40"/>
+        </leafs>
+        <leafs id="7a2140f3-766b-4ee8-bbb6-7bd046c7f69e" text="更正凭证数据导入" functioncode="B_006">
+          <uiComponent href="JUIComponent_34bd27ab-4d07-4a87-bef5-4477dc088d3f.model#34bd27ab-4d07-4a87-bef5-4477dc088d3f"/>
+        </leafs>
+        <leafs id="004b8a18-cdb0-43f8-a52c-5cd158b16c80" text="批量拨付数据导入" functioncode="B_007">
+          <uiComponent href="JUIComponent_aeed0742-12d1-46bc-8c5c-c9a2457b1b1d.model#aeed0742-12d1-46bc-8c5c-c9a2457b1b1d"/>
+        </leafs>
+        <leafs id="2a391767-60f7-4d59-8758-043b879df388" text="山东库区移民发放数据导入" functioncode="B_012">
+          <uiComponent href="JUIComponent_730de42d-0584-4d11-9ec8-06b3c4a92e23.model#730de42d-0584-4d11-9ec8-06b3c4a92e23"/>
+        </leafs>
+        <leafs id="c2c05411-ab68-4855-a99c-c3f46c120f38" text="免抵调业务数据导入" functioncode="B_017">
+          <uiComponent href="JUIComponent_883ae8ca-1985-44bb-ab6d-6e469deaff38.model#883ae8ca-1985-44bb-ab6d-6e469deaff38"/>
+        </leafs>
+        <leafs id="5f8d3af5-2f25-4e84-9a63-4c0d13a5291b" text="人行办理直接支付数据导入" functioncode="B_229">
+          <uiComponent href="JUIComponent_a9422ef6-91cb-4716-acae-3ba9d0e047aa.model#a9422ef6-91cb-4716-acae-3ba9d0e047aa"/>
+        </leafs>
+        <leafs id="ff3333a1-ed45-4e64-a057-e4deb65be301" text="商行办理划款申请数据导入" functioncode="B_015">
+          <uiComponent href="JUIComponent_a209cb81-ba93-4368-9404-e261c675a505.model#a209cb81-ba93-4368-9404-e261c675a505"/>
+        </leafs>
+        <leafs id="492f5c1f-ab0c-4f05-9593-14c74ddee3c2" text="商行办理退款申请数据导入" functioncode="B_016">
+          <uiComponent href="JUIComponent_1a7fae8c-1c5f-40bf-9a2c-a021f0b92f06.model#1a7fae8c-1c5f-40bf-9a2c-a021f0b92f06"/>
+        </leafs>
+        <leafs id="2a3e6762-6bd0-4763-a9ec-5e1f9c194beb" text="数据加载(浙江)" functioncode="B_276">
+          <uiComponent href="JUIComponent_6e7c84eb-2374-4878-b2bc-8f1bc1aab107.model#6e7c84eb-2374-4878-b2bc-8f1bc1aab107"/>
+        </leafs>
+        <leafs xsi:type="model:MenuSeparator" text="" functioncode=""/>
+        <leafs id="de9471e6-211d-4cd1-adaa-c6a2602ecb2f" text="收入税票异常处理" functioncode="B_008">
+          <uiComponent href="JUIComponent_efbc845a-f3d3-476a-97c6-e57b6920918c.model#efbc845a-f3d3-476a-97c6-e57b6920918c"/>
+        </leafs>
+        <leafs id="0b1d7ff5-c300-4812-8e9b-91f62eb06255" text="发送报文查询处理" functioncode="B_010">
+          <uiComponent href="JUIComponent_1fd76c1f-f769-4ff2-b882-e08db6be7886.model#1fd76c1f-f769-4ff2-b882-e08db6be7886"/>
+        </leafs>
+        <leafs id="a9281b09-b453-412b-baab-eeb1ef73c3ed" text="报表导出下载" functioncode="B_011">
+          <uiComponent href="JUIComponent_fe26d4b8-f41b-42a7-b633-3a377375cea8.model#fe26d4b8-f41b-42a7-b633-3a377375cea8"/>
+        </leafs>
+        <leafs id="17fa0646-ba12-4ef6-9df1-b43711dec33a" text="报表导出下载（天津）" functioncode="B_013">
+          <uiComponent href="JUIComponent_5f4f987f-f312-4f78-ab81-b82418b8fe27.model#5f4f987f-f312-4f78-ab81-b82418b8fe27"/>
+        </leafs>
+        <leafs id="accf8ab1-8190-4c7c-8a5a-6dd7b400bd9c" text="收入文件接口格式转换（珠海）" functioncode="B_235">
+          <uiComponent href="JUIComponent_10cb312c-4fd7-4aae-8317-37e0de7a8406.model#10cb312c-4fd7-4aae-8317-37e0de7a8406"/>
+        </leafs>
+        <leafs xsi:type="model:MenuSeparator"/>
+        <leafs id="ccec1888-8da9-402d-86d8-2aabb4425b8a" text="预算收入报表解付（上海）" functioncode="B_242">
+          <uiComponent href="JUIComponent_a87e5805-1cd5-4492-8b4f-dd11418a5567.model#a87e5805-1cd5-4492-8b4f-dd11418a5567"/>
+        </leafs>
+      </nodes>
+      <nodes id="a541a9b2-3fc9-448a-8700-0e0f82ea948a" text="TCBS数据文件导入">
+        <leafs id="63004fcd-0d6b-4cc7-9169-9902e85e7afd" text="支出类报表数据导入及查询" functioncode="B_237">
+          <uiComponent href="JUIComponent_b0df3204-48ac-43d6-b6a7-ff509abf775f.model#b0df3204-48ac-43d6-b6a7-ff509abf775f"/>
+        </leafs>
+        <leafs id="39578c45-012e-474e-a81d-92bbc89080a1" text="集中支付对账单导入及查询" functioncode="B_239">
+          <uiComponent href="JUIComponent_0d3c11b6-7756-4539-9f10-970776c7040c.model#0d3c11b6-7756-4539-9f10-970776c7040c"/>
+        </leafs>
+        <leafs id="b6d69950-8cfc-4195-bc55-76e01a2a194a" text="TCBS来账凭证文件导入查询" functioncode="B_264">
+          <uiComponent href="JUIComponent_e612e108-8c79-48da-9d34-1abcd1291b29.model#e612e108-8c79-48da-9d34-1abcd1291b29"/>
+        </leafs>
+        <leafs id="65a203a8-deed-4161-b38c-17ca5115c65d" text="收入报表和分户账导入及查询" functioncode="B_275">
+          <uiComponent href="JUIComponent_13f249b6-4fe0-4e8e-ae92-29f54e1fc569.model#13f249b6-4fe0-4e8e-ae92-29f54e1fc569"/>
+        </leafs>
+        <leafs id="820542b3-251a-40ee-9590-0ec858de7b1a" text="库存和收入日报导入" functioncode="B_283">
+          <uiComponent href="JUIComponent_85ff789d-542f-4464-9c89-a8a4a4dcd2bf.model#85ff789d-542f-4464-9c89-a8a4a4dcd2bf"/>
+        </leafs>
+      </nodes>
+      <nodes id="904d62f5-e54d-48a9-80a1-790cc58086db" text="报表文件发送">
+        <leafs id="f4846425-98a2-4784-8b52-8f284c8d8151" text="TCP发送文件（北京）" functioncode="B_277">
+          <uiComponent href="JUIComponent_bea90a23-2a0c-4231-b23e-ae47dfa00a66.model#bea90a23-2a0c-4231-b23e-ae47dfa00a66"/>
+        </leafs>
+      </nodes>
+    </nodes>
+    <nodes id="9aadf049-ed58-481e-b95c-d7ce185efc71" text="TIPS相关业务">
+      <leafs id="c2cd3be0-1f29-42b1-bf64-49e262e89d84" text="5001财政日报表申请" functioncode="B_101">
+        <uiComponent href="JUIComponent_408054aa-a23e-40d3-9bc1-ec50f576f79f.model#408054aa-a23e-40d3-9bc1-ec50f576f79f"/>
+      </leafs>
+      <leafs id="cd9a5bc0-1ffd-419c-a486-5177904e5f06" text="5002财政入库流水申请" functioncode="B_102">
+        <uiComponent href="JUIComponent_47114416-5fa7-444f-bd1c-b24c0c0a2c93.model#47114416-5fa7-444f-bd1c-b24c0c0a2c93"/>
+      </leafs>
+      <leafs id="2a3dbcb3-92ac-40cf-91be-bce7e4d2e007" text="5003财政电子税票申请" functioncode="B_103">
+        <uiComponent href="JUIComponent_3d336cdb-c176-4347-9225-f89f002a4dec.model#3d336cdb-c176-4347-9225-f89f002a4dec"/>
+      </leafs>
+      <leafs xsi:type="model:MenuSeparator"/>
+      <leafs id="0fb63b9b-3092-4dbc-a9a2-31692a7924d8" text="TIPS连接性测试" functioncode="S_101">
+        <uiComponent href="JUIComponent_faabc444-dea9-4ddc-98a6-f4909c355e9f.model#faabc444-dea9-4ddc-98a6-f4909c355e9f"/>
+      </leafs>
+      <leafs id="a02c9638-bc2f-4130-84f7-ba5524cbde22" text="TIPS登录管理" functioncode="S_102">
+        <uiComponent href="JUIComponent_54e47daf-8a52-40e7-bbc4-f01658e4027e.model#54e47daf-8a52-40e7-bbc4-f01658e4027e"/>
+      </leafs>
+      <leafs id="e4ae84dc-c478-4d52-8474-838d9ca0b448" text="9111包明细重发请求" functioncode="B_104">
+        <uiComponent href="JUIComponent_8aead895-c88f-44ff-a460-7259e0358780.model#8aead895-c88f-44ff-a460-7259e0358780"/>
+      </leafs>
+      <leafs id="5dc0d461-f2c5-4ccd-b5e5-c2be4830c09b" text="9113收入核对包信息重发请求" functioncode="B_105">
+        <uiComponent href="JUIComponent_576fd938-a46b-4b69-9b81-7a687fb24374.model#576fd938-a46b-4b69-9b81-7a687fb24374"/>
+      </leafs>
+      <leafs id="deeb6082-5492-4cc5-ab55-b2897879b1ab" text="9116财政收入核对包重发请求" functioncode="B_106">
+        <uiComponent href="JUIComponent_6fe333d6-87dc-441a-9ad2-51cf0d45cf74.model#6fe333d6-87dc-441a-9ad2-51cf0d45cf74"/>
+      </leafs>
+      <leafs id="59e0bb65-f779-4d82-946e-4b6fac900ea5" text="9117支出核对包重发请求" functioncode="B_107">
+        <uiComponent href="JUIComponent_bcdac691-8454-45ec-a68c-21040d5058e5.model#bcdac691-8454-45ec-a68c-21040d5058e5"/>
+      </leafs>
+      <leafs id="a473ae74-ab62-4023-95cd-ef283c306213" text="9003交易状态查询请求" image="" functioncode="S_041">
+        <uiComponent href="JUIComponent_ac5826d4-86ca-45fe-bce8-d480aeb5b9b3.model#ac5826d4-86ca-45fe-bce8-d480aeb5b9b3"/>
+      </leafs>
+      <leafs id="0618b4e6-ec02-4b3c-a05d-1fbf41394c9b" text="9105自由格式报文发送" functioncode="S_042">
+        <uiComponent href="JUIComponent_8002bd03-58ff-411e-a053-0d42756a54e6.model#8002bd03-58ff-411e-a053-0d42756a54e6"/>
+      </leafs>
+      <leafs id="03660c4b-164f-444e-87f4-8c0c8a1cd9f5" text="支出核对包手工对账处理" functioncode="B_108">
+        <uiComponent href="JUIComponent_2e60b275-4132-48d3-bcd9-9d0a8ad2077f.model#2e60b275-4132-48d3-bcd9-9d0a8ad2077f"/>
+      </leafs>
+      <leafs id="8bdd6aeb-e83e-4514-b15f-e5a3d1235693" text="1024征收机关入库流水申请" functioncode="B_109">
+        <uiComponent href="JUIComponent_0e09e2a4-c72b-42a5-ab2e-724bc80337a3.model#0e09e2a4-c72b-42a5-ab2e-724bc80337a3"/>
+      </leafs>
+      <leafs id="7aaac6e5-d512-40f3-9e6e-29e4405df6db" text="1025征收机关报表申请" functioncode="B_110">
+        <uiComponent href="JUIComponent_2be06d21-8417-49df-80c2-b7a382a26367.model#2be06d21-8417-49df-80c2-b7a382a26367"/>
+      </leafs>
+    </nodes>
+    <nodes id="48715743-1846-449b-8f05-b1d255e19580" text="综合查询">
+      <leafs id="76cfb5fb-edb9-4d6e-b49a-3eed69690fc2" text="额度控制信息查询(河北)" functioncode="B_249">
+        <uiComponent href="JUIComponent_60358067-0795-4b8f-b0e5-38f079f2d64f.model#60358067-0795-4b8f-b0e5-38f079f2d64f"/>
+      </leafs>
+      <leafs id="39e62f53-ad4c-474a-ad99-4216845db208" text="国库报表及对账单打印程序（江苏）" type="action" classname="com.cfcc.itfe.client.login.CallPrintAppAction" functioncode="B_245"/>
+      <leafs id="ee1e6336-0e19-482b-8fcb-50c29ba7648e" text="入库流水与电子税票勾兑入库" functioncode="B_284">
+        <uiComponent href="JUIComponent_24c1167a-e9a2-4170-a3bb-1b83c5ee1c28.model#24c1167a-e9a2-4170-a3bb-1b83c5ee1c28"/>
+      </leafs>
+      <leafs id="82ce70c0-a56b-484b-ac51-007e810578a2" text="凭证提醒信息查询" functioncode="B_285">
+        <uiComponent href="JUIComponent_2b851351-9f57-4c26-a432-65f7689826a7.model#2b851351-9f57-4c26-a432-65f7689826a7"/>
+      </leafs>
+      <leafs id="0622306b-e13f-4453-9e14-e704131a5b5e" text="财政预算收入统计报表" functioncode="B_286">
+        <uiComponent href="JUIComponent_495c5118-a641-44cd-a7af-5d74ce5625b7.model#495c5118-a641-44cd-a7af-5d74ce5625b7"/>
+      </leafs>
+      <leafs id="ca1a55d7-fdda-448a-a5f4-daa479bea051" text="财政预算支出统计报表" functioncode="B_287">
+        <uiComponent href="JUIComponent_e4de1daf-83ab-4b4f-9037-b35402930645.model#e4de1daf-83ab-4b4f-9037-b35402930645"/>
+      </leafs>
+      <leafs id="49c08e17-4bcc-4c8d-bddc-8bce9e21fc44" text="TCBS报表文件存储" functioncode="B_313">
+        <uiComponent href="JUIComponent_0188f2c1-a2c6-4e1a-871e-3a8d685cb488.model#0188f2c1-a2c6-4e1a-871e-3a8d685cb488"/>
+      </leafs>
+      <leafs id="e62060d2-12d2-42ff-a3df-d7f613c0007a" text="预算科目查询" functioncode="B_316">
+        <uiComponent href="JUIComponent_94b9b728-b9a0-4b29-a9ba-5b3bdba9c10d.model#94b9b728-b9a0-4b29-a9ba-5b3bdba9c10d"/>
+      </leafs>
+      <leafs id="f5df8fff-4941-4ecc-ad3f-07c9e8365fe0" text="支付行号查询" functioncode="B_317">
+        <uiComponent href="JUIComponent_046e5304-320b-47b8-a886-b20472c06e81.model#046e5304-320b-47b8-a886-b20472c06e81"/>
+      </leafs>
+      <nodes id="388f0876-d417-4bce-afc2-da7ea2c4b15a" text="日志数据查询">
+        <leafs id="090498ff-aa7d-4756-bcfd-6b7c83ea3d58" text="报文收发日志查询" functioncode="B_201">
+          <uiComponent href="JUIComponent_fc1aa20d-2f32-4c79-bda9-9acc0aea560e.model#fc1aa20d-2f32-4c79-bda9-9acc0aea560e"/>
+        </leafs>
+        <leafs id="5c02deaf-5d05-4f49-85f8-66f8f476273e" text="用户操作日志查询" functioncode="B_202">
+          <uiComponent href="JUIComponent_eb5e2b38-0c2d-4b67-bba0-01dc037b92e4.model#eb5e2b38-0c2d-4b67-bba0-01dc037b92e4"/>
+        </leafs>
+        <leafs id="bd839333-ebf0-40bb-aabe-479b9a1c26ce" text="系统异常日志查询" functioncode="B_238">
+          <uiComponent href="JUIComponent_a1153cde-9371-473d-b5de-3e3848bfdec3.model#a1153cde-9371-473d-b5de-3e3848bfdec3"/>
+        </leafs>
+        <leafs id="5b11d0ba-ce35-4e82-b405-081baab9d75b" text="销号删除操作日志查询" functioncode="B_203">
+          <uiComponent href="JUIComponent_f5fc0002-b270-422c-9183-531465c33ba0.model#f5fc0002-b270-422c-9183-531465c33ba0"/>
+        </leafs>
+        <leafs id="38672963-216c-4a9e-8672-3542c22e8054" text="上传文件查询" functioncode="B_236">
+          <uiComponent href="JUIComponent_b814a2ba-cebd-4c40-8a2f-6901423ba1da.model#b814a2ba-cebd-4c40-8a2f-6901423ba1da"/>
+        </leafs>
+      </nodes>
+      <nodes id="0cc91cfe-cb71-4f32-be82-a7fe942ca803" text="业务数据查询">
+        <leafs id="9a3a4c4f-9a1c-459a-8a53-f02e2304d827" text="收入电子税票查询" functioncode="B_211">
+          <uiComponent href="JUIComponent_d656d8e1-e7d9-4e1b-9f8e-c2de2a1e97e1.model#d656d8e1-e7d9-4e1b-9f8e-c2de2a1e97e1"/>
+        </leafs>
+        <leafs id="dde38f13-bb71-445e-a698-488acbaf8410" text="非税收入数据查询" functioncode="B_320">
+          <uiComponent href="JUIComponent_aa695143-a188-4aa0-97b1-9490cafeb4df.model#aa695143-a188-4aa0-97b1-9490cafeb4df"/>
+        </leafs>
+        <leafs id="cbfbee56-5070-4f2f-8a14-ef12fa3bbabe" text="实拨资金查询" functioncode="B_212">
+          <uiComponent href="JUIComponent_11f56248-e6bb-4e66-8f4c-f097c3286765.model#11f56248-e6bb-4e66-8f4c-f097c3286765"/>
+        </leafs>
+        <leafs id="2b54f2e4-3be9-415f-a919-c284cf7a6121" text="直接支付额度查询" functioncode="B_213">
+          <uiComponent href="JUIComponent_bec405e5-3859-49ad-a664-3cc0e93495c0.model#bec405e5-3859-49ad-a664-3cc0e93495c0"/>
+        </leafs>
+        <leafs id="4de25721-fbb2-4b01-aaa2-2d387548abeb" text="授权支付额度查询" functioncode="B_214">
+          <uiComponent href="JUIComponent_7ef118ea-6c3b-48a3-a5a9-df09cd7b5948.model#7ef118ea-6c3b-48a3-a5a9-df09cd7b5948"/>
+        </leafs>
+        <leafs id="a56a2565-0e9f-42cb-9e7a-777314c7c934" text="退库凭证查询" functioncode="B_215">
+          <uiComponent href="JUIComponent_9ef62be1-3861-422d-b44e-ac5043fb5825.model#9ef62be1-3861-422d-b44e-ac5043fb5825"/>
+        </leafs>
+        <leafs id="4283fd65-511a-463a-9402-c36ef432854e" text="更正凭证查询" functioncode="B_216">
+          <uiComponent href="JUIComponent_7bec9872-fe7b-474e-a5f0-1c3ada883a7c.model#7bec9872-fe7b-474e-a5f0-1c3ada883a7c"/>
+        </leafs>
+        <leafs id="37b3859b-bd24-4e09-875d-02839c8f55a7" text="批量拨付数据查询" functioncode="B_217">
+          <uiComponent href="JUIComponent_c102f177-913a-4b91-8683-c6fb399c85a6.model#c102f177-913a-4b91-8683-c6fb399c85a6"/>
+        </leafs>
+        <leafs id="2ed216ea-81d2-4351-9962-d1f9991e42fc" text="实时扣税业务查询" functioncode="B_225">
+          <uiComponent href="JUIComponent_8d7f5586-4751-4263-af3d-340aab44bfec.model#8d7f5586-4751-4263-af3d-340aab44bfec"/>
+        </leafs>
+        <leafs id="085baa42-770f-4a03-9d13-077446ff721e" text="实时冲正信息查询" functioncode="B_226">
+          <uiComponent href="JUIComponent_2142a14c-afdf-492a-861d-f83c2aec6c01.model#2142a14c-afdf-492a-861d-f83c2aec6c01"/>
+        </leafs>
+        <leafs id="4a3ae84e-468b-4408-a70c-6fa332c49be9" text="人行办理支付信息查询" functioncode="B_230">
+          <uiComponent href="JUIComponent_56e83699-40a9-4ed2-8008-4c6c332e6d9b.model#56e83699-40a9-4ed2-8008-4c6c332e6d9b"/>
+        </leafs>
+        <leafs id="d988186b-a6dd-4ace-b6ff-0a21c731ec07" text="免抵调业务查询" functioncode="B_240">
+          <uiComponent href="JUIComponent_aab03e8d-e92e-44c5-aeb9-39078b1175f5.model#aab03e8d-e92e-44c5-aeb9-39078b1175f5"/>
+        </leafs>
+        <leafs id="4201017b-9cbe-4c1b-b918-242063a69e9b" text="商行划款申请查询处理" functioncode="B_233">
+          <uiComponent href="JUIComponent_dc3a0df6-aec6-4689-886b-186806fa19ee.model#dc3a0df6-aec6-4689-886b-186806fa19ee"/>
+        </leafs>
+        <leafs id="230b7d99-b85f-46de-8fb7-8d24d3d1c911" text="商行退款申请查询处理" functioncode="B_234">
+          <uiComponent href="JUIComponent_5bf516b9-b956-4c57-a4af-9532af537da9.model#5bf516b9-b956-4c57-a4af-9532af537da9"/>
+        </leafs>
+        <leafs id="5d85906a-367f-4c6c-9d92-d9e50242315a" text="计息业务数据查询" functioncode="B_311">
+          <uiComponent href="JUIComponent_35106a01-de00-4330-820c-a5f5a3e7280d.model#35106a01-de00-4330-820c-a5f5a3e7280d"/>
+        </leafs>
+        <leafs id="3bec4899-a1c6-4493-9cd3-d38e1473cad5" text="财政批量业务支付明细查询" functioncode="B_294">
+          <uiComponent href="JUIComponent_74b3be15-9c50-433b-8f82-a53d650cfaac.model#74b3be15-9c50-433b-8f82-a53d650cfaac"/>
+        </leafs>
+        <leafs id="846d2e21-100d-41c8-abb5-1b80582485fd" text="财政直接支付调整凭证查询" functioncode="B_295">
+          <uiComponent href="JUIComponent_c01c860a-8eab-4e87-95a5-31fd2f0dcbb7.model#c01c860a-8eab-4e87-95a5-31fd2f0dcbb7"/>
+        </leafs>
+        <leafs id="fbfb8ffc-27d0-4781-9a32-7959ba88f34a" text="财政授权支付调整凭证查询" functioncode="B_296">
+          <uiComponent href="JUIComponent_5cc6a8ab-209a-418d-b094-5ffc889cf318.model#5cc6a8ab-209a-418d-b094-5ffc889cf318"/>
+        </leafs>
+        <leafs id="c18e53d3-0da7-4241-bffd-58537f6274b4" text="直接支付查询" functioncode="B_292">
+          <uiComponent href="JUIComponent_c0a6bd3c-a4d2-4fa7-a711-d31a7cdc8b22.model#c0a6bd3c-a4d2-4fa7-a711-d31a7cdc8b22"/>
+        </leafs>
+        <leafs id="24a0ab41-d7eb-479b-a0e3-5bb10af97be0" text="收款银行退款通知" functioncode="B_293">
+          <uiComponent href="JUIComponent_5e233c14-3c6c-4605-87c7-b45a0589830a.model#5e233c14-3c6c-4605-87c7-b45a0589830a"/>
+        </leafs>
+        <leafs id="960881a8-2db6-4599-99ac-aac6bb29dfd9" text="国库收入报解清单打印" functioncode="B_306">
+          <uiComponent href="JUIComponent_dd642004-723a-4aa2-b38e-f5d6e9c80fdf.model#dd642004-723a-4aa2-b38e-f5d6e9c80fdf"/>
+        </leafs>
+        <leafs id="f3b52263-1694-42c8-8719-efa3b34c4125" text="授权支付查询" functioncode="B_312">
+          <uiComponent href="JUIComponent_bc6dca09-8e71-4b28-9000-eed4a464b9d8.model#bc6dca09-8e71-4b28-9000-eed4a464b9d8"/>
+        </leafs>
+        <leafs id="1d93e184-8ed1-4283-b060-e3f5c7188537" text="支付信息查询打印一（广东）" functioncode="B_318">
+          <uiComponent href="JUIComponent_edebd196-8d37-4d7c-a849-7f1e7959245a.model#edebd196-8d37-4d7c-a849-7f1e7959245a"/>
+        </leafs>
+        <leafs id="a0a4ba05-afa9-486f-8910-0d2c110305e9" text="支付信息查询打印二（广东）" functioncode="B_314">
+          <uiComponent href="JUIComponent_2e9dc64c-f1ff-42d0-936b-c84111e8c2e8.model#2e9dc64c-f1ff-42d0-936b-c84111e8c2e8"/>
+        </leafs>
+        <leafs id="74550280-991c-40d7-bf99-88c21e507749" text="支付信息查询打印三（广东）" functioncode="B_315">
+          <uiComponent href="JUIComponent_c85689bc-f3c4-4668-a8fa-3c3fa613c5c7.model#c85689bc-f3c4-4668-a8fa-3c3fa613c5c7"/>
+        </leafs>
+        <leafs id="efe1630e-1b5f-45fb-a304-34821f64f0bf" text="代理库退款信息查询" functioncode="B_321">
+          <uiComponent href="JUIComponent_c3e0ceb3-3169-4186-813f-0e1e2b6b5047.model#c3e0ceb3-3169-4186-813f-0e1e2b6b5047"/>
+        </leafs>
+        <leafs id="fd1b8781-445e-45af-a5d6-e4df6b037ce1" text="代理库对账信息查询" functioncode="B_322">
+          <uiComponent href="JUIComponent_0ac5b430-6942-4234-bcc3-ed039618723d.model#0ac5b430-6942-4234-bcc3-ed039618723d"/>
+        </leafs>
+        <leafs id="482629a6-9b2f-4d95-b155-f679dbc5d287" text="代理库对账结果查询" functioncode="B_323">
+          <uiComponent href="JUIComponent_69ee84cd-02b1-45ce-9273-b081d8e2c19b.model#69ee84cd-02b1-45ce-9273-b081d8e2c19b"/>
+        </leafs>
+        <leafs id="782a537d-806c-4a8c-8e41-785df192e094" text="代理库清算资金查询" functioncode="B_324">
+          <uiComponent href="JUIComponent_81fc1dc0-1ad2-4c80-9721-9732cfd0aa11.model#81fc1dc0-1ad2-4c80-9721-9732cfd0aa11"/>
+        </leafs>
+        <leafs id="17499be9-b2dc-432a-bea5-a01ee4ee041e" text="代理库清算回执查询" functioncode="B_325">
+          <uiComponent href="JUIComponent_391209a1-f871-4ebb-b7d4-4a43072663d3.model#391209a1-f871-4ebb-b7d4-4a43072663d3"/>
+        </leafs>
+        <leafs id="161f8f4a-930f-467c-b049-20c3a8b63f35" text="大数据划款申请信息查询" functioncode="B_325">
+          <uiComponent href="JUIComponent_69dc7843-9a7c-45d4-955e-5edd3416304a.model#69dc7843-9a7c-45d4-955e-5edd3416304a"/>
+        </leafs>
+        <leafs id="67c4fae8-a636-4f4a-a672-a0abb37ee5b9" text="大数据退款申请信息查询" functioncode="B_326">
+          <uiComponent href="JUIComponent_66a3eb35-90a5-4e59-9dd1-664ea368bd3e.model#66a3eb35-90a5-4e59-9dd1-664ea368bd3e"/>
+        </leafs>
+      </nodes>
+      <nodes id="a970e30b-9140-4fe8-ad46-c7c570ce7529" text="TIPS下发报表查询">
+        <leafs id="4afe224c-9a23-46e4-9cf0-340a3892179b" text="3128财政申请收入日报表查询" functioncode="B_221">
+          <uiComponent href="JUIComponent_b6992605-37ff-417a-92b5-ad26525d81ff.model#b6992605-37ff-417a-92b5-ad26525d81ff"/>
+        </leafs>
+        <leafs id="2ec9c487-e579-48f8-9973-c82a2eef7ca2" text="3128财政库存日报表查询" functioncode="B_222">
+          <uiComponent href="JUIComponent_f2af3f57-1ddf-4ef4-a5ae-5b70408b54f7.model#f2af3f57-1ddf-4ef4-a5ae-5b70408b54f7"/>
+        </leafs>
+        <leafs id="8c479cde-8044-4bd0-a831-936cdf979230" text="3129电子税票信息查询" functioncode="B_223">
+          <uiComponent href="JUIComponent_c55e5227-4939-48fb-9c32-ecd35959e0c3.model#c55e5227-4939-48fb-9c32-ecd35959e0c3"/>
+        </leafs>
+        <leafs id="6c3d3eb6-f07d-4334-954a-3eece747f90b" text="3129已入库电子税票导出" functioncode="B_256">
+          <uiComponent href="JUIComponent_cbb7ff1e-2cdf-4fd9-8405-958aee2c318e.model#cbb7ff1e-2cdf-4fd9-8405-958aee2c318e"/>
+        </leafs>
+        <leafs id="3cf94ce5-2b8b-4eab-90d2-4b7589da5d93" text="3139财政申请入库流水明细查询" functioncode="B_224">
+          <uiComponent href="JUIComponent_c5a78eff-e626-48d9-9f71-a7b66e15f617.model#c5a78eff-e626-48d9-9f71-a7b66e15f617"/>
+        </leafs>
+        <leafs id="0e2f9bee-0db2-4ca0-b74f-eb4d56dc20ce" text="下载报表情况检查" functioncode="B_241">
+          <uiComponent href="JUIComponent_0bece4ec-8c7d-49f8-9b74-c34349697855.model#0bece4ec-8c7d-49f8-9b74-c34349697855"/>
+        </leafs>
+        <leafs id="9a693d2d-dbed-43d1-8925-7a65459ef7b2" text="报表与入库流水核对" functioncode="B_261">
+          <uiComponent href="JUIComponent_ba2868dc-ea1e-4175-89d1-4a412c8bfe48.model#ba2868dc-ea1e-4175-89d1-4a412c8bfe48"/>
+        </leafs>
+        <leafs id="03af7738-0f67-4942-a620-f0cdb0a22d49" text="3178财政海关电子税票信息查询" functioncode="B_327">
+          <uiComponent href="JUIComponent_688f63b0-a88f-4ca1-9b19-56d530a7c695.model#688f63b0-a88f-4ca1-9b19-56d530a7c695"/>
+        </leafs>
+      </nodes>
+      <nodes id="483bb332-6c18-40df-b6ec-8e0630e3db2b" text="TIPS下发报表导出">
+        <leafs id="4affef82-3295-4be3-ab1e-6757098491c8" text="报表业务数据导出" functioncode="B_227">
+          <uiComponent href="JUIComponent_a2273499-4a8d-4980-8fb8-9689267e354c.model#a2273499-4a8d-4980-8fb8-9689267e354c"/>
+        </leafs>
+        <leafs id="a1da063f-b31d-4c48-9937-2874035d095c" text="总额分成报表导出" functioncode="B_206">
+          <uiComponent href="JUIComponent_490b1165-2a79-4840-89b5-0516987b3fcc.model#490b1165-2a79-4840-89b5-0516987b3fcc"/>
+        </leafs>
+        <leafs id="aec3104f-12cf-4565-be73-41d77f597988" text="自定义预算收入报表导出" functioncode="B_014">
+          <uiComponent href="JUIComponent_3fb70af8-e3a7-4313-ad8b-d90d91d91bcb.model#3fb70af8-e3a7-4313-ad8b-d90d91d91bcb"/>
+        </leafs>
+        <leafs id="794c3a39-1dda-4ef0-8700-c489dbf40089" text="电子税票业务量统计" functioncode="B_228">
+          <uiComponent href="JUIComponent_f33fff74-ba5f-4024-b0f9-eb8b5b644edb.model#f33fff74-ba5f-4024-b0f9-eb8b5b644edb"/>
+        </leafs>
+      </nodes>
+      <nodes id="812eeac1-4f65-428a-90da-1942220acf7d" text="业务统计及监控">
+        <leafs id="1a16cc9c-e56c-47ba-8851-f46351a920ef" text="业务量统计查询" functioncode="B_231">
+          <uiComponent href="JUIComponent_7188295d-98d9-467d-8e1f-f353f982ea68.model#7188295d-98d9-467d-8e1f-f353f982ea68"/>
+        </leafs>
+        <leafs id="57e5cb7c-435b-41ac-97d2-b4d02299a2d9" text="用户监控统计" functioncode="B_315">
+          <uiComponent href="JUIComponent_02a929e4-7888-419b-bb8d-500bbc2bfc3d.model#02a929e4-7888-419b-bb8d-500bbc2bfc3d"/>
+        </leafs>
+        <leafs id="751aa27f-2034-44be-9dc5-433b2315dc80" text="大额税源支出统计表查询" functioncode="B_273">
+          <uiComponent href="JUIComponent_f66493ae-37cc-40c6-95b7-4f0e00952b8d.model#f66493ae-37cc-40c6-95b7-4f0e00952b8d"/>
+        </leafs>
+      </nodes>
+      <nodes id="a4974930-50ba-4ec0-af9e-35ca8077f7d5" text="收支库存统计报表查询导出(上海)">
+        <leafs id="598c6335-1a8b-4130-81ed-7004e571b0ba" text="预算收支报表查询" functioncode="B_250">
+          <uiComponent href="JUIComponent_330c7ec9-1ff0-4447-8902-8a63f18d55cd.model#330c7ec9-1ff0-4447-8902-8a63f18d55cd"/>
+        </leafs>
+        <leafs id="d7e87a0d-c092-4c05-a4ad-33551e7d94a7" text="库存报表查询" functioncode="B_251">
+          <uiComponent href="JUIComponent_d9d7ff72-0dc2-4058-a8e9-757158604ef8.model#d9d7ff72-0dc2-4058-a8e9-757158604ef8"/>
+        </leafs>
+        <leafs id="0d37f4bc-638d-4eee-942b-5e8fc2887075" text="分科目月度汇总表" functioncode="B_252">
+          <uiComponent href="JUIComponent_f6a752d2-7501-4b20-8b70-23ba75da8b43.model#f6a752d2-7501-4b20-8b70-23ba75da8b43"/>
+        </leafs>
+        <leafs id="48aca316-a18b-43e8-a0d3-3f297cf962ff" text="分科目统计分析表" functioncode="B_253">
+          <uiComponent href="JUIComponent_f3cb6e02-6a8e-4fdf-ace7-1457a987a30d.model#f3cb6e02-6a8e-4fdf-ace7-1457a987a30d"/>
+        </leafs>
+        <leafs id="3b3e1c9c-31a7-49ea-bdd5-b815b30fa495" text="预算科目时序查询" functioncode="B_254">
+          <uiComponent href="JUIComponent_68566cd8-7a79-4018-8758-bf51c5804d9d.model#68566cd8-7a79-4018-8758-bf51c5804d9d"/>
+        </leafs>
+        <leafs id="42dc4e64-4dba-41d8-bd6a-7298f782400f" text="库存统计分析表" functioncode="B_255">
+          <uiComponent href="JUIComponent_8f204090-ab2e-4d2f-9634-a8cbba0df3f9.model#8f204090-ab2e-4d2f-9634-a8cbba0df3f9"/>
+        </leafs>
+      </nodes>
+    </nodes>
+    <nodes id="74127958-5d59-480d-9e83-1f07517c2ee3" text="参数管理">
+      <nodes id="b17e63ca-bc5a-4771-bcbb-7e0c1aca0318" text="基础参数维护">
+        <leafs id="423860bc-374b-42bb-89f8-5042269b3874" text="系统控制参数维护(中心)" functioncode="S_001">
+          <uiComponent href="JUIComponent_0b177cee-fb8c-4e7a-95e3-3cad6dbd481d.model#0b177cee-fb8c-4e7a-95e3-3cad6dbd481d"/>
+        </leafs>
+        <leafs id="4c3a385e-e614-421d-95ef-bc84a9ae5a91" text="核算主体参数维护" functioncode="S_002">
+          <uiComponent href="JUIComponent_d85b57f8-3213-4ece-b557-9d0cbc426811.model#d85b57f8-3213-4ece-b557-9d0cbc426811"/>
+        </leafs>
+        <leafs id="efc88061-57f9-40cd-aebc-b0003333502e" text="国库主体代码参数维护" functioncode="S_003">
+          <uiComponent href="JUIComponent_13635a82-2799-48c3-be53-458605545ee4.model#13635a82-2799-48c3-be53-458605545ee4"/>
+        </leafs>
+        <leafs id="1585e902-7f69-49c4-9331-2752e258940e" text="批量拨付机构密钥维护" functioncode="S_004">
+          <uiComponent href="JUIComponent_7d359c76-409d-4350-a189-f21c2403fcc8.model#7d359c76-409d-4350-a189-f21c2403fcc8"/>
+        </leafs>
+        <leafs id="4f1d58da-f1db-4e0a-9599-d6e539a63958" text="财政库款账户维护" functioncode="S_005">
+          <uiComponent href="JUIComponent_c78a34b8-524e-4246-8403-915574b67217.model#c78a34b8-524e-4246-8403-915574b67217"/>
+        </leafs>
+        <leafs id="a4983e5e-8dfc-4413-860c-223ad2e671c7" text="财政机构信息维护" functioncode="S_006">
+          <uiComponent href="JUIComponent_d79deedc-d05a-4989-ae46-99e2429c31bb.model#d79deedc-d05a-4989-ae46-99e2429c31bb"/>
+        </leafs>
+        <leafs id="1a9dc39d-0699-47b8-9289-dbcbe884edb4" text="代理银行信息维护" functioncode="S_218">
+          <uiComponent href="JUIComponent_52b87428-8d7e-4a40-8745-ce577b048a18.model#52b87428-8d7e-4a40-8745-ce577b048a18"/>
+        </leafs>
+        <leafs id="4938fcd3-0064-4be0-a03d-789c04fbdacd" text="销号提交权限设置" functioncode="S_009">
+          <uiComponent href="JUIComponent_842c1ced-1b63-4eb4-92de-287bf2b9eb22.model#842c1ced-1b63-4eb4-92de-287bf2b9eb22"/>
+        </leafs>
+        <leafs id="ce553b66-ec74-453e-8c4b-9377b54345c6" text="特殊查询科目维护" functioncode="S_014">
+          <uiComponent href="JUIComponent_04c0ab0a-0882-4680-9edd-8a7c998cf57e.model#04c0ab0a-0882-4680-9edd-8a7c998cf57e"/>
+        </leafs>
+        <leafs id="eb102795-d424-483e-b306-05c37703a0e4" text="中心密钥模式维护" functioncode="S_027">
+          <uiComponent href="JUIComponent_a497c0f5-90f6-4ae8-849a-55452fd7057a.model#a497c0f5-90f6-4ae8-849a-55452fd7057a"/>
+        </leafs>
+        <leafs id="015c4b7e-bc5f-413d-99a5-8c57d536603d" text="核算主体密钥参数维护" functioncode="S_028">
+          <uiComponent href="JUIComponent_726dd096-11df-4377-bac5-bd13f9e19482.model#726dd096-11df-4377-bac5-bd13f9e19482"/>
+        </leafs>
+        <leafs id="dcbf565a-0c90-4c68-a879-b488f299e708" text="财政调拨支出预算科目维护" functioncode="S_029">
+          <uiComponent href="JUIComponent_cd3bbf39-ca58-4e29-91e7-e679fdfc7353.model#cd3bbf39-ca58-4e29-91e7-e679fdfc7353"/>
+        </leafs>
+        <leafs id="caca1c6b-223f-483b-b236-dc3e7173bea0" text="集中支付清算账户信息维护" functioncode="S_053">
+          <uiComponent href="JUIComponent_be606b3f-96fa-4339-b70d-1e44e9d39591.model#be606b3f-96fa-4339-b70d-1e44e9d39591"/>
+        </leafs>
+        <leafs id="008626cb-b61a-43c5-89ff-d0b1cc195cc8" text="签章位置参数维护" functioncode="S_215">
+          <uiComponent href="JUIComponent_59ed6fb2-e572-4d72-ba07-2a79d17783a7.model#59ed6fb2-e572-4d72-ba07-2a79d17783a7"/>
+        </leafs>
+        <leafs id="869939c0-3793-4476-9fe3-29e59d8894b2" text="电子凭证参数维护" functioncode="S_214">
+          <uiComponent href="JUIComponent_c609e579-6492-4318-9fb4-affd58642670.model#c609e579-6492-4318-9fb4-affd58642670"/>
+        </leafs>
+        <leafs id="43186e56-7f07-485a-ae39-f9fae816b406" text="常用失败原因维护" functioncode="S_216">
+          <uiComponent href="JUIComponent_eb2f90ed-8cd7-4a5b-be8a-d7a1165e0732.model#eb2f90ed-8cd7-4a5b-be8a-d7a1165e0732"/>
+        </leafs>
+        <leafs id="82d3d612-625c-4a1d-8710-e24021fe92f9" text="退付原因参数维护" functioncode="S_217">
+          <uiComponent href="JUIComponent_6802844d-d177-4dd5-bbe3-6bf49f78825c.model#6802844d-d177-4dd5-bbe3-6bf49f78825c"/>
+        </leafs>
+        <leafs id="aa35ed73-6f0f-4473-b836-3f28a251801b" text="商行无纸化业务信息维护" functioncode="S_219">
+          <uiComponent href="JUIComponent_06cad3a4-eba5-44dc-9966-924f94cce289.model#06cad3a4-eba5-44dc-9966-924f94cce289"/>
+        </leafs>
+        <leafs id="aa35ed73-6f0f-4473-b836-3f28a251801b" text="报表自动发送参数维护" functioncode="S_278">
+          <uiComponent href="JUIComponent_9eda4fce-3999-4044-8e98-ff38f047ed21.model#9eda4fce-3999-4044-8e98-ff38f047ed21"/>
+        </leafs>
+        <leafs id="13545938-8008-4ecd-ba3f-c57ebc0cac41" text="单位清册查询" functioncode="S_279">
+          <uiComponent href="JUIComponent_1dce12e5-6ff7-4c50-bec5-a3ef9c7517e0.model#1dce12e5-6ff7-4c50-bec5-a3ef9c7517e0"/>
+        </leafs>
+        <leafs id="5a4a5978-6ef8-40e7-9017-c204b8565587" text="利息参数维护" functioncode="S_280">
+          <uiComponent href="JUIComponent_2f54511e-8fb3-4636-9433-e793610c3284.model#2f54511e-8fb3-4636-9433-e793610c3284"/>
+        </leafs>
+        <leafs id="6539f11c-c8a5-4ef8-90aa-1b23b332074b" text="大额拨款控制参数" functioncode="S_281">
+          <uiComponent href="JUIComponent_12ed9d73-19b5-404d-beed-223b1654424e.model#12ed9d73-19b5-404d-beed-223b1654424e"/>
+        </leafs>
+        <leafs id="4091a386-2efa-44a6-b576-471d2f034b3b" text="财政专户参数维护" functioncode="S_282">
+          <uiComponent href="JUIComponent_f2a89bca-16bc-40e7-8913-7e1d93218ef6.model#f2a89bca-16bc-40e7-8913-7e1d93218ef6"/>
+        </leafs>
+        <leafs id="0cf4f764-92ac-4d70-8cdc-d06540eafb7c" text="报表自动生成参数维护" functioncode="S_262">
+          <uiComponent href="JUIComponent_259515b0-1550-473a-97a8-4f29e9c2929e.model#259515b0-1550-473a-97a8-4f29e9c2929e"/>
+        </leafs>
+        <leafs id="43237ebc-198d-49b8-8e77-2237c72cbcfd" text="征收机关与节点对应关系" image="" functioncode="S_297">
+          <uiComponent href="JUIComponent_15c4e000-c0d4-415a-a513-483e7ad1c728.model#15c4e000-c0d4-415a-a513-483e7ad1c728"/>
+        </leafs>
+      </nodes>
+      <nodes id="ec6dd436-b818-4172-81fa-898148ac3375" text="转换参数维护">
+        <leafs id="5e98472c-41a5-4d8d-9222-f946cdaad355" text="征收机关对照维护" functioncode="S_021">
+          <uiComponent href="JUIComponent_1e9b4150-9ef7-4d53-acfd-8e7b525cdcd0.model#1e9b4150-9ef7-4d53-acfd-8e7b525cdcd0"/>
+        </leafs>
+        <leafs id="f3d40a52-cad6-4a3f-a000-176ff41d7465" text="辅助标志对照维护" functioncode="S_022">
+          <uiComponent href="JUIComponent_43307f22-c474-4843-8393-e58c395303f5.model#43307f22-c474-4843-8393-e58c395303f5"/>
+        </leafs>
+        <leafs id="f99ad567-67b9-4011-b9d4-d11b80f9f602" text="退库原因对照维护" functioncode="S_023">
+          <uiComponent href="JUIComponent_c5c65ffa-ee1d-4fb8-ba1d-286f51ca5666.model#c5c65ffa-ee1d-4fb8-ba1d-286f51ca5666"/>
+        </leafs>
+        <leafs id="75846ce7-9979-4426-b8b5-ef9e8a0c39d5" text="更正原因对照维护" functioncode="S_024">
+          <uiComponent href="JUIComponent_ae2754ba-40d0-404a-9b07-905ac43edbbd.model#ae2754ba-40d0-404a-9b07-905ac43edbbd"/>
+        </leafs>
+        <leafs id="4ecf8c49-d5fa-473d-bfc7-ddd67adda715" text="银行代码与支付行号对应关系" functioncode="S_026">
+          <uiComponent href="JUIComponent_23b9322d-ea7d-419a-8c62-f2e86b0d3fb2.model#23b9322d-ea7d-419a-8c62-f2e86b0d3fb2"/>
+        </leafs>
+        <leafs id="b67fedff-3434-422e-b473-154cd650c12d" text="征收机关合并参数维护" functioncode="S_050">
+          <uiComponent href="JUIComponent_b8e8cf59-51f2-429d-9cc2-b589cdc96848.model#b8e8cf59-51f2-429d-9cc2-b589cdc96848"/>
+        </leafs>
+        <leafs id="27ce61aa-9a03-4b8a-a511-98f03f13917e" text="银行行名对照参数维护" functioncode="S_244">
+          <uiComponent href="JUIComponent_4a58cb5d-e943-4e60-93c0-bc2dbf2225b5.model#4a58cb5d-e943-4e60-93c0-bc2dbf2225b5"/>
+        </leafs>
+        <leafs id="c82e86ca-02ac-4ba4-931c-86daca2b85e6" text="国库对应关系维护(珠海)" functioncode="S_048">
+          <uiComponent href="JUIComponent_13d53b24-d47c-4697-8345-76376ce3bb8b.model#13d53b24-d47c-4697-8345-76376ce3bb8b"/>
+        </leafs>
+        <leafs id="fdaf0316-e9b1-4216-96ec-2f564556da6c" text="征收机关对应关系维护（珠海）" functioncode="S_052">
+          <uiComponent href="JUIComponent_4bcbb0d4-7832-4649-82c4-86d848969807.model#4bcbb0d4-7832-4649-82c4-86d848969807"/>
+        </leafs>
+        <leafs id="531baf91-af10-442e-81b8-fada53bdae83" text="征收机关对照维护（浙江）" functioncode="S_054">
+          <uiComponent href="JUIComponent_daed76f2-b3cd-444c-98df-bff57bd29c98.model#daed76f2-b3cd-444c-98df-bff57bd29c98"/>
+        </leafs>
+        <leafs id="900339f5-9628-4b1b-a910-1f932e034369" text="辅助标志参数转化（浙江）" functioncode="S_221">
+          <uiComponent href="JUIComponent_6ae6ae23-9c93-4f3a-a38c-b2e5d879273c.model#6ae6ae23-9c93-4f3a-a38c-b2e5d879273c"/>
+        </leafs>
+        <leafs id="a6af9662-ff4b-4db1-9ac7-85dfa3a03c1b" text="转发银行（浙江）" functioncode="S_219">
+          <uiComponent href="JUIComponent_8c853ca5-0f06-4c79-9b60-a23c2c5580d1.model#8c853ca5-0f06-4c79-9b60-a23c2c5580d1"/>
+        </leafs>
+        <leafs id="39750985-2824-476f-9fad-fbad21ee4c74" text="联网机构信息（浙江）" functioncode="S_220">
+          <uiComponent href="JUIComponent_7d359c76-409d-4350-a189-f21c2403fcc8.model#7d359c76-409d-4350-a189-f21c2403fcc8"/>
+        </leafs>
+        <leafs id="f6313d3a-94e1-4e5a-a92f-deb486ee51fb" text="付款账户与地税科目对应关系（云南）" functioncode="S_274">
+          <uiComponent href="JUIComponent_98a1e5d0-ba40-41eb-b3d8-71b793f9f41d.model#98a1e5d0-ba40-41eb-b3d8-71b793f9f41d"/>
+        </leafs>
+      </nodes>
+      <nodes id="3b56d83b-b29e-4060-a942-18483a487b22" text="TCBS同步参数维护">
+        <leafs id="24561a96-7efb-4aaf-b8ff-fffffcacf3e0" text="外系统参数导入" functioncode="S_008">
+          <uiComponent href="JUIComponent_5d24583d-6c42-4140-8c19-08ef71e9ebf4.model#5d24583d-6c42-4140-8c19-08ef71e9ebf4"/>
+        </leafs>
+        <leafs id="a5a94b7a-c2f4-4276-bbd6-2042aba226fb" text="法人代码查询" functioncode="S_040">
+          <uiComponent href="JUIComponent_3bc33501-c8c6-4a8f-82aa-533df93c43e9.model#3bc33501-c8c6-4a8f-82aa-533df93c43e9"/>
+        </leafs>
+        <leafs id="cad25963-d762-4cc8-8ab3-032b08c6ecc0" text="征收机关代码维护" functioncode="S_043">
+          <uiComponent href="JUIComponent_1ed617dd-4642-443d-9fa9-fad457aecba9.model#1ed617dd-4642-443d-9fa9-fad457aecba9"/>
+        </leafs>
+        <leafs id="e2c816f4-16b4-4a65-80d0-4da0fb7090fb" text="征收机关与国库对应关系" functioncode="S_025">
+          <uiComponent href="JUIComponent_181131d4-8fd5-492a-81d0-e3e12ae86aca.model#181131d4-8fd5-492a-81d0-e3e12ae86aca"/>
+        </leafs>
+        <leafs xsi:type="model:MenuSeparator"/>
+        <leafs id="cbbe8a1b-6956-4cdb-9128-fb15302f7e5d" text="共享分成参数表维护" functioncode="S_045">
+          <uiComponent href="JUIComponent_64c220e2-dd7d-4e4a-b20b-cf3b8c722743.model#64c220e2-dd7d-4e4a-b20b-cf3b8c722743"/>
+        </leafs>
+        <leafs id="a45a3b97-e078-4d58-ab46-e0fe4e871e28" text="银行代码表维护" functioncode="S_044">
+          <uiComponent href="JUIComponent_2e3f83bc-952e-41e6-8b73-2854d65ef630.model#2e3f83bc-952e-41e6-8b73-2854d65ef630"/>
+        </leafs>
+        <leafs id="f2edadd8-3b95-4eab-bdcd-9ec79749a065" text="会计账号表维护" functioncode="S_046">
+          <uiComponent href="JUIComponent_39ecbfbe-fef9-4f24-aefa-42df24608ae8.model#39ecbfbe-fef9-4f24-aefa-42df24608ae8"/>
+        </leafs>
+        <leafs id="99dd7afb-4c16-45a6-94ff-6a3b3f12c391" text="纳税人与预算单位账号维护" functioncode="S_047">
+          <uiComponent href="JUIComponent_3529d3db-c8b2-4ec9-9caf-d359410b3d2b.model#3529d3db-c8b2-4ec9-9caf-d359410b3d2b"/>
+        </leafs>
+        <leafs id="0a98a9bb-3a63-4ae1-a3b5-68763f5099c7" text="会计科目表维护" functioncode="S_048">
+          <uiComponent href="JUIComponent_af0518cc-9cee-484f-8281-242e3c93d4ca.model#af0518cc-9cee-484f-8281-242e3c93d4ca"/>
+        </leafs>
+        <leafs id="ffdf8b3d-d316-4296-8ccc-1fed8bad3768" text="集中支付额度对账单" functioncode="S_049">
+          <uiComponent href="JUIComponent_0d3c11b6-7756-4539-9f10-970776c7040c.model#0d3c11b6-7756-4539-9f10-970776c7040c"/>
+        </leafs>
+      </nodes>
+      <nodes id="ded2a671-9f73-40fb-bd32-7f9c5c4cb8ca" text="参数数据导出">
+        <leafs id="17126ccf-195f-4c8d-be3a-666f93531297" text="TBS格式参数导出" functioncode="S_211">
+          <uiComponent href="JUIComponent_f3e94dcd-626a-4c5b-a142-98cd16133756.model#f3e94dcd-626a-4c5b-a142-98cd16133756"/>
+        </leafs>
+      </nodes>
+    </nodes>
+    <nodes id="5c7a8cfb-95f0-4fc8-8507-99795cc12892" text="系统管理">
+      <leafs id="be5dbc04-c25f-400c-a673-cb023cffbe1a" text="数据查询" functioncode="S_321">
+        <uiComponent href="JUIComponent_9e374098-7cd6-4593-92d8-be7a75ed25cb.model#9e374098-7cd6-4593-92d8-be7a75ed25cb"/>
+      </leafs>
+      <nodes id="4fa6818e-940b-4bef-91bc-5bed5f8bc4e1" text="用户信息维护" image="">
+        <leafs id="0c291ccc-774e-4b5f-94e5-f68c0b6547df" text="用户信息维护" type="" classname="" image="" functioncode="S_011" accelerate="" target="" toolbarimage="">
+          <uiComponent href="JUIComponent_94ff707e-ff64-43e7-9434-f69bfa03a714.model#94ff707e-ff64-43e7-9434-f69bfa03a714"/>
+        </leafs>
+        <leafs id="f8dec70a-3453-424a-a3b8-d68235834bcd" text="用户权限维护" image="" functioncode="S_012">
+          <uiComponent href="JUIComponent_5b564119-be1a-4cf4-a664-ba63b2141d29.model#5b564119-be1a-4cf4-a664-ba63b2141d29"/>
+        </leafs>
+        <leafs id="602613fc-dbd1-41a4-aa2a-8678c6ea234c" text="用户密码修改" image="" functioncode="S_013">
+          <uiComponent href="JUIComponent_8900d1b6-0835-41ff-afac-75fe6f724757.model#8900d1b6-0835-41ff-afac-75fe6f724757"/>
+        </leafs>
+      </nodes>
+      <nodes id="43fbc066-5004-4818-aee9-d656577a11ab" text="同步参数信息">
+        <leafs id="b13152b5-5a6a-46ad-9a73-0603699256ae" text="同步参数" type="action" classname="com.cfcc.itfe.client.login.ReloadAction" functioncode="S_213"/>
+      </nodes>
+      <nodes id="f05e32ee-46de-4f6a-b35c-62ce6a3c2251" text="系统监控信息">
+        <leafs id="8feab3da-1aea-4b03-a959-84280dfef935" text="系统监控信息" functioncode="S_210">
+          <uiComponent href="JUIComponent_83798ca2-9ce5-4c4f-814c-d6b7b4b7b8ef.model#83798ca2-9ce5-4c4f-814c-d6b7b4b7b8ef"/>
+        </leafs>
+        <leafs id="21f530f2-e070-4519-b6df-24226b2e5d18" text="接收凭证处理情况" type="action" classname="com.cfcc.itfe.client.common.dialog.TimerVoucherInfoAction" functioncode="" toolbarimage=""/>
+        <leafs id="60c98564-24be-47fb-aac7-544f65dd6c33" text="发起凭证处理情况" type="" classname="" toolbarimage="">
+          <uiComponent href="JUIComponent_99185849-6c8f-4bbf-935a-5ac2c3ce3aea.model#99185849-6c8f-4bbf-935a-5ac2c3ce3aea"/>
+        </leafs>
+      </nodes>
+      <nodes id="32353c6f-6ec8-4a45-82cd-910f2421881f" text="数据备份与恢复">
+        <leafs id="c9a58abe-d994-48ff-b13c-85086de55af4" text="数据备份" functioncode="S_260">
+          <uiComponent href="JUIComponent_ac7d26f5-0e9f-4b1e-b2fa-c8b70e351615.model#ac7d26f5-0e9f-4b1e-b2fa-c8b70e351615"/>
+        </leafs>
+        <leafs id="40c5e856-2b94-4acf-8388-180c079060ba" text="数据恢复" functioncode="S_261">
+          <uiComponent href="JUIComponent_87b188f8-a54c-4e03-868e-e95377a84352.model#87b188f8-a54c-4e03-868e-e95377a84352"/>
+        </leafs>
+      </nodes>
+    </nodes>
+    <nodes id="78e6333a-9328-46df-9ae8-3c6817ec3611" text="关于系统" image="">
+      <leafs id="579a6508-f562-47a0-9e0b-7fd4dd2273bd" text="关于系统" type="action" classname="com.cfcc.itfe.client.common.dialog.AboutSysAction"/>
+    </nodes>
+  </menu>
+</model:JSystem>

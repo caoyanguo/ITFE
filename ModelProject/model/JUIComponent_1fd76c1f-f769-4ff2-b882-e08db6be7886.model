@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1fd76c1f-f769-4ff2-b882-e08db6be7886" name="发送报文查询处理 " ename="dealSendMsg">
+  <jproperties id="8b85aada-4f55-466c-a36e-c6b60bfdf6de" key="GeneratedTime" value="1434360207812"/>
+  <refModule href="JModule_887973f5-7c29-40ce-9c68-bd7d8c6672ad.model#887973f5-7c29-40ce-9c68-bd7d8c6672ad"/>
+  <model id="80482682-d151-4630-95ba-9db841b4d2cb" name="JModelImpl-80482682-d151-4630-95ba-9db841b4d2cb">
+    <directions id="bed6da8a-9c4c-49fe-bcd3-f013a149c8b8" viewers="d1f145e7-33a1-43b2-b201-33606fcb218b" name="发送报文查询处理" ename="queryMsg"/>
+    <directions id="802057f8-9899-4ab4-a2c4-744f31c26003" viewers="b48f04a9-6775-4ade-a141-5710b3f79ddc" name="返回日志查询" ename="backSearch"/>
+    <directions id="552c6fbb-07f7-46af-b1df-7ff494ba8ada" name="单选一条记录" ename="selOneRecode"/>
+    <directions id="7b505c9b-f259-4339-8792-ee30ba43a9e4" name="报文重发" ename="sendMsgRepeat"/>
+    <directions id="b33b1542-e760-4ad1-b39f-a71f6e56ee37" viewers="409b439b-f990-43f3-9e30-7983dd1f5a55" name="发送报文查询打印" ename="queryPrint"/>
+    <directions id="6ebe916b-b322-41a7-a0c3-c7edfce38964" name="刷新" ename="refreshrs"/>
+    <directions id="6c907cce-9be1-4a03-99c2-8e330cb705b1" name="文件列表全选方法" ename="chooseAllFile"/>
+    <directions id="254ad29a-0b0d-4cd3-952e-b7b1fa809599" name="文件列表单选方法" ename="chooseOneFile"/>
+  </model>
+  <services href="JServiceComponet_173c99e8-63f0-49f2-b258-fb43945edc20.model#173c99e8-63f0-49f2-b258-fb43945edc20"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="8d000026-3081-4c42-9b48-fd55cfc1d708">
+    <contentareanode id="ade7a6f8-968c-4ff1-b491-d589fffb57d3" name="发送报文查询界面">
+      <widgetRefs xsi:type="model:Text" id="d626a589-c67d-435c-be36-19fd56958809" name="起始日期" binding="startdate" visible="true" caption="起始日期" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Text" id="c59365e5-0063-45f3-8867-fca119fb415e" name="结束日期" binding="enddate" visible="true" caption="结束日期" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Combo" id="d786211a-c93e-4357-843e-fe954e5abb9f" name="出票单位" binding="finddto.staxorgcode" caption="出票单位" display="sfinorgname" underly="sfinorgcode" modelsource="finorglist"/>
+      <widgetRefs xsi:type="model:Combo" id="476d9d9d-a0b5-46ff-8d9e-67002d29d81e" name="国库代码" binding="finddto.strecode" caption="国库代码" display="strename" underly="strecode" modelsource="trelist"/>
+      <widgetRefs xsi:type="model:Text" id="243dde47-c203-4326-9284-cd83487de164" name="国库代码" binding="finddto.strecode" visible="false" caption="国库代码" enable="false" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="0f0815c4-c876-4720-b8bf-1a6ed3d8dd16" name="出票单位" binding="finddto.staxorgcode" visible="false" caption="出票单位" enable="false" editable="false" required="false"/>
+      <widgetRefs xsi:type="model:Text" id="aa49c9f4-9e0b-4f84-834c-5e5405b1b3d2" name="委托日期" binding="finddto.scommitdate" visible="true" caption="委托日期" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Text" id="84fe5852-98f6-4559-948f-ca420045c0ef" name="包流水号" binding="finddto.spackageno" caption="包流水号"/>
+      <widgetRefs xsi:type="model:Combo" id="7a191bc0-04f6-4428-abe9-0e789417a554" name="交易状态" binding="finddto.sretcode" caption="交易状态" display="stypecode" underly="svalue" modelsource="statelist"/>
+      <widgetRefs xsi:type="model:Text" id="4b88d007-a2c9-4a3c-91c5-d57d39af9e9b" name="文件名称" extpoperties="" binding="finddto.sfilename" caption="文件名称"/>
+      <widgetRefs xsi:type="model:Combo" id="ccca3257-fa55-4c64-9330-c31cd133be75" name="业务类型" binding="operationtypecode" caption="业务类型" display="" underly="" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4d06f918-15af-4185-9161-962238159c66"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="f974dc53-3f43-45de-9148-d58429f72c8e" name="资金收纳流水号" binding="finddto.sdemo" caption="资金收纳流水号" pattern="@18"/>
+    </contentareanode>
+    <contentareanode id="8aa13091-2ad2-47eb-bb03-e7e27e5d3f9e" name="日志查询结果界面">
+      <widgetRefs xsi:type="model:Table" id="d34e8e2e-37fd-4309-a81b-425ce424aa0e" name="日志查询结果" binding="sendmsgtablepage" caption="日志查询结果" tabletype="paging" refsingleclickdirection="552c6fbb-07f7-46af-b1df-7ff494ba8ada" width="1100" height="510">
+        <columnlist id="c596907b-c60e-4dd5-add5-c624a9865c9d" name="业务类型" binding="soperationtypecode" caption="业务类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4d06f918-15af-4185-9161-962238159c66"/>
+        </columnlist>
+        <columnlist id="467b98b0-1b99-4a86-b06c-956b8e4bc220" name="交易状态" binding="sretcode" caption="交易状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#e52833f5-5422-4d26-a86e-cd7e055ed1c0"/>
+        </columnlist>
+        <columnlist id="1673bb06-f070-48fa-aa07-4ee8a22e40f2" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="1ef4ab9c-7f35-446d-b751-c18b66506912" name="出票单位" binding="staxorgcode" caption="出票单位"/>
+        <columnlist id="c011fa27-6060-41a5-9236-940bbca6db9a" name="文件名称" binding="sfilename" caption="文件名称"/>
+        <columnlist id="bd43da4b-2bc8-42f9-a8fc-2f6321ee5b8d" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="ed388e54-c51a-4e3c-8b49-3faa376c52a5" name="委托日期" binding="scommitdate" caption="委托日期"/>
+        <columnlist id="27f448f9-d9ce-4568-b2d8-388fe7fa86f3" name="总金额" binding="nmoney" caption="总金额"/>
+        <columnlist id="bdbd7cc6-d7b1-4f08-9377-dc0bee1157e6" name="总笔数" binding="icount" caption="总笔数"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2223854e-f6b6-4c5d-9036-3848b09ce09e" name="查询打印界面">
+      <jreportref id="11e43948-802e-484b-b630-2d6ba7a8dad2" name="查询打印显示" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="cffa7970-83c0-4d99-8577-0dc7b065657f" name="收入税票文件打印列表" grouptitle="收入税票文件打印列表" binding="" visible="false">
+      <widgetRefs xsi:type="model:Table" id="e2d67056-803d-441f-b62f-3eb2db8c5fa7" name="收入税票文件列表" binding="filelist" caption="收入税票文件列表" tabletype="" showcheckbox="true" idcolumn="" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="checkList" width="200" height="200">
+        <columnlist id="22cb5ee7-c68e-4085-82cd-4f7703e912a8" name="文件名称" binding="sfilename" caption="导入文件名称"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="d6d7f8ed-f16d-4428-a78e-ec206905ff6a">
+    <pages id="605a8495-9d60-4d1b-95aa-ab395eb0426a" name="发送报文查询处理">
+      <views id="b48f04a9-6775-4ade-a141-5710b3f79ddc" name="发送报文查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="ade7a6f8-968c-4ff1-b491-d589fffb57d3 cffa7970-83c0-4d99-8577-0dc7b065657f">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="deea48e4-ffaf-474b-8f3a-fd15b59dc64f" name="JButtonAreaImpl-deea48e4-ffaf-474b-8f3a-fd15b59dc64f">
+          <buttons id="340a5c15-c56a-4779-9bf7-0904eee3ea5a" name="全选" caption="全选" layout="GridLayout" direction="6c907cce-9be1-4a03-99c2-8e330cb705b1"/>
+          <buttons id="b2458e9d-9d9d-45dd-967e-0272c8b28254" name="查询处理" visible="true" caption="查询处理" enable="true" direction="bed6da8a-9c4c-49fe-bcd3-f013a149c8b8"/>
+          <buttons id="0c08de0a-002e-4c17-851e-9befedddf12f" name="查询打印" caption="查询打印" direction="b33b1542-e760-4ad1-b39f-a71f6e56ee37"/>
+        </buttonArea>
+      </views>
+      <views id="d1f145e7-33a1-43b2-b201-33606fcb218b" name="报文查询处理" contentArea="8aa13091-2ad2-47eb-bb03-e7e27e5d3f9e">
+        <buttonArea id="5d6b557e-7d45-4bc7-89d5-abbe51faae25" name="JButtonAreaImpl-5d6b557e-7d45-4bc7-89d5-abbe51faae25">
+          <buttons id="d6c235eb-a400-4cc9-b328-596597b89060" name="刷新" caption="刷新" direction="6ebe916b-b322-41a7-a0c3-c7edfce38964"/>
+          <buttons id="f39744b9-e456-4063-8d63-7d4bb0257a1c" name="报文重发" visible="false" caption="报文重发 " enable="false" direction="7b505c9b-f259-4339-8792-ee30ba43a9e4"/>
+          <buttons id="7b3f79a0-4322-4b79-9aa9-ceaf72b3d49d" name="返回" visible="true" caption="返回" enable="true" direction="802057f8-9899-4ab4-a2c4-744f31c26003"/>
+        </buttonArea>
+      </views>
+      <views id="409b439b-f990-43f3-9e30-7983dd1f5a55" name="报文查询打印" contentArea="2223854e-f6b6-4c5d-9036-3848b09ce09e">
+        <buttonArea id="2ccc1eba-a409-414a-9625-99e1183d1012" name="JButtonAreaImpl-2ccc1eba-a409-414a-9625-99e1183d1012">
+          <buttons id="ee3ccaa3-daee-41fa-8d7b-df682235c11c" name="返回" visible="true" caption="返回" enable="true" direction="802057f8-9899-4ab4-a2c4-744f31c26003"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

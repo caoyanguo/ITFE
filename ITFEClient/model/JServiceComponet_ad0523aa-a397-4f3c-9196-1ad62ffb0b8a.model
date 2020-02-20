@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="ad0523aa-a397-4f3c-9196-1ad62ffb0b8a" name="总额分成报表查询导出" ename="totalReportSearchAndExport">
+  <jproperties id="e7bc5fae-cf52-41dd-a421-0eb6c67cf08d" key="GeneratedTime" value="1366786558625"/>
+  <refModule href="JModule_50f18298-3e41-4bda-818e-8273867924f8.model#50f18298-3e41-4bda-818e-8273867924f8"/>
+  <methods id="5a888c9c-4299-4899-b2c1-70e3780a2bd6" ename="dataExport" name="导出文件" returntype="java.lang.String">
+    <methodParams id="9cc410f6-e8af-4bde-9b0a-305a83029853" name="查询dto" ename="findto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="00afe8ac-42e9-4a54-bb4f-fd1973681275" name="查询sql" ename="whereSql" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

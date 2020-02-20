@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2e60b275-4132-48d3-bcd9-9d0a8ad2077f" name="支出核对包手工对账处理" ename="Check3201">
+  <jproperties id="90fde40b-8e3f-4120-bb5c-bddd3accffaa" key="GeneratedTime" value="1334414940015"/>
+  <refModule href="JModule_aec54950-8858-4da2-85f4-59eddf2a9fb8.model#aec54950-8858-4da2-85f4-59eddf2a9fb8"/>
+  <model id="8181c53b-ef8c-4648-b171-c7f3a20cee6d" name="JModelImpl-8181c53b-ef8c-4648-b171-c7f3a20cee6d">
+    <attributes id="76a5c34f-4a12-43cd-a7d5-70f02bcab7f1" name="schkdate" type="java.sql.Date"/>
+    <attributes id="e72d159a-671c-4546-afed-0605ad4c393e" name="resultList" type="java.util.ArrayList"/>
+    <directions id="7d6b4c58-06b5-4a2b-9775-6e4709b5fd5c" name="核对" ename="doCheck"/>
+    <directions id="9a1dfaa5-312b-4ac5-8f9d-ee6a4f8c1eac" name="重发申请" ename="applyReport"/>
+  </model>
+  <services href="JServiceComponet_b93c61d3-dd84-45da-95ee-d79dc40b687a.model#b93c61d3-dd84-45da-95ee-d79dc40b687a"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="d377166b-213c-402d-a8d8-dc6bd740a39b">
+    <contentareanode id="2c86114c-2a72-40ed-b61d-e5d1adb219d5" name="查询条件" grouptitle="查询条件">
+      <widgetRefs xsi:type="model:Text" id="002c2c7d-ca50-43b2-9631-0ecdafa881a0" name="核对日期" binding="schkdate" caption="核对日期"/>
+    </contentareanode>
+    <contentareanode id="27b85676-7d3d-4eea-9c3a-8e209678ecdb" name="明细列表" grouptitle="明细列表" binding="">
+      <widgetRefs xsi:type="model:Table" id="196fcfcb-6f56-45df-9d57-5e71cbb704bc" name="TableImpl-196fcfcb-6f56-45df-9d57-5e71cbb704bc" binding="resultList" height="420">
+        <columnlist id="0ed9a24e-7801-4f80-bf9e-6cddd93a595d" name="核对日期" binding="schkdate" caption="核对日期"/>
+        <columnlist id="547e57f7-c18b-4748-8496-2d1d33bc8194" name="包流水号" binding="spackno" caption="包流水号"/>
+        <columnlist id="e9a616a1-d95a-49c9-bd12-4f80d676dad5" name="原报文编号" binding="sorimsgno" caption="原报文编号"/>
+        <columnlist id="c54b7925-468d-46e6-8402-8031296196ae" name="原发起机构代码" binding="sorisendorgcode" caption="原发起机构代码"/>
+        <columnlist id="df61771f-9300-4077-a97a-a4281666a144" name="原委托日期" binding="sorientrustdate" caption="原委托日期"/>
+        <columnlist id="68a3a5f5-7214-4828-8242-324105673271" name="原包流水号" binding="soripackno" caption="原包流水号"/>
+        <columnlist id="8c355fee-f1b1-4e72-9085-e3090b67ea9a" name="总笔数" binding="iallnum" caption="总笔数"/>
+        <columnlist id="e37839ac-acaa-4c05-9c93-216d66a893cf" name="总金额" binding="fallamt" caption="总金额"/>
+        <columnlist id="99d9dfef-5a73-448b-a160-fccd1a91c695" name="核对结果" binding="scheck" caption="核对结果">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#2a6c1989-f84c-4ae4-92d5-3c2a34f1b415"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="6ef30534-1cf4-4615-86cf-a29b7a79d73e">
+    <pages id="8644c7af-bbe1-4ba0-9565-700749f16619" name="核对处理结果信息包">
+      <views id="f166c3a8-f163-4536-b059-97e087fee288" name="核对处理结果信息包" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="2c86114c-2a72-40ed-b61d-e5d1adb219d5 27b85676-7d3d-4eea-9c3a-8e209678ecdb">
+        <buttonArea id="e2c3b9fc-5f13-41db-abb7-17e188975f93" name="JButtonAreaImpl-e2c3b9fc-5f13-41db-abb7-17e188975f93">
+          <buttons id="2440b27f-2c25-4161-bce9-17f8d53214bf" name="核对" caption="核对" direction="7d6b4c58-06b5-4a2b-9775-6e4709b5fd5c"/>
+          <buttons id="23abc7ec-1e73-452d-a641-2e6e5c1e2bd7" name="重发申请" caption="重发申请" direction="9a1dfaa5-312b-4ac5-8f9d-ee6a4f8c1eac"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

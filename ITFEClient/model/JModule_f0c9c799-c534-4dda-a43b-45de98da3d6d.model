@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f0c9c799-c534-4dda-a43b-45de98da3d6d" name="对账信息" ename="TfReconciliation" shared="true"/>

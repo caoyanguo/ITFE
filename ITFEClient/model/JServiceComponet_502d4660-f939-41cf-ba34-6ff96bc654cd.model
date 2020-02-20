@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="502d4660-f939-41cf-ba34-6ff96bc654cd" name="绿色通道" ename="VoucherAttachService">
+  <jproperties id="bf52aa9a-a672-492c-beb7-7e5a612e3c7c" key="GeneratedTime" value="1419241523581"/>
+  <refModule href="JModule_425e0907-6615-4ed6-9887-0cb6e469a132.model#425e0907-6615-4ed6-9887-0cb6e469a132"/>
+  <methods id="0eb787eb-d648-4844-b508-e2d565dffe56" ename="getFileList" name="查找文件名称(带路径)" returntype="java.util.List">
+    <methodParams id="de1272d7-10d8-4a38-ae44-148dbe31d541" name="文件路径" ename="filePath" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

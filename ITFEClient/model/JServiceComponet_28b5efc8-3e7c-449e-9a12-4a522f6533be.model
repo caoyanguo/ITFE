@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="28b5efc8-3e7c-449e-9a12-4a522f6533be" name="修改密码服务" ename="modifyPassword" shared="true">
+  <jproperties id="2c35cba9-5316-4da5-82ad-ef183648c99d" key="GeneratedTime" value="1331531146218"/>
+  <refModule href="JModule_7a27d7a5-e628-4012-b630-4981b570f299.model#7a27d7a5-e628-4012-b630-4981b570f299"/>
+  <methods id="d73610c8-b41a-4de6-af80-fb7ed863bb9f" ename="modifyPassword" name="修改密码" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="b0ab3a9d-0472-4c97-8712-427599e29b63" name="密码" ename="password" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

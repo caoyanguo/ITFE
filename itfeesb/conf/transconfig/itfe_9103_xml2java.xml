@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="ForceLogout9103" beanIdRef="ForceLogout9103" />
+</jb:bean>
+<jb:bean beanId="ForceLogout9103" class="java.util.HashMap" createOnElement="ForceLogout9103">
+	<jb:value property="ForceQuitReason" decoder="String" data="CFX/MSG/ForceLogout9103/ForceQuitReason" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

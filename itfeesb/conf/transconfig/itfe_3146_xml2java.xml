@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead3146" beanIdRef="BatchHead3146" />
+	<jb:wiring property="Bill3146" beanIdRef="Bill3146s" />
+</jb:bean>
+<jb:bean beanId="Bill3146s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="Bill3146" />
+</jb:bean>
+<jb:bean beanId="Bill3146" class="java.util.HashMap" createOnElement="Bill3146">
+	<jb:value property="VouNo" decoder="String" data="CFX/MSG/Bill3146/VouNo" />
+	<jb:value property="VouDate" decoder="String" data="CFX/MSG/Bill3146/VouDate" />
+	<jb:value property="OriTraNo" decoder="String" data="CFX/MSG/Bill3146/OriTraNo" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/Bill3146/OriEntrustDate" />
+	<jb:value property="OriVouNo" decoder="String" data="CFX/MSG/Bill3146/OriVouNo" />
+	<jb:value property="OriVouDate" decoder="String" data="CFX/MSG/Bill3146/OriVouDate" />
+	<jb:value property="PayerAcct" decoder="String" data="CFX/MSG/Bill3146/PayerAcct" />
+	<jb:value property="PayerName" decoder="String" data="CFX/MSG/Bill3146/PayerName" />
+	<jb:value property="PayerAddr" decoder="String" data="CFX/MSG/Bill3146/PayerAddr" />
+	<jb:value property="Amt" decoder="String" data="CFX/MSG/Bill3146/Amt" />
+	<jb:value property="PayeeOpBkNo" decoder="String" data="CFX/MSG/Bill3146/PayeeOpBkNo" />
+	<jb:value property="PayeeBankNo" decoder="String" data="CFX/MSG/Bill3146/PayeeBankNo" />
+	<jb:value property="PayeeAcct" decoder="String" data="CFX/MSG/Bill3146/PayeeAcct" />
+	<jb:value property="PayeeName" decoder="String" data="CFX/MSG/Bill3146/PayeeName" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/Bill3146/AddWord" />
+	<jb:value property="OfYear" decoder="String" data="CFX/MSG/Bill3146/OfYear" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/Bill3146/BudgetType" />
+	<jb:value property="TrimSign" decoder="String" data="CFX/MSG/Bill3146/TrimSign" />
+	<jb:value property="BckReason" decoder="String" data="CFX/MSG/Bill3146/BckReason" />
+	<jb:value property="StatInfNum" decoder="String" data="CFX/MSG/Bill3146/StatInfNum" />
+	<jb:wiring property="Detail3146" beanIdRef="Detail3146s" />
+</jb:bean>
+<jb:bean beanId="Detail3146s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="Detail3146" />
+</jb:bean>
+<jb:bean beanId="Detail3146" class="java.util.HashMap" createOnElement="Detail3146">
+	<jb:value property="SeqNo" decoder="String" data="CFX/MSG/Bill3146/Detail3146/SeqNo" />
+	<jb:value property="BdgOrgCode" decoder="String" data="CFX/MSG/Bill3146/Detail3146/BdgOrgCode" />
+	<jb:value property="FuncBdgSbtCode" decoder="String" data="CFX/MSG/Bill3146/Detail3146/FuncBdgSbtCode" />
+	<jb:value property="EcnomicSubjectCode" decoder="String" data="CFX/MSG/Bill3146/Detail3146/EcnomicSubjectCode" />
+	<jb:value property="BudgetPrjCode" decoder="String" data="CFX/MSG/Bill3146/Detail3146/BudgetPrjCode" />
+	<jb:value property="Amt" decoder="String" data="CFX/MSG/Bill3146/Detail3146/Amt" />
+	<jb:value property="AcctProp" decoder="String" data="CFX/MSG/Bill3146/Detail3146/AcctProp" />
+</jb:bean>
+<jb:bean beanId="BatchHead3146" class="java.util.HashMap" createOnElement="BatchHead3146">
+	<jb:value property="BillOrg" decoder="String" data="CFX/MSG/BatchHead3146/BillOrg" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BatchHead3146/TreCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead3146/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead3146/PackNo" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead3146/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead3146/AllAmt" />
+	<jb:value property="PayMode" decoder="String" data="CFX/MSG/BatchHead3146/PayMode" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

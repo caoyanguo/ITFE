@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0188f2c1-a2c6-4e1a-871e-3a8d685cb488" name="TCBS报表文件存储" ename="tbbillstore">
+  <jproperties id="099daa56-a469-4a83-8cac-7d7027ed876c" key="GeneratedTime" value="1433232485026"/>
+  <refModule href="JModule_835288a6-8638-4efa-8f81-d3907365243c.model#835288a6-8638-4efa-8f81-d3907365243c"/>
+  <model id="c626ddcb-c45c-43e9-84e9-f0e1cf876b3d" name="JModelImpl-c626ddcb-c45c-43e9-84e9-f0e1cf876b3d">
+    <attributes id="22d4b8e1-0bb9-4d9b-b062-dd923ba302b0" name="fileList" type="java.util.List"/>
+    <attributes id="2b0c6646-c092-4a44-a8d8-70805e065f4d" name="uploadDto" type="com.cfcc.itfe.persistence.dto.TbBillstoreDto"/>
+    <attributes id="b3c6d6c6-1a77-4e5c-9ec1-a6677c8568d1" name="searchDto" type="com.cfcc.itfe.persistence.dto.TbBillstoreDto"/>
+    <attributes id="7724742a-0169-43ce-906b-229c998e4153" name="resultList" type="java.util.List"/>
+    <attributes id="a63e6036-f4da-4849-abf7-f1ea1722dfb4" name="selectedDto" type="com.cfcc.itfe.persistence.dto.TbBillstoreDto"/>
+    <directions id="2dd032ac-9245-4186-bbec-876949bbdb30" name="查询" ename="searchFileContent"/>
+    <directions id="a71a1619-563c-48ec-a916-9e10d2195660" name="文件下载" ename="download"/>
+    <directions id="3cd23086-91cd-4e18-840c-df47bf98dcf5" name="打开文件" ename="openFile"/>
+    <directions id="dd07594f-4716-4ba0-89ca-3c8c55cd8f5e" name="文件上传" ename="fileUpload"/>
+    <directions id="0b1dad58-1ee1-458d-935f-4bfda162f81d" name="表格单击事件" ename="singletableClick"/>
+  </model>
+  <services href="JServiceComponet_a4e1aa71-d041-4149-a7a5-71bc211d353c.model#a4e1aa71-d041-4149-a7a5-71bc211d353c"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="d93c3d2b-31a8-434d-ae20-26a92bfdb364">
+    <contentareanode id="8a2055ba-1b3c-4367-aea2-e7ff05c18e2e" name="上传报表数据" grouptitle="上传报表数据" binding="">
+      <widgetRefs xsi:type="model:Combo" id="1f699e25-ca66-4ddd-a1c0-df01853b0c3b" name="国库代码" binding="uploadDto.strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6f5ea4ec-3267-4f6f-b4bb-d912f541c6c2" name="报表日期" binding="uploadDto.dbilldate" caption="报表日期" required="true"/>
+      <widgetRefs xsi:type="model:FileUploader" id="e5df21c9-ef3c-48f9-8fe4-0f957c68c0f0" name="报表文件" binding="fileList" caption="报表文件" required="true" isdirectory="false" ismult="true"/>
+    </contentareanode>
+    <contentareanode id="dd354712-a171-4888-be2b-99755ebfe4ba" name="报表数据查询" grouptitle="报表数据查询">
+      <widgetRefs xsi:type="model:Combo" id="ca7a8008-8949-4503-9342-a759cf32a4f0" name="国库代码" binding="searchDto.strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="50de733b-cb24-4a2b-9b24-d2ca7224c854" name="报表开始日期" binding="startDate" caption="报表开始日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="727ca44a-ade1-4fc9-8807-08eda0eb3ad1" name="报表结束日期" binding="endDate" caption="报表结束日期" required="true"/>
+    </contentareanode>
+    <contentareanode id="b0a10f13-b29f-4f98-b93c-bf6ae5424fa7" name="文件列表" grouptitle="文件列表">
+      <widgetRefs xsi:type="model:Table" id="c113299f-34d5-4eff-aabf-763b858207e6" name="文件列表" binding="resultList" caption="文件列表" tabletype="" showcheckbox="false" refsingleclickdirection="0b1dad58-1ee1-458d-935f-4bfda162f81d">
+        <columnlist id="46bf5b3c-294f-4fe8-b935-0b61c4cf91af" name="报表文件名" binding="sfilename" caption="报表文件名"/>
+        <columnlist id="e6608ecf-f7af-41e3-a670-019a31f92fc0" name="报表日期" binding="dbilldate" caption="报表日期"/>
+        <columnlist id="88dc74d6-1006-4648-b927-6c85997d8698" name="文件格式" binding="sfiletype" caption="文件格式"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="acaf517f-c410-48d7-a61a-217640965bc3">
+    <pages id="49f2a666-c953-4e8b-bbe2-ee54e685d5b7" name="报表数据查询">
+      <views id="a667a3c5-379f-4865-b58e-cf60b462bc01" name="报表数据查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="dd354712-a171-4888-be2b-99755ebfe4ba b0a10f13-b29f-4f98-b93c-bf6ae5424fa7">
+        <buttonArea id="a0958dca-300d-4ae7-82c2-d92840a6e7b7" name="JButtonAreaImpl-a0958dca-300d-4ae7-82c2-d92840a6e7b7">
+          <buttons id="b51f2e33-d8b3-4146-a404-5c56943350e0" name="查询" caption="查询" direction="2dd032ac-9245-4186-bbec-876949bbdb30"/>
+          <buttons id="3a3522ba-7ce7-4b3e-a72f-4c9f2832fea5" name="下载" caption="下载" direction="a71a1619-563c-48ec-a916-9e10d2195660"/>
+          <buttons id="a5543412-6012-415e-b0ac-dcb830c932cb" name="打开" caption="打开" direction="3cd23086-91cd-4e18-840c-df47bf98dcf5"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="d9a2dc96-30fe-476a-94a4-22ac1fd9857e" name="上传报表数据">
+      <views id="235163a6-9373-4b3b-96b2-d7d62f227004" name="上传报表数据" isdefault="true" contentArea="8a2055ba-1b3c-4367-aea2-e7ff05c18e2e">
+        <buttonArea id="b22fb27f-80c0-45cf-8ae7-b209038853c8" name="JButtonAreaImpl-b22fb27f-80c0-45cf-8ae7-b209038853c8">
+          <buttons id="cad23124-3237-4622-8744-45f773c8c5aa" name="上传" caption="上传" checkrequired="true" direction="dd07594f-4716-4ba0-89ca-3c8c55cd8f5e"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

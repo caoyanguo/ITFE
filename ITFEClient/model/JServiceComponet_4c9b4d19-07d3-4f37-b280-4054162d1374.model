@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="4c9b4d19-07d3-4f37-b280-4054162d1374" name="预算科目时序查询(上海)" ename="shbudgetsubcodesearch">
+  <jproperties id="606130ea-c011-4cf4-86a3-fcbf65c8b0e8" key="GeneratedTime" value="1379320507468"/>
+  <refModule href="JModule_2c761605-1d14-4e48-93a1-af46261639e8.model#2c761605-1d14-4e48-93a1-af46261639e8"/>
+  <methods id="745cc86e-800d-4f3e-9f36-56c950208d9f" ename="getreportdata" name="获取报表数据" returntype="java.util.List">
+    <methodParams id="bec4937a-7b8d-42fa-b9ed-77aa04f58875" name="报表查询条件" ename="searchdto" type="com.cfcc.itfe.persistence.dto.ShanghaiReport"/>
+    <methodParams id="57dad25d-19df-4909-a678-d1120995e044" name="业务类型" ename="bizkind" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

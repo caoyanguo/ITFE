@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8990503e-cae6-4256-9823-f348452cc748" name="直接支付额度导入" ename="centralizePayInto"/>

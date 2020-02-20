@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e7ce67b4-2839-4627-b07d-6bace693f6cf" name="实拨资金服务" ename="fundInto">
+  <jproperties id="49b7b882-ea30-4d3c-9bf1-8ea519859301" key="GeneratedTime" value="1348712731142"/>
+  <refModule href="JModule_120e6a67-648a-48c1-b674-551c941cac2b.model#120e6a67-648a-48c1-b674-551c941cac2b"/>
+  <methods id="e05e15dc-af7b-44e9-93c2-cd8b432d4317" ename="getPayerInfo" name="获取收款人信息" returntype="java.util.List">
+    <methodParams id="1a945566-023a-43fd-bded-bdfba50652db" name="征税机关代码" ename="taxcode" type="java.lang.String"/>
+    <methodParams id="06c7831b-224a-4144-9ad0-d1954b03327a" name="机构代码" ename="orgcode" type="java.lang.String"/>
+  </methods>
+  <methods id="be4f0440-1667-4033-8ec2-f915f4cda8ff" ename="makeBudgCode" name="得到预算科目代码缓存" returntype="java.util.Map" remark="得到本核算主体数据"/>
+  <methods id="b0823d44-dfb9-4eb2-8d7c-d6633599167e" ename="createOrUpdate" name="更新或保存数据" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="19a1f10b-6ff1-46a7-8c92-84b77a6622d1" name="参数数据" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="efbac1d1-0f64-4801-9264-ce60f4484a6a" ename="updateGroup" name="更新组号数据" returntype="java.lang.String">
+    <methodParams id="58ef0750-af90-4bd1-b976-da864f2e0016" name="传入参数" ename="paramdto" type="com.cfcc.itfe.facade.data.BizDataCountDto"/>
+    <methodParams id="811d2d19-40c9-4f1f-944a-d829a1744126" name="执行完整SQL" ename="allsql" type="java.lang.String"/>
+    <methodParams id="b996f6e8-2ca8-484e-8448-d93cf49b2891" name="where条件" ename="sqlwhere" type="java.lang.String"/>
+    <methodParams id="1d447523-a3e7-4a33-be85-60705b92b2f7" name="组号数据" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="31902c52-2f5e-4bc4-9f0f-0f568c359dc6" name="操作类型" ename="operType" type="java.lang.String"/>
+  </methods>
+  <methods id="bce5782c-3363-4731-b971-b88f2ace94f5" ename="deleteData" name="删除数据" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a8909564-9299-4fe3-8086-846e25a41613" name="删除数据" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="78987fb6-f767-466c-a5e9-a631074fdd04" name="数据查询" ename="DataQuery">
+  <jproperties id="437b4a13-003f-4fd9-a642-c90b6243231f" key="GeneratedTime" value="1487554992612"/>
+  <refModule href="JModule_99ca1d59-8fa5-4cec-9be4-e76f0a6d90fb.model#99ca1d59-8fa5-4cec-9be4-e76f0a6d90fb"/>
+  <methods id="ae92834c-830a-4baa-9c03-bc2295663066" ename="find" name="查询数据" codecomment="查询数据" returntype="java.util.List" remark="查询数据">
+    <methodParams id="31f86771-4d2b-4375-b3dd-ac5b3e1293be" name="sql语句" ename="sql" type="java.lang.String" codecomment="sql语句"/>
+    <methodExceptions id="4b9b54a7-6caa-4b2d-b1f2-ff5e245c3f82" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="c30b3339-f5d4-4caf-9764-20f3e23ebba8" ename="callProc" name="调用存储过程" codecomment="调用存储过程" returntype="java.lang.String" remark="调用存储过程">
+    <methodParams id="58a8dabc-20ac-4e92-b455-cf3b736f5996" name="存储过程名称" ename="procName" type="java.lang.String" codecomment="存储过程名称"/>
+    <methodParams id="d689c716-4a37-4e6c-ba68-6e6d48f4186a" name="存储过程参数" ename="procParams" type="java.util.List" codecomment="存储过程参数"/>
+    <methodExceptions id="fe4d4a08-a85b-4431-b522-7c10f48f58b0" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

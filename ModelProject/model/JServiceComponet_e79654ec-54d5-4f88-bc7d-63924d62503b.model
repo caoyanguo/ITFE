@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e79654ec-54d5-4f88-bc7d-63924d62503b" name="报表与入库流水核对" ename="tvIncomeDetailReportCheck">
+  <jproperties id="472788ac-f056-4c3b-ab47-79475a4be4f1" key="GeneratedTime" value="1394430506108"/>
+  <refModule href="JModule_ed514248-26d4-4ba4-a2f6-bea19c7946db.model#ed514248-26d4-4ba4-a2f6-bea19c7946db"/>
+  <methods id="a47fb224-3909-4fc3-8cfd-3c84127979ce" ename="incomeDetailReportCheck" name="JMethodImpl-a47fb224-3909-4fc3-8cfd-3c84127979ce" returntype="java.lang.String">
+    <methodParams id="8adeb0f0-0763-458f-91e4-25abf9ade8c8" name="报表与入库流水dto" ename="dto" type="com.cfcc.itfe.persistence.dto.TvIncomeDetailReportCheckDto"/>
+  </methods>
+</model:JServiceComponent>

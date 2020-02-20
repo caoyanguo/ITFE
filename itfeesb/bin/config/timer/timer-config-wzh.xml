@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:file="http://www.mulesource.org/schema/mule/file/2.2"
+	xmlns:http="http://www.mulesource.org/schema/mule/http/2.2"
+	xmlns:https="http://www.mulesource.org/schema/mule/https/2.2"
+	xmlns:jbossts="http://www.mulesource.org/schema/mule/jbossts/2.2"
+	xmlns:jms="http://www.mulesource.org/schema/mule/jms/2.2"
+	xmlns:scripting="http://www.mulesource.org/schema/mule/scripting/2.2"
+	xmlns:client="http://www.mulesource.org/schema/mule/client/2.2"
+	xmlns:ognl="http://www.mulesource.org/schema/mule/ognl/2.2" xmlns:axis="http://www.mulesource.org/schema/mule/axis/2.2"
+	xmlns:cxf="http://www.mulesource.org/schema/mule/cxf/2.2"
+	xmlns:servlet="http://www.mulesource.org/schema/mule/servlet/2.2"
+	xmlns:stdio="http://www.mulesource.org/schema/mule/stdio/2.2" xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.2"
+	xmlns:tcp="http://www.mulesource.org/schema/mule/tcp/2.2"
+	xmlns:management="http://www.mulesource.org/schema/mule/management/2.2"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:sxc="http://www.mulesource.org/schema/mule/sxc/2.2"
+	xmlns:quartz="http://www.mulesource.org/schema/mule/quartz/2.2"
+	xmlns:test="http://www.mulesource.org/schema/mule/test/2.2"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	      http://www.mulesource.org/schema/mule/ftp/2.2 http://www.mulesource.org/schema/mule/ftp/2.2/mule-ftp.xsd
+          http://www.mulesource.org/schema/mule/file/2.2 http://www.mulesource.org/schema/mule/file/2.2/mule-file.xsd
+          http://www.mulesource.org/schema/mule/http/2.2 http://www.mulesource.org/schema/mule/http/2.2/mule-http.xsd
+          http://www.mulesource.org/schema/mule/https/2.2 http://www.mulesource.org/schema/mule/https/2.2/mule-https.xsd
+          http://www.mulesource.org/schema/mule/jdbc/2.2 http://www.mulesource.org/schema/mule/jdbc/2.2/mule-jdbc.xsd
+          http://www.mulesource.org/schema/mule/scripting/2.2 http://www.mulesource.org/schema/mule/scripting/2.2/mule-scripting.xsd
+          http://www.mulesource.org/schema/mule/management/2.2 http://www.mulesource.org/schema/mule/management/2.2/mule-management.xsd
+          http://www.mulesource.org/schema/mule/client/2.2 http://www.mulesource.org/schema/mule/client/2.2/mule-client.xsd
+          http://www.mulesource.org/schema/mule/ognl/2.2 http://www.mulesource.org/schema/mule/ognl/2.2/mule-ognl.xsd
+          http://www.mulesource.org/schema/mule/quartz/2.2 http://www.mulesource.org/schema/mule/quartz/2.2/mule-quartz.xsd
+          http://www.mulesource.org/schema/mule/soap/2.2 http://www.mulesource.org/schema/mule/soap/2.2/mule-soap.xsd
+          http://www.mulesource.org/schema/mule/axis/2.2 http://www.mulesource.org/schema/mule/axis/2.2/mule-axis.xsd
+          http://www.mulesource.org/schema/mule/cxf/2.2 http://www.mulesource.org/schema/mule/cxf/2.2/mule-cxf.xsd
+          http://www.mulesource.org/schema/mule/sxc/2.2 http://www.mulesource.org/schema/mule/sxc/2.2/mule-sxc.xsd
+          http://www.mulesource.org/schema/mule/servlet/2.2 http://www.mulesource.org/schema/mule/servlet/2.2/mule-servlet.xsd
+          http://www.mulesource.org/schema/mule/core/2.2 http://www.mulesource.org/schema/mule/core/2.2/mule.xsd   
+          http://www.mulesource.org/schema/mule/stdio/2.2 http://www.mulesource.org/schema/mule/stdio/2.2/mule-stdio.xsd
+          http://www.mulesource.org/schema/mule/tcp/2.2 http://www.mulesource.org/schema/mule/tcp/2.2/mule-tcp.xsd
+          http://www.mulesource.org/schema/mule/jms/2.2 http://www.mulesource.org/schema/mule/jms/2.2/mule-jms.xsd
+		  http://www.mulesource.org/schema/mule/vm/2.2 http://www.mulesource.org/schema/mule/vm/2.2/mule-vm.xsd
+          http://www.mulesource.org/schema/mule/xml/2.2 http://www.mulesource.org/schema/mule/xml/2.2/mule-xml.xsd
+          http://www.mulesource.org/schema/mule/test/2.2 http://www.mulesource.org/schema/mule/test/2.2/mule-test.xsd
+           http://www.mulesource.org/schema/mule/quartz/2.2 http://www.mulesource.org/schema/mule/quartz/2.2/mule-quartz.xsd">
+	<model name="VoucherTimer">
+		 <!-- 凭证定时触发读取程序-->
+		<service name="VoucherTimerReadService">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="false" repeatInterval="${voucherRead}" name="ReadService" jobName="ReadServiceMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerReadService" />	
+		</service> 
+	
+		 <!-- 凭证定时触发发送回单程序
+		<service name="VoucherTimerReturnSuccess">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" repeatInterval="${voucherReturnSuccess}" name="ReturnSuccessService" jobName="ReturnSuccessServiceMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerReturnSuccess" />
+		</service>-->
+		
+		 <!-- 凭证定时触发 凭证状态为 TIPS处理失败和TCBS处理失败 时自动退回
+		<service name="VoucherTimerSendFailes">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${sendFailesSuccess}" name="SendFailesService" jobName="SendFailesServiceMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerSendFailes" />
+		</service>-->
+		 <!-- 凭证定时触发发送TIPS程序
+		<service name="VoucherTimerSendTips">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" repeatInterval="${voucherSendTips}" name="SendTipsService" jobName="SendTipsServiceMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerSendTips" />
+		</service>-->
+		
+		<!-- 凭证定时触发签章程序
+		<service name="VoucherTimerStamp">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" repeatInterval="${voucherStamp}" name="StampService" jobName="StampServiceMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerStamp" />
+		</service>-->
+		
+		<!-- 凭证对账定时生成发送每日对账单
+		<service name="VoucherTimerSendVouChkBill">
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${autoSendVouChkBill}" name="autoSendVouChkBills" jobName="autoSendVouChkBillJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerSendVouChkBill" />
+		</service>	
+		-->
+		
+		<!-- 凭证对账每日定时生成发送业务对账单
+		<service name="TimerGenBussVoucherComponent">
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${autoSendVouChkBill}" name="autoSendVouChkBills" jobName="autoSendVouChkBillJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerGenBussVoucherComponent" />
+		</service>	
+		-->
+		
+		<!-- 定时将计息的凭证 转移到计息明细表中
+		<service name="InterestDetail">
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${interestMsgVoucher}" name="InterestDetails" jobName="InterestDetailJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.InterestDetailComponent" />
+		</service>-->
+		 <!-- 和同城清算 接口定时 对账
+		<service name="VoucherTimerSendForSameCity">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${voucherSendForSameCity}" name="SendForSameCityService" jobName="SendForSameCityServiceMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerSendForSameCity" />
+		</service> -->
+		<!-- 定时发送日报表发送日报表
+		<service name="VoucherTimerSendCommReport">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${autoSendCommReport}" name="autoSendCommReports" jobName="autoSendCommReportJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerAutoSendReport" />
+		</service>-->
+		<!-- 广西定时导出实拨资金、集中支付额度、集中支付拨款当天数据到服务器目录下，供数据分析系统提取
+		<service name="TimerBussDataToDirService">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" repeatInterval="${updateIncomeDetail}" name="TimerBussDataToDirName" jobName="TimerBussDataToDirComponentMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerBussDataToDirComponent" />	
+		</service>-->
+		
+		<!-- 定时接收凭证附件-->
+		<service name="VoucherTimerRecvVoucherAttach">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${autoRecvVoucherAttach}" name="autoRecvVoucherAttachs" jobName="autoRecvVoucherAttachJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerRecvVoucherAttach" />
+		</service>
+		
+		<!-- 凭证对账定时生成业务对账单
+		<service name="VoucherTimerSendVouRegularChkBill">
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${autoSendVouRegularChkBill}" name="autoSendVouRegularChkBills" jobName="autoSendVouRegularChkBillJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerSendVouRegularChkBill" />
+		</service>-->
+		
+		<!-- 定时发送凭证附件-->
+		<!--<service name="VoucherTimerSendVoucherAttach">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${autoSendVoucherAttach}" name="autoSendVoucherAttachs" jobName="autoSendVoucherAttachJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.VoucherTimerSendVoucherAttach" />
+		</service>-->
+		<!-- 自动生成2301、2302凭证
+		<service name="TimerGen2301And2302">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${gen2301and2302voucher}" name="timerGen2301And2302" jobName="timerGen2301And2302Job">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerGen2301And2302" />
+		</service>-->
+		<!-- 每天未勾兑的凭证退回
+		<service name="TimerNotCompareVoucherComfail">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${notcomparereturn}" name="timerNotCompareVoucherComfail" jobName="timerNotCompareVoucherComfailJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerNotCompareVoucherComfail" />
+		</service>-->
+		<!-- 山西需求 每日中午和晚上分两次自动把上一天未勾兑的数据，自动勾兑入库-->
+		<service name="TimerBlendToTreasury">		
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" cronExpression="${autoblendtotreasury}" name="timerblendToTreasury" jobName="timerblendToTreasury">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerBlendToTreasury" />
+		</service>
+	</model>
+</mule>

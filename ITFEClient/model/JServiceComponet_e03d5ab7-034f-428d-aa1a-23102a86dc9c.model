@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e03d5ab7-034f-428d-aa1a-23102a86dc9c" name="结算中心用户查询服务组件" ename="settleAccounts">
+  <jproperties id="9e01f0b5-930f-481e-9b82-5f40884a46d1" key="GeneratedTime" value="1364300164553"/>
+  <refModule href="JModule_d7c80045-887a-4e6b-94b7-771a14fa3da8.model#d7c80045-887a-4e6b-94b7-771a14fa3da8"/>
+  <methods id="cf372699-521c-4622-ac5a-46a784862e3d" ename="search" name="查询" returntype="java.util.List">
+    <methodParams id="6426adf4-eeca-417d-8312-e9d93f7349ba" name="查询dto" ename="detailDto" type="com.cfcc.itfe.persistence.dto.DetailTsUsers"/>
+  </methods>
+  <methods id="281a330a-13a0-4f75-acdb-4b98ee5765d1" ename="searchByLeve" name="根据级次和机构代码查询上下级" returntype="java.util.List">
+    <methodParams id="96d7feb4-d1de-49df-b728-9c20b6679a8c" name="选中的机构代码" ename="sorgcode" type="java.lang.String"/>
+    <methodParams id="4252cdaa-7361-4a23-935a-f605ba9b81fc" name="机构级次" ename="orgleve" type="java.lang.String"/>
+    <methodParams id="f082b00b-3a77-42bd-bead-7036d4a1ec38" name="查询dto" ename="detailDto" type="com.cfcc.itfe.persistence.dto.DetailTsUsers"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1d3a9f7b-a9d4-41f0-b1ad-39b7ac3ce5d8" name="人行办理直接支付主体信息" ename="pbcpay">
+  <jproperties id="7cbfe063-044b-4361-bd91-dd427b73b7ca" key="GeneratedTime" value="1341393239376"/>
+  <refModule href="JModule_d0f15827-7511-43a1-b800-b2ba1117dd59.model#d0f15827-7511-43a1-b800-b2ba1117dd59"/>
+  <methods id="eebb7d68-3de4-411f-8c03-5568f4946e98" ename="findMainByPage" name="人行办理授权支付主体信息" codecomment="人行办理授权支付主体信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="7209f81e-30b6-4d79-b281-41cd0034f06a" name="人行办理授权支付主体信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPbcpayMainDto" codecomment="人行办理授权支付主体信息条件DTO"/>
+    <methodParams id="ba82132f-df34-494a-91e9-2d643602e11e" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+  </methods>
+  <methods id="8b5344cb-3448-4cb4-ad5c-e249f7b335ba" ename="findSubByPage" name="人行办理授权支付明细信息" codecomment="人行办理授权支付明细信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="196fc720-4cd1-4595-b444-a200f2a1fe4a" name="人行办理授权支付明细信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPbcpayMainDto" codecomment="人行办理授权支付主体信息条件DTO"/>
+    <methodParams id="e42b5dc2-6462-4c51-af6d-56c89fb994ca" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+  </methods>
+  <methods id="58071e28-0235-4101-be98-54f69f1ef1b9" ename="findMainByPageForHis" name="人行办理授权支付主体信息(历史表)" codecomment="人行办理授权支付主体信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="462fe611-c261-48cd-aef1-e486ac5d8099" name="人行办理授权支付主体信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvPbcpayMainDto" codecomment="人行办理授权支付主体信息条件DTO"/>
+    <methodParams id="2eeb72be-5c25-4cc9-9084-a252088a0b32" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+  </methods>
+  <methods id="652306a4-dc49-4027-9cb9-4864dd32f240" ename="findSubByPageForHis" name="人行办理授权支付明细信息(历史表)" codecomment="人行办理授权支付明细信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="ead4e7f2-7c2e-4c69-9a92-7c46613b5ab6" name="人行办理授权支付明细信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvPbcpayMainDto" codecomment="人行办理授权支付明细信息条件DTO"/>
+    <methodParams id="3616601d-c766-46dc-a113-43216049831a" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+  </methods>
+  <methods id="1d0644a4-66e9-4843-9d5a-f68cc0e0845b" ename="dataExport" name="dataExport" codecomment="dataExport" returntype="java.lang.String">
+    <methodParams id="ef490910-fb14-415e-8e28-fc216461295a" name="查询条件DTO" ename="finddto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="查询条件DTO"/>
+    <methodParams id="1da0715e-b985-4fe2-8e87-24440433a0c9" name="选择的表" ename="selectedtable" type="java.lang.String" codecomment="选择的表"/>
+  </methods>
+  <methods id="c6750e99-1906-4708-928f-b4482eff2a08" ename="addInfo" name="addInfo" codecomment="addInfo" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto">
+    <methodParams id="b1e1124a-9209-455e-97f4-5a7d6f5b740f" name="查询条件DTO" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="804b2955-80dc-440e-ab6c-febb08523411" ename="addSubInfo" name="addSubInfo" codecomment="addSubInfo" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="318a152f-907b-44b4-9f73-755e3ff59494" name="查询条件DTO" ename="dtoInfo"/>
+  </methods>
+  <methods id="9ad69706-d3eb-429f-8de8-dfd29b59459f" ename="updateInfo" name="updateInfo" codecomment="updateInfo" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a49a667d-6001-4c0d-b314-89b43d063b69" name="查询条件DTO" ename="dtoInfo"/>
+  </methods>
+</model:JServiceComponent>

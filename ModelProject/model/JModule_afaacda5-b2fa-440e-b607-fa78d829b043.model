@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="afaacda5-b2fa-440e-b607-fa78d829b043" name="国库主体信息维护" ename="TsTreasury" shared="true"/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="84958cca-2728-4f53-b581-087c06aa1b4c" name="银行行名对照参数维护服务组件" ename="tsconvertbankname">
+  <jproperties id="42326a5f-2459-43bb-89bc-19c6e60b23dd" key="GeneratedTime" value="1369364250174"/>
+  <refModule href="JModule_9832ebb5-2eaa-461a-b42d-a4a9c9d29181.model#9832ebb5-2eaa-461a-b42d-a4a9c9d29181"/>
+  <methods id="189fc529-d8c4-474a-8979-fb29cef3db1e" ename="addInfo" name="保存" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a01518c9-5805-4b38-a188-b3a036fea96e" name="dto信息" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="8a86931d-9730-4527-ad82-4e7eb8394133" ename="delInfo" name="删除信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="168bfbc2-04d2-4c1d-bcad-5ef60595a015" name="dto信息" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="ce2f3d2b-ced0-4bca-a33b-a23de4a88d2a" ename="modInfo" name="信息修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="494800ed-d776-42ca-a4e7-c28fde64eea2" name="原始信息" ename="olddto" type="com.cfcc.itfe.persistence.dto.TsConvertbanknameDto"/>
+    <methodParams id="2f7ecd52-766a-4d55-9795-a6beb9677eb6" name="修改信息" ename="newdto" type="com.cfcc.itfe.persistence.dto.TsConvertbanknameDto"/>
+  </methods>
+</model:JServiceComponent>

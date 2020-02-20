@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="28e31827-995d-48f9-8579-0be7b6c3e34a" name="报表数据导出（天津）" ename="FinDataStatDownForTJ">
+  <jproperties id="b88a7f89-28e9-4c8b-922b-daff0957e6ff" key="GeneratedTime" value="1350441947968"/>
+  <jproperties id="827a625e-ad69-4e69-800a-c1fa74dea876" key="GeneratedTime" value="1350441947968"/>
+  <refModule href="JModule_7985ba8a-f8ce-49f9-ac62-ec875e986692.model#7985ba8a-f8ce-49f9-ac62-ec875e986692"/>
+  <methods id="793fc4c3-69ae-4b98-aed1-764f60def93a" ename="makeRptFile" name="生成报表文件" returntype="java.util.List">
+    <methodParams id="ad6a98ed-486f-42ec-9f08-8cfd9a8afaab" name="查询条件" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="60969631-0b68-41d1-b693-961202955503" name="报表类型的列表" ename="billTypeList" type="java.util.List"/>
+    <methodParams id="b6e62a87-74f6-4584-8e2e-379a8aa2c7ea" name="国库与级次map" ename="map" type="java.util.HashMap"/>
+  </methods>
+</model:JServiceComponent>

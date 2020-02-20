@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d1458362-c22c-4f03-9e63-e09051f81036" name="1025征收机关申请报表服务" ename="TaxBureau">
+  <jproperties id="28449bbd-c71c-4b5d-9196-a9018c313e1c" key="GeneratedTime" value="1357805821104"/>
+  <refModule href="JModule_cc372fd3-3c8e-405c-82f6-ef7a789cff50.model#cc372fd3-3c8e-405c-82f6-ef7a789cff50"/>
+  <methods id="f3f92550-1c35-46f6-b0d4-2037e0fc31f5" ename="sendMsg" name="发送报文" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="4e7318ee-de37-460a-8896-18551924b8b2" name="发起机构代码" ename="sendOrgCode" type="java.lang.String"/>
+    <methodParams id="0d02ff87-7977-43fa-b48b-997be62bc995" name="报表日期" ename="reportDate" type="java.lang.String"/>
+    <methodParams id="1b9dbd7e-cbd8-4277-ac8d-65a5f1813e6d" name="报表范围" ename="reportArea" type="java.lang.String"/>
+    <methodParams id="1b9dbd7e-cbd8-4277-ac8d-65a5f1814e6d" name="报文编号" ename="msgno" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

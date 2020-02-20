@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="af0518cc-9cee-484f-8281-242e3c93d4ca" name="会计科目查询" ename="BookSbtSearchUI">
+  <jproperties id="582aec50-c61a-405e-9b6f-db7e50670993" key="GeneratedTime" value="1362486216297"/>
+  <refModule href="JModule_9061d5f8-8c8c-425e-b679-73bf5c158488.model#9061d5f8-8c8c-425e-b679-73bf5c158488"/>
+  <model id="3e5aedce-500a-4b2c-b844-6fb7a82c6eae" name="JModelImpl-3e5aedce-500a-4b2c-b844-6fb7a82c6eae">
+    <directions id="7c645d16-610c-4e96-a7b7-2062bd388e67" viewers="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="查询" ename="queryBudget"/>
+    <directions id="f192de23-dd9a-4da8-8956-4f652bf0c83f" viewers="f9acdb32-8f47-45ea-82a4-b845af74d23e" name="返回" ename="goBack"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="ef85f7be-6d79-460b-94ba-38ff4083d407">
+    <contentareanode id="77fe103b-5874-4804-9d31-2ba6c8bd418c" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Text" id="b3d61f9a-b5d9-4833-813c-2a488925ceb8" name="会计科目代码" binding="querydto.sbooksbtcode" visible="true" caption="会计科目代码" enable="true"/>
+      <widgetRefs xsi:type="model:Text" id="c5b61d26-118d-484f-9c8d-74580e18e858" name="会计科目名称" binding="querydto.sbooksbtname" visible="true" caption="会计科目名称" enable="true"/>
+    </contentareanode>
+    <contentareanode id="9ed2254c-b1c3-43eb-b439-138406749c56" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="51b09dfe-d37a-4514-bdd6-2dac041a0574" name="维护查询结果" binding="pagingcontext" caption="维护查询结果" message="" tabletype="paging" pagingtable="">
+        <columnlist id="d2e4d7d0-80c1-43df-ab85-16fa73248f72" name=" 核算主体代码" binding="sbookorgcode" caption=" 核算主体代码"/>
+        <columnlist id="0bcc023f-5a18-4b03-9c40-41e41eb9ab98" name="会计科目代码" binding="sbooksbtcode" caption="会计科目代码"/>
+        <columnlist id="8d13b986-33af-443a-8629-d56cdb7b0c48" name="会计科目名称" binding="sbooksbtname" caption="会计科目名称"/>
+        <columnlist id="b46aa9b4-e601-47bb-8703-5f9cfde0c091" name="会计科目类型" binding="cbooksbttype" caption="会计科目类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#df715eda-8d3a-4871-9b8e-bd8494c02ba2"/>
+        </columnlist>
+        <columnlist id="66f07836-33ad-4c1c-bbed-5a751d106db8" name="余额性质" binding="cbalanceprop" caption="余额性质">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aee6ea4c-1e24-4167-88ca-28b74274d1ea"/>
+        </columnlist>
+        <columnlist id="5a8c7fa8-e67e-46d9-a58a-56374ee9997a" name="库存标志" binding="cstockflag" caption="库存标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9f12ef04-1702-463b-a0b8-6af4ac3f9e95"/>
+        </columnlist>
+        <columnlist id="f82c15fa-c17b-4515-bb5b-da7e7b3af25c" name="打印序号 " binding="iprintno" caption="打印序号 ">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c826ddbf-b705-4220-b4a5-4b33d8850769"/>
+        </columnlist>
+        <columnlist id="5a09de5a-d15d-4f75-a30a-87c9b0a4b74e" name="系统更新时间" binding="tssysupdate" caption="系统更新时间">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8425b24a-f674-46f4-b242-d035295b3b64"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="4c7b9c58-bb35-47c4-8be2-34aeacbca2da">
+    <pages id="180f65c6-a5bd-415c-99ba-f1108638d07c" name="维护">
+      <views id="f9acdb32-8f47-45ea-82a4-b845af74d23e" name="信息查询" isdefault="true" contentArea="77fe103b-5874-4804-9d31-2ba6c8bd418c">
+        <buttonArea id="9f682520-342a-403e-a63a-5c1c31f17798" name="JButtonAreaImpl-9f682520-342a-403e-a63a-5c1c31f17798">
+          <buttons id="1af53126-fd11-4bf9-b891-589afea589c2" name="查询" caption="查询" direction="7c645d16-610c-4e96-a7b7-2062bd388e67"/>
+        </buttonArea>
+      </views>
+      <views id="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="查询结果" contentArea="9ed2254c-b1c3-43eb-b439-138406749c56">
+        <buttonArea id="2a129b0b-daf6-49d7-9103-b2992f61e29f" name="JButtonAreaImpl-2a129b0b-daf6-49d7-9103-b2992f61e29f">
+          <buttons id="f3bf9177-7a3e-4889-aa63-7087bf1d7f8f" name="返回" caption="返回" direction="f192de23-dd9a-4da8-8956-4f652bf0c83f"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

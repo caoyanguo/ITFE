@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b615585e-f169-410c-98ce-4f807d5d589e" name="系统监控服务组件" ename="Sysmonitor">
+  <jproperties id="4f09d128-2197-4316-8954-97b0968bea07" key="GeneratedTime" value="1372840618375"/>
+  <refModule href="JModule_8dc0cc79-c8a3-4389-a752-def20ff1b9b5.model#8dc0cc79-c8a3-4389-a752-def20ff1b9b5"/>
+  <methods id="35ff4b4d-785f-4b9c-a174-ec874cb58a6f" ename="sysMonitor" name="系统监控" returntype="java.lang.String">
+    <methodParams id="0b3e521a-c1ac-4811-a627-800ad18ff60f" name="监控范围" ename="monitorarea" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead1105" beanIdRef="BatchHead1105" />
+	<jb:wiring property="CorrectBody1105" beanIdRef="CorrectBody1105" />
+</jb:bean>
+<jb:bean beanId="BatchHead1105" class="java.util.HashMap" createOnElement="BatchHead1105">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/BatchHead1105/TaxOrgCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead1105/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead1105/PackNo" />
+	<jb:value property="ReturnTerm" decoder="String" data="CFX/MSG/BatchHead1105/ReturnTerm" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead1105/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead1105/AllAmt" />
+</jb:bean>
+<jb:bean beanId="CorrectBody1105" class="java.util.HashMap" createOnElement="CorrectBody1105">
+	<jb:wiring property="CorrectInfo1105" beanIdRef="CorrectInfo1105s" />
+	<jb:wiring property="CorrectOld1105" beanIdRef="CorrectOld1105s" />
+	<jb:wiring property="CorrectNow1105" beanIdRef="CorrectNow1105s" />
+</jb:bean>
+<jb:bean beanId="CorrectInfo1105s" class="java.util.ArrayList" createOnElement="CorrectInfo1105">
+	<jb:wiring beanIdRef="CorrectInfo1105" />
+</jb:bean>
+<jb:bean beanId="CorrectInfo1105" class="java.util.HashMap" createOnElement="CorrectInfo1105">
+	<jb:value property="TraNo" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectInfo1105/TraNo" />
+	<jb:value property="OriTraNo" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectInfo1105/OriTraNo" />
+	<jb:value property="BillDate" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectInfo1105/BillDate" />
+	<jb:value property="CorrVouNo" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectInfo1105/CorrVouNo" />
+	<jb:value property="ElectroTaxVouNo" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectInfo1105/ElectroTaxVouNo" />
+	<jb:value property="TrimSign" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectInfo1105/TrimSign" />
+	<jb:value property="CorrReaCode" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectInfo1105/CorrReaCode" />
+	<jb:value property="Remark" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectInfo1105/Remark" />
+</jb:bean>
+<jb:bean beanId="CorrectOld1105s" class="java.util.ArrayList" createOnElement="CorrectOld1105">
+	<jb:wiring beanIdRef="CorrectOld1105" />
+</jb:bean>
+<jb:bean beanId="CorrectOld1105" class="java.util.HashMap" createOnElement="CorrectOld1105">
+	<jb:value property="OriTaxVouNo" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectOld1105/OriTaxVouNo" />
+	<jb:value property="OriBudgetType" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectOld1105/OriBudgetType" />
+	<jb:value property="OriBudgetSubjectCode" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectOld1105/OriBudgetSubjectCode" />
+	<jb:value property="OriBudgetLevCode" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectOld1105/OriBudgetLevCode" />
+	<jb:value property="OriViceSign" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectOld1105/OriViceSign" />
+	<jb:value property="OriTreCode" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectOld1105/OriTreCode" />
+	<jb:value property="OriRevAmt" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectOld1105/OriRevAmt" />
+</jb:bean>
+<jb:bean beanId="CorrectNow1105s" class="java.util.ArrayList" createOnElement="CorrectNow1105">
+	<jb:wiring beanIdRef="CorrectNow1105" />
+</jb:bean>
+<jb:bean beanId="CorrectNow1105" class="java.util.HashMap" createOnElement="CorrectNow1105">
+	<jb:value property="CurBudgetType" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectNow1105/CurBudgetType" />
+	<jb:value property="CurBudgetSubjectCode" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectNow1105/CurBudgetSubjectCode" />
+	<jb:value property="CurBudgetLevCode" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectNow1105/CurBudgetLevCode" />
+	<jb:value property="CurViceSign" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectNow1105/CurViceSign" />
+	<jb:value property="CurTreCode" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectNow1105/CurTreCode" />
+	<jb:value property="CurTraAmt" decoder="String" data="CFX/MSG/CorrectBody1105/CorrectNow1105/CurTraAmt" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

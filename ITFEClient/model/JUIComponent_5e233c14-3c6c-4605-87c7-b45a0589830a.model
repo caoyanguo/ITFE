@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5e233c14-3c6c-4605-87c7-b45a0589830a" name="收款银行退款通知查询" ename="payBankRefundQuery">
+  <jproperties id="eedda511-d13f-4034-acdf-d6a5b2dd7eca" key="GeneratedTime" value="1416278187758"/>
+  <refModule href="JModule_89be251f-b420-487a-9be8-5f1119fee4bc.model#89be251f-b420-487a-9be8-5f1119fee4bc"/>
+  <model id="6e58cdeb-bb93-4d9b-9bab-c61aaa2c6633" name="JModelImpl-6e58cdeb-bb93-4d9b-9bab-c61aaa2c6633">
+    <attributes id="66451fef-480b-444a-ac62-40d7ca2ddeea" name="pagingcontextMain" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="62e4087d-3847-4de5-b168-b5d172ce2fa7" name="pagingcontextSub" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="b99e2079-8c24-47e2-a01d-763be258eb8e" name="pagingcontextMainHis" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="844bd51c-5d50-4345-af56-96b20508e16e" name="pagingcontextSubHis" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="fafa1697-c75b-4ea8-b126-c2835096d28c" viewers="def2ff52-5fa7-4455-b9e9-18714b2391b1" name="查询列表事件" ename="searchList"/>
+    <directions id="4e0bf567-e14f-4559-847e-5a17fa0b020f" viewers="02b5fb62-5ef8-4abc-a05a-f32845c62dff" name="返回查询界面" ename="rebackSearch"/>
+    <directions id="cec2dcf7-9495-4b60-99ec-031473ddae3e" name="主信息双击事件" ename="doubleclickMain"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="11551904-2f0a-41d1-9666-10ef48fa0c7d">
+    <contentareanode id="adedd234-9b2a-49f8-8c13-735405379c57" name="收款银行退款通知查询" grouptitle="收款银行退款通知查询">
+      <widgetRefs xsi:type="model:Combo" id="f7460e7f-558e-4579-b103-baa8bedaab55" name="请选择要查询的表" binding="selectedtable" caption="请选择要查询的表" required="true" defaultvalue="" display="displayValue" underly="underlyValue" modelsource="tableMapperList"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="89453d4c-1aee-4008-beee-989ae8fc1784" name="PlaceHolderImpl-89453d4c-1aee-4008-beee-989ae8fc1784"/>
+      <widgetRefs xsi:type="model:Text" id="bbf6173c-24b6-4d85-8a05-bbdabd203246" name="国库代码" binding="finddto.strecode" caption="国库代码"/>
+      <widgetRefs xsi:type="model:Text" id="d5181463-2161-4377-8823-c5bce605e1c0" name="包流水号" binding="finddto.spackageno" caption="包流水号"/>
+      <widgetRefs xsi:type="model:Text" id="b607d1c7-4942-437e-902b-9ff1b73473bb" name="凭证日期" binding="finddto.svoudate" caption="凭证日期"/>
+      <widgetRefs xsi:type="model:Text" id="253f9326-af57-4585-b002-ab062fba187a" name="委托日期" binding="finddto.scommitdate" caption="委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="1d3d638d-c84f-49cd-9dbd-a31e3356c721" name="凭证编号" binding="finddto.svoucherno" caption="凭证编号"/>
+      <widgetRefs xsi:type="model:Text" id="ad059f7d-54ad-4c12-a458-607c852b4217" name="原业务单据号" binding="finddto.soribillno" caption="原业务单据号"/>
+      <widgetRefs xsi:type="model:Text" id="bfd57152-4337-4c72-8b5b-0dec255ceae5" name="主支付凭证编号" binding="finddto.soriginalvoucherno" caption="主支付凭证编号"/>
+      <widgetRefs xsi:type="model:Combo" id="9db61cfb-8735-4005-b64b-fe0e2ed31d2c" name="支付方式" binding="finddto.spaytypecode" caption="支付方式">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1d3813c5-aaca-4796-b69d-a38585617601"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="780c5d1b-6540-4acb-9a13-62e9009493e5" name="金额" binding="finddto.npayamt" caption="金额"/>
+      <widgetRefs xsi:type="model:Combo" id="46637823-b22f-488b-b572-864771c0613f" name="交易状态" binding="finddto.sstatus" caption="交易状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="dc551afb-aa29-4853-9780-196eee293511" name="收款银行退款通知主信息列表" grouptitle="收款银行退款通知主信息列表">
+      <widgetRefs xsi:type="model:Table" id="6f1eefcc-4511-4991-8427-d6affd5fe0c9" name="TableImpl-f2d85e1b-bd7a-4495-9deb-0f714984e639" binding="pagingcontextMain" caption="" tabletype="paging" showcheckbox="false" refdoubleclickdirection="cec2dcf7-9495-4b60-99ec-031473ddae3e" height="280">
+        <columnlist id="b34e8e45-fd04-4975-bcf5-5c7a6f036b1c" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="875e0f38-98b7-4c1c-92c3-e14e76ec12d0" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="38133dab-1578-48e5-9aa1-1d9a36bdcfac" name="凭证日期" binding="svoudate" caption="凭证日期"/>
+        <columnlist id="3b9b90d4-d5f4-41e5-b99b-f851ab37eef4" name="委托日期" binding="scommitdate" caption="委托日期"/>
+        <columnlist id="57cf4365-847a-4f85-b08e-a48ee44af3d3" name="凭证编号" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="70ba2204-11ae-43b8-b80c-f744efe2b10b" name="原业务单据号" binding="soribillno" caption="原业务单据号"/>
+        <columnlist id="faf5e859-fe5c-4500-9623-a7008a14c59b" name="主支付凭证编号" binding="soriginalvoucherno" caption="主支付凭证编号"/>
+        <columnlist id="0831a61b-8485-4cfa-a05d-878b9f4b7b7c" name="支付方式" binding="spaytypecode" caption="支付方式">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1d3813c5-aaca-4796-b69d-a38585617601"/>
+        </columnlist>
+        <columnlist id="25a2972f-8fda-4d19-9045-d4f8085a2d39" name="金额" binding="npayamt" caption="金额"/>
+        <columnlist id="28648f10-ddc0-452c-99ae-4cd23e2c982c" name="交易状态" binding="sstatus" caption="交易状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        </columnlist>
+        <columnlist id="5ecd5497-2a48-45a1-b5b1-7b1be39af05c" name="实际退款日期" binding="spaydate" caption="实际退款日期"/>
+        <columnlist id="6818ec31-0e72-4674-ada5-3206a1cc138a" name="备注信息" binding="sremark" caption="备注信息"/>
+        <columnlist id="035d739b-4893-4d3f-a2ef-07963b2d5da8" name="支付交易序号" binding="spaydictateno" caption="支付交易序号"/>
+        <columnlist id="e4e86c64-72ad-4d74-ac1a-15b770590924" name="支付报文编号" binding="spaymsgno" caption="支付报文编号"/>
+        <columnlist id="486d3c3b-9700-44a2-a5c2-74fa752834a7" name="支付委托日期" binding="spayentrustdate" caption="支付委托日期"/>
+        <columnlist id="beebf6bf-8cff-4cdb-ab86-4ccaa3004a0b" name="支付发起行行号" binding="spaysndbnkno" caption="支付发起行行号"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="6dee3313-567e-411b-927e-d276b6b3db13" name="收款银行退款通知明细信息列表" grouptitle="收款银行退款通知明细信息列表">
+      <widgetRefs xsi:type="model:Table" id="0bae2f9c-3e0c-4e55-8de1-a212bc7690b1" name="TableImpl-0bae2f9c-3e0c-4e55-8de1-a212bc7690b1" binding="pagingcontextSub" tabletype="paging" showcheckbox="false" height="200">
+        <columnlist id="942ae805-fd2e-43ec-a8dc-d8824721ee38" name="序号" binding="iseqno" caption="序号"/>
+        <columnlist id="754948f1-b3e8-430f-9a6b-91a639152802" name="退款明细Id" binding="sid" caption="退款明细Id"/>
+        <columnlist id="45d51f65-6bde-48e5-86d3-f567eaddd9dd" name="退款金额" binding="npayamt" caption="退款金额"/>
+        <columnlist id="322df79d-afa6-44bc-8d9d-ae49a52c534b" name="退款原因" binding="sremark" caption="退款原因"/>
+        <columnlist id="72dfd89d-5a29-400f-9754-3ddf4c7c1863" name="原付款人账号" binding="spayacctno" caption="原付款人账号"/>
+        <columnlist id="12eda3c4-440d-4c63-9283-03dc8df0796f" name="原付款人名称" binding="spayacctname" caption="原付款人名称"/>
+        <columnlist id="96c4d00d-2caf-4f95-aaed-682d77c26a50" name="原付款人银行" binding="spayacctbankname" caption="原付款人银行"/>
+        <columnlist id="c7f82f3c-c9d5-4850-aaa6-1eb88134836e" name="原收款人账号" binding="spayeeacctno" caption="原收款人账号"/>
+        <columnlist id="97c59d4a-9fea-4d5e-b33a-68202dde990f" name="原收款人名称" binding="spayeeacctname" caption="原收款人名称"/>
+        <columnlist id="dc8587a2-c92a-4a3f-af4e-ad29456c9b6d" name="原收款人银行" binding="spayeeacctbankname" caption="原收款人银行"/>
+        <columnlist id="425f1908-9de5-42d7-aa6d-f078a49e10ac" name="原收款人银行行号" binding="spayeeacctbankno" caption="原收款人银行行号"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="6e2c157d-a920-45ee-90aa-e44086af3799" name="收款银行退款通知主信息列表(历史表)" grouptitle="收款银行退款通知主信息列表(历史表)">
+      <widgetRefs xsi:type="model:Table" id="823855b2-6802-486c-94ed-0259b4c4c000" name="TableImpl-f2d85e1b-bd7a-4495-9deb-0f714984e639" binding="pagingcontextMainHis" caption="" tabletype="paging" showcheckbox="false" refdoubleclickdirection="cec2dcf7-9495-4b60-99ec-031473ddae3e" height="280">
+        <columnlist id="40c2ad88-f5f9-438b-9552-fe576c0fbb61" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="c4afd251-325a-430a-822a-a9653142e5cb" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="a9c9c23f-51ce-4b30-9df7-03bc11f42abb" name="凭证日期" binding="svoudate" caption="凭证日期"/>
+        <columnlist id="a35aec5f-e045-4dae-9282-f5854a91ea97" name="委托日期" binding="scommitdate" caption="委托日期"/>
+        <columnlist id="74a2bca5-9574-4233-92ee-c90ca7ebba8c" name="凭证编号" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="fcb0dc48-a5a6-4741-8938-89bc239393df" name="原业务单据号" binding="soribillno" caption="原业务单据号"/>
+        <columnlist id="0bf3d08e-5a05-481d-85d9-f7199762d3dd" name="主支付凭证编号" binding="soriginalvoucherno" caption="主支付凭证编号"/>
+        <columnlist id="197de20a-8c93-41ed-86e9-c86ed457f2b2" name="支付方式" binding="spaytypecode" caption="支付方式">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1d3813c5-aaca-4796-b69d-a38585617601"/>
+        </columnlist>
+        <columnlist id="26c89e24-b52b-4c64-a0f7-6fbbfebe8d86" name="金额" binding="npayamt" caption="金额"/>
+        <columnlist id="79cbe114-6c38-4ea0-b73b-2c303a982020" name="交易状态" binding="sstatus" caption="交易状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        </columnlist>
+        <columnlist id="2f4ea5ee-dac3-459b-96ea-7f20a758f415" name="实际退款日期" binding="spaydate" caption="实际退款日期"/>
+        <columnlist id="eaf21a38-d8d6-4502-8ac2-22f914074e55" name="备注信息" binding="sremark" caption="备注信息"/>
+        <columnlist id="984e3f3e-ec0b-4d68-9833-eec2a3c97eed" name="支付交易序号" binding="spaydictateno" caption="支付交易序号"/>
+        <columnlist id="ffb2a19b-f6cf-4cac-b281-ac2d95e141c0" name="支付报文编号" binding="spaymsgno" caption="支付报文编号"/>
+        <columnlist id="17614bc6-a989-43e2-89f9-51c3073d27cc" name="支付委托日期" binding="spayentrustdate" caption="支付委托日期"/>
+        <columnlist id="970a1188-276e-4817-af54-73a575d0ee04" name="支付发起行行号" binding="spaysndbnkno" caption="支付发起行行号"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="61bbcc12-60f2-4682-b904-83770ab1ec43" name="收款银行退款通知明细信息列表(历史表)" grouptitle="收款银行退款通知明细信息列表(历史表)">
+      <widgetRefs xsi:type="model:Table" id="102a215c-e7c9-4e18-afce-ee942a9ae483" name="TableImpl-0bae2f9c-3e0c-4e55-8de1-a212bc7690b1" binding="pagingcontextSubHis" tabletype="paging" showcheckbox="false" height="200">
+        <columnlist id="92250a35-94ce-48a8-b7aa-8f7e5fc259db" name="序号" binding="iseqno" caption="序号"/>
+        <columnlist id="fe945a7f-017b-4fcb-ac7c-0dbe9f34c42e" name="退款明细Id" binding="sid" caption="退款明细Id"/>
+        <columnlist id="e0203bfd-80f9-4166-9ca1-a2a138e150c4" name="退款金额" binding="npayamt" caption="退款金额"/>
+        <columnlist id="82ab2475-244f-41b3-9822-58906035f14d" name="退款原因" binding="sremark" caption="退款原因"/>
+        <columnlist id="8cfa58be-4150-409f-af07-8102cb5a8131" name="原付款人账号" binding="spayacctno" caption="原付款人账号"/>
+        <columnlist id="7b7c56b9-8b59-4ec7-8c64-084afa4b8ad9" name="原付款人名称" binding="spayacctname" caption="原付款人名称"/>
+        <columnlist id="05d5cd94-fc41-4f72-a8e4-2864f298f761" name="原付款人银行" binding="spayacctbankname" caption="原付款人银行"/>
+        <columnlist id="01125e17-094f-4006-8536-98996afc6a1d" name="原收款人账号" binding="spayeeacctno" caption="原收款人账号"/>
+        <columnlist id="d7a54067-d0d9-408b-a7f0-6f4916fba720" name="原收款人名称" binding="spayeeacctname" caption="原收款人名称"/>
+        <columnlist id="8b2661ef-ef98-403d-bb9b-d515eaf29ed1" name="原收款人银行" binding="spayeeacctbankname" caption="原收款人银行"/>
+        <columnlist id="6af776ef-368d-40e3-bf60-d057bacd8a05" name="原收款人银行行号" binding="spayeeacctbankno" caption="原收款人银行行号"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="b80a919a-d0e7-4cb4-8404-e5f760a55f75">
+    <pages id="741534f0-2277-4769-8edf-521ee35a0261" name="收款银行通知视图信息">
+      <views id="02b5fb62-5ef8-4abc-a05a-f32845c62dff" name="收款银行退款通知查询界面" isdefault="true" contentArea="adedd234-9b2a-49f8-8c13-735405379c57">
+        <buttonArea id="86d5747c-9ed7-49df-9ef7-2238066f3458" name="JButtonAreaImpl-86d5747c-9ed7-49df-9ef7-2238066f3458">
+          <buttons id="93a33cc2-e53e-49b5-adb3-c1fe424c2fc4" name="查询" caption="查询" direction="fafa1697-c75b-4ea8-b126-c2835096d28c"/>
+        </buttonArea>
+      </views>
+      <views id="def2ff52-5fa7-4455-b9e9-18714b2391b1" name="收款银行退款通知信息列表" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="dc551afb-aa29-4853-9780-196eee293511 6dee3313-567e-411b-927e-d276b6b3db13">
+        <buttonArea id="997d83c6-01f0-4427-944e-ef7720ff5642" name="JButtonAreaImpl-997d83c6-01f0-4427-944e-ef7720ff5642">
+          <buttons id="be4fd13a-5417-4744-ae96-44c0eafefd61" name="返回" caption="返回" direction="4e0bf567-e14f-4559-847e-5a17fa0b020f"/>
+        </buttonArea>
+      </views>
+      <views id="0c6eccd3-091c-45dd-b0b9-6e3f2d13d426" name="收款银行退款通知信息列表(历史表)" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="6e2c157d-a920-45ee-90aa-e44086af3799 61bbcc12-60f2-4682-b904-83770ab1ec43">
+        <buttonArea id="dd663e55-62eb-4ca4-a4dc-88a5c08ecff0" name="JButtonAreaImpl-dd663e55-62eb-4ca4-a4dc-88a5c08ecff0">
+          <buttons id="6393d376-e9bd-4f41-be6b-441fadf12b58" name="返回" caption="返回" direction="4e0bf567-e14f-4559-847e-5a17fa0b020f"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

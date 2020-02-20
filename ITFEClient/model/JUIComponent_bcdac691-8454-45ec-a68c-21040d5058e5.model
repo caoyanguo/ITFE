@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bcdac691-8454-45ec-a68c-21040d5058e5" name="9117支出核对包重发请求" ename="payoutCheckRequest">
+  <jproperties id="6b36ff02-072a-4e51-902a-33b3328398c9" key="GeneratedTime" value="1331706244484"/>
+  <refModule href="JModule_771e5765-c964-4a2b-a208-8dbc1e879d0f.model#771e5765-c964-4a2b-a208-8dbc1e879d0f"/>
+  <model id="4d247a43-e8d9-4646-b43e-3efc746ea42e" name="JModelImpl-4d247a43-e8d9-4646-b43e-3efc746ea42e">
+    <directions id="f5689fac-0f56-43bd-b538-c7041aa09a47" name="重发请求" ename="payoutRequest"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_b2677ca1-c432-4132-9d7d-9b05409769bf.model#b2677ca1-c432-4132-9d7d-9b05409769bf"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="d23cc8b8-63a1-4297-81be-9301a9def854">
+    <contentareanode id="8f51055b-d562-4174-aa45-8f745b396764" name="重发请求" grouptitle="请求信息">
+      <widgetRefs xsi:type="model:Text" id="9c3e9080-2fb0-4f32-818e-12929d9fb79e" name="发起机构代码" binding="sendorgcode" caption="发起机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="dfe32fb4-589b-4ea7-8b0c-f7419de109dd" name="委托日期" binding="entrustdate" caption="委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="680eb494-4326-4ee3-965d-6adf57d7e91f" name="原包报文编号" binding="oripackmsgno" caption="原包报文编号"/>
+      <widgetRefs xsi:type="model:Text" id="100bda95-51ea-42b8-a788-b5002823ae9b" name="原核对日期" binding="orichkdate" caption="原核对日期"/>
+      <widgetRefs xsi:type="model:Text" id="0045f673-a153-467b-afd4-2f1f07dd9f9a" name="原包流水号" binding="oripackno" caption="原包流水号"/>
+      <widgetRefs xsi:type="model:Combo" id="9ade1e12-d3f2-4094-a63f-a3c9b374e214" name="机构类型" binding="orgtype" caption="机构类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#2b746a39-0007-4033-992a-2944d3b51412"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="902b2b5e-1ec7-4d5f-a7fc-c2a3251e112a">
+    <pages id="0b766797-de71-406c-9958-4d8e64c1c7a5" name="重发请求">
+      <views id="fd534465-5fb8-4beb-861b-d1548fdb59c3" name="重发请求" isdefault="true" contentArea="8f51055b-d562-4174-aa45-8f745b396764">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="61b8201a-c5c2-4c74-b23e-fc94f8484c14" name="重发请求">
+          <buttons id="fe17923a-2840-40a2-980b-f4f75d9c4b6d" name="申请" caption="申请" direction="f5689fac-0f56-43bd-b538-c7041aa09a47"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

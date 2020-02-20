@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="38c35817-eb4f-4dec-90d5-83afcadc7911" name="更正查询处理服务组件" ename="TvInCorrhandbookQuery">
+  <jproperties id="b4bf6fa8-460d-4f0e-ab30-1a8feac03353" key="GeneratedTime" value="1331531145812"/>
+  <refModule href="JModule_0413feed-f35c-466b-9227-f0e78787fd3f.model#0413feed-f35c-466b-9227-f0e78787fd3f"/>
+  <methods id="e3a9254b-f666-46a9-8969-e8693531fa69" ename="updateFail" name="批量更新失败" codecomment="批量更新失败" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="29a533d3-c5b7-4784-94cd-ed073ddf6e4b" name="更新数据" ename="dtoInfos" type="java.util.List"/>
+  </methods>
+  <methods id="1fce221c-c46c-4377-97e8-5820d437f1ed" ename="updateSuccess" name="批量更新成功" codecomment="批量更新成功" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="f88f8839-34c4-4061-be3a-045fa8b2a99b" name="更新数据" ename="dtoInfos" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

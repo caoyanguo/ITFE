@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="cbb57262-d975-4963-8559-e6b70fadcf8b" name="批次信息服务组件" ename="TsSysbatch">
+  <refModule href="JModule_33bb3fe3-0879-42e2-a164-54cdba592c4c.model#33bb3fe3-0879-42e2-a164-54cdba592c4c"/>
+  <methods id="618a34ef-6782-4081-8c4a-25ab35fc8674" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="批次信息">
+    <methodParams id="5ca4d847-6470-4f29-acee-8ef002fa2b7b" name="批次信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="91c66254-e0e6-4b19-8d1f-291530a7f293" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="70dfbc85-fbbd-4f16-be9d-080fd907d5f7" name="批次信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+   <methods id="91c66254-e0e6-4b19-8d1f-291530a7f293" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="7e802530-b2c6-4318-8888-098afe532ceb" name="批次信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

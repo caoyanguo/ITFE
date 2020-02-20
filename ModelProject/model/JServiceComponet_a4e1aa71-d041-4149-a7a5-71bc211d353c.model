@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a4e1aa71-d041-4149-a7a5-71bc211d353c" name="TCBS报表文件存储服务组件" ename="tbbillstore">
+  <jproperties id="120064a6-ac3b-43b4-96ee-efbf46f02a9f" key="GeneratedTime" value="1433232485042"/>
+  <refModule href="JModule_835288a6-8638-4efa-8f81-d3907365243c.model#835288a6-8638-4efa-8f81-d3907365243c"/>
+  <methods id="90a765e2-4d15-4b97-bf3e-66681e55e7a6" ename="filedownLoad" name="文件下载" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="69aba7b4-a532-42e3-a5e7-a3cb62d3bd46" name="参数" ename="paramlist" type="java.util.List"/>
+  </methods>
+  <methods id="a4eb2ea0-5b84-4212-ab80-4833a11417f1" ename="fileupload" name="文件上传" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="85ded38a-d0e7-4b62-a81e-e26bd9a82185" name="参数" ename="paramList" type="java.util.List"/>
+  </methods>
+  <methods id="40d7fbd3-18e9-4ca7-9e98-918f2d98644c" ename="searchFileInfo" name="查询上传报表信息" returntype="java.util.List">
+    <methodParams id="99291171-1a8a-4918-b1ad-a3d35fc97437" name="参数" ename="paramList" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

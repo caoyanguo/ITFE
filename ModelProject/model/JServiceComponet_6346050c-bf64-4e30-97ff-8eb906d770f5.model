@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6346050c-bf64-4e30-97ff-8eb906d770f5" name="收发日志监控" ename="queryLogConsole">
+  <jproperties id="aa0640d8-ee0c-45a5-8fe2-0382716964df" key="GeneratedTime" value="1330485996187"/>
+  <refModule href="JModule_c2fd4276-2e55-4a8b-9e73-fbf7084b34f1.model#c2fd4276-2e55-4a8b-9e73-fbf7084b34f1"/>
+  <methods id="537f6554-6aa1-413c-8c92-bac47a5a7c86" ename="getLogByDate" name="getLogByDate" codecomment="查询指定日期的接收（发送）日志" returntype="java.util.List" remark="查询指定日期的接收（发送）日志">
+    <methodParams id="2f04c664-75b4-44b2-92cd-341be0398ca8" name="strType" ename="strType" type="java.lang.String" codecomment="收发标识&#xD;&#xA;收发标志&#xD;&#xA;收发标志"/>
+    <methodParams id="b33b22e7-1b23-493e-be91-21744d968531" name="queryDate" ename="queryDate" type="java.lang.String" codecomment="查询日期"/>
+  </methods>
+</model:JServiceComponent>

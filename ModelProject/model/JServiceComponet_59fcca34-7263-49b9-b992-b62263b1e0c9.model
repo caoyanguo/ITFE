@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="59fcca34-7263-49b9-b992-b62263b1e0c9" name="常用失败原因维护服务" ename="TsCheckFailReason" shared="true">
+  <jproperties id="b2369ed5-96a2-40d0-a71c-2bd447d6773c" key="GeneratedTime" value="1378523314390"/>
+  <refModule href="JModule_f4639461-646f-47f8-9e06-f7ef999c7e4d.model#f4639461-646f-47f8-9e06-f7ef999c7e4d"/>
+  <methods id="41053d91-0b33-410f-8f52-213fbc3aa058" ename="save" name="保存" codecomment="保存" returntype="java.lang.String" remark="保存">
+    <methodParams id="9d8315de-697f-48d3-a5d5-a7faa3a27af1" name="失败原因对象" ename="dto" type="com.cfcc.itfe.persistence.dto.TsCheckfailreasonDto"/>
+  </methods>
+  <methods id="f9d2d941-275e-425f-9e4a-a00d9b7a5e7a" ename="delete" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void" remark="删除">
+    <methodParams id="93b30841-16a6-499b-8a9e-51297ce0911d" name="失败原因对象" ename="dto" type="com.cfcc.itfe.persistence.dto.TsCheckfailreasonDto"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="98a1e5d0-ba40-41eb-b3d8-71b793f9f41d" name="付款账户与地税科目对应关系" ename="tsTaxPayacct">
+  <jproperties id="cf764c29-2b72-4ba1-9586-a3aad6c43b90" key="GeneratedTime" value="1403788838328"/>
+  <refModule href="JModule_a7a94901-b778-430f-a217-a41c8f2f50ed.model#a7a94901-b778-430f-a217-a41c8f2f50ed"/>
+  <model id="e138c39d-1bb1-4794-806e-15699edeaeb9" name="JModelImpl-e138c39d-1bb1-4794-806e-15699edeaeb9">
+    <attributes id="6cd12504-65d2-4204-af44-d98e05d449c0" name="queryDto" type="com.cfcc.itfe.persistence.dto.TsTaxpayacctDto"/>
+    <attributes id="6d556cfc-3b9b-4079-a9ef-84eac8174115" name="dto" type="com.cfcc.itfe.persistence.dto.TsTaxpayacctDto"/>
+    <attributes id="2b1ff67e-19bb-450b-ac91-8077f38f6755" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="a4eaf31f-b469-4e42-a03d-9bf69696ca4b" name="查询" ename="query"/>
+    <directions id="00b7f0ca-b428-4353-909a-7c5a907aad8c" viewers="94b74343-44e5-4b09-ace3-b9ba9b5dad5b" name="跳转到录入界面" ename="goInput"/>
+    <directions id="dce8c0ab-e3db-4738-8820-0943ab8cdbde" viewers="eb222067-b964-4dae-af43-d7b00083a35d" name="跳转到修改界面" ename="goModify"/>
+    <directions id="754b2eb7-0f8f-4eed-86d0-6b050a04ebbd" name="删除" ename="delete"/>
+    <directions id="c46fec00-0d70-4e8a-a4f9-dc549d454d1e" name="录入保存" ename="inputSave"/>
+    <directions id="cb53ce0d-c56c-4d5a-bcd7-98d7fa8a3e86" viewers="63d74f68-8d21-4886-afc2-88ce5659fc50" name="返回查询界面" ename="goBack"/>
+    <directions id="5eb4b51e-6b73-4966-95cf-24202de553b3" name="修改保存" ename="modifySave"/>
+    <directions id="9412cf2d-0f11-4963-9ba1-fc0ea264f97c" name="单选" ename="singleSelect"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_e0802fdb-b9dc-4bcb-8d34-9d726217df91.model#e0802fdb-b9dc-4bcb-8d34-9d726217df91"/>
+  <contentAreas id="af51f8e1-a19d-4dc7-8210-c0ff3b426817">
+    <contentareanode id="a81086e2-3438-4ead-9dd0-048eb17588c8" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Text" id="760fa686-cca5-4e96-93e7-89868dcbe535" name="国库主体代码" binding="queryDto.strecode" caption="国库主体代码"/>
+      <widgetRefs xsi:type="model:Text" id="40f4cfe0-89f2-4149-a96f-77d28bfa20bc" name="地税机构代码" binding="queryDto.staxorgcode" visible="false" caption="地税机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="5fedab54-3fd3-4d9d-abfd-a86832c4377d" name="地税机构名称" binding="queryDto.staxorgname" visible="false" caption="地税机构名称"/>
+      <widgetRefs xsi:type="model:Text" id="f626ce05-480f-4786-8501-7d8a2e57ad60" name="付款人账户" binding="queryDto.spayeracct" caption="付款人账户"/>
+      <widgetRefs xsi:type="model:Text" id="6f0b8576-7e3e-45a7-af6a-66c21e07a86b" name="付款人名称" binding="queryDto.spayername" caption="付款人名称"/>
+      <widgetRefs xsi:type="model:Text" id="4e2b34b0-7e99-4f22-ad02-934eba13a6e1" name="地税科目代码" binding="queryDto.staxsubcode" caption="地税科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="79f8c00f-386a-4574-8dfa-22b41251e3f8" name="地税科目名称" binding="queryDto.staxsubname" caption="地税科目名称"/>
+      <widgetRefs xsi:type="model:Button" id="769f4c60-bece-4dbc-920b-fa929e350333" name="查询" caption="查询" direction="a4eaf31f-b469-4e42-a03d-9bf69696ca4b"/>
+    </contentareanode>
+    <contentareanode id="0b7ee791-4665-4d0e-863d-d3691370c042" name="信息录入" grouptitle="信息录入">
+      <widgetRefs xsi:type="model:Text" id="2d22dc86-e4c7-4468-b6d9-3a3765d3a793" name="国库主体代码" binding="dto.strecode" caption="国库主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="44d0d80d-040a-4fd8-a75a-067971eb57d0" name="地税机构代码" binding="dto.staxorgcode" visible="false" caption="地税机构代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="d9d598b8-c244-4ad8-a365-7f798c471037" name="地税机构名称" binding="dto.staxorgname" visible="false" caption="地税机构名称"/>
+      <widgetRefs xsi:type="model:Text" id="8e8d4d9a-1cc3-4b16-93d0-4b8ca3328421" name="付款人账户" binding="dto.spayeracct" caption="付款人账户" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="0772ad67-1f29-49ae-8fab-9faf173cbee9" name="付款人名称" binding="dto.spayername" caption="付款人名称"/>
+      <widgetRefs xsi:type="model:Text" id="cf8a0fcd-0581-4896-8ed4-173ed039a638" name="地税科目代码" binding="dto.staxsubcode" caption="地税科目代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="e53d1209-5cfd-4200-8685-84825ffd7c08" name="地税科目名称" binding="dto.staxsubname" caption="地税科目名称" required="true"/>
+    </contentareanode>
+    <contentareanode id="4f22725d-e6bf-4cb8-898e-7a88d936d4f7" name="信息修改" grouptitle="信息修改">
+      <widgetRefs xsi:type="model:Text" id="c55fd943-c588-4898-af52-74d7e3c76db2" name="国库主体代码" binding="dto.strecode" caption="国库主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="da00c17b-64fe-45d4-af6f-7ad27bf2792f" name="地税机构代码" binding="dto.staxorgcode" visible="false" caption="地税机构代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="d9c3c403-46d0-4a53-b423-ed0d85de89c8" name="地税机构名称" binding="dto.staxorgname" visible="false" caption="地税机构名称"/>
+      <widgetRefs xsi:type="model:Text" id="4e4e734b-8930-4b5d-b09b-deee315ac7da" name="付款人账户" binding="dto.spayeracct" caption="付款人账户" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="270676d5-c6d5-4360-a09d-5109254b405f" name="付款人名称" binding="dto.spayername" caption="付款人名称"/>
+      <widgetRefs xsi:type="model:Text" id="b6693fe3-d337-40f1-b6dc-301bb67f42c6" name="地税科目代码" binding="dto.staxsubcode" caption="地税科目代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="9513942c-ebd5-4472-89b9-7afbf2429df2" name="地税科目名称" binding="dto.staxsubname" caption="地税科目名称" required="true"/>
+    </contentareanode>
+    <contentareanode id="71626321-7c2d-479d-9190-34ad75a38109" name="查询信息一览表" grouptitle="查询信息一览表">
+      <widgetRefs xsi:type="model:Table" id="0fd4b09f-19a8-45f6-8a66-a87b3fe38853" name="查询信息一览表" binding="pagingcontext" caption="查询信息一览表" tabletype="paging" selectedrows="" refsingleclickdirection="9412cf2d-0f11-4963-9ba1-fc0ea264f97c">
+        <columnlist id="dcef0f1b-f2cc-455f-bf64-ef83e0e9ba81" name="核算主体" binding="sorgcode" caption="核算主体"/>
+        <columnlist id="549d444e-e7e3-4dc3-88d8-58a0e982bfe9" name="国库主体代码" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="008973bc-7505-434b-b999-89eeffa6e44a" name="付款人账户" binding="spayeracct" caption="付款人账户"/>
+        <columnlist id="30d64a6a-42a8-47ce-bae7-d99d11a75cf1" name="付款人名称" binding="spayername" caption="付款人名称"/>
+        <columnlist id="7119f16a-c236-46b4-bd1c-d4afe9cc3800" name="地税科目代码" binding="staxsubcode" caption="地税科目代码"/>
+        <columnlist id="228f403f-0c80-4558-a8ef-5dabe58237a9" name="地税科目名称" binding="staxsubname" caption="地税科目名称"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="b65fb763-d9b0-4c08-85d9-e15a70e85b05">
+    <pages id="9678b3e4-e671-4cf9-8359-d9aa37c224cf" name="付款账户与地税科目对应关系显示页面">
+      <views id="63d74f68-8d21-4886-afc2-88ce5659fc50" name="查询与结果显示界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="a81086e2-3438-4ead-9dd0-048eb17588c8 71626321-7c2d-479d-9190-34ad75a38109">
+        <buttonArea id="4a7bf962-2678-4668-8585-7a395a4643a4" name="JButtonAreaImpl-4a7bf962-2678-4668-8585-7a395a4643a4">
+          <buttons id="7dff9523-5188-42ca-8f4b-9235d3012d01" name="录入" caption="录入" direction="00b7f0ca-b428-4353-909a-7c5a907aad8c"/>
+          <buttons id="2ddaaa39-3ea4-4a83-88be-b1ca057fafbf" name="修改" caption="修改" direction="dce8c0ab-e3db-4738-8820-0943ab8cdbde"/>
+          <buttons id="b9c559c0-6f10-4971-8b50-f5fbca63f360" name="删除" caption="删除" direction="754b2eb7-0f8f-4eed-86d0-6b050a04ebbd"/>
+        </buttonArea>
+      </views>
+      <views id="94b74343-44e5-4b09-ace3-b9ba9b5dad5b" name="录入界面" contentArea="0b7ee791-4665-4d0e-863d-d3691370c042">
+        <buttonArea id="b401e147-e6b7-4aca-96db-36e1837d0ba1" name="JButtonAreaImpl-b401e147-e6b7-4aca-96db-36e1837d0ba1">
+          <buttons id="ad47eb23-3fdc-4a1f-808b-0184fa950802" name="保存" caption="保存" direction="c46fec00-0d70-4e8a-a4f9-dc549d454d1e"/>
+          <buttons id="be2d35f2-f876-427e-a1d9-9f2807d70a13" name="返回" caption="返回" direction="cb53ce0d-c56c-4d5a-bcd7-98d7fa8a3e86"/>
+        </buttonArea>
+      </views>
+      <views id="eb222067-b964-4dae-af43-d7b00083a35d" name="修改界面" contentArea="4f22725d-e6bf-4cb8-898e-7a88d936d4f7">
+        <buttonArea id="ecfecc07-6630-4515-a578-8fa1a40935e1" name="JButtonAreaImpl-ecfecc07-6630-4515-a578-8fa1a40935e1">
+          <buttons id="914aa8a1-4023-43f6-841f-c1b1eb7c4a9d" name="保存" caption="保存" direction="5eb4b51e-6b73-4966-95cf-24202de553b3"/>
+          <buttons id="c9039a1a-b345-476f-aa05-a2550e696b75" name="返回" caption="返回" direction="cb53ce0d-c56c-4d5a-bcd7-98d7fa8a3e86"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

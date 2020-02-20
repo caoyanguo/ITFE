@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0d9b40c9-8ebe-4677-b0f9-289be008b62c" name="核算主体密钥参数维护服务" ename="TsMankey">
+  <jproperties id="d763c0a7-a9e4-474e-ad94-29e06310474c" key="GeneratedTime" value="1364039463360"/>
+  <refModule href="JModule_e6c51f9b-5fbb-4abb-a29d-d7bcbd1cacc7.model#e6c51f9b-5fbb-4abb-a29d-d7bcbd1cacc7"/>
+  <methods id="6f0d6263-d16c-4761-abb0-e5a3518ee4b1" ename="keyList" name="密钥参数列表" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="f4a3b38e-2fb5-46cf-a8cd-ed579d1f0844" name="密钥参数对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="a6cbdd3b-fb1d-48ba-824c-ffa506e3882e" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+  <methods id="934b74ce-15c2-4d38-9935-1d45c7628c86" ename="keyDelete" name="密钥参数删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a812615e-023b-4472-a6e0-f895d860a8e3" name="密钥参数对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="691a9bb2-917a-43ea-8aa1-dc59383d5dbf" ename="keySave" name="密钥参数录入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="6ddb0eb3-f59b-4d19-b7e0-6707861ab680" name="密钥参数对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="18eb8bcf-43fd-490a-bac0-0f28bf03130f" ename="keyModify" name="密钥参数修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8ffb5404-9b47-4a80-babc-5c05c5947bc0" name="密钥参数对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="6dec685b-c3a8-4eba-bf8d-c67667f18820" ename="updateAndExport" name="" returntype="java.util.List">
+    <methodParams id="433aa940-4b5d-4c92-b8d4-8d6a386703e2" name="机构信息代码" ename="list" type="java.util.List"/>
+    <methodParams id="3328037b-09a4-4f68-a675-5309ec2f7251" name="生效日期" ename="daffdate" type="java.util.Date"/>
+  </methods>
+  <methods id="58e301c9-a449-4d4a-8f65-a7ba2564bd2a" ename="autoGetBillOrg" name="" returntype="java.util.List"/>
+</model:JServiceComponent>

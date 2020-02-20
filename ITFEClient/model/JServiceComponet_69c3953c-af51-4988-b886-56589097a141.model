@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="69c3953c-af51-4988-b886-56589097a141" name="上传文件到服务器" ename="uploadfiletoserver">
+  <jproperties id="2ecfb911-cc7a-4958-b8cb-ee442bce1b98" key="GeneratedTime" value="1496818425391"/>
+  <refModule href="JModule_08db75ea-da9d-4bec-8b99-95592576b3d7.model#08db75ea-da9d-4bec-8b99-95592576b3d7"/>
+  <methods id="4463fb65-1d15-43ce-82d7-b6797c7479a8" ename="searchfile" name="查询列表" returntype="java.util.List">
+    <methodParams id="bd3c1fdc-1674-4d1a-b9e3-85aa3ab89898" name="传入参数map" ename="parammap" type="java.util.Map"/>
+  </methods>
+  <methods id="d3046116-1da3-4cd5-ac3f-7e4bec599054" ename="downloadfile" name="下载文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="1b5646ad-d143-4ffa-9179-e645bd360e7e" name="传入参数" ename="parammap" type="java.util.Map"/>
+  </methods>
+  <methods id="311111e8-2727-476b-b3ce-811df1aa300f" ename="deletefile" name="删除文件" codecomment="&#x9;&#x9;" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="abc6e121-d9d6-42f9-ab46-b6df3167a390" name="传入参数" ename="parammap" type="java.util.Map"/>
+  </methods>
+  <methods id="d1d8680e-3b58-4bcc-84be-eb764a3fad66" ename="uploadfile" name="上传文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="5a9e3c5a-5556-41fc-b951-3f620f6ba198" name="传入参数" ename="parammap" type="java.util.Map"/>
+  </methods>
+</model:JServiceComponent>

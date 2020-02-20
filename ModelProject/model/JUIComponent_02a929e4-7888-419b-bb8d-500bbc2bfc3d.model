@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="02a929e4-7888-419b-bb8d-500bbc2bfc3d" name="结算中心用户查询" ename="settleAccounts">
+  <jproperties id="3f39a6b0-99dd-43d7-ae65-707b057d3027" key="GeneratedTime" value="1396511809598"/>
+  <refModule href="JModule_d7c80045-887a-4e6b-94b7-771a14fa3da8.model#d7c80045-887a-4e6b-94b7-771a14fa3da8"/>
+  <model id="39be72fe-2a08-447f-90ce-bc525058f64d" name="JModelImpl-39be72fe-2a08-447f-90ce-bc525058f64d">
+    <attributes id="93d0bf32-7f78-4e39-83fc-22d2be56efd8" name="detailTsUsersDto" type="com.cfcc.itfe.persistence.dto.TsUsersDto"/>
+    <directions id="d8c2d4a8-daf7-4154-88e6-4a03f93aa4fa" name="查询" ename="search"/>
+    <directions id="0fe519b6-2fb2-49f4-b63a-4409897d0125" viewers="3c93e842-91c0-4654-a573-2aeb96d360d1" name="返回" ename="returnback"/>
+    <directions id="66822bb7-7d87-4cfe-8262-fdc3983353c5" viewers="94f5654f-a36d-4a6a-a0af-e658611af4dc" name="双击" ename="doubleclick"/>
+    <directions id="8fa20d9d-f300-4303-9553-777c12f70e0c" name="查询上级" ename="searchupleve"/>
+    <directions id="4f1676f8-1b05-42cd-8431-0aea729f86fe" name="查询下级" ename="searchnextleve"/>
+    <directions id="b7eaa6c7-d1b9-43a4-8a5e-bb5a7861561c" name="表格单击" ename="singleClick"/>
+  </model>
+  <services href="JServiceComponet_e03d5ab7-034f-428d-aa1a-23102a86dc9c.model#e03d5ab7-034f-428d-aa1a-23102a86dc9c"/>
+  <contentAreas id="23790316-a22c-4a92-bd70-98ece53dd836">
+    <contentareanode id="6fe7e003-8d77-45f1-9d08-019a9141f0de" name="查询" grouptitle="查询">
+      <widgetRefs xsi:type="model:Combo" id="00e30b59-c4ae-486c-891e-463a75fa623a" name="机构名称" binding="sorgname" caption="机构名称" display="displayValue" underly="underlyValue" modelsource="orglist"/>
+      <widgetRefs xsi:type="model:Combo" id="96b277ed-79c4-45b1-953e-35a3f44266f9" name="用户类型" binding="susertype" caption="用户类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d262c804-efc2-467e-b95a-9f2856a586f3"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="50a88541-9572-4fc7-b501-3594f8159783" name="机构级次" binding="sorglevel" caption="机构级次">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8e2e9b72-40e5-4287-a765-78594b2a5885"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="aaf91dd7-b72c-4329-9302-e5e0938208d4" name="是否登录" binding="sloginstatus" caption="是否登录">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4fb315f6-1e0f-40f9-b00a-f12bdbd6062f"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="b5f4d755-3c1e-4328-ae87-137422b96f76" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="78db4fbc-4a4f-4b22-bb87-f60c31c53b23" name="TableImpl-78db4fbc-4a4f-4b22-bb87-f60c31c53b23" binding="resultList" tablefacade="" refdoubleclickdirection="66822bb7-7d87-4cfe-8262-fdc3983353c5" refsingleclickdirection="b7eaa6c7-d1b9-43a4-8a5e-bb5a7861561c">
+        <columnlist id="eea609c2-cb51-415d-a9f7-82369cd4d7f1" name="所属机构名称" binding="sorgname" caption="所属机构名称"/>
+        <columnlist id="ba6245e3-9341-4fa6-8dcb-2ee8aace9350" name="机构级次" binding="sorglevel" caption="机构级次">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8e2e9b72-40e5-4287-a765-78594b2a5885"/>
+        </columnlist>
+        <columnlist id="538e7be1-2041-4faf-96d3-3805e31552da" name="用户代码" binding="susercode" caption="用户代码"/>
+        <columnlist id="5b90e0b5-8858-4bac-b8c6-454bafa157b2" name="用户姓名" binding="susername" caption="用户姓名"/>
+        <columnlist id="320a4515-0db7-4700-948f-757b32889639" name="用户类型" binding="susertype" caption="用户类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d262c804-efc2-467e-b95a-9f2856a586f3"/>
+        </columnlist>
+        <columnlist id="a0e7028e-8e49-4ad1-bb30-173bc5e75bc3" name="用户状态" binding="suserstatus" caption="用户状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#268a761a-cd12-45dd-869a-e4e57d5eb394"/>
+        </columnlist>
+        <columnlist id="dfc57c3b-5a5d-45fe-9a3e-de947c2e51de" name="是否登录" binding="sloginstatus" caption="是否登录">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4fb315f6-1e0f-40f9-b00a-f12bdbd6062f"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="18f0f076-4a18-453f-a66a-22f47d68d858" name="用户明细" grouptitle="用户明细">
+      <widgetRefs xsi:type="model:Text" id="433290d1-d224-423b-99bf-ff31b117ad34" name="机构名称" binding="detailorgname" caption="机构名称">
+        <componentStyle id="bc235468-8063-44b0-aac0-220ea6a66288" name="ComponentStyleImpl-bc235468-8063-44b0-aac0-220ea6a66288" ename="ComponentStyleImplbc235468806344b0aac0220ea6a66288" width="400"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="234a5d9f-e98d-448a-97bd-d5bf711bb7cf" name="机构级次" binding="detailorglevel" caption="机构级次">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8e2e9b72-40e5-4287-a765-78594b2a5885"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="757ff4f3-a43e-40b2-bf4f-c678bdf52ea4" name="用户代码" binding="detailTsUsersDto.susercode" caption="用户代码"/>
+      <widgetRefs xsi:type="model:Text" id="83b2c58d-7d4b-4dd1-8841-5f728f08cd96" name="用户姓名" binding="detailTsUsersDto.susername" caption="用户姓名"/>
+      <widgetRefs xsi:type="model:Combo" id="e9bc5656-6c1a-4b9b-bf0c-3874f7bc9a3a" name="用户类型" binding="detailTsUsersDto.susertype" caption="用户类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d262c804-efc2-467e-b95a-9f2856a586f3"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4808c9f7-9a67-4f4b-a4f2-7f1fe69c9aee" name="用户状态" binding="detailTsUsersDto.suserstatus" caption="用户状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#268a761a-cd12-45dd-869a-e4e57d5eb394"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="2a0c139b-3960-4349-a912-bc0aefdd18eb" name="密码修改日期" binding="detailTsUsersDto.spassmoddate" caption="密码修改日期"/>
+      <widgetRefs xsi:type="model:Combo" id="9b05af79-865d-4ffe-b13a-cb38b1240052" name="是否登录" binding="detailTsUsersDto.sloginstatus" caption="是否登录">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4fb315f6-1e0f-40f9-b00a-f12bdbd6062f"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="04ed29da-f2dd-4ccd-bcc1-6b0e7d69f71c">
+    <pages id="1a0db9a1-9cea-4f65-adc3-c4a6d51f98a3" name="结算中心用户查询">
+      <views id="3c93e842-91c0-4654-a573-2aeb96d360d1" name="查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="6fe7e003-8d77-45f1-9d08-019a9141f0de b5f4d755-3c1e-4328-ae87-137422b96f76">
+        <buttonArea id="71dfd1e3-562d-44c5-8f86-e97da434580f" name="JButtonAreaImpl-71dfd1e3-562d-44c5-8f86-e97da434580f">
+          <buttons id="af757570-cf52-430b-9c34-02830af8982d" name="查询" caption="查询" direction="d8c2d4a8-daf7-4154-88e6-4a03f93aa4fa"/>
+          <buttons id="cf8a286e-3d05-411c-8cb4-b05a069942d5" name="上级" caption="上级" direction="8fa20d9d-f300-4303-9553-777c12f70e0c"/>
+          <buttons id="d653f58d-25c4-4aa8-ba25-0163ef113a7f" name="下级" caption="下级" direction="4f1676f8-1b05-42cd-8431-0aea729f86fe"/>
+        </buttonArea>
+      </views>
+      <views id="94f5654f-a36d-4a6a-a0af-e658611af4dc" name="用户明细" contentArea="18f0f076-4a18-453f-a66a-22f47d68d858">
+        <buttonArea id="798b775b-40ab-414c-ad53-e65894731dfc" name="JButtonAreaImpl-798b775b-40ab-414c-ad53-e65894731dfc">
+          <buttons id="90b20c9a-9f04-47ca-b2b0-1170dcb388af" name="返回" caption="返回" direction="0fe519b6-2fb2-49f4-b63a-4409897d0125"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

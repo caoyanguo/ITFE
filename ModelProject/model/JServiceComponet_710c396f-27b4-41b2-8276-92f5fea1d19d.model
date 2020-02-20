@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="710c396f-27b4-41b2-8276-92f5fea1d19d" name="socket发送文件" ename="socketSend">
+  <jproperties id="81adf379-07cf-462c-a7ff-7b1a853c211a" key="GeneratedTime" value="1406012584527"/>
+  <refModule href="JModule_a5c1c3b4-45a8-43f3-84a3-394015a868a4.model#a5c1c3b4-45a8-43f3-84a3-394015a868a4"/>
+  <methods id="59a0bbe3-c7af-4667-90d8-86344b2f5241" ename="sendFile" name="发送文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="79d45128-2910-4490-8bc4-3b8fb26c0cbd" name="文件名记录参数集合" ename="list" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

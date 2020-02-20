@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8992d0de-73de-4797-9b9b-4e02dda11c22" name="财政直接支付调整凭证查询" ename="financeDirecPayAdjustVoucher"/>

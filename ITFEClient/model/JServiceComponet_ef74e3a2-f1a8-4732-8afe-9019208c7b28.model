@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="ef74e3a2-f1a8-4732-8afe-9019208c7b28" name="财政专户参数维护（厦门）" ename="tsMtofAccpt">
+  <jproperties id="68e83357-191d-46c3-9fbe-b40aea29d791" key="GeneratedTime" value="1430288292546"/>
+  <refModule href="JModule_fe2c9fb2-e123-404f-a76a-7eb94161ed8c.model#fe2c9fb2-e123-404f-a76a-7eb94161ed8c"/>
+  <methods id="c904f9aa-e034-4fb8-98dd-ced7c6bab5c9" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void" remark="财政专户参数维护（厦门）">
+    <methodParams id="f4ff1280-3863-4e05-bbc9-6accfd2bb457" name="删除" ename="delDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="删除"/>
+  </methods>
+  <methods id="15c120a1-a2a3-4e1d-b994-b78d3472a6ee" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="财政专户参数维护（厦门）">
+    <methodParams id="255cabec-b85a-47cc-b4b4-f2e47230814c" name="增加Dto" ename="addDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="增加Dto"/>
+  </methods>
+  <methods id="d8cda8e2-c62c-4bd1-9d02-88ed7cc77666" ename="modifyInfo" name="修改" codecomment="修改" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="财政专户参数维护（厦门）">
+    <methodParams id="fa5d87da-bc18-4f82-8a0f-24fd34f31044" name="修改" ename="modifyDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="修改"/>
+  </methods>
+</model:JServiceComponent>

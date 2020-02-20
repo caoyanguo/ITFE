@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b814a2ba-cebd-4c40-8a2f-6901423ba1da" name="上传文件查询" ename="UploadFileSearchUI">
+  <jproperties id="24569ddc-45d0-46f4-aef7-888160c563ba" key="GeneratedTime" value="1367690882622"/>
+  <refModule href="JModule_33bc967b-8208-49d3-9fd2-7105e87fbfd4.model#33bc967b-8208-49d3-9fd2-7105e87fbfd4"/>
+  <model id="b4eef1d3-7263-4aa2-8f71-ac8d3b609087" name="JModelImpl-b4eef1d3-7263-4aa2-8f71-ac8d3b609087">
+    <directions id="ebaec702-53ea-4740-ac2f-97b21ac8426c" name="报文收发日志查询" ename="searchMsgLog"/>
+    <directions id="11b2f089-f12c-46ce-98c9-5632040e987f" viewers="f3bf0f62-e40f-467a-9e81-975ccc0440c2" name="返回日志查询界面" ename="backSearch"/>
+    <directions id="c9430f56-bf8a-4ef0-9e69-fc1e63120fed" name="日志单击事件" ename="singleClickLog"/>
+    <directions id="45f76bee-d8aa-4fdb-a808-e18de2a62686" name="报文日志下载" ename="download"/>
+    <directions id="9ff79de2-e23b-4c16-b2cc-0cb510a7bf47" name="报文重发" ename="msgresend"/>
+    <directions id="c643ddfc-45c1-47e0-a852-c48e0ad9b9ae" name="设置失败" ename="updateFail"/>
+    <directions id="39b77871-b2d4-4bb9-a2cf-7612beb0bcf1" name="接收报文日志批量下载" ename="downloadAll"/>
+    <directions id="a6e8645e-9a61-4ba4-a2f0-1ad0f457b51a" name="全选" ename="selectAll"/>
+  </model>
+  <services href="JServiceComponet_45791302-f863-42cf-a397-56ef2fdf82b1.model#45791302-f863-42cf-a397-56ef2fdf82b1"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="1f0e397a-1946-4b23-84ae-28e75395c07c">
+    <contentareanode id="821026aa-ba51-4676-b35e-10d2fefb8c70" name="报文收发日志查询界面">
+      <widgetRefs xsi:type="model:Text" id="5d882268-e9ce-47bd-a831-224825a32f3c" name="所属日期" binding="finddto.ssenddate" visible="true" caption="所属日期" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Combo" id="ac975680-0703-41cc-bb7b-b4dd0e79e5fd" name="业务类型" binding="finddto.soperationtypecode" visible="true" caption="业务类型" enable="true" editable="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4d06f918-15af-4185-9161-962238159c66"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="cb1fcfb5-d4a5-402a-a937-8200502d311c" name="出票单位" binding="finddto.sbillorg" visible="false" caption="出票单位"/>
+      <widgetRefs xsi:type="model:Text" id="32fbe4c1-3b8f-46fa-9f47-4e9ab6b92ea2" name="国库主体代码" binding="finddto.strecode" visible="false" caption="国库代码"/>
+      <widgetRefs xsi:type="model:Combo" id="cd618ced-c0dc-4eb3-9448-c2ef98e413fb" name="ComboImpl-cd618ced-c0dc-4eb3-9448-c2ef98e413fb" binding="finddto.srecvorgcode" caption="核算主体代码" display="displayValue" underly="underlyValue" modelsource="orglist"/>
+    </contentareanode>
+    <contentareanode id="c0f0149c-1785-4abe-8bf7-281c924202d3" name="接收日志查询结果界面">
+      <widgetRefs xsi:type="model:Table" id="5bcf1b4d-ef26-45d9-9c41-42ebedef3dda" name="日志查询结果" binding="msgtablepage" caption="日志查询结果" tabletype="paging" showcheckbox="true" selectedrows="selectRs" refsingleclickdirection="c9430f56-bf8a-4ef0-9e69-fc1e63120fed" width="950" height="500">
+        <columnlist id="a3689e24-9ab2-4310-97b4-1847a6975efa" name="接收流水号" binding="ssendno" caption="接收流水号"/>
+        <columnlist id="25183a9b-3ef4-4106-ae0f-2bb0f6aa66c9" name="生成时间" binding="srecvtime" caption="上传时间"/>
+        <columnlist id="7403f875-b646-4976-9e8b-0707786e9b28" name="处理说明" binding="sretcode" caption="处理说明">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#284abc56-86ca-4763-bf39-94c2b2d300a6"/>
+        </columnlist>
+        <columnlist id="4b7557a6-a7ca-4288-b588-c5a5c0b9e472" name="备注" binding="sdemo" caption="备注"/>
+        <columnlist id="01a20f51-ee26-4ddf-96f6-d350f49f7003" name="业务类型" binding="soperationtypecode" caption="业务类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#5afea23d-c4de-4564-88a3-2a1e4d5f74bb"/>
+        </columnlist>
+        <columnlist id="7c555ff5-3a46-41b3-ba25-5b47e63a7b94" name="委托日期" binding="sdate" caption="委托日期"/>
+        <columnlist id="fcb72176-f4a9-4476-b862-b544956f4de9" name="保存路径" binding="stitle" caption="保存路径"/>
+        <columnlist id="ca0e424e-6037-41b5-acbf-c182162d3a85" name="报文来源" binding="sifsend" caption="报文来源">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#f4e13617-a917-4495-91ce-938968d2eece"/>
+        </columnlist>
+        <columnlist id="d44bae33-03d4-4596-9294-126ba26aa42b" name="所属日期" binding="ssenddate" caption="所属日期"/>
+        <columnlist id="14079c08-680a-476a-8838-98b603d64d15" name="处理时间" binding="sproctime" caption="处理时间"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="798a7370-894f-42e5-8988-c043c2cec4c6">
+    <pages id="1ec9f52c-81c3-4ea5-8c53-63026a675a7a" name="报文收发日志查询">
+      <views id="f3bf0f62-e40f-467a-9e81-975ccc0440c2" name="报文收发日志查询" isdefault="true" contentArea="821026aa-ba51-4676-b35e-10d2fefb8c70">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="4e3a51ab-eadd-4595-b56e-fb8b57ebf0e2" name="JButtonAreaImpl-4e3a51ab-eadd-4595-b56e-fb8b57ebf0e2">
+          <buttons id="4453eaa1-d97e-423e-af71-6426cef47660" name="查询" caption="查询" direction="ebaec702-53ea-4740-ac2f-97b21ac8426c"/>
+        </buttonArea>
+      </views>
+      <views id="a584311d-a572-4675-a567-e187b34f0a70" name="接收日志查询结果" contentArea="c0f0149c-1785-4abe-8bf7-281c924202d3">
+        <buttonArea id="d5b7706a-ed64-4779-8786-2403f792b28a" name="JButtonAreaImpl-803d682c-4671-4eb0-b34c-7948006e23d5">
+          <buttons id="c4d08b60-e91b-415b-b5e0-24c8e3d41032" name="全选" caption="全选" direction="a6e8645e-9a61-4ba4-a2f0-1ad0f457b51a"/>
+          <buttons id="ff334604-7cb2-4667-a1e9-defd4b76418c" name="批量下载" caption="批量下载" direction="39b77871-b2d4-4bb9-a2cf-7612beb0bcf1"/>
+          <buttons id="8c4b875d-40c0-4261-8e70-ebb9b59f8b9f" name="返回" visible="true" caption="返回" enable="true" direction="11b2f089-f12c-46ce-98c9-5632040e987f"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

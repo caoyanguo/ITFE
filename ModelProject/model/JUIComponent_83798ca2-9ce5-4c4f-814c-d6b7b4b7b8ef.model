@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="83798ca2-9ce5-4c4f-814c-d6b7b4b7b8ef" name="系统监控信息" ename="SysmoniterUI">
+  <jproperties id="b571771a-ceed-4d32-bc90-ef02f14facd2" key="GeneratedTime" value="1505977241127"/>
+  <refModule href="JModule_8dc0cc79-c8a3-4389-a752-def20ff1b9b5.model#8dc0cc79-c8a3-4389-a752-def20ff1b9b5"/>
+  <model id="e72bc625-6288-4286-a646-ca621c9daad3" name="JModelImpl-e72bc625-6288-4286-a646-ca621c9daad3">
+    <directions id="e60a842f-bf84-4b3c-9288-ffa58f304b70" name="刷新" ename="refresh"/>
+  </model>
+  <services href="JServiceComponet_b615585e-f169-410c-98ce-4f807d5d589e.model#b615585e-f169-410c-98ce-4f807d5d589e"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="4ad31c3d-43ec-4834-8f2b-50ce20a6eb0b">
+    <contentareanode id="b3b1f717-d92b-4cd0-bab9-dd296fed252f" name="监控区" grouptitle="监控区">
+      <widgetRefs xsi:type="model:Combo" id="f089ea96-2952-4306-9a2f-af2ff969e75c" name="监控范围" binding="moniterarea" caption="监控范围">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ea355dfa-12ba-4d7d-a57f-260e40e690e5"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Button" id="41a00922-7a8a-41c6-93b4-ce42f182fe2f" name="刷新" caption="刷新" layout="GridLayout" direction="e60a842f-bf84-4b3c-9288-ffa58f304b70"/>
+    </contentareanode>
+    <contentareanode id="9e13cb85-ab28-4524-a760-c9e5394a8b65" name="监控信息" grouptitle="监控信息" columnnum="4">
+      <widgetRefs xsi:type="model:Textarea" id="bc4008cd-595a-420b-99d2-9b6bacc04663" name="" binding="infoArea" caption=" " enable="true" editable="false">
+        <componentStyle id="b3f59e11-83b2-4010-98bf-7a58aeac45a4" name="ComponentStyleImpl-b3f59e11-83b2-4010-98bf-7a58aeac45a4" ename="ComponentStyleImplb3f59e1183b2401098bf7a58aeac45a4" width="900" height="400" componentheight="20" componentverticalalignment="" innercompositewidth="1200" innercompositeheight="430" innerhorizontalalignment="" innerverticalalignment=""/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="a08e037a-78dd-4b7f-a85b-10ee7439d61e">
+    <pages id="da2c6b92-ad94-421c-bd41-39e2ed71bed7" name="系统监控">
+      <views id="f887eab4-12b0-475c-9fc7-d83256c3c668" name="系统监控信息" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" genarateprocessorname="" contentArea="b3b1f717-d92b-4cd0-bab9-dd296fed252f 9e13cb85-ab28-4524-a760-c9e5394a8b65">
+        <buttonArea id="d6e0a6b1-25b6-440f-84dc-a4b45729d779" name="JButtonAreaImpl-d6e0a6b1-25b6-440f-84dc-a4b45729d779"/>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

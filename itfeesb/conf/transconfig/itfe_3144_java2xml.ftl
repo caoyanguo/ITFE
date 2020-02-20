@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+	<MSG>
+		<BatchHead3144>
+			<AgentBnkCode>${cfx.MSG.BatchHead3144.AgentBnkCode}</AgentBnkCode>
+			<FinOrgCode>${cfx.MSG.BatchHead3144.FinOrgCode}</FinOrgCode>
+			<TreCode>${cfx.MSG.BatchHead3144.TreCode}</TreCode>
+			<EntrustDate>${cfx.MSG.BatchHead3144.EntrustDate}</EntrustDate>
+			<PackNo>${cfx.MSG.BatchHead3144.PackNo}</PackNo>
+			<OriEntrustDate>${cfx.MSG.BatchHead3144.OriEntrustDate}</OriEntrustDate>
+			<OriPackNo>${cfx.MSG.BatchHead3144.OriPackNo}</OriPackNo>
+			<AllNum>${cfx.MSG.BatchHead3144.AllNum}</AllNum>
+			<AllAmt>${cfx.MSG.BatchHead3144.AllAmt}</AllAmt>
+			<PayoutVouType>${cfx.MSG.BatchHead3144.PayoutVouType}</PayoutVouType>
+			<PayMode>${cfx.MSG.BatchHead3144.PayMode}</PayMode>
+		</BatchHead3144>
+		<#list cfx.MSG.BatchReturn3144 as var1>
+		<BatchReturn3144>
+			<VouNo>${var1.VouNo}</VouNo>
+			<VouDate>${var1.VouDate}</VouDate>
+			<OriVouNo>${var1.OriVouNo}</OriVouNo>
+			<OriVouDate>${var1.OriVouDate}</OriVouDate>
+			<OriTraNo>${var1.OriTraNo}</OriTraNo>
+			<AcctDate>${var1.AcctDate}</AcctDate>
+			<Amt>${var1.Amt}</Amt>
+			<Result>${var1.Result}</Result>
+			<Description>${var1.Description}</Description>
+		</BatchReturn3144>
+		</#list>
+	</MSG>
+</CFX>

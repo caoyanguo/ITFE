@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="349a3c89-bbdd-454d-b758-bdee0385d6d7" name="银行与付款行对应关系查询" ename="TsBankandpay" shared="true"/>

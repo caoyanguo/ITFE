@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+	<MSG>
+		<BatchHead5104>
+			<TreCode>${cfx.MSG.BatchHead5104.TreCode}</TreCode>
+			<BillOrg>${cfx.MSG.BatchHead5104.BillOrg}</BillOrg>
+			<PayeeBankNo>${cfx.MSG.BatchHead5104.PayeeBankNo}</PayeeBankNo>
+			<EntrustDate>${cfx.MSG.BatchHead5104.EntrustDate}</EntrustDate>
+			<PackNo>${cfx.MSG.BatchHead5104.PackNo}</PackNo>
+			<AllNum>${cfx.MSG.BatchHead5104.AllNum}</AllNum>
+			<AllAmt>${cfx.MSG.BatchHead5104.AllAmt}</AllAmt>
+			<PayoutVouType>${cfx.MSG.BatchHead5104.PayoutVouType}</PayoutVouType>
+			<PayMode>${cfx.MSG.BatchHead5104.PayMode}</PayMode>
+		</BatchHead5104>
+		<#list cfx.MSG.Bill5104 as var1>
+		<Bill5104>
+			<TraNo>${var1.TraNo}</TraNo>
+			<VouNo>${var1.VouNo}</VouNo>
+			<VouDate>${var1.VouDate}</VouDate>
+			<PayerAcct>${var1.PayerAcct}</PayerAcct>
+			<PayerName>${var1.PayerName}</PayerName>
+			<PayerAddr>${var1.PayerAddr}</PayerAddr>
+			<PayeeAcct>${var1.PayeeAcct}</PayeeAcct>
+			<PayeeName>${var1.PayeeName}</PayeeName>
+			<PayeeAddr>${var1.PayeeAddr}</PayeeAddr>
+			<PayeeOpnBnkNo>${var1.PayeeOpnBnkNo}</PayeeOpnBnkNo>
+			<AddWord>${var1.AddWord}</AddWord>
+			<BudgetType>${var1.BudgetType}</BudgetType>
+			<TrimSign>${var1.TrimSign}</TrimSign>
+			<OfYear>${var1.OfYear}</OfYear>
+			<BdgAdmType>${var1.BdgAdmType}</BdgAdmType>
+			<Amt>${var1.Amt}</Amt>
+			<StatInfNum>${var1.StatInfNum}</StatInfNum>
+			<#list var1.Detail5104 as var2>
+			<Detail5104>
+				<SeqNo>${var2.SeqNo}</SeqNo>
+				<BdgOrgCode>${var2.BdgOrgCode}</BdgOrgCode>
+				<FuncSbtCode>${var2.FuncSbtCode}</FuncSbtCode>
+				<EcnomicSubjectCode>${var2.EcnomicSubjectCode}</EcnomicSubjectCode>
+				<Amt>${var2.Amt}</Amt>
+				<AcctProp>${var2.AcctProp}</AcctProp>
+			</Detail5104>
+			</#list>
+		</Bill5104>
+		</#list>
+	</MSG>
+</CFX>

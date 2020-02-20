@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+		<Reserve>${cfx.HEAD.Reserve}</Reserve>
+	</HEAD>
+	<MSG>
+		<Head2202>
+			<FinOrgCode>${cfx.MSG.Head2202.FinOrgCode}</FinOrgCode>
+			<TreCode>${cfx.MSG.Head2202.TreCode}</TreCode>
+			<AgentBnkCode>${cfx.MSG.Head2202.AgentBnkCode}</AgentBnkCode>
+			<EntrustDate>${cfx.MSG.Head2202.EntrustDate}</EntrustDate>
+			<PackNo>${cfx.MSG.Head2202.PackNo}</PackNo>
+			<AllNum>${cfx.MSG.Head2202.AllNum}</AllNum>
+			<AllAmt>${cfx.MSG.Head2202.AllAmt}</AllAmt>
+			<PayoutVouType>${cfx.MSG.Head2202.PayoutVouType}</PayoutVouType>
+			<PayMode>${cfx.MSG.Head2202.PayMode}</PayMode>
+		</Head2202>
+		<#list cfx.MSG.Bill2202 as var1>
+		<Bill2202>
+			<TraNo>${var1.TraNo}</TraNo>
+			<VouNo>${var1.VouNo}</VouNo>
+			<VouDate>${var1.VouDate}</VouDate>
+			<OriTraNo>${var1.OriTraNo}</OriTraNo>
+			<OriEntrustDate>${var1.OriEntrustDate}</OriEntrustDate>
+			<OriVouNo>${var1.OriVouNo}</OriVouNo>
+			<OriVouDate>${var1.OriVouDate}</OriVouDate>
+			<OriPayerAcct>${var1.OriPayerAcct}</OriPayerAcct>
+			<OriPayerName>${var1.OriPayerName}</OriPayerName>
+			<OriPayeeAcct>${var1.OriPayeeAcct}</OriPayeeAcct>
+			<OriPayeeName>${var1.OriPayeeName}</OriPayeeName>
+			<PayDictateNo>${var1.PayDictateNo}</PayDictateNo>
+			<PayMsgNo>${var1.PayMsgNo}</PayMsgNo>
+			<PayEntrustDate>${var1.PayEntrustDate}</PayEntrustDate>
+			<PaySndBnkNo>${var1.PaySndBnkNo}</PaySndBnkNo>
+			<BudgetType>${var1.BudgetType}</BudgetType>
+			<TrimSign>${var1.TrimSign}</TrimSign>
+			<OfYear>${var1.OfYear}</OfYear>
+			<Amt>${var1.Amt}</Amt>
+			<StatInfNum>${var1.StatInfNum}</StatInfNum>
+			<#list var1.Detail2202 as var2>
+			<Detail2202>
+			    <SeqNo>${var2.SeqNo}</SeqNo>
+			    <BdgOrgCode>${var2.BdgOrgCode}</BdgOrgCode>
+			    <FuncSbtCode>${var2.FuncSbtCode}</FuncSbtCode>
+			     <#if var2.EcnomicSubjectCode?exists>
+			    <EcnomicSubjectCode>${var2.EcnomicSubjectCode}</EcnomicSubjectCode>
+			    </#if>
+			    <Amt>${var2.Amt}</Amt>
+			    <AcctProp>${var2.AcctProp}</AcctProp>
+			    </Detail2202>
+			</#list>
+		</Bill2202>
+		</#list>
+	</MSG>
+</CFX>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="560c141b-5631-4afa-9ba8-481f3179c311" name="批量拨付数据导入" ename="massPayInto"/>

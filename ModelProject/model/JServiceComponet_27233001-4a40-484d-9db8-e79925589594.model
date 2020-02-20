@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="27233001-4a40-484d-9db8-e79925589594" name="电子税票信息查询服务组件" ename="TvFinIncomeonline">
+  <jproperties id="b1af9f3a-776d-4a57-88cd-7effcbed0ec2" key="GeneratedTime" value="1376984470381"/>
+  <refModule href="JModule_fc6f5b5f-7886-4cd4-a8a4-a9594eaaef7e.model#fc6f5b5f-7886-4cd4-a8a4-a9594eaaef7e"/>
+  <methods id="3da9a6db-42cf-41b4-bdad-a458cfeffd6f" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="电子税票信息查询">
+    <methodParams id="57a2e05f-29cb-4908-9a31-e5e8c1351610" name="电子税票信息查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="c68cf096-918a-4b86-9f6b-452be09bbc46" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="4ef62ab0-5b10-4b0d-9ba3-1753d5a58d8f" name="电子税票信息查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="c68cf096-918a-4b86-9f6b-452be09bbc46" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="b11b1c67-52c1-46a7-a4f9-3c5012e7696c" name="电子税票信息查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="e2f9cc99-dd03-4435-89fc-276f2035f67c" ename="checkTaxPayCodeOrTrecode" name="校验纳税人与国库对应关系" codecomment="校验纳税人与国库对应关系" returntype="java.lang.String">
+    <methodParams id="a3c7c891-1218-4e6b-982b-c51e8b2aeaed" name="选中电子税票信息" ename="excheckList" type="java.util.List"/>
+  </methods>
+  <methods id="749b9758-ab73-4746-b632-e0501bada6fa" ename="makeDivide" name="手动处理共享分成" codecomment="手动处理共享分成" returntype="java.lang.String">
+    <methodParams id="68565256-5dcb-4483-8ff9-c1a4cc729d3f" name="选中电子税票信息" ename="excheckList" type="java.util.List"/>
+    <methodParams id="815d0948-a0c8-4d0d-bfb4-13aea8d78239" name="查询时间" ename="reportdate" type="java.lang.String"/>
+  </methods>
+  <methods id="fceea243-274c-4fdf-bb8c-39f89e41a5fb" ename="exportTable" name="导出数据" codecomment="导出数据" returntype="java.util.List">
+    <methodParams id="4ca80970-7af8-41b3-8f22-404f87693959" name="数据对象dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="440038d8-4b66-45fd-9040-4e0cabbdd080" name="where条件" ename="sqlwhere" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

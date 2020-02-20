@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead2002" beanIdRef="BatchHead2002" />
+	<jb:wiring property="BillCheck2002" beanIdRef="BillCheck2002s" />
+</jb:bean>
+<jb:bean beanId="BatchHead2002" class="java.util.HashMap" createOnElement="BatchHead2002">
+	<jb:value property="ChkDate" decoder="String" data="CFX/MSG/BatchHead2002/ChkDate" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BatchHead2002/TreCode" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead2002/PackNo" />
+	<jb:value property="RecvPackNum" decoder="String" data="CFX/MSG/BatchHead2002/RecvPackNum" />
+	<jb:value property="PackAmt" decoder="String" data="CFX/MSG/BatchHead2002/PackAmt" />
+	<jb:value property="SendPackNum" decoder="String" data="CFX/MSG/BatchHead2002/SendPackNum" />
+	<jb:value property="SendPackAmt" decoder="String" data="CFX/MSG/BatchHead2002/SendPackAmt" />
+</jb:bean>
+<jb:bean beanId="BillCheck2002s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="BillCheck2002" />
+</jb:bean>
+<jb:bean beanId="BillCheck2002" class="java.util.HashMap" createOnElement="BillCheck2002">
+	<jb:value property="PayoutVouType" decoder="String" data="CFX/MSG/BillCheck2002/PayoutVouType" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BillCheck2002/PackNo" />
+	<jb:value property="CurPackVouNum" decoder="String" data="CFX/MSG/BillCheck2002/CurPackVouNum" />
+	<jb:value property="CurPackVouAmt" decoder="String" data="CFX/MSG/BillCheck2002/CurPackVouAmt" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

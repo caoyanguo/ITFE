@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="4b57d516-6d96-41cb-93ca-60c01ebb585a" name="数据变更及文件比对" remark="数据变更及文件比对" ename="datachangeAndCompare"/>

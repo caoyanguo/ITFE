@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="24004fb7-a6a5-4b53-919e-814eb3d8b209" name="文件解析公共服务" ename="fileResolveCommon" shared="true">
+  <jproperties id="76ccd26b-27ce-4720-a4d0-882017ea0eb9" key="GeneratedTime" value="1395023596218"/>
+  <refModule href="JModule_57d74aac-5599-4965-be54-900a36b2a15f.model#57d74aac-5599-4965-be54-900a36b2a15f"/>
+  <methods id="b7116fb8-0cd4-40ce-b55f-c4b12b3f619d" ename="loadFile" name="解析文件" returntype="com.cfcc.itfe.facade.data.MulitTableDto">
+    <methodParams id="b7663e9b-af12-42d9-8ace-54f059c4fc6d" name="filelist" ename="filelist" type="java.util.List"/>
+    <methodParams id="cdcf018a-bce2-413c-9ff9-c978cbb2a68d" name="biztype" ename="biztype" type="java.lang.String"/>
+    <methodParams id="65cf79b6-3a00-48c8-972d-ab41b540a2fa" name="filekind" ename="filekind"/>
+    <methodParams id="58cf07a9-d55a-4785-ba94-bffbcb27a040" name="paramdto" ename="paramdto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="d4a7cb53-b84b-4ebd-bb47-10258f1dbdf4" ename="createFileDto" name="createFileDto" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="5670b9a2-b21d-423f-95bc-dc1107011992" name="multidto" ename="multidto" type="com.cfcc.itfe.facade.data.MulitTableDto"/>
+  </methods>
+  <methods id="80f1f946-66a9-4d64-822d-94a68839c6d6" ename="updatefundinfo" name="更新资金报文信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="db24340e-8c2d-44e2-8964-97c4dec2db40" name="相关的dto" ename="payreckbackdto" type="com.cfcc.itfe.persistence.dto.TvPayreckBankBackDto"/>
+  </methods>
+</model:JServiceComponent>

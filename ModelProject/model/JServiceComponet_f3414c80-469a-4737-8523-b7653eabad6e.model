@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f3414c80-469a-4737-8523-b7653eabad6e" name="盖章位置参数维护" ename="tsstampposition" shared="true">
+  <jproperties id="66054d8f-e034-4d7e-a51e-6e48da2314af" key="GeneratedTime" value="1377250336343"/>
+  <refModule href="JModule_5cdecc34-87e0-4b40-b573-0681a16c73d0.model#5cdecc34-87e0-4b40-b573-0681a16c73d0"/>
+  <methods id="0f511325-4271-4fbe-8218-de0da188a72d" ename="addInfo" name="增加" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="84acc2d6-16f4-4e55-8a8c-5b68bfb1b5f1" name="签章位置DTO" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="5fe6c1d8-95a8-4b31-932a-924d60eef095" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8f5a5fd9-f398-46d3-8d94-796c53a93545" name="签章位置参数dtoInfo" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="15a16bfd-4f28-405f-b925-e995ada77ebb" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="6754f499-193b-4c39-9c22-14d7887d876a" name="dtoInfo" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="56daafeb-da33-47cb-b36c-640dd0889af8" ename="queryStampPosition" name="查询签章位置信息" returntype="java.util.List">
+    <methodParams id="99aec78d-d424-4111-aa0d-5ff7d7579901" name="用户证书ID" ename="certID" type="java.lang.String"/>
+    <methodParams id="26fb0bef-0927-42d2-bf13-846ea00f372b" name="国库代码" ename="treCode" type="java.lang.String"/>
+    <methodParams id="c8d82763-5c78-45f0-93d4-53999a7ec811" name="业务年度" ename="stYear" type="java.lang.Integer"/>
+    <methodParams id="af8590d5-3b67-4b29-8947-560ac6155982" name="凭证类型编码" ename="vtCode" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

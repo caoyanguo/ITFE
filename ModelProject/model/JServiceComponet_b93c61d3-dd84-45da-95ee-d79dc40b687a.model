@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b93c61d3-dd84-45da-95ee-d79dc40b687a" name="核对处理结果信息包" ename="Check3201">
+  <jproperties id="5e601557-8584-423c-85ec-668573606c46" key="GeneratedTime" value="1331635342812"/>
+  <refModule href="JModule_aec54950-8858-4da2-85f4-59eddf2a9fb8.model#aec54950-8858-4da2-85f4-59eddf2a9fb8"/>
+  <methods id="0e554e6e-03dc-48b1-b3df-f66a7c0ae4c0" ename="doApply" name="重发申请" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="2a3d1193-c3f7-4b6b-a5af-eb1ce78981c2" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="abb1c6c7-9616-44d9-acc5-532f2cc5b0c9" ename="doCheck" name="核对" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="c600295b-4e16-4a0c-9a43-97763f6b6616" name="idto" ename="idto"/>
+  </methods>
+</model:JServiceComponent>

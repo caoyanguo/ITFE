@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d0d1f696-f645-4053-a8ba-a06a85809734" name="代理行与清算行对应关系" ename="TsGenbankandreckbank" shared="true"/>

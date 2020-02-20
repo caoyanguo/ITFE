@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="MsgReturn9122" beanIdRef="MsgReturn9122" />
+</jb:bean>
+<jb:bean beanId="MsgReturn9122" class="java.util.HashMap" createOnElement="MsgReturn9122">
+	<jb:value property="OriMsgNo" decoder="String" data="CFX/MSG/MsgReturn9122/OriMsgNo" />
+	<jb:value property="OriSendOrgCode" decoder="String" data="CFX/MSG/MsgReturn9122/OriSendOrgCode" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/MsgReturn9122/OriEntrustDate" />
+	<jb:value property="OriRequestNo" decoder="String" data="CFX/MSG/MsgReturn9122/OriRequestNo" />
+	<jb:value property="Result" decoder="String" data="CFX/MSG/MsgReturn9122/Result" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/MsgReturn9122/AddWord" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

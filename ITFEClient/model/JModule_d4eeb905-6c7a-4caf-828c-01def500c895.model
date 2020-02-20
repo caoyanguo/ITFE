@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d4eeb905-6c7a-4caf-828c-01def500c895" name="电子凭证历史查询" remark="电子凭证历史查询" ename="voucherHisSearch"/>

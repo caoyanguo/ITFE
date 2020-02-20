@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="07737fc0-747e-4d19-b1b1-cb5b83ce2057" name="实拨资金处理服务" ename="payout">
+  <jproperties id="c9ce33e3-9de0-4fe5-93f9-32e052e59ebc" key="GeneratedTime" value="1433832051483"/>
+  <refModule href="JModule_82cce9dc-4b11-419b-97a4-426725e4b19b.model#82cce9dc-4b11-419b-97a4-426725e4b19b"/>
+  <methods id="011d5d43-b167-471a-b17e-2e4cd4107258" ename="findMainByPage" name="分页查询实拨资金主信息" codecomment="分页查询实拨资金主信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="d7bc4a0b-d306-44dd-a51d-88c7777a1329" name="查询实拨资金主信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainDto" codecomment="查询实拨资金主信息条件DTO"/>
+    <methodParams id="7f20e05f-71f5-4d73-998a-b35318e514de" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="d0371924-e601-4815-a8db-1065756ac1f1" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="a52ebd00-3509-4c35-ac88-927e536e0ed2" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="62e40074-47dc-4040-9719-f446246b0ae5" ename="findSubByPage" name="分页查询实拨资金子信息" codecomment="分页查询实拨资金子信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="7a518a62-0f9b-48a0-93b6-71210528e060" name="查询实拨资金子信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainDto" codecomment="查询实拨资金子信息条件DTO"/>
+    <methodParams id="9dd1e4ff-0360-4b44-85be-e5bb91ef41d1" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="b9a78079-f8d4-4f17-b348-897ad1e5c327" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="9d03e083-bab1-4f53-b45e-5790483a2c9a" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="7a1e2e19-4e9c-47f8-9fe5-ca5320fd6604" ename="reSendMsg" name="丢失报文的重发" codecomment="重发TIPS没有收到的报文" returntype="java.lang.String">
+    <methodParams id="00915cf9-e3a8-4684-83cb-119be7421b3c" name="委托日期" ename="scommitdate" type="java.lang.String" codecomment="委托日期"/>
+    <methodParams id="b7e9d02f-e9da-4fe1-9df5-ad1ecc645832" name="包流水号" ename="spackageno" type="java.lang.String" codecomment="包流水号"/>
+    <methodParams id="8b23230f-b3ea-4a69-90a0-335343d9f8c3" name="核算主体代码" ename="sorgcode" type="java.lang.String" codecomment="核算主体代码"/>
+    <methodParams id="0d255022-df34-4793-94da-ae4383f270b0" name="导入文件名称" ename="sfilename" type="java.lang.String" codecomment="导入文件名称"/>
+  </methods>
+  <methods id="cc6abbc6-83a5-4144-b3b3-cc93ecf5ce87" ename="saveInfo" name="保存处理" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="9a0f3f21-a8e1-447d-bdae-b058d87df874" name="更新内容" ename="updateDto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainDto"/>
+  </methods>
+  <methods id="04f4820a-df50-46e4-a033-b25f7ff7f8ed" ename="sendfilelist" name="发送内容列表" returntype="java.util.List">
+    <methodParams id="34674775-eb94-4424-8a4a-5be9adddcd47" name="核算主体代码" ename="sorgcode" type="java.lang.String"/>
+  </methods>
+  <methods id="65ff3adf-5ee3-46f5-b851-097638b46a1f" ename="getsendmsg" name="获得发送内容" returntype="java.util.List">
+    <methodParams id="94fa4289-78fc-498d-9147-2f1042a0bd62" name="核算主体代码" ename="sorgcode" type="java.lang.String"/>
+    <methodParams id="6cd40b12-7937-4fe9-8abc-ade13ff7e4e4" name="国库代码" ename="strecode" type="java.lang.String"/>
+    <methodParams id="b3e510cb-2d7d-4f06-b3cb-1aaaf5aba547" name="发送文件名称" ename="sfilename" type="java.lang.String"/>
+  </methods>
+  <methods id="ea358dde-3751-4117-8c16-298246469268" ename="findMainByPageForHis" name="分页查询实拨资金主信息(历史表)" codecomment="分页查询实拨资金主信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="6b34b98b-7872-471a-87df-10cfbac9a756" name="查询实拨资金主信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvPayoutmsgmainDto" codecomment="查询实拨资金主信息条件DTO"/>
+    <methodParams id="2b6a3312-f813-4044-9c13-6e44ffb3f727" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="7e761a5c-8be6-4d3f-9967-a28e5e5da1d8" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="3cf1892b-f828-4457-8b4d-dfe8ddd46c7c" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="980e3d6c-6927-4ddc-a600-e417fa884365" ename="findSubByPageForHis" name="分页查询实拨资金子信息(历史表)" codecomment="分页查询实拨资金子信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="4afaedc4-1845-403e-a68f-6c2afd468144" name="查询实拨资金子信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvPayoutmsgmainDto" codecomment="查询实拨资金子信息条件DTO"/>
+    <methodParams id="e3dae467-9963-46b4-8fb7-37dd95e14a9d" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="2ab27fa1-878a-4fcc-ac73-0622a71956fa" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="f85383a2-6bbf-49a9-9c76-0ee4cbc5d151" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="16b784c6-a27a-4491-960c-d107fe3356c5" ename="findPayOutByPrint" name="查询打印实拨资金信息" codecomment="查询打印实拨资金信息" returntype="java.util.List">
+    <methodParams id="6c106037-3a50-4884-97aa-1fab2d9022cf" name="查询条件DTO" ename="finddto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="0c3c68ea-a30b-41dc-b738-e897adf71db7" name="选择的表" ename="selectedtable" type="java.lang.String"/>
+  </methods>
+  <methods id="91f98f64-2945-42ec-971e-cd9d9e3d0d15" ename="dataexport" name="dataExport" returntype="java.lang.String">
+    <methodParams id="31737942-c19f-455d-9f5b-20ce38cf1544" name="查询条件DTO" ename="finddto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="6dbfffe4-e9a0-452b-b132-0e28bd212e37" name="选择的表" ename="selectedtable" type="java.lang.String"/>
+  </methods>
+  <methods id="c29a6bc1-190d-4b6a-8b34-9397bf4780de" ename="exportSelectData" name="导出选中回单" codecomment="导出选中回单" returntype="java.lang.String" remark="导出选中回单">
+    <methodParams id="2f2e5165-b617-4285-b850-2740732bf446" name="选择的表" ename="selectedtable" type="java.lang.String"/>
+    <methodParams id="4f272bd4-7217-458a-8cb3-0a0376197b62" name="选择的回单" ename="selectedlist" type="java.util.List"/>
+    <methodParams id="5c00af40-2f3b-4f36-974c-0f51aaa033a7" name="路径" ename="filePath" type="java.lang.String"/>
+  </methods>
+  <methods id="64608e0c-cf6d-481d-bc15-a536ee721398" ename="exportfile" name="JMethodImpl-64608e0c-cf6d-481d-bc15-a536ee721398" returntype="java.lang.String">
+    <methodParams id="5da5d776-2969-4062-822c-b7b3ab734a99" name="查询dto" ename="maindto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="43da6cc4-0ffd-4da8-9c03-a87d3144ad36" name="选择的表" ename="selecttable" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

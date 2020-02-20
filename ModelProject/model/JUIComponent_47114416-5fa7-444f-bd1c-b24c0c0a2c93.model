@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="47114416-5fa7-444f-bd1c-b24c0c0a2c93" name="5002财政申请入库流水" ename="finanaceapplyintre">
+  <jproperties id="a1138e21-e732-4cf7-a876-655469da06c5" key="GeneratedTime" value="1376903776950"/>
+  <refModule href="JModule_b93e8b79-cc23-4372-8c64-5e1467a36991.model#b93e8b79-cc23-4372-8c64-5e1467a36991"/>
+  <model id="cada21f6-a1fd-4d93-8e0e-c224078c7713" name="JModelImpl-cada21f6-a1fd-4d93-8e0e-c224078c7713">
+    <directions id="64499ade-330e-42f6-b8ca-9edebf3a9ca0" name="申请" ename="applyReport"/>
+    <directions id="ff2007c7-934a-4213-88c6-4a10ef2fd617" name="申请全辖" ename="sendAll"/>
+  </model>
+  <services href="JServiceComponet_46efa019-7ab6-4f3f-b713-8afbfdddcb02.model#46efa019-7ab6-4f3f-b713-8afbfdddcb02"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="39eb6a93-3282-48fb-95eb-f398ea2bd041">
+    <contentareanode id="b5309620-2db7-4385-8630-308110ce31bc" name="申请界面" grouptitle="请求信息">
+      <widgetRefs xsi:type="model:Combo" id="cbc466a6-8c14-453e-b7a9-4921d6276652" name="国库代码" binding="sendOrgCode" caption="国库代码" display="strename" underly="strecode" modelsource="trelist"/>
+      <widgetRefs xsi:type="model:Text" id="0a165763-9d5e-4d61-bfe4-ba8e1bfccefa" name="入库日期" binding="inTreDate" caption="入库日期"/>
+      <widgetRefs xsi:type="model:Combo" id="f2fdfd77-1ce4-41e9-8d46-82c008e7708c" name="申请范围" binding="searchArea" caption="申请范围">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ae08c58a-4e90-42bb-b2b7-378ade4989d0"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="c89e6e51-1b7d-4771-b4a0-734538c3ab84">
+    <pages id="f481a2e7-d163-4d98-8e6e-dd20af9e821a" name="JPageImpl-f481a2e7-d163-4d98-8e6e-dd20af9e821a">
+      <views id="aafc30ae-a874-4ff6-930a-e648915788e0" name="申请界面" isdefault="true" contentArea="b5309620-2db7-4385-8630-308110ce31bc">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="6ce35830-fcc6-4bc0-806a-d12ed05d6334" name="JButtonAreaImpl-6ce35830-fcc6-4bc0-806a-d12ed05d6334">
+          <buttons id="41a1d918-ce13-45ac-bf59-e280a417bda8" name="申请" caption="申请" direction="64499ade-330e-42f6-b8ca-9edebf3a9ca0"/>
+          <buttons id="f30c8786-10af-4f4a-b809-6a15e8b9e147" name="申请全部" caption="申请全省数据" direction="ff2007c7-934a-4213-88c6-4a10ef2fd617"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#109806d0-798b-4668-91b9-57f526a8ede8"/>
+</model:JUIComponent>

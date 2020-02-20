@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c7f46af5-39fd-44f4-a8de-51c1bebe029d" name="业务凭证发送" ename="BisSend">
+  <jproperties id="e079f07f-2d82-49f7-99d9-78ca724673be" key="GeneratedTime" value="1330497803062"/>
+  <refModule href="JModule_a951ee6a-29e8-4879-b374-816b0ba88ad7.model#a951ee6a-29e8-4879-b374-816b0ba88ad7"/>
+  <model id="569487eb-d764-4b4f-b8e6-e367f74b2133" name="JModelImpl-569487eb-d764-4b4f-b8e6-e367f74b2133"/>
+  <services href="JServiceComponet_a7bb7149-dc63-43c9-bddd-7288d0ce5412.model#a7bb7149-dc63-43c9-bddd-7288d0ce5412"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_56da4127-782e-496c-ae32-4d04ad77a10a.model#56da4127-782e-496c-ae32-4d04ad77a10a"/>
+  <contentAreas id="2a6d1d34-e83d-4335-92bb-c94f319616cf"/>
+  <pagenodes id="f5ae781f-e643-4e92-8c39-81c320705c82">
+    <pages id="6024de7e-5dd6-497c-8e01-84c5b47504d7" name="业务凭证发送">
+      <views id="f1b7e577-515b-4606-a7ae-ef8c694c4db0" name="JViewerImpl-f1b7e577-515b-4606-a7ae-ef8c694c4db0" type="ClassName" path="com.cfcc.itfe.client.sendbiz.bizcertsend.ActiveXComposite" isdefault="true"/>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

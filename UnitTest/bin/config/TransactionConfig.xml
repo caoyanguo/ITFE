@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+	
+	<bean id="NewTransactionTemplate" class="org.springframework.transaction.support.TransactionTemplate" singleton="false">
+	    <property name="transactionManager" ref="TransactionManager" />
+	    <property name="propagationBehaviorName" value="PROPAGATION_REQUIRES_NEW"/>
+	   <!-- <property name="timeout" value="180" /> 缺省的超时时间暂时设为180秒，代码中可以根据需要进行设置 -->
+	</bean>
+
+<bean id="RegularMatchService" class="com.cfcc.jaf.core.invoker.transation.RegularMatchTransactionAttributeSource">
+		<property name="properties">
+			<props>			
+				<prop key="com.cfcc.jaf.persistence.jaform.IOrmTemplate.*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.mod*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.add*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.del*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.Upload*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.upload">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.update*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.recvDelete">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.cancelSend">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.send*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.commit*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.reSend*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="RequiredTransactionTemplate" class="org.springframework.transaction.support.TransactionTemplate" singleton="false">
+	    <property name="transactionManager" ref="TransactionManager" />
+	    <property name="propagationBehaviorName" value="PROPAGATION_REQUIRED"/>
+	</bean>
+</beans>

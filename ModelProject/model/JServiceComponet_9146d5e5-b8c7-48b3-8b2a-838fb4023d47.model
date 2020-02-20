@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9146d5e5-b8c7-48b3-8b2a-838fb4023d47" name="收款开户行行号对照服务组件" ename="TsGenbankandreckbank" shared="true">
+  <jproperties id="802d9463-e736-4f25-8d40-c3bb4dd06fb8" key="GeneratedTime" value="1331531146359"/>
+  <refModule href="JModule_d0d1f696-f645-4053-a8ba-a06a85809734.model#d0d1f696-f645-4053-a8ba-a06a85809734"/>
+  <methods id="e7126dc1-1594-45ef-ae4d-932cdfce0d5b" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="代理银行与清算银行的对应关系">
+    <methodParams id="bd059eb5-2248-41ba-ac68-a5fdeb8624b1" name="代理银行与清算银行的对应关系" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="8ea210e2-a8e2-46f7-ba58-96616398e2f3" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="f32d2477-d48f-4c5f-a5c8-8f0395028168" name="代理银行与清算银行的对应关系" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="c0cd8556-d941-4894-9c18-ecc2e4b5a79a" ename="modInfo" name="修改" codecomment="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="80946a53-aaed-4aa8-b1a0-db623629bf86" name="代理银行与清算银行的对应关系" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7ad6aad8-fad1-4d59-9a60-0a1ece304395" name="退库税务机关" ename="TsInfotaxorg" shared="true">
+  <jproperties id="422ffc3b-ecec-441d-a998-9690951731d9" key="GeneratedTime" value="1330914321437"/>
+  <refModule href="JModule_e9fd0afd-96fa-4ee1-ad62-21acc6ba2022.model#e9fd0afd-96fa-4ee1-ad62-21acc6ba2022"/>
+  <model id="709f2886-7974-4707-87c6-5f5557be0f84" name="JModelImpl-709f2886-7974-4707-87c6-5f5557be0f84">
+    <attributes id="79839d2e-e600-4b95-9a69-c156d9a56072" name="dto" type="com.cfcc.itfe.persistence.dto.TsInfotaxorgDto"/>
+    <attributes id="fa4bc023-82e9-4d83-a00b-d6576dea3a33" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="52b71eb5-212b-4871-b1ec-23a4e4121072" viewers="48535c10-1518-4338-9f19-4df2a1172233" name="跳转录入界面" ename="goInput"/>
+    <directions id="ab9352c0-f2df-4967-9e57-ecfe21bd0ca0" name="录入保存" ename="inputSave"/>
+    <directions id="1fa20854-10d9-4084-82e1-2a67b84acb57" viewers="f6529cf1-3a9f-46d7-a567-d0dd489b2c2f" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="5f9cb29c-7602-4026-b0b0-6b31a767bec5" name="单选" ename="singleSelect"/>
+    <directions id="fdcceeea-18f0-41c2-aea7-1ccb301b5570" name="删除" ename="delete"/>
+    <directions id="ab1f06e3-ea22-466d-8183-c343def268b6" viewers="416ecf9f-f751-41d3-9e9f-bb7c83d20b45" name="到修改界面" ename="goModify"/>
+    <directions id="34481f57-d1ee-48fc-af3b-5d6280d20333" name="修改保存" ename="modifySave"/>
+  </model>
+  <contentAreas id="c5ed416a-7d52-41d1-8ec2-8a7976db2171">
+    <contentareanode id="936985aa-adfe-4b0d-805d-fb72feb6c400" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="861e6d97-914b-474f-9f41-b5e7776063df" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="5f9cb29c-7602-4026-b0b0-6b31a767bec5">
+        <columnlist id="5a993404-ee21-48d6-923d-401ab6c81001" name="sorgcode" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="2268d098-646f-4017-9348-b949905f5e7e" name="strecode" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="0ea80154-3b3d-4cda-bc4a-4e2b279fe0c9" name="staxorg" binding="staxorg" caption="税务机关"/>
+        <columnlist id="d64123e8-8805-4e34-8f8d-69d2e7233d9e" name="spayername" binding="spayername" caption="付款单位全称"/>
+        <columnlist id="2b37a52b-a6cc-49df-9841-2d59608c19ad" name="spayerbank" binding="spayerbank" caption="收款单位开户行"/>
+        <columnlist id="9e8d0023-5ecc-419d-9a1b-ee9343dec60b" name="saccount" binding="saccount" caption="帐户"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="617dc3ef-111f-4478-bc7c-da93b048293c" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="338b5af8-2834-40a8-9c7b-80386e510e96" name="核算主体代码" visible="true" caption="核算主体代码" enable="true">
+        <labelStyle id="8f3cdc93-6de6-454f-9496-d5bcc69891eb" name="LabelStyleImpl-8f3cdc93-6de6-454f-9496-d5bcc69891eb" ename="LabelStyleImpl8f3cdc936de6454f9496d5bcc69891eb"/>
+        <componentStyle id="08a37ccb-d80d-4da2-8c1a-0615101f6a0b" name="ComponentStyleImpl-08a37ccb-d80d-4da2-8c1a-0615101f6a0b" ename="ComponentStyleImpl08a37ccbd80d4da28c1a0615101f6a0b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="1926cc9e-2272-4700-82da-0c892944a4fc" name="国库主体代码" caption="国库主体代码" enable="true">
+        <labelStyle id="65470883-1b30-4acd-8d22-9612094e7f82" name="LabelStyleImpl-65470883-1b30-4acd-8d22-9612094e7f82" ename="LabelStyleImpl654708831b304acd8d229612094e7f82"/>
+        <componentStyle id="1811aeb5-23df-4952-acc1-164a626ee35b" name="ComponentStyleImpl-1811aeb5-23df-4952-acc1-164a626ee35b" ename="ComponentStyleImpl1811aeb523df4952acc1164a626ee35b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e27e6e01-2c87-4a34-8838-5aca78268edc" name="税务机关" visible="true" caption="税务机关" enable="true">
+        <labelStyle id="0579d7cd-5678-433d-94a7-c31e92d9367c" name="LabelStyleImpl-0579d7cd-5678-433d-94a7-c31e92d9367c" ename="LabelStyleImpl0579d7cd5678433d94a7c31e92d9367c"/>
+        <componentStyle id="05af0387-ef4f-4864-bf1a-ea32dae465ab" name="ComponentStyleImpl-05af0387-ef4f-4864-bf1a-ea32dae465ab" ename="ComponentStyleImpl05af0387ef4f4864bf1aea32dae465ab"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="9fc24367-59f1-4247-9c07-428c19a853c2" name="付款单位全称" visible="true" caption="付款单位全称" enable="true">
+        <labelStyle id="51499f42-b729-4fae-8075-c4b43682fbb8" name="LabelStyleImpl-51499f42-b729-4fae-8075-c4b43682fbb8" ename="LabelStyleImpl51499f42b7294fae8075c4b43682fbb8"/>
+        <componentStyle id="4022b2f2-ba04-4d25-a4cb-5a5002b425a4" name="ComponentStyleImpl-4022b2f2-ba04-4d25-a4cb-5a5002b425a4" ename="ComponentStyleImpl4022b2f2ba044d25a4cb5a5002b425a4"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e6db1d49-06db-4789-a212-71348b40b6f0" name="收款单位开户银行" visible="true" caption="收款单位开户银行" enable="false">
+        <labelStyle id="d33425dc-c2e1-4d91-857a-8f92e761162d" name="LabelStyleImpl-d33425dc-c2e1-4d91-857a-8f92e761162d" ename="LabelStyleImpld33425dcc2e14d91857a8f92e761162d"/>
+        <componentStyle id="dd27c165-c0f2-4640-b2f9-71c834326d85" name="ComponentStyleImpl-dd27c165-c0f2-4640-b2f9-71c834326d85" ename="ComponentStyleImpldd27c165c0f24640b2f971c834326d85"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="b8586864-ea71-4675-95bc-0732b529a091" name="帐号" visible="true" caption="帐号" enable="true">
+        <labelStyle id="7b9a91de-ee2d-45c8-8559-8df89573174e" name="LabelStyleImpl-7b9a91de-ee2d-45c8-8559-8df89573174e" ename="LabelStyleImpl7b9a91deee2d45c885598df89573174e"/>
+        <componentStyle id="24cf4705-99c9-4f4b-bb21-c137b3b9abd7" name="ComponentStyleImpl-24cf4705-99c9-4f4b-bb21-c137b3b9abd7" ename="ComponentStyleImpl24cf470599c94f4bbb21c137b3b9abd7"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2d35fb34-7014-47c7-aa79-cc4ff2f75dbf" name="信息录入">
+      <widgetRefs xsi:type="model:Combo" id="12634e5a-9d90-462f-9ae6-bafadf695900" name="核算主体代码" visible="true" caption="核算主体代码" enable="true">
+        <labelStyle id="bd6c9e50-6ebd-4496-9c01-74475b221635" name="LabelStyleImpl-bd6c9e50-6ebd-4496-9c01-74475b221635" ename="LabelStyleImplbd6c9e506ebd44969c0174475b221635"/>
+        <componentStyle id="a7bc8233-d264-44ae-a5b2-3d6500a0ff83" name="ComponentStyleImpl-a7bc8233-d264-44ae-a5b2-3d6500a0ff83" ename="ComponentStyleImpla7bc8233d26444aea5b23d6500a0ff83"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="229c2611-e610-416a-a0b3-59457b3b5075" name="国库主体代码" visible="true" caption="国库主体代码" enable="true">
+        <labelStyle id="af0d2cff-0939-4eba-a65a-71cb66e9d881" name="LabelStyleImpl-af0d2cff-0939-4eba-a65a-71cb66e9d881" ename="LabelStyleImplaf0d2cff09394ebaa65a71cb66e9d881"/>
+        <componentStyle id="5617dc6e-7920-4d89-8cfe-85f63cce40c7" name="ComponentStyleImpl-5617dc6e-7920-4d89-8cfe-85f63cce40c7" ename="ComponentStyleImpl5617dc6e79204d898cfe85f63cce40c7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d0e2f1b2-28f0-4ee7-b91e-1e46ae7a8138" name="税务机关" visible="true" caption="税务机关" enable="true">
+        <labelStyle id="63048eab-146c-4816-8714-fbcde41a8589" name="LabelStyleImpl-63048eab-146c-4816-8714-fbcde41a8589" ename="LabelStyleImpl63048eab146c48168714fbcde41a8589"/>
+        <componentStyle id="461880ec-dd91-4179-a788-5173110c5882" name="ComponentStyleImpl-461880ec-dd91-4179-a788-5173110c5882" ename="ComponentStyleImpl461880ecdd914179a7885173110c5882"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="b87a3a7d-4d2e-4360-b8ab-c4e0b795a14d" name="付款单位全称" visible="true" caption="付款单位全称" enable="true">
+        <labelStyle id="0c159734-fc29-4dfd-834a-2e510f137207" name="LabelStyleImpl-0c159734-fc29-4dfd-834a-2e510f137207" ename="LabelStyleImpl0c159734fc294dfd834a2e510f137207"/>
+        <componentStyle id="3eda0967-5bd2-4b31-81ce-c419e6b99cec" name="ComponentStyleImpl-3eda0967-5bd2-4b31-81ce-c419e6b99cec" ename="ComponentStyleImpl3eda09675bd24b3181cec419e6b99cec"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="432e14f4-1df4-4d6e-8366-b1ba150489db" name="收款单位开户银行" visible="true" caption="收款单位开户银行" enable="true">
+        <labelStyle id="192f04d7-cfde-4e5d-96d9-5ad38e30c7af" name="LabelStyleImpl-192f04d7-cfde-4e5d-96d9-5ad38e30c7af" ename="LabelStyleImpl192f04d7cfde4e5d96d95ad38e30c7af"/>
+        <componentStyle id="189bef70-5793-4ef8-baec-25559f8b65ad" name="ComponentStyleImpl-189bef70-5793-4ef8-baec-25559f8b65ad" ename="ComponentStyleImpl189bef7057934ef8baec25559f8b65ad"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a9caf7fa-c794-496d-85c0-bb4a8742ef52" name="帐号" visible="true" caption="帐号" enable="true">
+        <labelStyle id="ca8de314-f71f-436a-916f-e62aad40e314" name="LabelStyleImpl-ca8de314-f71f-436a-916f-e62aad40e314" ename="LabelStyleImplca8de314f71f436a916fe62aad40e314"/>
+        <componentStyle id="ea31c1bc-04fc-441a-a150-61e59522dce6" name="ComponentStyleImpl-ea31c1bc-04fc-441a-a150-61e59522dce6" ename="ComponentStyleImplea31c1bc04fc441aa15061e59522dce6"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="a3ee6c04-1b88-4a74-8fb1-ba8f62c596dd">
+    <pages id="0f8d7274-d164-41bf-bf70-601da7794872" name="维护退库税务机关">
+      <views id="f6529cf1-3a9f-46d7-a567-d0dd489b2c2f" name="维护界面" isdefault="true" contentArea="936985aa-adfe-4b0d-805d-fb72feb6c400">
+        <buttonArea id="2d6e6dba-0f5c-411e-9d7f-b743eb93e852" name="JButtonAreaImpl-2d6e6dba-0f5c-411e-9d7f-b743eb93e852">
+          <buttons id="802256de-9838-46a2-a967-3377e5c3e69b" name="maintenanceInput" caption="录入" direction="52b71eb5-212b-4871-b1ec-23a4e4121072"/>
+          <buttons id="c70fa6b5-702c-40c9-b2df-07e7d2776f74" name="maintenanceDel" caption="删除" direction="fdcceeea-18f0-41c2-aea7-1ccb301b5570"/>
+          <buttons id="4f5d02a4-5f36-4ff3-804e-220349bf8bed" name="maintenanceMod" caption="修改" direction="ab1f06e3-ea22-466d-8183-c343def268b6"/>
+        </buttonArea>
+      </views>
+      <views id="416ecf9f-f751-41d3-9e9f-bb7c83d20b45" name="修改界面" contentArea="617dc3ef-111f-4478-bc7c-da93b048293c">
+        <buttonArea id="7fb2e6c3-b038-455a-bad6-17b1f7f13430" name="JButtonAreaImpl-7fb2e6c3-b038-455a-bad6-17b1f7f13430">
+          <buttons id="3dea035a-58e4-4b80-a9c5-b32177535224" name="modifySave" caption="保存" direction="34481f57-d1ee-48fc-af3b-5d6280d20333"/>
+          <buttons id="4814e281-c0e5-4154-8ae5-a070dc328d58" name="modifyBack" caption="返回" direction="1fa20854-10d9-4084-82e1-2a67b84acb57"/>
+        </buttonArea>
+      </views>
+      <views id="48535c10-1518-4338-9f19-4df2a1172233" name="录入界面" contentArea="2d35fb34-7014-47c7-aa79-cc4ff2f75dbf">
+        <buttonArea id="5734b2da-19d0-4d96-a135-9154cbb575d3" name="JButtonAreaImpl-5734b2da-19d0-4d96-a135-9154cbb575d3">
+          <buttons id="ddf3c92b-4ff4-449f-8b67-a1d064ce41cd" name="保存" caption="保存" direction="ab9352c0-f2df-4967-9e57-ecfe21bd0ca0"/>
+          <buttons id="4814e281-c0e5-4154-8ae5-a070dc328d58" name="modifyBack" caption="返回" direction="1fa20854-10d9-4084-82e1-2a67b84acb57"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

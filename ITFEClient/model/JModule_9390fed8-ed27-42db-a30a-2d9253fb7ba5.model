@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9390fed8-ed27-42db-a30a-2d9253fb7ba5" name="退款通知信息" ename="TfRefundNotice" shared="true"/>

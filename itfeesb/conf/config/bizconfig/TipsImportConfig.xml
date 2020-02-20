@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- 横联导入直接支付额度 -->
+	<bean id="TIPS_5102" class="com.cfcc.itfe.tipsfileparser.DirectpayPlanTipsFileOper" scope="prototype">
+	</bean>
+	
+	<!-- 横联导入授权支付额度-->
+	<bean id="TIPS_5103" class="com.cfcc.itfe.tipsfileparser.GrantpayPlanTipsFileOper" scope="prototype">
+	</bean>
+	
+	<!-- 横联导入批量拨付-->
+	<bean id="TIPS_5112" class="com.cfcc.itfe.tipsfileparser.QuantityTipsFileOper" scope="prototype">
+	</bean>
+	
+	<!-- 横联导入更正-->
+	<bean id="TIPS_1105" class="com.cfcc.itfe.tipsfileparser.InCorrhandbookTipsFileOper" scope="prototype">
+	</bean>
+	
+	<!-- 横联导入退库(山东)-->
+	<bean id="TIPS_1104_SD" class="com.cfcc.itfe.tipsfileparser.DwbkTipsFileOperForSD" scope="prototype">
+	</bean>
+	<!-- 横联导入退库(福建)-->
+	<bean id="TIPS_1104_FJ" class="com.cfcc.itfe.tipsfileparser.DwbkTipsFileOperForFj" scope="prototype">
+	</bean>
+	<!-- 横联导入退库(厦门)-->
+	<bean id="TIPS_1104_XM" class="com.cfcc.itfe.tipsfileparser.DwbkTipsFileOperForXm" scope="prototype">
+	</bean>
+	
+	<!-- 横联导入实拨资金(山东)-->
+	<bean id="TIPS_5101_SD" class="com.cfcc.itfe.tipsfileparser.PayoutTipsFileOperForSD" scope="prototype">
+	</bean>
+	<!-- 横联导入实拨资金(上海)-->
+	<bean id="TIPS_5101_SH" class="com.cfcc.itfe.tipsfileparser.PayoutTipsFileOperForSH" scope="prototype">
+	</bean>
+	<!-- 横联导入实拨资金(福建)-->
+	<bean id="TIPS_5101_FJ" class="com.cfcc.itfe.tipsfileparser.PayoutTipsFileOperForFj" scope="prototype">
+	</bean>
+	<!-- 横联导入实拨资金(福建)工资文件-->
+	<bean id="TIPS_5101_FJSalary" class="com.cfcc.itfe.tipsfileparser.PayoutTipsFileOperSalaryForFj" scope="prototype">
+	</bean>
+	<!-- 横联导入实拨资金(厦门)-->
+	<bean id="TIPS_5101_XM" class="com.cfcc.itfe.tipsfileparser.PayoutTipsFileOperForXm" scope="prototype">
+	</bean>
+	<!-- 横联导入人行办理直接支付-->
+	<bean id="TIPS_5104" class="com.cfcc.itfe.tipsfileparser.PbcDirectpayFileOper" scope="prototype">
+	</bean>
+	<!-- 横联导入商行办理支付划款申请-->
+	<bean id="TIPS_2201" class="com.cfcc.itfe.tipsfileparser.ApplypayTipsFileOper" scope="prototype">
+	</bean>
+	<!-- 横联导入商行办理支付划款申请退回-->
+	<bean id="TIPS_2202" class="com.cfcc.itfe.tipsfileparser.ApplypayBackTipsFileOper" scope="prototype">
+	</bean>
+	<!-- 免抵调业务数据导入-->
+	<bean id="TIPS_1106" class="com.cfcc.itfe.tipsfileparser.TaxFreeTipsFileOper" scope="prototype">
+	</bean>
+	<!-- 预算支出日报表(3127) -->
+	<bean id="TIPS_3127" class="com.cfcc.itfe.tipsfileparser.TrTaxorgPayoutFileOper" scope="prototype">
+	</bean>
+	<!-- 集中支付额度对账单 -->
+	<bean id="TIPS_JZZF" class="com.cfcc.itfe.tipsfileparser.TnConpayCheckBillFileOper" scope="prototype">
+	</bean>
+	<!-- 中央及省市往来票据(调拨收入凭证)(3452)报文编号修改前 -->
+	<bean id="TIPS_3452" class="com.cfcc.itfe.tipsfileparser.VoucherAllocateIncomeFileOper" scope="prototype">
+	</bean>
+	<!-- 中央及省市往来票据(调拨收入凭证)(3403)报文编号修改后 -->
+	<bean id="TIPS_3403" class="com.cfcc.itfe.tipsfileparser.VoucherAllocateIncomeFileOper" scope="prototype">
+	</bean>
+	
+       <!--导出报表实现类 12个导出 6种实现-->
+	<!--  预算收入报表体-->
+	<bean id="REPORT_1" class="com.cfcc.itfe.service.expreport.ExpReportIncome" scope="prototype">
+	</bean>
+	<!-- 预算支出报表体-->
+	<bean id="REPORT_2" class="com.cfcc.itfe.service.expreport.ExpReportPayOutForGZ" scope="prototype">
+	</bean>
+	<!-- 调拨收入报表体-->
+	<bean id="REPORT_3" class="com.cfcc.itfe.service.expreport.ExpReportIncome" scope="prototype">
+	</bean>
+	<!-- 共享分成报表体-->
+	<bean id="REPORT_4" class="com.cfcc.itfe.service.expreport.ExpReportIncome" scope="prototype">
+	</bean>
+	<!-- 财政库存-->
+	<bean id="REPORT_5" class="com.cfcc.itfe.service.expreport.ExpReportStock" scope="prototype">
+	</bean>
+	<!-- 预算收入对账报表-->
+	<bean id="REPORT_6" class="com.cfcc.itfe.service.expreport.ExpReportIncome" scope="prototype">
+	</bean>
+	<!-- 总额分成报表-->
+	<bean id="REPORT_7" class="com.cfcc.itfe.service.expreport.ExpReportIncome" scope="prototype">
+	</bean>
+	<!-- 收入退库报表-->
+	<bean id="REPORT_8" class="com.cfcc.itfe.service.expreport.ExpReportIncome" scope="prototype">
+	</bean>
+	<!-- 预算收入凭证-->
+	<bean id="REPORT_9" class="com.cfcc.itfe.service.expreport.ExpIncomeVou" scope="prototype">
+	</bean>
+	<!-- 预算支出凭证-->
+	<bean id="REPORT_10" class="com.cfcc.itfe.service.expreport.ExpPayoutVou" scope="prototype">
+	</bean>
+	<!-- 收入退库凭证-->
+	<bean id="REPORT_11" class="com.cfcc.itfe.service.expreport.ExpDwbkVou" scope="prototype">
+	</bean>
+	<!-- 收入更正凭证-->
+	<bean id="REPORT_12" class="com.cfcc.itfe.service.expreport.ExpCorrVou" scope="prototype">
+	</bean>
+	<!-- 人行支出凭证-->
+	<bean id="REPORT_13" class="com.cfcc.itfe.service.expreport.ExpPbcpayVou" scope="prototype">
+	</bean>
+	
+	<!--导出天津报表实现类 12个导出 6种实现-->
+	<!--  预算收入报表体-->
+	<bean id="REPORT_1_TJ" class="com.cfcc.itfe.service.expreport.ExpReportIncomeForTJ" scope="prototype">
+	</bean>
+	<!-- 预算支出报表体-->
+	<bean id="REPORT_2_TJ" class="com.cfcc.itfe.service.expreport.ExpReportIncomeForTJ" scope="prototype">
+	</bean>
+	<!-- 调拨收入报表体-->
+	<bean id="REPORT_3_TJ" class="com.cfcc.itfe.service.expreport.ExpReportIncomeForTJ" scope="prototype">
+	</bean>
+	<!-- 共享分成报表体-->
+	<bean id="REPORT_4_TJ" class="com.cfcc.itfe.service.expreport.ExpReportIncomeForTJ" scope="prototype">
+	</bean>
+	<!-- 财政库存-->
+	<bean id="REPORT_5_TJ" class="com.cfcc.itfe.service.expreport.ExpReportStockForTJ" scope="prototype">
+	</bean>
+	<!-- 预算收入对账报表-->
+	<bean id="REPORT_6_TJ" class="com.cfcc.itfe.service.expreport.ExpReportIncomeForTJ" scope="prototype">
+	</bean>
+	<!-- 总额分成报表-->
+	<bean id="REPORT_7_TJ" class="com.cfcc.itfe.service.expreport.ExpReportIncomeForTJ" scope="prototype">
+	</bean>
+	<!-- 收入退库报表-->
+	<bean id="REPORT_8_TJ" class="com.cfcc.itfe.service.expreport.ExpReportIncomeForTJ" scope="prototype">
+	</bean>
+	<!-- 预算收入凭证-->
+	<bean id="REPORT_9_TJ" class="com.cfcc.itfe.service.expreport.ExpIncomeVouForTJ" scope="prototype">
+	</bean>
+	<!-- 预算支出凭证-->
+	<bean id="REPORT_10_TJ" class="com.cfcc.itfe.service.expreport.ExpPayoutVouForTJ" scope="prototype">
+	</bean>
+	<!-- 收入退库凭证-->
+	<bean id="REPORT_11_TJ" class="com.cfcc.itfe.service.expreport.ExpDwbkVouForTJ" scope="prototype">
+	</bean>
+	<!-- 收入更正凭证-->
+	<bean id="REPORT_12_TJ" class="com.cfcc.itfe.service.expreport.ExpCorrVouForTJ" scope="prototype">
+	</bean>
+	<!-- 人行支出凭证-->
+	<bean id="REPORT_13_TJ" class="com.cfcc.itfe.service.expreport.ExpPbcpayVouForTJ" scope="prototype">
+	</bean>
+	
+	
+	<!--导出报表实现类 12个导出 6种广州地方实现实现-->
+	<!--  预算收入报表体-->
+	<bean id="REPORT_1_GZ" class="com.cfcc.itfe.service.expreport.ExpIncomeReportForGZ" scope="prototype">
+	</bean>
+	<!-- 预算支出报表体-->
+	<bean id="REPORT_2_GZ" class="com.cfcc.itfe.service.expreport.ExpReportPayOutForGZ" scope="prototype">
+	</bean>
+	<!-- 调拨收入报表体-->
+	<bean id="REPORT_3_GZ" class="com.cfcc.itfe.service.expreport.ExpAllotReportForGZ" scope="prototype">
+	</bean>
+	<!-- 共享分成报表体-->
+	<bean id="REPORT_4_GZ" class="com.cfcc.itfe.service.expreport.ExpShareReportForGZ" scope="prototype">
+	</bean>
+	<!-- 财政库存-->
+	<bean id="REPORT_5_GZ" class="com.cfcc.itfe.service.expreport.ExpReportStock" scope="prototype">
+	</bean>
+	<!-- 预算收入对账报表-->
+	<bean id="REPORT_6_GZ" class="com.cfcc.itfe.service.expreport.ExpCheckingReportIncomeForGZ" scope="prototype">
+	</bean>
+	<!-- 总额分成报表-->
+	<bean id="REPORT_7_GZ" class="com.cfcc.itfe.service.expreport.ExpAmtReportForGZ" scope="prototype">
+	</bean>
+	<!-- 收入退库报表-->
+	<bean id="REPORT_8_GZ" class="com.cfcc.itfe.service.expreport.ExpDwbkReportForGZ" scope="prototype">
+	</bean>
+	<!-- 预算收入凭证-->
+	<bean id="REPORT_9_GZ" class="com.cfcc.itfe.service.expreport.ExpIncomeVouForGZ" scope="prototype">
+	</bean>
+	<!-- 预算收入汇总凭证-->
+	<bean id="REPORT_9_GZ0" class="com.cfcc.itfe.service.expreport.ExpIncomeVouForGZ0" scope="prototype">
+	</bean>
+	<!-- 预算支出凭证-->
+	<bean id="REPORT_10_GZ" class="com.cfcc.itfe.service.expreport.ExpPayoutVou" scope="prototype">
+	</bean>
+	<!-- 收入退库凭证-->
+	<bean id="REPORT_11_GZ" class="com.cfcc.itfe.service.expreport.ExpDwbkVouForGZ" scope="prototype">
+	</bean>
+	<!-- 收入更正凭证-->
+	<bean id="REPORT_12_GZ" class="com.cfcc.itfe.service.expreport.ExpCorrVouForGZ" scope="prototype">
+	</bean>
+	<!-- 人行支出凭证-->
+	<bean id="REPORT_13_GZ" class="com.cfcc.itfe.service.expreport.ExpPbcpayVou" scope="prototype">
+	</bean>
+	
+	<!--  预算收入报表体(云南专用)-->
+	<bean id="REPORT_1_YN" class="com.cfcc.itfe.service.expreport.ExpReportIncomeForYN" scope="prototype">
+	</bean>
+	
+</beans>

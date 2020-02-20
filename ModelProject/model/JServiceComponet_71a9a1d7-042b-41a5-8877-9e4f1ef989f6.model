@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="71a9a1d7-042b-41a5-8877-9e4f1ef989f6" name="退款通知信息服务组件" ename="TfRefundNotice">
+  <jproperties id="b2300417-6826-4576-83c5-a4016a77a013" key="GeneratedTime" value="1491286179303"/>
+  <refModule href="JModule_9390fed8-ed27-42db-a30a-2d9253fb7ba5.model#9390fed8-ed27-42db-a30a-2d9253fb7ba5"/>
+  <methods id="c1972542-4f8a-4a0d-96dc-a400759f9b40" ename="findInfo" name="查询" codecomment="查询" returntype="java.util.List" remark="退款通知信息查询">
+    <methodParams id="8e7fa5f1-b2a5-4f41-9a5c-4ac85496c4f3" name="退款通知信息" ename="classInfo" type="java.lang.Class" codecomment="codecomment信息"/>
+    <methodExceptions id="56bcce69-8df7-46e6-a46b-473ab41fedfa" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="8f450bce-0ef0-4d15-93d2-7ff68eb8eee4" ename="findInfo" name="查询" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="4f9c6a5e-42d6-4ae5-bd91-ea5689900bde" name="类" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="7b1448aa-c2a2-47ea-b01e-3f97113d7738" name="请求" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodExceptions id="8cadd6b8-9630-464f-b1e8-064d497f73ce" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

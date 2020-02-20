@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d656d8e1-e7d9-4e1b-9f8e-c2de2a1e97e1" name="收入税票查询处理" ename="incomeBillQuery">
+  <jproperties id="27b65ad6-824b-49a9-8448-0a356088f650" key="GeneratedTime" value="1376017397500"/>
+  <refModule href="JModule_6e3e29a3-3075-4201-ae22-79da44ef4801.model#6e3e29a3-3075-4201-ae22-79da44ef4801"/>
+  <model id="3b0b65f3-5119-4050-be68-651aebf4c485" name="JModelImpl-3b0b65f3-5119-4050-be68-651aebf4c485">
+    <attributes id="057d1eb0-95e2-432b-8300-ed2b7f119439" name="selectedIncomeList" type="java.util.List"/>
+    <directions id="703b4f67-2ec2-4bcb-999e-bd2b58cefd5a" viewers="5b21bb6e-b5bd-4a2f-9280-624da64d660f" name="查询列表事件" ename="searchList"/>
+    <directions id="1c18982a-6e10-42c3-b82d-dc4611e4c210" name="导出税票事件" ename="exportBillData"/>
+    <directions id="718dea42-32bd-4287-9cdf-c2916a7702d2" name="补发报文事件" ename="reSendMsg"/>
+    <directions id="0d302661-b70a-49ef-ade0-fc9f7d62dbcf" viewers="b6dabebd-5237-4323-afca-53f22f76f10d" name="返回查询界面" ename="rebackSearch"/>
+    <directions id="2224dd33-a572-49ba-a9ce-ad87a9d67a99" name="收入税票明细单击事件" ename="singleclickIncome"/>
+    <directions id="773ed1a4-3c07-405e-a702-1d3c4f75ae1d" viewers="5b21bb6e-b5bd-4a2f-9280-624da64d660f" name="返回列表" ename="returnlist"/>
+    <directions id="be09a868-9ec8-46e4-85b3-76769baf033c" viewers="5b21bb6e-b5bd-4a2f-9280-624da64d660f" name="保存数据" ename="savedata"/>
+    <directions id="34ba6717-8cfd-4376-b7d3-6e02f96b9048" viewers="08410d0f-de76-42e0-bb9f-7d8a533be43e" name="数据列表双击事件" ename="doubleclickIncome"/>
+    <directions id="1bee2a63-fdbd-45ec-8334-04bedfd9fd0d" name="全选" ename="selectAllOrNone"/>
+    <directions id="a0d21856-b120-4511-ab75-c0813e62adf9" name="导出选择税票事件" ename="exportSelectedBillData"/>
+    <directions id="90d06e47-59cc-4084-9dba-c6839e02630d" name="导出所有税票事件" ename="exportAllBillData"/>
+  </model>
+  <services href="JServiceComponet_28057d89-c450-406a-a2b1-dfa1f3bea105.model#28057d89-c450-406a-a2b1-dfa1f3bea105"/>
+  <contentAreas id="7466a7b3-faa5-4368-a292-0b6a78bd76e7">
+    <contentareanode id="6e3d7384-fe11-4007-b5e8-c2cf44caebd1" name="收入税票查询界面" grouptitle="收入税票查询界面">
+      <widgetRefs xsi:type="model:Text" id="2450a80c-4edc-4ca1-9cee-87e59c4cd0e7" name="国库代码" binding="finddto.srecvtrecode" caption="国库代码"/>
+      <widgetRefs xsi:type="model:Text" id="4a344d4a-3d2c-4e25-8e94-a4bc0ce55a00" name="委托日期" binding="finddto.scommitdate" caption="委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="3ea94315-511d-4d5c-807e-408ec99743c0" name="发生额" binding="finddto.nmoney" caption="发生额"/>
+      <widgetRefs xsi:type="model:Text" id="5f89e4d2-5a26-43e3-92f8-3dcbdb734640" name="文件名称" binding="finddto.sfilename" caption="文件名称"/>
+      <widgetRefs xsi:type="model:Text" id="12b03658-9351-4e33-b3d3-bd4ac85c6263" name="包流水号" binding="finddto.spackageno" caption="包流水号"/>
+      <widgetRefs xsi:type="model:Text" id="4fd1ce0a-6237-4907-969a-53f7e225b08f" name="交易流水号" binding="finddto.sdealno" caption="交易流水号"/>
+      <widgetRefs xsi:type="model:Text" id="fdd5260d-e9a2-4780-93b5-887c202bef91" name="TBS征收机关" binding="finddto.stbstaxorgcode" caption="TBS征收机关"/>
+      <widgetRefs xsi:type="model:Text" id="89f1fc8d-39f2-4d14-b0fb-85b1b4e313ee" name="TCBS征收机关" binding="finddto.staxorgcode" caption="TCBS征收机关"/>
+      <widgetRefs xsi:type="model:Text" id="4050fd55-61d9-4fff-b0a9-b083dc67e563" name="TBS辅助标志" binding="finddto.stbsassitsign" caption="TBS辅助标志"/>
+      <widgetRefs xsi:type="model:Text" id="8f7a1562-39a2-4376-82cc-a05e0a7fa4fe" name="TCBS辅助标志" binding="finddto.sassitsign" caption="TCBS辅助标志"/>
+      <widgetRefs xsi:type="model:Combo" id="ebb483f3-8cbd-4a6b-81b6-a5d5c97a6bb0" name="预算种类" binding="finddto.sbudgettype" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6e45320f-e738-4bb6-b850-4e81edcbb8c6" name="预算级次" binding="finddto.sbudgetlevelcode" caption="预算级次">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="f33e292a-b45e-426e-990c-7753957a915a" name="预算科目代码" binding="finddto.sbudgetsubcode" caption="预算科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="44146a1d-af9f-4c7f-a734-2694b7da9748" name="缴款书种类" binding="finddto.spaybookkind" caption="缴款书种类"/>
+      <widgetRefs xsi:type="model:Text" id="944692f1-d331-41b6-9224-617fa68743f4" name="资金收纳流水号" binding="finddto.strasrlno" caption="资金收纳流水号"/>
+      <widgetRefs xsi:type="model:Combo" id="25b35840-20cb-48bc-9bc2-56f714acf529" name="是否查询明细" binding="ifdetail" caption="是否查询明细" display="svaluecmt" underly="stypecode" backtomodelvalue="" modelsource="typelist"/>
+      <widgetRefs xsi:type="model:Combo" id="8ce984d7-0882-496b-ad30-d2e9a570abc6" name="交易状态" binding="finddto.sstatus" caption="交易状态" display="" underly="" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#0113cdaf-5245-4062-a807-7a9c339fec0b"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="b9ab1d82-49bc-47a8-8b1e-421671dc5fdd" name="收入税票列表界面" grouptitle="收入税票列表界面">
+      <widgetRefs xsi:type="model:Table" id="995b88ea-0838-4240-981e-52ee6e71a7e6" name="收入税票列表" binding="incometablepage" caption="收入税票列表" tabletype="paging" showcheckbox="true" selectedrows="selectedIncomeList" refdoubleclickdirection="34ba6717-8cfd-4376-b7d3-6e02f96b9048" refsingleclickdirection="2224dd33-a572-49ba-a9ce-ad87a9d67a99">
+        <columnlist id="e38d8554-bd2b-443a-a83b-8e0091d6c46a" name="选择" caption="选择"/>
+        <columnlist id="b88f1b58-218d-4f82-9a24-537552deeb56" name="委托日期" binding="scommitdate" caption="委托日期"/>
+        <columnlist id="63003f57-5611-48e3-85a9-a25460f2a02f" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="ac908c8d-9a25-40e6-8742-90a0ae64d610" name="交易流水号" binding="sdealno" caption="交易流水号"/>
+        <columnlist id="31d0bdcc-1686-4acb-9440-0d89209d2412" name="国库代码" binding="srecvtrecode" caption="国库代码"/>
+        <columnlist id="df417d6c-d340-4bed-9451-140935d81d32" name="交易金额" binding="nmoney" caption="交易金额"/>
+        <columnlist id="04a16ec0-42e2-49a1-b91c-93db375d2ead" name="税票号码" binding="staxticketno" caption="税票号码"/>
+        <columnlist id="a36b75ae-ab4c-4b9c-a7dd-d53c61b1946e" name="资金收纳流水号" binding="strasrlno" caption="资金收纳流水号"/>
+        <columnlist id="dce34dc4-e567-41e4-a779-1cecb6e372ef" name="预算种类" binding="sbudgettype" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="25e8e3f1-1d7e-4ea4-8ff6-de5630ea0c47" name="预算级次" binding="sbudgetlevelcode" caption="预算级次">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="ce002e98-10b8-4738-8b03-8deed28043b7" name="预算科目代码" binding="sbudgetsubcode" caption="预算科目代码"/>
+        <columnlist id="7361f6c3-264f-44f5-8bbb-2aa1a5a5141e" name="TCBS征收机关代码" binding="staxorgcode" caption="TCBS征收机关代码"/>
+        <columnlist id="59157c7b-90f6-4b10-a646-f97a38f73df9" name="TCBS辅助标志" binding="sassitsign" caption="TCBS辅助标志"/>
+        <columnlist id="acdddba6-fb58-49f5-99c6-7da6f63b5e5d" name="文件名称" binding="sfilename" caption="文件名称"/>
+        <columnlist id="4a736c08-2b77-4e8a-b5b9-f5b6e19b8413" name="交易状态" binding="sstatus" caption="交易状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        </columnlist>
+        <columnlist id="1d58fba6-9557-46e1-b573-7784cbe226a1" name="TBS征收机关代码" binding="stbstaxorgcode" caption="TBS征收机关代码"/>
+        <columnlist id="b2a1bc3b-27dd-4506-9077-3d7d5b7ad30b" name="TBS辅助标志" binding="stbsassitsign" caption="TBS辅助标志"/>
+        <columnlist id="fbeaf6af-34ce-4158-98bc-24b969b5ee54" name="单位代码" binding="sunitcode" caption="单位代码"/>
+        <columnlist id="a70ba021-a4be-4a2f-817d-5f5fe269986b" name="缴款书种类" binding="spaybookkind" caption="缴款书种类"/>
+        <columnlist id="eca58578-3164-450d-ad24-fe4bf58a0126" name="开户银行" binding="sopenaccbankcode" caption="开户银行"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="9e61a110-fad8-4344-854b-61814a5f2095" name="收入税票修改界面" grouptitle="收入税票修改界面">
+      <widgetRefs xsi:type="model:Text" id="aea8c2fa-6d69-4f83-a637-b5840838a3db" name="国库代码" binding="operdto.srecvtrecode" caption="国库代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="5120961e-d408-45f0-8389-93f2cf4aa1aa" name="委托日期" binding="operdto.scommitdate" caption="委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="8ccd1fa2-4135-4973-bc3d-1b6ad1aa593e" name="发生额" binding="operdto.nmoney" caption="发生额"/>
+      <widgetRefs xsi:type="model:Text" id="35bc8b2a-becd-48a4-8901-15707cd76b50" name="文件名称" binding="operdto.sfilename" caption="文件名称"/>
+      <widgetRefs xsi:type="model:Text" id="8039b35a-9527-4e31-90bb-2d634462b35b" name="包流水号" binding="operdto.spackageno" caption="包流水号"/>
+      <widgetRefs xsi:type="model:Text" id="90ff7efa-87a1-48b1-b3e9-d68a48712208" name="交易流水号" binding="operdto.sdealno" caption="交易流水号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="bfdbbb0c-bae6-4ac2-ae92-cb68de6edea4" name="TBS征收机关" binding="operdto.stbstaxorgcode" caption="TBS征收机关"/>
+      <widgetRefs xsi:type="model:Text" id="98c6734f-5f6f-4433-b583-fc66dc146074" name="TCBS征收机关" binding="operdto.staxorgcode" caption="TCBS征收机关"/>
+      <widgetRefs xsi:type="model:Text" id="c2191558-d0c3-4334-a746-a2bd5b1203a9" name="TBS辅助标志" binding="operdto.stbsassitsign" caption="TBS辅助标志"/>
+      <widgetRefs xsi:type="model:Text" id="2d3ac47e-ea28-4051-94ff-5c5e788de96a" name="TCBS辅助标志" binding="operdto.sassitsign" caption="TCBS辅助标志"/>
+      <widgetRefs xsi:type="model:Combo" id="8505fe0f-ea37-4276-a871-1ec2bf8ca015" name="预算种类" binding="operdto.sbudgettype" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="3f9732bf-fcc3-438a-b9db-c042525d2c92" name="预算级次" binding="operdto.sbudgetlevelcode" caption="预算级次">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="7a977078-9879-42ac-af09-ef00629bc8ef" name="预算科目代码" binding="operdto.sbudgetsubcode" caption="预算科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="225050b5-41ba-4ad6-a4bb-b6639be3ea97" name="缴款书种类" binding="operdto.spaybookkind" caption="缴款书种类"/>
+      <widgetRefs xsi:type="model:Text" id="c18a6a9a-a293-440d-a3ab-8534826ee6ba" name="资金收纳流水号" binding="operdto.strasrlno" caption="资金收纳流水号" editable="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="25f0e0c9-62e2-4e3f-a974-478d32d74c07">
+    <pages id="b18fcddb-e7fa-4743-9b2e-e3f62fe35b7e" name="收入税票视图信息">
+      <views id="b6dabebd-5237-4323-afca-53f22f76f10d" name="收入税票查询界面" isdefault="true" contentArea="6e3d7384-fe11-4007-b5e8-c2cf44caebd1">
+        <buttonArea id="4e60830a-e57b-41ba-bf1f-9123fcf3a0f5" name="JButtonAreaImpl-4e60830a-e57b-41ba-bf1f-9123fcf3a0f5">
+          <buttons id="b1595aaf-191d-47f8-a3e9-98043ef5a032" name="查询" caption="查询" direction="703b4f67-2ec2-4bcb-999e-bd2b58cefd5a"/>
+        </buttonArea>
+      </views>
+      <views id="5b21bb6e-b5bd-4a2f-9280-624da64d660f" name="收入税票列表界面" isdefault="false" contentArea="b9ab1d82-49bc-47a8-8b1e-421671dc5fdd">
+        <buttonArea id="e51cff41-911b-47e9-bcc0-4adc74df0a40" name="JButtonAreaImpl-e51cff41-911b-47e9-bcc0-4adc74df0a40">
+          <buttons id="5572c2ae-4780-4100-9c9b-793691f765d2" name="全选" visible="true" caption="全选" enable="true" direction="1bee2a63-fdbd-45ec-8334-04bedfd9fd0d"/>
+          <buttons id="0e60488e-d9af-48fe-839d-ffe09294947b" name="导出税票" visible="false" caption="导出税票" direction="1c18982a-6e10-42c3-b82d-dc4611e4c210"/>
+          <buttons id="60650d0a-3f5d-430a-8ef9-7b81c6220231" name="导出选择税票" caption="导出选择税票" direction="a0d21856-b120-4511-ab75-c0813e62adf9"/>
+          <buttons id="ea68af6a-39c5-4729-997c-2f4cd8393974" name="导出所有税票" caption="导出所有税票" direction="90d06e47-59cc-4084-9dba-c6839e02630d"/>
+          <buttons id="af451e4d-4205-4132-99ce-04533e51702b" name="补发报文" visible="false" caption="补发报文" enable="false" direction="718dea42-32bd-4287-9cdf-c2916a7702d2"/>
+          <buttons id="0e0c4340-8294-414f-8124-ba1a36ac8e9a" name="返回" caption="返回" direction="0d302661-b70a-49ef-ade0-fc9f7d62dbcf"/>
+        </buttonArea>
+      </views>
+      <views id="08410d0f-de76-42e0-bb9f-7d8a533be43e" name="收入税票编辑页面" contentArea="9e61a110-fad8-4344-854b-61814a5f2095">
+        <buttonArea id="2ad4e402-5130-4dfe-b002-cb997c20157c" name="JButtonAreaImpl-2ad4e402-5130-4dfe-b002-cb997c20157c">
+          <buttons id="bbbfcc02-f81b-4fe2-8ff2-05931f5effa5" name="保存" caption="保存" direction="be09a868-9ec8-46e4-85b3-76769baf033c"/>
+          <buttons id="56b334a4-2e15-4da4-a43c-1405672610d3" name="返回" caption="返回" direction="773ed1a4-3c07-405e-a702-1d3c4f75ae1d"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

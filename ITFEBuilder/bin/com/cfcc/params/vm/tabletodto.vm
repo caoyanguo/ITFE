@@ -1,0 +1,19 @@
+	<bean id="TABLE_DTO" class="org.springframework.beans.factory.config.MapFactoryBean" singleton="true">
+		<property name="sourceMap">
+		<map>
+			#foreach($tabName in $tasList)
+			<entry key="${tabName.getTabID()}" value="${tabName.getTabName()}" />
+				#end
+				</map>
+		</property>
+	</bean>
+	<bean id="DTO_TABLE" class="org.springframework.beans.factory.config.MapFactoryBean" singleton="true">
+		<property name="sourceMap">
+			<map>
+			#foreach($tabName in $tasList)
+			<entry key="${tabName.getTabName()}" value="${tabName.getTabID()}" />
+				#end
+				
+			</map>
+		</property>
+	</bean>

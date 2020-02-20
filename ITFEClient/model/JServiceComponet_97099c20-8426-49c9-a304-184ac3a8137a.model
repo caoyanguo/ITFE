@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="97099c20-8426-49c9-a304-184ac3a8137a" name="计息统计信息" ename="InterestrateMsg">
+  <jproperties id="a7ed5891-eb65-4b04-986c-96551aae650d" key="GeneratedTime" value="1411639038527"/>
+  <refModule href="JModule_566b9487-de98-4125-bbd2-0b49ba32fff5.model#566b9487-de98-4125-bbd2-0b49ba32fff5"/>
+  <methods id="7f52d656-6f2f-4d25-9553-4997b8aca804" ename="interestRate" name="计息" codecomment="interestRate" returntype="java.lang.Void">
+    <methodParams id="b6bae771-a4c7-4f65-90b7-18a923bd4cd5" name="选择计息的Dto" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TfInterestrateMsgDto"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd" default-lazy-init="true">	
+	<!-- httpServiceInvoker step4 -->
+	<bean id="httpServiceInvoker" name="handlerServiceInvoker.GLOBAL.ID" class="com.cfcc.jaf.core.invoker.http.HttpServiceInvoker" >
+		<property name="config">
+			<ref bean="httpConfig" />
+		</property>
+	</bean>
+	<!-- step5 -->
+	<bean id="httpConfig" class="com.cfcc.jaf.core.invoker.http.HttpConfig">
+		<property name="host">
+			<value>localhost</value>
+		</property>
+		<property name="port">
+			<value>8080</value>
+		</property>
+		<property name="serverFile">
+			<value>/ITFE/HttpInvoker</value>
+		</property>
+		<property name="SSL_Port">
+			<value>8443</value>
+		</property>
+		<property name="threadCount">
+			<value>10</value>
+		</property>
+		<property name="session">
+			<value>true</value>
+		</property>
+		<property name="secure">
+			<value>false</value>
+		</property>
+		<property name="zipStream">
+			<value>true</value>
+		</property>
+	</bean>
+
+	
+		<bean id="clientFileTransferHelper"
+		class="com.cfcc.jaf.core.service.filetransfer.support.ClientFileTransferHelper">
+		<property name="config">
+			<ref bean="fileSystemConfigClient" />
+		</property>
+	</bean>
+
+	<bean id="fileSystemConfigClient"
+		class="com.cfcc.jaf.core.service.filetransfer.support.FileSystemConfig">
+		<property name="transferSize">
+			<value>1024000</value>
+		</property>
+		<property name="root">
+			<value>c:/</value>
+		</property>
+	</bean>
+
+
+</beans>

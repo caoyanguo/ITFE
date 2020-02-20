@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="06ab524f-cabe-4580-a856-5030cc8ce39d" name="总额分成、两税返还报表生成" ename="divideAndTaxanti"/>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a6ac959f-2320-4945-a820-09e3cfe25aa1" name="业务要素补录" ename="bankNameEnter">
+  <jproperties id="91643915-d63f-4700-9f6e-88ba93f6b643" key="GeneratedTime" value="1410249107342"/>
+  <refModule href="JModule_52472bf8-0f78-4ed9-b657-2c6e364f42cb.model#52472bf8-0f78-4ed9-b657-2c6e364f42cb"/>
+  <methods id="1070207c-8212-4ac5-8412-0996a7cc0a89" ename="save" name="报文银行对照信息" returntype="java.lang.Void">
+    <methodParams id="cf1f038b-77e2-4196-9bc1-88b3322e4ca2" name="dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

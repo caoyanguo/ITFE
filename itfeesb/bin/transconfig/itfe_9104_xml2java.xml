@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="StopInfo9104" beanIdRef="StopInfo9104" />
+</jb:bean>
+<jb:bean beanId="StopInfo9104" class="java.util.HashMap" createOnElement="StopInfo9104">
+	<jb:value property="RunSign" decoder="String" data="CFX/MSG/StopInfo9104/RunSign" />
+	<jb:value property="StopRunTime" decoder="String" data="CFX/MSG/StopInfo9104/StopRunTime" />
+	<jb:value property="BackRunTime" decoder="String" data="CFX/MSG/StopInfo9104/BackRunTime" />
+	<jb:value property="StopRunReason" decoder="String" data="CFX/MSG/StopInfo9104/StopRunReason" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6ae6ae23-9c93-4f3a-a38c-b2e5d879273c" name="辅助标志参数转化" ename="TsAssitflagtrans" shared="true">
+  <jproperties id="282e3132-1916-4dc3-b961-3251b57a325c" key="GeneratedTime" value="1380179883984"/>
+  <refModule href="JModule_dfd8129a-3883-4877-a276-99ad526a0074.model#dfd8129a-3883-4877-a276-99ad526a0074"/>
+  <model id="747eb812-7ff4-4db0-9eee-bbe8690d8c5b" name="JModelImpl-747eb812-7ff4-4db0-9eee-bbe8690d8c5b">
+    <attributes id="988f80a2-a191-466d-8ad0-7c044cb164bb" name="dto" type="com.cfcc.itfe.persistence.dto.TsAssitflagtransDto"/>
+    <attributes id="33626f0a-333f-4571-bd9d-6bcb4988e818" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="5f5b8bca-761d-424a-986a-9d2f8d0473b2" viewers="c3f13b94-4a70-4915-ac4b-401090a2acec" name="跳转录入界面" ename="goInput"/>
+    <directions id="442ce3bf-fe79-43b3-bb61-87e6f32d7379" name="录入保存" ename="inputSave"/>
+    <directions id="a32074f2-7971-403e-9d4a-be1b72920f0b" viewers="ea21edf3-b60f-4bff-badf-3cd65ba23d39" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="0cb0a926-39fa-4e7b-8e6e-ba1bc80a55d1" name="单选" ename="singleSelect"/>
+    <directions id="2dfdbe32-5392-4bd1-85e0-050b1480f141" name="删除" ename="delete"/>
+    <directions id="daff7d48-9334-4d87-b488-ee75e65fef79" viewers="2cd44dc1-3190-4c7b-af7b-e0814fca3798" name="到修改界面" ename="goModify"/>
+    <directions id="532f0377-18eb-4ce2-b29c-18a6113ceef9" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_2f014075-e000-4a6e-a8b4-20cb0ce12903.model#2f014075-e000-4a6e-a8b4-20cb0ce12903"/>
+  <contentAreas id="73b4daff-9574-4cb6-a804-0409f870d8d4">
+    <contentareanode id="64c401b6-6c0e-4d3f-bcbf-96a0b8613651" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="5aad6979-d8c9-445c-b3a0-d31f59f836a5" name="sorgcode" binding="dto.sorgcode" caption="核算主体代码" enable="false" editable="false" required="true">
+        <labelStyle id="cac5158a-e0a5-44fa-b1bd-7ace9338e02e" name="LabelStyleImpl-cac5158a-e0a5-44fa-b1bd-7ace9338e02e" ename="LabelStyleImpldcac5158a-e0a5-44fa-b1bd-7ace9338e02e"/>
+        <componentStyle id="72746df0-3d46-43ed-aefc-d1ae1ca4100f" name="ComponentStyleImpl-72746df0-3d46-43ed-aefc-d1ae1ca4100f" ename="ComponentStyleImpl72746df0-3d46-43ed-aefc-d1ae1ca4100f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="cd8a675e-8098-4e18-97c4-edb52d289736" name="国库代码" binding="dto.strecode" caption="国库代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="0fe6122a-2030-4d89-ae39-c6865e2073c7" name="sbudgetsubject" binding="dto.sbudgetsubject" caption="预算科目" editable="true" required="true">
+        <labelStyle id="5680e374-c6c2-40e7-acd8-7b69a6b851bc" name="LabelStyleImpl-5680e374-c6c2-40e7-acd8-7b69a6b851bc" ename="LabelStyleImpld5680e374-c6c2-40e7-acd8-7b69a6b851bc"/>
+        <componentStyle id="dba7738b-3c79-426e-9ec7-ff38f7ec2158" name="ComponentStyleImpl-dba7738b-3c79-426e-9ec7-ff38f7ec2158" ename="ComponentStyleImpldba7738b-3c79-426e-9ec7-ff38f7ec2158"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="c14f2389-0c48-4cc3-9c79-3613bb32a1da" name="预算级次" binding="dto.sbudgetlevel" caption="预算级次" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="1a46e5ec-a47a-4cf2-b527-2dbc419a9f35" name="stipsassistsign" binding="dto.stipsassistsign" caption="TIPS辅助标志" editable="true">
+        <labelStyle id="eb15c6c8-9b88-4ad2-bb78-12c0e2d95fb4" name="LabelStyleImpl-eb15c6c8-9b88-4ad2-bb78-12c0e2d95fb4" ename="LabelStyleImpldeb15c6c8-9b88-4ad2-bb78-12c0e2d95fb4"/>
+        <componentStyle id="8d1902ce-911c-468d-a59d-474f984f3797" name="ComponentStyleImpl-8d1902ce-911c-468d-a59d-474f984f3797" ename="ComponentStyleImpl8d1902ce-911c-468d-a59d-474f984f3797"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="fad57906-f01f-44f1-b94a-3456890f3553" name="imodicount" binding="dto.imodicount" caption="修改次数" editable="true">
+        <labelStyle id="048a97c0-0b91-4e08-9114-830d21280eef" name="LabelStyleImpl-048a97c0-0b91-4e08-9114-830d21280eef" ename="LabelStyleImpld048a97c0-0b91-4e08-9114-830d21280eef"/>
+        <componentStyle id="de682fc1-4b11-49db-a40b-1a7b3b603b73" name="ComponentStyleImpl-de682fc1-4b11-49db-a40b-1a7b3b603b73" ename="ComponentStyleImplde682fc1-4b11-49db-a40b-1a7b3b603b73"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="3c4d5a3e-b270-4002-8ce0-c96de8031fed" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="51c863e1-462b-4549-8a3a-141b8cac5b3e" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="0cb0a926-39fa-4e7b-8e6e-ba1bc80a55d1">
+        <columnlist id="5aad6979-d8c9-445c-b3a0-d31f59f836a5" name="sorgcode" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="c9f0055c-ebc0-4545-b516-af42bbb03593" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="0fe6122a-2030-4d89-ae39-c6865e2073c7" name="sbudgetsubject" binding="sbudgetsubject" caption="预算科目"/>
+        <columnlist id="c2f8351a-9bf0-4078-bf56-76cd1b941ce3" name="sbudgetlevel" binding="sbudgetlevel" caption="预算级次"/>
+        <columnlist id="1a46e5ec-a47a-4cf2-b527-2dbc419a9f35" name="stipsassistsign" binding="stipsassistsign" caption="TIPS辅助标志"/>
+        <columnlist id="fad57906-f01f-44f1-b94a-3456890f3553" name="imodicount" binding="imodicount" caption="修改次数"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a65b4ff2-9d83-4033-890c-4c27a6991d91" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="5aad6979-d8c9-445c-b3a0-d31f59f836a5" name="sorgcode" extpoperties="" binding="dto.sorgcode" caption="核算主体代码" enable="false" editable="false" message="" required="true">
+        <labelStyle id="cac5158a-e0a5-44fa-b1bd-7ace9338e02e" name="LabelStyleImpl-cac5158a-e0a5-44fa-b1bd-7ace9338e02e" ename="LabelStyleImpldcac5158a-e0a5-44fa-b1bd-7ace9338e02e"/>
+        <componentStyle id="72746df0-3d46-43ed-aefc-d1ae1ca4100f" name="ComponentStyleImpl-72746df0-3d46-43ed-aefc-d1ae1ca4100f" ename="ComponentStyleImpl72746df0-3d46-43ed-aefc-d1ae1ca4100f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8815d91a-8197-4807-9d27-f11054bd0bc9" name="国库代码" binding="dto.strecode" caption="国库代码" enable="false" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="0fe6122a-2030-4d89-ae39-c6865e2073c7" name="sbudgetsubject" binding="dto.sbudgetsubject" caption="预算科目" enable="false" editable="false" message="" required="true">
+        <labelStyle id="5680e374-c6c2-40e7-acd8-7b69a6b851bc" name="LabelStyleImpl-5680e374-c6c2-40e7-acd8-7b69a6b851bc" ename="LabelStyleImpld5680e374-c6c2-40e7-acd8-7b69a6b851bc"/>
+        <componentStyle id="dba7738b-3c79-426e-9ec7-ff38f7ec2158" name="ComponentStyleImpl-dba7738b-3c79-426e-9ec7-ff38f7ec2158" ename="ComponentStyleImpldba7738b-3c79-426e-9ec7-ff38f7ec2158"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="05b4d8b2-f5f9-4236-8bc9-4732048f8a1c" name="预算级次" binding="dto.sbudgetlevel" caption="预算级次" enable="false" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="1a46e5ec-a47a-4cf2-b527-2dbc419a9f35" name="stipsassistsign" binding="dto.stipsassistsign" caption="TIPS辅助标志" editable="true">
+        <labelStyle id="eb15c6c8-9b88-4ad2-bb78-12c0e2d95fb4" name="LabelStyleImpl-eb15c6c8-9b88-4ad2-bb78-12c0e2d95fb4" ename="LabelStyleImpldeb15c6c8-9b88-4ad2-bb78-12c0e2d95fb4"/>
+        <componentStyle id="8d1902ce-911c-468d-a59d-474f984f3797" name="ComponentStyleImpl-8d1902ce-911c-468d-a59d-474f984f3797" ename="ComponentStyleImpl8d1902ce-911c-468d-a59d-474f984f3797"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="fad57906-f01f-44f1-b94a-3456890f3553" name="imodicount" binding="dto.imodicount" caption="修改次数" editable="true">
+        <labelStyle id="048a97c0-0b91-4e08-9114-830d21280eef" name="LabelStyleImpl-048a97c0-0b91-4e08-9114-830d21280eef" ename="LabelStyleImpld048a97c0-0b91-4e08-9114-830d21280eef"/>
+        <componentStyle id="de682fc1-4b11-49db-a40b-1a7b3b603b73" name="ComponentStyleImpl-de682fc1-4b11-49db-a40b-1a7b3b603b73" ename="ComponentStyleImplde682fc1-4b11-49db-a40b-1a7b3b603b73"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="6ae255fd-166f-4fd1-b935-d16624f74e0e">
+    <pages id="06bf0f19-6a85-4a65-9276-bf6d34c0f098" name="维护辅助标志参数转化">
+      <views id="ea21edf3-b60f-4bff-badf-3cd65ba23d39" name="维护界面" isdefault="true" contentArea="3c4d5a3e-b270-4002-8ce0-c96de8031fed">
+        <buttonArea id="7766e14e-9966-430c-84dc-fe431e90554f" name="JButtonAreaImpl-7766e14e-9966-430c-84dc-fe431e90554f">
+          <buttons id="cecad3a1-60d9-4493-ba10-fc0b4f46e86c" name="maintenanceInput" caption="录入" direction="5f5b8bca-761d-424a-986a-9d2f8d0473b2"/>
+          <buttons id="2d820b98-a1c2-44ae-bd00-709dda5f1f76" name="maintenanceDel" caption="删除" direction="2dfdbe32-5392-4bd1-85e0-050b1480f141"/>
+          <buttons id="a476636c-b1a4-4846-93ee-0273b9e5b56c" name="maintenanceMod" caption="修改" direction="daff7d48-9334-4d87-b488-ee75e65fef79"/>
+        </buttonArea>
+      </views>
+      <views id="2cd44dc1-3190-4c7b-af7b-e0814fca3798" name="修改界面" contentArea="a65b4ff2-9d83-4033-890c-4c27a6991d91">
+        <buttonArea id="9f0d9501-6f60-4817-9606-a740c2e02c2c" name="JButtonAreaImpl-9f0d9501-6f60-4817-9606-a740c2e02c2c">
+          <buttons id="4028c18b-a166-4313-9de4-89db6b29b03c" name="modifySave" caption="保存" checkrequired="true" direction="532f0377-18eb-4ce2-b29c-18a6113ceef9"/>
+          <buttons id="233a8c62-f8bb-46ad-95ab-850653f64ec4" name="modifyBack" caption="返回" direction="a32074f2-7971-403e-9d4a-be1b72920f0b"/>
+        </buttonArea>
+      </views>
+      <views id="c3f13b94-4a70-4915-ac4b-401090a2acec" name="录入界面" contentArea="64c401b6-6c0e-4d3f-bcbf-96a0b8613651">
+        <buttonArea id="d64341b0-5023-4ae5-8328-5ffeb33dfbf5" name="JButtonAreaImpl-d64341b0-5023-4ae5-8328-5ffeb33dfbf5">
+          <buttons id="b6699996-4504-43eb-b011-4753396d1344" name="保存" caption="保存" checkrequired="true" direction="442ce3bf-fe79-43b3-bb61-87e6f32d7379"/>
+          <buttons id="233a8c62-f8bb-46ad-95ab-850653f64ec4" name="modifyBack" caption="返回" direction="a32074f2-7971-403e-9d4a-be1b72920f0b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

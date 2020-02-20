@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="408054aa-a23e-40d3-9bc1-ec50f576f79f" name="5001财政日报表申请" ename="ReportDownload" shared="false">
+  <jproperties id="df14cec4-4b5d-45ab-997a-e0b29d8e52a3" key="GeneratedTime" value="1379837129453"/>
+  <refModule href="JModule_2a45d7c2-915d-499d-8736-08879ba0b5c8.model#2a45d7c2-915d-499d-8736-08879ba0b5c8"/>
+  <model id="72b7f92e-644a-426e-8194-4824cb60f09b" name="JModelImpl-72b7f92e-644a-426e-8194-4824cb60f09b">
+    <directions id="9dc6f0ea-3f13-46d6-9b1a-ddc30506be3c" name="报表下载" ename="downLoad"/>
+    <directions id="bab4b99e-6ec4-4d0f-a589-a1dcac9085a7" name="报表申请" ename="requestRpt"/>
+    <directions id="a3119cfc-d42a-46c7-827d-e5e76f8f98b1" name="申请全辖" ename="sendAll"/>
+  </model>
+  <services href="JServiceComponet_86a2dfb5-ff10-48a3-8bc6-25a48396bbef.model#86a2dfb5-ff10-48a3-8bc6-25a48396bbef"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="7c3eb867-dc29-43a7-b123-511043f8e369">
+    <contentareanode id="3b4e3b03-b3f4-4cec-9057-3c70d97f16a8" name="报表下载界面">
+      <widgetRefs xsi:type="model:Combo" id="b1022423-a5d9-4ec2-93b7-4d16d7619960" name="国库代码" binding="strecode" caption="国库代码" display="strename" underly="strecode" modelsource="trelist"/>
+      <widgetRefs xsi:type="model:Text" id="df0f2b21-58c5-4559-953c-d53a53d9b16c" name="报表日期" binding="rptdate" visible="true" caption="报表日期" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Combo" id="caf8916c-efc9-406f-a389-c5fc9af7fff9" name="申请范围" binding="searchArea" caption="申请范围">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ae08c58a-4e90-42bb-b2b7-378ade4989d0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="3d661a6a-52a6-4ca4-aca9-9c4ca2ed0a6f" name="征收机关性质" binding="taxprop" visible="false" caption="征收机关性质" enable="false"/>
+      <widgetRefs xsi:type="model:Label" id="cc9a0397-32f7-4d04-91c4-08439abea5b8" name="1、国税 2、地税 3、海关 4、财政 5、其它 " visible="false" caption="1、国税 2、地税 3、海关 4、财政 5、其它 " enable="false"/>
+      <widgetRefs xsi:type="model:Text" id="56a5e247-e9e2-4e65-95d3-5825810d5039" name="报表范围" binding="rptrange" visible="false" caption="报表范围" enable="false"/>
+      <widgetRefs xsi:type="model:Label" id="4604d395-65bc-48f8-bece-ee34c8f945b2" name="0-本级  1-全辖" visible="false" caption="0-本级  1-全辖" enable="false"/>
+      <widgetRefs xsi:type="model:Label" id="7c075db4-f956-41ed-9ef4-279e865ea059" name="说明：报表申请的时候只需填写国库代码和报表日期。报表下载的时候都必须填写" visible="false" caption="说明：报表申请的时候只需填写国库代码和报表日期。报表下载的时候都必须填写" enable="false"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="87e94815-412f-4ea1-a1f8-f7d14eba7c7a">
+    <pages id="0a158d06-0026-4bdb-9e98-2f20eddde809" name="报表下载">
+      <views id="d57c36af-aacd-49af-add8-21da1db52795" name="报表下载" isdefault="true" contentArea="3b4e3b03-b3f4-4cec-9057-3c70d97f16a8">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="bb5f7e7d-dd53-4cda-ac6d-59144d3a7c2d" name="JButtonAreaImpl-bb5f7e7d-dd53-4cda-ac6d-59144d3a7c2d">
+          <buttons id="3bc6cfa9-a945-4768-ac0b-ec8b2df55885" name="报表下载" visible="false" caption="报表下载" enable="false" direction="9dc6f0ea-3f13-46d6-9b1a-ddc30506be3c"/>
+          <buttons id="b417331a-4b93-425b-b7b2-b1a0d528870e" name="报表申请" caption="报表申请" direction="bab4b99e-6ec4-4d0f-a589-a1dcac9085a7"/>
+          <buttons id="5e5761e8-eef1-49cc-8b6b-84deda00aade" name="申请全辖" caption="申请全省数据" direction="a3119cfc-d42a-46c7-827d-e5e76f8f98b1"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#109806d0-798b-4668-91b9-57f526a8ede8"/>
+</model:JUIComponent>

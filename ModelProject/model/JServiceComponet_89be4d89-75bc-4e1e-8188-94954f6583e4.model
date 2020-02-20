@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="89be4d89-75bc-4e1e-8188-94954f6583e4" name="联网机构帐户服务组件" ename="TsInfoconnorgacc">
+  <jproperties id="0c45cfdd-0dbe-44ca-a505-731d79a41aa9" key="GeneratedTime" value="1331531146031"/>
+  <refModule href="JModule_92eccd9b-bd64-49f4-b5b1-c34961930172.model#92eccd9b-bd64-49f4-b5b1-c34961930172"/>
+  <methods id="9c4c5278-4937-4333-b6fc-dcaf42d9ade1" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="联网机构帐户">
+    <methodParams id="9448b454-4405-44a7-8571-dc0da9e9d658" name="联网机构帐户" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="a584cbdc-cbd5-4394-ad3a-6aeec7d836e7" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="1cf00613-5611-478c-aa4e-1e56bbfb8c25" name="联网机构帐户" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="a584cbdc-cbd5-4394-ad3a-6aeec7d836e7" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="159dbd9e-8f5e-4e3d-ae8b-465d73a9a691" name="联网机构帐户" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

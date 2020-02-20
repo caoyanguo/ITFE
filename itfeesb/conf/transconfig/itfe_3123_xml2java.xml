@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead3123" beanIdRef="BatchHead3123" />
+	<jb:wiring property="CompRetTrea3123" beanIdRef="CompRetTrea3123s" />
+</jb:bean>
+<jb:bean beanId="CompRetTrea3123s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="CompRetTrea3123" />
+</jb:bean>
+<jb:bean beanId="CompRetTrea3123" class="java.util.HashMap" createOnElement="CompRetTrea3123">
+	<jb:value property="OriSendOrgCode" decoder="String" data="CFX/MSG/CompRetTrea3123/OriSendOrgCode" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/CompRetTrea3123/OriEntrustDate" />
+	<jb:value property="OriPackNo" decoder="String" data="CFX/MSG/CompRetTrea3123/OriPackNo" />
+	<jb:value property="OriTraNo" decoder="String" data="CFX/MSG/CompRetTrea3123/OriTraNo" />
+	<jb:value property="DrawBackVouNo" decoder="String" data="CFX/MSG/CompRetTrea3123/DrawBackVouNo" />
+	<jb:value property="DrawBackAmt" decoder="String" data="CFX/MSG/CompRetTrea3123/DrawBackAmt" />
+	<jb:value property="OpStat" decoder="String" data="CFX/MSG/CompRetTrea3123/OpStat" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/CompRetTrea3123/AddWord" />
+</jb:bean>
+<jb:bean beanId="BatchHead3123" class="java.util.HashMap" createOnElement="BatchHead3123">
+	<jb:value property="ChkDate" decoder="String" data="CFX/MSG/BatchHead3123/ChkDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead3123/PackNo" />
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/BatchHead3123/TaxOrgCode" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead3123/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead3123/AllAmt" />
+	<jb:value property="ChildPackNum" decoder="String" data="CFX/MSG/BatchHead3123/ChildPackNum" />
+	<jb:value property="CurPackNo" decoder="String" data="CFX/MSG/BatchHead3123/CurPackNo" />
+	<jb:value property="CurPackNum" decoder="String" data="CFX/MSG/BatchHead3123/CurPackNum" />
+	<jb:value property="CurPackAmt" decoder="String" data="CFX/MSG/BatchHead3123/CurPackAmt" />
+</jb:bean>
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="988e6041-4ab1-446e-b4fa-46b4cf1b0d0f" name="发送凭证附件" ename="VoucherAttachService">
+  <jproperties id="7dc193ff-8068-422b-9baf-24dccc144b94" key="GeneratedTime" value="1567053859809"/>
+  <refModule href="JModule_425e0907-6615-4ed6-9887-0cb6e469a132.model#425e0907-6615-4ed6-9887-0cb6e469a132"/>
+  <model id="deb85067-295c-4d32-8cfe-5533ac875895" name="JModelImpl-deb85067-295c-4d32-8cfe-5533ac875895">
+    <attributes id="14b4d085-febb-49ea-b4a8-0aa1225745aa" name="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+    <attributes id="fc87de60-50e4-4e3e-bc66-7f5182db8dd4" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="5b44bef9-eec4-48d1-a0a8-6545a507eff4" name="发送凭证附件" ename="sendVoucherAttach"/>
+    <directions id="ea4571ff-bc85-4941-bd1e-f5a57d9394ec" name="查询 " ename="search"/>
+    <directions id="ef86a718-6170-4d3d-9e5c-f93d08a9f91a" name="接收凭证附件" ename="recvVoucherAttach"/>
+    <directions id="743d1d3b-334c-4b3c-b4d8-f2a8161e8ff3" name="文件批量下载" ename="downloadAll"/>
+    <directions id="cde22d64-c33a-4262-9e52-c7fa0b9fa969" viewers="b4a3af78-25cc-46bf-807a-be7e7cbb1dce" name="返回" ename="goQuery"/>
+    <directions id="b8701118-7f24-45f1-8f8b-5e31c20e8d85" viewers="c64029d7-e65a-480e-9dd0-2a0b9f4d912d" name="报表打印" ename="reportPrint"/>
+    <directions id="8db3e1ca-e4e5-45cb-a5e0-e0af45251f46" name="全选" ename="selectAll"/>
+  </model>
+  <services href="JServiceComponet_abb5c90f-b502-43e6-bb7b-e18011ad64e2.model#abb5c90f-b502-43e6-bb7b-e18011ad64e2"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_502d4660-f939-41cf-ba34-6ff96bc654cd.model#502d4660-f939-41cf-ba34-6ff96bc654cd"/>
+  <contentAreas id="a7362f7e-26ae-4bb7-9b13-b639d94bcf4b">
+    <contentareanode id="ab876422-a836-4edc-aadf-b6dc07d05bc7" name="发送凭证附件" grouptitle="发送凭证附件" layout="">
+      <widgetRefs xsi:type="model:Combo" id="0693e773-0511-4b72-9cbe-774ca6053567" name="国库代码" binding="dto.strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="50d32f2c-ba94-4a7c-b7fe-6b9992b88e8f" name="业务类型" binding="dto.svtcode" caption="关联凭证类型" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="6f389135-4182-4212-8904-f14dd2d01f47" name="凭证号多个,号分割" binding="dto.svoucherno" caption="关联凭证(多个用,分隔)" required="true"/>
+      <widgetRefs xsi:type="model:FileUploader" id="a55d7650-39e1-4280-ae85-1920d9adef4f" name="文件路径" binding="filePath" caption="文件路径" isdirectory="false" ismult="true"/>
+    </contentareanode>
+    <contentareanode id="22d6af82-d9e5-428f-9abe-36e9d055d811" name="接收凭证附件" grouptitle="接收凭证附件">
+      <widgetRefs xsi:type="model:Combo" id="f200f6da-89c3-4c1e-9b51-70908912cad4" name="国库代码" binding="dto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a746a3e8-5983-43e5-a9cb-0c67ba6eace8" name="接收日期" binding="dto.screatdate" caption="接收日期"/>
+    </contentareanode>
+    <contentareanode id="da5f9872-fd32-41f3-85e6-93ccf7f960b8" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="737d9528-e456-42a7-be97-4fa78b9a87e5" name="maintenanceResult" binding="pagingcontext" caption="查询结果" tabletype="paging" showcheckbox="true" selectedrows="checklist">
+        <columnlist id="496862a9-109c-4ad0-951a-7f310c6ca649" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="75c19ae2-1148-4178-a5cd-fcc8d440b71d" name="接收日期" binding="screatdate" caption="接收日期"/>
+        <columnlist id="a4ed5615-bd4b-42ed-b7af-fd27c3ce03f4" name="文件名称" binding="sfilename" caption="文件名称"/>
+        <columnlist id="3a0fee85-16d5-43a0-bf23-fc119629de15" name="接收时间" binding="scheckdate" caption="接收时间"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="43a22031-44fd-40d2-81d6-c905b8421482" name="报表打印界面">
+      <jreportref id="ef84808b-1e76-4d7c-9c1c-f9e29cd27a52" name="报表打印界面" reportpath="reportPath" binding="reportRs" parammap="reportMap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="516ff18d-1471-406c-b58c-a9db9de9e036">
+    <pages id="63a1634c-4dce-4dd8-8bcf-585882c7d020" name="发送凭证附件">
+      <views id="0e5385c6-c8ab-4469-9236-746981bfbb2d" name="发送凭证附件" isdefault="true" contentArea="ab876422-a836-4edc-aadf-b6dc07d05bc7">
+        <buttonArea id="b79ccb75-81ed-4b89-9673-98e455ae0f11" name="JButtonAreaImpl-b79ccb75-81ed-4b89-9673-98e455ae0f11">
+          <buttons id="96c03470-376b-43c1-8997-e2e7d9a4e2c1" name="发送电子凭证库" caption="发送凭证附件" checkrequired="true" direction="5b44bef9-eec4-48d1-a0a8-6545a507eff4"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="3b11889c-7f1b-4245-9352-6e64f1f084b8" name="接收凭证附件">
+      <views id="b4a3af78-25cc-46bf-807a-be7e7cbb1dce" name="接收凭证附件" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="22d6af82-d9e5-428f-9abe-36e9d055d811 da5f9872-fd32-41f3-85e6-93ccf7f960b8">
+        <buttonArea id="79e4a767-af5d-4bf8-a563-2cd4ec947ad6" name="JButtonAreaImpl-79e4a767-af5d-4bf8-a563-2cd4ec947ad6">
+          <buttons id="c8908e65-3fcc-4482-a6e6-2289e139f685" name="全选" caption="全选" direction="8db3e1ca-e4e5-45cb-a5e0-e0af45251f46"/>
+          <buttons id="92c5c743-d12f-425b-83d1-c56345952e48" name="接收凭证附件" caption="接收凭证附件" direction="ef86a718-6170-4d3d-9e5c-f93d08a9f91a"/>
+          <buttons id="1c48bfab-6954-4bc6-95c8-a15a96e5d78b" name="查询" caption="查询附件" direction="ea4571ff-bc85-4941-bd1e-f5a57d9394ec"/>
+          <buttons id="58d48360-d05c-4d00-96c8-6e1ee9648f75" name="附件下载" caption="附件下载" direction="743d1d3b-334c-4b3c-b4d8-f2a8161e8ff3"/>
+          <buttons id="565bf6e8-4aa2-4ebe-886b-60caccb250d0" name="报表打印" caption="报表打印" direction="b8701118-7f24-45f1-8f8b-5e31c20e8d85"/>
+        </buttonArea>
+      </views>
+      <views id="c64029d7-e65a-480e-9dd0-2a0b9f4d912d" name="报表打印" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="43a22031-44fd-40d2-81d6-c905b8421482">
+        <buttonArea id="d63780ba-1b7d-4f98-9a72-b47e4f4a78b9" name="JButtonAreaImpl-d63780ba-1b7d-4f98-9a72-b47e4f4a78b9">
+          <buttons id="ed38a070-18ca-4693-8b9b-27080bd251c5" name="返回" caption="返回" direction="cde22d64-c33a-4262-9e52-c7fa0b9fa969"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#f1b3782c-7190-4ede-8194-7c819304d738"/>
+</model:JUIComponent>

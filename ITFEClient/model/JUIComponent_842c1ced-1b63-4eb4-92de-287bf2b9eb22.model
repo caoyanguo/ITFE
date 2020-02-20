@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="842c1ced-1b63-4eb4-92de-287bf2b9eb22" name="销号提交权限维护" ename="tsSysParas">
+  <jproperties id="6e2b5e44-a72a-4166-bbe5-31e47d124627" key="GeneratedTime" value="1362412936237"/>
+  <refModule href="JModule_8253aa29-2cbf-4768-8b63-fe995c2f040d.model#8253aa29-2cbf-4768-8b63-fe995c2f040d"/>
+  <model id="2ac0bb1a-5862-4216-918a-a06e86a761a3" name="JModelImpl-2ac0bb1a-5862-4216-918a-a06e86a761a3">
+    <attributes id="3a32c277-1388-48f0-a110-7c5c08e5e698" name="dto" type="com.cfcc.itfe.persistence.dto.TsSysparaDto"/>
+    <directions id="d1c0feb4-46c7-4a7c-a6ca-e9f311c7cdfd" viewers="04d6f540-e611-48a3-afae-fd68ac3e876d" name="保存" ename="saveInfo"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_e4c7150f-0c3c-4f1c-b4a5-8b3eb83a5f63.model#e4c7150f-0c3c-4f1c-b4a5-8b3eb83a5f63"/>
+  <contentAreas id="b7869312-6253-4fb8-b2ae-be6435278b06">
+    <contentareanode id="4541ed00-b662-484a-a0cd-d5ef90ba97ab" name="直接提交权限设置" grouptitle="直接提交权限设置" columnnum="1" layout="" layoutdata="" specify="" marginwidth="0" processors="">
+      <widgetRefs xsi:type="model:Checkbox" id="3f0a2730-6e5f-4463-b7ea-f6ad7b5e364b" name="直接支付额度直接提交" extpoperties="" binding="directpay_dirc" caption="直接支付额度"/>
+      <widgetRefs xsi:type="model:Checkbox" id="5a956577-549d-48d7-af1a-456677d3eb2b" name="授权支付额度直接提交" extpoperties="" binding="grantpay_dirc" caption="授权支付额度"/>
+      <widgetRefs xsi:type="model:Checkbox" id="0c03aa6b-14b9-4883-98e7-40ea0f9451cd" name="实拨资金直接提交" extpoperties="" binding="payout_dirc" caption="实拨资金"/>
+      <widgetRefs xsi:type="model:Checkbox" id="5e910031-7251-4fac-bfeb-7df670023268" name="退库直接提交" extpoperties="" binding="twbk_dirc" caption="退库"/>
+      <widgetRefs xsi:type="model:Checkbox" id="23d90ee8-2100-4b7d-93e4-b571315808cb" name="更正直接提交" extpoperties="" binding="corr_dirc" caption="更正"/>
+      <widgetRefs xsi:type="model:Checkbox" id="7ffa9cb3-25c3-49bd-b529-5bb1b314ea4c" name="CheckboxImpl-7ffa9cb3-25c3-49bd-b529-5bb1b314ea4c" binding="conpay_dirc" caption="商行划款申请"/>
+      <widgetRefs xsi:type="model:Checkbox" id="fd63abd2-0d1d-4d50-aa5a-662cf8314d50" name="CheckboxImpl-fd63abd2-0d1d-4d50-aa5a-662cf8314d50" binding="conpayback_dirc" caption="商行退款申请"/>
+      <widgetRefs xsi:type="model:Checkbox" id="7b477519-605b-4781-b753-f1b99a9c1024" name="批量销号直接提交" extpoperties="" binding="batch_dirc" caption="代发财政款项"/>
+      <widgetRefs xsi:type="model:Checkbox" id="f4b19bae-28b1-4f3b-84f9-963ee19f0971" name="人行办理直接支付直接提交" extpoperties="" binding="pbcdirectpay_dirc" caption="人行办理支付"/>
+    </contentareanode>
+    <contentareanode xsi:type="model:JContentAreaSeparator"/>
+    <contentareanode id="f541023e-1146-45a1-9217-2a0e8aaccb0c" name="批量销号权限设置" grouptitle="批量销号权限设置" columnnum="1">
+      <widgetRefs xsi:type="model:Checkbox" id="70781ad9-b962-4c73-8247-9b86a987a91e" name="直接支付额度批量销号" extpoperties="" binding="directpay_batch" caption="直接支付额度"/>
+      <widgetRefs xsi:type="model:Checkbox" id="c847299f-1045-4e3a-92f8-147126e70518" name="授权支付额度批量销号" extpoperties="" binding="grantpay_batch" caption="授权支付额度"/>
+      <widgetRefs xsi:type="model:Checkbox" id="b8e35019-ddf7-4db0-9cce-3ee4c64e2617" name="实拨资金批量销号" extpoperties="" binding="payout_batch" caption="实拨资金"/>
+      <widgetRefs xsi:type="model:Checkbox" id="1e562495-5bcf-48e3-85a4-c4e29417a60a" name="直接支付批量销号" binding="twbk_batch" caption="退库"/>
+      <widgetRefs xsi:type="model:Checkbox" id="053a9f4a-9c9e-4559-8623-da9f5f7866d7" name="更正批量销号" extpoperties="" binding="corr_batch" caption="更正"/>
+      <widgetRefs xsi:type="model:Checkbox" id="24527b3f-e4a3-438f-9a5b-e6ebc1b6d4fa" name="CheckboxImpl-24527b3f-e4a3-438f-9a5b-e6ebc1b6d4fa" binding="conpay_batch" caption="商行划款申请"/>
+      <widgetRefs xsi:type="model:Checkbox" id="90bdd3bb-b676-48f5-9e07-0fd2003701fe" name="CheckboxImpl-90bdd3bb-b676-48f5-9e07-0fd2003701fe" binding="conpayback_batch" caption="商行退款申请"/>
+      <widgetRefs xsi:type="model:Checkbox" id="2455c271-5caa-497b-b1f9-30a9adb7e3e3" name="人行办理直接支付批量销号" extpoperties="" binding="pbcdirectpay_batch" caption="人行办理支付"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="19dc5dae-a2cd-4138-b0e6-a35dc6045fcb">
+    <pages id="a46e402e-413a-4429-a1bf-90fc6af247c7" name="参数维护">
+      <views id="04d6f540-e611-48a3-afae-fd68ac3e876d" name="参数维护" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.LeftToRightViewerImpl" contentArea="4541ed00-b662-484a-a0cd-d5ef90ba97ab //@contentAreas/@contentareanode.1 f541023e-1146-45a1-9217-2a0e8aaccb0c">
+        <buttonArea id="e75f7b5a-f7c1-4db1-a61b-d7fd5f55add0" name="JButtonAreaImpl-e75f7b5a-f7c1-4db1-a61b-d7fd5f55add0">
+          <buttons id="53ec5d16-00d6-48e7-aeb5-5fa86c9f0fc2" name="保存" caption="保存" direction="d1c0feb4-46c7-4a7c-a6ca-e9f311c7cdfd"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

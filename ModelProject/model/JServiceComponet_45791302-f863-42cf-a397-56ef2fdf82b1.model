@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="45791302-f863-42cf-a397-56ef2fdf82b1" name="查询日志" ename="queryLogs">
+  <jproperties id="cc2228a0-dc94-4307-9e42-8ee50d012860" key="GeneratedTime" value="1366223008665"/>
+  <refModule href="JModule_9fad644e-e87a-4863-b9ff-96d276e971e0.model#9fad644e-e87a-4863-b9ff-96d276e971e0"/>
+  <methods id="205bfaf1-080a-45df-b1c7-a045b09a2cd9" ename="queryLog" name="查询" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="5c0416a2-e989-4365-be09-ad1aba9f1181" name="日志dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="1c27ac5f-d061-4be5-ab65-a220a1263f82" name="page" ename="pagerequest" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+  <methods id="b8fed258-d58f-4450-ae95-1c9af8773095" ename="result" name="结果界面" returntype="com.cfcc.devplatform.customtype.Void"/>
+  <methods id="ec65185f-1380-4eb4-9955-d20e5a76eb18" ename="queryAttach" name="queryAttach" codecomment="查询附件信息" returntype="java.util.List" remark="查询附件信息">
+    <methodParams id="e3a11e95-308b-449c-b1c8-62d5308f1bc7" name="sendNo" ename="sendNo" type="java.lang.String" codecomment="发送流水号"/>
+  </methods>
+  <methods id="a1e9a6c1-047d-4f84-b339-8375d7ef7645" ename="queryContent" name="queryContent" codecomment="查询发送凭证的详细内容" returntype="java.lang.String" remark="查询发送凭证的详细内容">
+    <methodParams id="4aa9bed4-c6b4-4934-99e4-8bd673afe614" name="sendNo" ename="sendNo" type="java.lang.String" codecomment="发送流水号"/>
+  </methods>
+  <methods id="6e15da91-9df5-45ce-8b44-df9e14cc38bb" ename="cancelSend" name="cancelSend" codecomment="作废自己发送的报文" returntype="com.cfcc.devplatform.customtype.Void" remark="作废自己发送的报文">
+    <methodParams id="1f150dc5-e1ef-4d8d-8294-69880751dcd8" name="待作废的发送日志" ename="sendLog" type="com.cfcc.itfe.persistence.dto.TvRecvLogShowDto" codecomment="待作废的发送日志"/>
+  </methods>
+  <methods id="64ca3ac6-ef7a-4a32-af4d-1d48cfb46f5a" ename="queryMsgLog" name="查询报文收发日志" codecomment="查询报文收发日志" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="3d62fa7a-9e92-4080-ad1b-7bf142590fea" name="报文日志查询DTO对象" ename="finddto" type="com.cfcc.itfe.persistence.dto.TvRecvlogDto" codecomment="报文日志查询DTO对象"/>
+    <methodParams id="dc10892d-d74a-4e37-9787-0bd2e6297b90" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="54cbaed8-4af1-4328-acb3-b585c6d174a6" name="起始日期" ename="startdate" type="java.lang.String"/>
+    <methodParams id="9ca909c7-7cd0-4411-ac2e-7170ecdfddf3" name="结束日期" ename="enddate" type="java.lang.String"/>
+  </methods>
+  <methods id="93ab577a-1da5-4f26-95aa-7bbe23824c42" ename="getFileRootPath" name="得到文件根路径" codecomment="得到文件根路径" returntype="java.lang.String"/>
+  <methods id="5fb570be-0f85-4c4c-ad33-0d3cdf3c5246" ename="resendMsg" name="resendMsg" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="72ec105e-f6a6-49c3-94ea-80680c8e38df" name="日志流水号" ename="ssendno" type="java.lang.String"/>
+  </methods>
+  <methods id="805b246c-6a61-4c22-85fe-e4a649ec0793" ename="updateFail" name="设置失败状态" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8a3902f2-92bd-4f4b-8ca3-d400d1f8fbed" name="发送流水号" ename="sendNo" type="java.lang.String"/>
+    <methodParams id="28476ceb-6cf4-4c29-b107-5df3953705a6" name="包流水号" ename="pacackageNo" type="java.lang.String"/>
+    <methodParams id="3c096772-af76-4d51-81a3-8ece4882e144" name="报文编号" ename="msgno" type="java.lang.String"/>
+    <methodParams id="04dc3784-851d-4554-a278-08d79ab24ea3" name="委托日期" ename="sdate" type="java.lang.String"/>
+  </methods>
+  <methods id="073db193-6506-43b2-8ce3-c98d5308396c" ename="isBizMsgNo" name="判断是否是业务报文" returntype="java.lang.Boolean">
+    <methodParams id="583b3baa-7bc9-478a-b250-fbdcc6ef6f11" name="报文编号" ename="msgno" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+	xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+	<jb:bean beanId="HEAD" class="java.util.HashMap"
+		createOnElement="HEAD">
+		<jb:value property="VER" decoder="String" data="CFX/HEAD/VER" />
+		<jb:value property="SRC" decoder="String" data="CFX/HEAD/SRC" />
+		<jb:value property="DES" decoder="String" data="CFX/HEAD/DES" />
+		<jb:value property="APP" decoder="String" data="CFX/HEAD/APP" />
+		<jb:value property="MsgNo" decoder="String" data="CFX/HEAD/MsgNo" />
+		<jb:value property="MsgID" decoder="String" data="CFX/HEAD/MsgID" />
+		<jb:value property="MsgRef" decoder="String" data="CFX/HEAD/MsgRef" />
+		<jb:value property="WorkDate" decoder="String" data="CFX/HEAD/WorkDate" />
+		<jb:value property="Reserve" decoder="String" data="CFX/HEAD/Reserve" />
+	</jb:bean>
+</smooks-resource-list>

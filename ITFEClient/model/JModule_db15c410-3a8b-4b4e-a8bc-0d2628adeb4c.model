@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="db15c410-3a8b-4b4e-a8bc-0d2628adeb4c" name="用户盖章权限维护" ename="TsUserstampfunction" shared="true"/>

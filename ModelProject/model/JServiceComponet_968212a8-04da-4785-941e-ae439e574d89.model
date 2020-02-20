@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="968212a8-04da-4785-941e-ae439e574d89" name="退税数据查询" ename="QueryDrawback" shared="false">
+  <jproperties id="d22a2b0b-99fa-46aa-8571-239a643bb332" key="GeneratedTime" value="1258256262859"/>
+  <refModule href="JModule_a229031d-4fa0-4157-8688-6b7086e42a00.model#a229031d-4fa0-4157-8688-6b7086e42a00"/>
+  <methods id="040741ed-b266-469a-b41b-21ee433fc7a1" ename="commonQuery" name="通用查询方法" returntype="java.util.List">
+    <methodParams id="c9be59b8-8eb8-42d8-af9e-90e7f33ea137" name="查询dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="1314c0e6-32a7-409a-aefe-22b7d3904a8a" ename="queryReportDatas" name="显示申报表" returntype="java.util.List">
+    <methodParams id="3150e719-5104-4eae-ae41-2f177680f423" name="查询dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="15ae6314-028e-49d4-a9ae-193bffb37013" ename="backdwbkvou" name="还原退库凭证" returntype="java.util.List">
+    <methodParams id="885377c9-a483-420e-b610-bb420412f008" name="查询dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="fcadbe5b-ab07-471c-ad83-e7491079c037" ename="sumdwbkreport" name="汇总退还书" returntype="java.util.List">
+    <methodParams id="83f79a34-8aba-4a82-93a0-7d034c8a449f" name="查询dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="c6a4877d-7e62-41a5-96ae-dcc25ccb9a9c" ename="detaildwbkprint" name="退税明细打印" codecomment="" returntype="java.util.List">
+    <methodParams id="f1cf5155-f86e-47bc-87c3-61efa62ec560" name="查询dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="8bf26e0f-1bd2-48e9-88e7-6bc9908c3f0c" ename="senddwbkreport" name="发送回执报文" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="fcf119e3-bf01-4e5f-8eb0-a97e30f94fd0" name="list列表" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="e941da7e-00c0-4fba-80f6-c00ffc5272c3" ename="cancelcheck" name="取消校验" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="d3270903-c332-4c22-a95c-e26e7baf463e" name="批次list" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="9960cb84-757d-47ba-94d0-7716a4a279b1" ename="deletereport" name="通用查询方法" returntype="java.lang.String">
+    <methodParams id="70fc602e-8419-422c-8a54-1869fbca6a26" name="批次号" ename="batchnum" type="java.lang.String"/>
+  </methods>
+  <methods id="e6821dc9-07eb-47a5-9be9-e696319a6559" ename="makedwbkbackreport" name="生成退库退回" returntype="java.util.List">
+    <methodParams id="1d94ecd6-4abf-4bb1-9e15-2a498cb9a328" name="传入的退库退回报文" ename="list" type="java.util.List"/>
+    <methodParams id="bf1e25d4-66a2-43a7-967a-9c38f26d0179" name="资金文件名称" ename="fundfilename" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

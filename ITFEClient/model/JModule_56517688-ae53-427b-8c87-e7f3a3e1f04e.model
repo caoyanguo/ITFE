@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="56517688-ae53-427b-8c87-e7f3a3e1f04e" name="9003交易状态查询请求" ename="TraStatusCheck" shared="true"/>

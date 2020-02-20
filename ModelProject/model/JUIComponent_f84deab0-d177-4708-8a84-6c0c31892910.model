@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f84deab0-d177-4708-8a84-6c0c31892910" name="业务量统计" ename="businessStatQuery">
+  <jproperties id="392fe40c-123a-439b-8338-3dae3fb587b6" key="GeneratedTime" value="1330485996031"/>
+  <refModule href="JModule_25ce1c24-4b0c-4800-9892-98fe42683cfe.model#25ce1c24-4b0c-4800-9892-98fe42683cfe"/>
+  <model id="2e79ed0b-47dd-4fe6-b599-c5087a30da8b" name="JModelImpl-2e79ed0b-47dd-4fe6-b599-c5087a30da8b">
+    <directions id="b7d56785-e94b-4f7c-9480-ec841aeb41d5" viewers="424f7d73-acbf-43d9-b9ff-6f1b4306228d" name="查询列表事件" ename="searchList"/>
+    <directions id="b82db009-6a84-4753-8a01-9d05bf108126" viewers="544140ab-e6ae-4df9-93d7-a7d0ac080627" name="返回查询界面" ename="rebackSearch"/>
+  </model>
+  <services href="JServiceComponet_dae23be4-f81c-4ca7-a7f3-75982f337a4e.model#dae23be4-f81c-4ca7-a7f3-75982f337a4e"/>
+  <contentAreas id="3f53e336-6e2d-4058-b78e-4ada716976ab">
+    <contentareanode id="da236c83-248b-4b33-b7df-e77f3c54af77" name="业务量统计查询条件">
+      <widgetRefs xsi:type="model:Text" id="1237dc9d-abe7-48ef-b87c-ca07caa9907f" name="账务日期" extpoperties="" binding="finddto.saccdate" caption="账务日期" pattern="@8" textstyle="" defaultvalue=""/>
+      <widgetRefs xsi:type="model:Text" id="b5ade388-e6af-474d-a127-3f610d5f221f" name="核算主体代码" binding="finddto.sorgcode" caption="核算主体代码" pattern="@12"/>
+    </contentareanode>
+    <contentareanode id="e6398a43-dea7-4893-b4e3-b3e7e15d968f" name="业务量统计查询结果">
+      <widgetRefs xsi:type="model:Table" id="1a963a39-09d1-49ad-9bc7-068b2276fd07" name="业务量统计查询结果" binding="incometablepage" caption="业务量统计查询结果" tabletype="paging">
+        <columnlist id="a97c8575-9750-4a10-bacd-e145cdb0990a" name="账务日期" binding="saccdate" caption="账务日期"/>
+        <columnlist id="bd2f426a-c840-4f46-a70d-e45482a773da" name="业务量" binding="nbusinessnum" caption="业务量"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="c8f47338-3b48-4cc9-b1eb-1f7bd0397fa6">
+    <pages id="9b4e1a12-14f7-48c5-be32-f930276627e6" name="业务量统计页面">
+      <views id="544140ab-e6ae-4df9-93d7-a7d0ac080627" name="业务量统计查询条件界面" isdefault="true" contentArea="da236c83-248b-4b33-b7df-e77f3c54af77">
+        <buttonArea id="bc217a65-1657-4765-a86d-3e757ce78865" name="JButtonAreaImpl-bc217a65-1657-4765-a86d-3e757ce78865">
+          <buttons id="6b9976f7-cf62-47d3-97ea-b9d37bae450a" name="查询" caption="查询" direction="b7d56785-e94b-4f7c-9480-ec841aeb41d5"/>
+        </buttonArea>
+      </views>
+      <views id="424f7d73-acbf-43d9-b9ff-6f1b4306228d" name="业务量统计查询结果" contentArea="e6398a43-dea7-4893-b4e3-b3e7e15d968f">
+        <buttonArea id="0b35f771-0d14-43c6-b47c-cb6c357f7dca" name="JButtonAreaImpl-0b35f771-0d14-43c6-b47c-cb6c357f7dca">
+          <buttons id="cdf73a0f-c5b8-4428-b39e-2df91bbf3f70" name="返回" caption="返回" direction="b82db009-6a84-4753-8a01-9d05bf108126"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

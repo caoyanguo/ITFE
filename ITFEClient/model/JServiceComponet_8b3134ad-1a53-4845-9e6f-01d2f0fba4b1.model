@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8b3134ad-1a53-4845-9e6f-01d2f0fba4b1" name="支出报表业务处理" ename="PayoutReport" shared="false">
+  <jproperties id="e8e72afd-c1cb-4594-b050-a351c7055cd0" key="GeneratedTime" value="1395995950736"/>
+  <refModule href="JModule_d2043ede-0078-43d8-9e6e-4d49e98a62fc.model#d2043ede-0078-43d8-9e6e-4d49e98a62fc"/>
+  <methods id="851fc761-27b4-4ed0-9987-a24c8178cd3a" ename="payoutVoucherGenerate" name="支出报表生成" returntype="com.cfcc.itfe.facade.data.MulitTableDto">
+    <methodParams id="177fedd6-646a-4e98-ac4b-fb1133014f57" name="凭证索引表dtolist" ename="voucherDtoList" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

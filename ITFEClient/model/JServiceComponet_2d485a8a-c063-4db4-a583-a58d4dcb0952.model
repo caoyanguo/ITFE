@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2d485a8a-c063-4db4-a583-a58d4dcb0952" name="电子税票入库流水勾兑" ename="TvFinIncomeonlineDetailBlend">
+  <jproperties id="6d0633ee-9215-4bf4-bc0c-c587fa8488fe" key="GeneratedTime" value="1426650939294"/>
+  <refModule href="JModule_93963f51-c2da-466d-9713-642d1a041102.model#93963f51-c2da-466d-9713-642d1a041102"/>
+  <methods id="122d4977-a6c3-4275-b408-152369ab134a" ename="searchBlend" name="查询电子税票入库流水" returntype="java.util.Map">
+    <methodParams id="aa78fcd5-094b-4fd9-be4a-6dc064062f7a" name="查询dto" ename="finddto" type="com.cfcc.itfe.persistence.dto.TvIncomeonlineIncomeondetailBlendDto"/>
+    <methodParams id="b1081916-0d16-49f1-b018-e5c4bbebc24c" name="扩展参数Map" ename="parammap" type="java.util.Map"/>
+  </methods>
+  <methods id="cabc365e-43d4-4240-a20d-762c59f693e5" ename="adddata" name="新增数据保存" returntype="java.lang.String">
+    <methodParams id="8435f369-8e71-40ea-8c8f-68aecd39349e" name="数据对象" ename="idtodata" type="com.cfcc.itfe.persistence.dto.TvIncomeonlineIncomeondetailBlendDto"/>
+  </methods>
+  <methods id="199a2e22-de94-4a3a-8178-79c5e13d7913" ename="blendStorage" name="勾兑入库" returntype="java.lang.String">
+    <methodParams id="99ffb5e8-e61a-4825-8b55-d8697f30d7d1" name="查询dto" ename="finddto" type="com.cfcc.itfe.persistence.dto.TvIncomeonlineIncomeondetailBlendDto"/>
+    <methodParams id="a672aecc-e397-45ce-87b1-d79bac1712e6" name="参数map" ename="paramMap" type="java.util.Map"/>
+  </methods>
+  <methods id="c9e5d430-a903-4500-917c-188a48f1fe0d" ename="findSummaryReport" name="勾对入库汇总报表" returntype="java.util.List">
+    <methodParams id="23f0f9bf-e47d-41ee-80a8-5933daac7ebc" name="报表dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="0f28a735-12ab-4187-bf79-fa8a9f51c321" name="国库代码" ename="strecode" type="java.lang.String"/>
+    <methodExceptions id="cc20f315-2312-49ce-a57b-0af67bc628bf" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

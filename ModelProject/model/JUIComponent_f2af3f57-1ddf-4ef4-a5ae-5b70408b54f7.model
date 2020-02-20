@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f2af3f57-1ddf-4ef4-a5ae-5b70408b54f7" name="3128财政库存日报表查询" ename="TrStockdayrpt" shared="true">
+  <jproperties id="96463607-8970-4541-b688-b6f9339f9637" key="GeneratedTime" value="1403682554718"/>
+  <refModule href="JModule_5bb909c0-75d8-4906-997e-e95dc0cdf888.model#5bb909c0-75d8-4906-997e-e95dc0cdf888"/>
+  <model id="6ce61d3c-4b52-4bee-83d7-ef32c36dbd3a" name="JModelImpl-6ce61d3c-4b52-4bee-83d7-ef32c36dbd3a">
+    <attributes id="833c52c2-f48b-4998-89ac-834635d03dbd" name="dto" type="com.cfcc.itfe.persistence.dto.TrStockdayrptDto"/>
+    <attributes id="e3d06f58-8e05-4d8d-a9fd-7cd676355037" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="20a6ee93-f8cc-4e35-bde7-87c8d8582da7" name="startDate" type="java.lang.String"/>
+    <attributes id="0d7ebaa2-ff7e-4d77-9ae5-d258fbb73449" name="endDate" type="java.lang.String"/>
+    <directions id="640a09d8-71a0-4ea2-9773-85e310a95016" name="单选" ename="singleSelect"/>
+    <directions id="b750cb01-08e5-4478-a8bb-fd41c6aaa667" viewers="3ebb1561-820d-4e9a-8b98-3cd3ec46a3ba" name="查询" ename="query"/>
+    <directions id="87f6a576-c67b-4a9c-bb49-6579730e1309" viewers="c56dd88f-cffc-4a63-9286-eb3bd9515905" name="返回" ename="goBack"/>
+    <directions id="4ce209e5-9373-4c8b-b329-b5636a613fa7" viewers="c56dd88f-cffc-4a63-9286-eb3bd9515905" name="导出库存txt" ename="exporttxt"/>
+    <directions id="57bc174f-8853-47c9-8c6a-e87d21508655" name="导出数据" ename="exportTable"/>
+    <directions id="6e9fddc0-55d2-406d-87bd-e3872129bde5" name="导出同账户同日累计余额数据" ename="exportBalData"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_72b48a73-9b39-4e4e-98b0-19856d7d7989.model#72b48a73-9b39-4e4e-98b0-19856d7d7989"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="a0da3cbd-be99-41de-8bbf-5c51f33ff5ac">
+    <contentareanode id="6791ea91-29ed-4fca-9402-9db4e4890a99" name="库存日报表查询条件" grouptitle="库存日报表查询条件" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="3cbf3932-6fdb-46df-8316-08fa2d1e3d21" name="startDate" binding="startDate" caption="起始日期" editable="true" pattern="@8" required="true">
+        <labelStyle id="3088e016-df7b-41b2-ac6e-343cd829cb81" name="LabelStyleImpl-3088e016-df7b-41b2-ac6e-343cd829cb81" ename="LabelStyleImpl3088e016df7b41b2ac6e343cd829cb81"/>
+        <componentStyle id="7e4198df-dde4-48b5-9414-2887aa6f0dde" name="ComponentStyleImpl-7e4198df-dde4-48b5-9414-2887aa6f0dde" ename="ComponentStyleImpl7e4198dfdde448b594142887aa6f0dde"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="21a338b9-aa51-4b47-a3f8-b4e8b23b4aca" name="endDate" binding="endDate" caption="终止日期" editable="true" pattern="@8" required="true">
+        <labelStyle id="c659bff5-e39d-42a6-b30a-9165f4712e1d" name="LabelStyleImpl-c659bff5-e39d-42a6-b30a-9165f4712e1d" ename="LabelStyleImplc659bff5e39d42a6b30a9165f4712e1d"/>
+        <componentStyle id="7edff6d6-4434-44e8-b549-c5861250b572" name="ComponentStyleImpl-7edff6d6-4434-44e8-b549-c5861250b572" ename="ComponentStyleImpl7edff6d6443444e8b549c5861250b572"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="9eff6019-4df4-4812-bba9-a99c823c7b91" name="sorgcode" binding="dto.sorgcode" caption="财政机构代码" editable="true">
+        <labelStyle id="c004790a-2e62-4431-802a-668041d27748" name="LabelStyleImpl-2b2b3ecd-060b-4c0c-86c4-9f5bfba88777" ename="LabelStyleImpld2b2b3ecd-060b-4c0c-86c4-9f5bfba88777"/>
+        <componentStyle id="92ff6c3c-be9e-49d2-834e-446844ebebad" name="ComponentStyleImpl-5683e525-1bae-4559-ac2d-e82c08b600e9" ename="ComponentStyleImpl5683e525-1bae-4559-ac2d-e82c08b600e9"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="2e09e474-85bf-4518-a236-b2e5be044419" name="strecode" binding="dto.strecode" caption="国库代码" editable="true">
+        <labelStyle id="2b2b3ecd-060b-4c0c-86c4-9f5bfba88777" name="LabelStyleImpl-2b2b3ecd-060b-4c0c-86c4-9f5bfba88777" ename="LabelStyleImpld2b2b3ecd-060b-4c0c-86c4-9f5bfba88777"/>
+        <componentStyle id="5683e525-1bae-4559-ac2d-e82c08b600e9" name="ComponentStyleImpl-5683e525-1bae-4559-ac2d-e82c08b600e9" ename="ComponentStyleImpl5683e525-1bae-4559-ac2d-e82c08b600e9"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6ab126d1-7099-4b21-bc2d-6dfe293e342d" name="srptdate" binding="dto.srptdate" visible="false" caption="报表日期" editable="true">
+        <labelStyle id="30b0afd9-1237-42c5-a6b0-babfa395118c" name="LabelStyleImpl-30b0afd9-1237-42c5-a6b0-babfa395118c" ename="LabelStyleImpld30b0afd9-1237-42c5-a6b0-babfa395118c"/>
+        <componentStyle id="9a222644-8dae-47b1-b0bd-24c2e051e797" name="ComponentStyleImpl-9a222644-8dae-47b1-b0bd-24c2e051e797" ename="ComponentStyleImpl9a222644-8dae-47b1-b0bd-24c2e051e797"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="3b19e0bf-ee49-4c13-acd4-12298c7ec0b5" name="saccno" binding="dto.saccno" visible="false" caption="账户代码" editable="true">
+        <labelStyle id="f08d948d-f904-4811-abb5-fd0f9bb8fa07" name="LabelStyleImpl-f08d948d-f904-4811-abb5-fd0f9bb8fa07" ename="LabelStyleImplf08d948df9044811abb5fd0f9bb8fa07"/>
+        <componentStyle id="597a032b-ea9c-4b9a-b217-1f6b3906221a" name="ComponentStyleImpl-597a032b-ea9c-4b9a-b217-1f6b3906221a" ename="ComponentStyleImpl597a032bea9c4b9ab2171f6b3906221a"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="20111950-ce50-49ca-8e47-c50eeed6fc3b" name="库存日报表查询结果" grouptitle="库存日报表查询结果">
+      <widgetRefs xsi:type="model:Table" id="927d877c-e78d-47cd-966c-f7f95071acfd" name="库存日报表查询结果" binding="pagingcontext" caption="库存日报表查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="640a09d8-71a0-4ea2-9773-85e310a95016">
+        <columnlist id="5f3da8dd-4ced-4577-a467-3ff520d4de43" name="sorgcode" binding="sorgcode" caption="财政机构代码"/>
+        <columnlist id="2e09e474-85bf-4518-a236-b2e5be044419" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="6ab126d1-7099-4b21-bc2d-6dfe293e342d" name="srptdate" binding="srptdate" caption="报表日期"/>
+        <columnlist id="73a9d849-54b7-4806-b3ce-43db88c6f725" name="saccno" binding="saccno" caption="账户代码"/>
+        <columnlist id="d5ff1bf4-b66f-494e-91a0-bf9d95ac3b81" name="saccname" binding="saccname" caption="账户名称"/>
+        <columnlist id="4216af7e-6d89-4f67-9415-77facb4ade9c" name="saccdate" binding="saccdate" caption="账户日期"/>
+        <columnlist id="a31a17dd-dd41-4af8-80f5-dc17f4436e4d" name="nmoneyyesterday" binding="nmoneyyesterday" caption="上日余额"/>
+        <columnlist id="6498e7aa-155b-4756-80cf-6b0696e9021b" name="nmoneyin" binding="nmoneyin" caption="本日收入"/>
+        <columnlist id="f2e88921-9879-4b18-85a4-b7dacc47da6d" name="nmoneyout" binding="nmoneyout" caption="本日支出"/>
+        <columnlist id="54a216a4-f50d-4e35-b745-ba532e4523c5" name="nmoneytoday" binding="nmoneytoday" caption="本日余额"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="f9de703f-d3f5-467d-b230-63ee84805ce6">
+    <pages id="5269075a-c248-4b6b-a80d-5c575f7e9f7a" name="维护库存日报表查询">
+      <views id="c56dd88f-cffc-4a63-9286-eb3bd9515905" name="库存日报表查询条件" isdefault="true" contentArea="6791ea91-29ed-4fca-9402-9db4e4890a99">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="e28096aa-a8c6-4725-a195-51b74dcb4d03" name="JButtonAreaImpl-e28096aa-a8c6-4725-a195-51b74dcb4d03">
+          <buttons id="13a32ff4-da00-4087-b962-e9361fc061c1" name="查询" caption="查询" checkrequired="true" direction="b750cb01-08e5-4478-a8bb-fd41c6aaa667"/>
+          <buttons id="b69f3143-be50-4e75-a080-6c15077b2c0d" name="导出库存txt文档" visible="false" caption="导出库存txt文档" enable="false" direction="4ce209e5-9373-4c8b-b329-b5636a613fa7"/>
+        </buttonArea>
+      </views>
+      <views id="3ebb1561-820d-4e9a-8b98-3cd3ec46a3ba" name="库存日报表查询结果" contentArea="20111950-ce50-49ca-8e47-c50eeed6fc3b">
+        <buttonArea id="5fe8f60f-c6e9-4434-8739-5cf65c6e407e" name="JButtonAreaImpl-5fe8f60f-c6e9-4434-8739-5cf65c6e407e">
+          <buttons id="2e5a5bdd-ce72-4d22-a764-29ec0e5fda1f" name="返回" caption="返回" direction="87f6a576-c67b-4a9c-bb49-6579730e1309"/>
+          <buttons id="f3800c8c-3f09-4047-b099-7ece38a20e11" name="导出数据" caption="导出数据" direction="57bc174f-8853-47c9-8c6a-e87d21508655"/>
+          <buttons id="ab29147e-ff21-485f-82e7-1051e81e47ff" name="导出本日余额累计数据" caption="导出本日余额累计数据" direction="6e9fddc0-55d2-406d-87bd-e3872129bde5"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

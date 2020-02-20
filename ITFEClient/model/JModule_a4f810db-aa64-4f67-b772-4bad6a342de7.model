@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a4f810db-aa64-4f67-b772-4bad6a342de7" name="授权支付额度查询处理" ename="grantPayQuery"/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JSubSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e5caf610-eccd-4186-89e3-3c345b5404db" name="系统管理子系统" ename="SubSysManage">
+  <refModules href="JModule_7d88d532-998f-4eb5-b1a5-84fb9f78b2f1.model#7d88d532-998f-4eb5-b1a5-84fb9f78b2f1"/>
+  <refModules href="JModule_8b061935-d194-4319-add2-f5397d63d9a8.model#8b061935-d194-4319-add2-f5397d63d9a8"/>
+  <refModules href="JModule_04411ade-ffec-446e-aa99-fcc77d515722.model#04411ade-ffec-446e-aa99-fcc77d515722"/>
+  <refModules href="JModule_18e214bc-072f-4211-8998-4aab83b37efa.model#18e214bc-072f-4211-8998-4aab83b37efa"/>
+  <refModules href="JModule_839f7dc1-42ce-4360-ad64-e11a215a2059.model#839f7dc1-42ce-4360-ad64-e11a215a2059"/>
+  <refModules href="JModule_d4be8f79-0032-40a1-94e5-9d20bd3ce6b6.model#d4be8f79-0032-40a1-94e5-9d20bd3ce6b6"/>
+  <refModules href="JModule_25ce1c24-4b0c-4800-9892-98fe42683cfe.model#25ce1c24-4b0c-4800-9892-98fe42683cfe"/>
+  <refModules href="JModule_8dc0cc79-c8a3-4389-a752-def20ff1b9b5.model#8dc0cc79-c8a3-4389-a752-def20ff1b9b5"/>
+  <refModules href="JModule_9af065ba-d7f2-4b75-b0cd-3e8bee81b40f.model#9af065ba-d7f2-4b75-b0cd-3e8bee81b40f"/>
+  <refModules href="JModule_3283aa5c-9dd6-4897-bb2d-c7bf526a38ab.model#3283aa5c-9dd6-4897-bb2d-c7bf526a38ab"/>
+  <refModules href="JModule_99ca1d59-8fa5-4cec-9be4-e76f0a6d90fb.model#99ca1d59-8fa5-4cec-9be4-e76f0a6d90fb"/>
+  <refModules href="JModule_4b57d516-6d96-41cb-93ca-60c01ebb585a.model#4b57d516-6d96-41cb-93ca-60c01ebb585a"/>
+</model:JSubSystem>

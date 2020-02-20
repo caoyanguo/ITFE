@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c5a78eff-e626-48d9-9f71-a7b66e15f617" name="3139财政申请入库流水明细查询" ename="TvFinIncomeDetail" shared="true">
+  <jproperties id="99acaec9-8e5e-4f6a-b92c-b59cfdfe730d" key="GeneratedTime" value="1379405870906"/>
+  <refModule href="JModule_511cae02-c103-4a3b-b3c5-13016ec8f953.model#511cae02-c103-4a3b-b3c5-13016ec8f953"/>
+  <model id="e7d7c13b-2246-4016-b670-2d2debe4e91b" name="JModelImpl-e7d7c13b-2246-4016-b670-2d2debe4e91b">
+    <attributes id="67bb9482-8e08-4c25-954b-b73c275304ba" name="dto" type="com.cfcc.itfe.persistence.dto.TvFinIncomeDetailDto"/>
+    <attributes id="ebeeb54a-56a8-4911-9361-16e81dee5326" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="d2377bcf-4573-43d4-bc93-fb55eb776e4c" name="单选" ename="singleSelect"/>
+    <directions id="1eefe714-082b-4f2c-8e2d-f054adf75e18" viewers="3df2449c-1604-4abe-b8e1-54593367f82c" name="查询" ename="query"/>
+    <directions id="b94420c0-bc8d-4b55-b236-e46523853fdb" viewers="194d4e32-5234-4991-82e3-f5bc0df53486" name="返回" ename="goBack"/>
+    <directions id="21e61549-7a94-48e6-b7b5-3e26f4516f99" name="手动处理共享分成" ename="makeDivide"/>
+    <directions id="98afb364-6361-4a61-af29-c66798793b9a" name="全选/反选" ename="selectAllOrNone"/>
+    <directions id="6a943087-c195-4073-abff-fcb749e571af" name="导出数据" ename="export3139"/>
+  </model>
+  <services href="JServiceComponet_f7c7c7a2-cecd-43be-b965-6608b09b72e1.model#f7c7c7a2-cecd-43be-b965-6608b09b72e1"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="ac77735c-4720-45be-ac89-ef98e58b1c4f">
+    <contentareanode id="ecc7cab6-5468-4475-adcf-f95846f0fa9b" name="入库流水查询条件" grouptitle="入库流水查询条件" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="26b4504e-ad7a-430d-b0cb-a81fed1f17f2" name="sorgcode" binding="dto.sorgcode" caption="财政机关代码" editable="true">
+        <labelStyle id="2878216a-e876-4a36-b206-ba9f8f564301" name="LabelStyleImpl-2878216a-e876-4a36-b206-ba9f8f564301" ename="LabelStyleImpld2878216a-e876-4a36-b206-ba9f8f564301"/>
+        <componentStyle id="46f82ff4-f171-4d0e-b9c0-4923e707e1bb" name="ComponentStyleImpl-46f82ff4-f171-4d0e-b9c0-4923e707e1bb" ename="ComponentStyleImpl46f82ff4-f171-4d0e-b9c0-4923e707e1bb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="513ede2b-ef03-4567-8be4-985282b61407" name="staxorgcode" binding="dto.staxorgcode" caption="征收机关代码" editable="true">
+        <labelStyle id="a704ff1a-95db-4d9c-b422-aa7d3a2c8692" name="LabelStyleImpl-a704ff1a-95db-4d9c-b422-aa7d3a2c8692" ename="LabelStyleImplda704ff1a-95db-4d9c-b422-aa7d3a2c8692"/>
+        <componentStyle id="18ea021c-1053-4e85-9739-185e64871222" name="ComponentStyleImpl-18ea021c-1053-4e85-9739-185e64871222" ename="ComponentStyleImpl18ea021c-1053-4e85-9739-185e64871222"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="020bc93a-4067-42f9-917a-d6034d2433f7" name="sintredate" binding="dto.sintredate" caption="入库日期" editable="true">
+        <labelStyle id="7d956e2b-9140-4e41-af7b-1461bdaaeff7" name="LabelStyleImpl-7d956e2b-9140-4e41-af7b-1461bdaaeff7" ename="LabelStyleImpld7d956e2b-9140-4e41-af7b-1461bdaaeff7"/>
+        <componentStyle id="248a64a7-306a-46c6-b6f9-59de6bb12704" name="ComponentStyleImpl-248a64a7-306a-46c6-b6f9-59de6bb12704" ename="ComponentStyleImpl248a64a7-306a-46c6-b6f9-59de6bb12704"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="59ce7ec1-4517-49a9-a4a7-ad31e8050618" name="strecode" binding="dto.strecode" caption="国库代码" editable="true">
+        <labelStyle id="f7e804d8-6097-4456-bd39-de4ce9b2ba85" name="LabelStyleImpl-f7e804d8-6097-4456-bd39-de4ce9b2ba85" ename="LabelStyleImpldf7e804d8-6097-4456-bd39-de4ce9b2ba85"/>
+        <componentStyle id="b314484c-49ab-46de-8bf8-5461f3f184b3" name="ComponentStyleImpl-b314484c-49ab-46de-8bf8-5461f3f184b3" ename="ComponentStyleImplb314484c-49ab-46de-8bf8-5461f3f184b3"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d8cae7c4-c918-42d7-8846-61e62c42a9d4" name="ipkgseqno" binding="dto.ipkgseqno" caption="包流水号" editable="true">
+        <labelStyle id="a23e4a57-cc8a-4adb-9bf5-2aca8ce46381" name="LabelStyleImpl-a23e4a57-cc8a-4adb-9bf5-2aca8ce46381" ename="LabelStyleImplda23e4a57-cc8a-4adb-9bf5-2aca8ce46381"/>
+        <componentStyle id="000c3073-b28f-4883-bed9-54fa3131de2f" name="ComponentStyleImpl-000c3073-b28f-4883-bed9-54fa3131de2f" ename="ComponentStyleImpl000c3073-b28f-4883-bed9-54fa3131de2f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="58a74641-f8a8-408b-856f-fd3d3f6127f5" name="sexpvouno" binding="dto.sexpvouno" caption="凭证编号" editable="true">
+        <labelStyle id="e125b2e6-744a-477a-9e3e-d60c6bdeaf7c" name="LabelStyleImpl-e125b2e6-744a-477a-9e3e-d60c6bdeaf7c" ename="LabelStyleImplde125b2e6-744a-477a-9e3e-d60c6bdeaf7c"/>
+        <componentStyle id="f32eafc2-ea94-400b-bbc3-65fb3d018bbb" name="ComponentStyleImpl-f32eafc2-ea94-400b-bbc3-65fb3d018bbb" ename="ComponentStyleImplf32eafc2-ea94-400b-bbc3-65fb3d018bbb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4485cfd4-9567-4b60-8f9e-a7fc105c42ce" name="预算级次" extpoperties="" binding="dto.cbdglevel" caption="预算级次">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="f80aed49-4f99-45da-bd49-1c34daff91e3" name="预算种类" binding="dto.cbdgkind" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="bb4490c6-c42e-4c4b-9ef1-3b8c1d1e2cab" name="凭证来源" binding="dto.cvouchannel" caption="凭证来源">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#525157a1-fd49-4220-b511-a22fb5ddd627"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6e19d077-870f-4f76-a29e-e98d7beb2858" name="导出凭证类型" binding="dto.sexpvoutype" caption="导出凭证类型" enumparam="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4cae6a32-36b0-428c-8e26-22cea721715d"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="c4aaa1ac-9fbd-46ae-94db-9525dcd1105e" name="预算外信息统计条件补充">
+      <widgetRefs xsi:type="model:Text" id="f31d6d5c-75e0-4f98-9e07-250fef82a2a2" name="起始日期" binding="startdate" caption="起始日期"/>
+      <widgetRefs xsi:type="model:Text" id="3d5acc8d-d241-4c2a-920d-105556e1e408" name="截止日期" binding="enddate" caption="截止日期"/>
+      <widgetRefs xsi:type="model:Text" id="8cb61dcf-1938-4101-93aa-50e619786c73" name="预算科目代码" caption="预算科目代码(类)"/>
+      <widgetRefs xsi:type="model:Text" id="53ba8762-b89b-4c0c-8f63-ca9adc41f47e" name="预算科目名称" caption="预算科目名称"/>
+    </contentareanode>
+    <contentareanode id="f0a44b5f-88a1-45c6-aa60-11305dee6d0b" name="入库流水查询结果" grouptitle="入库流水查询结果">
+      <widgetRefs xsi:type="model:Table" id="bc9ecf6a-0ecd-4c0e-8272-ecd057680420" name="入库流水查询结果" binding="pagingcontext" caption="入库流水查询结果" tabletype="paging" pagingtable="" showcheckbox="false" selectedrows="" refsingleclickdirection="d2377bcf-4573-43d4-bc93-fb55eb776e4c">
+        <columnlist id="26b4504e-ad7a-430d-b0cb-a81fed1f17f2" name="sorgcode" binding="sorgcode" caption="财政机关代码"/>
+        <columnlist id="59ce7ec1-4517-49a9-a4a7-ad31e8050618" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="020bc93a-4067-42f9-917a-d6034d2433f7" name="sintredate" binding="sintredate" caption="入库日期"/>
+        <columnlist id="d8cae7c4-c918-42d7-8846-61e62c42a9d4" name="ipkgseqno" binding="ipkgseqno" caption="包流水号"/>
+        <columnlist id="58a74641-f8a8-408b-856f-fd3d3f6127f5" name="sexpvouno" binding="sexpvouno" caption="凭证编号"/>
+        <columnlist id="54b97eb8-1c64-455c-8abb-6c66323a8817" name="sexpvoutype" binding="sexpvoutype" caption="导出凭证类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4cae6a32-36b0-428c-8e26-22cea721715d"/>
+        </columnlist>
+        <columnlist id="183ecf6d-6c96-455c-bee1-5fdb9e021248" name="cbdglevel" binding="cbdglevel" caption="预算级次">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="1620a18a-73bf-4a99-9038-107c1ac63f75" name="sbdgsbtcode" binding="sbdgsbtcode" caption="预算科目代码"/>
+        <columnlist id="49e2345a-545a-48cc-a3a0-5844b1974813" name="cbdgkind" binding="cbdgkind" caption="预算种类" enumparam="">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="03205ab1-29c0-4faa-87d4-ff9548fe8b1a" name="famt" binding="famt" caption="金额"/>
+        <columnlist id="5517f0dc-d3bb-44c3-8633-59b32290e59e" name="cvouchannel" binding="cvouchannel" caption="凭证来源" enumparam="">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#525157a1-fd49-4220-b511-a22fb5ddd627"/>
+        </columnlist>
+        <columnlist id="513ede2b-ef03-4567-8be4-985282b61407" name="staxorgcode" binding="staxorgcode" caption="征收机关代码"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="5b209d59-6613-4c5d-b68e-326371d8247a">
+    <pages id="839098f7-24c9-4ade-8c2c-766f36c3d041" name="维护财政申请入库流水明细查询">
+      <views id="194d4e32-5234-4991-82e3-f5bc0df53486" name="入库流水查询条件" isdefault="true" contentArea="ecc7cab6-5468-4475-adcf-f95846f0fa9b">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="011ecd7c-2b5c-483d-90aa-2b78548b93bb" name="JButtonAreaImpl-011ecd7c-2b5c-483d-90aa-2b78548b93bb">
+          <buttons id="dcd06e5f-1385-44cc-b8ff-51369ffb0a85" name="查询" caption="查询" direction="1eefe714-082b-4f2c-8e2d-f054adf75e18"/>
+        </buttonArea>
+      </views>
+      <views id="3df2449c-1604-4abe-b8e1-54593367f82c" name="入库流水查询结果" contentArea="f0a44b5f-88a1-45c6-aa60-11305dee6d0b">
+        <buttonArea id="82f52585-86ac-4c15-976f-11c895b29705" name="JButtonAreaImpl-82f52585-86ac-4c15-976f-11c895b29705">
+          <buttons id="46b67929-c585-49e9-98ad-896d3a1e3da0" name="全选/反选" visible="false" caption="全选/反选" enable="false" direction="98afb364-6361-4a61-af29-c66798793b9a"/>
+          <buttons id="53e27773-9b9a-43ac-972b-d52c2d25322f" name="手动处理共享分成" visible="false" caption="手动处理共享分成" enable="false" direction="21e61549-7a94-48e6-b7b5-3e26f4516f99"/>
+          <buttons id="aea6a176-55c3-4e87-b055-ea323f5e7a32" name="返回" caption="返回" direction="b94420c0-bc8d-4b55-b236-e46523853fdb"/>
+          <buttons id="e1cffb7a-9108-46a5-856f-b45a8cd9b433" name="导出数据" caption="导出数据" direction="6a943087-c195-4073-abff-fcb749e571af"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

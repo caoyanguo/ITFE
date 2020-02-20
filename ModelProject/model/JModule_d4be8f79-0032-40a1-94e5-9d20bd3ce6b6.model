@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d4be8f79-0032-40a1-94e5-9d20bd3ce6b6" isgenerated="false" name="9111包明细重发请求" ename="PackDetailSendRequest" shared="false"/>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c0a6bd3c-a4d2-4fa7-a711-d31a7cdc8b22" name="直接支付查询" ename="directPaymsgQuery">
+  <jproperties id="f91478d2-b02b-4855-b4cf-e244654026f8" key="GeneratedTime" value="1416278303994"/>
+  <refModule href="JModule_474f82bb-7804-4892-9bcf-ab0434c7f317.model#474f82bb-7804-4892-9bcf-ab0434c7f317"/>
+  <model id="b95ad060-a4df-419f-a83e-df82962ca5c7" name="JModelImpl-b95ad060-a4df-419f-a83e-df82962ca5c7">
+    <attributes id="7706e644-6463-469b-8beb-cd36da0bb7f8" name="pagingcontextMain" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="058da79e-edaf-4970-9081-f590d093134f" name="pagingcontextSub" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="7ae2988a-0ce9-4c68-86b3-016d5dbb749e" name="pagingcontextMainHis" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="7c003369-c838-4bdd-a908-7df4371e4b8e" name="pagingcontextSubHis" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="71cae972-5e81-4f62-8ed3-88f632d43d7d" viewers="abd86e5e-3f89-4d16-b935-8bd4b3ebe671" name="查询列表事件" ename="searchList"/>
+    <directions id="973b5f8c-feab-45c5-a0be-2f27d1a4aad6" viewers="bd6a6504-3192-43a6-8723-0a354b4845fa" name="返回查询界面" ename="rebackSearch"/>
+    <directions id="14b213f3-dbab-4b3a-b072-8fa338db1ada" name="主信息双击事件" ename="doubleclickMain"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="23027c51-1efe-48d4-ba04-63b6b501463d">
+    <contentareanode id="b3a7a7b9-3b35-4338-bbd5-e3c17f50a43d" name="直接支付查询" grouptitle="直接支付查询">
+      <widgetRefs xsi:type="model:Combo" id="88874fce-4f9f-4f96-8947-35d0540dc78e" name="请选择要查询的表" binding="selectedtable" caption="请选择要查询的表" required="true" display="displayValue" underly="underlyValue" modelsource="tableMapperList"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="fd2213c8-6a3b-4757-a088-9285a05bee9c" name="PlaceHolderImpl-fd2213c8-6a3b-4757-a088-9285a05bee9c"/>
+      <widgetRefs xsi:type="model:Text" id="75605db9-8b0c-4771-9aed-7875487fa9f5" name="国库代码" binding="finddto.strecode" caption="国库代码"/>
+      <widgetRefs xsi:type="model:Text" id="7469fe91-d40a-4308-90a6-6686c2c73125" name="包流水号" binding="finddto.spackageno" caption="包流水号"/>
+      <widgetRefs xsi:type="model:Text" id="3d2ead97-3742-4169-80b5-078dcce9c1c7" name="凭证日期" binding="finddto.svoudate" caption="凭证日期"/>
+      <widgetRefs xsi:type="model:Text" id="d4fa0c6c-a3d3-4205-82b2-5fd66be4c6c2" name="委托日期" binding="finddto.scommitdate" caption="委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="705a48b2-700f-454d-b034-0b83148a4dd1" name="凭证编号" binding="finddto.svoucherno" caption="凭证编号"/>
+      <widgetRefs xsi:type="model:Text" id="580ec208-90b2-4959-8881-55d6e4f13ead" name="代理银行行号" binding="finddto.spayeeacctbankno" caption="代理银行行号"/>
+      <widgetRefs xsi:type="model:Text" id="0a798da1-4748-4ca4-b2dd-c4bb273a447b" name="金额" binding="finddto.npayamt" caption="金额"/>
+      <widgetRefs xsi:type="model:Combo" id="9b4e3a27-8de5-43ab-816d-76315b354b8c" name="业务类型编码" binding="finddto.sbusinesstypecode" caption="业务类型编码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#67104e10-ff96-41f7-91f1-fdda407361df"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="71e484a1-c460-4b9c-9952-e7436a90f404" name="交易状态" binding="finddto.sstatus" caption="交易状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6fd68298-28bb-4cc9-9ecc-988f2d9e29d1" name="是否退回" binding="finddto.sbackflag" caption="是否退回">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1ac0fe27-8160-434b-a25c-7b137220c549"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="48db485e-13cd-4f98-8610-fbab50d5bfc6" name="退回金额" binding="finddto.nbackmoney" caption="退回金额"/>
+    </contentareanode>
+    <contentareanode id="88f6bca0-e18b-41b3-a680-c85f0a06f57f" name="直接支付主信息列表" grouptitle="直接支付主信息列表" binding="">
+      <widgetRefs xsi:type="model:Table" id="a73021b4-26a5-4328-9f65-00fc72edb09b" name="TableImpl-a73021b4-26a5-4328-9f65-00fc72edb09b" binding="pagingcontextMain" tabletype="paging" showcheckbox="false" refdoubleclickdirection="14b213f3-dbab-4b3a-b072-8fa338db1ada" height="280">
+        <columnlist id="3102638e-e890-4319-a627-19618e99c5c6" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="2f2dba63-32da-44ff-b5c9-06b448e88185" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="f6fba07b-cdfd-449d-b06b-2c86cff7bf53" name="凭证日期" binding="svoudate" caption="凭证日期"/>
+        <columnlist id="1a1d66ab-0054-446d-93ca-608359616246" name="委托日期" binding="scommitdate" caption="委托日期"/>
+        <columnlist id="bd1d6dbe-629b-4dec-907b-6d0cb4ffd0c7" name="凭证编号" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="641c0193-42d8-49e0-8ac1-254f41957b16" name="金额" binding="npayamt" caption="金额"/>
+        <columnlist id="d257e2f9-c1a5-4220-80a6-c6c5e4c69daf" name="交易状态" binding="sstatus" caption="交易状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        </columnlist>
+        <columnlist id="d5022457-ab36-4ae6-8e7a-86d39be88ff6" name="业务类型编码" binding="sbusinesstypecode" caption="业务类型编码">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#67104e10-ff96-41f7-91f1-fdda407361df"/>
+        </columnlist>
+        <columnlist id="3531538c-03a2-41c2-9e4f-2c197d1da107" name="收款人账号" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="2a7a430f-9ba3-4d4a-908e-91117569306f" name="收款人名称" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="ad088140-e68c-4188-9f8d-1679a342162b" name="收款人银行" binding="spayeeacctbankname" caption="收款人银行"/>
+        <columnlist id="b945dcb0-c10d-4ee9-838d-5bb9a3a2cbec" name="收款人银行行号" binding="spayeeacctbankno" caption="收款人银行行号"/>
+        <columnlist id="fc68b240-d9ec-4c25-9739-11af880079af" name="付款人账号" binding="spayacctno" caption="付款人账号"/>
+        <columnlist id="10d161e3-29a3-4466-850f-ddc5af541c1a" name="付款人名称" binding="spayacctname" caption="付款人名称"/>
+        <columnlist id="d66bd86a-6021-48ed-8f73-9c6d9d76d858" name="付款人银行" binding="spayacctbankname" caption="付款人银行"/>
+        <columnlist id="54475b7b-96ff-47af-b2d3-f5f56d79744d" name="是否退回" binding="sbackflag" caption="是否退回">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1ac0fe27-8160-434b-a25c-7b137220c549"/>
+        </columnlist>
+        <columnlist id="c837a6fc-ac8e-444e-9c66-d50cc7a3109f" name="退回金额" binding="nbackmoney" caption="退回金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="88cba535-aa4d-4bab-99ab-b98225c10e38" name="直接支付明细信息列表" grouptitle="直接支付明细信息列表">
+      <widgetRefs xsi:type="model:Table" id="cce91f80-7af0-4cc9-b916-aaf5e3da20a9" name="TableImpl-cce91f80-7af0-4cc9-b916-aaf5e3da20a9" binding="pagingcontextSub" tabletype="paging" showcheckbox="false" height="200">
+        <columnlist id="8182f6b5-55b5-4f4b-9571-e3088ce937eb" name="序号" binding="iseqno" caption="序号"/>
+        <columnlist id="b7f69c6e-3fb1-4452-8370-08b5c9bf3e0e" name="支付明细Id" binding="sid" caption="支付明细Id"/>
+        <columnlist id="e675c08a-a883-4307-a863-0a8d8926d4ee" name="支付申请序号" binding="svoucherno" caption="支付申请序号"/>
+        <columnlist id="f141ad9d-2a31-41fa-aedd-cc7152ffce0f" name="预算单位编码" binding="sagencycode" caption="预算单位编码"/>
+        <columnlist id="1943e88f-33c5-4171-9780-5b122c56b9d8" name="支出功能分类科目编码" binding="sexpfunccode" caption="支出功能分类科目编码"/>
+        <columnlist id="f4111c43-66ea-44f8-945a-28674d3f1f95" name="金额" binding="npayamt" caption="金额"/>
+        <columnlist id="808eb6d0-b2cb-4b17-ac70-d7645db5a618" name="收款人账号" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="5d4fb129-9778-4be8-84c9-a5ee5051f58f" name="收款人名称" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="949bc171-7d65-4933-bfc7-2cc4008c8053" name="收款人银行" binding="spayeeacctbankname" caption="收款人银行"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="ebc5c925-7af5-4a37-935a-9d85be209d9a" name="直接支付主信息列表(历史表)" grouptitle="直接支付主信息列表(历史表)" binding="">
+      <widgetRefs xsi:type="model:Table" id="20495404-7296-41ce-b11c-bc53b949f864" name="TableImpl-a73021b4-26a5-4328-9f65-00fc72edb09b" binding="pagingcontextMainHis" tabletype="paging" showcheckbox="false" refdoubleclickdirection="14b213f3-dbab-4b3a-b072-8fa338db1ada" height="280">
+        <columnlist id="72e4b97c-c10f-430b-93de-1caeafca6bd7" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="c4d0bd99-b391-4374-ae1a-31306eb0268e" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="a0a72932-7cd5-4905-b860-761275d73eac" name="凭证日期" binding="svoudate" caption="凭证日期"/>
+        <columnlist id="ff9f7333-a4ce-4b56-8b6d-840a7babb0fb" name="委托日期" binding="scommitdate" caption="委托日期"/>
+        <columnlist id="4bd7998a-6748-4512-85c0-a9e34d60e6c0" name="凭证编号" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="b0a82e6b-8581-4536-86e7-18a829e7e408" name="金额" binding="npayamt" caption="金额"/>
+        <columnlist id="170307a9-c599-477c-ad1e-5f46686d36c8" name="交易状态" binding="sstatus" caption="交易状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        </columnlist>
+        <columnlist id="4202867b-f5cb-4b33-a297-a6bfa8e87a85" name="业务类型编码" binding="sbusinesstypecode" caption="业务类型编码">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#67104e10-ff96-41f7-91f1-fdda407361df"/>
+        </columnlist>
+        <columnlist id="f9cf6f4c-faa8-4d72-b552-25c57111ce41" name="收款人账号" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="95473a44-cf60-4918-b6d5-e479a579c54b" name="收款人名称" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="48bead24-deb5-4f8f-af87-78e0d18a3fb1" name="收款人银行" binding="spayeeacctbankname" caption="收款人银行"/>
+        <columnlist id="55fef162-dd43-4008-8402-00c5ea572d87" name="收款人银行行号" binding="spayeeacctbankno" caption="收款人银行行号"/>
+        <columnlist id="fa6dac5c-d294-44c5-88b9-401bbb899148" name="付款人账号" binding="spayacctno" caption="付款人账号"/>
+        <columnlist id="b1b3fd85-06db-4316-aa53-46b04366d816" name="付款人名称" binding="spayacctname" caption="付款人名称"/>
+        <columnlist id="e6d601ab-3b5e-4d88-8297-c0a9ec1d675d" name="付款人银行" binding="spayacctbankname" caption="付款人银行"/>
+        <columnlist id="49b31c5d-9202-4e45-a46b-9d19767d4482" name="是否退回" binding="sbackflag" caption="是否退回">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1ac0fe27-8160-434b-a25c-7b137220c549"/>
+        </columnlist>
+        <columnlist id="65f15734-fb58-4a58-9e6b-2ecdf3ab4fb5" name="退回金额" binding="nbackmoney" caption="退回金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="d06eed4b-3731-46f5-8586-408afdb1394d" name="直接支付明细信息列表(历史表)" grouptitle="直接支付明细信息列表(历史表)">
+      <widgetRefs xsi:type="model:Table" id="4b85c309-d7c8-4845-9912-26404dedf7e9" name="TableImpl-cce91f80-7af0-4cc9-b916-aaf5e3da20a9" binding="pagingcontextSubHis" tabletype="paging" showcheckbox="false" height="200">
+        <columnlist id="9a49be4b-0b41-4516-8d4b-5ca0fd36d043" name="序号" binding="iseqno" caption="序号"/>
+        <columnlist id="fedd7acc-0da0-4073-9965-d7d9b6a20571" name="支付明细Id" binding="sid" caption="支付明细Id"/>
+        <columnlist id="a818c31b-b9e4-4a9f-904a-c85a3ad56553" name="支付申请序号" binding="svoucherno" caption="支付申请序号"/>
+        <columnlist id="93699a87-d7f3-40ca-90c0-e2e8724e74e9" name="预算单位编码" binding="sagencycode" caption="预算单位编码"/>
+        <columnlist id="8cb22404-6173-46ea-be92-849ddebd9b8f" name="支出功能分类科目编码" binding="sexpfunccode" caption="支出功能分类科目编码"/>
+        <columnlist id="f77811ac-ef24-4ffb-ab7d-1b30ccc41242" name="金额" binding="npayamt" caption="金额"/>
+        <columnlist id="b08fad35-efa5-481f-bf56-b83d046f2f57" name="收款人账号" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="7101fa05-26d6-46b0-8d3c-55d91e46e303" name="收款人名称" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="5536585b-b389-4bbf-8d46-350381d5d53a" name="收款人银行" binding="spayeeacctbankname" caption="收款人银行"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="6247eafa-23e3-4bf9-aac9-86480c6be68a">
+    <pages id="b985f6ce-25a1-4b3f-8d60-8ed74f3ca8db" name="直接支付视图信息">
+      <views id="bd6a6504-3192-43a6-8723-0a354b4845fa" name="直接支付查询界面" isdefault="true" contentArea="b3a7a7b9-3b35-4338-bbd5-e3c17f50a43d">
+        <buttonArea id="466ab309-812f-4457-a7db-9ecef1a6b957" name="JButtonAreaImpl-466ab309-812f-4457-a7db-9ecef1a6b957">
+          <buttons id="f4843105-1341-41bd-9100-4e8bbaaec9ed" name="查询" caption="查询" direction="71cae972-5e81-4f62-8ed3-88f632d43d7d"/>
+        </buttonArea>
+      </views>
+      <views id="abd86e5e-3f89-4d16-b935-8bd4b3ebe671" name="直接支付信息列表" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="88f6bca0-e18b-41b3-a680-c85f0a06f57f 88cba535-aa4d-4bab-99ab-b98225c10e38">
+        <buttonArea id="1a91c25f-61e5-4a1d-951f-387c09826e0e" name="JButtonAreaImpl-1a91c25f-61e5-4a1d-951f-387c09826e0e">
+          <buttons id="4e2a7f50-6a75-4d97-99d0-9ff2e992323c" name="返回" caption="返回" direction="973b5f8c-feab-45c5-a0be-2f27d1a4aad6"/>
+        </buttonArea>
+      </views>
+      <views id="39ad020b-6e58-4b3a-8a97-1e385c4dc893" name="直接支付信息列表(历史表)" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="ebc5c925-7af5-4a37-935a-9d85be209d9a d06eed4b-3731-46f5-8586-408afdb1394d">
+        <buttonArea id="1168a6c2-7a6d-4516-8765-56297310ea1a" name="JButtonAreaImpl-1a91c25f-61e5-4a1d-951f-387c09826e0e">
+          <buttons id="b9cf5a88-24ce-4487-afe6-fb8afdb1b2a3" name="返回" caption="返回" direction="973b5f8c-feab-45c5-a0be-2f27d1a4aad6"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

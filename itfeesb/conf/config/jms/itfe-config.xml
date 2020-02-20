@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:file="http://www.mulesource.org/schema/mule/file/2.2"
+	xmlns:http="http://www.mulesource.org/schema/mule/http/2.2"
+	xmlns:https="http://www.mulesource.org/schema/mule/https/2.2"
+	xmlns:jdbc="http://www.mulesource.org/schema/mule/jdbc/2.2"
+	xmlns:jbossts="http://www.mulesource.org/schema/mule/jbossts/2.2"
+	xmlns:jms="http://www.mulesource.org/schema/mule/jms/2.2"
+	xmlns:scripting="http://www.mulesource.org/schema/mule/scripting/2.2"
+	xmlns:client="http://www.mulesource.org/schema/mule/client/2.2"
+	xmlns:ognl="http://www.mulesource.org/schema/mule/ognl/2.2" xmlns:axis="http://www.mulesource.org/schema/mule/axis/2.2"
+	xmlns:cxf="http://www.mulesource.org/schema/mule/cxf/2.2"
+	xmlns:servlet="http://www.mulesource.org/schema/mule/servlet/2.2"
+	xmlns:stdio="http://www.mulesource.org/schema/mule/stdio/2.2" xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.2"
+	xmlns:tcp="http://www.mulesource.org/schema/mule/tcp/2.2"
+	xmlns:management="http://www.mulesource.org/schema/mule/management/2.2"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:sxc="http://www.mulesource.org/schema/mule/sxc/2.2"
+	xmlns:test="http://www.mulesource.org/schema/mule/test/2.2"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		     http://www.mulesource.org/schema/mule/jbossts/2.2  http://www.mulesource.org/schema/mule/jbossts/2.2/mule-jbossts.xsd
+	      http://www.mulesource.org/schema/mule/ftp/2.2 http://www.mulesource.org/schema/mule/ftp/2.2/mule-ftp.xsd
+          http://www.mulesource.org/schema/mule/file/2.2 http://www.mulesource.org/schema/mule/file/2.2/mule-file.xsd
+          http://www.mulesource.org/schema/mule/http/2.2 http://www.mulesource.org/schema/mule/http/2.2/mule-http.xsd
+          http://www.mulesource.org/schema/mule/https/2.2 http://www.mulesource.org/schema/mule/https/2.2/mule-https.xsd
+          http://www.mulesource.org/schema/mule/jdbc/2.2 http://www.mulesource.org/schema/mule/jdbc/2.2/mule-jdbc.xsd
+          http://www.mulesource.org/schema/mule/scripting/2.2 http://www.mulesource.org/schema/mule/scripting/2.2/mule-scripting.xsd
+          http://www.mulesource.org/schema/mule/management/2.2 http://www.mulesource.org/schema/mule/management/2.2/mule-management.xsd
+          http://www.mulesource.org/schema/mule/client/2.2 http://www.mulesource.org/schema/mule/client/2.2/mule-client.xsd
+          http://www.mulesource.org/schema/mule/ognl/2.2 http://www.mulesource.org/schema/mule/ognl/2.2/mule-ognl.xsd
+          http://www.mulesource.org/schema/mule/quartz/2.2 http://www.mulesource.org/schema/mule/quartz/2.2/mule-quartz.xsd
+          http://www.mulesource.org/schema/mule/soap/2.2 http://www.mulesource.org/schema/mule/soap/2.2/mule-soap.xsd
+          http://www.mulesource.org/schema/mule/axis/2.2 http://www.mulesource.org/schema/mule/axis/2.2/mule-axis.xsd
+          http://www.mulesource.org/schema/mule/cxf/2.2 http://www.mulesource.org/schema/mule/cxf/2.2/mule-cxf.xsd
+          http://www.mulesource.org/schema/mule/sxc/2.2 http://www.mulesource.org/schema/mule/sxc/2.2/mule-sxc.xsd
+          http://www.mulesource.org/schema/mule/servlet/2.2 http://www.mulesource.org/schema/mule/servlet/2.2/mule-servlet.xsd
+          http://www.mulesource.org/schema/mule/core/2.2 http://www.mulesource.org/schema/mule/core/2.2/mule.xsd   
+          http://www.mulesource.org/schema/mule/stdio/2.2 http://www.mulesource.org/schema/mule/stdio/2.2/mule-stdio.xsd
+          http://www.mulesource.org/schema/mule/tcp/2.2 http://www.mulesource.org/schema/mule/tcp/2.2/mule-tcp.xsd
+          http://www.mulesource.org/schema/mule/jms/2.2 http://www.mulesource.org/schema/mule/jms/2.2/mule-jms.xsd
+		  http://www.mulesource.org/schema/mule/vm/2.2 http://www.mulesource.org/schema/mule/vm/2.2/mule-vm.xsd
+          http://www.mulesource.org/schema/mule/xml/2.2 http://www.mulesource.org/schema/mule/xml/2.2/mule-xml.xsd
+          http://www.mulesource.org/schema/mule/test/2.2 http://www.mulesource.org/schema/mule/test/2.2/mule-test.xsd">
+
+
+
+	<!--向TIPS发起业务(一般适合于前置系统处理完成后向外系统发送报文)-->
+	<model name="To.TIPS.Model">
+		<default-service-exception-strategy
+			enableNotifications="true">
+			<rollback-transaction exception-pattern="Exception" />
+			<vm:outbound-endpoint synchronous="true"
+				path="userErrorHandler" />
+		</default-service-exception-strategy>
+
+		<!-- 提供发送报文的服务-->
+		<service name="ClientBizService">
+			<inbound>
+				<!-- 前置手工调用发起报文 -->
+				<vm:inbound-endpoint path="ManagerMsgToPbc"
+					transformer-refs="msgsenderisitfe">
+					<jms:transaction action="JOIN_IF_POSSIBLE" />
+				</vm:inbound-endpoint>
+				<!-- 从财政批量mq接收 -->
+				<jms:inbound-endpoint connector-ref="jmsConnector2"
+					disableTemporaryReplyToDestinations="true" queue="${mq.MOF.IN.BATCH}"
+					transformer-refs="jmsmessage-to-object msgsenderisfin byte-array-to-string setMsgProp setXmlMsgHeader receiveXml2file changeMsgNo xml2java"
+					synchronous="false">
+					<property key="pollingFrequency" value="10" />
+					<property key="reuseSession" value="true" />
+					<property key="reuseConsumer" value="true" />
+					<jms:transaction action="JOIN_IF_POSSIBLE" />
+				</jms:inbound-endpoint>
+				
+				<!-- 从实时mq接收 -->
+				<jms:inbound-endpoint connector-ref="jmsConnector2"
+					disableTemporaryReplyToDestinations="true" queue="${mq.MOF.IN.ONLINE}"
+					transformer-refs="jmsmessage-to-object msgsenderisfin byte-array-to-string setMsgProp setXmlMsgHeader receiveXml2file changeMsgNo xml2java"
+					synchronous="false">
+					<property key="pollingFrequency" value="10" />
+					<property key="reuseSession" value="true" />
+					<property key="reuseConsumer" value="true" />
+					<jms:transaction action="JOIN_IF_POSSIBLE" />
+				</jms:inbound-endpoint>
+				
+			</inbound>
+			<component class="com.cfcc.itfe.component.MessageComponent" />
+			<outbound>
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.PBC.BATCH}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnectorBatch"
+						transformer-refs="java2xml casign sentXml2file uptsendlogfilepath string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<and-filter>
+						<or-filter>
+							<message-property-filter pattern="MSG_NO_KEY=1104" />
+							<message-property-filter pattern="MSG_NO_KEY=1105" />
+							<message-property-filter pattern="MSG_NO_KEY=1106" />
+							<message-property-filter pattern="MSG_NO_KEY=11042" />
+							<message-property-filter pattern="MSG_NO_KEY=11052" />
+							<message-property-filter pattern="MSG_NO_KEY=11062" />
+							<message-property-filter pattern="MSG_NO_KEY=7211" />
+							<message-property-filter pattern="MSG_NO_KEY=5101" />
+							<message-property-filter pattern="MSG_NO_KEY=5102" />
+							<message-property-filter pattern="MSG_NO_KEY=5103" />
+							<message-property-filter pattern="MSG_NO_KEY=5104" />
+							<message-property-filter pattern="MSG_NO_KEY=5112" />
+							<message-property-filter pattern="MSG_NO_KEY=5001" />
+							<message-property-filter pattern="MSG_NO_KEY=5002" />
+							<message-property-filter pattern="MSG_NO_KEY=5003" />
+							<message-property-filter pattern="MSG_NO_KEY=9111" />
+							<message-property-filter pattern="MSG_NO_KEY=9113" />
+							<message-property-filter pattern="MSG_NO_KEY=9116" />
+							<message-property-filter pattern="MSG_NO_KEY=9117" />
+							<message-property-filter pattern="MSG_NO_KEY=1024" />
+							<message-property-filter pattern="MSG_NO_KEY=1025" />
+							<message-property-filter pattern="MSG_NO_KEY=2201" />
+							<message-property-filter pattern="MSG_NO_KEY=2202" />
+							<message-property-filter pattern="MSG_NO_KEY=1104_OUT" />
+							<message-property-filter pattern="MSG_NO_KEY=1105_OUT" />
+							<message-property-filter pattern="MSG_NO_KEY=5102_OUT" />
+							<message-property-filter pattern="MSG_NO_KEY=5103_OUT" />
+							<message-property-filter pattern="MSG_NO_KEY=5101_OUT" />
+							<!-- 发送TBS资金报文 -->
+							<message-property-filter pattern="MSG_NO_KEY=1000_VOUCHER_TBS" />
+							<message-property-filter pattern="MSG_NO_KEY=3001_VOUCHER_TBS" />
+							<message-property-filter pattern="MSG_NO_KEY=1002" />
+						</or-filter>
+						<message-property-filter pattern="MSG_SENDER=0" />
+					</and-filter>
+				</chaining-router>
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.PBC.ONLINE}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnectorOnline"
+						transformer-refs="java2xml casign sentXml2file uptsendlogfilepath string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<and-filter>
+						<or-filter>
+							<message-property-filter pattern="MSG_NO_KEY=9003" />
+							<message-property-filter pattern="MSG_NO_KEY=9005" />
+							<message-property-filter pattern="MSG_NO_KEY=9006" />
+							<message-property-filter pattern="MSG_NO_KEY=9008" />
+							<message-property-filter pattern="MSG_NO_KEY=9105" />
+						</or-filter>
+						<message-property-filter pattern="MSG_SENDER=0" />
+					</and-filter>
+				</chaining-router>
+				<!-- 通过实时MQ转发tips 报文发起方 财政发起为2-->
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.PBC.BATCH}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnectorBatch" transformer-refs="string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<and-filter>
+						<or-filter>
+							<message-property-filter pattern="MSG_NO_KEY=5001" />
+							<message-property-filter pattern="MSG_NO_KEY=5002" />
+							<message-property-filter pattern="MSG_NO_KEY=5003" />
+							<message-property-filter pattern="MSG_NO_KEY=1102" />
+							<message-property-filter pattern="MSG_NO_KEY=2102" />
+							<message-property-filter pattern="MSG_NO_KEY=9113" />
+							<message-property-filter pattern="MSG_NO_KEY=1024" />
+							<message-property-filter pattern="MSG_NO_KEY=1025" />
+							<message-property-filter pattern="MSG_NO_KEY=7211" />
+							<!-- 增加财政支出报文的转发 -->
+							<message-property-filter pattern="MSG_NO_KEY=5101" />
+							<message-property-filter pattern="MSG_NO_KEY=5102" />
+							<message-property-filter pattern="MSG_NO_KEY=5103" />
+							<message-property-filter pattern="MSG_NO_KEY=2201_IN" />
+							<message-property-filter pattern="MSG_NO_KEY=2202_IN" />
+						</or-filter>
+						<message-property-filter pattern="MSG_SENDER=2" />
+					</and-filter>
+				</chaining-router>
+				<!-- 用于转发财政实施扣税 -->
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.PBC.ONLINE}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnectorOnline" transformer-refs="string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<and-filter>
+						<or-filter>
+							<message-property-filter pattern="MSG_NO_KEY=1001" />
+							<message-property-filter pattern="MSG_NO_KEY=1021" />
+							<message-property-filter pattern="MSG_NO_KEY=1104" />
+							<message-property-filter pattern="MSG_NO_KEY=1105" />
+							<message-property-filter pattern="MSG_NO_KEY=9100" />
+							<message-property-filter pattern="MSG_NO_KEY=9101" />
+							<message-property-filter pattern="MSG_NO_KEY=9102" />
+							<message-property-filter pattern="MSG_NO_KEY=9105" />
+							<message-property-filter pattern="MSG_NO_KEY=9106" />
+							<message-property-filter pattern="MSG_NO_KEY=9005" />
+							<message-property-filter pattern="MSG_NO_KEY=9114" />
+							<message-property-filter pattern="MSG_NO_KEY=9003" />
+						</or-filter>
+						<message-property-filter pattern="MSG_SENDER=2" />
+					</and-filter>
+				</chaining-router>
+				<!--用于财政的连接性测试报文，目前没有启用  -->
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.MOF.ONLINE}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnectorOnline" transformer-refs="java2xml casign string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+					</jms:outbound-endpoint>
+					<and-filter>
+						<or-filter>
+							<message-property-filter pattern="MSG_NO_KEY=9999" />
+							<message-property-filter pattern="MSG_NO_KEY=9120" />
+						</or-filter>
+						<message-property-filter pattern="MSG_SENDER=2" />
+					</and-filter>
+				</chaining-router>
+			</outbound>
+		</service>
+		<!-- 提供报文中转的服务  现在主要面对的业务是实拨资金业务-->
+		<service name="MsgTransferService">
+			<inbound>
+				<vm:inbound-endpoint path="ManagerMsgTransfer"
+					transformer-refs="msgsenderisitfe">
+					<xa-transaction action="JOIN_IF_POSSIBLE" />
+				</vm:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.MessageComponent" />
+			<outbound>
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.PBC.BATCH}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnectorBatch" transformer-refs="casign string2bytes ojbect2JMS">
+						<xa-transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+				</chaining-router>
+			</outbound>
+		</service>
+	</model>
+	<!--接收TIPS发起业务后的处理(一般适合于前置系统接收外系统的报文后的处理)-->
+	<model name="Form.TIPS.Model">
+		<default-service-exception-strategy
+			enableNotifications="true">
+			<rollback-transaction exception-pattern="Exception" />
+			<vm:outbound-endpoint synchronous="true"
+				path="userErrorHandler" />
+		</default-service-exception-strategy>
+		<!-- 提供TIPS接收报文的服务，转发给财政 -->
+		<service name="RcvMsgService">
+			<inbound>
+				<vm:inbound-endpoint path="ManagerMsgToMof"
+					transformer-refs="msgsenderisitfe">
+				</vm:inbound-endpoint>
+				<!-- 从批量mq接收 -->
+				<jms:inbound-endpoint connector-ref="jmsConnectorBatch"
+					disableTemporaryReplyToDestinations="true" queue="${mq.PBC.IN.BATCH}"
+					transformer-refs="jmsmessage-to-object msgsenderistips setXmlMsgHeader byte-array-to-string setMsgProp receiveXml2file xml2java"
+					synchronous="false">
+					<property key="pollingFrequency" value="10" />
+					<property key="reuseSession" value="true" />
+					<property key="reuseConsumer" value="true" />
+					<jms:transaction action="JOIN_IF_POSSIBLE" />
+				</jms:inbound-endpoint>
+				<!-- 从实时mq接收 -->
+				<jms:inbound-endpoint connector-ref="jmsConnectorOnline"
+					disableTemporaryReplyToDestinations="true" queue="${mq.PBC.IN.ONLINE}"
+					transformer-refs="jmsmessage-to-object msgsenderistips setXmlMsgHeader  byte-array-to-string setMsgProp receiveXml2file  xml2java"
+					synchronous="false">
+					<property key="pollingFrequency" value="10" />
+					<property key="reuseSession" value="true" />
+					<property key="reuseConsumer" value="true" />
+					<jms:transaction action="JOIN_IF_POSSIBLE" />
+				</jms:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.MessageComponent" />
+			<!-- 通过MQ批量队列转发财政 -->
+			<outbound>
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.MOF.BATCH}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnector2" transformer-refs="string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<or-filter>
+						<message-property-filter pattern="MSG_NO_KEY=3128" />
+						<message-property-filter pattern="MSG_NO_KEY=3129" />
+						<message-property-filter pattern="MSG_NO_KEY=3139" />
+						<message-property-filter pattern="MSG_NO_KEY=3122" />
+						<message-property-filter pattern="MSG_NO_KEY=3126" />
+						<message-property-filter pattern="MSG_NO_KEY=3127" />
+						<message-property-filter pattern="MSG_NO_KEY=3131" />
+						<message-property-filter pattern="MSG_NO_KEY=3133" />
+						<message-property-filter pattern="MSG_NO_KEY=3134" />
+						<message-property-filter pattern="MSG_NO_KEY=3143" />
+						<message-property-filter pattern="MSG_NO_KEY=3144" />
+						<message-property-filter pattern="MSG_NO_KEY=2102" />
+						<message-property-filter pattern="MSG_NO_KEY=9120" />
+						<message-property-filter pattern="MSG_NO_KEY=9121" />
+						<message-property-filter pattern="MSG_NO_KEY=9122" />
+						<message-property-filter pattern="MSG_NO_KEY=9110" />
+					</or-filter>
+				</chaining-router>
+				
+				
+				<!-- 通过MQ实时队列转发财政 异常情况-->
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.MOF.BATCH}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnector2"
+						transformer-refs="java2xml sentXml2file uptsendlogfilepath string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+						<or-filter>
+						<message-property-filter pattern="MSG_NO_KEY=3128_OUT" />
+						<message-property-filter pattern="MSG_NO_KEY=ABCD" />
+					</or-filter>
+				</chaining-router>
+				
+				<!-- 通过MQ实时队列转发财政-->
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.MOF.ONLINE}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnector2" transformer-refs="string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<and-filter>
+						<or-filter>
+							<message-property-filter pattern="MSG_NO_KEY=2001" />
+							<message-property-filter pattern="MSG_NO_KEY=2021" />
+							<message-property-filter pattern="MSG_NO_KEY=9115" />
+							<message-property-filter pattern="MSG_NO_KEY=9004" />
+							<message-property-filter pattern="MSG_NO_KEY=9100" />
+							<message-property-filter pattern="MSG_NO_KEY=9101" />
+							<message-property-filter pattern="MSG_NO_KEY=9105" />
+							<message-property-filter pattern="MSG_NO_KEY=9106" />
+						</or-filter>
+						<message-property-filter pattern="MSG_SENDER=1" />
+					</and-filter>
+				</chaining-router>
+				 
+				<!-- 通过MQ实时队列转发财政 异常情况-->
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.MOF.ONLINE}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnector2"
+						transformer-refs="java2xml sentXml2file uptsendlogfilepath string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<and-filter>
+						<or-filter>
+							<message-property-filter pattern="MSG_NO_KEY=9120" />
+							<message-property-filter pattern="MSG_NO_KEY=ABCD" />
+						</or-filter>
+						<message-property-filter pattern="MSG_SENDER=0" />
+					</and-filter>
+				</chaining-router>
+			</outbound>
+			
+		</service>
+	</model>
+	<model name="resendModel">
+		<default-service-exception-strategy
+			enableNotifications="true">
+			<rollback-transaction exception-pattern="Exception" />
+			<vm:outbound-endpoint synchronous="true"
+				path="userErrorHandler" />
+		</default-service-exception-strategy>
+		<!-- 重发给Tips -->
+		<service name="ToTipsResendService">
+			<inbound>
+				<vm:inbound-endpoint path="ToTipsResendMsg">
+				</vm:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.MessageComponent"></component>
+			<outbound>
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.PBC.BATCH}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnectorBatch"
+						transformer-refs="casign sentXml2file uptsendlogfilepath string2bytes ojbect2JMS">
+						<jms:transaction action="NONE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<or-filter>
+						<message-property-filter pattern="MSG_NO_KEY=1104" />
+						<message-property-filter pattern="MSG_NO_KEY=1105" />
+						<message-property-filter pattern="MSG_NO_KEY=1106" />
+						<message-property-filter pattern="MSG_NO_KEY=7211" />
+						<message-property-filter pattern="MSG_NO_KEY=5101" />
+						<message-property-filter pattern="MSG_NO_KEY=5102" />
+						<message-property-filter pattern="MSG_NO_KEY=5103" />
+						<message-property-filter pattern="MSG_NO_KEY=5112" />
+						<message-property-filter pattern="MSG_NO_KEY=5104" />
+						<message-property-filter pattern="MSG_NO_KEY=11042" />
+						<message-property-filter pattern="MSG_NO_KEY=11052" />
+						<message-property-filter pattern="MSG_NO_KEY=11062" />
+						<message-property-filter pattern="MSG_NO_KEY=9117" />
+						<message-property-filter pattern="MSG_NO_KEY=9116" />
+						<message-property-filter pattern="MSG_NO_KEY=9111" />
+						<message-property-filter pattern="MSG_NO_KEY=5001" />
+						<message-property-filter pattern="MSG_NO_KEY=5002" />
+						<message-property-filter pattern="MSG_NO_KEY=5003" />
+						<message-property-filter pattern="MSG_NO_KEY=9113" />
+						<message-property-filter pattern="MSG_NO_KEY=2201" />
+						<message-property-filter pattern="MSG_NO_KEY=2202" />
+					</or-filter>
+				</chaining-router>
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.PBC.ONLINE}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnectorOnline"
+						transformer-refs="casign sentXml2file uptsendlogfilepath string2bytes ojbect2JMS">
+						<jms:transaction action="NONE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<or-filter>
+						<message-property-filter pattern="MSG_NO_KEY=9003" />
+						<message-property-filter pattern="MSG_NO_KEY=9005" />
+						<message-property-filter pattern="MSG_NO_KEY=9006" />
+						<message-property-filter pattern="MSG_NO_KEY=9008" />
+						<message-property-filter pattern="MSG_NO_KEY=9105" />
+					</or-filter>
+				</chaining-router>
+			</outbound>
+		</service>
+
+
+		<!-- 定时解析报文 -->
+		<service name="TimerProcSaveMsg">
+			<inbound>
+				<vm:inbound-endpoint path="timersaveprocmsg"
+					transformer-refs="file2String  setMsgProp  xml2java">
+				</vm:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerProcSaveMessageComponent"></component>
+		</service>
+
+		<!-- 重发给财政 -->
+		<service name="FromTipsResendService">
+			<inbound>
+				<vm:inbound-endpoint path="FromTipsResendMsg">
+				</vm:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.MessageComponent"></component>
+			<outbound>
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.MOF.ONLINE}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnector2" transformer-refs="string2bytes ojbect2JMS">
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<or-filter>
+						<message-property-filter pattern="MSG_NO_KEY=3128" />
+						<message-property-filter pattern="MSG_NO_KEY=3129" />
+						<message-property-filter pattern="MSG_NO_KEY=3139" />
+						<message-property-filter pattern="MSG_NO_KEY=9120" />
+					</or-filter>
+				</chaining-router>
+			</outbound>
+		</service>
+		<!-- 和同城清算接口对账 -->
+		<service name="SendToSameCityService">
+			<inbound>
+				<vm:inbound-endpoint path="SendToSameCityMsg">
+				</vm:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.MessageComponent"></component>
+			<outbound>
+				<chaining-router>
+					<jms:outbound-endpoint queue="ITFE.102.BATCH.OUT"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnector2" transformer-refs="string2bytes ojbect2JMS">
+						<jms:transaction action="JOIN_IF_POSSIBLE" />
+						<property key="priority" value="0" />
+					</jms:outbound-endpoint>
+					<and-filter>
+						<or-filter>
+							<message-property-filter pattern="MSG_NO_KEY=102-2000" />
+							<message-property-filter pattern="MSG_NO_KEY=102-8000" />
+						</or-filter>
+						<message-property-filter pattern="MSG_SENDER=1" />
+					</and-filter>
+				</chaining-router>
+			</outbound>
+		</service>
+	</model>
+	
+	<!-- 代理库与同城清算系统业务往来配置
+	<model name="InteractionWithCommercialBank.Model">
+		<default-service-exception-strategy
+			enableNotifications="true">
+			<rollback-transaction exception-pattern="Exception" />
+			<vm:outbound-endpoint synchronous="true"
+				path="userErrorHandler" />
+		</default-service-exception-strategy>
+
+		
+		<service name="InteractionWithCommercialBankService">
+			<inbound>
+				<vm:inbound-endpoint path="ManagerMsgWithCommBank"
+					transformer-refs="msgsenderisitfe">
+					<jms:transaction action="JOIN_IF_POSSIBLE" />
+				</vm:inbound-endpoint>
+				<jms:inbound-endpoint connector-ref="jmsConnectorWithCommBank"
+					disableTemporaryReplyToDestinations="true" queue="${mq.COMMBANK.IN.BATCH}"
+					transformer-refs="jmsmessage-to-object msgsenderisitfe byte-array-to-string setMsgProp setXmlMsgHeader receiveXml2file changeMsgNo xml2java"
+					synchronous="false">
+					<property key="pollingFrequency" value="10" />
+					<property key="reuseSession" value="true" />
+					<property key="reuseConsumer" value="true" />
+					<jms:transaction action="JOIN_IF_POSSIBLE" />
+				</jms:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.MessageComponent" />
+		</service>
+	</model>
+	 -->
+	
+	<model name="errorHandler">
+		<!-- 将错误信息记录到异常监控表中 -->
+		<service name="UserErrorHandler">
+			<inbound>
+				<vm:inbound-endpoint path="userErrorHandler"
+					synchronous="false" connector-ref="myVM">
+					<vm:transaction action="NONE" />
+				</vm:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.common.ErrorMsgLogComponent">
+			</component>
+			<outbound>
+				<pass-through-router>
+					<stdio:outbound-endpoint synchronous="false"
+						system="ERR">
+						<vm:transaction action="JOIN_IF_POSSIBLE" />
+					</stdio:outbound-endpoint>
+
+				</pass-through-router>
+
+			</outbound>
+		</service>
+
+		<!--
+			Handle any unexpected errors. Errors could also be routed elsewhere,
+			e.g. into an error file, send via email to a list, stored in a
+			database, etc.
+		-->
+		<service name="SystemErrorHandler">
+			<inbound>
+				<vm:inbound-endpoint path="systemErrorHandler"
+					synchronous="true">
+					<vm:transaction action="JOIN_IF_POSSIBLE" />
+				</vm:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.common.ErrorMsgLogComponent"></component>
+			<outbound>
+				<pass-through-router>
+					<stdio:outbound-endpoint system="ERR" />
+					<vm:transaction action="JOIN_IF_POSSIBLE" />
+				</pass-through-router>
+			</outbound>
+		</service>
+
+	</model>
+</mule>

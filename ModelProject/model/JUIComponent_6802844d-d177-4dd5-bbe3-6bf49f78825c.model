@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6802844d-d177-4dd5-bbe3-6bf49f78825c" name="退付原因参数维护" ename="TsDwbkReason">
+  <jproperties id="02da5b94-deb4-4c8c-9d29-1b45963ca88e" key="GeneratedTime" value="1384249438265"/>
+  <refModule href="JModule_63140129-5ebe-4c8e-99e9-2b32dbd2de96.model#63140129-5ebe-4c8e-99e9-2b32dbd2de96"/>
+  <model id="a91c009b-9282-4755-beba-ed0d3a5651dd" name="JModelImpl-a91c009b-9282-4755-beba-ed0d3a5651dd">
+    <attributes id="687f9dce-89d0-4074-8cdd-bf3fb6a11aa7" name="searchdto" type="com.cfcc.itfe.persistence.dto.TsDwbkReasonDto"/>
+    <attributes id="854884d5-eb6e-4598-a897-4c09d1e14110" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="4fad9784-0747-4970-ae20-be4d6eaee100" name="savedto" type="com.cfcc.itfe.persistence.dto.TsDwbkReasonDto"/>
+    <directions id="74b35994-d139-4fa1-b784-d78f3b32fcb7" viewers="daea96bb-b9b9-455e-892e-4f1a1009e27b" name="查询" ename="search"/>
+    <directions id="314e9b80-1a3f-48cb-8972-0a8fc74fa875" viewers="9d7ceca5-9bff-4b97-8671-b1bb17c06e60" name="新增" ename="newInput"/>
+    <directions id="f3752ad3-6444-4c41-b023-5d7767b22c24" viewers="b2cb0dcc-fb52-4590-bcd1-33c68c98b1e3" name="修改跳转" ename="updateDri"/>
+    <directions id="09e9ceab-0cd1-42d4-8b62-ee71652aefc2" name="删除" ename="delete"/>
+    <directions id="3e88d3a4-761a-442f-b932-85b89382c4b7" viewers="c68022d9-1c7b-4c58-a58a-f8b3953b5031" name="返回" ename="reback"/>
+    <directions id="77cf1a52-7a40-4aba-ac11-5b8028e097f7" viewers="daea96bb-b9b9-455e-892e-4f1a1009e27b" name="保存" ename="save"/>
+    <directions id="3c37410d-3128-40fe-9fdc-a9c5918e0438" viewers="daea96bb-b9b9-455e-892e-4f1a1009e27b" name="修改" ename="update"/>
+    <directions id="ac7e4b7e-62fe-44ef-b3b6-f1347c9d623c" viewers="daea96bb-b9b9-455e-892e-4f1a1009e27b" name="取消" ename="exit"/>
+    <directions id="3c1c165e-3899-4bdf-9dc2-3894cf407ca2" viewers="b2cb0dcc-fb52-4590-bcd1-33c68c98b1e3" name="双击修改" ename="doubleclickToUpdate"/>
+    <directions id="7bc82d58-7165-41cb-aaab-7fc56c8dd007" name="单击选中数据" ename="singleclickdate"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="f40a9b44-e985-434c-8935-5fcd03178f7e">
+    <contentareanode id="bb6b4a52-d8fa-49af-a320-02850a8fbae4" name="退付原因参数录入" grouptitle="退付原因参数录入" binding="">
+      <widgetRefs xsi:type="model:Text" id="be878856-7919-4ed2-a653-956f6c275061" name="退付原因代码" binding="savedto.sdrawbackreacode" caption="退付原因代码" required="true"/>
+      <widgetRefs xsi:type="model:Textarea" id="16b892f8-da77-4822-8f70-e80e698d8505" name="退付原因说明" binding="savedto.sdrawbackreacmt" caption="退付原因说明" required="true"/>
+    </contentareanode>
+    <contentareanode id="ef1357be-17d4-4c25-80e0-9b6d0e92a023" name="退付原因参数修改" grouptitle="退付原因参数修改" binding="">
+      <widgetRefs xsi:type="model:Text" id="ec170bb7-ce4c-4d5f-81c6-f148cc4691c8" name="退付原因代码" binding="savedto.sdrawbackreacode" caption="退付原因代码" enable="false" required="true"/>
+      <widgetRefs xsi:type="model:Textarea" id="b176f546-dc6b-4690-abed-f0ecb002783f" name="退付原因说明" binding="savedto.sdrawbackreacmt" caption="退付原因说明" required="true"/>
+    </contentareanode>
+    <contentareanode id="49d12967-6159-455d-bc16-fd119deaa007" name="查询条件" grouptitle="查询条件" binding="">
+      <widgetRefs xsi:type="model:Text" id="1be8b198-288e-4005-994c-52ac36c1bd59" name="退付原因代码" binding="searchdto.sdrawbackreacode" caption="退付原因代码"/>
+      <widgetRefs xsi:type="model:Textarea" id="4e224343-ddcc-4ad6-813a-d7b43905ea1b" name="退付原因说明" binding="searchdto.sdrawbackreacmt" caption="退付原因说明"/>
+    </contentareanode>
+    <contentareanode id="679e8acb-8e50-488c-819c-1675b3a12f1c" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="05e84132-abd2-4a34-abd2-34be91f2bf9a" name="查询结果列表" binding="pagingcontext" caption="查询结果列表" tabletype="paging" refdoubleclickdirection="3c1c165e-3899-4bdf-9dc2-3894cf407ca2" refsingleclickdirection="7bc82d58-7165-41cb-aaab-7fc56c8dd007">
+        <columnlist id="f2969c0f-a667-4b11-a038-544862eb408e" name="核算主体代码" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="5751cff3-b3bc-4cdd-9e76-84babad9fda8" name="退付原因代码" binding="sdrawbackreacode" caption="退付原因代码"/>
+        <columnlist id="ce625c62-370b-48f4-81d1-f4a5c829aff4" name="退付原因说明" binding="sdrawbackreacmt" caption="退付原因说明"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="d2f05c91-1f19-488d-8772-a6f2a644d031">
+    <pages id="fa42cf77-4667-4f54-b70a-00b39caae75b" name="退付原因参数维护界面">
+      <views id="c68022d9-1c7b-4c58-a58a-f8b3953b5031" name="退付原因参数查询" isdefault="true" contentArea="49d12967-6159-455d-bc16-fd119deaa007">
+        <buttonArea id="58964adf-7960-4d54-aa56-be85929722e3" name="JButtonAreaImpl-58964adf-7960-4d54-aa56-be85929722e3">
+          <buttons id="8466f59a-9ef7-4756-af19-9acf010b3fb4" name="查询" binding="" caption="查询" direction="74b35994-d139-4fa1-b784-d78f3b32fcb7"/>
+        </buttonArea>
+      </views>
+      <views id="daea96bb-b9b9-455e-892e-4f1a1009e27b" name="退付原因参数查询结果" contentArea="679e8acb-8e50-488c-819c-1675b3a12f1c">
+        <buttonArea id="6334d299-92a1-4555-9084-f1ea4eeaa72c" name="JButtonAreaImpl-6334d299-92a1-4555-9084-f1ea4eeaa72c">
+          <buttons id="2f62f6e0-75ab-46b4-8444-537a06f2db5d" name="录入" caption="录入" direction="314e9b80-1a3f-48cb-8972-0a8fc74fa875"/>
+          <buttons id="9f63cdb4-e92b-4b82-b031-893252870d61" name="修改" caption="修改" direction="f3752ad3-6444-4c41-b023-5d7767b22c24"/>
+          <buttons id="3f5ae3b6-73e4-4e51-b876-e462796180db" name="删除" caption="删除" direction="09e9ceab-0cd1-42d4-8b62-ee71652aefc2"/>
+          <buttons id="6490de32-f68a-44b8-b950-d643f16209c1" name="返回" caption="返回" direction="3e88d3a4-761a-442f-b932-85b89382c4b7"/>
+        </buttonArea>
+      </views>
+      <views id="9d7ceca5-9bff-4b97-8671-b1bb17c06e60" name="退付原因参数录入界面" contentArea="bb6b4a52-d8fa-49af-a320-02850a8fbae4">
+        <buttonArea id="7424cf07-bdab-4585-b76b-bbb7c98a934f" name="JButtonAreaImpl-7424cf07-bdab-4585-b76b-bbb7c98a934f">
+          <buttons id="a7a433b1-0ae7-4c27-bdb2-340fa0378174" name="保存" caption="保存" checkrequired="true" direction="77cf1a52-7a40-4aba-ac11-5b8028e097f7"/>
+          <buttons id="268740b9-a56f-4def-86c5-99189d95a5e8" name="取消" caption="取消" direction="ac7e4b7e-62fe-44ef-b3b6-f1347c9d623c"/>
+        </buttonArea>
+      </views>
+      <views id="b2cb0dcc-fb52-4590-bcd1-33c68c98b1e3" name="退付原因参数修改界面" contentArea="ef1357be-17d4-4c25-80e0-9b6d0e92a023">
+        <buttonArea id="52086e1e-208c-46df-ad9a-41c0b86fcff0" name="JButtonAreaImpl-52086e1e-208c-46df-ad9a-41c0b86fcff0">
+          <buttons id="50c8df59-ce51-4386-8fc2-3f1d03b552b1" name="保存" caption="保存" checkrequired="true" direction="3c37410d-3128-40fe-9fdc-a9c5918e0438"/>
+          <buttons id="83efaa16-2fde-4843-8862-5191a8502e74" name="取消" caption="取消" direction="ac7e4b7e-62fe-44ef-b3b6-f1347c9d623c"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f16d8d05-2f24-4af0-804b-eca52cba474b" name="商行办理支付划款申请退回查询处理服务" ename="commApplyPayBackQuery">
+  <jproperties id="4263529a-7705-40d1-ad5a-59b653ce7f57" key="GeneratedTime" value="1433839996286"/>
+  <refModule href="JModule_87c56a03-15af-4d52-9d24-d8e45427dcdd.model#87c56a03-15af-4d52-9d24-d8e45427dcdd"/>
+  <methods id="5d537de6-5e82-47de-91f5-2ef1e8a02e48" ename="findMainByPage" name="商行办理支付划款申请退回主体信息" codecomment="退回商行办理支付划款申请主体信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="d03bf670-8a09-4c2a-b163-b132d8e2cbe2" name="商行办理支付划款申请退回主体信息DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPayreckBankBackDto" codecomment="商行办理支付划款申请退回主体信息DTO"/>
+    <methodParams id="e03f3665-b614-4f31-81f6-59184e246fc4" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="1f3909b6-a8d2-4523-8613-0af8d5288017" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="0d7e5182-efb2-4808-8601-95b33191dc49" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="ae86196d-98f9-43dc-acba-b2ae5e216496" ename="findSubByPage" name="商行办理支付划款申请退回明细信息" codecomment="商行办理支付划款申请退回明细信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="7109a78a-b872-4400-8d3c-470f703640de" name="商行办理支付划款申请退回主体信息DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPayreckBankBackDto" codecomment="商行办理支付划款申请退回主体信息DTO"/>
+    <methodParams id="5d212af0-297f-46bf-87b7-344d78aba727" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="414be7fa-c352-44fe-8239-d914ad42fcf8" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="3fcc02d8-13b1-4167-a9ff-f11ad159665f" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="09f5c40d-2cdb-46ab-b7fd-6a63e2b7bbb9" ename="exportCommApplyPayBack" name="导出Txt" returntype="java.lang.String">
+    <methodParams id="b4ca3c02-8d35-4d1d-8c70-97d8023503cc" name="查询dto" ename="findidto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="58ea0185-87da-4550-ae93-776b982363e8" name="查询当前表历史表" ename="selecttable" type="java.lang.String"/>
+  </methods>
+  <methods id="c011d7e2-03f5-45af-b0da-dedfb22109c0" ename="exportFile" name="导出CSV" codecomment="导出CSV" returntype="java.lang.String">
+    <methodParams id="46a7ebf8-b5f6-44ef-9587-bf683019af3e" name="查询dto" ename="findidto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="1e72c68c-a1c5-4b55-af56-bd7ef4856857" name="查询当前表历史表" ename="selecttable" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

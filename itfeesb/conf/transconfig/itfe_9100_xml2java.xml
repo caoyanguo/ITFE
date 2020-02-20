@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead9100" beanIdRef="BatchHead9100" />
+	<jb:wiring property="TaxCodeInfo9100" beanIdRef="TaxCodeInfo9100" />
+	<jb:wiring property="BankCodeInfo9100" beanIdRef="BankCodeInfo9100" />
+	<jb:wiring property="NodeCodeInfo9100" beanIdRef="NodeCodeInfo9100" />
+	<jb:wiring property="TreCodeInfo9100" beanIdRef="TreCodeInfo9100" />
+	<jb:wiring property="BudgetSubjectCodeInfo9100" beanIdRef="BudgetSubjectCodeInfo9100" />
+	<jb:wiring property="ReturnReasonCodeInfo9100" beanIdRef="ReturnReasonCodeInfo9100" />
+	<jb:wiring property="CorrectReasonCodeInfo9100" beanIdRef="CorrectReasonCodeInfo9100" />
+	<jb:wiring property="TaxTypeInfo9100" beanIdRef="TaxTypeInfo9100" />
+	<jb:wiring property="TaxSubjectInfo9100" beanIdRef="TaxSubjectInfo9100" />
+	<jb:wiring property="TaxTypeInfo9100" beanIdRef="TaxTypeInfo9100" />
+</jb:bean>
+<jb:bean beanId="BatchHead9100" class="java.util.HashMap" createOnElement="BatchHead9100">
+	<jb:value property="UpdateBatch" decoder="String" data="CFX/MSG/BatchHead9100/UpdateBatch" />
+</jb:bean>
+<jb:bean beanId="TaxCodeInfo9100" class="java.util.HashMap" createOnElement="TaxCodeInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/TaxCodeInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/TaxCodeInfo9100/UpdateNum" />
+	<jb:wiring property="TaxCodeInfo101" beanIdRef="TaxCodeInfo101s" />
+</jb:bean>
+<jb:bean beanId="TaxCodeInfo101s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TaxCodeInfo101" />
+</jb:bean>
+<jb:bean beanId="TaxCodeInfo101" class="java.util.HashMap" createOnElement="TaxCodeInfo101">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/TaxOrgCode" />
+	<jb:value property="TaxOrgName" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/TaxOrgName" />
+	<jb:value property="TaxOrgType" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/TaxOrgType" />
+	<jb:value property="OrgLevel" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/OrgLevel" />
+	<jb:value property="UpTreCode" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/UpTreCode" />
+	<jb:value property="OfNodeCode" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/OfNodeCode" />
+	<jb:value property="OfProvOrg" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/OfProvOrg" />
+	<jb:value property="OfCityOrg" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/OfCityOrg" />
+	<jb:value property="OfCountyOrg" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/OfCountyOrg" />
+	<jb:value property="Address" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/Address" />
+	<jb:value property="PostalCode" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/PostalCode" />
+	<jb:value property="PeopleName" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/PeopleName" />
+	<jb:value property="PeoplePhone" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/PeoplePhone" />
+	<jb:value property="PeopleMobile" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/PeopleMobile" />
+	<jb:value property="Email" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/Email" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/TaxCodeInfo9100/TaxCodeInfo101/UpdateArea" />
+</jb:bean>
+<jb:bean beanId="BankCodeInfo9100" class="java.util.HashMap" createOnElement="BankCodeInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/BankCodeInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/BankCodeInfo9100/UpdateNum" />
+	<jb:wiring property="BankCodeInfo102" beanIdRef="BankCodeInfo102s" />
+</jb:bean>
+<jb:bean beanId="BankCodeInfo102s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="BankCodeInfo102" />
+</jb:bean>
+<jb:bean beanId="BankCodeInfo102" class="java.util.HashMap" createOnElement="BankCodeInfo102">
+	<jb:value property="ReckBankNo" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/ReckBankNo" />
+	<jb:value property="GenBankName" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/GenBankName" />
+	<jb:value property="ReckonType" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/ReckonType" />
+	<jb:value property="OfNodeCode" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/OfNodeCode" />
+	<jb:value property="Address" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/Address" />
+	<jb:value property="PostalCode" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/PostalCode" />
+	<jb:value property="PeopleName" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/PeopleName" />
+	<jb:value property="PeoplePhone" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/PeoplePhone" />
+	<jb:value property="PeopleMobile" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/PeopleMobile" />
+	<jb:value property="Email" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/Email" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/BankCodeInfo9100/BankCodeInfo102/UpdateArea" />
+</jb:bean>
+<jb:bean beanId="NodeCodeInfo9100" class="java.util.HashMap" createOnElement="NodeCodeInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/NodeCodeInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/NodeCodeInfo9100/UpdateNum" />
+	<jb:wiring property="NodeCodeInfo103" beanIdRef="NodeCodeInfo103s" />
+</jb:bean>
+<jb:bean beanId="NodeCodeInfo103s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="NodeCodeInfo103" />
+</jb:bean>
+<jb:bean beanId="NodeCodeInfo103" class="java.util.HashMap" createOnElement="NodeCodeInfo103">
+	<jb:value property="NodeCode" decoder="String" data="CFX/MSG/NodeCodeInfo9100/NodeCodeInfo103/NodeCode" />
+	<jb:value property="NodeName" decoder="String" data="CFX/MSG/NodeCodeInfo9100/NodeCodeInfo103/NodeName" />
+	<jb:value property="OfNodeType" decoder="String" data="CFX/MSG/NodeCodeInfo9100/NodeCodeInfo103/OfNodeType" />
+	<jb:value property="NodeDN" decoder="String" data="CFX/MSG/NodeCodeInfo9100/NodeCodeInfo103/NodeDN" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/NodeCodeInfo9100/NodeCodeInfo103/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/NodeCodeInfo9100/NodeCodeInfo103/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/NodeCodeInfo9100/NodeCodeInfo103/UpdateArea" />
+</jb:bean>
+<jb:bean beanId="TreCodeInfo9100" class="java.util.HashMap" createOnElement="TreCodeInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/TreCodeInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/TreCodeInfo9100/UpdateNum" />
+	<jb:wiring property="TreCodeInfo104" beanIdRef="TreCodeInfo104s" />
+</jb:bean>
+<jb:bean beanId="TreCodeInfo104s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TreCodeInfo104" />
+</jb:bean>
+<jb:bean beanId="TreCodeInfo104" class="java.util.HashMap" createOnElement="TreCodeInfo104">
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/TreCode" />
+	<jb:value property="TreName" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/TreName" />
+	<jb:value property="TreLevel" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/TreLevel" />
+	<jb:value property="PayBankNo" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/PayBankNo" />
+	<jb:value property="ReckonTreCode" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/ReckonTreCode" />
+	<jb:value property="UpTreCode" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/UpTreCode" />
+	<jb:value property="OfProvTrea" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/OfProvTrea" />
+	<jb:value property="OfCityTrea" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/OfCityTrea" />
+	<jb:value property="ofCountyTrea" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/ofCountyTrea" />
+	<jb:value property="OfNodeCode" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/OfNodeCode" />
+	<jb:value property="Address" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/Address" />
+	<jb:value property="PostalCode" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/PostalCode" />
+	<jb:value property="PeopleName" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/PeopleName" />
+	<jb:value property="PeoplePhone" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/PeoplePhone" />
+	<jb:value property="PeopleMobile" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/PeopleMobile" />
+	<jb:value property="Email" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/Email" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/TreCodeInfo9100/TreCodeInfo104/UpdateArea" />
+</jb:bean>
+<jb:bean beanId="BudgetSubjectCodeInfo9100" class="java.util.HashMap" createOnElement="BudgetSubjectCodeInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/UpdateNum" />
+	<jb:wiring property="BudgetSubjectCodeInfo105" beanIdRef="BudgetSubjectCodeInfo105s" />
+</jb:bean>
+<jb:bean beanId="BudgetSubjectCodeInfo105s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="BudgetSubjectCodeInfo105" />
+</jb:bean>
+<jb:bean beanId="BudgetSubjectCodeInfo105" class="java.util.HashMap" createOnElement="BudgetSubjectCodeInfo105">
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/BudgetSubjectCodeInfo105/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/BudgetSubjectCodeInfo105/BudgetSubjectName" />
+	<jb:value property="SubjectType" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/BudgetSubjectCodeInfo105/SubjectType" />
+	<jb:value property="IESign" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/BudgetSubjectCodeInfo105/IESign" />
+	<jb:value property="BudgetAttrib" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/BudgetSubjectCodeInfo105/BudgetAttrib" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/BudgetSubjectCodeInfo105/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/BudgetSubjectCodeInfo105/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/BudgetSubjectCodeInfo9100/BudgetSubjectCodeInfo105/UpdateArea" />
+</jb:bean>
+<jb:bean beanId="ReturnReasonCodeInfo9100" class="java.util.HashMap" createOnElement="ReturnReasonCodeInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/ReturnReasonCodeInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/ReturnReasonCodeInfo9100/UpdateNum" />
+	<jb:wiring property="ReturnReasonCodeInfo106" beanIdRef="ReturnReasonCodeInfo106s" />
+</jb:bean>
+<jb:bean beanId="ReturnReasonCodeInfo106s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="ReturnReasonCodeInfo106" />
+</jb:bean>
+<jb:bean beanId="ReturnReasonCodeInfo106" class="java.util.HashMap" createOnElement="ReturnReasonCodeInfo106">
+	<jb:value property="ReasonCode" decoder="String" data="CFX/MSG/ReturnReasonCodeInfo9100/ReturnReasonCodeInfo106/ReasonCode" />
+	<jb:value property="Description" decoder="String" data="CFX/MSG/ReturnReasonCodeInfo9100/ReturnReasonCodeInfo106/Description" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/ReturnReasonCodeInfo9100/ReturnReasonCodeInfo106/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/ReturnReasonCodeInfo9100/ReturnReasonCodeInfo106/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/ReturnReasonCodeInfo9100/ReturnReasonCodeInfo106/UpdateArea" />
+</jb:bean>
+<jb:bean beanId="CorrectReasonCodeInfo9100" class="java.util.HashMap" createOnElement="CorrectReasonCodeInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/CorrectReasonCodeInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/CorrectReasonCodeInfo9100/UpdateNum" />
+	<jb:wiring property="CorrectReasonCode107" beanIdRef="CorrectReasonCode107s" />
+</jb:bean>
+<jb:bean beanId="CorrectReasonCode107s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="CorrectReasonCode107" />
+</jb:bean>
+<jb:bean beanId="CorrectReasonCode107" class="java.util.HashMap" createOnElement="CorrectReasonCode107">
+	<jb:value property="ReasonCode" decoder="String" data="CFX/MSG/CorrectReasonCodeInfo9100/CorrectReasonCode107/ReasonCode" />
+	<jb:value property="Description" decoder="String" data="CFX/MSG/CorrectReasonCodeInfo9100/CorrectReasonCode107/Description" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/CorrectReasonCodeInfo9100/CorrectReasonCode107/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/CorrectReasonCodeInfo9100/CorrectReasonCode107/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/CorrectReasonCodeInfo9100/CorrectReasonCode107/UpdateArea" />
+</jb:bean>
+<jb:bean beanId="TaxTypeInfo9100" class="java.util.HashMap" createOnElement="TaxTypeInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/TaxTypeInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/TaxTypeInfo9100/UpdateNum" />
+	<jb:wiring property="TaxTypeCode108" beanIdRef="TaxTypeCode108s" />
+</jb:bean>
+<jb:bean beanId="TaxTypeCode108s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TaxTypeCode108" />
+</jb:bean>
+<jb:bean beanId="TaxTypeCode108" class="java.util.HashMap" createOnElement="TaxTypeCode108">
+	<jb:value property="TaxTypeCode" decoder="String" data="CFX/MSG/TaxTypeInfo9100/TaxTypeCode108/TaxTypeCode" />
+	<jb:value property="TaxOrgType" decoder="String" data="CFX/MSG/TaxTypeInfo9100/TaxTypeCode108/TaxOrgType" />
+	<jb:value property="TaxTypeName" decoder="String" data="CFX/MSG/TaxTypeInfo9100/TaxTypeCode108/TaxTypeName" />
+	<jb:value property="Description" decoder="String" data="CFX/MSG/TaxTypeInfo9100/TaxTypeCode108/Description" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/TaxTypeInfo9100/TaxTypeCode108/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/TaxTypeInfo9100/TaxTypeCode108/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/TaxTypeInfo9100/TaxTypeCode108/UpdateArea" />
+</jb:bean>
+<jb:bean beanId="TaxSubjectInfo9100" class="java.util.HashMap" createOnElement="TaxSubjectInfo9100">
+	<jb:value property="DataType" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/DataType" />
+	<jb:value property="UpdateNum" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/UpdateNum" />
+	<jb:wiring property="TaxSubjectCode109" beanIdRef="TaxSubjectCode109s" />
+</jb:bean>
+<jb:bean beanId="TaxSubjectCode109s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TaxSubjectCode109" />
+</jb:bean>
+<jb:bean beanId="TaxSubjectCode109" class="java.util.HashMap" createOnElement="TaxSubjectCode109">
+	<jb:value property="TaxSubjectCode" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/TaxSubjectCode109/TaxSubjectCode" />
+	<jb:value property="TaxOrgType" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/TaxSubjectCode109/TaxOrgType" />
+	<jb:value property="TaxSubjectName" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/TaxSubjectCode109/TaxSubjectName" />
+	<jb:value property="Description" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/TaxSubjectCode109/Description" />
+	<jb:value property="OperSign" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/TaxSubjectCode109/OperSign" />
+	<jb:value property="EffectDate" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/TaxSubjectCode109/EffectDate" />
+	<jb:value property="UpdateArea" decoder="String" data="CFX/MSG/TaxSubjectInfo9100/TaxSubjectCode109/UpdateArea" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

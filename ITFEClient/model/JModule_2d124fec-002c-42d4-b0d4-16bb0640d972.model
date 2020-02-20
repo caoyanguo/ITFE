@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2d124fec-002c-42d4-b0d4-16bb0640d972" name="征收机关节点对应关系维护" ename="taxorgcode" shared="true"/>

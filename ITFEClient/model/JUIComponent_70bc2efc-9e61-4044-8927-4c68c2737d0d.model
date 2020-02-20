@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="70bc2efc-9e61-4044-8927-4c68c2737d0d" name="业务数据查询分类" ename="bizdatasearch">
+  <jproperties id="52e14b49-dce2-44ad-8518-f547423dc268" key="GeneratedTime" value="1338429957293"/>
+  <refModule href="JModule_814e9ac0-1631-4525-9f4b-556c7c75654e.model#814e9ac0-1631-4525-9f4b-556c7c75654e"/>
+  <model id="e4496afe-73db-4f23-9483-05208db9ce07" name="JModelImpl-e4496afe-73db-4f23-9483-05208db9ce07">
+    <attributes id="72f5cdb6-270c-4083-97fc-1b8a02650a36" name="trecode" type="java.lang.String"/>
+    <attributes id="421f0f75-2b2d-4ffb-a6a8-3318c9e8dac2" name="biztype" type="java.lang.String"/>
+    <attributes id="2abcb40f-ae2d-44a0-ae1e-ca1eef6f6fa9" name="starttime" type="java.lang.String"/>
+    <attributes id="beb6db81-15cd-4978-8cb8-7370cc408902" name="endtime" type="java.lang.String"/>
+    <attributes id="b5a7d993-a59d-4b90-b0dd-bd956ccb0ec0" name="trecodelist" type="java.util.List"/>
+    <attributes id="4645e57d-9ad6-4b76-9a93-b4dcaf5fd3a5" name="bizlist" type="java.util.List"/>
+    <attributes id="da7bcdff-7757-49d2-b35b-6dcc5c3ae1fd" name="reportlist" type="java.util.List"/>
+    <attributes id="aad11c2e-0378-416f-a3f0-2ac1dfdbcda3" name="reportpath" type="java.lang.String"/>
+    <attributes id="0feb1146-cf6a-4144-a7f3-ef33fb12da3e" name="reportmap" type="java.util.Map"/>
+    <attributes id="9edc501c-442f-49c1-b30c-b0f04c26b6d3" name="resultlist" type="java.util.List"/>
+    <directions id="2b3003d4-60e1-48be-b8db-8e66b63d8713" name="查询" ename="search"/>
+    <directions id="a247973b-5ca1-4248-90d8-23c06ea884af" viewers="5a8c482e-7cc8-45ac-a50b-fcb39ea047fa" name="打印" ename="print"/>
+    <directions id="b5e2267d-e954-49b2-91c1-db94fb469c5c" viewers="5c5b11ef-a8ca-4d14-aea4-483445cefa99" name="返回" ename="back"/>
+  </model>
+  <contentAreas id="00153c8a-b12c-4270-9bda-bb3f68c29140">
+    <contentareanode id="de853592-7160-4509-a69d-1d0ac809572e" name="查询条件" grouptitle="查询条件">
+      <widgetRefs xsi:type="model:Combo" id="aecf6362-ec1a-4bca-94e9-337beff57966" name="国库名称" binding="trecode" caption="国库名称" display="strename" underly="strecode" modelsource="trecodelist"/>
+      <widgetRefs xsi:type="model:Combo" id="03eee33f-2767-4eba-968c-f34872e8b2f4" name="业务类型" binding="biztype" caption="业务类型" required="true" display="stypecode" underly="svalue" modelsource="bizlist"/>
+      <widgetRefs xsi:type="model:Text" id="72169d2f-4453-40c4-87f4-9629456cf73e" name="起始时间" binding="starttime" caption="起始时间" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="d3fc3fbc-bd9f-46d0-bad6-f8ae90d9cc5f" name="结束时间" binding="endtime" caption="结束时间" required="true"/>
+    </contentareanode>
+    <contentareanode id="84a78565-99fd-4e21-910f-876462541924" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="80e26bde-31fc-4a2d-99b5-b87ef9834859" name="TableImpl-80e26bde-31fc-4a2d-99b5-b87ef9834859" binding="resultlist">
+        <columnlist id="1cc694b0-0470-4184-a46f-ac2893d093f7" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="8cbc0606-fe65-4735-b2b4-8abcc1cc5294" name="征收机关代码" binding="taxcode" caption="征收机关代码"/>
+        <columnlist id="beecb71e-a641-4412-b435-f708d124a9fa" name="笔数" binding="conuts" caption="笔数"/>
+        <columnlist id="9908373c-2a81-4490-93af-e43aa1632951" name="金额" binding="summoney" caption="金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="c325ecac-2d22-455a-a17f-b7a7963c3136" name="打印">
+      <jreportref id="790b52dc-670e-4480-9c5f-20d97c6d5f91" name="JReportImpl-790b52dc-670e-4480-9c5f-20d97c6d5f91" reportpath="reportpath" binding="reportlist" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="8f18bcc4-94c6-40b7-99b5-805affcfc8a3">
+    <pages id="5bbed05d-3192-4252-8db8-89b5aa9b97b6" name="业务数据查询分类">
+      <views id="5c5b11ef-a8ca-4d14-aea4-483445cefa99" name="业务数据查询分类" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="de853592-7160-4509-a69d-1d0ac809572e 84a78565-99fd-4e21-910f-876462541924">
+        <buttonArea id="c4a9a39b-0935-42b0-9c5c-484f76feeeba" name="JButtonAreaImpl-c4a9a39b-0935-42b0-9c5c-484f76feeeba">
+          <buttons id="8fa72af9-6dc8-4178-8930-6cd3c03cd409" name="查询" caption="查询" checkrequired="true" direction="2b3003d4-60e1-48be-b8db-8e66b63d8713"/>
+          <buttons id="0ef0a8cb-2f49-4f64-90d7-ae219ccc048d" name="打印" caption="打印" direction="a247973b-5ca1-4248-90d8-23c06ea884af"/>
+        </buttonArea>
+      </views>
+      <views id="5a8c482e-7cc8-45ac-a50b-fcb39ea047fa" name="打印结果" contentArea="c325ecac-2d22-455a-a17f-b7a7963c3136">
+        <buttonArea id="16fcaa79-6774-41b6-9dbb-1ae41d6be117" name="JButtonAreaImpl-16fcaa79-6774-41b6-9dbb-1ae41d6be117">
+          <buttons id="ac635361-0bc6-4f84-aa07-497684c2d22a" name="返回" caption="返回" direction="b5e2267d-e954-49b2-91c1-db94fb469c5c"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

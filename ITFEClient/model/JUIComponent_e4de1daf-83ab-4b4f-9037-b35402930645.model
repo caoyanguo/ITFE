@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e4de1daf-83ab-4b4f-9037-b35402930645" name="财政预算支出统计报表" ename="finpaystatisticalreport">
+  <jproperties id="1d0d681c-5fa3-429a-9775-6a09b4181fdc" key="GeneratedTime" value="1431934808854"/>
+  <refModule href="JModule_fd53f0f4-9dd7-46e1-aa44-8ab07d9fd260.model#fd53f0f4-9dd7-46e1-aa44-8ab07d9fd260"/>
+  <model id="8c5ac35a-207d-4f36-ab46-b3029965d52f" name="JModelImpl-8c5ac35a-207d-4f36-ab46-b3029965d52f">
+    <directions id="3a139164-67dc-4e2d-a498-59086bec9838" name="查询" ename="query"/>
+    <directions id="ee4d3935-72b3-4feb-897a-05d211d72b1b" viewers="a07e16fb-b12b-4bf2-baa9-4ada2b30039c" name="返回" ename="goBack"/>
+    <directions id="c7d44771-1fa7-4cdf-8e18-6ecdd613244d" name="导出文件" ename="exportFile"/>
+    <directions id="185d79fe-491f-4bee-842e-b68e7ead1050" name="导出pdf文件" ename="exportPdfFile"/>
+    <directions id="450f5a33-78cc-49ec-a88a-812a44665187" name="导出标准Excel文件" ename="exportExcelFile"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <services href="JServiceComponet_b3a2e771-4ce4-4a72-ab20-f97bf7fb9760.model#b3a2e771-4ce4-4a72-ab20-f97bf7fb9760"/>
+  <contentAreas id="7122028e-4883-4e70-a3a4-9c5db32bd967">
+    <contentareanode id="be9343c7-5b11-4529-87c4-236932467267" name="财政预算支出统计报表查询条件" grouptitle="财政预算支出统计报表查询条件">
+      <widgetRefs xsi:type="model:Combo" id="15798379-ac3e-4ee4-b294-3e8f446452fe" name="国库代码" binding="sleTreCode" caption="国库代码" display="strename" underly="strecode" modelsource="treList"/>
+      <widgetRefs xsi:type="model:Text" id="d45f9305-fb1d-4fa1-ac0e-e8b3f79d1e5d" name="报表日期" binding="rptdate" caption="报表日期"/>
+      <widgetRefs xsi:type="model:Combo" id="8b65ddad-96ea-438f-ae57-23ebdfa4009f" name="预算种类" extpoperties="" binding="sleBudKind" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="1fb03d84-c402-49ac-b068-85671951f05d" name="含款合计" binding="sleSumItem" caption="含款合计" display="svaluecmt" underly="svalue" modelsource="sumitemlist"/>
+      <widgetRefs xsi:type="model:Combo" id="24132561-cfd5-4ab4-a03e-7ad75906ec8b" name="报表类型" binding="sleBillType" caption="报表类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3e431b8d-c784-4699-99a0-d683d38a9f29"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="73d694aa-6013-4577-b4ae-5b6b85985048" name="栏式类型" binding="sleBillKind" caption="栏式类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#fc540909-9bad-4fd6-933b-7386b7a94e74"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ee478e9e-707d-4f0f-825f-63db6b2c6e70" name="调整期标志" binding="sleTrimFlag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ceeaff86-2eaf-4e46-83be-79031556fa82" name="辖属标志" binding="sleOfFlag" caption="辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="dfdfe7f9-edfe-470f-896a-7fe65ba23201" name="预算单位代码" binding="scorpcode" caption="预算单位代码"/>
+      <widgetRefs xsi:type="model:Text" id="5cef3b17-bea6-4ad2-85d1-860cf83ca6a4" name="预算单位名称" binding="scorpname" caption="预算单位名称" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="073e43e2-f536-408a-9e88-bf3fe25944f9" name="支出报表名称" binding="slereportname" caption="支出报表名称" display="svaluecmt" underly="svalue" modelsource="slereportnamelist"/>
+    </contentareanode>
+    <contentareanode id="baa4a1f6-4ccd-45b7-89e1-553de3cdd354" name="财政预算支出日报表二栏式" grouptitle="">
+      <jreportref id="65614ca5-de48-45c7-b353-38d12996e1f1" name="财政预算支出日报表二栏式" reportpath="payoutPath" binding="payoutList" parammap="payoutMap"/>
+    </contentareanode>
+    <contentareanode id="9fe35583-bad2-4476-a1c7-4d61e6de1a57" name="财政预算支出日报表三栏式" grouptitle="">
+      <jreportref id="184fe918-0583-45b8-998d-3a9e1f65f0c2" name="财政预算支出日报表三栏式" reportpath="payoutThreePath" binding="payoutThreeList" parammap="payoutThreeMap"/>
+    </contentareanode>
+    <contentareanode id="fa07898e-cc10-49ca-91f0-a83c4add2092" name="财政预算支出日报表四栏式" grouptitle="">
+      <jreportref id="5ce33e85-e287-43f4-8eef-c2fe84303cf2" name="财政预算支出日报表四栏式" reportpath="payoutFourPath" binding="payoutFourList" parammap="payoutFourMap"/>
+    </contentareanode>
+    <contentareanode id="8fa73198-c363-441b-b9a7-bb3245bd9f8c" name="财政预算支出旬报表二栏式">
+      <jreportref id="c186bd48-6a3b-4805-89ea-7927a2943312" name="财政预算支出旬报表二栏式" reportpath="payoutTenRptPath" binding="payoutTenRptList" parammap="payoutTenRptMap"/>
+    </contentareanode>
+    <contentareanode id="a23a19f5-e5f0-440c-9570-440fc36426aa" name="财政预算支出旬报表三栏式">
+      <jreportref id="dbf290db-d33e-4133-b21f-87ca5d69f60a" name="财政预算支出旬报表三栏式" reportpath="payoutTenRptThreePath" binding="payoutTenRptThreeList" parammap="payoutTenRptThreeMap"/>
+    </contentareanode>
+    <contentareanode id="becb04af-c99b-4d33-8e72-f6a3e90ec158" name="财政预算支出旬报表四栏式">
+      <jreportref id="939e7731-20f4-47f9-b739-477eb42a20c5" name="财政预算支出旬报表四栏式" reportpath="payoutTenRptFourPath" binding="payoutTenRptFourList" parammap="payoutTenRptFourMap"/>
+    </contentareanode>
+    <contentareanode id="c508934a-2251-4a6e-b8b1-1b405475b55b" name="财政预算支出月报表二栏式">
+      <jreportref id="5b405d29-9cfb-4784-8329-5491a9699fb8" name="财政预算支出月报表二栏式" reportpath="payoutMonthPath" binding="payoutMonthList" parammap="payoutMonthMap"/>
+    </contentareanode>
+    <contentareanode id="8044db4a-a0da-45e7-8de6-ab32423b59be" name="财政预算支出月报表三栏式">
+      <jreportref id="3c91f95c-e370-4bc3-8afa-8401cde821ee" name="财政预算支出月报表三栏式" reportpath="payoutMonthThreePath" binding="payoutMonthThreeList" parammap="payoutMonthThreeMap"/>
+    </contentareanode>
+    <contentareanode id="be6b56c6-528f-4d92-bca7-080e2a43b137" name="财政预算支出季报表二栏式">
+      <jreportref id="edcdf5b4-43d0-4817-894a-07f38b998bce" name="财政预算支出季报表二栏式" reportpath="payoutQuarPath" binding="payoutQuarList" parammap="payoutQuarMap"/>
+    </contentareanode>
+    <contentareanode id="91dff989-ba5b-4c28-8615-801f5f423fca" name="财政预算支出季报表三栏式">
+      <jreportref id="c4514a4d-5e69-4c3f-9ffa-208944489658" name="财政预算支出季报表三栏式" reportpath="payoutQuarThreePath" binding="payoutQuarThreeList" parammap="payoutQuarThreeMap"/>
+    </contentareanode>
+    <contentareanode id="ed5872e6-0df9-49eb-9a92-0ba6ba209eb6" name="财政预算支出年报表二栏式">
+      <jreportref id="a51b1a11-92d3-430b-9ca4-e81ad05b8833" name="财政预算支出年报表二栏式" reportpath="payoutYearPath" binding="payoutYearList" parammap="payoutYearMap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="cb0b5209-e3cc-4056-ac3f-5f9f8abd6d00">
+    <pages id="f836f747-758a-4179-a55b-ea536b36b20d" name="财政预算支出统计报表查询">
+      <views id="a07e16fb-b12b-4bf2-baa9-4ada2b30039c" name="财政预算支出统计报表查询条件" isdefault="true" contentArea="be9343c7-5b11-4529-87c4-236932467267">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="1aa3b31d-8b31-4744-ab96-66de224e7440" name="JButtonAreaImpl-1aa3b31d-8b31-4744-ab96-66de224e7440">
+          <buttons id="de6efcc0-32cf-46e8-ab77-4d1669c39b1f" name="查询" caption="查询" direction="3a139164-67dc-4e2d-a498-59086bec9838"/>
+        </buttonArea>
+      </views>
+      <views id="19d37631-235c-4896-9e40-19e592cd2a48" name="财政预算支出日报表二栏式" contentArea="baa4a1f6-4ccd-45b7-89e1-553de3cdd354">
+        <buttonArea id="397b10de-08a7-4d57-ae04-5b095135a3cd" name="JButtonAreaImpl-397b10de-08a7-4d57-ae04-5b095135a3cd">
+          <buttons id="aa0e19bf-6694-480a-9525-4e1fe20f3a3d" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="4edeadc3-35e6-4bf3-ab9b-b09b560e2957" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="e9d0aa54-fecb-4edb-8604-3f23262875a0" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="a494e773-33c6-442e-85fa-de53f9c5dc64" name="财政预算支出日报表三栏式" contentArea="9fe35583-bad2-4476-a1c7-4d61e6de1a57">
+        <buttonArea id="f7e428c6-031e-45ca-8d42-f668ce80b186" name="JButtonAreaImpl-397b10de-08a7-4d57-ae04-5b095135a3cd">
+          <buttons id="cf1e7f7c-0086-4312-87af-a43f7053c620" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="ecd93cca-b084-4d11-b21e-62a7ac03e9ed" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="12260538-0252-4093-917a-730b0e7b4af6" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="2ae7bf44-e723-4fa1-8b59-a494869ea1cd" name="财政预算支出日报表四栏式" contentArea="fa07898e-cc10-49ca-91f0-a83c4add2092">
+        <buttonArea id="20449b64-49c0-437a-b7eb-82536ed4641c" name="JButtonAreaImpl-397b10de-08a7-4d57-ae04-5b095135a3cd">
+          <buttons id="07a5f7aa-1732-4eeb-a9f3-385e107631dc" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="769adcef-5c82-4d37-8b19-0723913898fa" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="d7664c19-4c9d-4d4f-a1a7-e19d9dcd12c1" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="720683bc-b21f-4445-ba0d-c250cdab991b" name="财政预算支出旬报表二栏式" contentArea="8fa73198-c363-441b-b9a7-bb3245bd9f8c">
+        <buttonArea id="036a7f79-3f4a-471d-a7ce-a90e8a0a54f3" name="JButtonAreaImpl-036a7f79-3f4a-471d-a7ce-a90e8a0a54f3">
+          <buttons id="81f47c09-8b17-41fa-a77e-dec90ebdf815" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="30ab8210-3e7b-445a-9023-f5bef2899bd5" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="4482cbdc-50e0-4812-99c2-208cf1028d5e" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="e7d4bec7-b355-40ca-917d-8c18e521b5c4" name="财政预算支出旬报表三栏式" contentArea="a23a19f5-e5f0-440c-9570-440fc36426aa">
+        <buttonArea id="de2c259a-c77f-49fb-a2c4-afa36038df19" name="JButtonAreaImpl-de2c259a-c77f-49fb-a2c4-afa36038df19">
+          <buttons id="7d05f563-0bba-4051-a524-bacf8bf41e56" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="c3147b6a-3bcb-41cb-9cdb-c2cb7931e350" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="73a4aabb-f4ed-4ed8-8022-b92f8d4b408f" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="4206c699-51d9-4804-8682-83c8cceff41b" name="财政预算支出旬报表四栏式" contentArea="becb04af-c99b-4d33-8e72-f6a3e90ec158">
+        <buttonArea id="bfe3febb-2421-45dc-8a28-ae01f38f2e40" name="JButtonAreaImpl-bfe3febb-2421-45dc-8a28-ae01f38f2e40">
+          <buttons id="4175d327-b044-49c0-97fd-9ab644a0d760" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="dbbee740-a799-4e4d-97af-e29a2df56bff" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="3c24edaf-2c04-45f8-838b-3ac59af423c9" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="41b713c1-39e6-47db-94f8-5d5facdda2ed" name="财政预算支出月报表二栏式" contentArea="c508934a-2251-4a6e-b8b1-1b405475b55b">
+        <buttonArea id="3fa60103-dc25-4a3c-956d-8fc30fb96159" name="JButtonAreaImpl-3fa60103-dc25-4a3c-956d-8fc30fb96159">
+          <buttons id="d18e0366-e23f-4640-a22a-704356c84bb2" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="4ecb8f42-705e-402a-891e-7fe71b5419bf" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="8bb66ec2-cd63-4ba6-92b7-f1bb4c32508c" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="0a1575a4-6cc5-40f9-93ea-5d4619b95cd6" name="财政预算支出月报表三栏式" contentArea="8044db4a-a0da-45e7-8de6-ab32423b59be">
+        <buttonArea id="ba77ce6e-b497-4649-b209-7bb4899f53cc" name="JButtonAreaImpl-ba77ce6e-b497-4649-b209-7bb4899f53cc">
+          <buttons id="b14f517a-3689-4463-9f24-5ec4bb7bc652" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="d994186c-6294-4964-ab10-37be216aa26d" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="d96c6874-9828-4bcf-9c47-13fbf22c2479" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="1eda263d-aad2-41e6-8c47-1ad365148493" name="财政预算支出季报表二栏式" contentArea="be6b56c6-528f-4d92-bca7-080e2a43b137">
+        <buttonArea id="6ad539f1-8ef2-46b0-bdfd-714f1d89c35a" name="JButtonAreaImpl-6ad539f1-8ef2-46b0-bdfd-714f1d89c35a">
+          <buttons id="f6419df8-189b-4692-b706-94721d3801b6" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="68929632-e45a-4636-a730-908a1468a396" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="5b3f513f-35e5-40ae-aa98-1ffbfb105fa9" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="f68ef5bd-8c2e-4c6f-a5e0-27fedd758039" name="财政预算支出季报表三栏式" contentArea="91dff989-ba5b-4c28-8615-801f5f423fca">
+        <buttonArea id="076d8961-bfe5-40dc-820f-4e088e3ba977" name="JButtonAreaImpl-076d8961-bfe5-40dc-820f-4e088e3ba977">
+          <buttons id="67bc6810-e867-4cf5-8b75-a7f773a051f9" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="9d571069-54a3-40f0-964b-87574ec24e3e" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="14409caa-729d-47d6-befc-2dd0cbd7b823" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+      <views id="87eee311-f996-4ada-876d-3ec7c9470cbb" name="财政预算支出年报表二栏式" contentArea="ed5872e6-0df9-49eb-9a92-0ba6ba209eb6">
+        <buttonArea id="aa5c8898-111b-4edd-bc7a-8d87405e62fc" name="JButtonAreaImpl-aa5c8898-111b-4edd-bc7a-8d87405e62fc">
+          <buttons id="71d4e3bd-e213-421f-b928-3e95fa7ba08f" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="809e48c8-ce9d-4ff3-a104-65adb13c6abe" name="导出Excel" visible="false" caption="导出Excel" direction="c7d44771-1fa7-4cdf-8e18-6ecdd613244d"/>
+          <buttons id="941fd2c0-908e-484b-b099-32b0b5393a4b" name="导出pdf" caption="导出pdf" direction="185d79fe-491f-4bee-842e-b68e7ead1050"/>
+          <buttons id="e3d4853a-3080-47c6-9496-1a8a8e02d3bd" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

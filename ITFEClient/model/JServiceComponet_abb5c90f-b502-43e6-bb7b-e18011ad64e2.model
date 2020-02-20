@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="abb5c90f-b502-43e6-bb7b-e18011ad64e2" name="业务凭证处理" ename="voucherLoad" shared="true">
+  <jproperties id="99334b9a-38bf-465d-9ec1-5f03f1174b9d" key="GeneratedTime" value="1569319032358"/>
+  <refModule href="JModule_43c7282f-5a79-4f8b-a943-e025744b014e.model#43c7282f-5a79-4f8b-a943-e025744b014e"/>
+  <methods id="a90809ac-2d88-48a3-b5d8-9e1bfca49b74" ename="voucherLoad" name="凭证读取" returntype="java.lang.Integer">
+    <methodParams id="c5c2037e-1c07-4399-b987-fa697905d945" name="凭证类型" ename="svtcode" type="java.lang.String"/>
+    <methodParams id="89b72aef-33d1-44b3-a3ec-673b3d579d0a" name="主体机构代码" ename="sorgcode"/>
+  </methods>
+  <methods id="2b2845dd-5d4e-4f50-98b5-fb0b7d2f69f0" ename="getOCXServerURL" name="OCX凭证控件地址" returntype="java.lang.String"/>
+  <methods id="835d401d-2428-4c63-928f-fb8880724ee3" ename="voucherReturnSuccess" name="凭证回单" returntype="java.lang.Integer">
+    <methodParams id="31ea6340-bff9-4dd3-86c7-67711c901653" name="成功凭证发送数据列表" ename="succList" type="java.util.List"/>
+  </methods>
+  <methods id="7c1e6934-c840-481a-b8af-835d322674db" ename="voucherCommit" name="凭证提交" returntype="java.lang.Integer">
+    <methodParams id="59696934-080a-4c01-92d8-d3bf63a65679" name="凭证提交数据列表" ename="checklist" type="java.util.List"/>
+  </methods>
+  <methods id="7ea74db5-56a4-4a0c-9ccc-1747a38e2a08" ename="queryStatusReturnVoucher" name="查看已回单凭证状态" returntype="java.lang.Integer">
+    <methodParams id="df0b9fa0-63b0-44cb-a0c6-32ee8a6006a4" name="凭证列表" ename="checkList" type="java.util.List"/>
+  </methods>
+  <methods id="7ae25bc1-29c0-4cf4-82a8-be0e86f0b723" ename="voucherStamp" name="凭证签章" returntype="java.lang.Integer">
+    <methodParams id="8be51c1a-20d6-4722-b1fe-1592b8f8588c" name="列表" ename="lists" type="java.util.List"/>
+  </methods>
+  <methods id="211d1d7f-60af-4e04-96b3-3fc2a9ec059c" ename="voucherReturnBack" name="凭证退回" returntype="java.lang.Integer">
+    <methodParams id="c37d4478-b828-4691-b792-6b1630292f1a" name="凭证列表" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="35e1bc36-62e1-4576-b922-730178126663" ename="voucherStampCancle" name="凭证签章撤销" returntype="java.lang.Integer">
+    <methodParams id="5ba705dd-4a24-499a-8162-01833dc771e9" name="列表" ename="lists" type="java.util.List"/>
+  </methods>
+  <methods id="80e5b389-c3b7-4ef0-9ff1-139c3d1bea99" ename="queryVoucherPrintCount" name="查询打印次数" returntype="java.lang.String">
+    <methodParams id="68f81760-6803-4de7-a283-cbb762c22f94" name="凭证" ename="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+  </methods>
+  <methods id="87b18743-7fc9-45b3-98d3-67987bad1617" ename="voucherVerify" name="凭证校验" returntype="java.lang.Integer">
+    <methodParams id="6381fd63-fcd3-4098-bc96-b3c8646abaf0" name="凭证列表" ename="checkList" type="java.util.List"/>
+  </methods>
+  <methods id="3fbd2004-f7d1-4059-bad1-019a2899716d" ename="voucherGenerate" name="凭证生成" returntype="java.util.List">
+    <methodParams id="820d4ecc-6bc2-4133-bbf1-4631c570670b" name="凭证列表" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="e7cde12f-839c-43f6-8858-08791b058a26" ename="voucherStampXml" name="获取凭证签章报文" returntype="java.lang.String">
+    <methodParams id="41ea5e11-c7ce-450e-a9f2-1177f35bbf93" name="凭证" ename="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+  </methods>
+  <methods id="91c1bfb3-5dfb-4627-8ee2-0884805203f3" ename="voucherCheckRetBack" name="凭证退回" returntype="com.cfcc.itfe.facade.data.MulitTableDto" remark="增加额度校验，修改了返回值">
+    <methodParams id="be9a8359-d26c-4f5c-91fe-3b9256a3410c" name="凭证列表" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="6d860a39-1c25-4167-8630-4dcc26aca6a1" ename="getRotaryStamp" name="getRotaryStamp" returntype="java.lang.String"/>
+  <methods id="a533e7c7-464e-4b02-a1cb-73f4a22e521d" ename="getOfficialStamp" name="getOfficialStamp" returntype="java.lang.String"/>
+  <methods id="08993419-d5e2-43c7-8010-f6e3f645160a" ename="getIscheckpayplan" name="取得是否进行额度控制标志" returntype="java.lang.String"/>
+  <methods id="fede01e0-a1aa-4081-85b2-88381544c194" ename="amtControlVerify" name="额度控制校验" returntype="com.cfcc.itfe.facade.data.MulitTableDto">
+    <methodParams id="735d8b25-56e6-471d-9238-95c99ce20982" name="凭证列表" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="235627b2-a547-46f6-a95b-02042be6b7e6" ename="getIsitfecommit" name="取得划款申请是否通过前置提交" returntype="java.lang.String"/>
+  <methods id="7a572882-ff6b-4f22-b7ca-c5048e39b126" ename="getOCXStampServerURL" name="取得ocx签章服务地址" returntype="java.lang.String"/>
+  <methods id="81a71e4b-cd1e-4283-8584-b90234b0ec21" ename="sendData" name="发送凭证附件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bb74f8b8-ef0e-441e-b95d-8ab309c16a39" name="凭证" ename="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+  </methods>
+  <methods id="f657a373-8dcf-40f0-9823-d53f13fc82e8" ename="getData" name="接收凭证附件" returntype="java.lang.Integer">
+    <methodParams id="0ddc682f-3380-480f-9968-b5d600dfe8f1" name="凭证" ename="dto"/>
+  </methods>
+  <methods id="eee400e2-ce79-47ab-b03a-49c0b0922d21" ename="verifyPayOutMoveFunSubject" name="校验实拨资金业务中是否为调拨科目" returntype="java.lang.String">
+    <methodParams id="995e4261-c987-4269-a1cc-5d66aa223969" name="凭证" ename="voucher" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+  </methods>
+  <methods id="8f3d4ad4-324b-4e06-943b-ddd6b480b866" ename="queryVoucherReturnStatus" name="业务对账凭证库对账方法" returntype="java.util.Map">
+    <methodParams id="54bbd8f3-231b-4f51-a89f-d7b8342098e2" name="参数多个" ename="parammap" type="java.util.Map"/>
+  </methods>
+  <methods id="ae8a50db-1d1c-47d7-8fe6-4507585c7f35" ename="exportPDF" name="导出PDF文件" returntype="java.util.List" remark="导出PDF文件">
+    <methodParams id="5c009646-85b6-4aab-bdad-106d532fe9e5" name="凭证" ename="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto" codecomment="凭证"/>
+  </methods>
+  <methods id="6fa6886c-1336-481f-96ce-897e0198aa51" ename="exportData" name="导出数据" returntype="java.lang.StringBuffer">
+    <methodParams id="7ab0249d-91f9-4222-9188-03ffd1578d53" name="凭证列表" ename="voucherList" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

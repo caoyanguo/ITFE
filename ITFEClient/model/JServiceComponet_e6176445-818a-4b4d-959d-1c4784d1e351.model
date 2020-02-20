@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e6176445-818a-4b4d-959d-1c4784d1e351" name="公共数据访问服务" ename="CommonDataAccess" shared="true">
+  <jproperties id="8d960b97-4f7b-419a-8d89-1084d813d8e7" key="GeneratedTime" value="1457516526281"/>
+  <jproperties id="8d960b97-4f7b-419a-8d89-1084d813d8e7" key="GeneratedTime" value="1457516526281"/>
+  <jproperties id="8d960b97-4f7b-419a-8d89-1084d813d8e7" key="GeneratedTime" value="1457516526281"/>
+  <jproperties id="8d960b97-4f7b-419a-8d89-1084d813d8e7" key="GeneratedTime" value="1457516526281"/>
+  <jproperties id="8d960b97-4f7b-419a-8d89-1084d813d8e7" key="GeneratedTime" value="1457516526281"/>
+  <jproperties id="8d960b97-4f7b-419a-8d89-1084d813d8e7" key="GeneratedTime" value="1457516526281"/>
+  <jproperties id="8d960b97-4f7b-419a-8d89-1084d813d8e7" key="GeneratedTime" value="1457516526281"/>
+  <jproperties id="8d960b97-4f7b-419a-8d89-1084d813d8e7" key="GeneratedTime" value="1457516526281"/>
+  <refModule href="JModule_57d74aac-5599-4965-be54-900a36b2a15f.model#57d74aac-5599-4965-be54-900a36b2a15f"/>
+  <methods id="d2bc74e9-4d51-47c8-9a80-863acc40c263" ename="findAllDtos" name="findAllDtos" returntype="java.util.List" remark="根据数据库表名查找该标的所有数据">
+    <methodParams id="6b34c0a3-30a4-4577-9861-afbf109dc4dc" name="XXXDto.class" ename="dto" type="java.lang.Class"/>
+  </methods>
+  <methods id="6ae30bd8-2879-4d38-a785-9e30d9a57876" ename="findAllDtosUR" name="findAllDtosUR" returntype="java.util.List" remark="使用脏读的方式，根据数据库表名查找该表的所有数据">
+    <methodParams id="f9d44a46-bef2-49ae-b6e6-0fd39179c046" name="XXXDto.class" ename="dto" type="java.lang.Class"/>
+  </methods>
+  <methods id="d9c2bfd7-5932-4bae-b745-b66118b31485" ename="findRsByDto" name="findRsByDto" returntype="java.util.List" remark="根据Dto中设置的条件查找相应的记录并返回获取的记录集, (整表查询) 约束：只能针对单值相等的条件进行查询">
+    <methodParams id="0279efdf-cc28-4f5c-98dd-0ae26ba50910" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="7ba85076-7bad-4c13-b707-dc121380fb03" ename="findRsByDtoUR" name="findRsByDtoUR" returntype="java.util.List" remark="根据Dto中设置的条件查找相应的记录并返回获取的记录集, (整表查询) 约束：只能针对单值相等的条件进行查询">
+    <methodParams id="d348e024-d372-48aa-85d8-43389f58495b" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="11c39803-99e0-42c5-84b1-9edd587a4b60" ename="findRsByDtoWithBookOrgUR" name="findRsByDtoWithBookOrgUR" returntype="java.util.List">
+    <methodParams id="86d3f1ac-e6ca-4767-9bfe-5a4d1928a0f7" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="ab846ccc-2452-4a9f-8373-951ccd3a7501" ename="findRsByDtoWithBookOrg" name="findRsByDtoWithBookOrg" returntype="java.util.List">
+    <methodParams id="c87d57ea-cd72-4a65-aa03-24d35ba8ade5" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="70445cf2-2d5e-49a6-ad0c-933560115651" ename="getSequenceNo" name="getSequenceNo" codecomment="生成Sequence序号" returntype="java.lang.Long">
+    <methodParams id="f26fa8d2-cd37-4a53-814a-337419561261" name="seqname" ename="seqname" type="java.lang.String"/>
+  </methods>
+  <methods id="55e0751d-4abe-47bd-b598-761547a7794f" ename="updateData" name="updateData" codecomment="更新数据" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="82b1bdeb-cd62-46c4-b73f-6221d82b8d9c" name="XXXDto.class" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="c8d26c6d-359a-49b3-a10b-221067d914b6" ename="findRsByDtoWithWherePaging" name="findRsByDtoWithWherePaging" codecomment="带条件的分页查询" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="1c3a5e66-bd2d-4fa9-ba31-302e848a9780" name="IDto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="195659fc-a561-4de7-bdbe-82a95c2ed7fd" name="PageRequest" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodParams id="100acd26-e0c2-449e-ad2d-9264a5f3d30c" name="String" ename="wheresql" type="java.lang.String"/>
+  </methods>
+  <methods id="82c9715c-b43a-4861-8077-a19dfd5b9ab9" ename="getSysDate" name="getSysDate" codecomment="获得服务器时间" returntype="java.lang.String"/>
+  <methods id="0122ae98-80a4-4f60-8a09-76f3140f883a" ename="findOrgList" name="findorgcode" returntype="java.util.List" remark="根据数据库表名查找该标的所有数据">
+    <methodParams id="6520b813-8580-4867-a4cc-c8b014cdb5de" name="核算主体代码" ename="orgcode" type="java.lang.String"/>
+  </methods>
+  <methods id="036ed0e9-eb56-4df3-88a9-35e1ab0b94ee" ename="findLogDateList" name="findLogDateList" codecomment="获得接收或者发送日志中所有日期的列表" returntype="java.util.List" remark="获得接收或者发送日志中所有日期的列表">
+    <methodParams id="a9a96730-fcd4-4e88-aae7-e470f613264f" name="strTag" ename="strTag" type="java.lang.String" codecomment="收发标志&#xD;&#xA;收发标志"/>
+  </methods>
+  <methods id="82344c1e-ac15-40d7-b306-41141e20603c" ename="getSysDBDate" name="getSysDBDate" codecomment="获得系统数据库时间" returntype="java.lang.String" remark="获得系统数据库时间"/>
+  <methods id="d6aac29f-e5ea-4f6a-8b1d-30de134bc292" ename="getMiYao" name="获取密钥" returntype="java.util.HashMap">
+    <methodParams id="4036dc74-f195-4919-b1b6-5a7ccba49b6e" name="机构代码" ename="orgcode" type="java.lang.String"/>
+  </methods>
+  <methods id="43030736-beb6-4ff6-b916-7f871a60cc36" ename="findRsByDtocheckUR" name="findRsByDtocheckUR" returntype="java.util.List" remark="根据Dto中设置的征收机关、国库主体、财政代码条件查找相应的权限">
+    <methodParams id="af2ee709-2360-4f93-b365-992548a7e033" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="4a8270ae-5004-4f9e-9671-604b13a3247d" name="查询标示" ename="flag" type="java.lang.String"/>
+  </methods>
+  <methods id="5e388e02-840b-423b-b25a-0190c4a573c7" ename="findRsByDtoWithWherePaging" name="findRsByDtoWithWherePaging" codecomment="带条件的分页查询" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="3752ea25-a3a9-453c-baee-c0dfc51f964a" name="IDto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="1df0193d-0205-479a-bf52-d9653fd7ae7e" name="PageRequest" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodParams id="6d3bfdbd-1415-46f3-ac02-ecf1f53ef483" name="String" ename="wheresql" type="java.lang.String"/>
+    <methodParams id="0c81759f-25ea-4ef3-b131-0f9eb71afc8f" name="sort" ename="sort"/>
+    <methodParams id="a7545eda-bff8-4da5-85ab-6487595a75e8" name="tablename" ename="tablename"/>
+  </methods>
+  <methods id="644b3a7d-5ed8-478f-a2af-b9815c5ee31d" ename="verifyImportRepeat" name="判断文件名是否已经导入" returntype="java.lang.Boolean">
+    <methodParams id="46d186fb-d31e-43f5-a9be-01f2509c6ab8" name="文件名称" ename="filename" type="java.lang.String"/>
+  </methods>
+  <methods id="a01993c9-1ac3-4295-9e0c-221631c0fea6" ename="judgeDirectSubmit" name="判断能否直接提交" returntype="java.lang.Boolean">
+    <methodParams id="f33def39-fcd4-4210-b635-c9d4eddb3c1b" name="业务类型" ename="biztype" type="java.lang.String"/>
+    <methodParams id="1dea2942-4135-4cbf-a287-37c52f6e5f7f" name="机构代码" ename="orgcode"/>
+  </methods>
+  <methods id="5d4a8295-123d-400e-a0cf-be4f1fb1eba0" ename="saveTvrecvlog" name="记录接收日志" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="0c815c22-baa9-45bc-817e-b429a18cd2be" name="文件服务器地址" ename="pathlist" type="java.util.List"/>
+    <methodParams id="063889d1-5afa-419f-8208-5dff31dcdf9e" name="业务类型" ename="biztype" type="java.lang.String"/>
+  </methods>
+  <methods id="d882174e-2b47-4bc6-a9df-a11a25e8f0b1" ename="decrypt" name="给密钥解密" returntype="java.lang.String">
+    <methodParams id="4ca53ada-bc83-49bd-a937-90a357fdf0eb" name="需要解密的密钥" ename="str" type="java.lang.String"/>
+  </methods>
+  <methods id="323e31f7-d6ff-4ace-b2f6-32d03a4c5c86" ename="auditBankCode" name="验证清算行是否存在" returntype="java.lang.Boolean">
+    <methodParams id="cdb4df5d-dbae-4dfa-8497-00a3ed57cfff" name="清算行行号" ename="bankcode" type="java.lang.String"/>
+  </methods>
+  <methods id="52ee71d7-d654-49e3-8c63-8ef69ffcc2a2" ename="getAdjustDate" name="获取调整期日期" returntype="java.sql.Date"/>
+  <methods id="8b74fb69-fedd-41a6-b16e-817dae91f97b" ename="delServerWrongFile" name="删除服务器上传解析错误的文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="299db959-1b97-479b-ab43-78b8d32c36aa" name="文件的列表" ename="filelist" type="java.util.List"/>
+  </methods>
+  <methods id="1828b784-312f-48b6-b457-8894e36a2a75" ename="findRsByDto" name="findRsByDto" returntype="java.util.List" remark="根据Dto中设置的条件查找相应的记录并返回获取的记录集, (整表查询) 约束：只能针对单值相等的条件进行查询">
+    <methodParams id="206feeff-5e13-4deb-97b8-4c3b2ff64eae" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="5f68a13e-5a59-4644-adc6-fad438c5941e" name="orderstr" ename="orderstr" type="java.lang.String"/>
+  </methods>
+  <methods id="9b5be408-b378-4567-8d46-4c3a1c585fd0" ename="findRsByDto" name="findRsByDto" returntype="java.util.List" remark="根据Dto中设置的条件查找相应的记录并返回获取的记录集, (整表查询) 约束：只能针对单值相等的条件进行查询">
+    <methodParams id="1eb53725-bc27-4046-9437-f66da0b916d5" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="2201e582-daf2-4bb8-a7df-bfde16b65e48" name="sort" ename="sort" type="java.lang.String"/>
+    <methodParams id="c7915865-2ea5-4f1d-8936-3f05134b281e" name="tablename" ename="tablename" type="java.lang.String"/>
+  </methods>
+  <methods id="26db44f5-2d15-4529-84aa-63199d9721e6" ename="saveMassTvrecvlog" name="保存批量txt文件的日志信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="d3e1f334-386a-4a85-ae05-41d219220794" name="map信息" ename="maps" type="java.util.Map"/>
+    <methodParams id="b89feb12-7f8f-4708-a076-2aa8419aa931" name="业务类型" ename="biztype" type="java.lang.String"/>
+  </methods>
+  <methods id="d9a692a1-970f-48d2-a552-55d98488853e" ename="find" name="通过主键查找一条记录" codecomment="通过主键查找一条记录" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="通过主键查找一条记录">
+    <methodParams id="a3eb42bd-2705-4a6e-a907-59d9a1eaeb2f" name="主键对象" ename="pk" type="com.cfcc.jaf.persistence.jaform.parent.IPK" codecomment="主键对象"/>
+  </methods>
+  <methods id="ff1c30d0-bcb0-4712-8e72-f63e29c57aca" ename="userPasswordisValid" name="判断用户密码是否失效" codecomment="判断用户密码是否失效" returntype="java.lang.Boolean" remark="判断用户密码是否失效">
+    <methodParams id="89819e94-442a-4dbc-a96f-ed62f2707903" name="用户代码" ename="susercode" type="java.lang.String" codecomment="用户代码"/>
+    <methodParams id="3100081b-bd58-4828-89cf-17a8902f305a" name="机构代码" ename="sorgcode" type="java.lang.String" codecomment="机构代码"/>
+  </methods>
+  <methods id="f3f8afb7-4793-43db-b346-541d5dea73e7" ename="getSecrKeyByOrg" name="按机构获取服务器端密钥" codecomment="按机构获取服务器端密钥" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto">
+    <methodParams id="73649305-b2d0-462a-953c-26279714b95a" name="密钥设置方式" ename="keyMode" type="java.lang.String"/>
+    <methodParams id="193637a2-5ef0-4b9b-9676-9eade11206aa" name="核算主体代码" ename="sorgcode" type="java.lang.String"/>
+    <methodParams id="22613098-715f-4692-b965-aebaf70ed5ef" name="国库代码" ename="strecode" type="java.lang.String"/>
+  </methods>
+  <methods id="d358d8be-b6a2-43e3-b0a9-af5389ddfdaa" ename="judgeBatchConfirm" name="判断能否批量销号" returntype="java.lang.Boolean">
+    <methodParams id="ba6158ff-1024-48da-b028-9d32637ca9fe" name="业务类型" ename="biztype"/>
+    <methodParams id="ddc17bcf-f04f-4fe0-8e43-217c7c5629e7" name="机构代码" ename="orgcode"/>
+  </methods>
+  <methods id="82bab7e3-a57b-4071-a918-68e7743d0721" ename="decryptForIncome" name="收入业务解密用" returntype="java.lang.String">
+    <methodParams id="0812abfa-d44d-4ae4-9115-1e653fd9faa0" name="待解密字符串" ename="desStr" type="java.lang.String"/>
+    <methodParams id="ec88e7ea-4e94-4542-80ed-e073168d72e1" name="备用字段" ename="str" type="java.lang.String"/>
+    <methodParams id="d35dc75d-3f2c-45db-8f9d-b8fbc73332a9" name="密钥数据" ename="keydto" type="com.cfcc.itfe.persistence.dto.TsMankeyDto"/>
+  </methods>
+  <methods id="1ff7fd35-8f1d-4ea6-803c-95d348e6276c" ename="getCacheInfo" name="getCacheInfo" returntype="java.lang.Object">
+    <methodParams id="3169532d-e9b5-4d6e-82ba-ca6826e54e4f" name="需要得到的缓存的键值" ename="cacheKey" type="java.lang.String"/>
+  </methods>
+  <methods id="1fe37922-dc15-4a3c-9988-b93dfab510d0" ename="getSubTreCode" name="根据机构代码返回全辖国库" returntype="java.util.List">
+    <methodParams id="bebb9396-49b9-402f-aaa1-150c9d5cb756" name="机构代码" ename="orgCode" type="java.lang.String"/>
+  </methods>
+  <methods id="b31e4f34-132c-4f99-b0ff-aaed013af1a5" ename="getModeKey" name="获取核算主体key" codecomment="获取核算主体key" returntype="java.lang.String" remark="获取核算主体key">
+    <methodParams id="8d0d74ab-e9fd-4a99-8c5b-35c80b280928" name="核算主体代码" ename="sorgcode" type="java.lang.String"/>
+    <methodParams id="a6501b4b-4e0e-41c9-bb09-ecf45d4311d1" name="密钥维护模式" ename="skeymode" type="java.lang.String"/>
+  </methods>
+  <methods id="61388b39-733c-4c60-a094-0b57c0147792" ename="selHtableBydto" name="根据报表日期查询选择历史库" returntype="java.util.List">
+    <methodParams id="17edde51-3733-4c53-904b-59a9c73fb799" name="DTO" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="7206c8ca-fcf4-4369-abee-132cbe2144fc" ename="findRsByDtoWithConditionPaging" name="findRsByDtoWithConditionPaging" codecomment="带条件的分页查询" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="dc88f542-f05c-4f21-b909-5c8ea1f3b955" name="IDto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="b7378fe3-80d4-412b-b32c-361a00c6d03f" name="PageRequest" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodParams id="88ce6c48-f55b-4480-bea5-499ad19d6c25" name="wheresql" ename="wheresql" type="java.lang.String"/>
+    <methodParams id="3f4b4edd-748b-416b-b525-82b5370272fe" name="sort" ename="sort"/>
+    <methodParams id="ea26a477-5c4e-4019-9d2e-73c11d787aec" name="tablename" ename="tablename"/>
+    <methodParams id="b8f8f5f5-1e4c-43fc-b9a9-e0877dc061c2" name="rptdate" ename="rptdate" type="java.lang.String"/>
+  </methods>
+  <methods id="f674dcb3-8ace-4337-a7ff-20cf1430dd30" ename="delete" name="delete" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="359e1511-98b7-4b6f-a6ec-ebf73487be76" name="dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="b6be927f-7ce5-42b3-ad3d-8b91477d6226" ename="create" name="create" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="2d7b7b2b-1ac7-405f-aae4-8dac2d74cfc4" name="dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="4a561c88-57c4-47e0-9df3-0d11151d309f" ename="findRsByDtoPaging" name="findRsByDtoPaging" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="8f63a96d-3dd7-42ba-b57f-292f5196cc10" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="890f39de-3e64-4229-8227-18f06724743a" name="request" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodParams id="63ca5b74-fec4-4fc5-a17e-087a6c3b6af0" name="wherestr" ename="wherestr" type="java.lang.String"/>
+    <methodParams id="7c97d835-4308-407c-8aa0-9de515b44062" name="orderbyProp" ename="orderbyProp"/>
+  </methods>
+  <methods id="a003511a-7114-401f-86c5-d380aba451f5" ename="getServerRootPath" name="获取加载文件的服务器根路径" codecomment="获取加载文件的服务器根路径" returntype="java.lang.String" remark="获取加载文件的服务器根路径">
+    <methodParams id="f0b73226-26fa-4745-ad43-077e3cc8def8" name="客户端路径" ename="clientPath" type="java.lang.String" codecomment="客户端路径"/>
+    <methodParams id="52a0aa9d-e4be-47b5-a44b-ebc4f2d27ce9" name="核算主体" ename="orgCode" codecomment="核算主体"/>
+  </methods>
+  <methods id="223e545c-ef49-42bb-9aa1-0af95cc755e3" ename="getmapforkey" name="传入一个键返回一个map" returntype="java.util.Map">
+    <methodParams id="c33a3e04-f602-40de-85c4-c44ffa4b0194" name="传入key返回map" ename="mapkey" type="java.lang.String"/>
+  </methods>
+  <methods id="707eb644-67f9-4f7b-bf7b-31674362943a" ename="setmapforkey" name="添加输入记忆功能" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="84432342-6bc7-48dd-a14a-c2a8eced444f" name="传入key得到map" ename="getmapkey" type="java.lang.String"/>
+    <methodParams id="74b570b0-43a0-479e-8266-8a2d729e69c9" name="map键" ename="mapkey" type="java.lang.String"/>
+    <methodParams id="7f2db888-e3b1-4f96-a0fa-8a5ac4b7682a" name="map值" ename="mapvalue" type="java.lang.String"/>
+  </methods>
+  <methods id="8003b261-5e24-4c8c-883f-3b30ac3b7c58" ename="getFileRootPath" name="获取文件根路径" returntype="java.lang.String"/>
+  <methods id="0b8d9185-1a50-46de-8f05-a43429062e27" ename="findRsByDtoWithWhere" name="findRsByDtoWithWhere" returntype="java.util.List">
+    <methodParams id="06174ece-a2f5-47ba-8456-637bd5b5f193" name="IDto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="81179831-f8c2-4553-92f1-d17eadd15a9c" name="wheresql" ename="wheresql" type="java.lang.String"/>
+  </methods>
+  <methods id="f1baead6-0b04-4a8e-85b7-faba561ec2e3" ename="getIsClientProxy" name="获取客户端访问OCX服务是否使用代理" returntype="java.lang.String"/>
+  <methods id="a594dd7e-59e1-4955-bc05-a4e06fb878dd" ename="getSrcNode" name="获取TIPS节点代码" returntype="java.lang.String"/>
+  <methods id="13dd4b0d-4c08-45dd-b272-512c80e9f842" ename="createdtos" name="创建多个dto" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="ee778d5d-21f2-4f7b-9f59-26cd576abcf9" name="创建的dtolist" ename="dtoList" type="java.util.List"/>
+  </methods>
+  <methods id="2c3378ed-67ae-41bf-a5d3-b4434f9e7ad0" ename="updateDtos" name="更新多个dto" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="2eac6132-a1dc-4221-9ced-6a299ffa8941" name="保存的dto数据" ename="updateDtos" type="java.util.List"/>
+  </methods>
+  <methods id="c9b00c8f-d9bc-469a-ad94-e56a58bf7230" ename="getSubTreCode" name="查询管辖下所有国库代码" returntype="java.util.List">
+    <methodParams id="ecdeb2e3-9ffb-4b85-aec9-7ac8966014a9" name="国库dto" ename="dto" type="com.cfcc.itfe.persistence.dto.TsTreasuryDto"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="771e5765-c964-4a2b-a208-8dbc1e879d0f" name="9117支出核对包重发请求" ename="payoutCheckRequest"/>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="ac5826d4-86ca-45fe-bce8-d480aeb5b9b3" name="9003交易状态查询请求" ename="TraStatusCheck" shared="true">
+  <jproperties id="4f91a49e-ff15-40dc-b39f-465bffd225fa" key="GeneratedTime" value="1332397135187"/>
+  <refModule href="JModule_56517688-ae53-427b-8c87-e7f3a3e1f04e.model#56517688-ae53-427b-8c87-e7f3a3e1f04e"/>
+  <model id="f8303fc0-2793-465a-972f-5af1a4f8288c" name="JModelImpl-f8303fc0-2793-465a-972f-5af1a4f8288c">
+    <directions id="02e0fd00-cb7c-4082-bf27-d17a5a246c58" name="9003状态查询请求" ename="traStatusSelect"/>
+    <directions id="d5d43086-01fe-4042-9d79-9b72e4794cf4" name="查看查询结果" ename="viewSelectResult"/>
+  </model>
+  <services href="JServiceComponet_30401493-6003-43f7-9928-b32944c9fd3a.model#30401493-6003-43f7-9928-b32944c9fd3a"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="b25f217c-45d4-4bdf-8dcf-1f6488ba3391">
+    <contentareanode id="9f856c3e-663e-4372-b7d6-730d9954bd4a" name="查询条件界面" grouptitle="查询条件界面">
+      <widgetRefs xsi:type="model:Text" id="75b650f3-1523-48e7-89c8-0b116317207c" name="征收机关" binding="taxorg" caption="征收机关"/>
+      <widgetRefs xsi:type="model:Combo" id="7c542c82-c557-4bd9-be01-bb7988ec7d39" name="searchType" binding="searchType" caption="查询类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c631186c-332e-4f93-a7a2-eb509f8a1a61"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0c448485-336d-4656-87cd-262ee646ba3b" name="oriMsgNo" binding="oriMsgNo" caption="原报文编号"/>
+      <widgetRefs xsi:type="model:Text" id="589b988b-cac2-4c68-90bd-5c300462482e" name="oriEntrustDate" binding="oriEntrustDate" caption="原委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="54e58e78-eab5-42eb-a43f-2adb6743a898" name="oriPackNo" binding="oriPackNo" caption="原包流水号"/>
+      <widgetRefs xsi:type="model:Text" id="bb543d13-3189-493e-bad7-513528ce0422" name="oriTraNo" binding="oriTraNo" caption="原交易流水号"/>
+    </contentareanode>
+    <contentareanode id="1e42fc6b-adb8-41d5-aa20-c0c3d848a960" name="结果列表" grouptitle="结果列表">
+      <widgetRefs xsi:type="model:Table" id="652abc57-4a66-4f8f-8d8b-5dc62443b51c" name="resultList" binding="resultList" caption="交易状态查询结果">
+        <columnlist id="1d4b8db6-484c-47b8-81f1-5961a0d25923" name="SearchType" binding="sturnsendflag" caption="查询类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c631186c-332e-4f93-a7a2-eb509f8a1a61"/>
+        </columnlist>
+        <columnlist id="90ba90be-565a-4988-b7aa-a0a2e4a2e172" name="OriMsgNo" binding="spayoutvoutype" caption="原报文编号"/>
+        <columnlist id="dad2ceee-97e8-4ff9-a92c-1c6c1da0abe7" name="OriEntrustDate" binding="sdate" caption="原委托日期"/>
+        <columnlist id="8da15438-ece3-4a0c-bad8-a3248db942e6" name="OriPackNo" binding="spackno" caption="原包流水号"/>
+        <columnlist id="1ee0c138-3694-4368-bdd8-5a3feb794ec9" name="OriTraNo" binding="sbatch" caption="原交易流水号"/>
+        <columnlist id="a37324ae-130e-4ffc-8461-ee2cf4c829dd" name="ChkDate" binding="ssenddate" caption="对账日期"/>
+        <columnlist id="2c78f1c8-8599-4407-9600-03a3fa8f86d3" name="OpStat" binding="sretcode" caption="处理状态"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="88daf4d0-b4bd-44dc-80cd-6d6e298917cd">
+    <pages id="c65d9df0-dde1-4e11-b0a3-10bff97ad68f" name="JPageImpl-c65d9df0-dde1-4e11-b0a3-10bff97ad68f">
+      <views id="8620679f-2dc3-4a28-bd64-2810c23f0795" name="JViewerImpl-8620679f-2dc3-4a28-bd64-2810c23f0795" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="9f856c3e-663e-4372-b7d6-730d9954bd4a 1e42fc6b-adb8-41d5-aa20-c0c3d848a960">
+        <buttonArea id="353d890b-b20b-4da9-a917-9ae85c1ee643" name="JButtonAreaImpl-353d890b-b20b-4da9-a917-9ae85c1ee643">
+          <buttons id="a6e0e437-d75d-463b-b52e-905124137dfe" name="查询请求" caption="查询请求" direction="02e0fd00-cb7c-4082-bf27-d17a5a246c58"/>
+          <buttons id="4425a9cd-13fb-49bf-a1fe-d153e747fe6d" name="查看查询结果" caption="查看查询结果" direction="d5d43086-01fe-4042-9d79-9b72e4794cf4"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

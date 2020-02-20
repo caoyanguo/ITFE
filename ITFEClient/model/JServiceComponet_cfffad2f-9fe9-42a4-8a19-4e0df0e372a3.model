@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="cfffad2f-9fe9-42a4-8a19-4e0df0e372a3" name="浙江征收机关对照表服务组件" ename="TsConverttaxorgForZj" shared="true">
+  <jproperties id="b35a86bd-3ef8-49b1-9c84-9d4b4d924f9f" key="GeneratedTime" value="1406615162262"/>
+  <refModule href="JModule_65a883e8-3a34-4624-9e74-1f446a48a6a4.model#65a883e8-3a34-4624-9e74-1f446a48a6a4"/>
+  <methods id="cbd4e6f8-a153-4f11-9391-30c4726dc2e5" ename="addInfo" name="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto">
+    <methodParams id="46c96ffd-9288-40af-9409-96bf99bda838" name="征收机关对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="04c21668-1995-4e1f-b252-1601bba2b37a" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="92e03d21-3c95-4835-8888-7a2f569d0d4b" name="征收机关对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="33840359-75ed-49f8-8089-f7fb48ff1d50" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="eec335ca-684b-42d1-8135-7b903af14242" name="征收机关对照表更新条件" ename="initdto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="774b77c4-3496-43dd-9e93-24592927666f" name="征收机关对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

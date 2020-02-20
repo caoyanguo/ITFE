@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bedc8ff0-9a87-47a1-9826-b5af36f49883" name="集中支付清算账户信息维护" ename="tspayacctinfo"/>

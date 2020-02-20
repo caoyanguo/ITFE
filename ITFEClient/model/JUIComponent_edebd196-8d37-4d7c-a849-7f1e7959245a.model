@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="edebd196-8d37-4d7c-a849-7f1e7959245a" name="查询支出报表广东" ename="selectRecordGD" shared="true">
+  <jproperties id="13bd019f-790b-4a22-9abe-3d26d0794fa2" key="GeneratedTime" value="1453342578154"/>
+  <refModule href="JModule_a63ebdc9-05e7-4b8b-8839-cf0bc125f3f1.model#a63ebdc9-05e7-4b8b-8839-cf0bc125f3f1"/>
+  <model id="cd105785-1915-4ff9-b4dd-f56cc54c793f" name="JModelImpl-cd105785-1915-4ff9-b4dd-f56cc54c793f">
+    <attributes id="8720c6fe-182b-4e17-bf51-5b46487db717" name="searchDto" type="com.cfcc.itfe.persistence.dto.TvPayreckBankDto"/>
+    <attributes id="cafe9c7c-b31b-4bb3-832a-cda0b0175a81" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="4c63ff76-ec51-4bb2-9806-5b4549ec11d2" name="resultList" type="java.util.List"/>
+    <directions id="462e2520-c7cf-429c-be9b-67d99ee24667" name="查询" ename="queryInfo"/>
+    <directions id="bf621ac6-6113-426d-892e-5a1c840ead8f" viewers="ada68d1a-a02b-43fa-b771-b3eb6a468da3" name="打印" ename="queryPrint"/>
+    <directions id="7d5d08cb-5578-4609-a035-7c3a6b4ce4cd" viewers="a40a9a95-20da-429f-a022-a45bd1cc3a29" name="返回" ename="backQuery"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_7b9ea0db-b552-460f-979f-320ab2e98c82.model#7b9ea0db-b552-460f-979f-320ab2e98c82"/>
+  <contentAreas id="67bea4fe-44aa-48ba-851c-df030e0a1218">
+    <contentareanode id="e8968c1b-f0db-4a91-a005-5783a3db2a3a" name="查询条件">
+      <widgetRefs xsi:type="model:Text" id="951df5bd-0988-48fd-969c-6067b4a00fe7" name="年度" binding="searchDto.sofyear" caption="年度" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5b1b502f-4692-4de8-9cd8-dc2ec260a6a2" name="付款人名称" binding="searchDto.spayername" caption="付款人名称"/>
+      <widgetRefs xsi:type="model:Text" id="b2a56139-f0e5-4dee-848a-c7b3ac08b414" name="收款银行" binding="searchDto.sagentacctbankname" caption="收款银行"/>
+      <widgetRefs xsi:type="model:Text" id="50357328-9823-46e7-8c23-05b019ac2b11" name="用途" binding="searchDto.sdescription" caption="用途"/>
+      <widgetRefs xsi:type="model:Button" id="88de2b8e-06ee-40c7-9423-bb0d4ec538c4" name="查询" caption="查询" layout="GridLayout" direction="462e2520-c7cf-429c-be9b-67d99ee24667"/>
+      <widgetRefs xsi:type="model:Button" id="907e0aac-88af-4213-bec5-50233fe38bc9" name="打印" caption="打印" layout="GridLayout" direction="bf621ac6-6113-426d-892e-5a1c840ead8f"/>
+    </contentareanode>
+    <contentareanode id="fce647df-3160-44e5-adc9-3c12a5f699cd" name="查询结果">
+      <widgetRefs xsi:type="model:Table" id="4a2457df-77c2-4ac4-97bb-a332b996012f" name="queryResult" binding="resultList" caption="查询结果" tabletype="" selectedrows="">
+        <columnlist id="32eba0bc-d277-444e-86ce-008483f5cd31" name="月份" binding="sfinorgcode" caption="月份"/>
+        <columnlist id="d7cc753c-661f-40b6-8a31-55923336d299" name="付款人名称" binding="spayername" caption="付款人名称"/>
+        <columnlist id="2f48d1f9-d4e1-437b-ae7f-28121339a9b8" name="笔数" binding="istatinfnum" caption="笔数"/>
+        <columnlist id="753a0c79-d1c2-477e-a98b-3ea0cca8c52f" name="金额" binding="famt" caption="金额"/>
+        <columnlist id="450a25d0-ca2f-4525-8972-142326f2f5d5" name="用途" binding="sdescription" caption="用途"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="e320ffff-eae7-4298-810e-5365c2c8e5ac" name="打印界面">
+      <jreportref id="14d9294d-783c-4af5-9b0c-e067f2464118" name="打印显示" reportpath="reportPath" binding="reportlist" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="fb620869-e89a-4f38-a097-aa4c0a45a812">
+    <pages id="96614633-719f-4fc4-b8c9-f1e5d527d90b" name="JPageImpl-96614633-719f-4fc4-b8c9-f1e5d527d90b">
+      <views id="a40a9a95-20da-429f-a022-a45bd1cc3a29" name="查询界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="e8968c1b-f0db-4a91-a005-5783a3db2a3a fce647df-3160-44e5-adc9-3c12a5f699cd"/>
+      <views id="ada68d1a-a02b-43fa-b771-b3eb6a468da3" name="打印界面" contentArea="e320ffff-eae7-4298-810e-5365c2c8e5ac">
+        <buttonArea id="78e649f1-fe29-4bc9-8cef-361d8a438786" name="JButtonAreaImpl-78e649f1-fe29-4bc9-8cef-361d8a438786">
+          <buttons id="fed474a9-b2a1-42d6-ae05-1b24dac22229" name="返回" caption="返回" direction="7d5d08cb-5578-4609-a035-7c3a6b4ce4cd"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1e5925c9-ca4e-4190-aa6a-ba7f5e4c7780" name="对账结果查询服务组件" ename="voucherInfo">
+  <jproperties id="1f642255-c78b-426c-8212-08df13f21c1d" key="GeneratedTime" value="1378443006572"/>
+  <refModule href="JModule_c16044f9-89b9-4c7a-9395-551601aaf965.model#c16044f9-89b9-4c7a-9395-551601aaf965"/>
+  <methods id="644f9070-e336-4351-a20a-746a273eb04a" ename="searchResult" name="查询结果" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="104488fc-481a-4aaa-b75f-c97ebe2204ba" name="参数" ename="searchDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+    <methodParams id="01db523e-9592-4697-bc23-5685802b2197" name="对账类型" ename="dzType" type="java.lang.String"/>
+    <methodParams id="b6ccee56-db77-4a64-bfcc-8329b9768bb4" name="请求参数" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+</model:JServiceComponent>

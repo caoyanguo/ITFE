@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a1153cde-9371-473d-b5de-3e3848bfdec3" name="异常日志查询" ename="tvexceptionmanquery">
+  <jproperties id="02dd9151-d857-4998-83bb-fd09ad0acece" key="GeneratedTime" value="1401866684049"/>
+  <refModule href="JModule_9c0a33ee-0173-4bec-ac85-c741d3128eff.model#9c0a33ee-0173-4bec-ac85-c741d3128eff"/>
+  <model id="54ff4463-6f25-4ea1-96eb-ca0150db8c5c" name="JModelImpl-54ff4463-6f25-4ea1-96eb-ca0150db8c5c">
+    <attributes id="15840b2b-8a6c-4b9f-b3e2-d23f8e44e5ad" name="dto" type="com.cfcc.itfe.persistence.dto.TvExceptionmanDto"/>
+    <directions id="c51e7800-6a60-46f0-98cd-7e689ffcd1ca" name="查询" ename="query"/>
+    <directions id="5372cbb0-4606-44f9-99e0-88ce55610c85" viewers="a43356b0-fe1e-4472-9375-02c2262a7e3e" name="返回" ename="back"/>
+  </model>
+  <contentAreas id="364ff004-dbe7-40ba-a2ee-fe3aeb97ec64">
+    <contentareanode id="dccfb85f-28ca-47c3-afec-8d6bbdc47850" name="查询条件" grouptitle="查询条件">
+      <widgetRefs xsi:type="model:Text" id="d8d14614-1ae9-4a2c-bbb3-4943951ea5bb" name="所属日期起" binding="dworkdatestart" caption="所属日期起" pattern="@8">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#511e3f19-6d5e-4665-98dd-5b624c1c747e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="392c8402-8f58-4e91-a405-96e1d6114119" name="所属日期止" binding="dworkdateend" caption="所属日期止" pattern="@8">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#511e3f19-6d5e-4665-98dd-5b624c1c747e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8e3f19a2-876f-4742-a981-5dba1cbff066" name="报文编号" binding="dto.sofbizkind" caption="报文编号"/>
+    </contentareanode>
+    <contentareanode id="f86787ce-0a67-43cb-8e9b-4e77ac8dff35" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="ee666cf3-cd57-4dc3-8917-ddeb49e5c4e6" name="查询结果" binding="pagingContext" caption="查询结果" tabletype="paging">
+        <columnlist id="7b8bda1e-eaa3-45a9-9d11-0089700c0df2" name="所属日期" binding="dworkdate" caption="所属日期"/>
+        <columnlist id="42bf1285-2903-4d7b-94cd-1b52853a1f49" name="报文编号" binding="sofbizkind" caption="报文编号"/>
+        <columnlist id="1fdfcd20-d49f-4426-9369-df62eca6937c" name="异常内容" binding="sexceptioninfo" caption="异常内容"/>
+        <columnlist id="400e3d2f-b67b-4a27-ba98-743eedd4790e" name="系统时间" binding="tsupdate" caption="系统时间" sortrule="desc" sorter=""/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="6ad5a963-b67d-4b2f-8d83-6a4a8ece83f1">
+    <pages id="b703999c-0d88-4202-b1cf-5734d4228ae1" name="报文异常信息查询">
+      <views id="a43356b0-fe1e-4472-9375-02c2262a7e3e" name="报文异常信息查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="dccfb85f-28ca-47c3-afec-8d6bbdc47850 f86787ce-0a67-43cb-8e9b-4e77ac8dff35">
+        <buttonArea id="a172290e-53a6-4775-8ddb-c55b48bf30af" name="JButtonAreaImpl-a172290e-53a6-4775-8ddb-c55b48bf30af">
+          <buttons id="b0dc8b2e-0748-4083-ada6-65fc93ecfaa0" name="查询" caption="查询" direction="c51e7800-6a60-46f0-98cd-7e689ffcd1ca"/>
+        </buttonArea>
+      </views>
+      <views id="2b278d24-3007-4806-a5ae-27aeb9bc220b" name="报文异常信息查询结果" contentArea="f86787ce-0a67-43cb-8e9b-4e77ac8dff35">
+        <buttonArea id="fc00102c-5289-4752-aebc-1b6494aa806a" name="JButtonAreaImpl-fc00102c-5289-4752-aebc-1b6494aa806a">
+          <buttons id="00a9a7fa-9884-4496-b7ac-4bfc6717a700" name="返回" caption="返回" direction="5372cbb0-4606-44f9-99e0-88ce55610c85"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

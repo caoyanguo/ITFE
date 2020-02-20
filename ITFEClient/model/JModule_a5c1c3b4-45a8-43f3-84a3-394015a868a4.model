@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a5c1c3b4-45a8-43f3-84a3-394015a868a4" name="socket发送文件" ename="socketSend"/>

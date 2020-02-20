@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+	xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+	<jb:bean beanId="MSG" class="java.util.HashMap"
+		createOnElement="MSG">
+		<jb:wiring property="HEAD" beanIdRef="HEAD" />
+		<jb:wiring property="DATA" beanIdRef="DATA" />
+	</jb:bean>
+	<jb:bean beanId="HEAD" class="java.util.HashMap"
+		createOnElement="HEAD">
+		  <jb:value property="Sender" decoder="String"
+			data="MSG/HEAD/Sender" />
+		  <jb:value property="Receiver" decoder="String"
+			data="MSG/HEAD/Receiver" />
+			<jb:value property="MsgDate" decoder="String"
+			data="MSG/HEAD/MsgDate" />
+			<jb:value property="FileName" decoder="String"
+			data="MSG/HEAD/FileName" />
+			<jb:value property="MsgClass" decoder="String"
+			data="MSG/HEAD/MsgClass" />
+			<jb:value property="MsgType" decoder="String"
+			data="MSG/HEAD/MsgType" />
+			<jb:value property="RetDate" decoder="String"
+			data="MSG/HEAD/RetDate" />
+	</jb:bean>
+	<jb:bean beanId="DATA" class="java.util.HashMap"
+		createOnElement="DATA">
+		<jb:wiring property="SUM" beanIdRef="SUM" />
+		<jb:wiring property="DETAILS" beanIdRef="DETAILS" />
+	</jb:bean>
+	<jb:bean beanId="SUM" class="java.util.HashMap"
+		createOnElement="SUM">
+		  <jb:value property="DealDate" decoder="String"
+			data="MSG/DATA/SUM/DealDate" />
+			<jb:value property="SumCount" decoder="String"
+			data="MSG/DATA/SUM/SumCount" />
+			<jb:value property="SumMoney" decoder="String"
+			data="MSG/DATA/SUM/SumMoney" />
+			<jb:value property="Idle" decoder="String"
+			data="MSG/DATA/SUM/Idle" />
+	</jb:bean>
+	<jb:bean beanId="DETAILS" class="java.util.HashMap"
+		createOnElement="DETAILS">
+			<jb:wiring property="DETAIL" beanIdRef="DETAIL" />
+	</jb:bean>
+	<jb:bean beanId="DETAIL" class="java.util.HashMap"
+		createOnElement="DETAIL">
+		  <jb:value property="RequestNo" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/RequestNo" />
+		  <jb:value property="DrawBackNo" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DrawBackNo" />
+			<jb:value property="TaxPayerNo" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxPayerNo" />
+			<jb:value property="TaxPayerName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxPayerName" />
+		  <jb:value property="CustomsCode" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/CustomsCode" />
+			<jb:value property="TaxDate" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxDate" />
+		   <jb:value property="ReqDate" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/ReqDate" />
+		  <jb:value property="AvoidBackExportAmountCurDol" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AvoidBackExportAmountCurDol" />
+			<jb:value property="AvoidBackExportAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AvoidBackExportAmountCur" />
+			<jb:value property="BillNotAllAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BillNotAllAmountCur" />
+		  <jb:value property="BillAllAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BillAllAmountCur" />
+			<jb:value property="PreExportNowBillAllAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PreExportNowBillAllAmountCur" />
+			<jb:value property="BillAllExportAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BillAllExportAmountCur" />
+			<jb:value property="TaxFreeExportAmountCurDol" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxFreeExportAmountCurDol" />
+			<jb:value property="TaxFreeExportAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxFreeExportAmountCur" />
+		  <jb:value property="AllExportAmountCurDol" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AllExportAmountCurDol" />
+			<jb:value property="AllExportAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AllExportAmountCur" />
+			<jb:value property="NotAvoidExportAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NotAvoidExportAmountCur" />
+			<jb:value property="SubExportAmMultiBackRaCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/SubExportAmMultiBackRaCur" />
+		  <jb:value property="PreDrawBackNotReduceCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PreDrawBackNotReduceCur" />
+			<jb:value property="ExportAmMultiBackRaCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/ExportAmMultiBackRaCur" />
+			<jb:value property="PreDrawBackReduceAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PreDrawBackReduceAmountCur" />
+		  <jb:value property="DrawBackReduceAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DrawBackReduceAmountCur" />
+			<jb:value property="DrawBackAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DrawBackAmountCur" />
+			<jb:value property="NextDrawBackReduceAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NextDrawBackReduceAmountCur" />
+			<jb:value property="AddTaxFinalTaxAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AddTaxFinalTaxAmountCur" />
+		  <jb:value property="DrawBackFinalTaxAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DrawBackFinalTaxAmountCur" />
+			<jb:value property="NowDrawBackAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NowDrawBackAmountCur" />
+			<jb:value property="NowAvoidTaxAmountCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NowAvoidTaxAmountCur" />
+		  <jb:value property="BeforeBillAllCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BeforeBillAllCur" />
+			<jb:value property="NowBillAllCur" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NowBillAllCur" />
+			<jb:value property="AvoidBackExportAmountYearDol" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AvoidBackExportAmountYearDol" />
+		  <jb:value property="AvoidBackExportAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AvoidBackExportAmountYear" />
+			<jb:value property="BillNotAllAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BillNotAllAmountYear" />
+		   <jb:value property="BillAllAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BillAllAmountYear" />
+		  <jb:value property="PreExportNowBillAllAmYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PreExportNowBillAllAmYear" />
+			<jb:value property="BillAllExportAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BillAllExportAmountYear" />
+			<jb:value property="TaxFreeExportAmountYearDol" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxFreeExportAmountYearDol" />
+		  <jb:value property="TaxFreeExportAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxFreeExportAmountYear" />
+			<jb:value property="AllExportAmountYearDol" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AllExportAmountYearDol" />
+			<jb:value property="AllExportAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AllExportAmountYear" />
+			<jb:value property="NotAvoidExportAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NotAvoidExportAmountYear" />
+			<jb:value property="SubExportAmMultiBackRaYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/SubExportAmMultiBackRaYear" />
+		  <jb:value property="PreDrawBackNotReduceYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PreDrawBackNotReduceYear" />
+			<jb:value property="ExportAmMultiBackRaYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/ExportAmMultiBackRaYear" />
+			<jb:value property="PreDrawBackReduceAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PreDrawBackReduceAmountYear" />
+			<jb:value property="DrawBackReduceAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DrawBackReduceAmountYear" />
+		  <jb:value property="DrawBackAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DrawBackAmountYear" />
+			<jb:value property="NextDrawBackReduceAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NextDrawBackReduceAmountYear" />
+			<jb:value property="AddTaxFinalTaxAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AddTaxFinalTaxAmountYear" />
+			<jb:value property="DrawBackFinalTaxAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DrawBackFinalTaxAmountYear" />
+			<jb:value property="NowDrawBackAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NowDrawBackAmountYear" />
+		  <jb:value property="NowAvoidTaxAmountYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NowAvoidTaxAmountYear" />
+			<jb:value property="BeforeBillAllYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BeforeBillAllYear" />
+			<jb:value property="NowBillAllYear" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/NowBillAllYear" />
+			<jb:value property="ExportCorpLinkMan" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/ExportCorpLinkMan" />
+		  <jb:value property="FinChairman" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/FinChairman" />
+			<jb:value property="CorpChairman" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/CorpChairman" />
+			<jb:value property="DrawBackTaxOrg" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DrawBackTaxOrg" />
+			<jb:value property="AcceptPerson" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AcceptPerson" />
+			<jb:value property="AcceptDate" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AcceptDate" />
+		  <jb:value property="AcceptTaxOrg" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/AcceptTaxOrg" />
+			<jb:value property="Demo" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/Demo" />
+			<jb:value property="Idle" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/Idle" />
+	</jb:bean>
+</smooks-resource-list>

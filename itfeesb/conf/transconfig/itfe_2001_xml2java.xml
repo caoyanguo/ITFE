@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="SingleReturn2001" beanIdRef="SingleReturn2001" />
+</jb:bean>
+<jb:bean beanId="SingleReturn2001" class="java.util.HashMap" createOnElement="SingleReturn2001">
+	<jb:value property="OriTaxOrgCode" decoder="String" data="CFX/MSG/SingleReturn2001/OriTaxOrgCode" />
+	<jb:value property="OriTraNo" decoder="String" data="CFX/MSG/SingleReturn2001/OriTraNo" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/SingleReturn2001/OriEntrustDate" />
+	<jb:value property="TaxVouNo" decoder="String" data="CFX/MSG/SingleReturn2001/TaxVouNo" />
+	<jb:value property="TaxDate" decoder="String" data="CFX/MSG/SingleReturn2001/TaxDate" />
+	<jb:value property="Result" decoder="String" data="CFX/MSG/SingleReturn2001/Result" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/SingleReturn2001/AddWord" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

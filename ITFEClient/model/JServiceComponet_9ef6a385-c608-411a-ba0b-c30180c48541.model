@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9ef6a385-c608-411a-ba0b-c30180c48541" name="凭证退回处理" ename="backVoucher" shared="true">
+  <jproperties id="f2f112d9-fc03-498d-8f6b-f44871c9bc4f" key="GeneratedTime" value="1415953252030"/>
+  <refModule href="JModule_b8b51df3-f0ae-430c-aa1d-fa8edf710992.model#b8b51df3-f0ae-430c-aa1d-fa8edf710992"/>
+  <methods id="cce61535-7949-48d3-b7ae-f07c12660cd6" ename="voucherGenerate" name="生成凭证" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="6756f644-49d9-4159-857d-eebd2c44759d" name="参数信息列表" ename="params" type="java.util.List"/>
+  </methods>
+  <methods id="af26544c-86fd-4dc8-9f16-b53c0bddddf3" ename="getTvVoucherinfoDto" name="获得索引表信息" returntype="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto">
+    <methodParams id="4901d06f-2760-47e4-a7b0-ad1243edd142" name="参数信息列表" ename="params" type="java.util.List"/>
+  </methods>
+  <methods id="cae62b50-f959-46a4-989b-7623682b3d2b" ename="voucherGenerateForTCBS" name="生成退回凭证信息（TCBS下发）" codecomment="voucherGenerate" returntype="com.cfcc.itfe.facade.data.MulitTableDto">
+    <methodParams id="d0684ec7-d27f-4b6f-b1f7-c539b3d478c9" name="参数信息列表" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="b6e3898d-60ad-4cda-8b29-e9419c6f5c3a" ename="voucherGenerateForPayoutBack" name="实拨资金退款凭证生成（TCBS资金导入）" codecomment="voucherGenerateForPayoutBack" returntype="java.util.List">
+    <methodParams id="c2db9f44-23c8-4d66-98ad-4f0e557ceffe" name="参数信息列表" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="b15f6ca8-4960-4aed-8eae-a93158c1bee3" ename="findMainDto" name="查找主表信息" returntype="java.util.List">
+    <methodParams id="839864a6-a053-4283-aec1-39bcb20fb301" name="索引表信息" ename="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+  </methods>
+</model:JServiceComponent>

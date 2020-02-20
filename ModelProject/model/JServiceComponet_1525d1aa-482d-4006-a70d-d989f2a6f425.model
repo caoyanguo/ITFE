@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1525d1aa-482d-4006-a70d-d989f2a6f425" name="东莞数据加载服务组件" ename="DataUpLoad" shared="false">
+  <jproperties id="88c5ba4a-56d8-4fef-9315-5f4d3ae3601f" key="GeneratedTime" value="1256463750984"/>
+  <refModule href="JModule_066e4b34-9a7f-49b4-9c92-29048dc16020.model#066e4b34-9a7f-49b4-9c92-29048dc16020"/>
+  <methods id="87fbb4c2-095c-418c-9d4c-e9a9f9832f73" ename="checkFileImport" name="文件判重" codecomment="判断文件是否到导入过" returntype="java.lang.Boolean" remark="判断文件是否到导入过">
+    <methodParams id="21ff6f51-d339-4842-8e5d-3fff89580b2f" name="客户端上传文件路径" ename="clientFilePath" type="java.lang.String"/>
+  </methods>
+  <methods id="f852d896-48fa-4623-92c1-f5bcaa1cc3da" ename="deleteSvrFile" name="删除文件" codecomment="删除服务器上相同的文件" returntype="java.lang.String" remark="删除服务器上相同的文件">
+    <methodParams id="253ff04b-a7e2-436c-86f2-f1d72a7ba9c4" name="客户端上传文件路径" ename="clientFilePath" type="java.lang.String"/>
+  </methods>
+  <methods id="bc48f546-1482-462b-9edc-0b6b5d237354" ename="genFileName" name="生成服务器文件名" codecomment="根据客户端文件路径得到服务器文件路径" returntype="java.lang.String" remark="生成服务器文件名">
+    <methodParams id="90969e75-0b5d-4cf4-8998-4f6211fbfba1" name="客户端上传文件路径" ename="clientFilePath" type="java.lang.String"/>
+  </methods>
+  <methods id="431fd52e-2f5d-4b61-bb73-e9ddfe294052" ename="treDwbkDataProc" name="退库文件处理写数据库" codecomment="退库文件处理写数据库" returntype="java.lang.String" remark="退库文件处理写数据库">
+    <methodParams id="02386fd3-41ab-4f3f-8210-c11a0ff5568b" name="退库数据处理" ename="msgInfo" type="java.lang.Object" codecomment="经过mule处理后的文件"/>
+  </methods>
+  <methods id="c0de5c63-1091-4e0c-9248-83c26834d0d9" ename="requestBillDataProc" name="申报表文件处理写数据库" codecomment="退库文件处理写数据库" returntype="java.lang.String" remark="申报表文件处理写数据库">
+    <methodParams id="cc2e5f8e-9414-4cf1-bc4b-648fc8ba4e3b" name="申报表数据处理" ename="msgInfo" type="java.lang.Object" codecomment="经过mule处理后的文件"/>
+  </methods>
+  <methods id="62896e3e-2cd5-4468-81b6-adfaea88a21a" ename="tbsDataProc" name="TBS回执处理写数据库" codecomment="TBS回执处理写数据库" returntype="java.lang.String" remark="TBS回执处理写数据库">
+    <methodParams id="0ef0c4ac-8aef-4d1e-a511-f1e748724ad8" name="客户端加载文件名" ename="clientFilePath" type="java.lang.String" codecomment="TBS导出文件名"/>
+  </methods>
+  <methods id="161d0b2a-100a-4bb0-955c-ba1545af1128" ename="updateDataFlag" name="更新数据库标志" codecomment="更新数据库标志" returntype="java.lang.String" remark="">
+    <methodParams id="bb4d8ff0-040b-40de-90f1-ab7c4bba5bab" name="表名称" ename="tableName" type="java.lang.String" codecomment="TBS导出文件名"/>
+    <methodParams id="58fdd7b6-2a4e-48c6-9598-d133cd5dc408" name="更新字段" ename="updatesql" type="java.lang.String" codecomment="TBS导出文件名"/>
+    <methodParams id="c209d946-fabe-4913-ae75-939e5dffe4b4" name="where条件" ename="wheresql" type="java.lang.String" codecomment="where条件"/>
+  </methods>
+  <methods id="981a72e5-06cf-4e39-91a9-ed429c169306" ename="writeRecvLog" name="记接收日志" codecomment="更新数据库标志" returntype="java.lang.Void" remark="">
+    <methodParams id="15099d57-b5b5-4af7-9a0b-3a7394dc35df" name="申报表或退税dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment=""/>
+    <methodParams id="c3e827a0-c009-4ca1-a480-287705160024" name="接收文件名称" ename="fileName" type="java.lang.String" codecomment="TBS导出文件名"/>
+    <methodParams id="5853f923-2c7a-4eea-9eca-37082b8373e7" name="业务凭证类型" ename="vouType" type="java.lang.String" codecomment="TBS导出文件名"/>
+    <methodParams id="ab6a49e0-d07f-4c23-ab00-9f435f583993" name="核算主体代码" ename="orgCode" type="java.lang.String" codecomment=""/>
+    <methodParams id="9a5b5c02-7cb2-4f8e-bd80-5b508fd1e17f" name="文件总计金额" ename="sumMoney" type="java.math.BigDecimal" codecomment="文件总计金额"/>
+    <methodParams id="9c04f20a-5303-4e03-b793-f263d83a1554" name="文件笔数" ename="fileCount" type="java.lang.Integer" codecomment="文件笔数"/>
+  </methods>
+</model:JServiceComponent>

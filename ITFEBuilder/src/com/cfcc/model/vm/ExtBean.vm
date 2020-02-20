@@ -1,0 +1,22 @@
+package com.cfcc.tas.client.extbean;
+
+import java.util.List;
+
+import com.cfcc.jaf.persistence.jaform.parent.IDto;
+import com.cfcc.tas.client.paramsauditsubsys.${ename1}.Abstract${ename}Bean;
+import com.cfcc.tas.facade.data.ParamsCompareData;
+import com.cfcc.tas.persistency.ormap.dto.TnAuditresultSubDto;
+
+
+public abstract class Abstract${ename}BeanExt extends
+		Abstract${ename}Bean {
+	public void setData(IDto dto) {
+		setIdto(dto);
+	}
+
+	public abstract void setIdto(IDto dto);
+
+	public abstract void setAuditResList(List<TnAuditresultSubDto> subList);
+
+	public abstract void setParamsData(ParamsCompareData result);
+}

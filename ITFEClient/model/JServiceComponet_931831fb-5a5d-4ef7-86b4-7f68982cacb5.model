@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="931831fb-5a5d-4ef7-86b4-7f68982cacb5" name="更正原因代码对照服务组件" ename="TsCorrReason">
+  <jproperties id="a8314220-fd7c-4683-bcf9-84615562597a" key="GeneratedTime" value="1331531146312"/>
+  <refModule href="JModule_a2af926c-c8e0-4bf6-b475-f57ba66272bb.model#a2af926c-c8e0-4bf6-b475-f57ba66272bb"/>
+  <methods id="28ed5057-b0f3-4c0c-82dd-36a964726db5" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="更正原因代码对照">
+    <methodParams id="5f57cf73-b364-4002-9d21-96a5fbcba804" name="更正原因代码对照" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="72bf8f91-4168-4537-8552-6494899a0da6" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="36ee616f-412a-48e1-a56c-dbd2bf006f4f" name="更正原因代码对照" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="更正原因代码对照"/>
+  </methods>
+  <methods id="53630ad5-d248-4536-9c8c-60e8cf38e0da" ename="modInfo" name="修改" codecomment="修改" returntype="com.cfcc.devplatform.customtype.Void" remark="修改">
+    <methodParams id="2aee5822-a641-4303-a729-c706c43a83b5" name="更正原因代码对照" ename="dtoInfo"/>
+  </methods>
+</model:JServiceComponent>

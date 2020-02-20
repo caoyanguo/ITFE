@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bcbf3ef5-097b-4d5d-9136-4baf9ef30ed7" name="退库查询处理服务组件" ename="tvDwbkQuery">
+  <jproperties id="40d0cdd0-3af3-4965-bff2-8197ae123217" key="GeneratedTime" value="1400747171630"/>
+  <refModule href="JModule_d63755a2-c6f0-4428-897c-3c3b18fcc23f.model#d63755a2-c6f0-4428-897c-3c3b18fcc23f"/>
+  <methods id="b7fc9084-7ce7-4bc3-94dd-c4d76c3efce7" ename="getSearchList" name="获取查询结果" codecomment="获取查询结果" returntype="java.util.List">
+    <methodParams id="b3f9bf84-7f6b-4139-a465-f520a36d1c8b" name="退库查询信息" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TvDwbkDto"/>
+  </methods>
+  <methods id="5d9bdef8-d61e-4072-a7ff-e27c698b99ad" ename="updateFail" name="批量更新失败" codecomment="批量更新失败" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a2f39ed4-df73-42fd-930b-21e2eacad861" name="更新数据" ename="dtoInfos" type="java.util.List"/>
+  </methods>
+  <methods id="548843cb-af98-463d-af0f-7922f4bc7ce2" ename="searchForReport" name="退库对账单查询" returntype="java.util.List">
+    <methodParams id="81122b79-786e-45a7-8b66-ba8354b4eaa9" name="查询的表" ename="selectedtable" type="java.lang.String"/>
+    <methodParams id="29319b7e-5bfc-4786-95c2-613c99deb99f" name="退库查询信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="f137db8a-5a6f-459c-a89b-54760402eef2" ename="updateSuccess" name="批量更新成功" codecomment="批量更新成功" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="30869e2c-d172-4fce-a182-a68a26e56eb0" name="更新数据" ename="dtoInfos" type="java.util.List"/>
+  </methods>
+  <methods id="7eb66ad2-d36d-4237-a6e4-680a0f853841" ename="setback" name="设置退回" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="eeceec99-84d7-46fd-ba01-e055c31e4119" name="更新数据" ename="dtolist" type="java.util.List"/>
+  </methods>
+  <methods id="646d577b-d040-46c8-b003-d21054566e26" ename="exportfile" name="导出文件" returntype="java.lang.String">
+    <methodParams id="27c5d3c1-12ca-4e9c-aeb5-ff078688d583" name="查询dto" ename="finddto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="e8eab203-dc98-4739-966a-410ae37f14ff" name="选择的表" ename="selecttable" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

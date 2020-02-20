@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e9e06f07-774b-4bf7-9eff-cc46772f05aa" name="凭证自动处理参数维护" ename="voucherAuto" shared="true">
+  <jproperties id="87ad1787-4b0f-46b0-b9b2-1eeafb72e5e8" key="GeneratedTime" value="1312161177062"/>
+  <refModule href="JModule_6d3127c7-5e5e-43cf-8bbc-e1a8c5f4ef76.model#6d3127c7-5e5e-43cf-8bbc-e1a8c5f4ef76"/>
+  <methods id="879b4fc9-3f38-4271-8085-56766a1f94c1" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto">
+    <methodParams id="1070c47f-539c-42d9-a8aa-693edd68da7c" name="凭证自动处理参数Dto" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="7b9031f7-434a-45c5-9b77-e24471ab4394" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="585b5698-aad4-412d-aa1d-9a8e1d76374f" name="凭证自动处理参数Dto" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="a6ad38b4-f323-4260-a289-413ec757d804" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="fd4a6778-d894-456b-a6c4-ce4f18423e5d" name="凭证自动处理参数Dto" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a10d6250-125f-4328-acc0-e61b7fd061ca" name="登陆/退出TIPS" ename="LogInOutTips">
+  <jproperties id="f07ff86e-390e-42ca-9e98-0bcae138d862" key="GeneratedTime" value="1364055702807"/>
+  <refModule href="JModule_839f7dc1-42ce-4360-ad64-e11a215a2059.model#839f7dc1-42ce-4360-ad64-e11a215a2059"/>
+  <methods id="f24b18c8-0e64-4228-a4f8-1ed9f4723786" ename="sendLoginMsg" name="登陆报文发送" codecomment="登陆报文发送" returntype="java.lang.String">
+    <methodParams id="97e7235a-c282-4a5e-9f34-4babf30ec782" name="报文内容Dto" ename="dto" type="com.cfcc.itfe.persistence.dto.ContentDto"/>
+  </methods>
+  <methods id="ca283fbf-9ca5-4e46-bf40-b6f5a06822a8" ename="sendLogOutMsg" name="签退报文发送" codecomment="签退报文发送" returntype="java.lang.String">
+    <methodParams id="3c8a812e-b9ed-47af-b1da-47fd930ca053" name="报文内容Dto" ename="dto" type="com.cfcc.itfe.persistence.dto.ContentDto"/>
+  </methods>
+  <methods id="70ddcfe1-e7b7-46a6-a236-38ff94c32493" ename="queryLoginResult" name="查询测试结果" codecomment="查询测试结果" returntype="java.lang.String">
+    <methodParams id="0d2857bc-fdc8-453d-91d7-88b454f68a45" name="String" ename="msgno" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

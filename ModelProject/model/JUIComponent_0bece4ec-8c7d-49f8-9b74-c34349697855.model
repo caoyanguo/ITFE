@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0bece4ec-8c7d-49f8-9b74-c34349697855" name="下载报表情况检查" ename="checkStatusOfReportDownload">
+  <jproperties id="af8f93c1-68c2-4491-a3df-a6a6c94173db" key="GeneratedTime" value="1560220837064"/>
+  <refModule href="JModule_0f5c43ef-2e17-45ce-b166-7783a752cca7.model#0f5c43ef-2e17-45ce-b166-7783a752cca7"/>
+  <model id="9a18fa91-1e5b-4a14-a0ab-17c2a305697a" name="JModelImpl-9a18fa91-1e5b-4a14-a0ab-17c2a305697a">
+    <attributes id="988b6352-832c-44e2-9526-b93679872d9e" name="pagingContext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="39ab504b-385d-4f43-b23c-a173f7ffd822" name="searchdate" type="java.sql.Date"/>
+    <attributes id="44bebdd4-a864-44f6-b7ff-d3e7b2eed47f" name="strecode" type="java.lang.String"/>
+    <directions id="f172dc00-b982-4d8c-ae05-b1d46d3c21e5" viewers="bd095cf6-c4b4-4d76-8237-2038da7b88e0" name="查询下载报表情况检查结果" ename="search"/>
+    <directions id="57f70ac7-08c4-41be-8b64-0ee650232458" viewers="19c2a528-fb0c-4eba-a39e-9baa890de780" name="打印预览" ename="queryprint"/>
+    <directions id="895e2208-4dac-492a-88eb-412a09ad7736" viewers="bd095cf6-c4b4-4d76-8237-2038da7b88e0" name="返回" ename="reback"/>
+    <directions id="ca0330b2-02db-4b37-b12e-1e9766d01385" name="导出" ename="exportcheckresult"/>
+    <directions id="75d2b804-2fd0-4bb4-80c6-f23a83de5249" name="导出报表到服务器" ename="exportToServer"/>
+    <directions id="e668adf7-c1ed-4b9e-9f24-fe123fdafe4e" viewers="363e2519-7570-43de-8267-931d07457805" name="导出业务数据到服务器" ename="exportBusData"/>
+    <directions id="a93f95cc-743c-47c9-b756-51426fbbeca1" name="下载业务数据" ename="downloadBus"/>
+    <directions id="801818a8-cdfa-40bf-b0af-a516f607d2f0" viewers="363e2519-7570-43de-8267-931d07457805" name="转到导出业务数据页" ename="forwardexportbusdata"/>
+    <directions id="f53bd8c0-7429-4f91-8fe4-9c677ba2bf53" name="导出tips下发报表" ename="exporttipsreport"/>
+    <directions id="b318cc23-2628-4a33-af40-65b91517a52f" name="勾兑入库" ename="blend"/>
+    <directions id="03a91ac0-e07d-45ce-80d2-7a0ef9072079" name="参数传送" ename="exportParam"/>
+    <directions id="26f8398f-ec6f-4da8-af74-e5894ea3da08" name="报表传送" ename="exportReport"/>
+  </model>
+  <services href="JServiceComponet_5ead32c4-a125-495b-ad5a-33191568f8da.model#5ead32c4-a125-495b-ad5a-33191568f8da"/>
+  <contentAreas id="93bd2a0d-a36d-42e6-95d8-2452046d8e73">
+    <contentareanode id="61ecb799-c1ec-4499-8c5d-39ea96698ef9" name="查询条件" grouptitle="查询条件">
+      <widgetRefs xsi:type="model:Text" id="92e141e5-3f3b-43c1-a92b-b390b5509bae" name="日期" binding="searchdate" caption="日期" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="539f781a-75b0-4221-9a87-7daa29c0860e" name="国库主体代码" binding="strecode" caption="国库主体代码" display="strename" underly="strecode" modelsource="treCodeList"/>
+      <widgetRefs xsi:type="model:Combo" id="676606e2-cfc2-4c24-aae0-fa2809d3f5ef" name="报表范围" binding="searchArea" caption="报表范围">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ae08c58a-4e90-42bb-b2b7-378ade4989d0"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="bea82ea6-9241-4dcd-9e63-73004c5be75c" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="18d1aa0d-e877-4953-9829-8e579e0b6f33" name="下载报表情况检查结果" binding="pagingList" caption="下载报表情况检查结果" tabletype="">
+        <columnlist id="f91e4480-e8fa-4437-b753-671fcd418dd0" name="日期" binding="sdates" caption="日期"/>
+        <columnlist id="7cdb51cb-c4a3-4968-8eb2-b40037b24e9f" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="c7826908-10dc-44db-be4b-42b9eecd657b" name="国库名称" binding="strename" caption="国库名称"/>
+        <columnlist id="72a184bb-c0d3-4d03-b8f7-050404881042" name="收入日报是否下发" binding="sribao" caption="收入日报是否下发">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+        <columnlist id="2a4fc4b1-6132-41db-8a13-31087c8db230" name="入库流水是否下发" binding="sliushui" caption="入库流水是否下发">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+        <columnlist id="8f440893-af67-490b-a5ae-0b209a0eeff9" name="电子税票是否下发" binding="sshuipiao" caption="电子税票是否下发">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+        <columnlist id="344bbaac-ec0e-4353-8cb6-e8b81e92ea1e" name="库存日报是否下发" binding="skucun" caption="库存日报是否下发">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+        <columnlist id="d345fd11-8836-4334-a121-87ce8c61f81a" name="支出报表是否导入" binding="szhichu" caption="支出报表是否导入">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+        <columnlist id="68c13063-72fd-4ee7-be77-9f9f977d8677" name="海关税票是否下发" binding="sishaiguan" caption="海关税票是否下发">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+        <columnlist id="038a2f1a-11e2-4675-b9fc-34fb5c5675d9" name="退库数据下发条数" binding="ituikucount" caption="退库数据下发条数"/>
+        <columnlist id="a7022c44-371a-4dc4-9121-1c5d220852b8" name="是否勾兑" binding="sext1" caption="是否勾兑">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="c5e3b688-1ab1-4de4-bf63-677d9461022d" name="报表文件" grouptitle="">
+      <jreportref id="9fa6a2ed-62e9-4aca-997e-a1160c9a06bc" name="下载报表情况检查结果报表" reportpath="reportpath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="c753f29d-d74e-4d99-8b08-2ceb9a345bb6" name="查询结果统计" grouptitle="查询结果统计" columnnum="3">
+      <widgetRefs xsi:type="model:Text" id="1cb45dd8-e283-4936-935a-cef0966c4aaf" name="国库总数" binding="gkcount" caption="国库总数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="89f5aba5-1887-43d1-a85c-6a4fd9b3205c" name="收入下发总数" binding="srcount" caption="收入下发总数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="81ea7e7f-1884-45f3-9bc0-c2e31bdd2e61" name="流水下发总数" binding="lscount" caption="流水下发总数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="0aee9e46-17ed-4088-88d0-feaf542ff8cc" name="税票下发总数" binding="spcount" caption="税票下发总数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e90ff358-d189-4b65-a5a9-d05fc07add2b" name="库存下发总数" binding="kccount" caption="库存下发总数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="50337ae1-2325-4126-9fa8-cf88a47fce47" name="支出导入总数" binding="zccount" caption="支出导入总数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="39dfa99b-2541-477a-b00f-2fa5c1a973fa" name="勾兑入库总数" binding="gdcount" caption="勾兑入库总数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="075eae7c-0cf0-4b52-80ab-32b1971045ee" name="海关税票总数" binding="hgcount" caption="海关税票总数" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="9bb2d19f-2f35-4108-a246-edac72e18758" name="退库数据总数" binding="tkcount" caption="退库数据总数" editable="false"/>
+    </contentareanode>
+    <contentareanode id="0109ecf6-27e3-4309-889a-557030588b98" name="导出业务数据到服务器" grouptitle="导出数据">
+      <widgetRefs xsi:type="model:Text" id="918698a7-a681-48b8-90ba-aa1d8d85a8b1" name="日期" binding="searchdate" caption="日期"/>
+      <widgetRefs xsi:type="model:Combo" id="08afdbf3-5795-445f-8026-e6fe02e0ff94" name="业务类型" binding="busType" caption="业务类型" display="displayValue" underly="underlyValue" modelsource="voucherTypeList"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="ffcb4682-c499-4a33-b0fb-7f22ab09641f">
+    <pages id="35cc39f5-d150-4c01-b032-dfcce0f7e07f" name="下载报表情况检查信息">
+      <views id="bd095cf6-c4b4-4d76-8237-2038da7b88e0" name="下载报表情况检查界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="61ecb799-c1ec-4499-8c5d-39ea96698ef9 c753f29d-d74e-4d99-8b08-2ceb9a345bb6 bea82ea6-9241-4dcd-9e63-73004c5be75c">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#109806d0-798b-4668-91b9-57f526a8ede8"/>
+        <buttonArea id="48c9921e-4711-42d9-bcc2-19d730b34d68" name="功能按钮区">
+          <buttons id="2d26a303-604d-43cc-8ea2-227c30e9fb61" name="查询" caption="查询" checkrequired="true" direction="f172dc00-b982-4d8c-ae05-b1d46d3c21e5"/>
+          <buttons id="f2a69ef4-40e0-4d89-93cf-77e11f502160" name="导出" caption="导出" direction="ca0330b2-02db-4b37-b12e-1e9766d01385"/>
+          <buttons id="361becb1-ed4c-4a4f-be68-c9517342547a" name="打印" caption="打印" direction="57f70ac7-08c4-41be-8b64-0ee650232458"/>
+          <buttons id="a566f8d2-d8a8-4994-8db9-802289c323b2" name="导出报表到服务器" caption="导出报表到服务器" direction="75d2b804-2fd0-4bb4-80c6-f23a83de5249"/>
+          <buttons id="9b22ae48-c12b-44f8-855a-8a10fe3591e1" name="导出tips下发报表" caption="导出tips下发报表" direction="f53bd8c0-7429-4f91-8fe4-9c677ba2bf53"/>
+          <buttons id="b95e6d34-3547-4fe1-bde4-969eb246fee2" name="导出业务数据" caption="导出业务数据" direction="801818a8-cdfa-40bf-b0af-a516f607d2f0"/>
+          <buttons id="e76a0954-f854-4e1c-8ae1-485712018388" name="勾兑入库" caption="勾兑入库" direction="b318cc23-2628-4a33-af40-65b91517a52f"/>
+          <buttons id="f429fdee-6dab-4c6a-9e7d-5984fa74970d" name="参数传送" caption="参数传送" direction="03a91ac0-e07d-45ce-80d2-7a0ef9072079"/>
+          <buttons id="34b850f0-a09e-43b6-9b88-e68f5f01025f" name="报表传送" caption="报表传送" direction="26f8398f-ec6f-4da8-af74-e5894ea3da08"/>
+        </buttonArea>
+      </views>
+      <views id="19c2a528-fb0c-4eba-a39e-9baa890de780" name="下载报表情况检查结果报表界面" contentArea="c5e3b688-1ab1-4de4-bf63-677d9461022d">
+        <buttonArea id="80a3b510-e18e-4e05-add4-279627ece6bd" name="功能按钮区">
+          <buttons id="f1e4342a-2781-4d46-bfae-7c2a70c60929" name="返回" caption="返回" direction="895e2208-4dac-492a-88eb-412a09ad7736"/>
+        </buttonArea>
+      </views>
+      <views id="363e2519-7570-43de-8267-931d07457805" name="导出业务数据到服务器" contentArea="0109ecf6-27e3-4309-889a-557030588b98">
+        <buttonArea id="b1dd1234-de34-4fc0-8559-4ee4db9d0891" name="JButtonAreaImpl-b1dd1234-de34-4fc0-8559-4ee4db9d0891">
+          <buttons id="7550422e-65c1-480d-8e08-d6060d6cf7cc" name="导出业务数据到服务器" caption="导出业务数据到服务器" direction="e668adf7-c1ed-4b9e-9f24-fe123fdafe4e"/>
+          <buttons id="12532892-e65e-46b5-ac93-a22d7d41544c" name="下载业务数据" caption="下载业务数据" direction="a93f95cc-743c-47c9-b756-51426fbbeca1"/>
+          <buttons id="e3728692-a2f5-47ed-825e-c2c6acd55da8" name="返回" caption="返回" direction="895e2208-4dac-492a-88eb-412a09ad7736"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

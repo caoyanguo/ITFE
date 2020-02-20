@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!--
+		一个统计类的Invoker, 可以统计每个service method 的调用信息 调用一个DispathInvoker,将请求分开
+	-->
+
+	<!-- 定义两个别名,分别被 handler 和 httpInvokerServlet调用 ,提供对B/S和C/S的调用支持-->
+	<bean id="ServiceInterceptorList"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.InterceptorList"
+		name="httpServiceInvoker.GLOBAL.ID">
+		<property name="invoker">
+			<ref bean="OperateLogInvoker" />
+		</property>
+		<property name="interceptors">
+			<list>
+				<value>ServiceStatisticInvoker</value>
+				<value>ServiceTransactionInvoker</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="OperateLogInvoker" class="com.cfcc.itfe.service.advice.ITFEOperLogInvoker">
+		<property name="invoker" ref="beanServiceInvoker"></property>
+	</bean>
+
+	<!-- 调用 Service的JavaBean 实现的类 -->
+	<bean id="beanServiceInvoker" class="com.cfcc.jaf.core.invoker.bean.BeanServiceInvoker"
+		name="handlerServiceInvoker.GLOBAL.ID">
+	</bean>
+
+	<bean id="ServiceStatisticInvoker"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.StatisticInvoker">
+	</bean>
+
+	<bean id="ServiceTransactionInvoker" class="com.cfcc.jaf.core.invoker.transation.TransactionInvoker">
+		<property name="transactionManager">
+			<ref bean="SpringTransactionManager" />
+		</property>
+		<property name="transactionAttributeSource">
+			<ref bean="RegularMatch" />
+		</property>
+	</bean>
+
+	<bean id="RegularMatch"
+		class="com.cfcc.jaf.core.invoker.transation.RegularMatchTransactionAttributeSource">
+		<property name="properties">
+			<props>
+				<prop key="com.cfcc.jaf.persistence.jaform.IOrmTemplate.*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.mod*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.add*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.del*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.Upload*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.upload">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.update*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.recvDelete">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.cancelSend">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_1800
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.send*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.commit*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.reSend*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.*Confirm">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.*Delete">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.*Submit">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.reSend*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.export*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.mule*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.msgmanager.*.*.deal*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.msgmanager.*.*.update*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.msgmanager.*.*.write*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.amtControlVerify*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				<prop key="com.cfcc.itfe.service.*.*.voucher*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-com.cfcc.itfe.exception.ITFEBizException,timeout_3600
+				</prop>
+				
+			</props>
+		</property>
+	</bean>
+	<bean id="RequiredTransactionTemplate"
+		class="org.springframework.transaction.support.TransactionTemplate"
+		scope="prototype">
+		<property name="transactionManager" ref="SpringTransactionManager" />
+		<property name="propagationBehaviorName" value="PROPAGATION_REQUIRED" />
+	</bean>
+	<bean id="NewTransactionTemplate"
+		class="org.springframework.transaction.support.TransactionTemplate"
+		scope="prototype">
+		<property name="transactionManager" ref="SpringTransactionManager" />
+		<property name="propagationBehaviorName" value="PROPAGATION_REQUIRES_NEW" />
+		<!--
+			<property name="timeout" value="180" /> 缺省的超时时间暂时设为180秒，代码中可以根据需要进行设置
+		-->
+	</bean>
+</beans>

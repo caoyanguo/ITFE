@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9c0a33ee-0173-4bec-ac85-c741d3128eff" name="报文异常信息查询" ename="tvexceptionmanquery"/>

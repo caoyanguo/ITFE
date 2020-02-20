@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="GBK"?>
+<MSG>
+<HEAD> 
+	<Sender>${MSG.HEAD.Sender}</Sender>
+	<Receiver>${MSG.HEAD.Receiver}</Receiver> 
+	<MsgDate>${MSG.HEAD.MsgDate}</MsgDate>
+	<FileName>${MSG.HEAD.FileName}</FileName> 
+	<MsgClass>${MSG.HEAD.MsgClass}</MsgClass>
+	<MsgType>${MSG.HEAD.MsgType}</MsgType> 
+	<RetDate>${MSG.HEAD.RetDate}</RetDate>
+</HEAD> 
+<DATA> 
+	<SUM>
+		<DealDate>${MSG.DATA.SUM.DealDate}</DealDate>
+		<SumCount>${MSG.DATA.SUM.SumCount}</SumCount>
+		<SumMoney>${MSG.DATA.SUM.SumMoney}</SumMoney>
+		<Idle>${MSG.DATA.SUM.Idle}</Idle>
+	</SUM>
+	<DETAILS>
+	  <#list MSG.DATA.DETAILS.DETAIL as var>
+	  <DETAIL>
+		  <RequestNo>${var.RequestNo}</RequestNo>
+		  <DrawBackNo>${var.DrawBackNo}</DrawBackNo>
+		  <TaxPayerNo>${var.TaxPayerNo}</TaxPayerNo>
+		  <TaxPayerName>${var.TaxPayerName}</TaxPayerName>
+		  <CustomsCode>${var.CustomsCode}</CustomsCode>
+	  	  <TaxDate>${var.TaxDate}</TaxDate>
+		  <ReqDate>${var.ReqDate}</ReqDate>
+	      <AvoidBackExportAmountCurDol>${var.AvoidBackExportAmountCurDol}</AvoidBackExportAmountCurDol>
+		  <AvoidBackExportAmountCur>${var.AvoidBackExportAmountCur}</AvoidBackExportAmountCur>
+		  <BillNotAllAmountCur>${var.BillNotAllAmountCur}</BillNotAllAmountCur>
+		  <BillAllAmountCur>${var.BillAllAmountCur}</BillAllAmountCur>
+		  <PreExportNowBillAllAmountCur>${var.PreExportNowBillAllAmountCur}</PreExportNowBillAllAmountCur>
+		  <BillAllExportAmountCur>${var.BillAllExportAmountCur}</BillAllExportAmountCur>
+	  	  <TaxFreeExportAmountCurDol>${var.TaxFreeExportAmountCurDol}</TaxFreeExportAmountCurDol>
+		  <TaxFreeExportAmountCur>${var.TaxFreeExportAmountCur}</TaxFreeExportAmountCur>
+	  	  <AllExportAmountCurDol>${var.AllExportAmountCurDol}</AllExportAmountCurDol>
+		  <AllExportAmountCur>${var.AllExportAmountCur}</AllExportAmountCur>
+		  <NotAvoidExportAmountCur>${var.NotAvoidExportAmountCur}</NotAvoidExportAmountCur>
+		  <SubExportAmMultiBackRaCur>${var.SubExportAmMultiBackRaCur}</SubExportAmMultiBackRaCur>
+		  <PreDrawBackNotReduceCur>${var.PreDrawBackNotReduceCur}</PreDrawBackNotReduceCur>
+		  <ExportAmMultiBackRaCur>${var.ExportAmMultiBackRaCur}</ExportAmMultiBackRaCur>
+		  <PreDrawBackReduceAmountCur>${var.PreDrawBackReduceAmountCur}</PreDrawBackReduceAmountCur>
+		  <DrawBackReduceAmountCur>${var.DrawBackReduceAmountCur}</DrawBackReduceAmountCur>
+		  <DrawBackAmountCur>${var.DrawBackAmountCur}</DrawBackAmountCur>
+		  <NextDrawBackReduceAmountCur>${var.NextDrawBackReduceAmountCur}</NextDrawBackReduceAmountCur>
+		  <AddTaxFinalTaxAmountCur>${var.AddTaxFinalTaxAmountCur}</AddTaxFinalTaxAmountCur>
+		  <DrawBackFinalTaxAmountCur>${var.DrawBackFinalTaxAmountCur}</DrawBackFinalTaxAmountCur>
+		  <NowDrawBackAmountCur>${var.NowDrawBackAmountCur}</NowDrawBackAmountCur>
+		  <NowAvoidTaxAmountCur>${var.NowAvoidTaxAmountCur}</NowAvoidTaxAmountCur>
+		  <BeforeBillAllCur>${var.BeforeBillAllCur}</BeforeBillAllCur>
+		  <NowBillAllCur>${var.NowBillAllCur}</NowBillAllCur>
+		  <AvoidBackExportAmountYearDol>${var.AvoidBackExportAmountYearDol}</AvoidBackExportAmountYearDol>
+		  <DrawBackReduceAmountCur>${var.DrawBackReduceAmountCur}</DrawBackReduceAmountCur>
+		  <AvoidBackExportAmountYear>${var.AvoidBackExportAmountYear}</AvoidBackExportAmountYear>
+		  <BillNotAllAmountYear>${var.BillNotAllAmountYear}</BillNotAllAmountYear>
+		  <BillAllAmountYear>${var.BillAllAmountYear}</BillAllAmountYear>
+		  <PreExportNowBillAllAmYear>${var.PreExportNowBillAllAmYear}</PreExportNowBillAllAmYear>
+		  <BillAllExportAmountYear>${var.BillAllExportAmountYear}</BillAllExportAmountYear>
+		  <TaxFreeExportAmountYearDol>${var.TaxFreeExportAmountYearDol}</TaxFreeExportAmountYearDol>
+		  <TaxFreeExportAmountYear>${var.TaxFreeExportAmountYear}</TaxFreeExportAmountYear>
+		  <AllExportAmountYearDol>${var.AllExportAmountYearDol}</AllExportAmountYearDol>
+		  <AllExportAmountYear>${var.AllExportAmountYear}</AllExportAmountYear>
+		  <NotAvoidExportAmountYear>${var.NotAvoidExportAmountYear}</NotAvoidExportAmountYear>
+		  <AvoidBackExportAmountYear>${var.AvoidBackExportAmountYear}</AvoidBackExportAmountYear>
+		  <SubExportAmMultiBackRaYear>${var.SubExportAmMultiBackRaYear}</SubExportAmMultiBackRaYear>
+		  <PreDrawBackNotReduceYear>${var.PreDrawBackNotReduceYear}</PreDrawBackNotReduceYear>
+		  <ExportAmMultiBackRaYear>${var.ExportAmMultiBackRaYear}</ExportAmMultiBackRaYear>
+		  <PreDrawBackReduceAmountYear>${var.PreDrawBackReduceAmountYear}</PreDrawBackReduceAmountYear>
+		  <DrawBackReduceAmountYear>${var.DrawBackReduceAmountYear}</DrawBackReduceAmountYear>
+		  <DrawBackAmountYear>${var.DrawBackAmountYear}</DrawBackAmountYear>
+		  <NextDrawBackReduceAmountYear>${var.NextDrawBackReduceAmountYear}</NextDrawBackReduceAmountYear>
+		  <AddTaxFinalTaxAmountYear>${var.AddTaxFinalTaxAmountYear}</AddTaxFinalTaxAmountYear>
+		  <DrawBackFinalTaxAmountYear>${var.DrawBackFinalTaxAmountYear}</DrawBackFinalTaxAmountYear>
+		  <NowDrawBackAmountYear>${var.NowDrawBackAmountYear}</NowDrawBackAmountYear>
+		  <NowAvoidTaxAmountYear>${var.NowAvoidTaxAmountYear}</NowAvoidTaxAmountYear>
+		  <BeforeBillAllYear>${var.BeforeBillAllYear}</BeforeBillAllYear>
+		  <NowBillAllYear>${var.NowBillAllYear}</NowBillAllYear>
+		  <ExportCorpLinkMan>${var.ExportCorpLinkMan}</ExportCorpLinkMan>
+		  <FinChairman>${var.FinChairman}</FinChairman>
+		  <CorpChairman>${var.CorpChairman}</CorpChairman>
+		  <DrawBackTaxOrg>${var.DrawBackTaxOrg}</DrawBackTaxOrg>
+		  <AcceptPerson>${var.AcceptPerson}</AcceptPerson>
+		  <AcceptDate>${var.AcceptDate}</AcceptDate>
+		  <AcceptTaxOrg>${var.AcceptTaxOrg}</AcceptTaxOrg>
+		  <Demo>${var.Demo}</Demo>
+		  <Idle>${var.Idle}</Idle>
+		 </DETAIL>
+	</DETAILS>
+	</#list> 
+</DATA>
+</MSG>

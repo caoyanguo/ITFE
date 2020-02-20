@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="db69cd60-ae89-44c8-a27e-8bb5e664f20b" name="实拨资金数据导入(福州工资文件)" ename="fundintoforfz">
+  <jproperties id="e474f248-0b2c-4377-bad5-db7bf907d9bd" key="GeneratedTime" value="1383639528498"/>
+  <refModule href="JModule_2c29a3e9-add4-4004-ae17-aa3148b799fe.model#2c29a3e9-add4-4004-ae17-aa3148b799fe"/>
+  <model id="f8c48153-f2b0-4353-9b38-a884d68a515b" name="JModelImpl-f8c48153-f2b0-4353-9b38-a884d68a515b">
+    <directions id="1ccca11f-a855-41a5-9c04-997a648c1ba0" name="工资文件加载" ename="salarydataload"/>
+    <directions id="91587a41-ce50-448b-b490-037c39ac1d5a" viewers="8f8dcd96-4171-4ebd-b7bc-bbdf2d7655a1" name="跳转工资文件销号列表" ename="gosalarydestoryview"/>
+    <directions id="8215bf88-8de1-463b-9e28-bbc5c547b2df" viewers="bb0a56e4-685f-4860-8551-7838f80b894c" name="返回工资加载页" ename="backsalaryloadview"/>
+    <directions id="ef946ecc-ca47-4858-906e-fe73d76d0bb3" name="工资文件销号操作" ename="salarydestory"/>
+    <directions id="624d600d-4c59-47e1-be55-4948b17d4b7d" name="工资文件查询" ename="salarysearch"/>
+  </model>
+  <services href="JServiceComponet_007ebc5a-d860-473b-a948-f6236394324a.model#007ebc5a-d860-473b-a948-f6236394324a"/>
+  <contentAreas id="39df088b-e9c5-418c-9b81-e2f5a83b497d">
+    <contentareanode id="814a9095-5af1-4aeb-8f29-0c4a30b009ec" name="文件导入" grouptitle="文件导入">
+      <widgetRefs xsi:type="model:FileUploader" id="7e244e05-ac48-4189-8ed6-b9d2ed11a606" name="加载文件路径" binding="filepath" caption="加载文件路径" isdirectory="false"/>
+    </contentareanode>
+    <contentareanode id="b9127117-124c-4d26-a728-e5f26431eca9" name="工资文件逐笔销号" grouptitle="工资文件逐笔销号">
+      <widgetRefs xsi:type="model:Text" id="50bc4f00-27de-4ba6-9dbb-6703e92d6270" name="凭证编号" binding="salarysearch.svouno" caption="凭证编号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="18556562-2a61-42d3-9b9b-db9e8cc46f1a" name="总金额" binding="salarysearch.famt" caption="总金额" required="true">
+        <refmetadata href="MetadataNode_38bc2363-806d-4cd5-929e-7d32a2f8c6d7.model#c4dd528e-dc85-42e3-8c64-60c07fb2ec25"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="d6dd85c6-d96b-4b8d-a074-88c8a728c8b8" name="工资文件查询列表" grouptitle="工资文件查询列表">
+      <widgetRefs xsi:type="model:Table" id="36c79957-3d25-4661-827c-a1f9deefb903" name="TableImpl-36c79957-3d25-4661-827c-a1f9deefb903" binding="salarydetaillist" pagingtable="">
+        <columnlist id="baf6dc5c-e5d1-477d-94e2-96523d658712" name="国库主体代码" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="879b3a1a-6b44-4545-802b-83a43657b1af" name="付款人账号" binding="spayeracct" caption="付款人账号"/>
+        <columnlist id="c0c49848-6b6a-4b05-8a6a-af1b2e86d797" name="付款人名称" binding="spayername" caption="付款人名称"/>
+        <columnlist id="ae27ee8c-9d51-4da9-bc83-72548f8448b4" name="调拨原因代码" binding="smovefundreason" caption="调拨原因代码"/>
+        <columnlist id="be9e7fa7-2a6b-4259-9711-b69805224601" name="预算单位代码" binding="sbdgorgcode" caption="预算单位代码"/>
+        <columnlist id="ac56bf4f-b595-4f5a-8a23-6b6dc71263a7" name="预算单位名称" binding="sbdgorgname" caption="预算单位名称"/>
+        <columnlist id="e3b511b7-3dc2-4f71-bf6b-91809d9ab830" name="收款人账号" binding="spayeeacct" caption="收款人账号"/>
+        <columnlist id="c036f211-b589-4e47-89c2-d2a1040f3e15" name="预算种类" binding="cbdgkind" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="8c5729bf-d8d7-463f-afe1-c65edfda81a8" name="拨款种类" binding="spaybizkind" caption="拨款种类"/>
+        <columnlist id="02f6f2ab-63cc-47fe-b3e8-1d7b48865f09" name="功能类科目代码" binding="sfuncsbtcode" caption="功能类科目代码"/>
+        <columnlist id="c83fa3c5-0ead-44dc-9bd0-45106597eec0" name="经济类科目代码" binding="secosbtcode" caption="经济类科目代码"/>
+        <columnlist id="5b45f23a-9aa6-4e13-a16c-d74b861c9e4f" name="会计科目代码" binding="sbooksbtcode" caption="会计科目代码"/>
+        <columnlist id="b2b6198f-417a-4bde-b4b0-06b498f53e32" name="金额" binding="famt" caption="金额"/>
+        <columnlist id="520f7788-598a-4a35-9734-7787ae527c16" name="凭证编号" binding="svouno" caption="凭证编号"/>
+        <columnlist id="a6b797f9-a6b0-4d2d-ae81-0d9888dedd40" name="清算银行" binding="spayeebankno" caption="清算银行"/>
+        <columnlist id="e37842ee-a5e8-4dd0-8f0c-31d8433081e9" name="收款人名称" binding="spayeename" caption="收款人名称"/>
+        <columnlist id="ff000bf6-b32e-4023-8523-50a597be41cd" name="收款人开户行行号" binding="spayeeopnbnkno" caption="收款人开户行行号"/>
+        <columnlist id="e5ff5412-9c4c-4bc7-8ab4-4184352791d9" name="出票单位" binding="sbillorg" caption="出票单位"/>
+        <columnlist id="3518238e-8322-4ea1-8bf0-5769f7830d1e" name="凭证日期" binding="dvoucher" caption="凭证日期"/>
+        <columnlist id="ddb955c7-07ab-455a-8211-0f50d4c4b777" name="受理日期" binding="daccept" caption="受理日期"/>
+        <columnlist id="7c6b7749-6ca9-4ae0-8f39-2f97324f0930" name="账务日期" binding="dacct" caption="账务日期"/>
+        <columnlist id="e9f7b0ef-adaf-4b70-a272-511eecc083f2" name="拨款级次" binding="spaylevel" caption="拨款级次"/>
+        <columnlist id="442a59af-6f57-44db-a4f7-3952cfce051a" name="收款人地址" binding="spayeeaddr" caption="收款人地址"/>
+        <columnlist id="df51a9f7-7201-4d36-9227-58223c118ce5" name="所属年度" binding="iofyear" caption="所属年度"/>
+        <columnlist id="bf911b62-1649-4b83-8662-f45b5f19daf3" name="附言" binding="saddword" caption="附言"/>
+        <columnlist id="599c3872-fb0e-404e-9b18-92aa4fb5cadf" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="c2058539-c138-4d25-867f-0945290391fc" name="调整期标志" binding="ctrimflag" caption="调整期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+        </columnlist>
+        <columnlist id="2126ea63-9010-4706-a811-045b61dc1f84" name="导入文件名" binding="sfilename" caption="导入文件名"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="a724d505-9153-4edf-a824-cb11e656e5b9">
+    <pages id="8a78ea15-351a-4ef2-bc75-1735555c2836" name="JPageImpl-8a78ea15-351a-4ef2-bc75-1735555c2836">
+      <views id="bb0a56e4-685f-4860-8551-7838f80b894c" name="工资文件加载" isdefault="true" contentArea="814a9095-5af1-4aeb-8f29-0c4a30b009ec">
+        <buttonArea id="98f9bdaa-18f8-4062-93c6-011b098428cc" name="JButtonAreaImpl-98f9bdaa-18f8-4062-93c6-011b098428cc">
+          <buttons id="04bde45b-ae3c-41f9-b204-5860aa0f80cb" name="加载" caption="加载" direction="1ccca11f-a855-41a5-9c04-997a648c1ba0"/>
+          <buttons id="21f539bf-edb6-4594-bbb4-d4534a694b74" name="销号" caption="销号" direction="91587a41-ce50-448b-b490-037c39ac1d5a"/>
+        </buttonArea>
+      </views>
+      <views id="8f8dcd96-4171-4ebd-b7bc-bbdf2d7655a1" name="工资文件销号" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="b9127117-124c-4d26-a728-e5f26431eca9 d6dd85c6-d96b-4b8d-a074-88c8a728c8b8">
+        <buttonArea id="9545675f-dd03-4b5b-94e9-238b45dbf402" name="JButtonAreaImpl-9545675f-dd03-4b5b-94e9-238b45dbf402">
+          <buttons id="c0e5dca0-6751-41f5-892a-1c7297232ffd" name="查询" caption="查询" checkrequired="true" direction="624d600d-4c59-47e1-be55-4948b17d4b7d"/>
+          <buttons id="aeafb198-2bf7-40a5-8f38-9b16cdcb5421" name="销号" caption="销号" checkrequired="true" direction="ef946ecc-ca47-4858-906e-fe73d76d0bb3"/>
+          <buttons id="ed2affdb-9e22-4144-8d32-6a4a2ddce6c4" name="返回" caption="返回" direction="8215bf88-8de1-463b-9e28-bbc5c547b2df"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

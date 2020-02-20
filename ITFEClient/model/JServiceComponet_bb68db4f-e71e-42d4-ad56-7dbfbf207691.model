@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bb68db4f-e71e-42d4-ad56-7dbfbf207691" name="单位清册" ename="TfUnitrecordmain" shared="true">
+  <jproperties id="e54cae6c-c843-4338-8410-06b32f2749c3" key="GeneratedTime" value="1412924732263"/>
+  <refModule href="JModule_c86a50e7-89ac-4ea2-be43-b34998ae2b5a.model#c86a50e7-89ac-4ea2-be43-b34998ae2b5a"/>
+  <methods id="0c8228d9-9cc7-4d28-b9a5-fdef1ceeeaa3" ename="legalPersonCodeExport" name="导出法人代码信息" returntype="java.lang.String">
+    <methodParams id="009e1934-4b0e-41fe-a3cd-660faa82f71f" name="清册信息查询条件" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodExceptions id="5fe6e0c3-4ab0-4af1-89c5-ed0b043e80f5" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

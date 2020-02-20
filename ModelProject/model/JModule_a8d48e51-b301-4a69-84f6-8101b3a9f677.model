@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a8d48e51-b301-4a69-84f6-8101b3a9f677" isgenerated="false" name="利息参数维护" ename="interestParam" shared="true"/>

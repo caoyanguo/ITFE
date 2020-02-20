@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead3190" beanIdRef="BatchHead3190" />
+	<jb:wiring property="BatchReturn3190" beanIdRef="BatchReturn3190s" />
+</jb:bean>
+<jb:bean beanId="BatchHead3190" class="java.util.HashMap" createOnElement="BatchHead3190">
+	<jb:value property="OriMsgNo" decoder="String" data="CFX/MSG/BatchHead3190/OriMsgNo" />
+	<jb:value property="OriTaxOrgCode" decoder="String" data="CFX/MSG/BatchHead3190/OriTaxOrgCode" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/BatchHead3190/OriEntrustDate" />
+	<jb:value property="OriPackNo" decoder="String" data="CFX/MSG/BatchHead3190/OriPackNo" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead3190/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead3190/AllAmt" />
+</jb:bean>
+<jb:bean beanId="BatchReturn3190s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="BatchReturn3190" />
+</jb:bean>
+<jb:bean beanId="BatchReturn3190" class="java.util.HashMap" createOnElement="BatchReturn3190">
+	<jb:value property="OriTraNo" decoder="String" data="CFX/MSG/BatchReturn3190/OriTraNo" />
+	<jb:value property="VouNo" decoder="String" data="CFX/MSG/BatchReturn3190/VouNo" />
+	<jb:value property="TraAmt" decoder="String" data="CFX/MSG/BatchReturn3190/TraAmt" />
+	<jb:value property="OpStat" decoder="String" data="CFX/MSG/BatchReturn3190/OpStat" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/BatchReturn3190/AddWord" />
+	<jb:value property="ChannelCode" decoder="String" data="CFX/MSG/BatchReturn3190/ChannelCode" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

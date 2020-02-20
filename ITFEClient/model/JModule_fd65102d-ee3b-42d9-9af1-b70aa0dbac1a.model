@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="fd65102d-ee3b-42d9-9af1-b70aa0dbac1a" isgenerated="false" name="无纸化业务清单打印" ename="BusinessDetailList" shared="false"/>

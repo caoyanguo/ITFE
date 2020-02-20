@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8002bd03-58ff-411e-a053-0d42756a54e6" name="9105自由格式报文" ename="FreeFormatMsg" shared="true">
+  <jproperties id="9c32f593-79db-472b-a894-3267af082689" key="GeneratedTime" value="1334414940010"/>
+  <refModule href="JModule_2aa01b14-5f1d-498c-8123-0da8e5aa2806.model#2aa01b14-5f1d-498c-8123-0da8e5aa2806"/>
+  <model id="2054341b-7fe8-43fe-9ae1-41abf4d0a057" name="JModelImpl-2054341b-7fe8-43fe-9ae1-41abf4d0a057">
+    <directions id="2f426fe0-2aad-4ab4-970e-34bfe23ecdd4" name="发送自由格式报文" ename="sendFreeFormatMsg"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_dca438f2-0756-4510-88f3-ffa6a63c7686.model#dca438f2-0756-4510-88f3-ffa6a63c7686"/>
+  <contentAreas id="f6155c02-12da-431d-a111-5e51ab73df4d">
+    <contentareanode id="19ace8ca-0cf7-4e7e-8f64-cf6178be862c" name="发送报文参数界面">
+      <widgetRefs xsi:type="model:Text" id="34739295-bd44-4008-b851-f5e8575f9c41" name="SendOrgCode" binding="sendOrgCode" caption="发起机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="5774eb81-b567-4bd7-a18d-5230d02394d2" name="RcvOrgCode" binding="rcvOrgCode" caption="接收机构代码"/>
+      <widgetRefs xsi:type="model:Textarea" id="185d263a-75b5-4d52-aa99-e50b2761eae8" name="content" binding="content" caption="内容"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="8ae61a26-16d3-4104-8c94-7420cbfbf126">
+    <pages id="2a04499a-d7b8-449e-af66-f0f4c3bfd94a" name="JPageImpl-2a04499a-d7b8-449e-af66-f0f4c3bfd94a">
+      <views id="0865c864-c135-4b46-810c-b133e880920f" name="JViewerImpl-0865c864-c135-4b46-810c-b133e880920f" isdefault="true" contentArea="19ace8ca-0cf7-4e7e-8f64-cf6178be862c">
+        <buttonArea id="9ae23751-d2bb-4a32-a283-5226e0e9b721" name="JButtonAreaImpl-9ae23751-d2bb-4a32-a283-5226e0e9b721">
+          <buttons id="3b695f76-bf82-4661-ba22-f612a8a2ffc9" name="发送" caption="发送" direction="2f426fe0-2aad-4ab4-970e-34bfe23ecdd4"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

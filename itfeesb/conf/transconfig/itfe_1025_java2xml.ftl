@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+	<MSG>
+		<RequestHead1025>
+			<SendOrgCode>${cfx.MSG.RequestHead1025.SendOrgCode}</SendOrgCode>
+			<ReportDate>${cfx.MSG.RequestHead1025.ReportDate}</ReportDate>
+			<ReportArea>${cfx.MSG.RequestHead1025.ReportArea}</ReportArea>
+		</RequestHead1025>
+		<RequestReport1025>
+			<NrBudget>${cfx.MSG.RequestReport1025.NrBudget}</NrBudget>
+			<NrDrawBack>${cfx.MSG.RequestReport1025.NrDrawBack}</NrDrawBack>
+			<NrRemove>${cfx.MSG.RequestReport1025.NrRemove}</NrRemove>
+			<Amount>${cfx.MSG.RequestReport1025.Amount}</Amount>
+			<NrShare>${cfx.MSG.RequestReport1025.NrShare}</NrShare>
+			<NrPay>${cfx.MSG.RequestReport1025.NrPay}</NrPay>
+			<Debt>${cfx.MSG.RequestReport1025.Debt}</Debt>
+			<Stock>${cfx.MSG.RequestReport1025.Stock}</Stock>
+			<TrBudget>${cfx.MSG.RequestReport1025.TrBudget}</TrBudget>
+			<TrDrawBack>${cfx.MSG.RequestReport1025.TrDrawBack}</TrDrawBack>
+			<TrRemove>${cfx.MSG.RequestReport1025.TrRemove}</TrRemove>
+			<TrShare>${cfx.MSG.RequestReport1025.TrShare}</TrShare>
+		</RequestReport1025>
+	</MSG>
+</CFX>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<!-- **第一部分：Service处理：SERVICE + 报文编号** -->
+	<!-- 税票收入  -->
+	<bean id="SERVICE_1103" class="com.cfcc.itfe.msgmanager.service.IncomeServiceImpl"
+		scope="prototype">
+	</bean>
+	<bean id="SERVICE_7211" class="com.cfcc.itfe.msgmanager.service.IncomeServiceImpl"
+		scope="prototype">
+	</bean>
+	
+	<!-- 实拨资金  -->
+	<bean id="SERVICE_5101" class="com.cfcc.itfe.msgmanager.service.PayOutServiceImpl"
+		scope="prototype">
+	</bean>
+	
+	<!-- 直接支付额度  -->
+	<bean id="SERVICE_5102" class="com.cfcc.itfe.msgmanager.service.DirectServiceImpl"
+		scope="prototype">
+	</bean>
+	
+	<!-- 授权支付额度  -->
+	<bean id="SERVICE_5103" class="com.cfcc.itfe.msgmanager.service.GrantServiceImpl"
+		scope="prototype">
+	</bean>
+
+	<!-- **第二部分：报文处理：MSG + 报文编号** -->
+	
+	<!-- 财政申请入库流水 -->
+	<bean id="MSG_5002_OUT" class="com.cfcc.itfe.msgmanager.msg.Send5002MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 财政申请电子税票信息 -->
+	<bean id="MSG_5003_OUT" class="com.cfcc.itfe.msgmanager.msg.Send5003MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 税票收入  -->
+	<bean id="MSG_1103" class="com.cfcc.itfe.msgmanager.msg.IncomeMsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 退库请求  -->
+	<bean id="MSG_1104" class="com.cfcc.itfe.msgmanager.msg.Recv1104MsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_1104_OUT" class="com.cfcc.itfe.msgmanager.msg.DwbkMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_11042" class="com.cfcc.itfe.msgmanager.msg.DwbkMsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 更正请求  -->
+	<bean id="MSG_1105" class="com.cfcc.itfe.msgmanager.msg.Recv1105MsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_1105_OUT" class="com.cfcc.itfe.msgmanager.msg.CorrhandBookMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_11052" class="com.cfcc.itfe.msgmanager.msg.CorrhandBookMsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 免抵调请求  -->
+	<bean id="MSG_1106" class="com.cfcc.itfe.msgmanager.msg.FreeMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_11062" class="com.cfcc.itfe.msgmanager.msg.FreeMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_7211_OUT" class="com.cfcc.itfe.msgmanager.msg.IncomeMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_7211" class="com.cfcc.itfe.msgmanager.msg.Recv7211MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 实拨资金  -->
+	<bean id="MSG_5101_OUT" class="com.cfcc.itfe.msgmanager.msg.PayOutMsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 直接支付额度  -->
+	<bean id="MSG_5102_OUT" class="com.cfcc.itfe.msgmanager.msg.DirectMsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 授权支付额度  -->
+	<bean id="MSG_5103_OUT" class="com.cfcc.itfe.msgmanager.msg.GrantMsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 实拨资金（接收财政）  -->
+	<bean id="MSG_5101" class="com.cfcc.itfe.msgmanager.msg.Recv5101MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 直接支付额度（接收财政）  -->
+	<bean id="MSG_5102" class="com.cfcc.itfe.msgmanager.msg.Recv5102MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 授权支付额度（接收财政）  -->
+	<bean id="MSG_5103" class="com.cfcc.itfe.msgmanager.msg.Recv5103MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 授权支付额度  -->
+	<bean id="MSG_3145" class="com.cfcc.itfe.msgmanager.msg.Recv3145MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 划款申请  -->
+	<bean id="MSG_2201" class="com.cfcc.itfe.msgmanager.msg.Send2201MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 划款申请退回  -->
+	<bean id="MSG_2202" class="com.cfcc.itfe.msgmanager.msg.Send2202MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 划款申请 （接收财政转发） -->
+	<bean id="MSG_2201_IN" class="com.cfcc.itfe.msgmanager.msg.Recv2201MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 划款申请退回  （接收财政转发）-->
+	<bean id="MSG_2202_IN" class="com.cfcc.itfe.msgmanager.msg.Recv2202MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!--代发财政性款项请求  -->
+	<bean id="MSG_5112" class="com.cfcc.itfe.msgmanager.msg.PayOutFinanceMsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 交易状态查询请求  -->
+	<bean id="MSG_9003_OUT" class="com.cfcc.itfe.msgmanager.msg.Send9003MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 交易状态查询请求  -->
+	<bean id="MSG_9004" class="com.cfcc.itfe.msgmanager.msg.Recv9004MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 连接性测试  -->
+	<bean id="MSG_9005_OUT" class="com.cfcc.itfe.msgmanager.msg.TestConnectServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_9005" class="com.cfcc.itfe.msgmanager.msg.Recv9005MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 登陆Tips报文  -->
+	<bean id="MSG_9006" class="com.cfcc.itfe.msgmanager.msg.LoginTipsServer"
+		scope="prototype">
+	</bean>
+	<!-- 签退Tips报文  -->
+	<bean id="MSG_9008" class="com.cfcc.itfe.msgmanager.msg.LogoutTipsServer"
+		scope="prototype">
+	</bean>
+	<!-- 签退Tips报文  -->
+	<bean id="MSG_9008_OUT" class="com.cfcc.itfe.msgmanager.msg.LogoutTipsServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 登陆Tips报文 回执 -->
+	<bean id="MSG_9007" class="com.cfcc.itfe.msgmanager.msg.LoginTipsReturnServer"
+		scope="prototype">
+	</bean>
+	<!-- 签退Tips报文回执  -->
+	<bean id="MSG_9009" class="com.cfcc.itfe.msgmanager.msg.LogoutTipsReturnServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 发送9105自由格式报文 （由于组装报文放在service类中，发送报文类只做记录日志操作，所以共用9003处理类） -->
+	<bean id="MSG_9105_OUT" class="com.cfcc.itfe.msgmanager.msg.Send9003MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 接收9105自由格式报文  -->
+	<bean id="MSG_9105" class="com.cfcc.itfe.msgmanager.msg.Recv9105MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 财政收入日报表申请报文  -->
+	<bean id="MSG_5001_OUT" class="com.cfcc.itfe.msgmanager.msg.DayReportMsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 财政收入日报表申请报文  -->
+	<bean id="MSG_5001" class="com.cfcc.itfe.msgmanager.msg.Recv5001MsgServer"
+		scope="prototype">
+	</bean>
+	
+	
+	<!-- 财政收入日报表回执  -->
+	<bean id="MSG_3128" class="com.cfcc.itfe.msgmanager.msg.RecvDayRptMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_3128_OUT" class="com.cfcc.itfe.msgmanager.msg.Send3128MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 财政申请入库流水 -->
+	<bean id="MSG_5002" class="com.cfcc.itfe.msgmanager.msg.Recv5002MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 入库流水明细信息 -->
+	<bean id="MSG_3139" class="com.cfcc.itfe.msgmanager.msg.Recv3139MsgServer"
+		scope="prototype">
+	</bean>
+	<!--TCBS批量处理结果通知 -->
+	<bean id="MSG_3190" class="com.cfcc.itfe.msgmanager.msg.Recv3190MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- tips电子退库报文处理
+	<bean id="MSG_3140" class="com.cfcc.itfe.msgmanager.msg.Recv3140MsgServer"
+		scope="prototype">
+	</bean>-->
+	<!--海关电子税票信息处理 -->
+	<bean id="MSG_3178" class="com.cfcc.itfe.msgmanager.msg.Proc3178MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 财政申请电子税票信息 -->
+	<bean id="MSG_5003" class="com.cfcc.itfe.msgmanager.msg.Recv5003MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 与征收机关退库核对通知  add by wangyunbin 3-22-->
+	<bean id="MSG_3123" class="com.cfcc.itfe.msgmanager.msg.Recv3123MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与征收机关更正核对通知 add by wangyunbin 3-22 -->
+	<bean id="MSG_3124" class="com.cfcc.itfe.msgmanager.msg.Recv3124MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 财政电子税票信息  -->
+	<bean id="MSG_3129" class="com.cfcc.itfe.msgmanager.msg.Recv3129MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 实拨资金处理回执  -->
+	<bean id="MSG_3131" class="com.cfcc.itfe.msgmanager.msg.RecvPayOutMsgServer"
+		scope="prototype">
+	</bean>
+
+	<!-- 直接支付额度回执  -->
+	<bean id="MSG_3133" class="com.cfcc.itfe.msgmanager.msg.RecvDirectMsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 授权支付额度回执  -->
+	<bean id="MSG_3134" class="com.cfcc.itfe.msgmanager.msg.RecvGrantMsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 划款申请回执  -->
+	<bean id="MSG_3143" class="com.cfcc.itfe.msgmanager.msg.Recv3143MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 划款申请退回回执  -->
+	<bean id="MSG_3144" class="com.cfcc.itfe.msgmanager.msg.Recv3144MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 批量拨付回执  -->
+	<bean id="MSG_3136" class="com.cfcc.itfe.msgmanager.msg.Recv3136MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 通用应答报文9110  -->
+	<bean id="MSG_9110" class="com.cfcc.itfe.msgmanager.msg.Recv9110MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!--财政收入核对包重发请求  -->
+	<bean id="MSG_9116" class="com.cfcc.itfe.msgmanager.msg.Recv9116MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!--支出核对包重发请求  -->
+	<bean id="MSG_9117" class="com.cfcc.itfe.msgmanager.msg.Recv9117MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 通用应答9120  -->
+	<bean id="MSG_9120" class="com.cfcc.itfe.msgmanager.msg.Recv9120MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<bean id="MSG_9120_OUT" class="com.cfcc.itfe.msgmanager.msg.Send9120MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 通用确认应答9121 -->
+	<bean id="MSG_9121" class="com.cfcc.itfe.msgmanager.msg.Recv9121MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 通用处理结果通知9122  -->
+	<bean id="MSG_9122" class="com.cfcc.itfe.msgmanager.msg.Recv9122MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 包明细重发请求9111  -->
+	<bean id="MSG_9111" class="com.cfcc.itfe.msgmanager.msg.Send9111MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!--收入核对包信息重发请求  -->
+	<bean id="MSG_9113_OUT" class="com.cfcc.itfe.msgmanager.msg.Send9113MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!--财政收入核对包重发请求  -->
+	<bean id="MSG_9116_OUT" class="com.cfcc.itfe.msgmanager.msg.Send9116MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!--支出核对包重发请求  -->
+	<bean id="MSG_9117_OUT" class="com.cfcc.itfe.msgmanager.msg.Send9117MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- TIPS与财政、社保、商业银行支出信息包核对通知 3200  -->
+	<bean id="MSG_3200" class="com.cfcc.itfe.msgmanager.msg.Recv3200MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- TIPS与财政、社保、商业银行处理结果信息包核对通知 3201  -->
+	<bean id="MSG_3201" class="com.cfcc.itfe.msgmanager.msg.Recv3201MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 报文重发处理  -->
+	<bean id="MSG_RESEND" class="com.cfcc.itfe.msgmanager.msg.ReSendMsgServer"
+		scope="prototype">
+	</bean>
+		<!-- 实时扣税请求 -->
+	<bean id="MSG_1001" class="com.cfcc.itfe.msgmanager.msg.Recv1001MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 实时扣税回执 -->
+	<bean id="MSG_2001" class="com.cfcc.itfe.msgmanager.msg.Recv2001MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 批量扣税请求 -->
+	<bean id="MSG_1102" class="com.cfcc.itfe.msgmanager.msg.Recv1102MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 批量扣税回执 -->
+	<bean id="MSG_2102" class="com.cfcc.itfe.msgmanager.msg.Recv2102MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 公共数据更新通知接收报文 -->
+	<bean id="MSG_9100" class="com.cfcc.itfe.msgmanager.msg.Recv9100MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 状态变更通知接收报文 -->
+	<bean id="MSG_9101" class="com.cfcc.itfe.msgmanager.msg.Recv9101MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 运行参数通知接收报文 -->
+	<bean id="MSG_9106" class="com.cfcc.itfe.msgmanager.msg.Recv9106MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 实时扣税冲正请求 -->
+	<bean id="MSG_1021" class="com.cfcc.itfe.msgmanager.msg.Recv1021MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 实时扣税冲正回执 -->
+	<bean id="MSG_2021" class="com.cfcc.itfe.msgmanager.msg.Recv2021MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 三方协议验证与撤销请求 -->
+	<bean id="MSG_9114" class="com.cfcc.itfe.msgmanager.msg.Recv9114MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 三方协议验证与撤销应答-->
+	<bean id="MSG_9115" class="com.cfcc.itfe.msgmanager.msg.Recv9115MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与征收机关、社保税（费）票明细核对通知-->
+	<bean id="MSG_3122" class="com.cfcc.itfe.msgmanager.msg.Recv3122MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 征收机关申请入库流水-->
+	<bean id="MSG_1024" class="com.cfcc.itfe.msgmanager.msg.Recv1024MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<bean id="MSG_1024_OUT" class="com.cfcc.itfe.msgmanager.msg.Send1024MsgServer"
+		scope="prototype">
+	</bean>
+	
+	<!-- 征收机关申请入库流水-->
+	<bean id="MSG_3126" class="com.cfcc.itfe.msgmanager.msg.Recv3126MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 征收机关申请报表-->
+	<bean id="MSG_1025" class="com.cfcc.itfe.msgmanager.msg.Recv1025MsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_1025_OUT" class="com.cfcc.itfe.msgmanager.msg.Send1025MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 征收机关申请报表回执报文-->
+	<bean id="MSG_3127" class="com.cfcc.itfe.msgmanager.msg.Recv3127MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 征收机关申请入库流水-->
+	<bean id="MSG_9113" class="com.cfcc.itfe.msgmanager.msg.Recv9113MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 核对包信息重发请求-->
+	<bean id="MSG_9003" class="com.cfcc.itfe.msgmanager.msg.Recv9003MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 处理财政收入日报表回执  -->
+	<bean id="PROC_3128" class="com.cfcc.itfe.msgmanager.msg.Proc3128MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 财政申请电子税票  -->
+	<bean id="PROC_3129" class="com.cfcc.itfe.msgmanager.msg.Proc3129MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 海关申请电子税票  -->
+	<bean id="PROC_3178" class="com.cfcc.itfe.msgmanager.msg.Proc3178MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 财政申请入库流水 -->
+	<bean id="PROC_3139" class="com.cfcc.itfe.msgmanager.msg.Proc3139MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 向财政发起的3122与征收机关、社保税（费）票明细核对通知报文 -->
+	<bean id="PROC_3122" class="com.cfcc.itfe.msgmanager.msg.Proc3122MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 征收机关申请入库流水 -->
+	<bean id="PROC_3126" class="com.cfcc.itfe.msgmanager.msg.Proc3126MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 5104人民银行办理支付无（有）纸凭证请求  -->
+	<bean id="MSG_5104" class="com.cfcc.itfe.msgmanager.msg.Send5104MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 3135人民银行办理支付无（有）纸凭证回执  -->
+	<bean id="MSG_3135" class="com.cfcc.itfe.msgmanager.msg.Recv3135MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 3146人民银行办理支付退款通知  -->
+	<bean id="MSG_3146" class="com.cfcc.itfe.msgmanager.msg.Recv3146MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 收入共享数据转移-->
+	<bean id="MSG_9999" class="com.cfcc.itfe.msgmanager.msg.DataMoveMsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 银行申报请求2090 -->
+	<bean id="MSG_2090" class="com.cfcc.itfe.msgmanager.msg.Recv2090MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 银行申报回执1008 -->
+	<bean id="MSG_1008" class="com.cfcc.itfe.msgmanager.msg.Recv1008MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 银行申报扣税回执2108 -->
+	<bean id="MSG_2108" class="com.cfcc.itfe.msgmanager.msg.Recv2108MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 银行申报查询请求2091 -->
+	<bean id="MSG_2091" class="com.cfcc.itfe.msgmanager.msg.Recv2091MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 银行申报查询回执1009 -->
+	<bean id="MSG_1009" class="com.cfcc.itfe.msgmanager.msg.Recv1009MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__资金清算回执（2000）（工行发起）-->
+	<bean id="MSG_2000" class="com.cfcc.itfe.msgmanager.msg.Recv2000MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__划款申请资金清算回执（2000）（工行发起）-->
+	<bean id="MSG_2000_3143" class="com.cfcc.itfe.msgmanager.msg.Recv2000_3143MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__实拨资金清算回执（2000）（工行发起）-->
+	<bean id="MSG_2000_3131" class="com.cfcc.itfe.msgmanager.msg.Recv2000_3131MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__退库清算回执（2000）（工行发起）-->
+	<bean id="MSG_2000_3190" class="com.cfcc.itfe.msgmanager.msg.Recv2000_3190MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__申请报文接口(9000)（工行发起）-->
+	<bean id="MSG_9000" class="com.cfcc.itfe.msgmanager.msg.Recv9000MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__对账报文接口(8000)（代理库发起）-->
+	<bean id="MSG_8000" class="com.cfcc.itfe.msgmanager.msg.Send8000SameCityMsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__对账报文接口(2002)（代理行发起）-->
+	<bean id="MSG_2002" class="com.cfcc.itfe.msgmanager.msg.Recv2002MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__对账结果接口(1002)（金库发起）-->
+	<bean id="MSG_1002" class="com.cfcc.itfe.msgmanager.msg.Send1002MsgServer"
+		scope="prototype">
+	</bean>
+	<!-- 与工行同城清算接口__退款通知报文(2003)（代理行发起）-->
+	<bean id="MSG_2003" class="com.cfcc.itfe.msgmanager.msg.Recv2003TbsMsgServer"
+		scope="prototype">
+	</bean>
+</beans>

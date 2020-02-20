@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a7bb7149-dc63-43c9-bddd-7288d0ce5412" name="总库业务凭证发送服务器组件" ename="BizDataUpload">
+  <jproperties id="9b1f5502-8dbb-43c4-bb86-598f99bb9f34" key="GeneratedTime" value="1330497803359"/>
+  <refModule href="JModule_a951ee6a-29e8-4879-b374-816b0ba88ad7.model#a951ee6a-29e8-4879-b374-816b0ba88ad7"/>
+  <methods id="9b501dcf-798f-45cc-b3f4-b03962ce434e" ename="isFileExists" name="检查待发送的文件是否已经存在" codecomment="检查待发送的文件是否已经存在" returntype="com.cfcc.devplatform.customtype.Boolean">
+    <methodParams id="854091f8-cbb1-45e1-909a-b11664c48b16" name="fileName" ename="fileName" type="java.lang.String"/>
+  </methods>
+  <methods id="41efb673-ae00-47d7-a84e-c6c826b8e2da" ename="upload" name="业务数据上载处理方法" codecomment="业务凭证上载的处理方法" returntype="java.lang.Integer">
+    <methodParams id="d37634a0-0737-483a-929f-3de1de388f34" name="model" ename="model" type="com.cfcc.itfe.persistence.dto.TsOperationmodelDto" codecomment="业务凭证模版信息"/>
+    <methodParams id="e272df7e-0a3a-46b3-9981-5207e117d054" name="filePath" ename="filePath" type="java.lang.String" codecomment="上传文件在服务器上的路径"/>
+    <methodParams id="82ebdf61-053d-45a7-9c79-e70bc85a9756" name="recvOrgs" ename="recvOrgs" type="java.util.List" codecomment="接收机构的集合"/>
+  </methods>
+  <methods id="75c593a1-10a9-469b-9406-996dcfaadf21" ename="showReport" name="显示凭证" returntype="com.cfcc.devplatform.customtype.Void"/>
+  <methods id="c569871b-18af-4730-8767-7535ff9763ce" ename="getDefaultConnOrgs" name="getDefaultConnOrgs" codecomment="获得缺省的连通机构信息（国库局）" returntype="com.cfcc.itfe.persistence.dto.TsOrganDto"/>
+  <methods id="c6958f7b-dfca-498d-99fe-ff69f18c6084" ename="getAllConnOrgs" name="getAllConnOrgs" codecomment="获得全部连通机构信息" returntype="java.util.List" remark="获得全部连通机构信息"/>
+  <methods id="a215f6b4-efda-44f5-9108-29615e30372e" ename="getCertContent" name="getCertContent" codecomment="获得公共证书的内容" returntype="java.lang.String" remark="获得公共证书的内容"/>
+  <methods id="337c7c82-d639-485f-be7a-69fb3bd477aa" ename="addErrorSendLog" name="addErrorSendLog" codecomment="记录错误发送日志" returntype="com.cfcc.devplatform.customtype.Void" remark="记录错误发送日志">
+    <methodParams id="9a4701f4-cca6-46be-9dea-dd1cef2cfee2" name="model" ename="model" type="com.cfcc.itfe.persistence.dto.TsOperationmodelDto" codecomment="业务凭证模版信息"/>
+    <methodParams id="90e3e834-5bfc-4f96-8a7c-2da7498cd3ee" name="title" ename="title" type="java.lang.String" codecomment="信件标题"/>
+    <methodParams id="c126a332-e1fe-445e-872c-f08ff76e6114" name="errMsg" ename="errMsg" type="java.lang.String" codecomment="错误信息"/>
+  </methods>
+  <methods id="a3fb3187-eaeb-440b-ab1b-ac93b451787a" ename="getVouNo" name="getVouNo" codecomment="获得指定业务凭证的凭证编号（如果存在）" returntype="com.cfcc.devplatform.customtype.Int" remark="获得指定业务凭证的凭证编号（如果存在）">
+    <methodParams id="064de253-96d1-4185-88b9-df2ce7d8e73f" name="vouType" ename="vouType" codecomment="凭证类型"/>
+    <methodParams id="2fbb9a1e-915e-4245-9ac1-bfe772c49f18" name="fileName" ename="fileName" type="java.lang.String" codecomment="业务凭证名称"/>
+  </methods>
+  <methods id="a1e15d13-451f-46b4-b0be-ccd1d3b7fbfa" ename="addVouNo" name="addVouNo" codecomment="为指定业务凭证生成凭证编号" returntype="com.cfcc.devplatform.customtype.Int" remark="为指定业务凭证生成凭证编号">
+    <methodParams id="ee8157d3-8187-46d4-a44b-ebd6d1fc5fc4" name="vouType" ename="vouType" codecomment="凭证类型"/>
+    <methodParams id="85007f61-133f-4db1-88a4-5e51df856cf8" name="fileName" ename="fileName" type="java.lang.String" codecomment="业务凭证名称"/>
+  </methods>
+</model:JServiceComponent>

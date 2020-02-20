@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1e5d966a-d28c-467b-98c2-d55c4decf407" name="业务凭证比对" ename="voucherDataCompare">
+  <jproperties id="3b94a893-455d-4259-b922-f9fbc1264a26" key="GeneratedTime" value="1385371652174"/>
+  <refModule href="JModule_52990672-9cc0-4c2a-aeac-9f3fbe492a9a.model#52990672-9cc0-4c2a-aeac-9f3fbe492a9a"/>
+  <model id="895645cb-12ed-47de-9282-806990c2ec3d" name="JModelImpl-895645cb-12ed-47de-9282-806990c2ec3d">
+    <attributes id="fc26f96f-336e-4c54-ab8d-e62a46188bfb" name="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoSxDto"/>
+    <attributes id="31a6c2a2-c460-4673-a2d8-1eb3a4604ce4" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="0363f04f-0f1d-4b05-96cf-37d24ee8ef10" name="tvPayreckbankSxDto" type="com.cfcc.itfe.persistence.dto.TvPayreckbankSxDto"/>
+    <attributes id="50859fe4-169a-49c2-b008-5a6a4ca23c62" name="tvPayreckbanklistSxDto" type="com.cfcc.itfe.persistence.dto.TvPayreckbanklistSxDto"/>
+    <attributes id="36f875c3-3240-4e2e-8285-5b02ed2433f2" name="tvPayreckbankbackSxDto" type="com.cfcc.itfe.persistence.dto.TvPayreckbankbackSxDto"/>
+    <attributes id="8c5a9c14-8a7b-4a61-86b1-ed323a3801d5" name="tvPayreckbankbacklistSxDto" type="com.cfcc.itfe.persistence.dto.TvPayreckbankbacklistSxDto"/>
+    <attributes id="b5f9ed1b-ff20-4c63-be34-b4ab2205d909" name="tvDirectpaymsgmainSxDto" type="com.cfcc.itfe.persistence.dto.TvDirectpaymsgmainSxDto"/>
+    <attributes id="9b570ab2-e602-4efd-9215-3d6fd72dcdf7" name="tvDirectpaymsgsubSxDto" type="com.cfcc.itfe.persistence.dto.TvDirectpaymsgsubSxDto"/>
+    <attributes id="27609e52-d75e-4929-b82d-cbf4643795a3" name="tvGrantpaymsgmainSxDto" type="com.cfcc.itfe.persistence.dto.TvGrantpaymsgmainSxDto"/>
+    <attributes id="8808b66f-09e9-4277-8261-5ddc2c494b9a" name="tvGrantpaymsgsubSxDto" type="com.cfcc.itfe.persistence.dto.TvGrantpaymsgsubSxDto"/>
+    <attributes id="cdec098b-ba53-4bd3-8197-f27abbe6e5c8" name="tvPayoutmsgmainSxDto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainSxDto"/>
+    <attributes id="05a79005-30c0-4491-9183-50563d6fdd85" name="tvPayoutmsgsubSxDto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgsubSxDto"/>
+    <attributes id="c2cf7674-5cfc-4b08-b463-061ae96b6fd4" name="pagingPayreckbanklist" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="e3a2c632-87c1-4145-84a4-4ad14ed6c991" name="pagingPayreckbankbacklist" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="17634193-8209-4b53-ad23-042c65920d12" name="pagingDirectpaymsgsub" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="c88a8887-a7a1-45ee-b1ea-6403e86fe942" name="pagingGrantpaymsgsub" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="471165e3-b988-4082-b264-8faac5d40b1d" name="pagingPayoutmsgsub" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="41e80a35-846b-4a97-908b-b1280f49e0ea" name="pagingGrantpaymsgmain" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="1d6818b0-f4cb-4ad8-8020-648112310772" name="查询 " ename="search"/>
+    <directions id="e2560295-a2f3-4de2-a9e2-941b9b396d64" name="读取凭证" ename="voucherRead"/>
+    <directions id="cad7dba3-446a-4693-a04d-83e224fce618" name="全选" ename="selectAll"/>
+    <directions id="6c502ab1-dbc1-4c6a-a50d-82460206d6e6" name="数据比对" ename="voucherDataCompare"/>
+    <directions id="5ae9acf5-34db-479c-9958-8056968ad387" name="发送回单" ename="sendReturnVoucher"/>
+    <directions id="a8087e71-c2eb-42c3-84e0-03b76053ce06" name="重新校验" ename="voucherVerify"/>
+    <directions id="e09c4fbd-7924-4765-85ba-afe815d66c16" name="双击记录" ename="doubleClick"/>
+    <directions id="a8f02fe7-c366-4db9-be20-36c29f6966aa" viewers="42a352ce-9878-4d65-98cb-20deae302aa8" name="返回" ename="goBack"/>
+    <directions id="1f77d9ea-0ee1-4cc2-97b6-515d3be1e4c8" name="生成正式数据" ename="generateData"/>
+    <directions id="1aebf06b-1ef5-43e3-ba91-1bd23ea89aea" name="同步状态" ename="updateStatus"/>
+    <directions id="eac5fafa-232c-40b2-9757-c82849569495" name="主信息单击事件" ename="singleclickMain"/>
+    <directions id="148e9175-1281-4b60-9373-d55dec08331c" name="主信息双击事件" ename="doubleclickMain"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_896cfa49-3a85-4d0d-bf89-cc54bcc54de3.model#896cfa49-3a85-4d0d-bf89-cc54bcc54de3"/>
+  <contentAreas id="013627a2-7645-421c-811e-8c878c358d5a">
+    <contentareanode id="a602c3a1-0b3c-4df2-8cfa-68491030548a" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Combo" id="d788c9d8-d8b4-44b1-bc61-cd497a07cd9e" name="凭证类型" binding="dto.svtcode" caption="凭证类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ef9eca62-4968-4a20-be8e-0870a705c18b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="5dfab4a7-8f48-49ab-b72d-f1efccbbb391" name="凭证状态" binding="dto.sstatus" caption="凭证状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1775bce2-cbc8-4221-88db-815b83f308e0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="7ded93d0-a67b-4fdd-b0c1-21a637be1f1c" name="国库代码" binding="dto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="aa09f46e-b468-481b-9bbb-1988ce18680a" name="凭证号码" binding="dto.svoucherno" caption="凭证号码"/>
+      <widgetRefs xsi:type="model:Text" id="26877c31-333a-43ab-a951-e94d2197171e" name="接收日期" binding="dto.screatdate" caption="接收日期"/>
+      <widgetRefs xsi:type="model:Text" id="2d80024b-ca5e-484c-b725-08bcb16b6446" name="凭证金额" binding="dto.nmoney" caption="凭证金额"/>
+      <widgetRefs xsi:type="model:Button" id="856a2ad6-b64c-49dc-9ff1-9517a9fbb1ad" name="查询" caption="查询" layout="GridLayout" direction="1d6818b0-f4cb-4ad8-8020-648112310772"/>
+    </contentareanode>
+    <contentareanode id="4f3ea5a1-8608-4854-9fe8-2d07494c80a2" name="凭证查询一览表" grouptitle="凭证查询一览表">
+      <widgetRefs xsi:type="model:Table" id="430cf88b-83cd-4a61-b476-45954c97c555" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" editable="false" tabletype="paging" showcheckbox="true" align="" selectedrows="checkList" refdoubleclickdirection="e09c4fbd-7924-4765-85ba-afe815d66c16">
+        <columnlist id="1cb9d68a-bb0f-475f-bae6-3c567cdbc3ed" name="svoucherno" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="b4fca137-544b-471f-929e-6ab40ba7f44f" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="faf80cab-2fad-40ac-9c0b-e14242335490" name="sadmdivcode" binding="sadmdivcode" caption="区划代码"/>
+        <columnlist id="15119b83-0e77-4946-9abb-a9a0ec22243d" name="spaybankcode" binding="spaybankcode" caption="出票单位"/>
+        <columnlist id="c49d3f1c-904e-4342-8838-808c4fed82ed" name="svtcode" binding="svtcode" caption="凭证类型"/>
+        <columnlist id="e96b3e83-c104-4c8e-a472-11c2e5692291" name="sstatus" binding="sstatus" caption="凭证状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1775bce2-cbc8-4221-88db-815b83f308e0"/>
+        </columnlist>
+        <columnlist id="86466069-1946-47b3-bfed-1b38e592ff43" name="nmoney" binding="nmoney" caption="金额"/>
+        <columnlist id="1d5fa764-09d1-41bb-9732-5977a7b69cca" name="srecvtime" binding="srecvtime" caption="接收日期"/>
+        <columnlist id="13760cbe-2a5e-4d11-a080-9e30d9886e7e" name="sdemo" binding="sdemo" caption="详细信息"/>
+        <columnlist id="b488de4c-9b04-4e79-8bec-707955e24ba1" name="sreturnerrmsg" extpoperties="" binding="sreturnerrmsg" caption="备注"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="04050f75-a031-4dfd-b210-2a1ead6ca8c9" name="申请划款凭证详细信息" grouptitle="申请划款凭证详细信息">
+      <widgetRefs xsi:type="model:Table" id="21b8ce8f-cbec-4c6b-9f6b-73c90e9f2c6f" name="" binding="pagingPayreckbanklist" caption="" editable="false" tabletype="paging">
+        <columnlist id="a1bc131a-c7e3-4e67-8a56-e58948e9da7b" name="预算单位代码" binding="sbdgorgcode" caption="预算单位代码"/>
+        <columnlist id="eb8ab6ff-cdaa-4e81-9f82-2c41b149c2b2" name="预算单位名称" binding="ssupdepname" caption="预算单位名称"/>
+        <columnlist id="e388799b-09f3-4c4a-96da-82f40805a7ed" name="功能类科目代码" binding="sfuncbdgsbtcode" caption="功能类科目代码"/>
+        <columnlist id="e72afd87-838d-4d02-b8a4-39aa6bb4f297" name="支出功能分类科目名称" binding="sexpfuncname" caption="支出功能分类科目名称"/>
+        <columnlist id="5581422a-2290-4bd3-9b9e-654969bc60c0" name="金额" binding="famt" caption="金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="63c97bfa-4508-4b86-a13e-93db62dd27e7" name="申请退款凭证详细信息" grouptitle="申请退款凭证详细信息">
+      <widgetRefs xsi:type="model:Table" id="5a5b8f1b-b19d-4588-9d5b-f276bb64d508" name="" binding="pagingPayreckbankbacklist" caption="" tabletype="paging">
+        <columnlist id="87ad224c-33ef-4fe7-8cf7-a796ba552de2" name="预算单位代码" binding="sbdgorgcode" caption="预算单位代码"/>
+        <columnlist id="bfb45b69-ac8d-48c2-8262-ce9e44feba3d" name="预算单位名称" binding="ssupdepname" caption="预算单位名称"/>
+        <columnlist id="324b1f2a-620f-437f-9967-c6b09d6448ba" name="功能类科目代码" binding="sfuncbdgsbtcode" caption="功能类科目代码"/>
+        <columnlist id="d7d229bc-1680-4ad2-b96c-bdd5ef75fce7" name="支出功能分类科目名称" binding="sexpfuncname" caption="支出功能分类科目名称"/>
+        <columnlist id="8a480164-5802-4b6c-af44-40335c63d03f" name="金额" binding="famt" caption="金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2488b583-8553-4ada-bbce-e524bc112b8d" name="直接支付清算额度详细信息" grouptitle="直接支付清算额度详细信息">
+      <widgetRefs xsi:type="model:Table" id="9907b889-7b7f-455d-a946-fe777e8bab97" name="" binding="pagingDirectpaymsgsub" caption="" tabletype="paging">
+        <columnlist id="ba97a143-f5da-4a18-b836-f680bc368d54" name="预算单位编码" binding="sagencycode" caption="预算单位编码"/>
+        <columnlist id="26409e1e-b31e-4d27-b71b-a6e593770fd6" name="预算单位名称" binding="sagencyname" caption="预算单位名称"/>
+        <columnlist id="06359fe1-69ff-45bd-97a9-9a5c8d0b9cfa" name="支出功能分类科目类编码" binding="sexpfunccode1" caption="支出功能分类科目类编码"/>
+        <columnlist id="60ecf9c2-365e-4ae5-b462-902dfcedb41a" name="支出功能分类科目类名称" binding="sexpfuncname1" caption="支出功能分类科目类名称"/>
+        <columnlist id="af95a01d-53dd-4950-9a48-f236886826bc" name="金额" binding="nmoney" caption="金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="1baff565-491a-408b-b7e2-048d5a64c7e1" name="授权支付清算额度详细信息" grouptitle="授权支付清算额度详细信息">
+      <widgetRefs xsi:type="model:Table" id="2ab6d286-3cae-4112-9583-347e9bbe2b3f" name="" binding="pagingGrantpaymsgsub" caption="" tabletype="paging" height="255">
+        <columnlist id="0b3a7c2e-4251-432f-aafc-1d73332a1670" name="预算内单位代码" binding="sbudgetunitcode" caption="预算内单位代码"/>
+        <columnlist id="319b7d42-7432-46b5-996c-ed8898e14ff6" name="预算单位名称" binding="ssupdepname" caption="预算单位名称"/>
+        <columnlist id="8566d931-abe6-4a14-9d70-9807bdcd93dc" name="支出功能分类科目类编码" binding="sexpfunccode1" caption="支出功能分类科目类编码"/>
+        <columnlist id="ff74d278-45c5-4af7-921b-0eac286fecc7" name="支出功能分类科目类名称" binding="sexpfuncname1" caption="支出功能分类科目类名称"/>
+        <columnlist id="92eab369-420d-4a22-9f21-9719e7458ade" name="金额" binding="nmoney" caption="金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="37d487d6-a722-464a-b636-cce736c4c4af" name="实拨资金详细信息" grouptitle="实拨资金详细信息">
+      <widgetRefs xsi:type="model:Table" id="a27ae494-51ba-4e3b-9c7f-dc786f3d74ee" name="" binding="pagingPayoutmsgsub" caption="" tabletype="paging">
+        <columnlist id="b7f606ad-cc2a-4ecd-80f6-1f9b5c2ffde6" name="预算单位编码" binding="sagencycode" caption="预算单位编码"/>
+        <columnlist id="d2048391-4529-4059-8c90-cf224095990b" name="预算单位名称" binding="sagencyname" caption="预算单位名称"/>
+        <columnlist id="01dba6f4-564c-4a74-b55c-2a098928ff6d" name="支出功能分类科目类编码" binding="sexpfunccode1" caption="支出功能分类科目类编码"/>
+        <columnlist id="fbbf12ab-f04a-4134-ab1d-e56119e6a39f" name="支出功能分类科目类名称" binding="sexpfuncname1" caption="支出功能分类科目类名称"/>
+        <columnlist id="2b9b482a-f478-42b2-bf58-705f24ae43fe" name="金额" binding="nmoney" caption="金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="37068fe2-a70c-49b8-a792-28348f581ad2" name="申请划款凭证主信息" grouptitle="申请划款凭证主信息">
+      <widgetRefs xsi:type="model:Text" id="d8294343-ded5-41a6-a942-eb5793eda084" name="行政区划代码" binding="tvPayreckbankSxDto.sadmdivcode" caption="行政区划代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="d4846d69-44b0-4d27-960c-cc7f6d78fe65" name="业务年度" binding="tvPayreckbankSxDto.sofyear" caption="业务年度" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="d68b11b3-f0ff-43ea-9f68-b82d0b1841f6" name="凭证类型编号" binding="tvPayreckbankSxDto.svtcode" caption="凭证类型编号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="eeb7780c-246b-445d-b0b1-2fc8cc88075e" name="凭证日期" binding="tvPayreckbankSxDto.dvoudate" caption="凭证日期" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="24c3fcf8-ef21-4d99-b9f4-c88470ad949c" name="凭证编号" binding="tvPayreckbankSxDto.svouno" caption="凭证编号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="407cea15-13dc-414b-a765-1ca3e74b05c2" name="国库代码" binding="tvPayreckbankSxDto.strecode" caption="国库代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="f5517de0-fc33-48d2-a1e9-53f2f9d9613f" name="财政机关代码" binding="tvPayreckbankSxDto.sfinorgcode" caption="财政机关代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="89eea45c-8c59-4d57-b501-b9826938dc42" name="金额" binding="tvPayreckbankSxDto.famt" caption="金额" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="1cc42b5e-7e49-4ef3-88ac-af72c542f67b" name="资金性质编码" binding="tvPayreckbankSxDto.sfundtypecode" caption="资金性质编码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="4041a8d1-de83-4798-ab43-a93db7cf1843" name="资金性质名称" binding="tvPayreckbankSxDto.sfundtypename" caption="资金性质名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="8f5c1240-f211-475c-abbd-545ce32c351f" name="收款人账号" binding="tvPayreckbankSxDto.spayeeacct" caption="收款人账号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="4e660674-e161-4f8b-bb0b-49ec53ceedda" name="收款人名称" binding="tvPayreckbankSxDto.spayeename" caption="收款人名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="81523146-91c3-4fde-9ad9-d11947398732" name="收款银行" binding="tvPayreckbankSxDto.sagentacctbankname" caption="收款银行" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="2cb84423-30d1-4b3f-8042-91cabf2ba3a3" name="付款人账号" binding="tvPayreckbankSxDto.spayeracct" caption="付款人账号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e2328b55-682f-44cc-92a6-33f44a3f6783" name="付款人名称" binding="tvPayreckbankSxDto.spayername" caption="付款人名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="37128fb3-0f50-4515-bc99-85e130da0925" name="付款银行" binding="tvPayreckbankSxDto.sclearacctbankname" caption="付款银行" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="7d0ef825-4dea-4577-b7fe-bf633e90e178" name="代理银行名称" binding="tvPayreckbankSxDto.spaybankname" caption="代理银行名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="a7bddf63-ba72-43f2-bb83-673894e3e2ce" name="代理银行行号" binding="tvPayreckbankSxDto.sagentbnkcode" caption="代理银行行号" editable="false"/>
+    </contentareanode>
+    <contentareanode id="39bc7880-833a-41c6-969e-139313dae098" name="申请退款凭证主信息" grouptitle="申请退款凭证主信息">
+      <widgetRefs xsi:type="model:Text" id="9687f220-68b8-4da5-9fda-26d533c4208b" name="行政区划代码" binding="tvPayreckbankbackSxDto.sadmdivcode" caption="行政区划代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="9e2c2290-697e-40cb-b291-d7e363ceac37" name="业务年度" binding="tvPayreckbankbackSxDto.sofyear" caption="业务年度" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="b87a749f-05a1-4cc5-8948-bca730dd50b2" name="凭证类型编号" binding="tvPayreckbankbackSxDto.svtcode" caption="凭证类型编号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="7deee93f-a319-4d07-a262-018362a331a7" name="凭证日期" binding="tvPayreckbankbackSxDto.dvoudate" caption="凭证日期" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="a27dcfd8-f9df-4f66-bfe9-d60956546f2f" name="凭证编号" binding="tvPayreckbankbackSxDto.svouno" caption="凭证编号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="93736377-58af-456a-8c5d-bfb208c297ff" name="国库代码" binding="tvPayreckbankbackSxDto.strecode" caption="国库代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="f22d9b20-1460-4348-84cd-1aee64118281" name="财政机关代码" binding="tvPayreckbankbackSxDto.sfinorgcode" caption="财政机关代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e38a3ab3-d308-4c15-b4e7-3ca421c66556" name="金额" binding="tvPayreckbankbackSxDto.famt" caption="金额" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="9859f33a-dea5-4366-9ed9-f527cd0cc1ef" name="资金性质编码" binding="tvPayreckbankbackSxDto.sfundtypecode" caption="资金性质编码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="89bfec5a-7995-42f0-a265-71750f9973d7" name="资金性质名称" binding="tvPayreckbankbackSxDto.sfundtypename" caption="资金性质名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="0544ccd2-eb1c-435e-9942-eaa51dff0e3b" name="收款人账号" binding="tvPayreckbankbackSxDto.spayeeacct" caption="收款人账号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e94d4380-39ba-4f01-9a13-f9ef6f810d23" name="收款人名称" binding="tvPayreckbankbackSxDto.spayeename" caption="收款人名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="8cc1810d-7329-4558-bde6-03c07800ef34" name="收款银行" binding="tvPayreckbankbackSxDto.sagentacctbankname" caption="收款银行" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="6ce26146-1824-42b8-b20b-1a821fd52694" name="付款人账号" binding="tvPayreckbankbackSxDto.spayeracct" caption="付款人账号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="34c8349e-7da4-413b-a0da-8624f598049f" name="付款人名称" binding="tvPayreckbankbackSxDto.spayername" caption="付款人名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="35d6d7dd-5c1e-416a-915f-bc5e56e7e68b" name="付款银行" binding="tvPayreckbankbackSxDto.sclearacctbankname" caption="付款银行" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="96467a04-308e-4179-9408-d1ff10881bca" name="代理银行名称" binding="tvPayreckbankbackSxDto.spaybankname" caption="代理银行名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="ac28bed6-7ec6-4514-acc0-d400027e7af2" name="代理银行行号" binding="tvPayreckbankbackSxDto.sagentbnkcode" caption="代理银行行号" editable="false"/>
+    </contentareanode>
+    <contentareanode id="d493e769-46e0-4f57-932e-443249706563" name="直接支付清算额度主信息" grouptitle="直接支付清算额度主信息">
+      <widgetRefs xsi:type="model:Text" id="e5af9960-3fc8-4e3d-a79f-ec8528902ae4" name="业务年度" binding="tvDirectpaymsgmainSxDto.sofyear" caption="业务年度" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="5b113ea2-969c-48f8-ba08-8facc58e5eb8" name="委托日期" binding="tvDirectpaymsgmainSxDto.scommitdate" caption="委托日期" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="be2a5e99-893e-4f8b-b870-3c90e576f03f" name="凭证编号" binding="tvDirectpaymsgmainSxDto.staxticketno" caption="凭证编号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="84e36500-e317-4a2f-bb2d-eea208214525" name="交易金额" binding="tvDirectpaymsgmainSxDto.nmoney" caption="交易金额" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="c34bb60e-bbce-41cb-9ccf-0d07a275e3a6" name="资金性质编码" binding="tvDirectpaymsgmainSxDto.sfundtypecode" caption="资金性质编码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="f809ed24-b10f-45b7-ad70-1d6e644f9677" name="资金性质名称" binding="tvDirectpaymsgmainSxDto.sfundtypename" caption="资金性质名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="80674513-ac39-4d53-a91c-ba9cc854c7fc" name="代理银行名称" binding="tvDirectpaymsgmainSxDto.spaybankname" caption="代理银行名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="c4f02355-a7d0-40d5-b041-fcd4c68dbd6b" name="代理银行行号" binding="tvDirectpaymsgmainSxDto.spaybankno" caption="代理银行行号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e82e34fb-78aa-4011-8c59-80d6fc0376fc" name="代理银行编码" binding="tvDirectpaymsgmainSxDto.spaybankcode" caption="代理银行编码" editable="false"/>
+    </contentareanode>
+    <contentareanode id="6c6f88fa-8f1a-45ca-bd8f-9e8beba613cf" name="授权支付清算额度主信息" grouptitle="授权支付清算额度主信息">
+      <widgetRefs xsi:type="model:Table" id="f5e07051-0e23-4566-a87c-8b610354e0ee" name="TableImpl-f5e07051-0e23-4566-a87c-8b610354e0ee" binding="pagingGrantpaymsgmain" tabletype="paging" refdoubleclickdirection="148e9175-1281-4b60-9373-d55dec08331c" refsingleclickdirection="eac5fafa-232c-40b2-9757-c82849569495" height="225">
+        <columnlist id="5e40c843-1304-48f2-af8d-8f9faf9979de" name="业务年度" binding="sofyear" caption="业务年度"/>
+        <columnlist id="f3594d15-0ae9-4d06-9b74-b361dae01246" name="委托日期" binding="scommitdate" caption="委托日期"/>
+        <columnlist id="cf553d77-2566-4783-bd78-d70209476857" name="凭证编号" binding="spackageticketno" caption="凭证编号"/>
+        <columnlist id="b6edd83a-4911-4f8b-a0a2-f22d77ef949e" name="交易金额" binding="nmoney" caption="交易金额"/>
+        <columnlist id="de546db1-c778-4c64-a0d2-6973a823e526" name="资金性质编码" binding="sfundtypecode" caption="资金性质编码"/>
+        <columnlist id="7458c43c-ebba-4753-806f-1a1a65937f51" name="资金性质名称" binding="sfundtypename" caption="资金性质名称"/>
+        <columnlist id="d675b730-928c-485a-8060-8ac504a40b18" name="代理银行名称" binding="spaybankname" caption="代理银行名称"/>
+        <columnlist id="ddbe2215-e3fb-4057-aac7-494c14f3537d" name="代理银行行号" binding="spaybankno" caption="代理银行行号"/>
+        <columnlist id="d94e7f34-42c5-4315-a7f7-2a730992f32a" name="代理银行编码" binding="spaybankcode" caption="代理银行编码"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="ec361584-3311-4fbe-8d07-70ad77567531" name="实拨资金主信息" grouptitle="实拨资金主信息">
+      <widgetRefs xsi:type="model:Text" id="11b708b2-beb8-4e38-b565-33be66996d7b" name="业务年度" binding="tvPayoutmsgmainSxDto.sofyear" caption="业务年度" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="d2994fc4-8d4f-43e6-9cde-926c13d7db92" name="委托日期" binding="tvPayoutmsgmainSxDto.scommitdate" caption="委托日期" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="fd0228f7-d8d4-4e08-a47d-b6d703813169" name="凭证编号" binding="tvPayoutmsgmainSxDto.staxticketno" caption="凭证编号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e460f346-2768-48dd-bf8a-7e7feba4c4af" name="国库代码" binding="tvPayoutmsgmainSxDto.strecode" caption="国库代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="1140628a-d623-4a52-85b5-ec8aae57ef4b" name="出票单位" binding="tvPayoutmsgmainSxDto.spayunit" caption="出票单位" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="b0809f1b-7475-4050-80fa-ee7e1363d639" name="支付金额" binding="tvPayoutmsgmainSxDto.nmoney" caption="支付金额" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="be92966c-4dd7-4a4d-b40e-1a25faa0ec33" name="资金性质编码" binding="tvPayoutmsgmainSxDto.sfundtypecode" caption="资金性质编码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="f1984758-e346-4d64-83d1-41a7dac9fa3e" name="资金性质名称" binding="tvPayoutmsgmainSxDto.sfundtypename" caption="资金性质名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="aa839d4b-5006-43d7-9829-fde482129b9e" name="收款人账号" binding="tvPayoutmsgmainSxDto.srecacct" caption="收款人账号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="47473254-75a0-4d38-b521-07df1eb570cf" name="收款人名称" binding="tvPayoutmsgmainSxDto.srecname" caption="收款人名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="d1baf00d-830f-4fcb-ac71-1f9e3bb63fb5" name="收款银行" binding="tvPayoutmsgmainSxDto.srecbankname" caption="收款银行" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="80b4883a-4e2e-47c5-92db-4f0a8ed9b448" name="付款人账号" binding="tvPayoutmsgmainSxDto.spayeracct" caption="付款人账号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="dff2d9c9-0230-4a4c-a4f8-77fe512eae56" name="付款人名称" binding="tvPayoutmsgmainSxDto.spayername" caption="付款人名称" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="aec32014-1d38-47c4-a023-0957ad3767ad" name="付款银行" binding="tvPayoutmsgmainSxDto.spayerbankname" caption="付款银行" editable="false"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="58a34c65-8c27-4ba6-ab99-32a49ce4c7e8">
+    <pages id="8ab81eab-0227-4908-a238-6d9f2e3c34e1" name="凭证比对业务界面">
+      <views id="42a352ce-9878-4d65-98cb-20deae302aa8" name="维护界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="a602c3a1-0b3c-4df2-8cfa-68491030548a 4f3ea5a1-8608-4854-9fe8-2d07494c80a2">
+        <buttonArea id="62eb4378-8946-45ba-b414-7e6639283698" name="JButtonAreaImpl-62eb4378-8946-45ba-b414-7e6639283698">
+          <buttons id="562106bb-f71a-4ac6-bd10-e15148512d97" name="全选" caption="全选" direction="cad7dba3-446a-4693-a04d-83e224fce618"/>
+          <buttons id="173bf35c-b0b1-4eb4-905b-7644cd3bbe03" name="读取凭证" caption="读取凭证" direction="e2560295-a2f3-4de2-a9e2-941b9b396d64"/>
+          <buttons id="a770d842-9ff8-4339-95ca-3bac3e0d1ba5" name="重新校验" caption="重新校验" direction="a8087e71-c2eb-42c3-84e0-03b76053ce06"/>
+          <buttons id="c506e89e-37ac-4348-87e8-d7dacd78f9dd" name="数据比对" caption="数据比对" direction="6c502ab1-dbc1-4c6a-a50d-82460206d6e6"/>
+          <buttons id="9c82d7ab-62fe-4c25-93cf-fbf594abce70" name="同步状态" caption="同步状态" direction="1aebf06b-1ef5-43e3-ba91-1bd23ea89aea"/>
+          <buttons id="88626936-c499-4cdd-9590-1c47dc293554" name="发送回单" caption="发送回单" direction="5ae9acf5-34db-479c-9958-8056968ad387"/>
+          <buttons id="236de9a5-a667-46c0-813b-409b15c9f371" name="生成正式数据" caption="生成正式数据" direction="1f77d9ea-0ee1-4cc2-97b6-515d3be1e4c8"/>
+        </buttonArea>
+      </views>
+      <views id="cd3e799f-af6c-4af4-a2af-bf2b55ec1bd4" name="申请划款凭证详细信息页面" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="37068fe2-a70c-49b8-a792-28348f581ad2 04050f75-a031-4dfd-b210-2a1ead6ca8c9">
+        <buttonArea id="dae999ae-7a6b-4f49-a2b6-517842a21819" name="JButtonAreaImpl-dae999ae-7a6b-4f49-a2b6-517842a21819">
+          <buttons id="e5b07a32-a935-433f-b488-72ed4ca8d7f6" name="返回" caption="返回" direction="a8f02fe7-c366-4db9-be20-36c29f6966aa"/>
+        </buttonArea>
+      </views>
+      <views id="c4175a57-fbbc-4a65-8d1f-3aeab2b11c3c" name="申请退款凭证详细信息页面" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="39bc7880-833a-41c6-969e-139313dae098 63c97bfa-4508-4b86-a13e-93db62dd27e7">
+        <buttonArea id="737c6bba-696f-4cba-a9c8-368b17dbe0f5" name="JButtonAreaImpl-dae999ae-7a6b-4f49-a2b6-517842a21819">
+          <buttons id="0399cebb-3d44-44bd-b2f2-559d78f626fe" name="返回" caption="返回" direction="a8f02fe7-c366-4db9-be20-36c29f6966aa"/>
+        </buttonArea>
+      </views>
+      <views id="421bab2c-039d-4fa8-9243-54ef0fcef023" name="直接支付清算额度详细信息页面" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="d493e769-46e0-4f57-932e-443249706563 2488b583-8553-4ada-bbce-e524bc112b8d">
+        <buttonArea id="0b03d4ce-2564-429d-8d7c-81131cad2bed" name="JButtonAreaImpl-dae999ae-7a6b-4f49-a2b6-517842a21819">
+          <buttons id="54666b33-1fdc-4802-a881-83cc71e0fa3a" name="返回" caption="返回" direction="a8f02fe7-c366-4db9-be20-36c29f6966aa"/>
+        </buttonArea>
+      </views>
+      <views id="25c8a35a-6e5d-416b-9003-ed8153346841" name="授权支付清算额度详细信息页面" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="6c6f88fa-8f1a-45ca-bd8f-9e8beba613cf 1baff565-491a-408b-b7e2-048d5a64c7e1">
+        <buttonArea id="f4ca74a1-1dbf-4f5b-a732-d0c0c9c58494" name="JButtonAreaImpl-dae999ae-7a6b-4f49-a2b6-517842a21819">
+          <buttons id="5ca8ce48-e60f-4c2d-99d7-3fb34c33e28b" name="返回" caption="返回" direction="a8f02fe7-c366-4db9-be20-36c29f6966aa"/>
+        </buttonArea>
+      </views>
+      <views id="124b9c01-74b5-4835-b605-67c52906a651" name="实拨资金详细信息" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="ec361584-3311-4fbe-8d07-70ad77567531 37d487d6-a722-464a-b636-cce736c4c4af">
+        <buttonArea id="298fbeb4-6c7c-4604-8d69-d1f4dd938e5f" name="JButtonAreaImpl-dae999ae-7a6b-4f49-a2b6-517842a21819">
+          <buttons id="4904ffd6-6d60-4f77-8b9c-4281d67629f0" name="返回" caption="返回" direction="a8f02fe7-c366-4db9-be20-36c29f6966aa"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

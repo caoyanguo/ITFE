@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="FreeFormat9105" beanIdRef="FreeFormat9105" />
+</jb:bean>
+<jb:bean beanId="FreeFormat9105" class="java.util.HashMap" createOnElement="FreeFormat9105">
+	<jb:value property="SrcNodeCode" decoder="String" data="CFX/MSG/FreeFormat9105/SrcNodeCode" />
+	<jb:value property="DesNodeCode" decoder="String" data="CFX/MSG/FreeFormat9105/DesNodeCode" />
+	<jb:value property="SendOrgCode" decoder="String" data="CFX/MSG/FreeFormat9105/SendOrgCode" />
+	<jb:value property="RcvOrgCode" decoder="String" data="CFX/MSG/FreeFormat9105/RcvOrgCode" />
+	<jb:value property="Content" decoder="String" data="CFX/MSG/FreeFormat9105/Content" />
+</jb:bean>
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

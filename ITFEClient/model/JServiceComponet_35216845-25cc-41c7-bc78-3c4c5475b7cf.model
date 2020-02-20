@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="35216845-25cc-41c7-bc78-3c4c5475b7cf" name="国库主体信息服务组件" ename="TsTreasury">
+  <jproperties id="734166f1-1a29-48f8-9368-cc00bbd5d381" key="GeneratedTime" value="1337325369437"/>
+  <refModule href="JModule_afaacda5-b2fa-440e-b607-fa78d829b043.model#afaacda5-b2fa-440e-b607-fa78d829b043"/>
+  <methods id="85f3a09b-b251-4b95-b25d-ae6ad141ea74" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="国库主体信息">
+    <methodParams id="6f47eb2b-c58e-4d32-b115-db70d1405fe1" name="国库主体信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="12bf07c8-0ce1-4cc5-98a8-5ef67aa921ed" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="7cd3e2d0-3eec-43d6-be5a-bf30312a8f15" name="国库主体信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="12bf07c8-0ce1-4cc5-98a8-5ef67aa921ed" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="12292196-27fc-47a0-b230-7a2dfc806111" name="国库主体信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

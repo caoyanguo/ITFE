@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="148288ef-e49d-445a-8fd1-d8cf328eb218" name="征收机关对照表服务组件" ename="TsConverttaxorg">
+  <jproperties id="af04b199-6489-4ff0-99b3-ccdafcc4f512" key="GeneratedTime" value="1368954029312"/>
+  <refModule href="JModule_38411201-d599-4ce0-afba-c38064a446c6.model#38411201-d599-4ce0-afba-c38064a446c6"/>
+  <methods id="609efbbe-d852-4b9a-8735-e68967ab33b4" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="征收机关对照表">
+    <methodParams id="fb75a824-65c6-4f18-9897-40f86dc8505a" name="征收机关对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="006fa26f-0b58-49f3-8b3e-8f8328cdd91c" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="b2e01011-aa59-48e8-b046-6c4b43fb13ce" name="征收机关对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="006fa26f-0b58-49f3-8b3e-8f8328cdd91c" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="6717de1c-052d-4440-9949-7ac2093284d7" name="征收机关对照表更新条件" ename="initdto"/>
+    <methodParams id="c9d5e635-c453-43f4-8500-e9d5d98595a3" name="征收机关对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="fe6be212-cc0a-465e-8349-d8ed5ea84142" ename="dataimport" name="导入数据文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="4c43031a-1a6d-40ee-b273-e97e9b80f24e" name="文件路径" ename="filepath" type="java.lang.String"/>
+    <methodParams id="8a044b36-61d4-436e-8b17-14ad9d5be957" name="导入类型" ename="importtype" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

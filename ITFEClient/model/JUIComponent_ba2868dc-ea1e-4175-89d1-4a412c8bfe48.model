@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="ba2868dc-ea1e-4175-89d1-4a412c8bfe48" name="报表与入库流水核对" ename="tvIncomeDetailReportCheck">
+  <jproperties id="a956409e-a971-468a-a18b-acdcc22922e2" key="GeneratedTime" value="1400054395721"/>
+  <refModule href="JModule_ed514248-26d4-4ba4-a2f6-bea19c7946db.model#ed514248-26d4-4ba4-a2f6-bea19c7946db"/>
+  <model id="3aefe63f-1ec7-4142-86c8-36ee1381d684" name="JModelImpl-3aefe63f-1ec7-4142-86c8-36ee1381d684">
+    <attributes id="7f3b62a5-66e4-4ed4-8bf1-6c27d75fda4f" name="dto" type="com.cfcc.itfe.persistence.dto.TvIncomeDetailReportCheckDto"/>
+    <attributes id="e66acdde-d2ad-4e93-842b-1199a748618f" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="1b48e1d2-1ce5-4d48-a273-694a7c26ff40" name="查询" ename="search"/>
+    <directions id="028f01b7-4b0f-40fb-8a6f-c29dce0a94fe" name="核对" ename="incomeDetailReportCheck"/>
+    <directions id="9e8f7048-7075-403b-8c79-8727f87a1419" name="查询日志" ename="querysyslog"/>
+  </model>
+  <services href="JServiceComponet_e79654ec-54d5-4f88-bc7d-63924d62503b.model#e79654ec-54d5-4f88-bc7d-63924d62503b"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="10939545-eb0e-4828-ae44-d6536e7d932a">
+    <contentareanode id="636be9a4-2773-425b-928d-059abb9384cf" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Combo" id="709cfffb-dfed-4acc-8c00-13fe69ca9ea7" name="国库代码" binding="dto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="1faa82e6-cf74-4346-ac8b-02ae9ebcb47c" name="报表日期" binding="dto.screatdate" caption="报表日期"/>
+    </contentareanode>
+    <contentareanode id="80905d3b-982e-456e-8f1a-982b49560e8b" name="查询结果一览表" grouptitle="查询结果一览表">
+      <widgetRefs xsi:type="model:Table" id="171a0217-c5a1-4bb6-b178-00d0ec6e26eb" name="maintenance" binding="pagingcontext" caption="查询结果" tabletype="paging" showcheckbox="false">
+        <columnlist id="7342fc93-e11b-492b-b874-961db1a71acd" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="fd3010e3-4f81-4d14-9062-cb62f3522b5d" name="shold1" binding="shold1" caption="国库名称"/>
+        <columnlist id="333a0fe6-a62d-4d82-b929-cba41eb81e2f" name="screatdate" binding="screatdate" caption="报表日期"/>
+        <columnlist id="eaf49468-a047-4e23-b931-8cea313b8a60" name="nmoneyday" binding="nmoneyday" caption="报表金额"/>
+        <columnlist id="ac62091c-77e1-4f83-b0ad-d5938c1d6157" name="famt" binding="famt" caption="入库流水金额"/>
+        <columnlist id="02a444e9-5c4a-4170-b65a-ff9c239599ae" name="sstatus" binding="sstatus" caption="状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#abd73f35-bcf9-4da8-9cb7-a04a889c232a"/>
+        </columnlist>
+        <columnlist id="0eb6f0dc-3fb3-4654-a727-668034486a89" name="sdemo" binding="sdemo" caption="详细信息"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="5394e5bc-6268-4f3c-bb78-18768e45f29b" name="监控日志查询条件" grouptitle="监控日志查询条件">
+      <widgetRefs xsi:type="model:Text" id="a275b4ee-cd6e-4b59-964a-a60fbe071e98" name="报表日期" binding="syslogdto.sdate" caption="报表日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="6e8e6464-54f1-4243-a3c6-808b9fd4670a" name="财政机构代码" binding="syslogdto.susercode" caption="财政机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="80322f3b-6bc5-4b2b-920d-1868a20bc82d" name="业务类型" binding="syslogdto.soperationtypecode" caption="业务类型"/>
+    </contentareanode>
+    <contentareanode id="67862408-57e8-475c-a5ae-a07d0b062f30" name="监控日志查询一览表" grouptitle="监控日志查询一览表">
+      <widgetRefs xsi:type="model:Table" id="60c49994-9afc-43f2-b93a-0f1e4035873b" name="查询结果" binding="logpagingcontext" caption="查询结果" tabletype="paging">
+        <columnlist id="15d5ae1b-f2da-481e-954a-0025d831ab36" name="报表日期" binding="sdate" caption="报表日期"/>
+        <columnlist id="7dc2d1de-4908-4131-9f74-c9497bdda33d" name="财政机构代码" binding="susercode" caption="财政机构代码"/>
+        <columnlist id="6fb6ecb0-9bf2-479c-83f2-225923f99b90" name="业务类型" binding="soperationtypecode" caption="业务类型"/>
+        <columnlist id="53b465c0-88ab-4e5e-a89a-414912ec99cc" name="读取方财政机构代码" binding="sdemo" caption="读取方财政机构代码"/>
+        <columnlist id="0849fe6d-da37-46e6-bda9-1833979d129e" name="读取报文标示号" binding="soperationdesc" caption="读取报文标示号"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="a63de062-6530-4408-9745-ad129c548807">
+    <pages id="ff482cfa-97e6-4d2f-9e22-066f5e97a6b3" name="报表与入库流水核对界面">
+      <views id="0f73f98c-afdf-4f78-be83-668808187f4f" name="报表与入库流水核对界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="636be9a4-2773-425b-928d-059abb9384cf 80905d3b-982e-456e-8f1a-982b49560e8b">
+        <buttonArea id="2d4a5b6f-fac8-47af-b8c0-d2a1eb544e12" name="JButtonAreaImpl-2d4a5b6f-fac8-47af-b8c0-d2a1eb544e12">
+          <buttons id="254938d5-f2cf-4335-b3df-872b2b6f352d" name="核对" caption="核对" layout="GridLayout" direction="028f01b7-4b0f-40fb-8a6f-c29dce0a94fe"/>
+          <buttons id="5ff00eaa-aee4-4e3a-a6b7-3bfe2bc4cc78" name="查询" caption="查询" layout="GridLayout" direction="1b48e1d2-1ce5-4d48-a273-694a7c26ff40"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="f048f639-8832-43af-902d-55a88ab40e34" name="财政报表申请监控">
+      <views id="be14cca5-14c4-41f8-ac83-643f3a9841d9" name="财政报表申请监控日志查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="5394e5bc-6268-4f3c-bb78-18768e45f29b 67862408-57e8-475c-a5ae-a07d0b062f30">
+        <buttonArea id="a9a35e37-f335-4c85-a3ae-039c5065d7b4" name="JButtonAreaImpl-a9a35e37-f335-4c85-a3ae-039c5065d7b4">
+          <buttons id="4920799a-f129-4de9-83c6-585795237c69" name="查询" caption="查询" direction="9e8f7048-7075-403b-8c79-8727f87a1419"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

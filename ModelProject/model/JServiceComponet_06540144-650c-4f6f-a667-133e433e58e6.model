@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="06540144-650c-4f6f-a667-133e433e58e6" name="电子税票统计服务组件" ename="tmpfilestatistics">
+  <jproperties id="c97e16f5-9c4b-4054-a856-26b331d93037" key="GeneratedTime" value="1337845419684"/>
+  <refModule href="JModule_7ac2fca6-b87b-4622-bc02-37fceffbb150.model#7ac2fca6-b87b-4622-bc02-37fceffbb150"/>
+  <methods id="3491bd2c-e2e1-407f-8d12-164e14ddff80" ename="getlist" name="统计电子税票" returntype="java.util.List">
+    <methodParams id="8d5d2209-475b-44f8-bf0f-0679e034ea63" name="开始时间" ename="starttime" type="java.lang.String"/>
+    <methodParams id="c9edd59b-83f9-4074-9bff-6525d855d4dd" name="结束时间" ename="endtime" type="java.lang.String"/>
+    <methodParams id="ccff7376-1120-4ab3-bcbc-7d69bd6956d1" name="国库代码" ename="trecode" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

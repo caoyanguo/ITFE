@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<description>
+		JAF Ormap generator  
+	</description>
+
+	<bean id="NamingConvention" class="com.cfcc.jaf.persistence.dao.NamingConvention">
+		<property name="conventionMock"
+			value="DTO_UNDERLINE_TO_UPPERCASE,COLUMN_IGNORE_UNDERLINE" />
+	</bean>
+
+ 
+	<bean id="mapGenerator.ORM.GEN.ID" class="com.cfcc.jaf.persistence.jaform.MapGenerator">
+
+	 
+		<property name="dbType" value="DB2" />
+		<property name="databaseTables" ref="db2Tables" />
+
+		<property name="tablePattern">
+			<list>
+			<value>TV_PAYOUTMSGSUB</value>
+			</list>
+		</property>
+
+		<property name="tableSchema" value="DB2ADMIN" />
+
+		<!--==== time stamps && change number=====================-->
+		<property name="columnModifyNumber" value="I_CHGNUM" />
+		<property name="columnCreateTimeStamp" value="TS_CREATE" />
+		<property name="columnUpdateTimeStamp" value="TS_SYSUPDATE" />
+		<property name="columnChecked" value="I_CHGNUM" />
+
+ 
+		<property name="outputPathDao" value="E:\program\difanglenglian\3CODE\ITFEBuilder//src/" />
+		<property name="outputPathPk" value="E:\program\difanglenglian\3CODE\ITFEBuilder//src/" />
+		<property name="outputPathDto" value="E:\program\difanglenglian\3CODE\ITFEBuilder//src/" />
+		<property name="outputPathInfo" value="E:\program\difanglenglian\3CODE\ITFEBuilder//src/" />
+		<property name="outputPathXml" value="E:\program\difanglenglian\3CODE\ITFEBuilder//src//config/databaseconfig/ormap/ItfeOrmap.xml" />
+					
+		<property name="packageDao" value="com.cfcc.itfe.persistence.dao" />
+		<property name="packagePk" value="com.cfcc.itfe.persistence.pk" />
+		<property name="packageDto" value="com.cfcc.itfe.persistence.dto" />
+		<property name="packageInfo" value="com.cfcc.itfe.persistence.info" />
+		
+		<property name="suffixDao" value="Dao" />
+		<property name="suffixPk" value="PK" />
+		<property name="suffixDto" value="Dto" />
+		<property name="suffixInfo" value="Info" />
+
+		<!--============================   ============================-->
+		<property name="vmDao" value="com/cfcc/jaf/persistence/jaform/vm/dao2.0.vm" />
+		<property name="vmPk" value="com/cfcc/jaf/persistence/jaform/vm/pk.vm" />
+		<property name="vmDto" value="com/cfcc/jaf/persistence/jaform/vm/dto2.0.vm" />
+		<property name="vmInfo" value="com/cfcc/jaf/persistence/jaform/vm/tableinfo.vm" />
+		<property name="vmOrmapxml" value="com/cfcc/jaf/persistence/jaform/vm/xml.vm" />
+	</bean>
+
+	<!--==================== ============================-->
+		<!--
+	<property name="parentChildrenRels">
+		<bean class="com.cfcc.jaf.persistence.jaform.info.ParentChildrenRefs"
+			init-method="init">
+			<property name="refs">
+				<list>
+					************Start****************
+					<bean class="com.cfcc.jaf.persistence.jaform.info.ReferenceInfo">
+						<property name="parentTableName" value="TRL_PKG001COME_RCV_MAIN" />
+						<property name="childTableName" value="TRL_PKG001COME_RCV_DETAIL" />
+						<property name="keys" value="i_PkgSrlNo" />
+					</bean>
+				</list>
+			</property>
+		</bean>
+	</property>
+-->
+
+	<!--================= ====================-->
+
+	<bean id="db2Tables" class="com.cfcc.jaf.persistence.jaform.db.db2.DB2Tables" >
+		<property name="sqlExecutorFactory" ref="mySQLExecutorFactory" />
+  	
+	</bean>
+
+	<bean id="mySQLExecutorFactory" class="com.cfcc.jaf.persistence.jdbc.sql.SQLExecutorFactory">
+		<property name="dataSource" ref="jafDataSource" />
+		<property name="databaseType" value="DB2" />
+		<property name="maxRows" value="10000" />
+		<property name="exceedRowLimitStrategy" value="ignore" />
+		<property name="statistics" value="true" />
+	</bean>
+
+	<!--=================== ===============-->
+	<bean id="jafDataSource" class="com.cfcc.jaf.persistence.jdbc.core.JAFDataSource">
+		<property name="containDataSource" ref="apacheDataSource" />
+		<property name="containerTransaction">
+			<value>false</value>
+		</property>
+	</bean>
+
+	<bean id="apacheDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.ibm.db2.jcc.DB2Driver" />
+		<property name="url" value="jdbc:db2://10.1.4.244:50000/itfedb" />
+		<property name="username" value="db2admin" />
+		<property name="password" value="db2admin" />
+	</bean>
+
+	<!--=================== SQL Executor ======= -->
+	<bean id="SQLExecutorFactory.GLOBAL.ID" class="com.cfcc.jaf.persistence.jdbc.sql.SQLExecutorFactory">
+		<property name="dataSource" ref="jafDataSource" />
+		<property name="databaseType" value="DB2" />
+		<property name="maxRows" value="10000" />
+		<property name="exceedRowLimitStrategy" value="ignore" />
+		<property name="statistics" value="true" />
+	</bean>
+</beans>

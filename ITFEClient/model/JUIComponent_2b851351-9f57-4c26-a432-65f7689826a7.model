@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2b851351-9f57-4c26-a432-65f7689826a7" name="提醒信息查询" ename="remindInfoSearch">
+  <jproperties id="9d0cf821-f91f-4b17-a873-ed0740010974" key="GeneratedTime" value="1427681477097"/>
+  <refModule href="JModule_a5e07e22-d0d5-4fb5-9bfd-d0dca12f1b24.model#a5e07e22-d0d5-4fb5-9bfd-d0dca12f1b24"/>
+  <model id="c9e0f0e2-e279-4656-8d58-c1e8332851a2" name="JModelImpl-c9e0f0e2-e279-4656-8d58-c1e8332851a2">
+    <attributes id="75ac2759-7ada-4a4d-8b6c-740d214e1b8a" name="voucherTypeList" type="java.util.List"/>
+    <attributes id="9fbf586a-c584-4985-8d42-f57503d86f73" name="acctDate" type="java.sql.Date"/>
+    <attributes id="13348ea8-7b78-460e-af55-1e883c5de79a" name="voucherType" type="java.lang.String"/>
+    <attributes id="8a1b1fe3-eb08-463e-9605-e5c6f062f949" name="remindList" type="java.util.List"/>
+    <attributes id="3ddfd038-4afb-461b-8625-04987f6856b7" name="remindIs" type="java.lang.String"/>
+    <attributes id="2efcc8a4-45fe-4dd4-b0d4-3109a2667437" name="voucherSourceList" type="java.util.List"/>
+    <attributes id="534fbace-7b37-4e62-8c04-2e443b34d6ec" name="voucherSource" type="java.lang.String"/>
+    <attributes id="0ba073d5-0681-4f19-a72a-6d8f8a52ba0c" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="00495ba5-262e-44a2-8224-929a00754bfd" name="serverResult" type="java.util.List"/>
+    <directions id="9d9d3340-94a9-4804-ab07-72de70cf6244" name="查询提醒信息" ename="searchInfo"/>
+  </model>
+  <services href="JServiceComponet_bff6734c-228f-4bcf-9378-ea5aba2cdb55.model#bff6734c-228f-4bcf-9378-ea5aba2cdb55"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="b6931804-c32c-48ee-a906-08f1eac5d38d">
+    <contentareanode id="5d440454-041c-4376-9564-4faa669b2aa9" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Combo" id="3c0fad24-37b1-4be8-9b23-65e1de85f1b4" name="国库主体代码" binding="treCode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="45067035-2177-4cd9-88cf-3432bdcdafbe" name="报文来源" binding="voucherSource" caption="报文来源" display="displayValue" underly="underlyValue" modelsource="voucherSourceList"/>
+      <widgetRefs xsi:type="model:Text" id="9a10d10c-bf05-494e-b867-b28f4722baa0" name="账务日期" binding="acctDate" caption="账务日期" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="8f7b70c0-09bd-441e-874a-37c5731dce16" name="凭证类型" binding="voucherType" caption="凭证类型" display="displayValue" underly="underlyValue" modelsource="voucherTypeList"/>
+      <widgetRefs xsi:type="model:Combo" id="b892f116-d564-489d-831e-aff46732af08" name="预警提示" binding="remindIs" caption="预警提示" display="displayValue" underly="underlyValue" modelsource="remindList"/>
+      <widgetRefs xsi:type="model:Button" id="3c9af796-8f4d-4c58-92b2-c56576620071" name="查询" caption="查询" layout="GridLayout" checkrequired="true" direction="9d9d3340-94a9-4804-ab07-72de70cf6244"/>
+    </contentareanode>
+    <contentareanode id="3ed91626-aeda-4803-9cab-1165ae4c77cf" name="查询结果信息" grouptitle="查询结果信息">
+      <widgetRefs xsi:type="model:Table" id="9bee5e2f-6391-47e7-80ec-01faec1f1c43" name="TableImpl-9bee5e2f-6391-47e7-80ec-01faec1f1c43" binding="serverResult" tabletype="" labelprovider="com.cfcc.itfe.client.common.table.SuperviseTableLabelProvider">
+        <columnlist id="51a0e7c9-fc43-4596-8060-3eacf63b8277" name="凭证编号" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="6c08e66b-e5c5-4d29-bc6f-6266196a855a" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="b817f0df-855b-4c9d-97ab-76ef9a58ce99" name="区划代码" binding="sadmdivcode" caption="区划代码"/>
+        <columnlist id="f0ce5907-ba56-45b2-98f9-ebe051bdab30" name="凭证类型" binding="svtcode" caption="凭证类型"/>
+        <columnlist id="4d157690-317a-4a25-84f6-e8e0fc1b8381" name="凭证状态" binding="sstatus" caption="凭证状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1775bce2-cbc8-4221-88db-815b83f308e0"/>
+        </columnlist>
+        <columnlist id="f259489e-b916-43c0-9223-0560ac6e3243" name="金额" binding="nmoney" caption="金额"/>
+        <columnlist id="0c65ae23-ff10-479d-9dc6-860c5a095431" name="接收日期" binding="screatdate" caption="接收日期"/>
+        <columnlist id="d0b6a6bb-a549-4b6c-bbf1-c1f81337b898" name="详细信息" binding="sdemo" caption="详细信息"/>
+        <columnlist id="57f9c7ea-9d61-4983-9c38-ac645a812b4f" name="是否预警" binding="shold1" caption="是否预警">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="82ad67d8-55fe-4cd5-8ae3-4893cd03cff2">
+    <pages id="a4d21634-5d4a-4d49-b252-799ced5d81ce" name="信息查询">
+      <views id="889e5f9b-528f-4875-bad4-907192cabb08" name="信息查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="5d440454-041c-4376-9564-4faa669b2aa9 3ed91626-aeda-4803-9cab-1165ae4c77cf"/>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

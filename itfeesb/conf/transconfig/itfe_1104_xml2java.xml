@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead1104" beanIdRef="BatchHead1104" />
+	<jb:wiring property="RetTreasury1104" beanIdRef="RetTreasury1104s" />
+</jb:bean>
+<jb:bean beanId="BatchHead1104" class="java.util.HashMap" createOnElement="BatchHead1104">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/BatchHead1104/TaxOrgCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead1104/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead1104/PackNo" />
+	<jb:value property="ReturnTerm" decoder="String" data="CFX/MSG/BatchHead1104/ReturnTerm" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead1104/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead1104/AllAmt" />
+</jb:bean>
+<jb:bean beanId="RetTreasury1104s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="RetTreasury1104" />
+</jb:bean>
+<jb:bean beanId="RetTreasury1104" class="java.util.HashMap" createOnElement="RetTreasury1104">
+	<jb:value property="TraNo" decoder="String" data="CFX/MSG/RetTreasury1104/TraNo" />
+	<jb:value property="DrawBackTreCode" decoder="String" data="CFX/MSG/RetTreasury1104/DrawBackTreCode" />
+	<jb:value property="PayeeBankNo" decoder="String" data="CFX/MSG/RetTreasury1104/PayeeBankNo" />
+	<jb:value property="PayeeOpBkCode" decoder="String" data="CFX/MSG/RetTreasury1104/PayeeOpBkCode" />
+	<jb:value property="PayeeAcct" decoder="String" data="CFX/MSG/RetTreasury1104/PayeeAcct" />
+	<jb:value property="PayeeName" decoder="String" data="CFX/MSG/RetTreasury1104/PayeeName" />
+	<jb:value property="TaxPayCode" decoder="String" data="CFX/MSG/RetTreasury1104/TaxPayCode" />
+	<jb:value property="TaxPayName" decoder="String" data="CFX/MSG/RetTreasury1104/TaxPayName" />
+	<jb:value property="DrawBackVouNo" decoder="String" data="CFX/MSG/RetTreasury1104/DrawBackVouNo" />
+	<jb:value property="ElectroTaxVouNo" decoder="String" data="CFX/MSG/RetTreasury1104/ElectroTaxVouNo" />
+	<jb:value property="OriTaxVouNo" decoder="String" data="CFX/MSG/RetTreasury1104/OriTaxVouNo" />
+	<jb:value property="TraAmt" decoder="String" data="CFX/MSG/RetTreasury1104/TraAmt" />
+	<jb:value property="BillDate" decoder="String" data="CFX/MSG/RetTreasury1104/BillDate" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/RetTreasury1104/BudgetType" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/RetTreasury1104/BudgetSubjectCode" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/RetTreasury1104/BudgetLevelCode" />
+	<jb:value property="TrimSign" decoder="String" data="CFX/MSG/RetTreasury1104/TrimSign" />
+	<jb:value property="DrawBackVou" decoder="String" data="CFX/MSG/RetTreasury1104/DrawBackVou" />
+	<jb:value property="DrawBackReasonCode" decoder="String" data="CFX/MSG/RetTreasury1104/DrawBackReasonCode" />
+</jb:bean>
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

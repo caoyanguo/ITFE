@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JSubSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0af3960f-4bef-45fd-a07d-21881f7bbaa4" name="接收业务子系统" ename="RecBiz">
+  <refModules href="JModule_25d11261-dcf7-4812-b1b5-99be397ccae9.model#25d11261-dcf7-4812-b1b5-99be397ccae9"/>
+  <refModules href="JModule_2a45d7c2-915d-499d-8736-08879ba0b5c8.model#2a45d7c2-915d-499d-8736-08879ba0b5c8"/>
+  <refModules href="JModule_066e4b34-9a7f-49b4-9c92-29048dc16020.model#066e4b34-9a7f-49b4-9c92-29048dc16020"/>
+  <refModules href="JModule_29b1a479-495d-47b9-a1fb-da860fabd5e0.model#29b1a479-495d-47b9-a1fb-da860fabd5e0"/>
+  <refModules href="JModule_8990503e-cae6-4256-9823-f348452cc748.model#8990503e-cae6-4256-9823-f348452cc748"/>
+  <refModules href="JModule_30aa3c15-1828-4a62-96eb-1fae64913e36.model#30aa3c15-1828-4a62-96eb-1fae64913e36"/>
+  <refModules href="JModule_273b0988-2cd5-4393-b73b-25df1a5e83d7.model#273b0988-2cd5-4393-b73b-25df1a5e83d7"/>
+  <refModules href="JModule_120e6a67-648a-48c1-b674-551c941cac2b.model#120e6a67-648a-48c1-b674-551c941cac2b"/>
+  <refModules href="JModule_560c141b-5631-4afa-9ba8-481f3179c311.model#560c141b-5631-4afa-9ba8-481f3179c311"/>
+  <refModules href="JModule_20dabe1d-aa7e-44a0-abd9-e67c9f368f6d.model#20dabe1d-aa7e-44a0-abd9-e67c9f368f6d"/>
+  <refModules href="JModule_34f70745-bf25-43cc-95ce-148944758466.model#34f70745-bf25-43cc-95ce-148944758466"/>
+  <refModules href="JModule_d60eb1bc-8abf-4288-8456-df0c2a26dfc3.model#d60eb1bc-8abf-4288-8456-df0c2a26dfc3"/>
+  <refModules href="JModule_375e0684-aaf2-471e-9c1e-2c2ce5e6e5fb.model#375e0684-aaf2-471e-9c1e-2c2ce5e6e5fb"/>
+  <refModules href="JModule_d1a5d8fa-7e83-46d4-bc53-f04ade601c8c.model#d1a5d8fa-7e83-46d4-bc53-f04ade601c8c"/>
+  <refModules href="JModule_de313762-bce3-4f16-8141-54ec7882d68a.model#de313762-bce3-4f16-8141-54ec7882d68a"/>
+  <refModules href="JModule_3502ca8e-7f9b-4aaf-a794-e01e284a673e.model#3502ca8e-7f9b-4aaf-a794-e01e284a673e"/>
+  <refModules href="JModule_52472bf8-0f78-4ed9-b657-2c6e364f42cb.model#52472bf8-0f78-4ed9-b657-2c6e364f42cb"/>
+  <refModules href="JModule_43c7282f-5a79-4f8b-a943-e025744b014e.model#43c7282f-5a79-4f8b-a943-e025744b014e"/>
+  <refModules href="JModule_7dfbce23-9389-43a7-9cad-f106e79241ff.model#7dfbce23-9389-43a7-9cad-f106e79241ff"/>
+  <refModules href="JModule_bb073a0e-21df-40cb-9c62-a2b3e9fa3116.model#bb073a0e-21df-40cb-9c62-a2b3e9fa3116"/>
+  <refModules href="JModule_2c29a3e9-add4-4004-ae17-aa3148b799fe.model#2c29a3e9-add4-4004-ae17-aa3148b799fe"/>
+  <refModules href="JModule_c9ce9456-7505-42d1-9302-d2b729788d98.model#c9ce9456-7505-42d1-9302-d2b729788d98"/>
+  <refModules href="JModule_52990672-9cc0-4c2a-aeac-9f3fbe492a9a.model#52990672-9cc0-4c2a-aeac-9f3fbe492a9a"/>
+  <refModules href="JModule_d2043ede-0078-43d8-9e6e-4d49e98a62fc.model#d2043ede-0078-43d8-9e6e-4d49e98a62fc"/>
+  <refModules href="JModule_2501216a-71b1-4167-bcce-c513e2c26e38.model#2501216a-71b1-4167-bcce-c513e2c26e38"/>
+  <refModules href="JModule_b8b51df3-f0ae-430c-aa1d-fa8edf710992.model#b8b51df3-f0ae-430c-aa1d-fa8edf710992"/>
+  <refModules href="JModule_425e0907-6615-4ed6-9887-0cb6e469a132.model#425e0907-6615-4ed6-9887-0cb6e469a132"/>
+  <refModules href="JModule_0a7c645b-0901-462f-ba04-abc5701a7f70.model#0a7c645b-0901-462f-ba04-abc5701a7f70"/>
+  <refModules href="JModule_821b6795-e707-4b53-9f93-573d07331c90.model#821b6795-e707-4b53-9f93-573d07331c90"/>
+  <refModules href="JModule_5eb35bb9-99eb-4840-9be6-1e434f8b6030.model#5eb35bb9-99eb-4840-9be6-1e434f8b6030"/>
+  <refModules href="JModule_c86a50e7-89ac-4ea2-be43-b34998ae2b5a.model#c86a50e7-89ac-4ea2-be43-b34998ae2b5a"/>
+  <refModules href="JModule_84270185-2873-46a8-8837-e9b23c11eace.model#84270185-2873-46a8-8837-e9b23c11eace"/>
+  <refModules href="JModule_3e195481-f316-4d4b-a14c-187931a05154.model#3e195481-f316-4d4b-a14c-187931a05154"/>
+  <refModules href="JModule_85eada6d-6117-4339-acc9-861e4e099b73.model#85eada6d-6117-4339-acc9-861e4e099b73"/>
+</model:JSubSystem>

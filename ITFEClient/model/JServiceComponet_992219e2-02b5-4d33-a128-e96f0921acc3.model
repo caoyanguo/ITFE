@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="992219e2-02b5-4d33-a128-e96f0921acc3" name="国库收入查询信息" ename="DealIncome">
+  <jproperties id="b66f50f3-220b-4473-9056-eaf9ba833585" key="GeneratedTime" value="1330588997375"/>
+  <refModule href="JModule_e3b97f45-7625-4d15-bbe1-26206856b1c7.model#e3b97f45-7625-4d15-bbe1-26206856b1c7"/>
+  <methods id="89b6c0ef-6a1f-4f61-8e7c-09d9e70ef46f" ename="findIncomeByPage" name="分页查询国库收入信息" codecomment="分页查询国库收入信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="c2c1b9a1-760a-4fd9-b5e8-25c94a92e30c" name="查询国库收入信息条件DTO" ename="finddto" type="com.cfcc.itfe.persistence.dto.TvInfileDto" codecomment="查询国库收入信息条件DTO"/>
+    <methodParams id="44537d02-52dd-4b29-8199-6f575cba4078" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+  </methods>
+  <methods id="d7ec1df2-c09a-4f26-b4dd-4e005cd84a34" ename="findIncomeByPrint" name="查询打印国库收入信息" codecomment="查询打印国库收入信息" returntype="java.util.List">
+    <methodParams id="97415a92-e11f-42cb-a56f-906b58037d75" name="查询打印国库收入信息条件DTO" ename="printdto" type="com.cfcc.itfe.persistence.dto.TvInfileDto" codecomment="查询打印国库收入信息条件DTO"/>
+  </methods>
+</model:JServiceComponent>

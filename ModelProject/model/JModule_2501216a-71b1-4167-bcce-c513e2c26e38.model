@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2501216a-71b1-4167-bcce-c513e2c26e38" name="国库往来票据生成" ename="VoucherAllocateIncomeGenerate"/>

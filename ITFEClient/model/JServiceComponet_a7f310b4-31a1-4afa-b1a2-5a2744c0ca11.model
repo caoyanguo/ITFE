@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a7f310b4-31a1-4afa-b1a2-5a2744c0ca11" name="商行凭证校验" ename="BankVoucherValidate">
+  <jproperties id="e61af5e6-9224-4186-8be1-50942b860106" key="GeneratedTime" value="1429155243191"/>
+  <refModule href="JModule_3e195481-f316-4d4b-a14c-187931a05154.model#3e195481-f316-4d4b-a14c-187931a05154"/>
+  <methods id="a28306b4-4a64-4416-b657-7b00a88be6e3" ename="voucherImport" name="导入并开始校验" returntype="com.cfcc.itfe.facade.data.MulitTableDto">
+    <methodParams id="d30923ba-ad3b-4bcf-a4e4-14e0ea43fe04" name="文件列表(服务器端)" ename="fileList" type="java.util.List"/>
+    <methodParams id="619c276d-ef88-4fb9-83c5-8e930b623eb3" name="参数对象" ename="paramDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="cfb011cf-d87f-46c7-a485-e14be55f4d87" ename="voucherCompare" name="开始比对数据" returntype="com.cfcc.itfe.facade.data.MulitTableDto">
+    <methodParams id="2c630fe7-c581-4885-bbe0-f7b4df5d1f4b" name="开始比对日期" ename="startDate" type="java.lang.String"/>
+    <methodParams id="cd11a11a-7eff-45a9-9a1e-3bbe6b28995b" name="结束比对日期" ename="endDate" type="java.lang.String"/>
+    <methodParams id="a10d6521-a69d-493f-b5d6-179f781edd13" name="参数对象" ename="paramDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="74dcd5d9-4f15-464b-aa79-b3626a40f729" ename="findValidateResult" name="查询比对结果" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="657d3508-682c-4d8e-8e64-dcbc583cc05e" name="开始比对日期" ename="startDate" type="java.lang.String"/>
+    <methodParams id="5e4efa1e-ffc3-4e3c-953b-b1436cfce780" name="结束比对日期" ename="endDate" type="java.lang.String"/>
+    <methodParams id="009dd5a3-76de-4c9c-9fcf-b1c65baa510b" name="参数对象" ename="paramDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="701d664b-54fa-4f5b-bfa4-5c93081e8eb7" name="分页查询对象" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+</model:JServiceComponent>

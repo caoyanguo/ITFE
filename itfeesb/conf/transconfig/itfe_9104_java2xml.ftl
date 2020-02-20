@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+	<MSG>
+		<StopInfo9104>
+			<RunSign>${cfx.MSG.StopInfo9104.RunSign}</RunSign>
+			<StopRunTime>${cfx.MSG.StopInfo9104.StopRunTime}</StopRunTime>
+			<BackRunTime>${cfx.MSG.StopInfo9104.BackRunTime}</BackRunTime>
+			<StopRunReason>${cfx.MSG.StopInfo9104.StopRunReason}</StopRunReason>
+		</StopInfo9104>
+	</MSG>
+</CFX>

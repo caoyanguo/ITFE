@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9832ebb5-2eaa-461a-b42d-a4a9c9d29181" name="银行行名对照参数维护" ename="tsconvertbankname"/>

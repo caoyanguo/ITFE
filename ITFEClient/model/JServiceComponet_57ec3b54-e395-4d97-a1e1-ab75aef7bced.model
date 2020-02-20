@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="57ec3b54-e395-4d97-a1e1-ab75aef7bced" name="清算行服务组件" ename="TsPaybank">
+  <jproperties id="2a889f69-2696-4fc9-b828-1fc0e84bd1bf" key="GeneratedTime" value="1362709990038"/>
+  <refModule href="JModule_b2487cb6-3d6a-4f54-a090-e7e885395f96.model#b2487cb6-3d6a-4f54-a090-e7e885395f96"/>
+  <methods id="d86b65ae-a1ab-4627-b898-0405f8ff01fe" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="清算行">
+    <methodParams id="e145bbb1-d1c7-4403-9e8b-6d6dd5679756" name="清算行" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="a1aeffab-6547-4531-a32c-f77dfdb44349" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="3d937fb3-f748-44d7-87e5-1bc627f0ede3" name="清算行" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="a1aeffab-6547-4531-a32c-f77dfdb44349" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="f05a9e8d-1ae8-4480-b616-ac9dc6429690" name="清算行" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="8ecfba2e-5a1b-48b8-a6b5-41a2871eec16" ename="bankInfoexport" name="BankExport" returntype="java.lang.String">
+    <methodParams id="251e200b-2722-41ac-baef-7e92b9aed43e" name="清算行" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

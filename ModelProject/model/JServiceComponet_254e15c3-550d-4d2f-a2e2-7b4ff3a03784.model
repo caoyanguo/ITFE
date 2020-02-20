@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="254e15c3-550d-4d2f-a2e2-7b4ff3a03784" name="电子签章类型服务组件" ename="TsStamptype">
+  <jproperties id="4d7e902b-ff07-453b-baee-3973cf8611ae" key="GeneratedTime" value="1330485996281"/>
+  <refModule href="JModule_079c4d9a-036d-43b3-b6bc-003138f45657.model#079c4d9a-036d-43b3-b6bc-003138f45657"/>
+  <methods id="e18a7f15-b517-4b8b-9a5b-e417391f91d0" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void" remark="电子签章类型">
+    <methodParams id="4d355da6-9149-43ac-9e94-5ca062fa5f81" name="电子签章类型" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="ec1c16c8-b4a8-4ed2-8f7c-e5b322cf0725" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="be4a1b8b-79c0-4107-a337-4625baaf5076" name="电子签章类型" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="ec1c16c8-b4a8-4ed2-8f7c-e5b322cf0725" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="0eb89571-f5de-45a6-8c85-ef05697d28b2" name="电子签章类型" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

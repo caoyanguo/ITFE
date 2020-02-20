@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b1a40cd8-2177-459c-b21d-8c946775aea9" name="大额拨款控制参数" ename="TsQueryAmt">
+  <jproperties id="adb0c3fa-58a1-4f27-9d07-678eea83f45a" key="GeneratedTime" value="1439518441953"/>
+  <refModule href="JModule_3db43b51-bd78-41e5-82ef-6e214027ba4a.model#3db43b51-bd78-41e5-82ef-6e214027ba4a"/>
+  <methods id="9102096a-9f3e-40dc-aa5e-aa1bd1c3e033" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="查询金额区间维护">
+    <methodParams id="0845f103-a813-4cd5-86e4-2dbc265e5a19" name="增加Dto" ename="addinfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="增加Dto"/>
+  </methods>
+  <methods id="fda5a24d-1103-4ea5-8a8e-028a90c3574f" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="82595164-a501-4578-ac71-224ab95c071d" name="删除" ename="delInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="删除"/>
+  </methods>
+  <methods id="c60ea36c-04f8-41c5-b7ad-b90a9327ef99" ename="modifyInfo" name="修改" codecomment="修改" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="查询金额区间">
+    <methodParams id="62731b37-07b0-49d5-8ada-e4eb88a4eb47" name="修改" ename="modifyInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="修改"/>
+  </methods>
+</model:JServiceComponent>

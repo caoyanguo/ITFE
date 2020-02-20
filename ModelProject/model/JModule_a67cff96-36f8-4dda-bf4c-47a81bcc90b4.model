@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a67cff96-36f8-4dda-bf4c-47a81bcc90b4" name="前置业务量统计" ename="bizDataCollect"/>

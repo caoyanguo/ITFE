@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0b177cee-fb8c-4e7a-95e3-3cad6dbd481d" name="系统控制参数维护(中心)" ename="TsSystem" shared="true">
+  <jproperties id="891794e4-d294-4f85-9a99-d30086ff1f10" key="GeneratedTime" value="1364046749207"/>
+  <refModule href="JModule_02175ad1-a0a0-4b75-9155-08dec9135eb5.model#02175ad1-a0a0-4b75-9155-08dec9135eb5"/>
+  <model id="194456cb-2402-473f-bb98-9c08a317e6f9" name="JModelImpl-194456cb-2402-473f-bb98-9c08a317e6f9">
+    <attributes id="73038b76-339e-4b60-b6d4-aac56a37957c" name="dto" type="com.cfcc.itfe.persistence.dto.TsSystemDto"/>
+    <attributes id="c665585c-abf8-4904-8daa-3363a338a967" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="8774cd43-29a9-40de-9a57-2ed90b91d4ce" viewers="35400e12-6bc5-41a9-acec-b2254a2ec712" name="跳转录入界面" ename="goInput"/>
+    <directions id="ed162fcd-ba0a-4b74-9d20-8ac1a36eb6be" name="录入保存" ename="inputSave"/>
+    <directions id="fdd010a4-f031-46e7-9f82-a9548f028a44" viewers="3360c5a8-86e2-4aaf-8be5-d321d2a89190" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="a2295032-92fa-43b1-b6b4-ceb32c6a7410" name="单选" ename="singleSelect"/>
+    <directions id="0a16dcff-c27c-4bdc-a2b0-5f124d5326c6" name="删除" ename="delete"/>
+    <directions id="6f80b4a2-0adc-4d3b-bdd5-a6f57d668971" viewers="49afe5cc-a1b4-4e9e-9d3c-053cd4c22a69" name="到修改界面" ename="goModify"/>
+    <directions id="f5578cd2-8b8f-431c-8b3c-516bd4a3ae23" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_d6f9a289-06ed-4b78-95e3-514b40fa00bb.model#d6f9a289-06ed-4b78-95e3-514b40fa00bb"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="c66d2d69-fd1c-4c2b-8dd4-22f8968cf602">
+    <contentareanode id="785ccf68-992e-4d14-86e3-aa1cfafc568f" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="8ca9f711-4600-4ac4-af6e-2adace08d748" name="itransdays" binding="dto.itransdays" caption="数据转移天数" editable="true">
+        <labelStyle id="5cabee40-6627-48f5-a118-5598eb9801fb" name="LabelStyleImpl-5cabee40-6627-48f5-a118-5598eb9801fb" ename="LabelStyleImpld5cabee40-6627-48f5-a118-5598eb9801fb"/>
+        <componentStyle id="5a2c5cb2-e22f-4f59-8cdb-f45200f3cfb6" name="ComponentStyleImpl-5a2c5cb2-e22f-4f59-8cdb-f45200f3cfb6" ename="ComponentStyleImpl5a2c5cb2-e22f-4f59-8cdb-f45200f3cfb6"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="96d3ac05-691a-43f6-b230-9021bda6145a" name="icleardays" binding="dto.icleardays" caption="数据清理天数" editable="true">
+        <labelStyle id="7aeac8ef-e473-4cd5-8aec-d56271974374" name="LabelStyleImpl-7aeac8ef-e473-4cd5-8aec-d56271974374" ename="LabelStyleImpld7aeac8ef-e473-4cd5-8aec-d56271974374"/>
+        <componentStyle id="dcc83bf2-65d9-4a77-8254-e726f1f650d4" name="ComponentStyleImpl-dcc83bf2-65d9-4a77-8254-e726f1f650d4" ename="ComponentStyleImpldcc83bf2-65d9-4a77-8254-e726f1f650d4"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="144e7c37-8c54-43db-a7de-211f8b83b60e" name="税票是否汇总" binding="dto.imodicount" caption="税票是否汇总">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#0c4fde9a-bd2b-4496-9b31-aabb64f50e5e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="b1265c57-b55c-499a-a4b2-a8a81a858b28" name="调整期结束日期" binding="dto.sendadjustday" caption="调整期结束日期"/>
+      <widgetRefs xsi:type="model:Label" id="abe4575e-327c-4316-9ccc-7c1c79cf450c" name="(调整期范围为1月1日至6月30日,例如0630)" caption="(调整期范围为1月1日至6月30日,例如0630)"/>
+    </contentareanode>
+    <contentareanode id="8d20a287-c302-4dde-ac97-6dfe03daec91" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="4a8326b6-3321-4aed-9039-2e8fcebbe947" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="a2295032-92fa-43b1-b6b4-ceb32c6a7410">
+        <columnlist id="8ca9f711-4600-4ac4-af6e-2adace08d748" name="itransdays" binding="itransdays" caption="数据转移天数"/>
+        <columnlist id="96d3ac05-691a-43f6-b230-9021bda6145a" name="icleardays" binding="icleardays" caption="数据清理天数"/>
+        <columnlist id="92cbee26-9523-4be1-8808-1841319c2758" name="imodicount" binding="imodicount" caption="税票是否汇总">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#0c4fde9a-bd2b-4496-9b31-aabb64f50e5e"/>
+        </columnlist>
+        <columnlist id="87cfbe74-4552-4a32-81f4-c9a4e1093181" name="调整期结束日期" binding="sendadjustday" caption="调整期结束日期"/>
+        <columnlist id="eb671e7e-7e92-46b2-8b59-1a68afbf197d" name="TIPS登陆状态" binding="stipsloginstate" caption="TIPS登陆状态"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2878573f-17bb-4a93-a956-ca3905b1a7a1" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="8ca9f711-4600-4ac4-af6e-2adace08d748" name="itransdays" binding="dto.itransdays" caption="数据转移天数" editable="true">
+        <labelStyle id="5cabee40-6627-48f5-a118-5598eb9801fb" name="LabelStyleImpl-5cabee40-6627-48f5-a118-5598eb9801fb" ename="LabelStyleImpld5cabee40-6627-48f5-a118-5598eb9801fb"/>
+        <componentStyle id="5a2c5cb2-e22f-4f59-8cdb-f45200f3cfb6" name="ComponentStyleImpl-5a2c5cb2-e22f-4f59-8cdb-f45200f3cfb6" ename="ComponentStyleImpl5a2c5cb2-e22f-4f59-8cdb-f45200f3cfb6"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="96d3ac05-691a-43f6-b230-9021bda6145a" name="icleardays" binding="dto.icleardays" caption="数据清理天数" editable="true">
+        <labelStyle id="7aeac8ef-e473-4cd5-8aec-d56271974374" name="LabelStyleImpl-7aeac8ef-e473-4cd5-8aec-d56271974374" ename="LabelStyleImpld7aeac8ef-e473-4cd5-8aec-d56271974374"/>
+        <componentStyle id="dcc83bf2-65d9-4a77-8254-e726f1f650d4" name="ComponentStyleImpl-dcc83bf2-65d9-4a77-8254-e726f1f650d4" ename="ComponentStyleImpldcc83bf2-65d9-4a77-8254-e726f1f650d4"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="90038056-8c71-404e-bf34-66a48fb41e93" name="税票是否汇总" binding="smodicount" caption="税票是否汇总">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#0c4fde9a-bd2b-4496-9b31-aabb64f50e5e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a26e5aec-8e55-4e2b-89c3-082ea4781620" name="调整期结束日期" binding="dto.sendadjustday" caption="调整期结束日期"/>
+      <widgetRefs xsi:type="model:Label" id="9a2b6497-839f-4ccb-be62-936d87ffc298" name="(调整期范围为1月1日至6月30日,例如20120630)" caption="(调整期范围为1月1日至6月30日,例如20120630)"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="23f21e1e-acf0-4143-94d5-4107c4612f3b">
+    <pages id="9ebfca11-5a46-4082-a22e-e878fda368a5" name="维护系统参数表">
+      <views id="3360c5a8-86e2-4aaf-8be5-d321d2a89190" name="维护界面" isdefault="true" contentArea="8d20a287-c302-4dde-ac97-6dfe03daec91">
+        <buttonArea id="8f485966-ba75-4640-810e-901a1556fbb2" name="JButtonAreaImpl-8f485966-ba75-4640-810e-901a1556fbb2">
+          <buttons id="f0a8bf4a-4bb3-42f4-beae-72ff312066c5" name="maintenanceMod" caption="修改" direction="6f80b4a2-0adc-4d3b-bdd5-a6f57d668971"/>
+        </buttonArea>
+      </views>
+      <views id="49afe5cc-a1b4-4e9e-9d3c-053cd4c22a69" name="修改界面" contentArea="2878573f-17bb-4a93-a956-ca3905b1a7a1">
+        <buttonArea id="7021e7ef-29a0-4451-bbcf-029e3ae3b0f4" name="JButtonAreaImpl-7021e7ef-29a0-4451-bbcf-029e3ae3b0f4">
+          <buttons id="565a5785-615d-48df-bfe6-5234a27286c7" name="modifySave" caption="保存" direction="f5578cd2-8b8f-431c-8b3c-516bd4a3ae23"/>
+          <buttons id="303b744b-21e3-44fa-b5b1-0d487a3aa932" name="modifyBack" caption="返回" direction="fdd010a4-f031-46e7-9f82-a9548f028a44"/>
+        </buttonArea>
+      </views>
+      <views id="35400e12-6bc5-41a9-acec-b2254a2ec712" name="录入界面" contentArea="785ccf68-992e-4d14-86e3-aa1cfafc568f">
+        <buttonArea id="1341ee27-a053-495c-b1fa-b3bccf8e1a1d" name="JButtonAreaImpl-1341ee27-a053-495c-b1fa-b3bccf8e1a1d">
+          <buttons id="a95ac9bd-07fb-494a-9679-e61301fd6a5d" name="保存" caption="保存" direction="ed162fcd-ba0a-4b74-9d20-8ac1a36eb6be"/>
+          <buttons id="303b744b-21e3-44fa-b5b1-0d487a3aa932" name="modifyBack" caption="返回" direction="fdd010a4-f031-46e7-9f82-a9548f028a44"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

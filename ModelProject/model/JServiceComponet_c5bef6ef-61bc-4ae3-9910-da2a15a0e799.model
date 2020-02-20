@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c5bef6ef-61bc-4ae3-9910-da2a15a0e799" name="查询系统日志" ename="SystemdateCheck" shared="false">
+  <jproperties id="0a1afb64-3c2e-4493-a5e4-ef52ebf4eb57" key="GeneratedTime" value="1363832218386"/>
+  <refModule href="JModule_0885e075-3bb3-4544-92b1-cb54390436de.model#0885e075-3bb3-4544-92b1-cb54390436de"/>
+  <methods id="e7582eeb-e861-40b0-9765-5637fe42db12" ename="operLog" name="记录操作日志" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="ddd9b24f-7f36-4fe4-aa3a-19a59492ae07" name="用户代码" ename="userID" type="java.lang.String"/>
+    <methodParams id="baa1cf93-7601-4b89-955c-532b6275f49d" name="功能码" ename="sFuncCode" type="java.lang.String"/>
+    <methodParams id="1b702958-b951-4f7b-a3b7-241121dbc421" name="菜单名称" ename="menuName"/>
+    <methodParams id="8eeaa4dd-3c8c-4692-a44b-b4d3245791f1" name="服务名" ename="serviceName"/>
+    <methodParams id="8cb418a4-b790-4020-ad55-faef8ae694ab" name="操作标志" ename="operFlag" type="java.lang.Boolean"/>
+    <methodParams id="3f3a5c07-c60b-4ec4-ba0d-abdc9d355fb0" name="登录信息" ename="loginInfo" type="com.cfcc.itfe.service.ITFELoginInfo"/>
+  </methods>
+</model:JServiceComponent>

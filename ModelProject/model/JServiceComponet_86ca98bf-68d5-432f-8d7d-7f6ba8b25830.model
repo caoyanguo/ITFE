@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="86ca98bf-68d5-432f-8d7d-7f6ba8b25830" name="无纸化业务清单打印" ename="BusinessDetailList">
+  <jproperties id="e5b4a89e-cc09-42fc-b5dd-1c1285731f98" key="GeneratedTime" value="1432543945352"/>
+  <refModule href="JModule_fd65102d-ee3b-42d9-9af1-b70aa0dbac1a.model#fd65102d-ee3b-42d9-9af1-b70aa0dbac1a"/>
+  <methods id="d47942a5-5ce2-4e0e-8199-5889c15d5843" ename="makeReport" name="生成报表" returntype="java.util.List">
+    <methodParams id="d5df6482-d44f-4c1a-9fd4-ad3e464493b7" name="biztype" ename="biztype" type="java.lang.String"/>
+    <methodParams id="65fc7294-6c79-43c8-b947-4ceda0201cb6" name="查询条件" ename="paramdto" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+  </methods>
+  <methods id="673bc61d-3b08-4906-b70c-6ad84af339c1" ename="makestatReport" name="生成报表" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="30c5e3bb-a28a-4dab-b692-13e5cf242fa9" name="biztype" ename="biztype" type="java.lang.String"/>
+    <methodParams id="5fcd5ea2-3f86-42c5-85cf-549497746987" name="查询条件" ename="paramdto" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+    <methodParams id="6b56145b-5c84-4e40-98b3-ad9f5b3e27e7" name="pageRequest" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+  <methods id="4861fa50-32ed-41f3-8488-da3666b3ecaf" ename="makeSumCountRecord" name="生成报表" returntype="java.util.List">
+    <methodParams id="5e667cc4-6e51-4817-9fb8-113506a24f26" name="biztype" ename="biztype" type="java.lang.String"/>
+    <methodParams id="88ee5e78-1b8c-484d-b1c3-6a5a405bce86" name="查询条件" ename="paramdto" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+  </methods>
+  <methods id="b146d5ae-d3e8-475d-9a1b-e0e0eb406662" ename="findRsForMain" name="主单报表查询" returntype="java.util.List">
+    <methodParams id="d66fb1dd-260b-4161-b1b7-4c9e962499cc" name="业务类型" ename="biztype" type="java.lang.String"/>
+    <methodParams id="0c8e9655-c456-4ad6-a572-3ecc6dae3d4e" name="界面查询要素" ename="paramdto" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+    <methodExceptions id="437da9d4-9226-4ec2-bea5-a9bb93728e03" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="2642ccf3-4cb9-4bd8-a96f-bcc9fd612cf8" ename="findRsForDetail" name="明细报表查询" returntype="java.util.List">
+    <methodParams id="4cf5d54d-a3e8-4daf-a048-228ff4b2a1de" name="业务类型" ename="biztype" type="java.lang.String"/>
+    <methodParams id="d767694c-4680-41a8-9936-1a5e68887f6d" name="界面查询要素" ename="paramdto" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+    <methodExceptions id="dcd44fdb-f400-4eee-8392-367679d246bf" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

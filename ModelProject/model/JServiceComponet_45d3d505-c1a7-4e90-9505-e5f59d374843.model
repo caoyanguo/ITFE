@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="45d3d505-c1a7-4e90-9505-e5f59d374843" name="1024征收机关,社保机构申请入库流水服务" ename="TaxOrgSoSecry">
+  <jproperties id="54284e51-e847-4345-a2db-80b9ab04f670" key="GeneratedTime" value="1357805821066"/>
+  <refModule href="JModule_69d4f83e-0628-431a-8141-51f97c9afc67.model#69d4f83e-0628-431a-8141-51f97c9afc67"/>
+  <methods id="f3f92550-1c35-46f6-b0d4-2037e0fc31f5" ename="sendMsg" name="发送报文" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="4e7318ee-de37-460a-8896-18551924b8b2" name="发起机构代码" ename="sendOrgCode" type="java.lang.String"/>
+    <methodParams id="0d02ff87-7977-43fa-b48b-997be62bc995" name="入库日期" ename="inTreDate"/>
+    <methodParams id="1b9dbd7e-cbd8-4277-ac8d-65a5f1813e6d" name="报文编号" ename="msgno"/>
+  </methods>
+</model:JServiceComponent>

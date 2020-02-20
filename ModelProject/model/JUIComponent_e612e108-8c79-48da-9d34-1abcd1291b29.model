@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e612e108-8c79-48da-9d34-1abcd1291b29" name="TCBS资金报文导入" ename="VoucherAllocateIncome">
+  <jproperties id="39445b6c-c22d-4a10-a38e-b29170cf319d" key="GeneratedTime" value="1505803412243"/>
+  <refModule href="JModule_d9cdde0f-1f21-4066-b008-2e3169f945eb.model#d9cdde0f-1f21-4066-b008-2e3169f945eb"/>
+  <model id="fc0751f9-27e0-41ac-ae40-f0e4fb0814c5" name="JModelImpl-fc0751f9-27e0-41ac-ae40-f0e4fb0814c5">
+    <attributes id="c1824409-3ea0-48b1-986c-74ebcb70d702" name="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoAllocateIncomeDto"/>
+    <attributes id="8e64c5ed-ba78-4b3b-a015-aa75dfd156e6" name="filePath" type="java.util.List"/>
+    <attributes id="3e8a058c-a7d4-445a-85d0-136cd82e5a07" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="ef4fc387-6791-4f98-9a10-6ce2820564e7" name="saveDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoAllocateIncomeDto"/>
+    <attributes id="c782596a-034b-4993-a4ed-2d63fb0ac2b8" name="deleteDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoAllocateIncomeDto"/>
+    <directions id="06f24748-9f56-493f-a0ad-dbf140c2c0ec" name="导入数据" ename="upLoad"/>
+    <directions id="20e3573f-88b1-46b4-a9c4-31f6cc0c978e" viewers="a41a272a-ba73-4314-8a47-0d1b12cb8ff7" name="查询" ename="query"/>
+    <directions id="c7ebfa13-da19-45b1-820f-5576949a6935" viewers="b58de565-642b-4199-9aed-dfc016df274a" name="返回查询页面" ename="goQuery"/>
+    <directions id="135f0333-4f95-4691-8187-0cc3a03f7ddb" name="新增保存" ename="savaDto"/>
+    <directions id="96fdd774-b694-4732-be75-e72a0ce36ce4" viewers="d0262699-70cc-4ab8-8fd9-a93e38340102" name="修改" ename="modifyDto"/>
+    <directions id="2e80576a-081c-41d7-a40e-8166b2dd095f" viewers="a41a272a-ba73-4314-8a47-0d1b12cb8ff7" name="修改保存" ename="saveModifyDto"/>
+    <directions id="af87bfed-c3c0-4386-9ab3-032a5d7dce94" name="删除" ename="delDto"/>
+    <directions id="d462de74-d9e1-40fb-b812-2c5f2a207fd1" name="单击方法" ename="singleClick"/>
+  </model>
+  <services href="JServiceComponet_24004fb7-a6a5-4b53-919e-814eb3d8b209.model#24004fb7-a6a5-4b53-919e-814eb3d8b209"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_fe6eff78-d202-40b2-9031-8450bc9fd548.model#fe6eff78-d202-40b2-9031-8450bc9fd548"/>
+  <contentAreas id="05c116a6-a2ca-4ebc-a2c5-84a53ca7be6b">
+    <contentareanode id="20aaa77f-e7e0-431f-8c48-ae8b9055452a" name="TCBS资金报文导入" grouptitle="TCBS资金报文导入" binding="">
+      <widgetRefs xsi:type="model:Combo" id="7ebbd7c3-f603-4151-be08-df9f6be2451b" name="国库代码" binding="dto.strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="51de6b07-20af-42c2-a9ef-bfe3cbd6b5b5" name="资金报文" binding="fundtype" caption="资金报文" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ec34b16f-4ff2-466c-8cea-dce3f0e34b31"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4edbcae0-51e0-4458-88e2-04b704cf06ad" name="业务类型" binding="vtcodeKind" caption="业务类型" required="true" display="displayValue" underly="underlyValue" modelsource="vtcodeKindList"/>
+      <widgetRefs xsi:type="model:FileUploader" id="0bd28e4c-c81c-4914-aaf6-d68029c63e80" name="文件路径" binding="filePath" caption="文件路径" enable="true" isdirectory="false" ismult="true"/>
+    </contentareanode>
+    <contentareanode id="628da826-419b-4875-b551-c11622fcffb2" name="TCBS资金报文导入查询" grouptitle="TCBS资金报文导入查询">
+      <widgetRefs xsi:type="model:Combo" id="dea5180a-b3f1-4b71-83a4-c649b8788dab" name="国库代码" binding="dto.strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="aa359216-f67e-4bf9-9e95-197559742c0a" name="资金报文" binding="fundtype" caption="资金报文">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ec34b16f-4ff2-466c-8cea-dce3f0e34b31"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ea7dd9c6-01be-44ec-9c1f-8084307d3282" name="业务类型" binding="vtcodeKind" caption="业务类型" display="displayValue" underly="underlyValue" modelsource="vtcodeKindList"/>
+      <widgetRefs xsi:type="model:Text" id="9ab047b7-43bf-40e1-97a0-748d2af43ebc" name="委托日期" binding="dto.scommitdate" caption="委托日期"/>
+    </contentareanode>
+    <contentareanode id="319cfbbc-2059-4cbb-a55f-f2aa0952988b" name="TCBS资金报文导入查询结果" grouptitle="TCBS资金报文导入查询结果">
+      <widgetRefs xsi:type="model:Table" id="2c4a518d-6705-45b5-8a80-ba1b5058577e" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" refsingleclickdirection="d462de74-d9e1-40fb-b812-2c5f2a207fd1">
+        <columnlist id="b2396102-ae04-4cc4-92e0-05fa7e67342c" name="业务类型" binding="svtcode" caption="业务类型"/>
+        <columnlist id="be585ecf-6176-44b2-866f-a5eabef9581a" name="资金报文种类" binding="sreportkind" caption="资金报文种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ec34b16f-4ff2-466c-8cea-dce3f0e34b31"/>
+        </columnlist>
+        <columnlist id="9f356064-bea2-439c-bf79-79ccfdbbe59a" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="0fc45645-5080-4ba6-8e9f-8d3e06120a4e" name="sdealno" binding="sdealno" caption="流水号"/>
+        <columnlist id="9a99a368-8b09-48ce-bf46-b63ac7d35547" name="scommitdate" binding="scommitdate" caption="委托日期"/>
+        <columnlist id="18bf9262-e272-4f58-9f0c-8205e8a9f455" name="spayeeacctno" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="73cda6f4-1108-41e7-ab46-c3fc6f39afbd" name="spayeeacctname" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="c663109b-2fe9-43be-9366-b293a80bb55c" name="spayeeacctbankname" binding="spayeeacctbankname" caption="收款人银行"/>
+        <columnlist id="d8535732-ed90-4b33-87ff-03c3a9ebf60c" name="spayacctno" binding="spayacctno" caption="付款人账号"/>
+        <columnlist id="f110547e-7e2f-4621-bee9-300399ba06ac" name="spayacctname" binding="spayacctname" caption="付款人名称"/>
+        <columnlist id="ae816621-31c8-4637-bbdc-4badafe549eb" name="spayacctbankname" binding="spayacctbankname" caption="付款人银行"/>
+        <columnlist id="068511aa-d54c-417a-a5b0-103816991dd2" name="nmoney" binding="nmoney" caption="金额"/>
+        <columnlist id="cddb0fe5-cac4-4120-8b57-d6b3c2c8cc5d" name="sdemo" binding="sdemo" caption="附言"/>
+        <columnlist id="3171e683-c93d-4123-b334-0f86dae72b1b" name="备注" binding="svtcodedes" caption="备注"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="d21f55f2-0ad0-4bda-b36d-66ae190369d1" name="国库往来票据录入" grouptitle="国库往来票据录入">
+      <widgetRefs xsi:type="model:Combo" id="fb700891-1e96-4136-8636-8d05454a8ade" name="国库" binding="saveDto.strecode" caption="国库" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6dc5d9e5-2cf0-40d5-8ab0-c1d5e26cf8a7" name="业务类型" binding="saveDto.svtcode" caption="业务类型" required="true" display="displayValue" underly="underlyValue" modelsource="vtcodeKindList"/>
+      <widgetRefs xsi:type="model:Text" id="fdc60f10-fce4-4836-bb02-94d14965f7fc" name="金额" binding="saveDto.nmoney" caption="金额" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="43957ac4-1932-423a-ab57-4ca13e391880" name="收款人账号" binding="saveDto.spayeeacctno" caption="收款人账号" pattern="" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="3a819d87-2a5f-480c-8e3e-ec3556e6c0d2" name="收款人名称" binding="saveDto.spayeeacctname" caption="收款人名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="c862eb21-5bc8-4b33-85c5-7057cf6de984" name="付款人账号" extpoperties="" binding="saveDto.spayacctno" caption="付款人账号" pattern="" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="25918826-ca08-4254-bbfe-54d4314758db" name="付款人名称" binding="saveDto.spayacctname" caption="付款人名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="f9e66ff1-24fb-4c14-a6ef-c18d43cc9c8a" name="收款行名称" binding="saveDto.shold1" caption="收款行名称"/>
+      <widgetRefs xsi:type="model:Text" id="279e8be4-3d00-48ce-91f8-168ea663ab4c" name="收款行行号" binding="saveDto.spayeeacctbankname" caption="收款行行号" pattern="@12"/>
+      <widgetRefs xsi:type="model:Text" id="db61b330-9715-4e1c-a440-92247f99a067" name="付款行名称" binding="saveDto.sforwardbankname" caption="付款行名称"/>
+      <widgetRefs xsi:type="model:Text" id="eb84ddae-1d69-44ec-aff4-14724585ffa8" name="付款行行号" binding="saveDto.spayacctbankname" caption="付款行行号" pattern="@12"/>
+      <widgetRefs xsi:type="model:Text" id="c1a6a56b-edf6-4a22-a441-a8adea30e84b" name="原委托日期" binding="saveDto.scommitdate" caption="原委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="10971c91-7c8a-4ef5-856e-ee336c7e9f2d" name="收报日期" binding="saveDto.sreceivedate" caption="收报日期"/>
+      <widgetRefs xsi:type="model:Text" id="78f30853-d74f-41c6-a92e-ee64ba1227d2" name="核押标志" binding="saveDto.sescortmarks" visible="false" caption="核押标志"/>
+      <widgetRefs xsi:type="model:Text" id="277c8352-e4fc-43a6-a8cb-659aac477322" name="接收行行号" binding="saveDto.sreceivebankno" visible="false" caption="接收行行号"/>
+      <widgetRefs xsi:type="model:Text" id="cb9836f5-98b5-436e-97bb-470541b98670" name="支付交易序号" binding="saveDto.spaydealno" caption="支付交易序号" pattern="@8" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="9fc53830-e62f-4006-8455-52ca94188e13" name="原支付交易序号" binding="saveDto.soripaydealno" visible="false" caption="原支付交易序号"/>
+      <widgetRefs xsi:type="model:Combo" id="db03933b-3ece-4cde-b18f-95a8bfd14ceb" name="资金报文" binding="saveDto.sreportkind" caption="资金报文" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ec34b16f-4ff2-466c-8cea-dce3f0e34b31"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="59d154b1-8657-4836-844f-03ce8b94b113" name="交易种类" binding="saveDto.stradekind" visible="false" caption="交易种类"/>
+      <widgetRefs xsi:type="model:Text" id="ae3c3b65-4924-4cb2-a0ea-251df7a78fd5" name="业务类型号" binding="saveDto.svtcodekindno" visible="false" caption="业务类型号"/>
+      <widgetRefs xsi:type="model:Text" id="f4b5c736-2949-44d0-8e69-714cf315e450" name="业务类型说明" binding="saveDto.svtcodedes" visible="false" caption="业务类型说明"/>
+      <widgetRefs xsi:type="model:Text" id="a80c34f0-4ca6-4ed3-9343-b693fba34b07" name="密押" binding="saveDto.ssecretsign" visible="false" caption="密押"/>
+      <widgetRefs xsi:type="model:Text" id="72c3d8c8-b697-43e2-89b2-76cab89b83ee" name="借" binding="saveDto.sborrow" visible="false" caption="借"/>
+      <widgetRefs xsi:type="model:Text" id="d82aa6a3-ee19-44aa-b079-2df97b62f6aa" name="贷" binding="saveDto.slend" visible="false" caption="贷"/>
+      <widgetRefs xsi:type="model:Text" id="d94a0065-825d-48c8-be46-0d05ffd5f0f5" name="附言" binding="saveDto.sdemo" caption="附言"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="c7ce8a2b-4b9b-4f06-8acc-21322eb65b86">
+    <pages id="f159cdcf-b039-46ca-80bc-9a1e1aaaec0a" name="TCBS资金报文导入">
+      <views id="fd474f6b-6cdf-4a79-adc7-851f57b7c136" name="TCBS资金报文导入" isdefault="true" contentArea="20aaa77f-e7e0-431f-8c48-ae8b9055452a">
+        <buttonArea id="3b7b9fd5-b5cf-462a-a811-abb29e85cd43" name="JButtonAreaImpl-3b7b9fd5-b5cf-462a-a811-abb29e85cd43">
+          <buttons id="716bd252-f637-40c2-aa30-c2e66a8f1edd" name="导入" caption="导入" direction="06f24748-9f56-493f-a0ad-dbf140c2c0ec"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="354ce05a-c67f-4742-aa39-b77ac4b8baea" name="TCBS资金报文导入查询">
+      <views id="b58de565-642b-4199-9aed-dfc016df274a" name="TCBS资金报文导入查询" isdefault="true" contentArea="628da826-419b-4875-b551-c11622fcffb2">
+        <buttonArea id="2e002a5a-6c6d-449b-9982-36a52d6e7088" name="JButtonAreaImpl-2e002a5a-6c6d-449b-9982-36a52d6e7088">
+          <buttons id="e0f525fb-de9d-4e8a-9e68-e3ffbc824b3f" name="查询" caption="查询" direction="20e3573f-88b1-46b4-a9c4-31f6cc0c978e"/>
+        </buttonArea>
+      </views>
+      <views id="a41a272a-ba73-4314-8a47-0d1b12cb8ff7" name="TCBS资金报文导入查询结果" contentArea="319cfbbc-2059-4cbb-a55f-f2aa0952988b">
+        <buttonArea id="96c27be7-2dd0-49d4-aca8-73c52da8db47" name="JButtonAreaImpl-96c27be7-2dd0-49d4-aca8-73c52da8db47">
+          <buttons id="3fa31571-bf4d-4c15-ab8b-4597960cbf14" name="返回" caption="返回" direction="c7ebfa13-da19-45b1-820f-5576949a6935"/>
+          <buttons id="f79fcc24-1879-43ab-aa0a-472b49349c0d" name="修改" caption="修改" direction="96fdd774-b694-4732-be75-e72a0ce36ce4"/>
+          <buttons id="cc9f9f6c-8d57-4786-b37c-c48fa6ba4678" name="删除" caption="删除" direction="af87bfed-c3c0-4386-9ab3-032a5d7dce94"/>
+        </buttonArea>
+      </views>
+      <views id="d0262699-70cc-4ab8-8fd9-a93e38340102" name="国库往来票据修改" contentArea="d21f55f2-0ad0-4bda-b36d-66ae190369d1">
+        <buttonArea id="62b18c1c-b2ff-43d7-9fa5-a405a408513e" name="JButtonAreaImpl-62b18c1c-b2ff-43d7-9fa5-a405a408513e">
+          <buttons id="7d7a5f97-16e1-4aaf-ab45-fadac6ce2345" name="保存" caption="保存" direction="2e80576a-081c-41d7-a40e-8166b2dd095f"/>
+          <buttons id="246f073a-9f62-4f90-86fe-08ac962f95b5" name="返回" caption="返回" direction="20e3573f-88b1-46b4-a9c4-31f6cc0c978e"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="a764c268-4ce4-4fab-970c-1dee6201811b" name="国库往来票据录入">
+      <views id="081dea50-e07f-47dd-8db8-6f14a7054e95" name="国库往来票据录入" isdefault="true" contentArea="d21f55f2-0ad0-4bda-b36d-66ae190369d1">
+        <buttonArea id="bd7cf9cc-7ee0-4465-85de-71695105824d" name="JButtonAreaImpl-bd7cf9cc-7ee0-4465-85de-71695105824d">
+          <buttons id="5cd3ef05-6722-45b2-98ef-5ba0b87207c1" name="保存" caption="保存" direction="135f0333-4f95-4691-8187-0cc3a03f7ddb"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

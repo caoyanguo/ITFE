@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="dae23be4-f81c-4ca7-a7f3-75982f337a4e" name="业务量统计服务" ename="businessStat">
+  <jproperties id="012326c0-4811-4fef-9568-5a2b8de688cd" key="GeneratedTime" value="1330485996375"/>
+  <refModule href="JModule_25ce1c24-4b0c-4800-9892-98fe42683cfe.model#25ce1c24-4b0c-4800-9892-98fe42683cfe"/>
+  <methods id="4da2877a-98ee-4111-bac3-65a7e8746df0" ename="findBusinessByPage" name="分页查询业务量" codecomment="分页查询业务量" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="9472082e-521b-496c-9887-d0c2a0a1783c" name="查询收入税票信息条件DTO" ename="findDto" type="com.cfcc.itfe.persistence.dto.TvInfileDto" codecomment="查询收入税票信息条件DTO"/>
+    <methodParams id="990e0046-dfa4-4f61-9efd-67b847ae37f0" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+  </methods>
+</model:JServiceComponent>

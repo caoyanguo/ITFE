@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="dcc0d085-9a4f-432f-8d8e-6586ca4028d1" name="财政申请收入日报表查询服务组件" ename="TrIncomedayrpt">
+  <jproperties id="e106a3af-16e4-4efe-bf57-665bfa14699d" key="GeneratedTime" value="1364282956843"/>
+  <refModule href="JModule_337bfdb9-fbe9-484b-b091-282875e45379.model#337bfdb9-fbe9-484b-b091-282875e45379"/>
+  <methods id="ec1fe8ec-5320-46b9-b589-d0e14f86cac5" ename="exportQuery" name="导出查询" codecomment="导出查询" returntype="java.util.List" remark="财政申请收入日报表导出查询">
+    <methodParams id="80106ff4-d36d-445d-b4c3-b5af8164b3fe" name="财政申请收入日报表查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+    <methodParams id="c68e2f9a-d70a-449b-af99-5f8a44fcb67f" name="where条件" ename="wheresql" type="java.lang.String"/>
+  </methods>
+  <methods id="941dd83b-ffae-47dc-b6ed-be8c5c1e5dd1" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="767cf742-c71e-41f2-ba5e-95ee03913130" name="财政申请收入日报表查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="941dd83b-ffae-47dc-b6ed-be8c5c1e5dd1" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="b5150234-2400-4c35-aed7-1b3690e38fe0" name="财政申请收入日报表查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

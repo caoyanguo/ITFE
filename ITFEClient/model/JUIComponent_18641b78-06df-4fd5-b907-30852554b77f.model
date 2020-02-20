@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="18641b78-06df-4fd5-b907-30852554b77f" name="批次信息" ename="TsSysbatch" shared="true">
+  <refModule href="JModule_33bb3fe3-0879-42e2-a164-54cdba592c4c.model#33bb3fe3-0879-42e2-a164-54cdba592c4c"/>
+  <model id="eee55729-81a9-45ac-815e-10033058b808" name="JModelImpl-eee55729-81a9-45ac-815e-10033058b808">
+    <attributes id="8476147b-b3d5-4f6f-b188-0a1faf95776d" name="dto" type="com.cfcc.itfe.persistence.dto.TsSysbatchDto"/>
+    <attributes id="ce0a2eba-8944-4c9d-86e6-c55520d38146" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="32cb61c5-b063-468a-a4de-e8c097b2fa9b" viewers="41fc36b3-a1fc-477d-bec7-6e299b341168" name="跳转录入界面" ename="goInput"/>
+    <directions id="59015896-a946-4c81-8546-ddbeaf1f5aec" name="录入保存" ename="inputSave"/>
+    <directions id="4fc6fb7a-2427-48ee-9a28-be874d147c50" viewers="d2774780-2ff5-4c69-83ed-acb66e2db5c4" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="58344e4f-70c7-4ffd-ba4e-e00b734f8907" name="单选" ename="singleSelect"/>
+    <directions id="ed53d674-df45-4352-ab4c-3951099f7eaa" name="删除" ename="delete"/>
+    <directions id="9657203d-09e5-4ec6-90ce-29fc97485699" viewers="a21aedce-05c6-42db-8197-2ce84359e7e8" name="到修改界面" ename="goModify"/>
+    <directions id="5c4bd2ae-0f54-4641-96ec-f1f2beb750c4" name="修改保存" ename="modifySave"/>
+  </model>
+
+  <!--services href="JServiceComponet_cbb57262-d975-4963-8559-e6b70fadcf8b.model#cbb57262-d975-4963-8559-e6b70fadcf8b"/-->
+  <contentAreas id="4442e069-8e08-4856-9e8f-b8268a179fd4">
+     <contentareanode id="50997a7b-ab00-409b-9875-315d159fd45f" name="信息录入" grouptitle="信息录入" columnnum="2">
+    		<widgetRefs xsi:type="model:Text" id="848496e2-def7-4cad-9bff-1032a5062b28" name="sorgcode" binding="dto.sorgcode" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="a8a3e422-9713-41d4-8091-c94d42fe3567" name="LabelStyleImpl-a8a3e422-9713-41d4-8091-c94d42fe3567" ename="LabelStyleImplda8a3e422-9713-41d4-8091-c94d42fe3567"/>
+        <componentStyle id="363d3422-0738-4566-aac7-eb8330c8007a" name="ComponentStyleImpl-363d3422-0738-4566-aac7-eb8330c8007a" ename="ComponentStyleImpl363d3422-0738-4566-aac7-eb8330c8007a"/>
+	</widgetRefs>
+		<widgetRefs xsi:type="model:Text" id="1db92bb3-614a-4d2c-b50a-c9974b5ff547" name="sdate" binding="dto.sdate" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="02bced32-b56a-41c7-80e8-cbd91aeba300" name="LabelStyleImpl-02bced32-b56a-41c7-80e8-cbd91aeba300" ename="LabelStyleImpld02bced32-b56a-41c7-80e8-cbd91aeba300"/>
+        <componentStyle id="0fe48e6c-bf0a-454e-8d38-8bd4cdfb1da9" name="ComponentStyleImpl-0fe48e6c-bf0a-454e-8d38-8bd4cdfb1da9" ename="ComponentStyleImpl0fe48e6c-bf0a-454e-8d38-8bd4cdfb1da9"/>
+	</widgetRefs>
+		<widgetRefs xsi:type="model:Text" id="7bf07b6b-9c95-4c53-a538-09be39fcb986" name="soperationtypecode" binding="dto.soperationtypecode" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="d06e2155-8071-48eb-b94f-f6191d126a99" name="LabelStyleImpl-d06e2155-8071-48eb-b94f-f6191d126a99" ename="LabelStyleImpldd06e2155-8071-48eb-b94f-f6191d126a99"/>
+        <componentStyle id="932273bc-22c4-4bc8-9778-d34cddbb4966" name="ComponentStyleImpl-932273bc-22c4-4bc8-9778-d34cddbb4966" ename="ComponentStyleImpl932273bc-22c4-4bc8-9778-d34cddbb4966"/>
+	</widgetRefs>
+		<widgetRefs xsi:type="model:Text" id="ef47ad6b-02e3-4244-8480-d9a95a0da20c" name="icount" binding="dto.icount" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="ba69430f-7307-4787-84c4-06f4d6c9e5ad" name="LabelStyleImpl-ba69430f-7307-4787-84c4-06f4d6c9e5ad" ename="LabelStyleImpldba69430f-7307-4787-84c4-06f4d6c9e5ad"/>
+        <componentStyle id="9ee039ec-02f9-415d-a90e-a3eead8e5ba7" name="ComponentStyleImpl-9ee039ec-02f9-415d-a90e-a3eead8e5ba7" ename="ComponentStyleImpl9ee039ec-02f9-415d-a90e-a3eead8e5ba7"/>
+	</widgetRefs>
+	    </contentareanode>
+    
+    <contentareanode id="b5fb7e99-5e96-436a-afbf-1b3a1eef1988" name="维护查询结果" grouptitle="参数查询一览表">
+	<widgetRefs xsi:type="model:Table" id="dbcbc7f8-9bb1-4109-9995-a3c79957f2f9" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection = "58344e4f-70c7-4ffd-ba4e-e00b734f8907">
+    		<columnlist id="848496e2-def7-4cad-9bff-1032a5062b28" name="sorgcode" caption="${tabData.getColcname()}" binding="sorgcode"/>
+		<columnlist id="1db92bb3-614a-4d2c-b50a-c9974b5ff547" name="sdate" caption="${tabData.getColcname()}" binding="sdate"/>
+		<columnlist id="7bf07b6b-9c95-4c53-a538-09be39fcb986" name="soperationtypecode" caption="${tabData.getColcname()}" binding="soperationtypecode"/>
+		<columnlist id="ef47ad6b-02e3-4244-8480-d9a95a0da20c" name="icount" caption="${tabData.getColcname()}" binding="icount"/>
+		</widgetRefs>
+    </contentareanode>
+
+     <contentareanode id="89519a0a-ead9-43c5-84a2-9ff9d6be8ca9" name="信息修改" grouptitle="信息修改" columnnum="2">
+    		<widgetRefs xsi:type="model:Text" id="848496e2-def7-4cad-9bff-1032a5062b28" name="sorgcode" binding="dto.sorgcode" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="a8a3e422-9713-41d4-8091-c94d42fe3567" name="LabelStyleImpl-a8a3e422-9713-41d4-8091-c94d42fe3567" ename="LabelStyleImplda8a3e422-9713-41d4-8091-c94d42fe3567"/>
+        <componentStyle id="363d3422-0738-4566-aac7-eb8330c8007a" name="ComponentStyleImpl-363d3422-0738-4566-aac7-eb8330c8007a" ename="ComponentStyleImpl363d3422-0738-4566-aac7-eb8330c8007a"/>
+	</widgetRefs>
+		<widgetRefs xsi:type="model:Text" id="1db92bb3-614a-4d2c-b50a-c9974b5ff547" name="sdate" binding="dto.sdate" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="02bced32-b56a-41c7-80e8-cbd91aeba300" name="LabelStyleImpl-02bced32-b56a-41c7-80e8-cbd91aeba300" ename="LabelStyleImpld02bced32-b56a-41c7-80e8-cbd91aeba300"/>
+        <componentStyle id="0fe48e6c-bf0a-454e-8d38-8bd4cdfb1da9" name="ComponentStyleImpl-0fe48e6c-bf0a-454e-8d38-8bd4cdfb1da9" ename="ComponentStyleImpl0fe48e6c-bf0a-454e-8d38-8bd4cdfb1da9"/>
+	</widgetRefs>
+		<widgetRefs xsi:type="model:Text" id="7bf07b6b-9c95-4c53-a538-09be39fcb986" name="soperationtypecode" binding="dto.soperationtypecode" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="d06e2155-8071-48eb-b94f-f6191d126a99" name="LabelStyleImpl-d06e2155-8071-48eb-b94f-f6191d126a99" ename="LabelStyleImpldd06e2155-8071-48eb-b94f-f6191d126a99"/>
+        <componentStyle id="932273bc-22c4-4bc8-9778-d34cddbb4966" name="ComponentStyleImpl-932273bc-22c4-4bc8-9778-d34cddbb4966" ename="ComponentStyleImpl932273bc-22c4-4bc8-9778-d34cddbb4966"/>
+	</widgetRefs>
+		<widgetRefs xsi:type="model:Text" id="ef47ad6b-02e3-4244-8480-d9a95a0da20c" name="icount" binding="dto.icount" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="ba69430f-7307-4787-84c4-06f4d6c9e5ad" name="LabelStyleImpl-ba69430f-7307-4787-84c4-06f4d6c9e5ad" ename="LabelStyleImpldba69430f-7307-4787-84c4-06f4d6c9e5ad"/>
+        <componentStyle id="9ee039ec-02f9-415d-a90e-a3eead8e5ba7" name="ComponentStyleImpl-9ee039ec-02f9-415d-a90e-a3eead8e5ba7" ename="ComponentStyleImpl9ee039ec-02f9-415d-a90e-a3eead8e5ba7"/>
+	</widgetRefs>
+	    </contentareanode>
+
+ </contentAreas>
+ <pagenodes id="a744cc6f-1d52-49d9-a4df-5c177d0c2bb7">
+    <pages id="5a9e1ad4-f2cf-449c-a53f-13aa89cf96ec" name="维护批次信息">
+       <views id="d2774780-2ff5-4c69-83ed-acb66e2db5c4" name="维护界面"  isdefault="true" contentArea="b5fb7e99-5e96-436a-afbf-1b3a1eef1988">
+        <buttonArea id="21f1a0b9-85b2-4b57-9e20-4df706612f54" name="JButtonAreaImpl-21f1a0b9-85b2-4b57-9e20-4df706612f54">
+	  <buttons id="81061bf7-d325-4ad2-8b90-5cc77f9a7c4c" name="maintenanceInput" caption="录入" direction="32cb61c5-b063-468a-a4de-e8c097b2fa9b"/>
+          <buttons id="59e3374d-2682-49c5-9078-fd8985a50cd3" name="maintenanceDel" caption="删除" direction="ed53d674-df45-4352-ab4c-3951099f7eaa"/>
+	  <buttons id="31a0f413-0abb-464b-a8ca-4f958c88ff5f" name="maintenanceMod" caption="修改" direction="9657203d-09e5-4ec6-90ce-29fc97485699"/>
+        </buttonArea>
+      </views>
+      <views id="a21aedce-05c6-42db-8197-2ce84359e7e8" name="修改界面" contentArea="89519a0a-ead9-43c5-84a2-9ff9d6be8ca9">
+        <buttonArea id="bc2764ed-f148-44c9-b7d9-82fdb179c565" name="JButtonAreaImpl-bc2764ed-f148-44c9-b7d9-82fdb179c565">
+          <buttons id="b5dc44cc-96fd-4912-8d4a-185f3c2fa7ae" name="modifySave" caption="保存" direction="5c4bd2ae-0f54-4641-96ec-f1f2beb750c4"/>
+	  <buttons id="4f2800dc-4681-49dd-8ecf-5b83a846d0d5" name="modifyBack" caption="返回" direction="4fc6fb7a-2427-48ee-9a28-be874d147c50"/>
+        </buttonArea>
+      </views>
+      <views id="41fc36b3-a1fc-477d-bec7-6e299b341168" name="录入界面"  contentArea="50997a7b-ab00-409b-9875-315d159fd45f">
+        <buttonArea id="8e065675-ee4b-41fd-bcd9-88707ce0379b" name="JButtonAreaImpl-8e065675-ee4b-41fd-bcd9-88707ce0379b">
+          <buttons id="430ca64f-6444-4ab7-84b0-4b65a673c4b1" name="保存" caption="保存" direction="59015896-a946-4c81-8546-ddbeaf1f5aec"/>
+	  <buttons id="4f2800dc-4681-49dd-8ecf-5b83a846d0d5" name="modifyBack" caption="返回" direction="4fc6fb7a-2427-48ee-9a28-be874d147c50"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+
+</model:JUIComponent>

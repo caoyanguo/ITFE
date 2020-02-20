@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="$compuuid" name="$compcname" ename="$compename" shared="true">
+  <refModule href="JModule_$moduleuuid"/>
+  <model id="$model" name="JModelImpl-$model">
+    <attributes id="$attribute1" name="dto" type="$dtoclz"/>
+    <attributes id="$attribute2" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+
+    <directions id="$direction1" name="录入保存" ename="inputSave"/>
+
+    <directions id="$direction2" viewers="$views2_2" name="查询到结果界面" ename="queryResult"/>
+    <directions id="$direction3" viewers="$views2_1" name="返回到查询界面" ename="backQuery"/>
+
+    <directions id="$direction4" viewers="$views3_2" name="查询到维护界面" ename="queryMaintenance"/>
+    <directions id="$direction5" viewers="$views3_2" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="$direction6" name="单选" ename="singleSelect"/>
+    <directions id="$direction7" name="删除" ename="delete"/>
+    <directions id="$direction8" viewers="$views3_3" name="到修改界面" ename="toModify"/>
+    <directions id="$direction9" name="修改保存" ename="modifySave"/>
+    <directions id="$direction10" viewers="$views3_1" name="返回到维护查询界面" ename="backMaintenanceQuery"/>
+    <directions id="$direction11" name="启用" ename="maintenanceStart"/>
+    <directions id="$direction12" name="止用" ename="maintenanceStop"/>
+
+    <directions id="$direction13" viewers="$views4_2" name="返回到复核查询界面" ename="backCheck"/>
+    <directions id="$direction14" viewers="$views4_1" name="查询到复核界面" ename="queryCheck"/>
+    <directions id="$direction15" name="审核" ename="check"/>
+    <directions id="$direction16" name="取消审核" ename="checkStop"/>
+  </model>
+
+  <services href="JServiceComponet_9ad3e79d-69f8-491c-be89-0843f8d05e83.model#9ad3e79d-69f8-491c-be89-0843f8d05e83"/>
+  <contentAreas id="$area">
+     <contentareanode id="$node1" name="信息录入" grouptitle="信息录入" columnnum="2">
+    	#foreach($tabData in $widgetList)
+	<widgetRefs xsi:type="model:Text" id="${tabData.getText()}" name="${tabData.getColename()}" binding="dto.${tabData.getColename()}" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="${tabData.getLabel()}" name="LabelStyleImpl-${tabData.getLabel()}" ename="LabelStyleImpld${tabData.getLabel()}"/>
+        <componentStyle id="${tabData.getCompoent()}" name="ComponentStyleImpl-${tabData.getCompoent()}" ename="ComponentStyleImpl${tabData.getCompoent()}"/>
+	</widgetRefs>
+	#end
+    </contentareanode>
+
+    <contentareanode id="$node2" name="信息查询" grouptitle="信息查询" columnnum="2">
+    	#foreach($tabData in $widgetList)
+	<widgetRefs xsi:type="model:Text" id="${tabData.getText()}" name="${tabData.getColename()}" binding="dto.${tabData.getColename()}" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="${tabData.getLabel()}" name="LabelStyleImpl-${tabData.getLabel()}" ename="LabelStyleImpld${tabData.getLabel()}"/>
+        <componentStyle id="${tabData.getCompoent()}" name="ComponentStyleImpl-${tabData.getCompoent()}" ename="ComponentStyleImpl${tabData.getCompoent()}"/>
+	</widgetRefs>
+	#end
+    </contentareanode>
+
+    <contentareanode id="$node3" name="信息查询结果" grouptitle="信息查询结果">
+	<widgetRefs xsi:type="model:Table" id="$table1" name="queryResult" binding="pagingcontext" caption="查询结果" tabletype="paging" pagingtable="">
+    	#foreach($tabData in $widgetList)
+	<columnlist id="${tabData.getText()}" name="${tabData.getColename()}" caption="${tabData.getColcname()}" binding="${tabData.getColename()}"/>
+	#end
+	</widgetRefs>
+    </contentareanode>
+
+   <contentareanode id="$node4" name="复核查询" grouptitle="复核查询" columnnum="2">
+    	#foreach($tabData in $widgetList)
+	<widgetRefs xsi:type="model:Text" id="${tabData.getText()}" name="${tabData.getColename()}" binding="dto.${tabData.getColename()}" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="${tabData.getLabel()}" name="LabelStyleImpl-${tabData.getLabel()}" ename="LabelStyleImpld${tabData.getLabel()}"/>
+        <componentStyle id="${tabData.getCompoent()}" name="ComponentStyleImpl-${tabData.getCompoent()}" ename="ComponentStyleImpl${tabData.getCompoent()}"/>
+	</widgetRefs>
+	#end
+    </contentareanode>
+
+   <contentareanode id="$node5" name="复核查询结果" grouptitle="复核查询结果">
+	<widgetRefs xsi:type="model:Table" id="$table2" name="checkResult" binding="pagingcontext" caption="复核查询结果" tabletype="paging" pagingtable="" showcheckbox="true" selectedrows="checkList">
+    	#foreach($tabData in $widgetList)
+	<columnlist id="${tabData.getText()}" name="${tabData.getColename()}" caption="${tabData.getColcname()}" binding="${tabData.getColename()}"/>
+	#end
+	</widgetRefs>
+    </contentareanode>
+
+    <contentareanode id="$node6" name="维护查询" grouptitle="维护查询" columnnum="2">
+    	#foreach($tabData in $widgetList)
+	<widgetRefs xsi:type="model:Text" id="${tabData.getText()}" name="${tabData.getColename()}" binding="dto.${tabData.getColename()}" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="${tabData.getLabel()}" name="LabelStyleImpl-${tabData.getLabel()}" ename="LabelStyleImpld${tabData.getLabel()}"/>
+        <componentStyle id="${tabData.getCompoent()}" name="ComponentStyleImpl-${tabData.getCompoent()}" ename="ComponentStyleImpl${tabData.getCompoent()}"/>
+	</widgetRefs>
+	#end
+    </contentareanode>
+
+    <contentareanode id="$node7" name="维护查询结果" grouptitle="维护查询结果">
+	<widgetRefs xsi:type="model:Table" id="$table3" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection = "$direction6">
+    	#foreach($tabData in $widgetList)
+	<columnlist id="${tabData.getText()}" name="${tabData.getColename()}" caption="${tabData.getColcname()}" binding="${tabData.getColename()}"/>
+	#end
+	</widgetRefs>
+    </contentareanode>
+
+     <contentareanode id="$node8" name="信息修改" grouptitle="信息修改" columnnum="2">
+    	#foreach($tabData in $widgetList)
+	<widgetRefs xsi:type="model:Text" id="${tabData.getText()}" name="${tabData.getColename()}" binding="dto.${tabData.getColename()}" caption="${tabData.getColcname()}" editable="true">
+        <labelStyle id="${tabData.getLabel()}" name="LabelStyleImpl-${tabData.getLabel()}" ename="LabelStyleImpld${tabData.getLabel()}"/>
+        <componentStyle id="${tabData.getCompoent()}" name="ComponentStyleImpl-${tabData.getCompoent()}" ename="ComponentStyleImpl${tabData.getCompoent()}"/>
+	</widgetRefs>
+	#end
+    </contentareanode>
+
+ </contentAreas>
+
+  <pagenodes id="$pagenodes">
+    <pages id="$pages1" name="录入$ctabname">
+      <views id="$views1_1" name="录入界面"  isdefault="true"  contentArea="$node1">
+        <buttonArea id="$buttonarea1" name="JButtonAreaImpl-$buttonarea1">
+          <buttons id="$buttons1" name="保存" caption="保存" direction="$direction1"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="$pages2" name="查询$ctabname">
+      <views id="$views2_1" name="查询界面"  isdefault="true"  contentArea="$node2">
+        <buttonArea id="$buttonarea2_1" name="JButtonAreaImpl-$buttonarea2_1">
+          <buttons id="$buttons2_1" name="query" caption="查询" direction="$direction2"/>
+        </buttonArea>
+      </views>
+       <views id="$views2_2" name="查询结果界面"  contentArea="$node3">
+        <buttonArea id="$buttonarea2_2" name="JButtonAreaImpl-$buttonarea2_2">
+          <buttons id="$buttons2_2" name="backQuery" caption="返回" direction="$direction3"/>
+        </buttonArea>
+      </views>
+    </pages>
+
+    <pages id="$pages3" name="维护$ctabname">
+      <views id="$views3_1" name="维护查询界面"  isdefault="true"  contentArea="$node6">
+        <buttonArea id="$buttonarea3_1" name="JButtonAreaImpl-$buttonarea3_1">
+          <buttons id="$buttons3_1" name="maintenanceQuery" caption="查询" direction="$direction4"/>
+        </buttonArea>
+      </views>
+       <views id="$views3_2" name="维护界面"  contentArea="$node7">
+        <buttonArea id="$buttonarea3_2" name="JButtonAreaImpl-$buttonarea3_2">
+          <buttons id="$buttons3_2" name="maintenanceDel" caption="删除" direction="$direction7"/>
+	  <buttons id="$buttons3_3" name="maintenanceMod" caption="修改" direction="$direction8"/>
+	  <buttons id="$buttons3_4" name="maintenanceStart" caption="启用" direction="$direction11"/>
+	  <buttons id="$buttons3_5" name="maintenanceStop" caption="止用" direction="$direction12"/>
+	  <buttons id="$buttons3_6" name="maintenanceBack" caption="返回" direction="$direction10"/>
+        </buttonArea>
+      </views>
+      <views id="$views3_3" name="修改界面" contentArea="$node8">
+        <buttonArea id="$buttonarea3_3" name="JButtonAreaImpl-$buttonarea3_3">
+          <buttons id="$buttons3_7" name="modifySave" caption="保存" direction="$direction9"/>
+	  <buttons id="$buttons3_8" name="modifyBack" caption="返回" direction="$direction5"/>
+        </buttonArea>
+      </views>
+    </pages>
+
+    <pages id="$pages4" name="复核$ctabname">
+      <views id="$views4_1" name="复核查询界面"  isdefault="true"  contentArea="$node4">
+        <buttonArea id="$buttonarea4_1" name="JButtonAreaImpl-$buttonarea4_1">
+          <buttons id="$buttons4_1" name="checkQuery" caption="查询" direction="$direction13"/>
+        </buttonArea>
+      </views>
+      <views id="$views4_2" name="复核界面" contentArea="$node5">
+        <buttonArea id="$buttonarea4_2" name="JButtonAreaImpl-$buttonarea4_2">
+          <buttons id="$buttons4_2" name="check" caption="审核" direction="$direction15"/>
+          <buttons id="$buttons4_3" name="checkStop" caption="取消审核" direction="$direction16"/>
+          <buttons id="$buttons4_4" name="backCheck" caption="返回" direction="$direction14"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+
+</model:JUIComponent>

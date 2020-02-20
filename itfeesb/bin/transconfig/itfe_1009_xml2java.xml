@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="RealHead1009" beanIdRef="RealHead1009" />
+	<jb:wiring property="Payment1009" beanIdRef="Payment1009" />
+</jb:bean>
+<jb:bean beanId="RealHead1009" class="java.util.HashMap" createOnElement="RealHead1009">
+	<jb:value property="BankNo" decoder="String" data="CFX/MSG/RealHead1009/BankNo" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/RealHead1009/OriEntrustDate" />
+	<jb:value property="OriQueryNo" decoder="String" data="CFX/MSG/RealHead1009/OriQueryNo" />
+	<jb:value property="Result" decoder="String" data="CFX/MSG/RealHead1009/Result" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/RealHead1009/AddWord" />
+</jb:bean>
+<jb:bean beanId="Payment1009" class="java.util.HashMap" createOnElement="Payment1009">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/Payment1009/TaxOrgCode" />
+	<jb:value property="CorpCode" decoder="String" data="CFX/MSG/Payment1009/CorpCode" />
+	<jb:value property="TaxPayCode" decoder="String" data="CFX/MSG/Payment1009/TaxPayCode" />
+	<jb:value property="OuterLevyNo" decoder="String" data="CFX/MSG/Payment1009/OuterLevyNo" />
+	<jb:value property="PayOpBkCode" decoder="String" data="CFX/MSG/Payment1009/PayOpBkCode" />
+	<jb:value property="BankName" decoder="String" data="CFX/MSG/Payment1009/BankName" />
+	<jb:value property="TraAmt" decoder="String" data="CFX/MSG/Payment1009/TraAmt" />
+	<jb:value property="DetailNum" decoder="String" data="CFX/MSG/Payment1009/DetailNum" />
+	<jb:wiring property="TaxTypeList1009" beanIdRef="TaxTypeList1009s" />
+</jb:bean>
+<jb:bean beanId="TaxTypeList1009s" class="java.util.ArrayList" createOnElement="Payment1009">
+	<jb:wiring beanIdRef="TaxTypeList1009" />
+</jb:bean>
+<jb:bean beanId="TaxTypeList1009" class="java.util.HashMap" createOnElement="TaxTypeList1009">
+	<jb:value property="ProjectId" decoder="String" data="CFX/MSG/Payment1009/TaxTypeList1009/ProjectId" />
+	<jb:value property="TaxTypeName" decoder="String" data="CFX/MSG/Payment1009/TaxTypeList1009/TaxTypeName" />
+	<jb:value property="TaxTypeCode" decoder="String" data="CFX/MSG/Payment1009/TaxTypeList1009/TaxTypeCode" />
+	<jb:value property="TaxStartDate" decoder="String" data="CFX/MSG/Payment1009/TaxTypeList1009/TaxStartDate" />
+	<jb:value property="TaxEndDate" decoder="String" data="CFX/MSG/Payment1009/TaxTypeList1009/TaxEndDate" />
+	<jb:value property="TaxType" decoder="String" data="CFX/MSG/Payment1009/TaxTypeList1009/TaxType" />
+	<jb:value property="DetailNum" decoder="String" data="CFX/MSG/Payment1009/TaxTypeList1009/DetailNum" />
+	<jb:wiring property="TaxSubjectList1009" beanIdRef="TaxSubjectList1009s" />
+</jb:bean>
+<jb:bean beanId="TaxSubjectList1009s" class="java.util.ArrayList" createOnElement="TaxTypeList1009">
+	<jb:wiring beanIdRef="TaxSubjectList1009" />
+</jb:bean>
+<jb:bean beanId="TaxSubjectList1009" class="java.util.HashMap" createOnElement="TaxSubjectList1009">
+	<jb:value property="DetailNo" decoder="String" data="CFX/MSG/Payment1009/TaxSubjectList1009/DetailNo" />
+	<jb:value property="TaxSubjectCode" decoder="String" data="CFX/MSG/Payment1009/TaxSubjectList1009/TaxSubjectCode" />
+	<jb:value property="TaxNumber" decoder="String" data="CFX/MSG/Payment1009/TaxSubjectList1009/TaxNumber" />
+	<jb:value property="TaxAmt" decoder="String" data="CFX/MSG/Payment1009/TaxSubjectList1009/TaxAmt" />
+	<jb:value property="FactTaxAmt" decoder="String" data="CFX/MSG/Payment1009/TaxSubjectList1009/FactTaxAmt" />
+</jb:bean>
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

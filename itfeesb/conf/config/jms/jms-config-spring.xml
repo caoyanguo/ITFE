@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+		<!--
+		
+	<bean id="jndiTemplate" class="org.springframework.jndi.JndiTemplate">
+		<property name="environment">
+			<props>
+				<prop key="java.naming.factory.initial">
+					${mq.naming.factory}
+        		</prop>
+				<prop key="java.naming.provider.url">
+					${mq.jndiProviderUrl}
+       			</prop>
+			</props>
+		</property>
+	</bean> 
+
+	<bean id="ConnectionFactory" class="org.mule.transport.jms.xa.ConnectionFactoryWrapper">
+		<constructor-arg ref="mqXaFactory" />
+	</bean>
+
+	<bean id="mqXaFactory" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="${mq.connectionFactoryJndiName}" />
+		<property name="jndiTemplate" ref="jndiTemplate" />
+	</bean>
+	-->
+	<bean name="CaSecurityHandlerLocalTips"
+		class="com.cfcc.deptone.common.impl.security.ca.support.TipsStyleXmlCaSecurityHandler">
+		<property name="sign">
+			<value>true</value>
+		</property>
+		<property name="statistics">
+			<value>true</value>
+		</property>
+		<property name="verifySign">
+			<value>true</value>
+		</property>
+	</bean>
+	
+	<bean id="Cautil"
+		class="com.cfcc.deptone.common.impl.security.ca.SoftCAInterface"
+		init-method="init" lazy-init="true">
+		<property name="dsignFile" value="${dsignFile}" />
+		<property name="dsingDN" value="${dsingDN}" />
+	</bean>
+
+</beans>

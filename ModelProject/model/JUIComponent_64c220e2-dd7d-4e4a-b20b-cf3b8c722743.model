@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="64c220e2-dd7d-4e4a-b20b-cf3b8c722743" name="共享分成参数表维护" ename="TpShareDivide" shared="true">
+  <jproperties id="a59957f7-7fe6-43ac-ba54-e2eda154faf7" key="GeneratedTime" value="1380182222875"/>
+  <refModule href="JModule_4c710e3d-eb3d-4fc2-b204-6baef234374f.model#4c710e3d-eb3d-4fc2-b204-6baef234374f"/>
+  <model id="13b9eda8-d54b-4771-b772-115db43a2e40" name="JModelImpl-13b9eda8-d54b-4771-b772-115db43a2e40">
+    <attributes id="cca68337-faec-4ab1-a104-8f67c85f8a49" name="dto" type="com.cfcc.itfe.persistence.dto.TpShareDivideDto"/>
+    <attributes id="f98bfead-a3e2-438c-9da9-fd41229b01fe" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="b6ae0516-bbc2-4808-9686-9114ac892901" name="finddto" type="com.cfcc.itfe.persistence.dto.TpShareDivideDto"/>
+    <directions id="a4f1a5ef-f020-41cb-9a1a-b005803726eb" viewers="42d033de-ba07-4bd7-bbba-a2a7d55e7a3e" name="跳转录入界面" ename="goInput"/>
+    <directions id="652a0300-1515-44b1-89f3-1b4a4c331178" name="录入保存" ename="inputSave"/>
+    <directions id="dde7753b-3ce1-40f8-9bdb-a8bacb96fee0" viewers="c8e17405-bfe4-443f-a516-5b89f3092b5c" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="b0f21f08-66e4-498f-ba89-ec4c9cc8b630" name="单选" ename="singleSelect"/>
+    <directions id="273cfffe-e559-44c5-a240-74ac8eb2c32c" name="删除" ename="delete"/>
+    <directions id="ee539807-4f03-4b31-b61c-def8eb7ecb22" viewers="623988eb-f46d-4180-aa43-2aff65feb838" name="到修改界面" ename="goModify"/>
+    <directions id="bc5ed001-a33c-4a01-a6f0-2faa8744a44b" name="修改保存" ename="modifySave"/>
+    <directions id="fecd54ad-161c-4f9a-a23c-a5972e8fe7f0" viewers="c8e17405-bfe4-443f-a516-5b89f3092b5c" name="查询" ename="searchRs"/>
+    <directions id="608a414a-dbc6-4cb6-8bea-657b6c98f7d9" viewers="4fe15731-6605-494a-867f-07903ca26a24" name="返回查询界面" ename="rebackSearch"/>
+    <directions id="8963d9b0-8ddf-4dd2-a05f-5397e57aec56" name="文件导出" ename="expfile"/>
+  </model>
+  <services href="JServiceComponet_0aa8559e-c810-46e0-883d-c9e3f95c81c4.model#0aa8559e-c810-46e0-883d-c9e3f95c81c4"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="2eb808e6-e7db-4bbd-a319-84b46a3c8c3a">
+    <contentareanode id="af6b9c17-30f7-478e-af94-f1b34e294c57" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="06f06110-64a5-48d1-ab20-447d176c5537" name="sbookorgcode" binding="dto.sbookorgcode" caption="核算主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="c9f53f93-d14a-4621-acdc-3d4a269c4b3b" name="ctrimflag" binding="dto.ctrimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d455d457-7ae3-43f0-aabc-06a691d638fb" name="idividegrpid" binding="dto.idividegrpid" caption="分成组标识" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="cf0b0f8d-a641-460b-89a6-c22736f51cb8" name="sroottrecode" binding="dto.sroottrecode" caption="源国库主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="86c9df86-f604-489a-9c57-a01378e92c5b" name="stratrecode" binding="dto.stratrecode" caption="交易国库主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="573a3c01-02f5-49a9-b774-5664e9ff83cc" name="spayeetrecode" binding="dto.spayeetrecode" caption="收款国库代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="4e0ab909-6395-43dc-9ee8-cebca79a89a4" name="sroottaxorgcode" binding="dto.sroottaxorgcode" caption="源征收机关代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="fbc14e72-57ce-4e34-8b7d-b14012faf2ba" name="srootbdgsbtcode" binding="dto.srootbdgsbtcode" caption="源预算科目代码" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="c185ed1c-06b3-4ed9-9a35-ab5afb02d258" name="crootbdgkind" binding="dto.crootbdgkind" caption="源预算种类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="95c7d6d4-b803-4a23-9d50-37175acaa0c7" name="srootastflag" binding="dto.srootastflag" caption="源辅助标志"/>
+      <widgetRefs xsi:type="model:Text" id="93443803-f613-46a0-863f-4bd7cb56197f" name="safttrecode" binding="dto.safttrecode" caption="分成后国库主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="f6842c34-7cb3-4842-b13a-2ca710b8da2c" name="safttaxorgcode" binding="dto.safttaxorgcode" caption="分成后征收机关" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="2c321fdd-7eeb-4326-a6dc-035c3a000917" name="caftbdglevel" binding="dto.caftbdglevel" caption="分成后级次" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="61122786-5013-4ba7-af9e-2b1a2ea6eeda" name="saftbdgsbtcode" binding="dto.saftbdgsbtcode" caption="分成后预算科目" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="43eaacc0-0f6d-4da8-a90e-71b9ef40a562" name="caftbdgtype" binding="dto.caftbdgtype" caption="分成后预算种类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="125ce38c-47f7-45bb-be0f-e21227ae13ac" name="saftastflag" binding="dto.saftastflag" caption="分成后辅助标志"/>
+      <widgetRefs xsi:type="model:Text" id="37e25f98-7ef3-491b-a61d-57cb6e90634a" name="fjoindividerate" binding="dto.fjoindividerate" caption="参加分成比例" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="ff6dcdf5-882b-49e0-a3f0-fc966112995f" name="cgovernralation" binding="dto.cgovernralation" caption="辖属关系" required="true"/>
+    </contentareanode>
+    <contentareanode id="8f57b56a-187f-4487-bcf7-d835e69f632c" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="0e441c7e-9b29-4678-94b4-9c5a5f700467" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" refsingleclickdirection="b0f21f08-66e4-498f-ba89-ec4c9cc8b630">
+        <columnlist id="29d224a6-b037-4cfb-a0cc-f7e9f9726f52" name="iparamseqno" binding="iparamseqno" caption="参数序号"/>
+        <columnlist id="03d7f2c7-87dd-4101-b624-1c9f3fed8835" name="sbookorgcode" binding="sbookorgcode" caption="核算主体代码"/>
+        <columnlist id="bf93f72c-65cd-43a1-abb0-6732334fa13b" name="ctrimflag" binding="ctrimflag" caption="调整期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+        </columnlist>
+        <columnlist id="c93e6d01-edba-4022-a357-88be4bd377b9" name="idividegrpid" binding="idividegrpid" caption="分成组标识"/>
+        <columnlist id="2e9a4fe2-f549-4a81-9baa-5ae0088af785" name="sroottrecode" binding="sroottrecode" caption="源国库主体代码"/>
+        <columnlist id="003a3dc1-4b8d-49f3-bdd9-a69e8cd22482" name="stratrecode" binding="stratrecode" caption="交易国库主体代码"/>
+        <columnlist id="1f18345b-beb9-4d5c-b301-9cb05e0ae9d2" name="spayeetrecode" binding="spayeetrecode" caption="收款国库代码"/>
+        <columnlist id="bdfa0b37-28fd-41c2-9db0-3ddab1030d9c" name="sroottaxorgcode" binding="sroottaxorgcode" caption="源征收机关代码"/>
+        <columnlist id="887745dd-221a-4885-867f-d03f4277cdd1" name="srootbdgsbtcode" binding="srootbdgsbtcode" caption="源预算科目代码"/>
+        <columnlist id="59b9d6e3-82f3-4340-829f-e317a8cfea9e" name="crootbdgkind" binding="crootbdgkind" caption="源预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="5b70bbd7-53e3-48d6-8e5d-a1bc7d1069fc" name="srootastflag" binding="srootastflag" caption="源辅助标志"/>
+        <columnlist id="531a53d2-3204-4f28-ba55-caf358568d3a" name="safttrecode" binding="safttrecode" caption="分成后国库主体代码"/>
+        <columnlist id="3186d9a3-4ad2-4b75-9203-065e31cc43bb" name="safttaxorgcode" binding="safttaxorgcode" caption="分成后征收机关"/>
+        <columnlist id="df2e826c-099a-4127-8ad7-91b710d43827" name="caftbdglevel" binding="caftbdglevel" caption="分成后级次"/>
+        <columnlist id="dc8c4344-e048-44ad-a851-1a661ac055cc" name="saftbdgsbtcode" binding="saftbdgsbtcode" caption="分成后预算科目"/>
+        <columnlist id="e1cc2d99-6a5a-486c-a2ba-95762cdddd2c" name="caftbdgtype" binding="caftbdgtype" caption="分成后预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="45839c4a-67f4-410e-bfcb-02e0ffb16d29" name="saftastflag" binding="saftastflag" caption="分成后辅助标志"/>
+        <columnlist id="2f2aece9-1385-4d55-8283-12e3c0866251" name="fjoindividerate" binding="fjoindividerate" caption="参加分成比例"/>
+        <columnlist id="775cf0b2-ba43-4eeb-9433-aaa016d3fc30" name="cgovernralation" binding="cgovernralation" caption="辖属关系"/>
+        <columnlist id="6cdfda07-b46b-4fbc-a0b2-5f2c6cfb6b0d" name="tssysupdate" binding="tssysupdate" caption="系统更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="184e9919-1eeb-4217-93cf-626d6bf333f8" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="43e062fc-b107-4df2-84c8-0a7325899821" name="iparamseqno" binding="dto.iparamseqno" caption="参数序号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="f57e1a7b-c7e7-428f-bedd-1d71fe32020c" name="sbookorgcode" binding="dto.sbookorgcode" caption="核算主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="0d236e26-20ae-4425-b1e2-4398df14ca7d" name="ctrimflag" binding="dto.ctrimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6c668397-2bc1-499a-8cd9-749db7188b6c" name="idividegrpid" binding="dto.idividegrpid" caption="分成组标识" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="658b0636-3073-4a54-b6c9-f7f540336892" name="sroottrecode" binding="dto.sroottrecode" caption="源国库主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="9eebf395-45e6-47ed-81ec-5254882c980d" name="stratrecode" binding="dto.stratrecode" caption="交易国库主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="8bf8d70e-1bf6-40d9-87ed-1d3c701c2918" name="spayeetrecode" binding="dto.spayeetrecode" caption="收款国库代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="98b41918-9012-43d1-895f-635d754cb84c" name="sroottaxorgcode" binding="dto.sroottaxorgcode" caption="源征收机关代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="2c11c2bd-c77b-4b73-a193-34eab2583357" name="srootbdgsbtcode" binding="dto.srootbdgsbtcode" caption="源预算科目代码" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="b638a007-2728-4a97-a763-083143cd20fc" name="crootbdgkind" binding="dto.crootbdgkind" caption="源预算种类" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="271fcc4c-ab9f-44c7-ba0e-2444c6828e93" name="srootastflag" binding="dto.srootastflag" caption="源辅助标志"/>
+      <widgetRefs xsi:type="model:Text" id="055dae6a-75b5-440b-b86c-645aaa6d81a2" name="safttrecode" binding="dto.safttrecode" caption="分成后国库主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="8379ecfc-431b-461b-8daa-ea8860ed1fd7" name="safttaxorgcode" binding="dto.safttaxorgcode" caption="分成后征收机关" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5723d252-d864-45a4-9ac7-31536a57b813" name="caftbdglevel" binding="dto.caftbdglevel" caption="分成后级次" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="b870a84f-d733-4d86-a409-2b903d7154cf" name="saftbdgsbtcode" binding="dto.saftbdgsbtcode" caption="分成后预算科目" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="aab52b3a-2f81-4bfc-99ab-39f5099019b4" name="caftbdgtype" binding="dto.caftbdgtype" caption="分成后预算种类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="016424a7-ade9-4638-905c-715232da238b" name="saftastflag" binding="dto.saftastflag" caption="分成后辅助标志"/>
+      <widgetRefs xsi:type="model:Text" id="82fb87e2-ce27-4b36-8c65-83ab457cad61" name="fjoindividerate" binding="dto.fjoindividerate" caption="参加分成比例" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="cb3040bc-1e95-4146-8f9d-84282f4961d4" name="cgovernralation" binding="dto.cgovernralation" caption="辖属关系" required="true"/>
+    </contentareanode>
+    <contentareanode id="684397cb-019a-40c9-b2eb-fbf8c5833794" name="查询条件" grouptitle="查询条件" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="561fdc42-cf7c-47b9-8929-54122023cb3e" name="ctrimflag" binding="finddto.ctrimflag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4c65a251-6837-418d-8e5a-855c07fcc844" name="idividegrpid" binding="finddto.idividegrpid" caption="分成组标识"/>
+      <widgetRefs xsi:type="model:Text" id="36415e90-c6d3-40f9-b9ea-a2a521a83fc6" name="sroottrecode" binding="finddto.sroottrecode" caption="源国库主体代码"/>
+      <widgetRefs xsi:type="model:Text" id="4ac54987-2bdc-4826-86ca-253623af1974" name="stratrecode" binding="finddto.stratrecode" caption="交易国库主体代码"/>
+      <widgetRefs xsi:type="model:Text" id="58fe8290-6932-40b0-a39e-feb62fc2aac5" name="spayeetrecode" binding="finddto.spayeetrecode" caption="收款国库代码"/>
+      <widgetRefs xsi:type="model:Text" id="8d50b7fc-d832-4c38-89ef-d8067ff6b23e" name="sroottaxorgcode" binding="finddto.sroottaxorgcode" caption="源征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="53ea38ff-3167-4dfb-9b13-97f2781e00c5" name="srootbdgsbtcode" binding="finddto.srootbdgsbtcode" caption="源预算科目代码"/>
+      <widgetRefs xsi:type="model:Combo" id="7b87cce7-179e-49ab-a283-b2e91dce2640" name="crootbdgkind" binding="finddto.crootbdgkind" caption="源预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="f5c84e5e-9a68-409b-88ba-017f0cec2c78" name="srootastflag" binding="finddto.srootastflag" caption="源辅助标志"/>
+      <widgetRefs xsi:type="model:Text" id="e4098849-e5d2-46e1-9331-6b1371a378ab" name="safttrecode" binding="finddto.safttrecode" caption="分成后国库主体代码"/>
+      <widgetRefs xsi:type="model:Text" id="a7180311-d67f-4f6d-849c-712fcef1b759" name="safttaxorgcode" binding="finddto.safttaxorgcode" caption="分成后征收机关"/>
+      <widgetRefs xsi:type="model:Text" id="63c9926f-32f1-4ea8-931a-3ca03cf70083" name="caftbdglevel" binding="finddto.caftbdglevel" caption="分成后级次"/>
+      <widgetRefs xsi:type="model:Text" id="06bb9c90-e9e9-4f7a-ae4a-e0606e231368" name="saftbdgsbtcode" binding="finddto.saftbdgsbtcode" caption="分成后预算科目"/>
+      <widgetRefs xsi:type="model:Combo" id="b1dddb6b-9eaf-471f-b622-a17f3cf5816c" name="caftbdgtype" binding="finddto.caftbdgtype" caption="分成后预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="f2a5cc77-324a-436b-82c4-02471791a8ea" name="saftastflag" binding="finddto.saftastflag" caption="分成后辅助标志"/>
+      <widgetRefs xsi:type="model:Text" id="171d8bf8-b844-4a3c-bee9-8ff8ef1a0755" name="fjoindividerate" binding="finddto.fjoindividerate" caption="参加分成比例"/>
+      <widgetRefs xsi:type="model:Text" id="f582702c-9c9e-4fc0-aa75-8460d0bce1b8" name="cgovernralation" binding="finddto.cgovernralation" caption="辖属关系"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="067054af-b42c-408f-beff-b25207019e6d">
+    <pages id="8c8aed0a-2f60-481b-8e7b-9fcb8076b1a9" name="共享分成参数表维护">
+      <views id="4fe15731-6605-494a-867f-07903ca26a24" name="查询界面" isdefault="true" contentArea="684397cb-019a-40c9-b2eb-fbf8c5833794">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="7ad051bb-b80f-420d-8794-8eb4ccf73ada" name="JButtonAreaImpl-7ad051bb-b80f-420d-8794-8eb4ccf73ada">
+          <buttons id="26c2a5fe-9c7d-4e25-94be-47488ad51a6c" name="查询" caption="查询" direction="fecd54ad-161c-4f9a-a23c-a5972e8fe7f0"/>
+        </buttonArea>
+      </views>
+      <views id="c8e17405-bfe4-443f-a516-5b89f3092b5c" name="维护界面" contentArea="8f57b56a-187f-4487-bcf7-d835e69f632c">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="0fe981b5-e80c-4754-ad79-84c5140f8392" name="JButtonAreaImpl-0fe981b5-e80c-4754-ad79-84c5140f8392">
+          <buttons id="8ba62914-aa8c-41be-b527-a908dac23d77" name="录入" caption="录入" direction="a4f1a5ef-f020-41cb-9a1a-b005803726eb"/>
+          <buttons id="021cf70f-03fa-4ad0-be69-c65091db6966" name="删除" caption="删除" direction="273cfffe-e559-44c5-a240-74ac8eb2c32c"/>
+          <buttons id="d4e7cee5-288a-4bef-bd03-65d624ea27c5" name="修改" caption="修改" direction="ee539807-4f03-4b31-b61c-def8eb7ecb22"/>
+          <buttons id="6e2129b9-bac6-4f09-8ef3-672f5403eb4b" name="导出" caption="导出" direction="8963d9b0-8ddf-4dd2-a05f-5397e57aec56"/>
+          <buttons id="f15f9569-8921-49a8-b562-6ece345c6bcf" name="返回" caption="返回" direction="608a414a-dbc6-4cb6-8bea-657b6c98f7d9"/>
+        </buttonArea>
+      </views>
+      <views id="623988eb-f46d-4180-aa43-2aff65feb838" name="修改界面" contentArea="184e9919-1eeb-4217-93cf-626d6bf333f8">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="d187aee2-0c5b-4cbf-a5e0-0a886b5a8750" name="JButtonAreaImpl-d187aee2-0c5b-4cbf-a5e0-0a886b5a8750">
+          <buttons id="6f192a66-7ae7-40de-a672-6293b364d9ef" name="保存" caption="保存" checkrequired="true" direction="bc5ed001-a33c-4a01-a6f0-2faa8744a44b"/>
+          <buttons id="0f585c0e-3ea4-4972-bf39-89fa8e0213f5" name="返回" caption="返回" direction="dde7753b-3ce1-40f8-9bdb-a8bacb96fee0"/>
+        </buttonArea>
+      </views>
+      <views id="42d033de-ba07-4bd7-bbba-a2a7d55e7a3e" name="录入界面" contentArea="af6b9c17-30f7-478e-af94-f1b34e294c57">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="a3bab134-a1ba-4e7c-bdb6-1984d8ea217a" name="JButtonAreaImpl-a3bab134-a1ba-4e7c-bdb6-1984d8ea217a">
+          <buttons id="e7f603db-b865-4bd1-8cc5-67c2732bfe40" name="保存" caption="保存" checkrequired="true" direction="652a0300-1515-44b1-89f3-1b4a4c331178"/>
+          <buttons id="966f300b-5d9f-4da1-826e-b7eac9c940ad" name="返回" caption="返回" direction="dde7753b-3ce1-40f8-9bdb-a8bacb96fee0"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

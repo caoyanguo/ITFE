@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="applicationContextLoader" class="com.cfcc.jaf.core.loader.ApplicationContextLoader">
+		<property name="fileList">
+			<list>
+				<value>config/RemoteInvoker.xml</value>
+				<value>config/DatabaseSourceConfig.xml</value>
+				<value>config/databaseconfig/ormap/ItfeOrmap.xml</value>
+				<value>config/TransactionConfig.xml</value>
+
+					<!--
+					<value>config/databaseconfig/dev/DatabaseSourceConfig.xml</value>
+				
+					TAS 的数据库配置
+				-->
+				
+				<!--
+				<value>config/databaseconfig/ormap/TASOrmap.xml</value>
+					ormapping配置
+				
+				<value>config/databaseconfig/TransactionConfig.xml</value>-->
+				<!--
+					事务配置信息
+				<value>config/Services.xml</value>
+				<value>config/ManServices.xml</value>
+				-->
+			
+
+			</list>
+		</property>
+	</bean>
+
+</beans>
+
+
+
+
+

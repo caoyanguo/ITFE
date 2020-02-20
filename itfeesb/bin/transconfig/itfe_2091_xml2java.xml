@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="DeclareQuery2091" beanIdRef="DeclareQuery2091" />
+</jb:bean>
+<jb:bean beanId="DeclareQuery2091" class="java.util.HashMap" createOnElement="DeclareQuery2091">
+	<jb:value property="BankNo" decoder="String" data="CFX/MSG/DeclareQuery2091/BankNo" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/DeclareQuery2091/EntrustDate" />
+	<jb:value property="QueryNo" decoder="String" data="CFX/MSG/DeclareQuery2091/QueryNo" />
+	<jb:value property="PayOpBkCode" decoder="String" data="CFX/MSG/DeclareQuery2091/PayOpBkCode" />
+	<jb:value property="BankName" decoder="String" data="CFX/MSG/DeclareQuery2091/BankName" />
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/DeclareQuery2091/TaxOrgCode" />
+	<jb:value property="CorpCode" decoder="String" data="CFX/MSG/DeclareQuery2091/CorpCode" />
+	<jb:value property="TaxPayCode" decoder="String" data="CFX/MSG/DeclareQuery2091/TaxPayCode" />
+	<jb:value property="OuterLevyNo" decoder="String" data="CFX/MSG/DeclareQuery2091/OuterLevyNo" />
+</jb:bean>
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

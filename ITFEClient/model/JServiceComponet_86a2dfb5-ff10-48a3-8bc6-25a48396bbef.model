@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="86a2dfb5-ff10-48a3-8bc6-25a48396bbef" name="报表申请和下载服务组件" ename="rptDownload" shared="false">
+  <jproperties id="378e48ed-2fe6-43af-a673-a621c1454585" key="GeneratedTime" value="1376901690833"/>
+  <refModule href="JModule_2a45d7c2-915d-499d-8736-08879ba0b5c8.model#2a45d7c2-915d-499d-8736-08879ba0b5c8"/>
+  <methods id="ee1e7a19-c1e7-47db-9479-b72125020367" ename="downloadRpt" name="报表数据下载" returntype="java.util.List">
+    <methodParams id="526bd7d9-14a7-4b01-becc-922bedd4827a" name="国库代码" ename="strecode" type="java.lang.String" codecomment="国库代码"/>
+    <methodParams id="ad2ba4ba-e7a9-49d6-b582-77d97e3394f9" name="报表日期" ename="rptDate" type="java.lang.String" codecomment="报表日期"/>
+    <methodParams id="00b2ef20-afa9-4b1c-90ed-1424680f0df7" name="征收机关性质" ename="taxprop" type="java.lang.String"/>
+    <methodParams id="5afa8342-20d9-49c5-ae81-131755719921" name="报表范围" ename="rpttype" type="java.lang.String" codecomment="报表范围"/>
+  </methods>
+  <methods id="799c41b4-4e05-40f6-8e3a-bb5a3ae3ce40" ename="requestRpt" name="报表申请" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="159d2d62-ccc7-4de6-b309-7fe61f0ebe3c" name="国库代码" ename="strecode" type="java.lang.String" codecomment="国库代码"/>
+    <methodParams id="d133bad9-c542-4f8b-86dc-935b55ccf868" name="报表日期" ename="srptdate" type="java.lang.String" codecomment="报表日期"/>
+  </methods>
+  <methods id="7c8d658c-cffe-46d0-b1ae-1fa1bd830630" ename="sendApplyInfo" name="发送申请报文" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="7be550b1-9705-42f2-a730-8d94fc9f3f69" name="账务日期" ename="acctdate" type="java.lang.String"/>
+    <methodParams id="f408f2a9-1b63-4795-9824-e278332ecfc2" name="报文编号" ename="msgid" type="java.lang.String"/>
+    <methodParams id="ce904bcf-3df7-49b0-9869-f2dae0912392" name="财政代码" ename="finorg" type="java.lang.String"/>
+    <methodParams id="e097e2d8-89e1-4f1d-b8d0-0e5b466de9b7" name="登录机构代码" ename="sorgcode" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

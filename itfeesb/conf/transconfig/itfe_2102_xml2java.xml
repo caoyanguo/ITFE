@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead2102" beanIdRef="BatchHead2102" />
+	<jb:wiring property="BatchReturn2102" beanIdRef="BatchReturn2102s" />
+</jb:bean>
+<jb:bean beanId="BatchReturn2102s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="BatchReturn2102" />
+</jb:bean>
+<jb:bean beanId="BatchReturn2102" class="java.util.HashMap" createOnElement="BatchReturn2102">
+	<jb:value property="OriTraNo" decoder="String" data="CFX/MSG/BatchReturn2102/OriTraNo" />
+	<jb:value property="TraAmt" decoder="String" data="CFX/MSG/BatchReturn2102/TraAmt" />
+	<jb:value property="TaxVouNo" decoder="String" data="CFX/MSG/BatchReturn2102/TaxVouNo" />
+	<jb:value property="TaxDate" decoder="String" data="CFX/MSG/BatchReturn2102/TaxDate" />
+	<jb:value property="Result" decoder="String" data="CFX/MSG/BatchReturn2102/Result" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/BatchReturn2102/AddWord" />
+</jb:bean>
+<jb:bean beanId="BatchHead2102" class="java.util.HashMap" createOnElement="BatchHead2102">
+	<jb:value property="PayBkCode" decoder="String" data="CFX/MSG/BatchHead2102/PayBkCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead2102/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead2102/PackNo" />
+	<jb:value property="OriTaxOrgCode" decoder="String" data="CFX/MSG/BatchHead2102/OriTaxOrgCode" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/BatchHead2102/OriEntrustDate" />
+	<jb:value property="OriPackNo" decoder="String" data="CFX/MSG/BatchHead2102/OriPackNo" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead2102/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead2102/AllAmt" />
+	<jb:value property="SuccNum" decoder="String" data="CFX/MSG/BatchHead2102/SuccNum" />
+	<jb:value property="SuccAmt" decoder="String" data="CFX/MSG/BatchHead2102/SuccAmt" />
+	<jb:value property="Result" decoder="String" data="CFX/MSG/BatchHead2102/Result" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/BatchHead2102/AddWord" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

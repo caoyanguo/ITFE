@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="772aba57-6e0e-4a69-9d68-00b56d43213e" name="商行办理支付划款申请查询处理" ename="commApplyPayQuery"/>

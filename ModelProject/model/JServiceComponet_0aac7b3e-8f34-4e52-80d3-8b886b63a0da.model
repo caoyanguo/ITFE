@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0aac7b3e-8f34-4e52-80d3-8b886b63a0da" name="财政调拨支出预算科目维护服务" ename="TsFinmovepaysub">
+  <jproperties id="f0a48f14-bb6e-43ca-9ca9-4ad51d95ab47" key="GeneratedTime" value="1340701618748"/>
+  <refModule href="JModule_5652109e-b12f-40ea-8532-c1fc940a7bb9.model#5652109e-b12f-40ea-8532-c1fc940a7bb9"/>
+  <methods id="74370425-f52e-4a9b-ab5d-295da90c6b41" ename="finmovepayList" name="财政调拨支出列表" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="12052678-985f-4f88-b4d2-2b81a86c282e" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodParams id="8e5208fb-02b1-4530-80a5-9468db6a6e96" name="财政调拨支出对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="d290ebb0-44c5-4db2-981b-1f32ccab2a11" ename="finmovepayDelete" name="财政调拨支出删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="d4bbf511-a3dc-4445-8dd5-3f7171aaa7c8" name="财政调拨支出对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="b1dc79c8-2651-4f47-9fbe-a6bb539e65ce" ename="finmovepaySave" name="财政调拨支出录入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="c5c21f88-d242-4bb9-a97e-671d027d9d4e" name="财政调拨支出对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="0b8c0249-5f1a-451e-8df4-a9515f12e860" ename="finmovepayModify" name="财政调拨支出修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="1c03b25b-7203-4aec-8c2d-3491aff66496" name="财政调拨支出对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+	xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+	<jb:bean beanId="CFX" class="java.util.HashMap"
+		createOnElement="CFX">
+		<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	</jb:bean>
+	<import file="xml2javahead.xml" />
+</smooks-resource-list>

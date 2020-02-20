@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="89be251f-b420-487a-9be8-5f1119fee4bc" name="收款银行退款通知查询" ename="payBankRefundQuery"/>

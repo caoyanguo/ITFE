@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1fc52fc8-0161-4253-a05e-37960983579c" name="发起凭证统计查询" ename="SendVoucherInfoCount"/>

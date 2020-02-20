@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BillHead3127" beanIdRef="BillHead3127" />
+	<jb:wiring property="NrBudget3127" beanIdRef="NrBudget3127" />
+	<jb:wiring property="NrDrawBack3127" beanIdRef="NrDrawBack3127" />
+	<jb:wiring property="NrRemove3127" beanIdRef="NrRemove3127" />
+	<jb:wiring property="Amount3127" beanIdRef="Amount3127" />
+	<jb:wiring property="NrShare3127" beanIdRef="NrShare3127" />
+	<jb:wiring property="Pay3127" beanIdRef="Pay3127" />
+	<jb:wiring property="Debt3127" beanIdRef="Debt3127" />
+	<jb:wiring property="Stock3127" beanIdRef="Stock3127" />
+	<jb:wiring property="TrBudget3127" beanIdRef="TrBudget3127" />
+	<jb:wiring property="TrDrawBack3127" beanIdRef="TrDrawBack3127" />
+	<jb:wiring property="TrRemove3127" beanIdRef="TrRemove3127" />
+	<jb:wiring property="TrShare3127" beanIdRef="TrShare3127" />
+</jb:bean>
+<jb:bean beanId="BillHead3127" class="java.util.HashMap" createOnElement="BillHead3127">
+	<jb:value property="ReportDate" decoder="String" data="CFX/MSG/BillHead3127/ReportDate" />
+</jb:bean>
+<jb:bean beanId="NrBudget3127" class="java.util.HashMap" createOnElement="NrBudget3127">
+	<jb:wiring property="NrBudgetBill3127" beanIdRef="NrBudgetBill3127s" />
+</jb:bean>
+<jb:bean beanId="NrBudgetBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="NrBudgetBill3127" />
+</jb:bean>
+<jb:bean beanId="NrBudgetBill3127" class="java.util.HashMap" createOnElement="NrBudgetBill3127">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/TaxOrgCode" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/TreCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/BudgetType" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/BudgetLevelCode" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/NrBudget3127/NrBudgetBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="NrDrawBack3127" class="java.util.HashMap" createOnElement="NrDrawBack3127">
+	<jb:wiring property="NrDrawBackBill3127" beanIdRef="NrDrawBackBill3127s" />
+</jb:bean>
+<jb:bean beanId="NrDrawBackBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="NrDrawBackBill3127" />
+</jb:bean>
+<jb:bean beanId="NrDrawBackBill3127" class="java.util.HashMap" createOnElement="NrDrawBackBill3127">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/TaxOrgCode" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/TreCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/BudgetType" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/BudgetLevelCode" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/NrDrawBack3127/NrDrawBackBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="NrRemove3127" class="java.util.HashMap" createOnElement="NrRemove3127">
+	<jb:wiring property="NrRemoveBill3127" beanIdRef="NrRemoveBill3127s" />
+</jb:bean>
+<jb:bean beanId="NrRemoveBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="NrRemoveBill3127" />
+</jb:bean>
+<jb:bean beanId="NrRemoveBill3127" class="java.util.HashMap" createOnElement="NrRemoveBill3127">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/TaxOrgCode" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/TreCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/BudgetType" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/BudgetLevelCode" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/NrRemove3127/NrRemoveBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="Amount3127" class="java.util.HashMap" createOnElement="Amount3127">
+	<jb:wiring property="AmountBill3127" beanIdRef="AmountBill3127s" />
+</jb:bean>
+<jb:bean beanId="AmountBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="AmountBill3127" />
+</jb:bean>
+<jb:bean beanId="AmountBill3127" class="java.util.HashMap" createOnElement="AmountBill3127">
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/TreCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/BudgetType" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/BudgetLevelCode" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/Amount3127/AmountBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="NrShare3127" class="java.util.HashMap" createOnElement="NrShare3127">
+	<jb:wiring property="NrShareBill3127" beanIdRef="NrShareBill3127s" />
+</jb:bean>
+<jb:bean beanId="NrShareBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="NrShareBill3127" />
+</jb:bean>
+<jb:bean beanId="NrShareBill3127" class="java.util.HashMap" createOnElement="NrShareBill3127">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/TaxOrgCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/BudgetType" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/TreCode" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/BudgetLevelCode" />
+	<jb:value property="DivideGroup" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/DivideGroup" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/NrShare3127/NrShareBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="Pay3127" class="java.util.HashMap" createOnElement="Pay3127">
+	<jb:wiring property="PayBill3127" beanIdRef="PayBill3127s" />
+</jb:bean>
+<jb:bean beanId="PayBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="PayBill3127" />
+</jb:bean>
+<jb:bean beanId="PayBill3127" class="java.util.HashMap" createOnElement="PayBill3127">
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/TreCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/BudgetType" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/Pay3127/PayBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="Debt3127" class="java.util.HashMap" createOnElement="Debt3127">
+	<jb:wiring property="DebtBill3127" beanIdRef="DebtBill3127s" />
+</jb:bean>
+<jb:bean beanId="DebtBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="DebtBill3127" />
+</jb:bean>
+<jb:bean beanId="DebtBill3127" class="java.util.HashMap" createOnElement="DebtBill3127">
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/TreCode" />
+	<jb:value property="CashBank" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/CashBank" />
+	<jb:value property="KindSign" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/KindSign" />
+	<jb:value property="CorpusSubject" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/CorpusSubject" />
+	<jb:value property="CorDayAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/CorDayAmt" />
+	<jb:value property="CorTenDayAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/CorTenDayAmt" />
+	<jb:value property="CorMonthAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/CorMonthAmt" />
+	<jb:value property="CorQuarterAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/CorQuarterAmt" />
+	<jb:value property="CorYearAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/CorYearAmt" />
+	<jb:value property="AccrualSubject" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/AccrualSubject" />
+	<jb:value property="AccDayAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/AccDayAmt" />
+	<jb:value property="AccTenDayAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/AccTenDayAmt" />
+	<jb:value property="AccMonthAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/AccMonthAmt" />
+	<jb:value property="AccQuarterAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/AccQuarterAmt" />
+	<jb:value property="AccYearAmt" decoder="String" data="CFX/MSG/Debt3127/DebtBill3127/AccYearAmt" />
+</jb:bean>
+<jb:bean beanId="Stock3127" class="java.util.HashMap" createOnElement="Stock3127">
+	<jb:wiring property="StockBill3127" beanIdRef="StockBill3127s" />
+</jb:bean>
+<jb:bean beanId="StockBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="StockBill3127" />
+</jb:bean>
+<jb:bean beanId="StockBill3127" class="java.util.HashMap" createOnElement="StockBill3127">
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/Stock3127/StockBill3127/TreCode" />
+	<jb:value property="AcctCode" decoder="String" data="CFX/MSG/Stock3127/StockBill3127/AcctCode" />
+	<jb:value property="AcctName" decoder="String" data="CFX/MSG/Stock3127/StockBill3127/AcctName" />
+	<jb:value property="AcctDate" decoder="String" data="CFX/MSG/Stock3127/StockBill3127/AcctDate" />
+	<jb:value property="YesterdayBalance" decoder="String" data="CFX/MSG/Stock3127/StockBill3127/YesterdayBalance" />
+	<jb:value property="TodayReceipt" decoder="String" data="CFX/MSG/Stock3127/StockBill3127/TodayReceipt" />
+	<jb:value property="TodayPay" decoder="String" data="CFX/MSG/Stock3127/StockBill3127/TodayPay" />
+	<jb:value property="TodayBalance" decoder="String" data="CFX/MSG/Stock3127/StockBill3127/TodayBalance" />
+</jb:bean>
+<jb:bean beanId="TrBudget3127" class="java.util.HashMap" createOnElement="TrBudget3127">
+	<jb:wiring property="TrBudgetBill3127" beanIdRef="TrBudgetBill3127s" />
+</jb:bean>
+<jb:bean beanId="TrBudgetBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TrBudgetBill3127" />
+</jb:bean>
+<jb:bean beanId="TrBudgetBill3127" class="java.util.HashMap" createOnElement="TrBudgetBill3127">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/TaxOrgCode" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/TreCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/BudgetType" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/BudgetLevelCode" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/TrBudget3127/TrBudgetBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="TrDrawBack3127" class="java.util.HashMap" createOnElement="TrDrawBack3127">
+	<jb:wiring property="TrDrawBackBill3127" beanIdRef="TrDrawBackBill3127s" />
+</jb:bean>
+<jb:bean beanId="TrDrawBackBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TrDrawBackBill3127" />
+</jb:bean>
+<jb:bean beanId="TrDrawBackBill3127" class="java.util.HashMap" createOnElement="TrDrawBackBill3127">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/TaxOrgCode" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/TreCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/BudgetType" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/BudgetLevelCode" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/TrDrawBack3127/TrDrawBackBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="TrRemove3127" class="java.util.HashMap" createOnElement="TrRemove3127">
+	<jb:wiring property="TrRemoveBill3127" beanIdRef="TrRemoveBill3127s" />
+</jb:bean>
+<jb:bean beanId="TrRemoveBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TrRemoveBill3127" />
+</jb:bean>
+<jb:bean beanId="TrRemoveBill3127" class="java.util.HashMap" createOnElement="TrRemoveBill3127">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/TaxOrgCode" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/TreCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/BudgetType" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/BudgetLevelCode" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/TrRemove3127/TrRemoveBill3127/YearAmt" />
+</jb:bean>
+<jb:bean beanId="TrShare3127" class="java.util.HashMap" createOnElement="TrShare3127">
+	<jb:wiring property="TrShareBill3127" beanIdRef="TrShareBill3127s" />
+</jb:bean>
+<jb:bean beanId="TrShareBill3127s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TrShareBill3127" />
+</jb:bean>
+<jb:bean beanId="TrShareBill3127" class="java.util.HashMap" createOnElement="TrShareBill3127">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/TaxOrgCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/BudgetType" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/TreCode" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/BudgetLevelCode" />
+	<jb:value property="DivideGroup" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/DivideGroup" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/BudgetSubjectName" />
+	<jb:value property="DayAmt" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/DayAmt" />
+	<jb:value property="TenDayAmt" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/TenDayAmt" />
+	<jb:value property="MonthAmt" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/MonthAmt" />
+	<jb:value property="QuarterAmt" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/QuarterAmt" />
+	<jb:value property="YearAmt" decoder="String" data="CFX/MSG/TrShare3127/TrShareBill3127/YearAmt" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

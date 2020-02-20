@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead2003" beanIdRef="BatchHead2003" />
+	<jb:wiring property="BillSend2003" beanIdRef="BillSend2003s" />
+</jb:bean>
+<jb:bean beanId="BatchHead2003" class="java.util.HashMap" createOnElement="BatchHead2003">
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead2003/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead2003/PackNo" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BatchHead2003/TreCode" />
+	<jb:value property="ChangeNo" decoder="String" data="CFX/MSG/BatchHead2003/ChangeNo" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead2003/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead2003/AllAmt" />
+	<jb:value property="PayoutVouType" decoder="String" data="CFX/MSG/BatchHead2003/PayoutVouType" />
+</jb:bean>
+<jb:bean beanId="BillSend2003s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="BillSend2003" />
+</jb:bean>
+<jb:bean beanId="BillSend2003" class="java.util.HashMap" createOnElement="BillSend2003">
+	<jb:value property="TraNo" decoder="String" data="CFX/MSG/BillSend2003/TraNo" />
+	<jb:value property="VouNo" decoder="String" data="CFX/MSG/BillSend2003/VouNo" />
+	<jb:value property="VouDate" decoder="String" data="CFX/MSG/BillSend2003/VouDate" />
+	<jb:value property="PayerAcct" decoder="String" data="CFX/MSG/BillSend2003/PayerAcct" />
+	<jb:value property="PayerName" decoder="String" data="CFX/MSG/BillSend2003/PayerName" />
+	<jb:value property="PayerAddr" decoder="String" data="CFX/MSG/BillSend2003/PayerAddr" />
+	<jb:value property="Amt" decoder="String" data="CFX/MSG/BillSend2003/Amt" />
+	<jb:value property="PayerBankNo" decoder="String" data="CFX/MSG/BillSend2003/PayerBankNo" />
+	<jb:value property="PayeeBankNo" decoder="String" data="CFX/MSG/BillSend2003/PayeeBankNo" />
+	<jb:value property="PayeeAcct" decoder="String" data="CFX/MSG/BillSend2003/PayeeAcct" />
+	<jb:value property="PayeeName" decoder="String" data="CFX/MSG/BillSend2003/PayeeName" />
+	<jb:value property="PayReason" decoder="String" data="CFX/MSG/BillSend2003/PayReason" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/BillSend2003/AddWord" />
+	<jb:value property="OfYear" decoder="String" data="CFX/MSG/BillSend2003/OfYear" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

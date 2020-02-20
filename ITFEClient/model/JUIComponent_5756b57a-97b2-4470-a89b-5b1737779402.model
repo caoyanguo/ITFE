@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5756b57a-97b2-4470-a89b-5b1737779402" name="财政预算支出统计报表(上海)" ename="finIncomeAndExpensesReportQuery">
+  <jproperties id="578e9ff9-f78f-4e86-8bcd-416f29b393b9" key="GeneratedTime" value="1378196160703"/>
+  <refModule href="JModule_a2ec899c-fd3c-42a4-9657-56181c03a875.model#a2ec899c-fd3c-42a4-9657-56181c03a875"/>
+  <model id="95d92306-5b27-4d74-8a1e-40985e56a8e1" name="JModelImpl-95d92306-5b27-4d74-8a1e-40985e56a8e1">
+    <directions id="3a139164-67dc-4e2d-a498-59086bec9838" viewers="19d37631-235c-4896-9e40-19e592cd2a48" name="查询" ename="query"/>
+    <directions id="ee4d3935-72b3-4feb-897a-05d211d72b1b" viewers="a07e16fb-b12b-4bf2-baa9-4ada2b30039c" name="返回" ename="goBack"/>
+    <directions id="450f5a33-78cc-49ec-a88a-812a44665187" name="导出标准Excel文件" ename="exportExcelFile"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_7fa3626e-af26-4e49-baf3-0393c39105b7.model#7fa3626e-af26-4e49-baf3-0393c39105b7"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="7122028e-4883-4e70-a3a4-9c5db32bd967">
+    <contentareanode id="be9343c7-5b11-4529-87c4-236932467267" name="财政预算支出统计报表查询条件" grouptitle="财政预算支出统计报表查询条件">
+      <widgetRefs xsi:type="model:Text" id="d45f9305-fb1d-4fa1-ac0e-e8b3f79d1e5d" name="报表日期" binding="rptdate" caption="报表日期"/>
+      <widgetRefs xsi:type="model:Combo" id="15798379-ac3e-4ee4-b294-3e8f446452fe" name="国库代码" binding="sleTreCode" caption="国库代码" display="strename" underly="strecode" modelsource="treList"/>
+      <widgetRefs xsi:type="model:Combo" id="8b65ddad-96ea-438f-ae57-23ebdfa4009f" name="预算种类" extpoperties="" binding="sleBudKind" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="7c024c4f-e457-4236-a6b8-a686f6af8c87" name="科目类型" binding="sleSubjectType" caption="科目类型" display="staxorgname" underly="staxorgcode" modelsource="taxorgList">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aee6ea4c-1e24-4167-88ca-28b74274d1ea"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="a1e103a9-07b1-4e24-9edb-a6e31547c4dd" name="预算级次" binding="sleBudLevel" caption="预算级次">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3d280685-50b6-49c3-b6a7-57640479b49d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="781dfbd5-a09e-4e9b-9600-f059db3d0668" name="科目属性" binding="sleSubjectAttribute" caption="科目属性" display="" underly="" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#62de973a-5b57-469c-84b1-5c1713ed3cc4"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ba78bef6-f724-4baa-aa6b-1f392e1c6f11" name="报表类型" binding="sleBillType" caption="报表类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3e431b8d-c784-4699-99a0-d683d38a9f29"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="91d41ea4-3f45-4e64-8fdc-1588c7421902" name="旬报类型" binding="sleTenrptType" caption="旬报类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aebaf658-983e-4af2-afaf-91d268da64ce"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="928f4530-d115-4243-8807-24c4a415f39d" name="季报类型" binding="sleQuarterrptType" caption="季报类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3b938a02-d175-4825-bc0a-7821c24f3dd5"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="84d1a71c-e0c6-4e43-8449-6fabc243d66b" name="半年报类型" binding="sleHalfyearrptType" caption="半年报类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#34f13557-7300-4344-8a62-df5aa2ee9fb3"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="209e59bb-ef3c-41e0-93c1-f61762b7474b" name="调拨标志" binding="smoveflag" caption="调拨标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1224c7ae-7b59-409f-98fb-6286e8df9295"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6722aee5-33e7-43d0-b950-674151327a51" name="金额单位" binding="sleMoneyUnit" caption="金额单位">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4becbd9c-60df-4c15-aec5-13e3c4016b00"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="494ff3e5-3040-4a27-a53d-89313e9e5161" name="财政预算支出报表查询结果" grouptitle="">
+      <widgetRefs xsi:type="model:Table" id="7f8d4f32-d47d-4afe-80ab-ccbb26e82cae" name="财政预算支出报表查询结果列表" binding="pagingcontext" caption="财政预算支出报表查询结果列表" tabletype="paging">
+        <columnlist id="0135996c-e94f-4e32-92c2-4168003048b1" name="科目代码" binding="sbudgetsubcode" caption="科目代码"/>
+        <columnlist id="9613a912-25c6-4c14-996d-a9b13025a6f5" name="科目名称" binding="sbudgetsubname" caption="科目名称"/>
+        <columnlist id="7c320e2f-d456-4340-814f-2b1dddba44f6" name="本期金额" binding="nmoneycurrent" caption="本期金额"/>
+        <columnlist id="6ef62392-6d52-46b1-b364-b902b893ed4c" name="本年累计金额" binding="nmoneyyear" caption="本年累计金额"/>
+        <columnlist id="162348e9-4fdf-4550-b28b-67ff634ff998" name="本年累计同比增量" binding="nmoneyincremental" caption="本年累计同比增量"/>
+        <columnlist id="80465cc1-608a-4116-a165-ed42e7ad6973" name="本年累计同比增幅(%)" binding="dmoneygrowthrate" caption="本年累计同比增幅(%)"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="cb0b5209-e3cc-4056-ac3f-5f9f8abd6d00">
+    <pages id="f836f747-758a-4179-a55b-ea536b36b20d" name="财政预算支出统计报表查询">
+      <views id="a07e16fb-b12b-4bf2-baa9-4ada2b30039c" name="财政预算支出统计报表查询条件" isdefault="true" contentArea="be9343c7-5b11-4529-87c4-236932467267">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="1aa3b31d-8b31-4744-ab96-66de224e7440" name="JButtonAreaImpl-1aa3b31d-8b31-4744-ab96-66de224e7440">
+          <buttons id="de6efcc0-32cf-46e8-ab77-4d1669c39b1f" name="查询" caption="查询" direction="3a139164-67dc-4e2d-a498-59086bec9838"/>
+        </buttonArea>
+      </views>
+      <views id="19d37631-235c-4896-9e40-19e592cd2a48" name="财政预算支出报表界面" contentArea="494ff3e5-3040-4a27-a53d-89313e9e5161">
+        <buttonArea id="397b10de-08a7-4d57-ae04-5b095135a3cd" name="JButtonAreaImpl-397b10de-08a7-4d57-ae04-5b095135a3cd">
+          <buttons id="aa0e19bf-6694-480a-9525-4e1fe20f3a3d" name="返回" caption="返回" direction="ee4d3935-72b3-4feb-897a-05d211d72b1b"/>
+          <buttons id="e9d0aa54-fecb-4edb-8604-3f23262875a0" name="导出标准Excel" caption="导出标准Excel" direction="450f5a33-78cc-49ec-a88a-812a44665187"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

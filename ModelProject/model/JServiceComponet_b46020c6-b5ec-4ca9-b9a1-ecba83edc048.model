@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b46020c6-b5ec-4ca9-b9a1-ecba83edc048" name="会计账号表维护" ename="TdBookacctMain" shared="true">
+  <jproperties id="bff4df60-b0a6-4d2e-9ca3-b84ecdfe17cf" key="GeneratedTime" value="1362391586941"/>
+  <refModule href="JModule_9969d8fd-6883-44e6-86e5-437e0d7b4814.model#9969d8fd-6883-44e6-86e5-437e0d7b4814"/>
+  <methods id="c08b4118-fd08-42e0-835b-8e3b29bc3aac" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="51ce27bc-024f-4cb4-bddf-dfe150a53076" name="会计账号" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TdBookacctMainDto" codecomment="信息"/>
+  </methods>
+  <methods id="00bd4e4c-047c-4bb7-93f1-e0cd0d733960" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="38524dac-02bd-4574-9209-0823fe712653" name="会计账号" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TdBookacctMainDto" codecomment="信息"/>
+  </methods>
+  <methods id="7e5d4093-7adf-40cd-a818-7c4acc3fec4a" ename="modInfo" name="修改" codecomment="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="c64d80c6-af03-4977-a35f-fcf4139fc1f8" name="会计账号" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TdBookacctMainDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

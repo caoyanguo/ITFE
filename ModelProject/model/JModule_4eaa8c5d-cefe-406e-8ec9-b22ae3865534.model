@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="4eaa8c5d-cefe-406e-8ec9-b22ae3865534" name="征收机关国库对应关系" ename="TsTaxorg" shared="true"/>

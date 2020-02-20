@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6fe333d6-87dc-441a-9ad2-51cf0d45cf74" name="9116财政收入核对包重发请求界面" ename="finincomecheckresendrequest">
+  <jproperties id="46f27910-842a-4d1c-8e77-e263e50c6d4a" key="GeneratedTime" value="1331531143765"/>
+  <refModule href="JModule_22a99d53-0eef-44f3-a8ac-567aeee72ddc.model#22a99d53-0eef-44f3-a8ac-567aeee72ddc"/>
+  <model id="df7038ec-a6fe-4c81-92e8-88ef8cd9a8af" name="JModelImpl-df7038ec-a6fe-4c81-92e8-88ef8cd9a8af">
+    <attributes id="feab8bea-4818-4939-965e-b49557460fbd" name="dto" type="com.cfcc.itfe.persistence.dto.TvSendlogDto"/>
+    <directions id="412f901a-23c0-43fe-a5be-92fc5544d997" name="发送" ename="send"/>
+    <directions id="9fe5c779-8cdb-4346-8e37-ae3a70ddf6a9" name="关闭" ename="close"/>
+  </model>
+  <services href="JServiceComponet_736e08d1-0397-41c7-8807-651b9a06410e.model#736e08d1-0397-41c7-8807-651b9a06410e"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="7d536232-4b56-40cb-aae9-faab30d3ff0f">
+    <contentareanode id="da6b8f62-360f-4ada-ab41-b191aaa0be81" name="信息录入" grouptitle="请求信息">
+      <widgetRefs xsi:type="model:Text" id="308d8837-22f9-441b-80b6-c9235e29d7d8" name="发起机构代码" binding="dto.ssendorgcode" caption="发起机构代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="d3b0166e-d38a-4e76-8948-19585d2ac310" name="委托日期" binding="dto.sdate" caption="委托日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="c7a68eae-c1fe-47e3-9c36-f617e1d9eb0b" name="原包报文编号" binding="dto.soperationtypecode" caption="原包报文编号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="98e23e73-6fa4-47f0-a296-901f75384a27" name="原对账日期" binding="dto.ssenddate" caption="原对账日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="60f693b7-b16c-477d-b6fd-455beba3a32a" name="原文件对账类型" binding="dto.sifsend" caption="原文件对账类型" required="true"/>
+      <widgetRefs xsi:type="model:Label" id="0abeb2e6-50da-4dc8-84fb-71b1410d1262" name="0-月对账      1-年对账" caption="0-月对账      1-年对账"/>
+      <widgetRefs xsi:type="model:Text" id="f7039b81-fc4f-4ced-94ce-dc5a5daf656e" name="原报表所属年月" binding="dto.sdemo" caption="原报表所属年月"/>
+      <widgetRefs xsi:type="model:Text" id="bdead736-71cd-4ab6-ae2b-846592a2c805" name="原文件名所在年月" binding="dto.sretcodedesc" caption="原文件名所在年月"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="9e6d4d97-2747-4e8c-8d21-4b5f5513653c">
+    <pages id="c5b3f745-38bc-44c7-b6a8-a39ed3bdf87a" name="9116财政收入核对包重发请求界面">
+      <views id="d0a40fb6-f650-4755-9c37-82d41a43181f" name="9116财政收入核对包重发请求界面" isdefault="true" contentArea="da6b8f62-360f-4ada-ab41-b191aaa0be81">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="a2670708-09ca-4f6d-825f-7a6c35ba6131" name="JButtonAreaImpl-a2670708-09ca-4f6d-825f-7a6c35ba6131">
+          <buttons id="db5bdc26-6e26-433f-b46e-7e783c1c9848" name="申请" caption="申请" direction="412f901a-23c0-43fe-a5be-92fc5544d997"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

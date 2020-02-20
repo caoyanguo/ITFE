@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3bc33501-c8c6-4a8f-82aa-533df93c43e9" name="法人代码查询" ename="TdCorp" shared="true">
+  <jproperties id="cb1cacef-cd77-444f-b9d4-c42a9d88d3b5" key="GeneratedTime" value="1384249593812"/>
+  <refModule href="JModule_943c62fe-1391-4b46-9927-96d9e231b364.model#943c62fe-1391-4b46-9927-96d9e231b364"/>
+  <model id="7421acd6-8969-4d3d-b4ab-39dfd4cd250d" name="JModelImpl-7421acd6-8969-4d3d-b4ab-39dfd4cd250d">
+    <attributes id="409308b2-937a-43e6-9af2-0845d805f7a8" name="dto" type="com.cfcc.itfe.persistence.dto.TdCorpDto"/>
+    <attributes id="6a2b73b7-91a3-4330-87a4-9cf9da232f80" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="e81c4a2a-fa5a-48b1-9750-b8550c41ebc3" viewers="77bf7fc9-42b7-46a0-bc10-a9da328cc28f" name="跳转录入界面" ename="goInput"/>
+    <directions id="50b9604f-76a5-4863-98fe-4db36c3c84e9" name="录入保存" ename="inputSave"/>
+    <directions id="daa88e18-8a4f-43d2-acaa-ef35ed8fe387" viewers="bde0b557-805a-4d19-b92c-1aa6c36cae4f" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="8d12ed2b-4d69-4bd2-a86a-30dd9f3dd8a9" name="单选" ename="singleSelect"/>
+    <directions id="cb627867-7311-464c-9d53-bebfad1f59ef" name="删除" ename="delete"/>
+    <directions id="d98b7f0e-0f7d-414e-80e9-aea424e4a356" viewers="b1d451f7-8eb6-4dc4-8192-ab8b6fc81a57" name="到修改界面" ename="goModify"/>
+    <directions id="4f1ac2dc-4d44-44d8-ade3-eed2c653107d" name="修改保存" ename="modifySave"/>
+    <directions id="c620df26-86c2-4b66-92f9-0136026d85c4" viewers="bde0b557-805a-4d19-b92c-1aa6c36cae4f" name="查询" ename="searchRs"/>
+    <directions id="bf47b6ce-06d2-4c4f-bd4a-8b203a3222c1" viewers="f361c4e8-db3f-4ea7-86ff-23f9c5533b39" name="返回查询界面" ename="rebackSearch"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_0027b5b5-e2e9-4d5a-8656-30965e1c5fda.model#0027b5b5-e2e9-4d5a-8656-30965e1c5fda"/>
+  <contentAreas id="551adbd5-88b4-4cdc-a7a1-effa04ee3970">
+    <contentareanode id="f5ade3ce-6c76-472b-94d3-f346376a319d" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="6ce2c08f-2c5c-4800-8570-a56da82cd90d" name="sbookorgcode" binding="dto.sbookorgcode" caption="核算主体代码" editable="true" required="true">
+        <labelStyle id="f82b0d88-b33f-47ca-9613-28c1402ba3d0" name="LabelStyleImpl-f82b0d88-b33f-47ca-9613-28c1402ba3d0" ename="LabelStyleImpldf82b0d88-b33f-47ca-9613-28c1402ba3d0"/>
+        <componentStyle id="3ec016cf-e6b8-403a-b0b0-7822d6f03bae" name="ComponentStyleImpl-3ec016cf-e6b8-403a-b0b0-7822d6f03bae" ename="ComponentStyleImpl3ec016cf-e6b8-403a-b0b0-7822d6f03bae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="bae770d7-25c2-43a9-8fd4-27a1ec2a13d1" name="strecode" binding="dto.strecode" caption="国库主体代码" editable="true" required="true">
+        <labelStyle id="e1810833-7963-4eb6-9e22-cf0d7a087760" name="LabelStyleImpl-e1810833-7963-4eb6-9e22-cf0d7a087760" ename="LabelStyleImplde1810833-7963-4eb6-9e22-cf0d7a087760"/>
+        <componentStyle id="e127d1b4-620c-4eb7-a84c-863b3e7afbb1" name="ComponentStyleImpl-e127d1b4-620c-4eb7-a84c-863b3e7afbb1" ename="ComponentStyleImple127d1b4-620c-4eb7-a84c-863b3e7afbb1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="b417aba5-cbe2-4708-b46a-51d900f8ff28" name="scorpcode" binding="dto.scorpcode" caption="法人代码" editable="true" required="true">
+        <labelStyle id="092098fa-f720-46a9-a793-b8132445f65f" name="LabelStyleImpl-092098fa-f720-46a9-a793-b8132445f65f" ename="LabelStyleImpld092098fa-f720-46a9-a793-b8132445f65f"/>
+        <componentStyle id="cc497009-898b-4734-be15-2da77e332b39" name="ComponentStyleImpl-cc497009-898b-4734-be15-2da77e332b39" ename="ComponentStyleImplcc497009-898b-4734-be15-2da77e332b39"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4c04fb43-6c4b-4894-a3ec-3d78f39a7d1c" name="ctrimflag" binding="dto.ctrimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="05296663-0923-4f8d-96c2-86569c4fe8a1" name="scorpname" binding="dto.scorpname" caption="法人名称" editable="true" required="true">
+        <labelStyle id="828285c2-512c-4812-8fbc-03ad6cad2b32" name="LabelStyleImpl-828285c2-512c-4812-8fbc-03ad6cad2b32" ename="LabelStyleImpld828285c2-512c-4812-8fbc-03ad6cad2b32"/>
+        <componentStyle id="c1a8b6ef-eb3b-462e-a0b2-5b8ac3d39b7c" name="ComponentStyleImpl-c1a8b6ef-eb3b-462e-a0b2-5b8ac3d39b7c" ename="ComponentStyleImplc1a8b6ef-eb3b-462e-a0b2-5b8ac3d39b7c"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0c738ae5-71fd-4d36-831d-889333c3c1b3" name="scorpsht" binding="dto.scorpsht" caption="法人简码" editable="true">
+        <labelStyle id="92ec3acf-11ee-44a9-975c-5a6d2e28dc06" name="LabelStyleImpl-92ec3acf-11ee-44a9-975c-5a6d2e28dc06" ename="LabelStyleImpld92ec3acf-11ee-44a9-975c-5a6d2e28dc06"/>
+        <componentStyle id="dc42e2d9-8769-4732-9381-605b104afcb4" name="ComponentStyleImpl-dc42e2d9-8769-4732-9381-605b104afcb4" ename="ComponentStyleImpldc42e2d9-8769-4732-9381-605b104afcb4"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="bf94c1ff-5ef7-4909-bca5-8de915465802" name="cmayaprtfund" binding="dto.cmayaprtfund" caption="能否实拨资金" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="08851252-f4fd-4ebf-b567-a44bf736ba1c" name="cpayoutprop" binding="dto.cpayoutprop" caption="支出性质" editable="true" required="true">
+        <labelStyle id="52b0f5e6-929d-448e-ad46-3d93a394fbdc" name="LabelStyleImpl-52b0f5e6-929d-448e-ad46-3d93a394fbdc" ename="LabelStyleImpld52b0f5e6-929d-448e-ad46-3d93a394fbdc"/>
+        <componentStyle id="9eed1490-e836-455e-a60b-7f96a46217ab" name="ComponentStyleImpl-9eed1490-e836-455e-a60b-7f96a46217ab" ename="ComponentStyleImpl9eed1490-e836-455e-a60b-7f96a46217ab"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="519f42b2-4e76-44de-94ff-fd442a6e2c61" name="ctaxpayerprop" binding="dto.ctaxpayerprop" caption="法人性质" editable="true" required="true">
+        <labelStyle id="50eb7e80-ffcc-4046-b2b7-cf774c73aedf" name="LabelStyleImpl-50eb7e80-ffcc-4046-b2b7-cf774c73aedf" ename="LabelStyleImpld50eb7e80-ffcc-4046-b2b7-cf774c73aedf"/>
+        <componentStyle id="1d3b4631-b219-4d35-96f7-6c917726a834" name="ComponentStyleImpl-1d3b4631-b219-4d35-96f7-6c917726a834" ename="ComponentStyleImpl1d3b4631-b219-4d35-96f7-6c917726a834"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e1581fec-8e2e-4b6b-9672-6f74f0f338d3" name="ctradeprop" binding="dto.ctradeprop" caption="行业性质" editable="true" required="true">
+        <labelStyle id="6fecedfe-62e2-4dfc-bb29-ba644eb2c8cf" name="LabelStyleImpl-6fecedfe-62e2-4dfc-bb29-ba644eb2c8cf" ename="LabelStyleImpld6fecedfe-62e2-4dfc-bb29-ba644eb2c8cf"/>
+        <componentStyle id="9406650a-4480-495f-a7a5-f39c54d65908" name="ComponentStyleImpl-9406650a-4480-495f-a7a5-f39c54d65908" ename="ComponentStyleImpl9406650a-4480-495f-a7a5-f39c54d65908"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="2c3b4124-8fa8-4567-a049-51f7a374bdf2" name="iacctnum" binding="dto.iacctnum" caption="账户数" editable="true">
+        <labelStyle id="f8b20ea9-f9d4-43e3-bfaf-7ac5245b3bae" name="LabelStyleImpl-f8b20ea9-f9d4-43e3-bfaf-7ac5245b3bae" ename="LabelStyleImpldf8b20ea9-f9d4-43e3-bfaf-7ac5245b3bae"/>
+        <componentStyle id="f949082e-1048-4487-8ebc-2ea8ae5ed4b1" name="ComponentStyleImpl-f949082e-1048-4487-8ebc-2ea8ae5ed4b1" ename="ComponentStyleImplf949082e-1048-4487-8ebc-2ea8ae5ed4b1"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="419ed868-9526-4cce-9713-db9ad731e8e7" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="06cc8743-a635-4f1c-8f1a-0acfcb3dfd72" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="8d12ed2b-4d69-4bd2-a86a-30dd9f3dd8a9">
+        <columnlist id="6ce2c08f-2c5c-4800-8570-a56da82cd90d" name="sbookorgcode" binding="sbookorgcode" caption="核算主体代码"/>
+        <columnlist id="bae770d7-25c2-43a9-8fd4-27a1ec2a13d1" name="strecode" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="b417aba5-cbe2-4708-b46a-51d900f8ff28" name="scorpcode" binding="scorpcode" caption="法人代码"/>
+        <columnlist id="ebe7f1cd-5d7f-4d68-b49b-6fe163b64acd" name="ctrimflag" binding="ctrimflag" caption="调整期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+        </columnlist>
+        <columnlist id="05296663-0923-4f8d-96c2-86569c4fe8a1" name="scorpname" binding="scorpname" caption="法人名称"/>
+        <columnlist id="0c738ae5-71fd-4d36-831d-889333c3c1b3" name="scorpsht" binding="scorpsht" caption="法人简码"/>
+        <columnlist id="ef8a3599-1fbd-49a3-92c6-d0854f6c2e54" name="cmayaprtfund" binding="cmayaprtfund" caption="能否实拨资金">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+        <columnlist id="08851252-f4fd-4ebf-b567-a44bf736ba1c" name="cpayoutprop" binding="cpayoutprop" caption="支出性质"/>
+        <columnlist id="519f42b2-4e76-44de-94ff-fd442a6e2c61" name="ctaxpayerprop" binding="ctaxpayerprop" caption="法人性质"/>
+        <columnlist id="e1581fec-8e2e-4b6b-9672-6f74f0f338d3" name="ctradeprop" binding="ctradeprop" caption="行业性质"/>
+        <columnlist id="2c3b4124-8fa8-4567-a049-51f7a374bdf2" name="iacctnum" binding="iacctnum" caption="账户数"/>
+        <columnlist id="54b2dc66-76e9-4a9b-8aed-8ffb9a663605" name="tssysupdate" binding="tssysupdate" caption="系统更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="4f1cbf50-5a1e-4712-923a-63cc2b9e27e5" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="6ce2c08f-2c5c-4800-8570-a56da82cd90d" name="sbookorgcode" binding="dto.sbookorgcode" caption="核算主体代码" editable="true" required="true">
+        <labelStyle id="f82b0d88-b33f-47ca-9613-28c1402ba3d0" name="LabelStyleImpl-f82b0d88-b33f-47ca-9613-28c1402ba3d0" ename="LabelStyleImpldf82b0d88-b33f-47ca-9613-28c1402ba3d0"/>
+        <componentStyle id="3ec016cf-e6b8-403a-b0b0-7822d6f03bae" name="ComponentStyleImpl-3ec016cf-e6b8-403a-b0b0-7822d6f03bae" ename="ComponentStyleImpl3ec016cf-e6b8-403a-b0b0-7822d6f03bae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="bae770d7-25c2-43a9-8fd4-27a1ec2a13d1" name="strecode" binding="dto.strecode" caption="国库主体代码" editable="true" required="true">
+        <labelStyle id="e1810833-7963-4eb6-9e22-cf0d7a087760" name="LabelStyleImpl-e1810833-7963-4eb6-9e22-cf0d7a087760" ename="LabelStyleImplde1810833-7963-4eb6-9e22-cf0d7a087760"/>
+        <componentStyle id="e127d1b4-620c-4eb7-a84c-863b3e7afbb1" name="ComponentStyleImpl-e127d1b4-620c-4eb7-a84c-863b3e7afbb1" ename="ComponentStyleImple127d1b4-620c-4eb7-a84c-863b3e7afbb1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="b417aba5-cbe2-4708-b46a-51d900f8ff28" name="scorpcode" binding="dto.scorpcode" caption="法人代码" editable="true" required="true">
+        <labelStyle id="092098fa-f720-46a9-a793-b8132445f65f" name="LabelStyleImpl-092098fa-f720-46a9-a793-b8132445f65f" ename="LabelStyleImpld092098fa-f720-46a9-a793-b8132445f65f"/>
+        <componentStyle id="cc497009-898b-4734-be15-2da77e332b39" name="ComponentStyleImpl-cc497009-898b-4734-be15-2da77e332b39" ename="ComponentStyleImplcc497009-898b-4734-be15-2da77e332b39"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="b6d716d6-1161-48b3-9c1a-f55769c3c03f" name="ctrimflag" binding="dto.ctrimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="05296663-0923-4f8d-96c2-86569c4fe8a1" name="scorpname" binding="dto.scorpname" caption="法人名称" editable="true" required="true">
+        <labelStyle id="828285c2-512c-4812-8fbc-03ad6cad2b32" name="LabelStyleImpl-828285c2-512c-4812-8fbc-03ad6cad2b32" ename="LabelStyleImpld828285c2-512c-4812-8fbc-03ad6cad2b32"/>
+        <componentStyle id="c1a8b6ef-eb3b-462e-a0b2-5b8ac3d39b7c" name="ComponentStyleImpl-c1a8b6ef-eb3b-462e-a0b2-5b8ac3d39b7c" ename="ComponentStyleImplc1a8b6ef-eb3b-462e-a0b2-5b8ac3d39b7c"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0c738ae5-71fd-4d36-831d-889333c3c1b3" name="scorpsht" binding="dto.scorpsht" caption="法人简码" editable="true">
+        <labelStyle id="92ec3acf-11ee-44a9-975c-5a6d2e28dc06" name="LabelStyleImpl-92ec3acf-11ee-44a9-975c-5a6d2e28dc06" ename="LabelStyleImpld92ec3acf-11ee-44a9-975c-5a6d2e28dc06"/>
+        <componentStyle id="dc42e2d9-8769-4732-9381-605b104afcb4" name="ComponentStyleImpl-dc42e2d9-8769-4732-9381-605b104afcb4" ename="ComponentStyleImpldc42e2d9-8769-4732-9381-605b104afcb4"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="a65c4c29-efe2-4f56-b1c0-d5f69ab48453" name="cmayaprtfund" binding="dto.cmayaprtfund" caption="能否实拨资金" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="08851252-f4fd-4ebf-b567-a44bf736ba1c" name="cpayoutprop" binding="dto.cpayoutprop" caption="支出性质" editable="true" required="true">
+        <labelStyle id="52b0f5e6-929d-448e-ad46-3d93a394fbdc" name="LabelStyleImpl-52b0f5e6-929d-448e-ad46-3d93a394fbdc" ename="LabelStyleImpld52b0f5e6-929d-448e-ad46-3d93a394fbdc"/>
+        <componentStyle id="9eed1490-e836-455e-a60b-7f96a46217ab" name="ComponentStyleImpl-9eed1490-e836-455e-a60b-7f96a46217ab" ename="ComponentStyleImpl9eed1490-e836-455e-a60b-7f96a46217ab"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="519f42b2-4e76-44de-94ff-fd442a6e2c61" name="ctaxpayerprop" binding="dto.ctaxpayerprop" caption="法人性质" editable="true" required="true">
+        <labelStyle id="50eb7e80-ffcc-4046-b2b7-cf774c73aedf" name="LabelStyleImpl-50eb7e80-ffcc-4046-b2b7-cf774c73aedf" ename="LabelStyleImpld50eb7e80-ffcc-4046-b2b7-cf774c73aedf"/>
+        <componentStyle id="1d3b4631-b219-4d35-96f7-6c917726a834" name="ComponentStyleImpl-1d3b4631-b219-4d35-96f7-6c917726a834" ename="ComponentStyleImpl1d3b4631-b219-4d35-96f7-6c917726a834"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e1581fec-8e2e-4b6b-9672-6f74f0f338d3" name="ctradeprop" binding="dto.ctradeprop" caption="行业性质" editable="true" required="true">
+        <labelStyle id="6fecedfe-62e2-4dfc-bb29-ba644eb2c8cf" name="LabelStyleImpl-6fecedfe-62e2-4dfc-bb29-ba644eb2c8cf" ename="LabelStyleImpld6fecedfe-62e2-4dfc-bb29-ba644eb2c8cf"/>
+        <componentStyle id="9406650a-4480-495f-a7a5-f39c54d65908" name="ComponentStyleImpl-9406650a-4480-495f-a7a5-f39c54d65908" ename="ComponentStyleImpl9406650a-4480-495f-a7a5-f39c54d65908"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="2c3b4124-8fa8-4567-a049-51f7a374bdf2" name="iacctnum" binding="dto.iacctnum" caption="账户数" editable="true">
+        <labelStyle id="f8b20ea9-f9d4-43e3-bfaf-7ac5245b3bae" name="LabelStyleImpl-f8b20ea9-f9d4-43e3-bfaf-7ac5245b3bae" ename="LabelStyleImpldf8b20ea9-f9d4-43e3-bfaf-7ac5245b3bae"/>
+        <componentStyle id="f949082e-1048-4487-8ebc-2ea8ae5ed4b1" name="ComponentStyleImpl-f949082e-1048-4487-8ebc-2ea8ae5ed4b1" ename="ComponentStyleImplf949082e-1048-4487-8ebc-2ea8ae5ed4b1"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="ca759fef-e87b-41df-aa04-63be6778e2f7" name="查询条件" grouptitle="查询条件" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="0e1b5008-b13e-4aa9-b864-28acdd598982" name="strecode" binding="searchDto.strecode" caption="国库主体代码" editable="true">
+        <labelStyle id="10aa86ac-ff3e-4b57-af57-9eab0d80997d" name="LabelStyleImpl-e1810833-7963-4eb6-9e22-cf0d7a087760" ename="LabelStyleImplde1810833-7963-4eb6-9e22-cf0d7a087760"/>
+        <componentStyle id="8df79805-851f-4dfb-9200-7e0d47905d30" name="ComponentStyleImpl-e127d1b4-620c-4eb7-a84c-863b3e7afbb1" ename="ComponentStyleImple127d1b4-620c-4eb7-a84c-863b3e7afbb1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="b42fc76b-3ef3-4379-9953-c1b505205c7e" name="scorpcode" binding="searchDto.scorpcode" caption="法人代码" editable="true">
+        <labelStyle id="8c85a429-efeb-4730-9132-9883d4d234f5" name="LabelStyleImpl-092098fa-f720-46a9-a793-b8132445f65f" ename="LabelStyleImpld092098fa-f720-46a9-a793-b8132445f65f"/>
+        <componentStyle id="b11d3e4d-3dd1-4f60-af1c-96de95eed698" name="ComponentStyleImpl-cc497009-898b-4734-be15-2da77e332b39" ename="ComponentStyleImplcc497009-898b-4734-be15-2da77e332b39"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="bbab4c1c-df54-4e5c-bd98-0cfeddc23f01" name="ctrimflag" binding="searchDto.ctrimflag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e999cc88-7140-49c9-94cb-b8cc1de338b4" name="scorpname" binding="searchDto.scorpname" caption="法人名称" editable="true">
+        <labelStyle id="6ead08f6-4a19-4313-a076-71d209a54e31" name="LabelStyleImpl-828285c2-512c-4812-8fbc-03ad6cad2b32" ename="LabelStyleImpld828285c2-512c-4812-8fbc-03ad6cad2b32"/>
+        <componentStyle id="dc0b0268-2710-4742-8b47-307f70dd7b93" name="ComponentStyleImpl-c1a8b6ef-eb3b-462e-a0b2-5b8ac3d39b7c" ename="ComponentStyleImplc1a8b6ef-eb3b-462e-a0b2-5b8ac3d39b7c"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="99f7e68d-40e8-49f8-8524-cabf8f6791ba" name="scorpsht" binding="searchDto.scorpsht" caption="法人简码" editable="true">
+        <labelStyle id="4bc2aef7-ab7e-4b1e-9c03-506428860bd9" name="LabelStyleImpl-92ec3acf-11ee-44a9-975c-5a6d2e28dc06" ename="LabelStyleImpld92ec3acf-11ee-44a9-975c-5a6d2e28dc06"/>
+        <componentStyle id="957c4809-21f7-4487-839a-9768082a19ba" name="ComponentStyleImpl-dc42e2d9-8769-4732-9381-605b104afcb4" ename="ComponentStyleImpldc42e2d9-8769-4732-9381-605b104afcb4"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="eebb9174-7250-42a4-9edd-327d7a1c0cf8" name="cmayaprtfund" binding="searchDto.cmayaprtfund" caption="能否实拨资金">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="82e1cdb1-2904-46da-b6e3-a0bc6c55b446" name="cpayoutprop" binding="searchDto.cpayoutprop" caption="支出性质" editable="true">
+        <labelStyle id="0cd12be8-8737-420a-bf3b-14df3a7b0d2c" name="LabelStyleImpl-52b0f5e6-929d-448e-ad46-3d93a394fbdc" ename="LabelStyleImpld52b0f5e6-929d-448e-ad46-3d93a394fbdc"/>
+        <componentStyle id="d9035210-02a2-4d86-8869-aada27650832" name="ComponentStyleImpl-9eed1490-e836-455e-a60b-7f96a46217ab" ename="ComponentStyleImpl9eed1490-e836-455e-a60b-7f96a46217ab"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="820b89b5-2239-4b9c-a340-d01da93e5590" name="ctaxpayerprop" binding="searchDto.ctaxpayerprop" caption="法人性质" editable="true">
+        <labelStyle id="d063d482-687a-49af-b788-28c307b80cec" name="LabelStyleImpl-50eb7e80-ffcc-4046-b2b7-cf774c73aedf" ename="LabelStyleImpld50eb7e80-ffcc-4046-b2b7-cf774c73aedf"/>
+        <componentStyle id="ca67b277-9f7f-42f6-b95c-8e8a794660a4" name="ComponentStyleImpl-1d3b4631-b219-4d35-96f7-6c917726a834" ename="ComponentStyleImpl1d3b4631-b219-4d35-96f7-6c917726a834"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4eaabb05-be10-48d2-ad85-047cd23e783f" name="ctradeprop" binding="searchDto.ctradeprop" caption="行业性质" editable="true">
+        <labelStyle id="8a2e8f6d-7589-4df0-8707-eaefff808dfc" name="LabelStyleImpl-6fecedfe-62e2-4dfc-bb29-ba644eb2c8cf" ename="LabelStyleImpld6fecedfe-62e2-4dfc-bb29-ba644eb2c8cf"/>
+        <componentStyle id="f5421c24-8490-4ea4-9501-f49c38fa9d47" name="ComponentStyleImpl-9406650a-4480-495f-a7a5-f39c54d65908" ename="ComponentStyleImpl9406650a-4480-495f-a7a5-f39c54d65908"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ae6de439-7c66-4ab6-b0f4-3ec543e82f38" name="iacctnum" binding="searchDto.iacctnum" caption="账户数" editable="true">
+        <labelStyle id="ddf28940-f3e6-4ab0-9229-8f9054b59530" name="LabelStyleImpl-f8b20ea9-f9d4-43e3-bfaf-7ac5245b3bae" ename="LabelStyleImpldf8b20ea9-f9d4-43e3-bfaf-7ac5245b3bae"/>
+        <componentStyle id="ad0d3c53-f0bb-4dad-8913-3640235a1787" name="ComponentStyleImpl-f949082e-1048-4487-8ebc-2ea8ae5ed4b1" ename="ComponentStyleImplf949082e-1048-4487-8ebc-2ea8ae5ed4b1"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="2fc81fdf-7468-4dfc-87bf-08163df27b2f">
+    <pages id="88b6df26-6891-4b9f-bc2b-97af9f3740bf" name="维护预算单位信息维护">
+      <views id="f361c4e8-db3f-4ea7-86ff-23f9c5533b39" name="查询界面" isdefault="true" contentArea="ca759fef-e87b-41df-aa04-63be6778e2f7">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="32296481-fce3-4070-8691-a91e2b630bed" name="JButtonAreaImpl-32296481-fce3-4070-8691-a91e2b630bed">
+          <buttons id="0ae15472-6297-4e33-af98-776be3631c85" name="查询" caption="查询" direction="c620df26-86c2-4b66-92f9-0136026d85c4"/>
+        </buttonArea>
+      </views>
+      <views id="bde0b557-805a-4d19-b92c-1aa6c36cae4f" name="维护界面" gmetadataprocessorname="" contentArea="419ed868-9526-4cce-9713-db9ad731e8e7">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="50f77f20-f42b-4648-a442-70b324f239da" name="JButtonAreaImpl-50f77f20-f42b-4648-a442-70b324f239da">
+          <buttons id="965505a9-4697-4293-9d19-6d12b3905027" name="maintenanceInput" caption="录入" direction="e81c4a2a-fa5a-48b1-9750-b8550c41ebc3"/>
+          <buttons id="243cf5ff-3171-492a-a1b4-bc941be89d66" name="maintenanceDel" caption="删除" direction="cb627867-7311-464c-9d53-bebfad1f59ef"/>
+          <buttons id="6b924e16-1ba3-4fc2-85fc-168be8b1dc8a" name="maintenanceMod" caption="修改" direction="d98b7f0e-0f7d-414e-80e9-aea424e4a356"/>
+          <buttons id="4c2b8c1c-6184-4fe7-a219-b3882157433c" name="返回" caption="返回" direction="bf47b6ce-06d2-4c4f-bd4a-8b203a3222c1"/>
+        </buttonArea>
+      </views>
+      <views id="b1d451f7-8eb6-4dc4-8192-ab8b6fc81a57" name="修改界面" contentArea="4f1cbf50-5a1e-4712-923a-63cc2b9e27e5">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="fe01c63a-e15c-4468-9cd3-f07cbf642f1f" name="JButtonAreaImpl-fe01c63a-e15c-4468-9cd3-f07cbf642f1f">
+          <buttons id="8db5d68d-f266-42c0-acef-a413dde44252" name="modifySave" caption="保存" action="" checkrequired="true" direction="4f1ac2dc-4d44-44d8-ade3-eed2c653107d"/>
+          <buttons id="cee0fc4f-d4ba-4918-a9c4-d37dc62ef14a" name="modifyBack" caption="返回" direction="daa88e18-8a4f-43d2-acaa-ef35ed8fe387"/>
+        </buttonArea>
+      </views>
+      <views id="77bf7fc9-42b7-46a0-bc10-a9da328cc28f" name="录入界面" contentArea="f5ade3ce-6c76-472b-94d3-f346376a319d">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="e6769341-9fa2-4893-b2f0-653feeff9fcc" name="JButtonAreaImpl-e6769341-9fa2-4893-b2f0-653feeff9fcc">
+          <buttons id="4640eef4-9a14-4c78-95e5-fedcc0f700c6" name="保存" caption="保存" action="" checkrequired="true" direction="50b9604f-76a5-4863-98fe-4db36c3c84e9"/>
+          <buttons id="cee0fc4f-d4ba-4918-a9c4-d37dc62ef14a" name="modifyBack" caption="返回" direction="daa88e18-8a4f-43d2-acaa-ef35ed8fe387"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#f1b3782c-7190-4ede-8194-7c819304d738"/>
+</model:JUIComponent>

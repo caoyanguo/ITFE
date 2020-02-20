@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9ebf13fd-7987-4213-82d7-0148c12d6b6b" name="代理库统计分析数据导入服务组件" ename="AgentBankCountAnalyseDataImport">
+  <jproperties id="753db9ce-3753-4696-95f2-caee0bc9c69f" key="GeneratedTime" value="1427010880994"/>
+  <refModule href="JModule_84270185-2873-46a8-8837-e9b23c11eace.model#84270185-2873-46a8-8837-e9b23c11eace"/>
+  <methods id="397c155b-fdfc-4179-b57d-5f822246e7bb" ename="dataImport" name="数据导入" returntype="java.util.List">
+    <methodParams id="db1bdc9b-0276-4fd5-84cc-a037fb4d83f8" name="文件信息" ename="dataList" type="java.util.List"/>
+  </methods>
+  <methods id="6cd4de85-b858-4bb5-a882-f64e2f3959be" ename="sendData" name="数据发送" returntype="java.lang.String">
+    <methodParams id="ef155565-5074-430c-bbb8-04ec549db70b" name="发送数据信息" ename="senddataInfo" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

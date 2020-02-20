@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="089585cb-a417-4a23-b42b-195d6471d30a" name="代理银行信息维护服务组件" ename="TsConvertbanktype" shared="true">
+  <jproperties id="88efb6cd-cf7b-4fb1-ad1b-5927646c3f0d" key="GeneratedTime" value="1432538268787"/>
+  <refModule href="JModule_6d9e532f-17ca-4d76-88ee-51422edad5a8.model#6d9e532f-17ca-4d76-88ee-51422edad5a8"/>
+  <methods id="7fec1954-804b-4ff9-b9cb-62598b8ff013" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void" remark="行号行别关系维护">
+    <methodParams id="c3be37fa-49ef-4aad-8531-482cfc56675f" name="行号行别关系维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="2c25c2fa-0733-4c35-be20-a1024fa4daa7" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="93827a21-f045-40c6-a229-c63c5eb9fc87" name="行号行别关系维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="9ddbd3e6-8e3f-41ef-8eac-b2a8643a4077" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bf48058a-a34a-495f-b11b-ac1ad1f1cfba" name="行号行别关系维护" ename="dtoInfo" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

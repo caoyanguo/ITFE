@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="25c95c5a-268a-45bd-8fc1-981e3bd3c996" name="机构连通信息" ename="TsConnection" shared="true"/>

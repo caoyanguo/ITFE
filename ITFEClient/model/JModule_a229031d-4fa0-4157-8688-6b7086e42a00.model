@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a229031d-4fa0-4157-8688-6b7086e42a00" isgenerated="false" name="退税数据查询" ename="RebateDataQuery" shared="false"/>

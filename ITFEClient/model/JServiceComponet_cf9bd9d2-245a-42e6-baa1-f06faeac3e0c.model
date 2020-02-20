@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="cf9bd9d2-245a-42e6-baa1-f06faeac3e0c" name="非税入库凭证清单服务组件" ename="TvNontaxlist">
+  <jproperties id="a021f35a-283d-4114-bc48-6dcb492cc1b2" key="GeneratedTime" value="1524910922346"/>
+  <refModule href="JModule_c8814552-886c-469f-a49c-568efea99458.model#c8814552-886c-469f-a49c-568efea99458"/>
+  <methods id="43c7b87e-3ed1-4227-9551-0e5a7e4cb189" ename="findInfo" name="查询" returntype="java.util.List">
+    <methodParams id="12ba9b59-a8cb-4e26-8a69-38e4a25e6e3d" name="类" ename="idto" type="com.cfcc.itfe.facade.data.NontaxDto"/>
+    <methodExceptions id="44e92972-0b09-4d4f-a1d2-0867e2d25e21" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

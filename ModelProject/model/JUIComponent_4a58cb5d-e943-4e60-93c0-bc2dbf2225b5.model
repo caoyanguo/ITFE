@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="4a58cb5d-e943-4e60-93c0-bc2dbf2225b5" name="银行行名对照参数维护" ename="tsconvertbankname">
+  <jproperties id="b93c1c9b-3cac-4122-ab32-c397cd4eb418" key="GeneratedTime" value="1378694778413"/>
+  <refModule href="JModule_9832ebb5-2eaa-461a-b42d-a4a9c9d29181.model#9832ebb5-2eaa-461a-b42d-a4a9c9d29181"/>
+  <model id="9d881856-10ca-4163-8880-ca1733acf99a" name="JModelImpl-9d881856-10ca-4163-8880-ca1733acf99a">
+    <attributes id="f2790759-4dc1-4107-80a5-c6789059b4cc" name="resultlist" type="java.util.List"/>
+    <attributes id="d6d6cf67-62f5-4610-8700-81867c728a12" name="searchDto" type="com.cfcc.itfe.persistence.dto.TsConvertbanknameDto"/>
+    <attributes id="c740512f-3a33-4d31-9fe6-398c2412c176" name="detailDto" type="com.cfcc.itfe.persistence.dto.TsConvertbanknameDto"/>
+    <directions id="010dab09-c182-41cc-948c-78c5b4ca739e" name="表格单击" ename="singleclick"/>
+    <directions id="4e53ed6b-389b-41ad-8d47-47ec342101fd" viewers="a67eb04b-574a-460c-b4e5-942a08e1791f" name="表格双击" ename="doubleclick"/>
+    <directions id="edc0e276-934a-4fe3-a06a-bfedadf03e70" viewers="18277300-c8f1-41d9-b428-426657b530fb" name="跳转录入界面" ename="goinputview"/>
+    <directions id="4d6668c3-75f9-4931-8fb4-9ec01c7f4656" viewers="a67eb04b-574a-460c-b4e5-942a08e1791f" name="跳转修改界面" ename="gomodview"/>
+    <directions id="3778969a-f912-4df2-9125-b10b27824efe" viewers="01ae11c7-fe29-4600-a0f9-eb8775ec8bca" name="返回主页面" ename="gomainview"/>
+    <directions id="efbf477d-f425-4251-9edc-b25cfacbdebd" name="删除操作" ename="del"/>
+    <directions id="c20bc663-ab64-465f-8557-46b286a07645" viewers="01ae11c7-fe29-4600-a0f9-eb8775ec8bca" name="保存" ename="inputsave"/>
+    <directions id="879b277c-b878-41d0-8289-3330ffda3574" viewers="01ae11c7-fe29-4600-a0f9-eb8775ec8bca" name="修改保存" ename="modsave"/>
+    <directions id="4680aa8a-fb79-4d4b-80e1-b9b544826e88" viewers="01ae11c7-fe29-4600-a0f9-eb8775ec8bca" name="查询" ename="search"/>
+  </model>
+  <contentAreas id="dd3868f9-bf1d-4547-9685-18dc410e6a22">
+    <contentareanode id="f4ea2913-328b-479a-a1f8-00027d6c2fc7" name="参数查询一览表" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="2144e68a-d465-4ff1-acbe-d44d276d542d" name="TableImpl-2144e68a-d465-4ff1-acbe-d44d276d542d" binding="resultlist" refdoubleclickdirection="4e53ed6b-389b-41ad-8d47-47ec342101fd" refsingleclickdirection="010dab09-c182-41cc-948c-78c5b4ca739e">
+        <columnlist id="07faf688-fc4b-4dfe-800f-82aab1cc64bf" name="核算主体代码" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="56988040-b673-431e-87a3-ce5c9ff750eb" name="财政银行名称" binding="sbankname" caption="财政银行名称"/>
+        <columnlist id="137d3a8f-45f1-4755-aa2f-cef367d344d1" name="支付系统银行名称" binding="stcbankname" caption="支付系统银行名称"/>
+        <columnlist id="17a40cb3-abc1-4f0c-8e4f-8c07e5a59010" name="银行代码" binding="sbankcode" caption="银行代码"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="fe788460-9c5a-4da5-8f18-829e8ce2d201" name="信息录入" grouptitle="信息录入">
+      <widgetRefs xsi:type="model:Text" id="6cc3f7c0-ad4c-43dd-baa0-0ce573adb1e6" name="核算主体代码" extpoperties="" binding="detailDto.sorgcode" caption="核算主体代码" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="6fed401a-0a78-45cf-9199-0bc372922641" name="银行代码" binding="detailDto.sbankcode" caption="银行代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="8cf76249-cdce-4c39-ae5a-7e252407d06b" name="财政银行名称" binding="detailDto.sbankname" caption="财政银行名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="b8020fa4-d663-4f97-b35b-6a48fd3cc46a" name="支付系统银行名称" binding="detailDto.stcbankname" caption="支付系统银行名称" required="true"/>
+    </contentareanode>
+    <contentareanode id="adb4991a-f3ed-4e9a-9f23-f80611858d3a" name="信息修改" grouptitle="信息修改">
+      <widgetRefs xsi:type="model:Text" id="8e78a6d8-00ba-44f0-8913-24c30dbd2eb6" name="核算主体代码" binding="detailDto.sorgcode" caption="核算主体代码" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="81ac8714-7671-494f-a648-0d764f62ea8c" name="银行代码" binding="detailDto.sbankcode" caption="银行代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="77611eca-283c-4134-ad9c-73414f067d34" name="财政银行名称" binding="detailDto.sbankname" caption="财政银行名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="c62b53d0-e7cd-4a0c-b548-7e72073d1147" name="支付系统银行名称" binding="detailDto.stcbankname" caption="支付系统银行名称" required="true"/>
+    </contentareanode>
+    <contentareanode id="311bdb8b-2848-4823-b802-2f867ec4502b" name="信息查询" grouptitle="信息查询" binding="">
+      <widgetRefs xsi:type="model:Text" id="396a1bcc-9317-466d-ae37-c53e8c83101c" name="银行行号" binding="searchDto.sbankcode" caption="银行行号"/>
+      <widgetRefs xsi:type="model:Text" id="4c32d391-e927-42e6-b06b-f733ba50bc00" name="银行名称" binding="searchDto.sbankname" caption="银行名称"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="329b68cd-fae8-45d6-8cdd-a59d068fc097">
+    <pages id="af7fbe5a-8419-470c-8d15-05cca49ee2f9" name="银行行名对照参数维护">
+      <views id="01ae11c7-fe29-4600-a0f9-eb8775ec8bca" name="银行行名对照参数维护" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="311bdb8b-2848-4823-b802-2f867ec4502b f4ea2913-328b-479a-a1f8-00027d6c2fc7">
+        <buttonArea id="21a97602-5be3-4bed-ae15-3c771487e096" name="JButtonAreaImpl-21a97602-5be3-4bed-ae15-3c771487e096">
+          <buttons id="4618fa0b-74b4-45e1-9104-0c7a9f41a3c2" name="查询" caption="查询" direction="4680aa8a-fb79-4d4b-80e1-b9b544826e88"/>
+          <buttons id="ef8d2a24-9dc6-49da-8922-580fa3976634" name="录入" caption="录入" direction="edc0e276-934a-4fe3-a06a-bfedadf03e70"/>
+          <buttons id="0c5750ca-2007-4d69-ba47-19892d0a829a" name="修改" caption="修改" direction="4d6668c3-75f9-4931-8fb4-9ec01c7f4656"/>
+          <buttons id="1fe1087a-a66b-49f2-b8e8-f1a856197e34" name="删除" caption="删除" direction="efbf477d-f425-4251-9edc-b25cfacbdebd"/>
+        </buttonArea>
+      </views>
+      <views id="18277300-c8f1-41d9-b428-426657b530fb" name="信息录入" contentArea="fe788460-9c5a-4da5-8f18-829e8ce2d201">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="dd5f5742-39e6-4774-bf3b-09c36c9cbcaa" name="JButtonAreaImpl-dd5f5742-39e6-4774-bf3b-09c36c9cbcaa">
+          <buttons id="413551ed-51d4-4c52-8202-ecf993de36b9" name="保存" caption="保存" checkrequired="true" direction="c20bc663-ab64-465f-8557-46b286a07645"/>
+          <buttons id="6ffb47e9-792b-4a91-9435-4109dec9bf77" name="返回" caption="返回" direction="3778969a-f912-4df2-9125-b10b27824efe"/>
+        </buttonArea>
+      </views>
+      <views id="a67eb04b-574a-460c-b4e5-942a08e1791f" name="信息修改" contentArea="adb4991a-f3ed-4e9a-9f23-f80611858d3a">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="1fa1ba91-abcc-43fc-a97c-c65f887912db" name="JButtonAreaImpl-1fa1ba91-abcc-43fc-a97c-c65f887912db">
+          <buttons id="05e29132-d37a-450a-b506-f060fdb16f81" name="保存" caption="保存" checkrequired="true" direction="879b277c-b878-41d0-8289-3330ffda3574"/>
+          <buttons id="ed6bdb22-bb9e-4cf4-8ccf-ceb462160309" name="返回" caption="返回" direction="3778969a-f912-4df2-9125-b10b27824efe"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

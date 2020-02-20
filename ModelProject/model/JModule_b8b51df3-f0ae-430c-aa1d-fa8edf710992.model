@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b8b51df3-f0ae-430c-aa1d-fa8edf710992" name="凭证退回处理" ename="backVoucher"/>

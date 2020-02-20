@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9ed22498-e754-4ad3-a774-81802b8fbc56" name="9111包明细重发请求" ename="PackDetailSendRequest">
+  <jproperties id="7f369363-d05c-48e1-aa3f-315af9994b72" key="GeneratedTime" value="1331531145656"/>
+  <refModule href="JModule_d4be8f79-0032-40a1-94e5-9d20bd3ce6b6.model#d4be8f79-0032-40a1-94e5-9d20bd3ce6b6"/>
+  <methods id="7d860950-3894-4ea3-8ebe-e3659259e992" ename="sendRequestMsg" name="登陆发送" codecomment="登陆报文发送" returntype="java.lang.String">
+    <methodParams id="7cd19e6f-e5b9-4960-afbc-a5dc15720544" name="报文内容Dto" ename="dto" type="com.cfcc.itfe.persistence.dto.ContentDto"/>
+  </methods>
+</model:JServiceComponent>

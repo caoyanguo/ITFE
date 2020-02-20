@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="efbc845a-f3d3-476a-97c6-e57b6920918c" name="收入税票异常处理" ename="dealErrorIncome">
+  <jproperties id="a806f239-22a1-476f-8a16-ca609ab92eb0" key="GeneratedTime" value="1331531143531"/>
+  <refModule href="JModule_29b1a479-495d-47b9-a1fb-da860fabd5e0.model#29b1a479-495d-47b9-a1fb-da860fabd5e0"/>
+  <model id="511821fe-b5e6-4d34-92b1-3faa852939d2" name="JModelImpl-511821fe-b5e6-4d34-92b1-3faa852939d2">
+    <directions id="a54bb205-2484-42ce-8982-9f27991c7f27" name="数据加载功能" ename="upload"/>
+  </model>
+  <services href="JServiceComponet_6ad38af5-61c2-4778-a827-158c6d4d23d1.model#6ad38af5-61c2-4778-a827-158c6d4d23d1"/>
+  <contentAreas id="aa9d6d48-54c5-4e31-88d6-962f465491ea">
+    <contentareanode id="39a1760a-2e86-47fd-a12f-4f0e22a805d0" name="收入税票异常处理界面" grouptitle="收入税票异常处理界面">
+      <widgetRefs xsi:type="model:Text" id="cb735bfc-abb3-4a29-a920-926f4d036dcd" name="资金收纳流水号" binding="inputsrlnodto.strasrlno" caption="资金收纳流水号"/>
+      <widgetRefs xsi:type="model:Text" id="48d4275e-1a08-4847-aebb-271790efa5d9" name="文件金额" binding="inputsrlnodto.nmoney" caption="文件金额"/>
+      <widgetRefs xsi:type="model:FileUploader" id="0518f5a2-c43a-4e7b-bba9-00b8f7ff8b01" name="加载文件路径" binding="fileList" caption="加载文件路径" enable="true" editable="true" isdirectory="false" ismult="true">
+        <labelStyle id="f0935f2c-ceb8-4f3e-bfca-8ddb958e268c" name="LabelStyleImpl-f0935f2c-ceb8-4f3e-bfca-8ddb958e268c" ename="LabelStyleImplf0935f2cceb84f3ebfca8ddb958e268c"/>
+        <componentStyle id="15cce0b2-fdd7-4c63-bb91-342a835b44ec" name="ComponentStyleImpl-15cce0b2-fdd7-4c63-bb91-342a835b44ec" ename="ComponentStyleImpl15cce0b2fdd74c63bb91342a835b44ec"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="5925e469-fea1-4cb0-ab55-43de89dda933">
+    <pages id="fd76af66-6e98-4f2c-ab73-8a65959770b7" name="收入税票异常处理界面">
+      <views id="48e92eaf-8124-44cd-8e0c-81e5389f04b7" name="数据加载" isdefault="true" contentArea="39a1760a-2e86-47fd-a12f-4f0e22a805d0">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="42a8816b-592e-4f6b-9376-afd2df0c7847" name="JButtonAreaImpl-42a8816b-592e-4f6b-9376-afd2df0c7847">
+          <buttons id="7b2098d2-1040-4bb5-bbc9-51caeb943acc" name="数据加载" caption="数据加载" direction="a54bb205-2484-42ce-8982-9f27991c7f27"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

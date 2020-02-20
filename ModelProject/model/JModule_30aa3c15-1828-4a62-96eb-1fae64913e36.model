@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="30aa3c15-1828-4a62-96eb-1fae64913e36" name="更正凭证数据导入" ename="updateInto"/>

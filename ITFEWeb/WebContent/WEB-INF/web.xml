@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>ITFEWeb</display-name>
+	<context-param id="ParamValue_1255945956187">
+		<param-name>org.mule.config</param-name>
+		<param-value>loader/product/yak-config.xml</param-value>
+	</context-param>
+	
+	<!-- 尝试解决quartz定时任务内存溢出问题 20150213 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>	
+	
+	<listener>
+		<listener-class>
+			com.cfcc.yak.config.builders.YakXmlBuilderContextListener</listener-class>
+	</listener>
+	<servlet id="Servlet_1255945947078">
+
+		<servlet-name>HttpInvoker</servlet-name>
+		<servlet-class>com.cfcc.itfe.servlet.InvokerServlet</servlet-class>
+		<init-param>
+			<param-name>sessionRequired</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>secureRequired</param-name>
+			<param-value>false</param-value>
+		</init-param>
+
+	</servlet>
+	<servlet id="Servlet_1255945947109">
+		<servlet-name>ss</servlet-name>
+		<servlet-class>com.cfcc.itfe.servlet.StatisticsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>OcxHttpProxyServlet</servlet-name>
+		<servlet-class>com.cfcc.itfe.servlet.OcxHttpProxyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping id="ServletMapping_1255945950515">
+		<servlet-name>HttpInvoker</servlet-name>
+		<url-pattern>/HttpInvoker/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping id="ServletMapping_1255945950516">
+		<servlet-name>ss</servlet-name>
+		<url-pattern>/ss/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OcxHttpProxyServlet</servlet-name>
+		<url-pattern>/realware/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OcxHttpProxyServlet</servlet-name>
+		<url-pattern>/stamp/*</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>15</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

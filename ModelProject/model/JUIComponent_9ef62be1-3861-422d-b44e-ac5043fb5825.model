@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9ef62be1-3861-422d-b44e-ac5043fb5825" name="退库查询处理" ename="tvDwbkQuery">
+  <jproperties id="9c33f192-d245-41df-bf0d-5a81b77e1995" key="GeneratedTime" value="1561949504075"/>
+  <refModule href="JModule_d63755a2-c6f0-4428-897c-3c3b18fcc23f.model#d63755a2-c6f0-4428-897c-3c3b18fcc23f"/>
+  <model id="7e54f427-1389-443d-b6c9-46900acd0e92" name="JModelImpl-7e54f427-1389-443d-b6c9-46900acd0e92">
+    <attributes id="19a700c6-44b5-47bf-b6f5-e1f7f3b50a52" name="dto" type="com.cfcc.itfe.persistence.dto.TvDwbkDto"/>
+    <attributes id="1a551413-c015-4865-a0ad-ab822a59f6d8" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="f3bdb123-a507-4da3-8233-ef5effa9da09" viewers="264705a9-8cc4-444d-acb0-c773d6606df4" name="查询" ename="search"/>
+    <directions id="50159029-a698-445f-ae55-fd212d71b2f7" viewers="1f4e7150-b715-4c26-a99c-457a106de0b6" name="返回" ename="reback"/>
+    <directions id="29f4f22d-5b13-4633-ad6c-56687b10ccc3" viewers="6cb50a80-21ff-43cc-93ee-b7e0d4b06de0" name="退库对账单打印" ename="queryPrint"/>
+    <directions id="d1e81c8d-60f0-4404-81b5-33c895754908" viewers="264705a9-8cc4-444d-acb0-c773d6606df4" name="返回查询结果" ename="backQueryResult"/>
+    <directions id="40c2cf1a-1d78-4359-bc69-3132a47cae0e" viewers="264705a9-8cc4-444d-acb0-c773d6606df4" name="更新失败" ename="updateFail"/>
+    <directions id="e8ec9985-a0b9-4b21-9060-694d72fd6976" name="全选" ename="selectAll"/>
+    <directions id="52b0a460-3e6e-461e-8897-f17680236873" viewers="264705a9-8cc4-444d-acb0-c773d6606df4" name="更新成功" ename="updateSuccess"/>
+    <directions id="8934c1b6-c94c-4b33-ab1f-c24dd133eac4" name="设置退回" ename="setback"/>
+    <directions id="4e13ec2c-c9a6-4cc4-ae7c-87a1ad76f6e3" name="导出文件csv" ename="exportfile"/>
+  </model>
+  <services href="JServiceComponet_bcbf3ef5-097b-4d5d-9136-4baf9ef30ed7.model#bcbf3ef5-097b-4d5d-9136-4baf9ef30ed7"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="4dc86343-830f-40f7-a27c-c87c78248635">
+    <contentareanode id="22b8b038-e0b8-4fc5-b51b-492deb31c0e9" name="退库查询界面" grouptitle="退库查询界面" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="119cbf3f-40d6-4c4d-950b-39491b23da2c" name="请选择要查询的表" binding="selectedtable" caption="请选择要查询的表" required="true" display="stypecode" underly="svalue" modelsource="statelist"/>
+      <widgetRefs xsi:type="model:Combo" id="87cc9713-b8fa-4afa-abf4-12793903df60" name="退库国库代码" binding="dto.spayertrecode" caption="退库国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4ddf8e7d-7bea-49ec-8f69-15d13c51c089" name="凭证流水号" binding="dto.ivousrlno" caption="凭证流水号"/>
+      <widgetRefs xsi:type="model:Text" id="8835db07-bf3c-4a1f-a64d-90834aa0b0d6" name="退库凭证号" binding="dto.sdwbkvoucode" caption="退库凭证号"/>
+      <widgetRefs xsi:type="model:Text" id="71ea7baa-b07f-415a-ac3a-507fcc6b4c88" name="征收机关代码" binding="dto.staxorgcode" caption="征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="7cc425a1-299a-43f6-947b-8687f7303fa9" name="受理日期" binding="dto.daccept" caption="受理日期"/>
+      <widgetRefs xsi:type="model:Text" id="2e965b95-4057-4441-b2ba-fb3bc9cb77bc" name="退库原因代码" binding="dto.sdwbkreasoncode" caption="退库原因代码"/>
+      <widgetRefs xsi:type="model:Text" id="a81bd7bd-75ab-452e-9c92-e708b85f9f8f" name="包流水号" binding="dto.spackageno" caption="包流水号"/>
+      <widgetRefs xsi:type="model:Text" id="c01b660f-fdca-4c08-8e18-4483c8b171c8" name="金额" binding="dto.famt" caption="金额">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#fc188264-5e10-43b4-a500-1106d2f93af1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="99b21cd9-542a-4f12-b957-a3f1879ee432" name="预算种类" binding="dto.cbdgkind" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4f3b0061-6c81-4de8-b329-25462f361a2f" name="交易状态" binding="dto.sstatus" caption="交易状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6a3278ba-63d0-4e81-90bc-b61aadec3941" name="科目代码" binding="dto.sbdgsbtcode" caption="科目代码"/>
+    </contentareanode>
+    <contentareanode id="a8c01dc3-dd40-44e6-87a5-42edc235ef0b" name="退库查询结果界面" grouptitle="退库查询结果界面">
+      <widgetRefs xsi:type="model:Table" id="288f1ec7-7433-4940-8592-abb1f11d1d3c" name="maintenanceResult" binding="pagingcontext" caption="查询结果一览表" tabletype="paging" showcheckbox="true" selectedrows="selectRs">
+        <columnlist id="6b03dc8b-45b3-454b-8734-7e0e8a19c609" name="是否选择" caption="是否选择"/>
+        <columnlist id="dde54661-ee7e-4805-ad7a-222fc2127e5d" name="交易状态" binding="sstatus" caption="交易状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        </columnlist>
+        <columnlist id="99ae05ed-2c5f-4b06-a1e7-e95a1db5aedc" name="受理日期" binding="daccept" caption="受理日期"/>
+        <columnlist id="61bd9d7b-22dc-4e6e-9d8f-486e5b9e8109" name="退库凭证号" binding="sdwbkvoucode" caption="退库凭证号"/>
+        <columnlist id="e7dae60d-4caa-4774-a7c2-6d821175b6f5" name="征收机关代码" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="80a2c7d6-657b-463f-9edd-4aa8cd14b2f6" name="退库国库代码" binding="spayertrecode" caption="退库国库代码"/>
+        <columnlist id="9e929341-76f4-4046-a073-8fb1161224fa" name="金额" binding="famt" caption="金额"/>
+        <columnlist id="618c2f6a-32ca-4074-bf61-0f566ed31581" name="退回金额" binding="shold2" caption="退回金额"/>
+        <columnlist id="9798b36c-ddbc-4512-8238-8e76ff471555" name="预算科目代码" binding="sbdgsbtcode" caption="预算科目代码"/>
+        <columnlist id="4ff93a37-c98d-449f-9b14-8872b5bdaa8a" name="预算级次" binding="cbdglevel" caption="预算级次">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="8804b906-93c6-4ab0-a08c-c278ef221e37" name="预算种类" binding="cbdgkind" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="69963769-0d78-421a-b9b9-741341cb3510" name="退库原因代码" binding="sdwbkreasoncode" caption="退库原因代码"/>
+        <columnlist id="ca862cc1-c245-4c09-86cb-6658569d17bf" name="辅助标志" binding="sastflag" caption="辅助标志"/>
+        <columnlist id="f4aaa0c6-b951-465b-aca6-98084150af6c" name="收款人账号" binding="spayeeacct" caption="收款人账号"/>
+        <columnlist id="81afe1d4-bfe1-4e36-ac5d-7f135c8ca20e" name="收款人名称" binding="spayeename" caption="收款人名称"/>
+        <columnlist id="fcd58371-13dd-4462-9578-b1c15e229423" name="收款人开户行行号" binding="spayeeopnbnkno" caption="收款人开户行行号"/>
+        <columnlist id="298cea25-3442-45cd-8c71-83a6f1c0bcf0" name="企业代码" binding="spayeecode" caption="企业代码"/>
+        <columnlist id="f6a5a898-f8ec-44cc-a330-4f6987937d6b" name="导入文件名" binding="sfilename" caption="导入文件名"/>
+        <columnlist id="b6584b5e-9812-41c6-b26c-bd49ddfada0e" name="附言" binding="sdemo" caption="附言"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="3a51635d-bf27-4aa3-a7da-3f3b603b89bc" name="退库对账单" grouptitle="">
+      <jreportref id="a0225922-cd28-4bda-b3ab-1e96b6f6a60d" name="退库对账单" reportpath="reportPath" binding="reportRs" parammap="reportmap" width="0" height="0"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="da09c82a-976c-46a4-90c3-3d2a5195d9a2">
+    <pages id="584f2afc-65d0-4f3b-bb3f-f5b0d9e13360" name="退库查询处理">
+      <views id="1f4e7150-b715-4c26-a99c-457a106de0b6" name="退库查询界面" isdefault="true" contentArea="22b8b038-e0b8-4fc5-b51b-492deb31c0e9">
+        <buttonArea id="78370a39-e5d6-431e-af16-9b268884e126" name="JButtonAreaImpl-78370a39-e5d6-431e-af16-9b268884e126">
+          <buttons id="392e7188-d6e5-4814-b0d6-e77a04cdbe90" name="查询" caption="查询" checkrequired="true" direction="f3bdb123-a507-4da3-8233-ef5effa9da09"/>
+        </buttonArea>
+      </views>
+      <views id="264705a9-8cc4-444d-acb0-c773d6606df4" name="退库信息列表" contentArea="a8c01dc3-dd40-44e6-87a5-42edc235ef0b">
+        <buttonArea id="9eab66ea-546f-42ab-878a-3b1d7e2c66ac" name="JButtonAreaImpl-9eab66ea-546f-42ab-878a-3b1d7e2c66ac">
+          <buttons id="cdee72d9-5669-4e5f-b782-adfa693201c0" name="全选" caption="全选" direction="e8ec9985-a0b9-4b21-9060-694d72fd6976"/>
+          <buttons id="81cd03a6-b014-4607-9c8c-28fe7cc09389" name="更新失败" caption="更新失败" direction="40c2cf1a-1d78-4359-bc69-3132a47cae0e"/>
+          <buttons id="eff1e1bf-dd4e-4226-940b-ebc1a337beca" name="更新成功" caption="更新成功" direction="52b0a460-3e6e-461e-8897-f17680236873"/>
+          <buttons id="675200b2-d37e-4079-b238-c13f12b7f962" name="设置退回" caption="设置退回" direction="8934c1b6-c94c-4b33-ab1f-c24dd133eac4"/>
+          <buttons id="bccc6fdc-cb83-4218-b3f8-8d1c206e09ac" name="打印对账单" visible="true" caption="打印对账单" direction="29f4f22d-5b13-4633-ad6c-56687b10ccc3"/>
+          <buttons id="9eae358a-baf8-4849-a37c-3c46c07e39cb" name="导出文件" caption="导出文件" direction="4e13ec2c-c9a6-4cc4-ae7c-87a1ad76f6e3"/>
+          <buttons id="4efab098-6b2b-4a38-93a3-ff85c96e9a1d" name="返回" caption="返回" direction="50159029-a698-445f-ae55-fd212d71b2f7"/>
+        </buttonArea>
+      </views>
+      <views id="6cb50a80-21ff-43cc-93ee-b7e0d4b06de0" name="退库对账单" contentArea="3a51635d-bf27-4aa3-a7da-3f3b603b89bc">
+        <buttonArea id="a3024d99-fa30-43e1-948b-831fb5b06653" name="JButtonAreaImpl-a3024d99-fa30-43e1-948b-831fb5b06653">
+          <buttons id="00d68a78-5793-4c36-a9e2-12a10474f355" name="返回" caption="返回" direction="d1e81c8d-60f0-4404-81b5-33c895754908"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="95ab91e7-4558-45c9-a040-2858a1ad4ab4" name="代码登记注册类型" ename="TsCoderegtype" shared="true">
+  <jproperties id="3d1f350c-441f-4645-8b69-57c198fd6d1f" key="GeneratedTime" value="1330485995984"/>
+  <refModule href="JModule_2219f55f-80d1-465d-806a-f290995105a6.model#2219f55f-80d1-465d-806a-f290995105a6"/>
+  <model id="407143f2-6bc1-47bf-bab4-b9c9ed5427da" name="JModelImpl-407143f2-6bc1-47bf-bab4-b9c9ed5427da">
+    <attributes id="a7bcf059-85f0-4678-992f-610a01bf03e5" name="dto" type="com.cfcc.itfe.persistence.dto.TsCoderegtypeDto"/>
+    <attributes id="14cb3a44-68c7-41ca-888b-e433779c4f04" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="dccde931-ea9c-4ee6-bf75-a852cfb9b470" viewers="07b24852-5a0b-4e1a-a10a-acc3fba7bcf8" name="跳转录入界面" ename="goInput"/>
+    <directions id="4ebb8a93-b0e6-464c-908d-6f35b20a508a" name="录入保存" ename="inputSave"/>
+    <directions id="f7d8b583-4e62-48e7-bf82-1ecde0f20ab3" viewers="ff8edd94-f737-416e-a935-03630509fa49" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="0328ffba-728a-4e96-a971-7d088556a64c" name="单选" ename="singleSelect"/>
+    <directions id="25ce66dd-8e5e-4ac2-bc7e-4a5267ac7013" name="删除" ename="delete"/>
+    <directions id="695e5d08-31c7-4e15-919c-869c86d798da" viewers="249b4d1c-1f4f-489b-9359-7f5e3b05818e" name="到修改界面" ename="goModify"/>
+    <directions id="d11a1afc-cebc-4363-8f2a-5e3151e344e5" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_a7ba3646-76e3-483d-9323-40e1d6b397d9.model#a7ba3646-76e3-483d-9323-40e1d6b397d9"/>
+  <contentAreas id="41642cd9-05e0-4678-80ca-42d6897806cc">
+    <contentareanode id="1538cca0-ee85-4d87-a986-65825b02ccfa" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="bb8e85df-6428-402b-89bc-e9a86b0f446b" name="sorgcode" binding="dto.sorgcode" caption="核算主体代码" enable="false" editable="false" required="true">
+        <labelStyle id="919b01d9-ab4e-4ca9-a3ed-a690eb761a73" name="LabelStyleImpl-919b01d9-ab4e-4ca9-a3ed-a690eb761a73" ename="LabelStyleImpld919b01d9-ab4e-4ca9-a3ed-a690eb761a73"/>
+        <componentStyle id="90d0e232-c12f-4705-aa0f-32bc1c413c8e" name="ComponentStyleImpl-90d0e232-c12f-4705-aa0f-32bc1c413c8e" ename="ComponentStyleImpl90d0e232-c12f-4705-aa0f-32bc1c413c8e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="7cb24c31-b15a-41c4-974a-3e88b6fccaf4" name="登记代码" binding="dto.sregcode" caption="登记代码" enable="true" editable="false" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#bccc07b4-ef39-4fa0-b98f-c10b01ec4c44"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="45ce0ba6-135b-4924-8c53-b59b1f6ab76c" name="sregname" binding="dto.sregname" caption="登记代码含义" editable="true" required="true">
+        <labelStyle id="99185d20-79c6-4427-a7ff-dfe03d97c421" name="LabelStyleImpl-99185d20-79c6-4427-a7ff-dfe03d97c421" ename="LabelStyleImpld99185d20-79c6-4427-a7ff-dfe03d97c421"/>
+        <componentStyle id="8e9a047d-1925-4737-ac91-7dd6cd76edce" name="ComponentStyleImpl-8e9a047d-1925-4737-ac91-7dd6cd76edce" ename="ComponentStyleImpl8e9a047d-1925-4737-ac91-7dd6cd76edce"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="1ec06fbd-392e-454c-86eb-d164607345cd" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="8919c55d-c0ad-417e-85cb-b239e8aee05c" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="0328ffba-728a-4e96-a971-7d088556a64c">
+        <columnlist id="bb8e85df-6428-402b-89bc-e9a86b0f446b" name="sorgcode" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="93269dac-bbc7-472b-aecc-f6a55da6db07" name="sregcode" binding="sregcode" caption="登记代码"/>
+        <columnlist id="45ce0ba6-135b-4924-8c53-b59b1f6ab76c" name="sregname" binding="sregname" caption="登记代码含义"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="48fca0b4-9b57-4c59-acae-58d9abd1d55e" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="bb8e85df-6428-402b-89bc-e9a86b0f446b" name="sorgcode" extpoperties="" binding="dto.sorgcode" caption="核算主体代码" enable="false" editable="false" required="true">
+        <labelStyle id="919b01d9-ab4e-4ca9-a3ed-a690eb761a73" name="LabelStyleImpl-919b01d9-ab4e-4ca9-a3ed-a690eb761a73" ename="LabelStyleImpld919b01d9-ab4e-4ca9-a3ed-a690eb761a73"/>
+        <componentStyle id="90d0e232-c12f-4705-aa0f-32bc1c413c8e" name="ComponentStyleImpl-90d0e232-c12f-4705-aa0f-32bc1c413c8e" ename="ComponentStyleImpl90d0e232-c12f-4705-aa0f-32bc1c413c8e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ff1f0779-ad77-4dfc-9772-7dac4e14db66" name="登记代码" extpoperties="" binding="dto.sregcode" visible="true" caption="登记代码" enable="false" editable="false" readonly="true" modelsource="" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#bccc07b4-ef39-4fa0-b98f-c10b01ec4c44"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="45ce0ba6-135b-4924-8c53-b59b1f6ab76c" name="sregname" binding="dto.sregname" caption="登记代码含义" editable="true" required="true">
+        <labelStyle id="99185d20-79c6-4427-a7ff-dfe03d97c421" name="LabelStyleImpl-99185d20-79c6-4427-a7ff-dfe03d97c421" ename="LabelStyleImpld99185d20-79c6-4427-a7ff-dfe03d97c421"/>
+        <componentStyle id="8e9a047d-1925-4737-ac91-7dd6cd76edce" name="ComponentStyleImpl-8e9a047d-1925-4737-ac91-7dd6cd76edce" ename="ComponentStyleImpl8e9a047d-1925-4737-ac91-7dd6cd76edce"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="2ac99701-5934-4d48-8bd2-91bd93fb8b8c">
+    <pages id="ce32e9f7-7e81-4cf9-b5c4-9899d02e3efb" name="维护代码登记注册类型">
+      <views id="ff8edd94-f737-416e-a935-03630509fa49" name="维护界面" isdefault="true" contentArea="1ec06fbd-392e-454c-86eb-d164607345cd">
+        <buttonArea id="42eabde7-702b-429c-8a86-353de207c123" name="JButtonAreaImpl-42eabde7-702b-429c-8a86-353de207c123">
+          <buttons id="3b76e71c-ec51-4c68-8568-e7f51f7fb68c" name="maintenanceInput" caption="录入" direction="dccde931-ea9c-4ee6-bf75-a852cfb9b470"/>
+          <buttons id="f43e877a-67d3-4426-a4db-e2233267b5b3" name="maintenanceDel" caption="删除" direction="25ce66dd-8e5e-4ac2-bc7e-4a5267ac7013"/>
+          <buttons id="203f776a-60bc-4a72-ba90-968459e6666c" name="maintenanceMod" caption="修改" direction="695e5d08-31c7-4e15-919c-869c86d798da"/>
+        </buttonArea>
+      </views>
+      <views id="249b4d1c-1f4f-489b-9359-7f5e3b05818e" name="修改界面" contentArea="48fca0b4-9b57-4c59-acae-58d9abd1d55e">
+        <buttonArea id="c08b2396-84ab-4e86-8b54-f08d5585b6cb" name="JButtonAreaImpl-c08b2396-84ab-4e86-8b54-f08d5585b6cb">
+          <buttons id="e736838b-418b-4e13-a088-54082b5d25de" name="modifySave" caption="保存" checkrequired="true" direction="d11a1afc-cebc-4363-8f2a-5e3151e344e5"/>
+          <buttons id="a9864a84-abd5-4d14-9aa7-8f393e159e67" name="返回" caption="返回" direction="f7d8b583-4e62-48e7-bf82-1ecde0f20ab3"/>
+        </buttonArea>
+      </views>
+      <views id="07b24852-5a0b-4e1a-a10a-acc3fba7bcf8" name="录入界面" contentArea="1538cca0-ee85-4d87-a986-65825b02ccfa">
+        <buttonArea id="88170f93-2fd0-49a5-b236-a45f749d20b6" name="JButtonAreaImpl-88170f93-2fd0-49a5-b236-a45f749d20b6">
+          <buttons id="9c0fd68a-208c-48c4-9412-3c272754af84" name="保存" caption="保存" checkrequired="true" direction="4ebb8a93-b0e6-464c-908d-6f35b20a508a"/>
+          <buttons id="a9864a84-abd5-4d14-9aa7-8f393e159e67" name="返回" caption="返回" direction="f7d8b583-4e62-48e7-bf82-1ecde0f20ab3"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

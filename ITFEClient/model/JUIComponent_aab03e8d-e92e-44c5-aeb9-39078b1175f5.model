@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="aab03e8d-e92e-44c5-aeb9-39078b1175f5" name="免抵调查询" ename="TaxFreeSearchUI">
+  <jproperties id="bd35e6ea-b1ad-4c33-bc55-7729d06b8260" key="GeneratedTime" value="1364521794181"/>
+  <refModule href="JModule_769d79ae-d771-4b46-964d-a166667849a4.model#769d79ae-d771-4b46-964d-a166667849a4"/>
+  <model id="13240da6-b903-4e26-8428-a4fde9a5bc2c" name="JModelImpl-13240da6-b903-4e26-8428-a4fde9a5bc2c">
+    <attributes id="453507f5-6d88-4a3b-a9e1-9f652ec56061" name="dto" type="com.cfcc.itfe.persistence.dto.TvFreeDto"/>
+    <attributes id="a0014709-2a1e-41e6-920e-41bbf9ee8d03" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="1958d461-f5b9-4821-8bb1-3086c01e9125" viewers="f7c5044b-24a8-4536-a71b-053aeb83a480" name="查询" ename="search"/>
+    <directions id="64e4180e-0315-4fb0-b113-5a13adc47d10" viewers="520e8295-abf8-455f-98c6-5a85f3f6cbf7" name="返回" ename="reback"/>
+    <directions id="ab578377-bcc5-439d-b83b-26487f2b940d" name="全选" ename="selectAll"/>
+    <directions id="543f08bd-b2f3-4995-9c7f-c1df160f0849" viewers="f7c5044b-24a8-4536-a71b-053aeb83a480" name="更新失败" ename="updateFail"/>
+    <directions id="cce643af-66fa-457a-934a-a6517cdf2649" name="更新成功" ename="updateSuccess">
+      <viewers href="JUIComponent_9ef62be1-3861-422d-b44e-ac5043fb5825.model#264705a9-8cc4-444d-acb0-c773d6606df4"/>
+    </directions>
+  </model>
+  <services href="JServiceComponet_029ba98b-fc2f-411f-9d75-2fc0115740e4.model#029ba98b-fc2f-411f-9d75-2fc0115740e4"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="768620e7-6b7e-4793-ba57-604921e5a0c4">
+    <contentareanode id="c62ec140-d2ea-4fe6-b595-17903dc2b477" name="免抵调查询界面" grouptitle="免抵调查询界面" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="429ecf90-bc68-43a1-9819-eeef3de4cd90" name="请选择要查询的表" binding="selectedtable" caption="请选择要查询的表" display="stypecode" underly="svalue" modelsource="statelist"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="3998bf6f-c3d6-4bfc-98da-b9999f5b6aa5" name="PlaceHolderImpl-3998bf6f-c3d6-4bfc-98da-b9999f5b6aa5"/>
+      <widgetRefs xsi:type="model:Text" id="e7bb0caa-9571-43f5-9c71-8958330510d4" name="征收机关代码" binding="dto.staxorgcode" caption="征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="0fc48ef6-bb56-470b-8bc7-d23e56e5c9ba" name="凭证编号" binding="dto.sfreevouno" caption="凭证编号"/>
+      <widgetRefs xsi:type="model:Text" id="e65276a0-5057-48b7-ba8c-41459e5d9197" name="开票日期" binding="dto.dbilldate" caption="开票日期"/>
+      <widgetRefs xsi:type="model:Text" id="690a9698-4dc4-4dca-a044-8816e0cc2b99" name="免抵调增预算科目代码" binding="dto.sfreeplusubjectcode" caption="免抵调增预算科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="02c957ec-0ab7-43fd-b1f5-9206f6430ff9" name="免抵调增交易金额" binding="dto.ffreepluamt" caption="免抵调增交易金额"/>
+      <widgetRefs xsi:type="model:Text" id="528ec8ca-2908-4080-a469-9b2aba0cd260" name="免抵调减预算科目代码" binding="dto.sfreemisubject" caption="免抵调减预算科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="83b232e7-d813-464e-b573-dfee6f074084" name="免抵调减交易金额" binding="dto.ffreemiamt" caption="免抵调减交易金额"/>
+      <widgetRefs xsi:type="model:Text" id="b7a720a8-c560-461d-8dda-e9f6cfa4f68f" name="受理日期" binding="dto.dacceptdate" caption="受理日期"/>
+      <widgetRefs xsi:type="model:Text" id="34e1b09f-d0f0-4057-9efd-4130c68c87c7" name="账务日期" binding="dto.dauditdate" caption="账务日期"/>
+      <widgetRefs xsi:type="model:Combo" id="cda674b4-a1ca-4336-aa37-f346ca2f0ab8" name="交易状态" binding="dto.sstatus" caption="交易状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="56adc5ca-79b4-4f6b-9500-39545c5e1687" name="免抵调查询结果界面" grouptitle="免抵调查询结果界面">
+      <widgetRefs xsi:type="model:Table" id="6052d73a-9b60-48e0-9afc-b3648760689a" name="maintenanceResult" binding="pagingcontext" caption="查询结果一览表" tabletype="paging" showcheckbox="true" selectedrows="selectRs">
+        <columnlist id="952756ac-4fdf-4886-a6ef-dbff1c6e5c18" name="凭证流水号" binding="ivousrlno" caption="凭证流水号">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        </columnlist>
+        <columnlist id="5084727f-f0a9-41f9-aada-1e41934b4e7e" name="征收机关代码" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="1abdce74-b992-4adf-b8a4-4263f75d81d6" name="导入文件名" binding="sfilename" caption="导入文件名"/>
+        <columnlist id="5aff3049-cca5-4fa1-b89a-bd623d0f29d1" name="免抵调凭证编号" binding="sfreevouno" caption="免抵调凭证编号"/>
+        <columnlist id="32a5efaf-9683-46da-8e63-7b0b5c7c6ea6" name="免抵调增预算种类" binding="cfreeplutype" caption="免抵调增预算种类"/>
+        <columnlist id="f3b8dafb-819c-4632-bbfc-ddfdfcc15b68" name="免抵调增收款国库代码" binding="sfreepluptrecode" caption="免抵调增收款国库代码"/>
+        <columnlist id="ac231806-9aa7-4b3d-8c42-971a5f3f938c" name="免抵调增预算科目代码" binding="sfreeplusubjectcode" caption="免抵调增预算科目代码"/>
+        <columnlist id="253a5a0c-e625-40f2-a011-3ef9d1b2dd3e" name="免抵调增交易金额" binding="ffreepluamt" caption="免抵调增交易金额"/>
+        <columnlist id="e45c4c5d-2c64-43fc-8bcf-549165e52019" name="免抵调增预算级次 " binding="cfreeplulevel" caption="免抵调增预算级次 "/>
+        <columnlist id="0de2c31e-4745-4874-adec-3653d81f5133" name="开票日期" binding="dbilldate" caption="开票日期"/>
+        <columnlist id="508d3962-3705-434a-9675-f55449bf9c76" name="免抵调减预算科目代码" binding="sfreemisubject" caption="免抵调减预算科目代码"/>
+        <columnlist id="6f6e2697-55be-460f-831e-18134d41f102" name="免抵调减预算级次" binding="cfreemilevel" caption="免抵调减预算级次"/>
+        <columnlist id="db487430-360f-45fd-aacf-8325548f5865" name="免抵调减辅助标志" binding="sfreemisign" caption="免抵调减辅助标志"/>
+        <columnlist id="867e193e-95b2-4d79-944c-3bc6257596fc" name="免抵调减收款国库代码" binding="sfreemiptre" caption="免抵调减收款国库代码"/>
+        <columnlist id="da974390-e826-4c6a-b5f9-7eae2dff1f65" name="免抵调减交易金额" binding="ffreemiamt" caption="免抵调减交易金额"/>
+        <columnlist id="d067b9e6-dc19-4152-b6d7-9f161d36ded3" name="电子凭证编号" binding="selectrotaxvouno" caption="电子凭证编号"/>
+        <columnlist id="5e1d793c-112e-4266-b9a9-b0247ceaa971" name="企业代码" binding="scorpcode" caption="企业代码">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="c012138d-b686-4755-b1ed-5e02509e99e4" name="整理期标志" binding="ctrimsign" caption="整理期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="aa9a2daf-7420-44b3-879f-f5a9be5978c9" name="包流水号" binding="spackno" caption="包流水号"/>
+        <columnlist id="b7cce543-412a-4ce3-94cb-07b0e4a8b8e7" name="交易状态" binding="sstatus" caption="交易状态"/>
+        <columnlist id="47098b4c-c26e-4f8e-93b5-cad711643b11" name="受理日期" binding="dacceptdate" caption="受理日期"/>
+        <columnlist id="ecb21427-7601-4eb4-ba24-c42b545a28b6" name="核算主体代码" binding="sbookorgcode" caption="核算主体代码"/>
+        <columnlist id="bca75dbe-782b-4e8d-a9a1-78e9acbb6574" name="账务日期" binding="dauditdate" caption="账务日期"/>
+        <columnlist id="d9bfa8f1-5a1b-4219-9547-6239b324a8d8" name="附言" binding="saddword" caption="附言"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="6024bedb-9dfb-4e53-8849-069f73760460">
+    <pages id="a61c2e48-08aa-45bf-ba3a-20df4b6034a7" name="免抵调查询">
+      <views id="520e8295-abf8-455f-98c6-5a85f3f6cbf7" name="免抵调查询界面" isdefault="true" contentArea="c62ec140-d2ea-4fe6-b595-17903dc2b477">
+        <buttonArea id="8e102008-4ef5-4d65-b064-2327d375829c" name="JButtonAreaImpl-8e102008-4ef5-4d65-b064-2327d375829c">
+          <buttons id="f08b43fd-b7ff-49c1-a607-239661cb87d9" name="查询" caption="查询" direction="1958d461-f5b9-4821-8bb1-3086c01e9125"/>
+        </buttonArea>
+      </views>
+      <views id="f7c5044b-24a8-4536-a71b-053aeb83a480" name="免抵调信息列表" contentArea="56adc5ca-79b4-4f6b-9500-39545c5e1687">
+        <buttonArea id="cb240aa9-9c7d-4ca2-8e34-3ba272c598c6" name="JButtonAreaImpl-cb240aa9-9c7d-4ca2-8e34-3ba272c598c6">
+          <buttons id="7dc25976-0faf-4e7c-a370-0858c9d2b1ce" name="全选" caption="全选">
+            <direction href="JUIComponent_9ef62be1-3861-422d-b44e-ac5043fb5825.model#e8ec9985-a0b9-4b21-9060-694d72fd6976"/>
+          </buttons>
+          <buttons id="71d0c1e3-4bcd-4ddf-b21e-19b4d1464f25" name="更新失败" caption="更新失败">
+            <direction href="JUIComponent_9ef62be1-3861-422d-b44e-ac5043fb5825.model#40c2cf1a-1d78-4359-bc69-3132a47cae0e"/>
+          </buttons>
+          <buttons id="0726bb6f-7616-4f61-8f5b-9f6b98beb72c" name="更新成功" caption="更新成功">
+            <direction href="JUIComponent_9ef62be1-3861-422d-b44e-ac5043fb5825.model#52b0a460-3e6e-461e-8897-f17680236873"/>
+          </buttons>
+          <buttons id="6681ba52-f90e-47ab-9262-aa1db8436418" name="返回" caption="返回" direction="64e4180e-0315-4fb0-b113-5a13adc47d10"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

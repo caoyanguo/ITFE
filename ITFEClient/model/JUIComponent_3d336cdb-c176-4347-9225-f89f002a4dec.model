@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3d336cdb-c176-4347-9225-f89f002a4dec" name="5003财政电子税票申请" ename="FinIncomeonRequest">
+  <jproperties id="eaa3ec92-d2ad-46ee-bf95-76b18f276a69" key="GeneratedTime" value="1376902118838"/>
+  <refModule href="JModule_0182c20b-d724-4a7a-ae7d-95ff516c2da4.model#0182c20b-d724-4a7a-ae7d-95ff516c2da4"/>
+  <model id="cada21f6-a1fd-4d93-8e0e-c224078c7713" name="JModelImpl-cada21f6-a1fd-4d93-8e0e-c224078c7713">
+    <directions id="d0437160-3fcb-4886-8b4f-facc57a7d723" name="电子税票申请" ename="request"/>
+    <directions id="8ac9e0c4-8365-4494-8d6b-59d5c4007ec7" name="申请全辖" ename="sendAll"/>
+  </model>
+  <services href="JServiceComponet_46efa019-7ab6-4f3f-b713-8afbfdddcb02.model#46efa019-7ab6-4f3f-b713-8afbfdddcb02"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="c242b38b-2cc8-42f9-8996-8a1bcf8c7721">
+    <contentareanode id="19844889-fe18-42a1-a44d-0ccaddd10f1a" name="财政电子税票申请" grouptitle="请求信息">
+      <widgetRefs xsi:type="model:Combo" id="3a8a013d-81b3-4204-af43-3ec9d9e3d7e3" name="国库代码" binding="sendorgcode" caption="国库代码" display="strename" underly="strecode" modelsource="trelist"/>
+      <widgetRefs xsi:type="model:Text" id="7d72b612-bc00-49e5-bad1-4074a0cdc23a" name="申请日期" binding="applydate" caption="申请日期"/>
+      <widgetRefs xsi:type="model:Combo" id="b600e424-a6cf-42bc-89f3-9847f46dc9f4" name="申请范围" binding="searchArea" caption="申请范围">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ae08c58a-4e90-42bb-b2b7-378ade4989d0"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="5cbb2c41-2965-4b97-b68d-9fcdcb10698e">
+    <pages id="30fdadae-0bcd-4370-93e4-a04b9c18ece8" name="财政电子税票申请">
+      <views id="3b54210d-4e9b-4101-b9f7-738e68ee0ab4" name="财政电子税票申请" isdefault="true" contentArea="19844889-fe18-42a1-a44d-0ccaddd10f1a">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="54cb2862-dfa5-4437-a1a9-fc869873bc77" name="JButtonAreaImpl-54cb2862-dfa5-4437-a1a9-fc869873bc77">
+          <buttons id="90a6e51f-062a-41ca-86d5-eac907e08f34" name="申请" caption="申请" direction="d0437160-3fcb-4886-8b4f-facc57a7d723"/>
+          <buttons id="e1cef3b2-febc-4dd4-938a-5bbac9d3efe2" name="申请全辖" caption="申请全省数据" direction="8ac9e0c4-8365-4494-8d6b-59d5c4007ec7"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#109806d0-798b-4668-91b9-57f526a8ede8"/>
+</model:JUIComponent>

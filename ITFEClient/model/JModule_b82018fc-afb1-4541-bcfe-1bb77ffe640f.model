@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b82018fc-afb1-4541-bcfe-1bb77ffe640f" isgenerated="false" name="报文收发日志查询" ename="queryMsgLog" shared="false"/>

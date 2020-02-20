@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e0802fdb-b9dc-4bcb-8d34-9d726217df91" name="付款账户与地税科目对应关系服务组件" ename="tsTaxPayacct">
+  <jproperties id="92fdd2c0-4da9-4216-9026-ff3a8105cac8" key="GeneratedTime" value="1403080073109"/>
+  <refModule href="JModule_a7a94901-b778-430f-a217-a41c8f2f50ed.model#a7a94901-b778-430f-a217-a41c8f2f50ed"/>
+  <methods id="8ad27661-f2b6-4150-9d2f-1e14e7f72551" ename="addInfo" name="录入" returntype="java.lang.Boolean">
+    <methodParams id="65bbe121-6219-4320-a608-f7300f81b7e9" name="dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="8c970699-a636-42c5-b1ee-27576b3263ca" ename="modifyInfo" name="修改" returntype="java.lang.Boolean">
+    <methodParams id="1ea46860-35ef-45ca-9bda-8b3a0acd107c" name="dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="191f627f-eea8-44e6-ae19-4259804b940b" ename="delete" name="删除" returntype="java.lang.Boolean">
+    <methodParams id="e815ce8d-27cc-4e08-a5a3-23e58ddf455b" name="dto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

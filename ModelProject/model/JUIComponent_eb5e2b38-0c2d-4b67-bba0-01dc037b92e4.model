@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="eb5e2b38-0c2d-4b67-bba0-01dc037b92e4" name="系统日志查询" ename="querySystemLogs" shared="false">
+  <jproperties id="794a2db3-4146-4020-9e0d-49204163588e" key="GeneratedTime" value="1437554212781"/>
+  <refModule href="JModule_0885e075-3bb3-4544-92b1-cb54390436de.model#0885e075-3bb3-4544-92b1-cb54390436de"/>
+  <model id="d7796d80-3894-451c-af24-5795b54f8bf6" name="JModelImpl-d7796d80-3894-451c-af24-5795b54f8bf6">
+    <directions id="afb91529-2a73-45f5-96b4-6877561f03d5" viewers="5d530276-f055-40f7-99a2-b7b77d5e32fa" name="系统日志查询" ename="querySystemLogs"/>
+    <directions id="a7593a92-16d4-4318-bc66-bc899b80c65b" viewers="b2ff3797-9167-4a00-9e94-a9f1eb6116ab" name="返回日志查询" ename="backQuerySysLogs"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_c5bef6ef-61bc-4ae3-9910-da2a15a0e799.model#c5bef6ef-61bc-4ae3-9910-da2a15a0e799"/>
+  <contentAreas id="43d8dd84-3c3c-44df-925d-dc3ae8b6bfb8">
+    <contentareanode id="e2481c53-120b-4dd6-ba4e-f74bddb8589d" name="日志查询界面">
+      <widgetRefs xsi:type="model:Text" id="0650bdac-c1ca-4e3c-9e34-4d486f97a18b" name="所属日期起" binding="datestart" caption="所属日期起" pattern="@8">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#511e3f19-6d5e-4665-98dd-5b624c1c747e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ccf2e168-2269-4f3e-a69f-a73f2f7ddf01" name="所属日期止" binding="dateend" caption="所属日期止" pattern="@8" textstyle="">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#511e3f19-6d5e-4665-98dd-5b624c1c747e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="624ef429-c96b-492f-a392-01869e4b5797" name="用户代码" binding="dto.susercode" caption="用户代码" display="displayValue" underly="underlyValue" modelsource="userlist"/>
+    </contentareanode>
+    <contentareanode id="c39af268-db6d-492b-903a-6cff57be4564" name="查询结果界面">
+      <widgetRefs xsi:type="model:Table" id="f5275ae3-13c1-4fad-bf1e-8debb4d934d4" name="日志信息列表" binding="pagingcontext" visible="true" caption="日志信息列表" enable="true" tabletype="paging">
+        <columnlist id="2ef1f162-2b8c-458d-b2a5-28274d21e7d3" name="机构名称" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="1c8f2136-3036-4c6b-b442-33711f54fcc5" name="时间" binding="stime" caption="时间"/>
+        <columnlist id="83239b5e-7757-48da-8d79-196364cdff2f" name="业务类型" binding="soperationtypecode" caption="业务类型"/>
+        <columnlist id="06e0c240-7581-43ba-bf0a-c74af662b80b" name="用户代码" binding="susercode" caption="用户代码"/>
+        <columnlist id="c0caa014-a729-4d05-aaad-1b5c90a1e6f2" name="操作说明" binding="soperationdesc" caption="操作说明"/>
+        <columnlist id="afc1f61b-5a48-480a-b6a3-b720995afb2a" name="备注" binding="sdemo" caption="备注"/>
+        <columnlist id="aa27b7e1-979e-4cdb-986b-0f2e67390da5" name="所属日期" binding="sdate" caption="所属日期"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="392cff44-f56c-4d3e-bf9d-9f723bbd4067">
+    <pages id="5dda7853-5b32-464b-92c5-bd4f33025b30" name="日志查询页面">
+      <views id="b2ff3797-9167-4a00-9e94-a9f1eb6116ab" name="日志查询" isdefault="true" contentArea="e2481c53-120b-4dd6-ba4e-f74bddb8589d">
+        <buttonArea id="b2287167-a50a-4232-b23f-f8ad3ae6e45d" name="JButtonAreaImpl-b2287167-a50a-4232-b23f-f8ad3ae6e45d">
+          <buttons id="1bc202ad-2c10-4455-b4cc-258cba37f3ab" name="查询" visible="true" caption="查询" enable="true" checkrequired="false" direction="afb91529-2a73-45f5-96b4-6877561f03d5"/>
+        </buttonArea>
+      </views>
+      <views id="5d530276-f055-40f7-99a2-b7b77d5e32fa" name="查询结果" contentArea="c39af268-db6d-492b-903a-6cff57be4564">
+        <buttonArea id="f2e09b4e-490c-4ad8-a277-2abbc6174135" name="JButtonAreaImpl-f2e09b4e-490c-4ad8-a277-2abbc6174135">
+          <buttons id="e66119dd-aa49-4c58-bcc2-4de32496bc6b" name="返回" caption="返回" direction="a7593a92-16d4-4318-bc66-bc899b80c65b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

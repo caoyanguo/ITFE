@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5c118191-d2a4-46e9-a04b-86b1b42ca403" name="财政批量业务支付明细查询" ename="batchBizDetailQueryForFinance"/>

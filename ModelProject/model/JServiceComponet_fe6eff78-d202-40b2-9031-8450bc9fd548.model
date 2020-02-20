@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="fe6eff78-d202-40b2-9031-8450bc9fd548" name="TCBS资金报文导入" ename="VoucherAllocateIncome" shared="true">
+  <jproperties id="2b6a9fd1-a661-4ff9-a63d-7f93486edfd3" key="GeneratedTime" value="1416219896926"/>
+  <refModule href="JModule_d9cdde0f-1f21-4066-b008-2e3169f945eb.model#d9cdde0f-1f21-4066-b008-2e3169f945eb"/>
+  <methods id="d3175816-2d6a-4363-848e-bf20a0877908" ename="saveDto" name="保存" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="51d1c36c-2406-4704-9784-6fcd29cdb82c" name="保存对象" ename="saveDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoAllocateIncomeDto"/>
+  </methods>
+  <methods id="df6556fd-6499-4c1d-a08c-505312590aff" ename="deleteDto" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="4c40d9fd-4799-48e2-9a04-7f29aba55a1c" name="删除对象" ename="deleteDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoAllocateIncomeDto"/>
+  </methods>
+  <methods id="9205ea92-76df-4af5-ba90-3e707a01e0c7" ename="modifySaveDto" name="修改保存" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="eff576c7-28e7-4650-b78e-609c44d405fa" name="修改对象" ename="modifyDto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoAllocateIncomeDto"/>
+  </methods>
+</model:JServiceComponent>

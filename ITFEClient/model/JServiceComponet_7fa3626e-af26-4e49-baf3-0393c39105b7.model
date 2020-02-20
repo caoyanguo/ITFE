@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7fa3626e-af26-4e49-baf3-0393c39105b7" name="财政预算收支统计报表服务组件" ename="PayAndIncomeBill" shared="true">
+  <jproperties id="586b1a82-d3c9-4dd3-8ad5-b78a141d0fab" key="GeneratedTime" value="1379397627812"/>
+  <refModule href="JModule_4ade3053-2715-4c9a-9466-d01284fa57f5.model#4ade3053-2715-4c9a-9466-d01284fa57f5"/>
+  <methods id="92a3bb7f-00d3-41d4-8488-9989d4e23934" ename="makeIncomeBill" name="财政收入日报" codecomment="财政收入日报" returntype="java.util.List">
+    <methodParams id="2a71828f-8e43-458f-93a1-f9979c5c53f8" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="6a3cebeb-5017-4abd-a5f6-8824ff608a4f" name="报表种类" ename="sleBillType" type="java.lang.String"/>
+    <methodParams id="edfe2eca-b1f6-41cd-a095-a17eb7a608f1" name="旬报类型" ename="sleTenrptType"/>
+    <methodParams id="915abcce-4ba3-4aab-90c4-dc0d774a3758" name="季报类型" ename="sleQuarterrptType"/>
+    <methodParams id="b13a457b-8720-4486-a06e-4400ebc92970" name="半年报类型" ename="sleHalfyearrptType"/>
+    <methodParams id="9eb740d6-c5dd-435b-ab96-d9f33530c5f3" name="科目类型" ename="sleSubjectType" type="java.lang.String"/>
+    <methodParams id="a7f1869d-178a-4fca-9dc5-60b51095b1aa" name="科目属性" ename="sleSubjectAttribute"/>
+    <methodParams id="3faae25d-8d0d-4d40-8f26-0944fae5ff38" name="调拨标志" ename="smoveflag"/>
+    <methodParams id="c6521dff-6d1d-4deb-bb98-f48c28b450fd" name="金额单位" ename="sleMoneyUnit"/>
+  </methods>
+  <methods id="19e61acb-070e-4e1f-9caf-1800218923c6" ename="makePayoutBill" name="财政支出日报" codecomment="财政支出日报" returntype="java.util.List">
+    <methodParams id="8de0a15c-4e58-44d9-bb7a-e2453ffabdb3" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="232eca16-a521-423f-b592-26c6aa341362" name="报表种类" ename="sleBillType" type="java.lang.String"/>
+    <methodParams id="d5ddef6f-d7ee-4ced-89d9-ef96b88a3b37" name="旬报类型" ename="sleTenrptType"/>
+    <methodParams id="e0743376-d6ac-47a6-bc32-eefb709a7fd5" name="季报类型" ename="sleQuarterrptType"/>
+    <methodParams id="58afea63-6162-4fc1-a0f9-f92ecca0f57e" name="半年报类型" ename="sleHalfyearrptType"/>
+    <methodParams id="3e1ea759-9d26-4937-bc1f-d31b290ca304" name="科目类型" ename="sleSubjectType" type="java.lang.String"/>
+    <methodParams id="3ae5e0f0-aad2-448c-8313-8b0eab6f258b" name="科目属性" ename="sleSubjectAttribute"/>
+    <methodParams id="3c54645f-4c44-487a-8936-22fce2bcaa3a" name="调拨标志" ename="smoveflag"/>
+    <methodParams id="a2e5782b-6715-47ce-b2e1-f64bfda20f94" name="金额单位" ename="sleMoneyUnit"/>
+  </methods>
+  <methods id="1ef1c327-b767-40d7-b894-3d73d3d92e36" ename="makeIncomeReport" name="财政收入日报" codecomment="财政收入日报" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="3f4746e7-9758-42ed-a68e-fb6ad0f0f55d" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="54303fb7-838d-4f0f-b4e2-e51930a23a83" name="报表种类" ename="sleBillType" type="java.lang.String"/>
+    <methodParams id="47be5c57-8824-43d4-a7d0-0ade0d121911" name="旬报类型" ename="sleTenrptType"/>
+    <methodParams id="47a00dfe-f158-49ef-9b87-ccf86ccb44a5" name="季报类型" ename="sleQuarterrptType"/>
+    <methodParams id="65cbb918-f97d-40d0-836c-57107e76e315" name="半年报类型" ename="sleHalfyearrptType"/>
+    <methodParams id="51b8a542-1753-4d09-a485-1597206d033e" name="科目类型" ename="sleSubjectType" type="java.lang.String"/>
+    <methodParams id="f1c39963-1a6e-41ab-ba52-072f22605458" name="科目属性" ename="sleSubjectAttribute"/>
+    <methodParams id="3aa20323-6298-47e1-a9fa-c7c534b92716" name="调拨标志" ename="smoveflag"/>
+    <methodParams id="63d75e10-ec92-44d5-85c0-b382b9eabdf7" name="金额单位" ename="sleMoneyUnit"/>
+    <methodParams id="7acc291c-c2f9-4d75-bfe1-e4c138a07191" name="分页请求" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+  <methods id="19941ce5-0d73-4803-96fb-28b1f8c5c700" ename="makePayoutReport" name="财政支出日报" codecomment="财政支出日报" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="1c4d0578-739d-4701-9625-e154ba3189aa" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="3c29b01d-7e3e-467b-b8a1-edfbabb6f29b" name="报表种类" ename="sleBillType" type="java.lang.String"/>
+    <methodParams id="3c53c188-6832-4eca-92d9-bda5e5334ac3" name="旬报类型" ename="sleTenrptType"/>
+    <methodParams id="1022dbe7-7258-4f53-8cac-200b7984cfb2" name="季报类型" ename="sleQuarterrptType"/>
+    <methodParams id="963d9778-d8c6-4dc1-b2da-efdaefd004cb" name="半年报类型" ename="sleHalfyearrptType"/>
+    <methodParams id="ba9b478a-cfba-4e61-8a29-db73009a22e3" name="科目类型" ename="sleSubjectType" type="java.lang.String"/>
+    <methodParams id="d296fce8-e744-44b1-9f63-84ea0199ea49" name="科目属性" ename="sleSubjectAttribute"/>
+    <methodParams id="d98cee9d-dd00-4230-a310-0cd68755453f" name="调拨标志" ename="smoveflag"/>
+    <methodParams id="89334a1f-081b-4970-bcaa-4d097a676f48" name="金额单位" ename="sleMoneyUnit"/>
+    <methodParams id="46cbcf02-6b28-4bf8-8eae-70931537f131" name="分页请求" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+  <methods id="cef6a04b-c845-40fd-87dc-04d689280272" ename="makeIncomeReportBySubject" name="预算收入分科目统计报表" codecomment="预算收入分科目统计报表" returntype="java.util.List">
+    <methodParams id="469fac86-60fc-4ee3-87f0-e2ac3d63f552" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="002a2622-1807-4934-b145-d4fdc4b0800a" name="预算科目代码" ename="sbudgetsubcode" type="java.lang.String"/>
+    <methodParams id="d56b2e73-11e2-4d65-b53a-1695d9a7af3b" name="报表种类" ename="sleBillType" type="java.lang.String"/>
+    <methodParams id="cbb29f2e-27a4-447b-8cce-0963fe3b090f" name="旬报类型" ename="sleTenrptType"/>
+    <methodParams id="d2f5b505-4ccc-4fe7-8ad6-66f16b92a658" name="季报类型" ename="sleQuarterrptType"/>
+    <methodParams id="0fada93d-40e6-4a62-8908-0db4f0949ed2" name="半年报类型" ename="sleHalfyearrptType"/>
+    <methodParams id="35f4b8bb-a99a-474e-a920-8521241d3628" name="科目类型" ename="sleSubjectType" type="java.lang.String"/>
+    <methodParams id="e9ae5fa3-6f92-477e-9e7e-d69bd6731b7b" name="调拨标志" ename="smoveflag"/>
+    <methodParams id="9bcc89d6-e42c-4978-839a-b55262919486" name="金额单位" ename="sleMoneyUnit"/>
+  </methods>
+  <methods id="17bf2102-7c87-40ad-82f0-a51591dbe841" ename="makePayoutReportBySubject" name="预算支出分科目统计报表" codecomment="预算支出分科目统计报表" returntype="java.util.List">
+    <methodParams id="cdbefada-d57f-4466-a1e7-99b6c73e80a2" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="2f2becdb-828e-4a1d-a419-ba5898333587" name="预算科目代码" ename="sbudgetsubcode" type="java.lang.String"/>
+    <methodParams id="00b3a9f6-e883-401c-8b75-d40e29374ac0" name="报表种类" ename="sleBillType" type="java.lang.String"/>
+    <methodParams id="a35f524a-3f09-4521-b5e2-ec12242dbde8" name="旬报类型" ename="sleTenrptType"/>
+    <methodParams id="6b4e61a5-5591-4de2-b82a-169fb2c69368" name="季报类型" ename="sleQuarterrptType"/>
+    <methodParams id="c97c0671-f279-4d57-9be3-2b87de8e60cb" name="半年报类型" ename="sleHalfyearrptType"/>
+    <methodParams id="71b4eeb0-3c3b-4bf3-8cbb-73adfd14d3af" name="科目类型" ename="sleSubjectType" type="java.lang.String"/>
+    <methodParams id="d0aa6fde-0325-4c0a-a88f-09dbe1000a39" name="调拨标志" ename="smoveflag"/>
+    <methodParams id="67deb698-7d38-460f-bcf1-40fea1710128" name="金额单位" ename="sleMoneyUnit"/>
+  </methods>
+  <methods id="074fd16e-ba1b-4cd0-bab7-00db5306140e" ename="stockCountQueryList" name="库存统计分析" codecomment="库存统计分析" returntype="java.util.List">
+    <methodParams id="5f319d8e-7ca7-465e-8e60-90db7840b83a" name="核算主体" ename="sorgcode" type="java.lang.String"/>
+    <methodParams id="06597e48-9887-4460-a438-e6313150ec67" name="开始年度" ename="startyear" type="java.lang.String"/>
+    <methodParams id="dd663a4d-c47e-4174-a3df-977c2d806bc5" name="结束年度" ename="endyear" type="java.lang.String"/>
+    <methodParams id="16ae7685-7917-4d31-99c2-4f03cdabda06" name="开始日期" ename="startdate" type="java.lang.String"/>
+    <methodParams id="6255060b-99ce-44cf-8999-2424193a400c" name="结束日期" ename="enddate" type="java.lang.String"/>
+    <methodParams id="f6dbc664-5032-4fa8-b8af-8c26882d6d19" name="国库代码" ename="sleTreCode" type="java.lang.String"/>
+    <methodParams id="bc337211-bda1-4efd-9f53-e73be45a1568" name="辖属标志" ename="sleOfFlag" type="java.lang.String"/>
+    <methodParams id="be615665-1952-4288-8a7d-6fbebb540d79" name="金额单位" ename="sleMoneyUnit" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="daed76f2-b3cd-444c-98df-bff57bd29c98" name="浙江征收机关对照表" ename="TsConverttaxorgForZj">
+  <jproperties id="638e49dc-ebd5-4b72-8a0c-d79742085322" key="GeneratedTime" value="1406708865080"/>
+  <refModule href="JModule_65a883e8-3a34-4624-9e74-1f446a48a6a4.model#65a883e8-3a34-4624-9e74-1f446a48a6a4"/>
+  <model id="34fd368f-4cc5-4161-b243-4260df0066d3" name="JModelImpl-34fd368f-4cc5-4161-b243-4260df0066d3">
+    <attributes id="a3bd2c08-a067-4a8f-9020-914efdf3cc13" name="dto" type="com.cfcc.itfe.persistence.dto.TsConverttaxorgDto"/>
+    <attributes id="d60f7b00-9415-4eb2-a621-0000f9aa4283" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="e4766840-29f3-4a68-b828-5f39fe90705c" viewers="e57b2aaa-c78e-4f88-9ed9-b4e9d84fca9d" name="跳转录入界面" ename="goInput"/>
+    <directions id="2fab05dc-c4c3-4e87-bf62-5cf001260fa2" name="录入保存" ename="inputSave"/>
+    <directions id="25363688-cb56-43a9-963a-2cf11fb0b536" viewers="9f84946a-86a9-4c55-b7ee-c22b0ff85402" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="7ea093a8-9120-4b56-babf-30778def03bd" name="单选" ename="singleSelect"/>
+    <directions id="a20f520a-eb09-4d13-93d8-48c688661a69" name="删除" ename="delete"/>
+    <directions id="25383fd0-74db-497c-bc61-1cc892262616" viewers="495774ea-c76d-4f0a-9965-e2915b771af5" name="到修改界面" ename="goModify"/>
+    <directions id="23613d3b-9822-46a7-ad64-11fe44c9486d" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_cfffad2f-9fe9-42a4-8a19-4e0df0e372a3.model#cfffad2f-9fe9-42a4-8a19-4e0df0e372a3"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="8e6de03f-7833-4252-ba48-0754f1621374">
+    <contentareanode id="06775071-0e13-4837-8a78-3ec1f94ae80e" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="d6cac993-b3db-4203-9e3d-ab458c03a5f0" name="核算主体代码" binding="dto.sorgcode" visible="true" caption="核算主体代码" enable="false" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="064328d9-a7d8-4ab7-a90f-711820a9174e" name="国库主体代码" binding="dto.strecode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="befc7c09-2346-4ac1-b697-b3d650c50056" name="stbstaxorgcode" binding="dto.stbstaxorgcode" caption="TBS征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="287e21f2-f0c3-4e59-8944-1a0f779cffe0" name="snationtaxorgcode" binding="dto.snationtaxorgcode" caption="国税征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="890813d6-9514-49f9-884f-94db9d690333" name="sareataxorgcode" binding="dto.sareataxorgcode" caption="地税征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="1f638a39-2d96-4549-bf47-4c003344ef09" name="stcbstaxorgcode" binding="dto.stcbstaxorgcode" caption="TCBS征收机关代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="49e98e55-c7fe-4119-b0c4-1c08057ff366" name="imodicount" binding="dto.imodicount" caption="征收机关性质" required="true"/>
+      <widgetRefs xsi:type="model:Label" id="409720a0-5360-4b17-be8b-7a05d936187f" name="1、国税 2、地税 3、海关 4、财政" caption="1、国税 2、地税 3、海关 4、财政"/>
+    </contentareanode>
+    <contentareanode id="a28790a2-6d3c-4e13-abf8-b132b880bab2" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="748b268d-2967-4045-b28d-2032a473ff5a" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" refsingleclickdirection="7ea093a8-9120-4b56-babf-30778def03bd">
+        <columnlist id="8deaba54-13bc-4a05-b3d7-6db3fb866cc0" name="核算主体代码" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="461d22a7-effe-4874-8bb0-3671a47ea284" name="国库主体代码" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="6dc85b31-f947-4139-881f-a3bddbc93c69" name="TBS征收机关代码" binding="stbstaxorgcode" caption="TBS征收机关代码"/>
+        <columnlist id="69b80f7f-8f10-47a5-a7c6-c2664cfb900d" name="国税征收机关代码" binding="snationtaxorgcode" caption="国税征收机关代码"/>
+        <columnlist id="f3077878-0d7b-4c89-9d74-69ebb3238248" name="地税征收机关代码" binding="sareataxorgcode" caption="地税征收机关代码"/>
+        <columnlist id="0d316ae2-78bf-47ed-9e4c-d0da125ed7df" name="TCBS征收机关代码" binding="stcbstaxorgcode" caption="TCBS征收机关代码"/>
+        <columnlist id="88c0e7b0-0be4-4db3-b3ca-7f8a78dfecdd" name="征收机关性质" binding="imodicount" caption="征收机关性质"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="1bad43ca-2aa7-4e01-b9cc-cfd3815e2f40" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="bac7e304-b7c6-4acc-a89e-32a851a10569" name="核算主体代码" binding="dto.sorgcode" visible="true" caption="核算主体代码" enable="false" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="afceb4bc-6ffd-44e7-ad19-0963eaa414dc" name="国库主体代码" binding="dto.strecode" visible="true" caption="国库主体代码" enable="false" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="79012e62-19d9-4e0d-b459-ce74c4139907" name="stbstaxorgcode" binding="dto.stbstaxorgcode" caption="TBS征收机关代码" enable="false" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e86deba9-5c98-4926-a7dc-dd4702fde7bb" name="snationtaxorgcode" binding="dto.snationtaxorgcode" caption="国税征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="97f8b530-5902-4fd1-8e24-d7b29df3141a" name="sareataxorgcode" binding="dto.sareataxorgcode" caption="地税征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="755707f4-d2ac-4231-8074-0623ee0fa04b" name="stcbstaxorgcode" binding="dto.stcbstaxorgcode" caption="TCBS征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="c293397a-a012-448d-a2d7-54dfd9db7b4b" name="imodicount" binding="dto.imodicount" caption="征收机关性质"/>
+      <widgetRefs xsi:type="model:Label" id="64078268-9cc2-47f1-8ac4-3b1adeda57c3" name="1、国税 2、地税 3、海关 4、财政" caption="1、国税 2、地税 3、海关 4、财政"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="934e731c-0353-4338-919d-92198a3bd30f">
+    <pages id="2917ec91-52cc-466d-9727-ce1a56f83dd8" name="维护征收机关对照表">
+      <views id="9f84946a-86a9-4c55-b7ee-c22b0ff85402" name="维护界面" isdefault="true" contentArea="a28790a2-6d3c-4e13-abf8-b132b880bab2">
+        <buttonArea id="d38a97bb-8c58-43b4-a02e-6cc54045965a" name="JButtonAreaImpl-d38a97bb-8c58-43b4-a02e-6cc54045965a">
+          <buttons id="e3329532-73e1-491f-9394-6a8c72ace35d" name="录入" caption="录入" direction="e4766840-29f3-4a68-b828-5f39fe90705c"/>
+          <buttons id="b36c55fb-31ed-49e6-94dc-0c129776ac13" name="删除" caption="删除" direction="a20f520a-eb09-4d13-93d8-48c688661a69"/>
+          <buttons id="7ef6cd04-2c52-4913-8710-0baae5aac496" name="maintenanceMod" caption="修改" direction="25383fd0-74db-497c-bc61-1cc892262616"/>
+        </buttonArea>
+      </views>
+      <views id="495774ea-c76d-4f0a-9965-e2915b771af5" name="修改界面" contentArea="1bad43ca-2aa7-4e01-b9cc-cfd3815e2f40">
+        <buttonArea id="432a92e6-ca7b-44c6-b131-683a75c2f3fd" name="JButtonAreaImpl-432a92e6-ca7b-44c6-b131-683a75c2f3fd">
+          <buttons id="30dce0b6-cd42-4f5d-b2c8-c6b2ada980b6" name="modifySave" caption="保存" direction="23613d3b-9822-46a7-ad64-11fe44c9486d"/>
+          <buttons id="f34370ac-ede6-4ea1-9c08-48cc10eec50f" name="modifyBack" caption="返回" direction="25363688-cb56-43a9-963a-2cf11fb0b536"/>
+        </buttonArea>
+      </views>
+      <views id="e57b2aaa-c78e-4f88-9ed9-b4e9d84fca9d" name="录入界面" contentArea="06775071-0e13-4837-8a78-3ec1f94ae80e">
+        <buttonArea id="4867344d-1374-4b59-8da7-8f8613522c7b" name="JButtonAreaImpl-4867344d-1374-4b59-8da7-8f8613522c7b">
+          <buttons id="b34bb73c-9d57-48ae-9652-19c5a54729d8" name="保存" caption="保存" direction="2fab05dc-c4c3-4e87-bf62-5cf001260fa2"/>
+          <buttons id="9e4b497c-c4f3-4bf2-b167-654cf22cf52f" name="返回" caption="返回" direction="25363688-cb56-43a9-963a-2cf11fb0b536"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

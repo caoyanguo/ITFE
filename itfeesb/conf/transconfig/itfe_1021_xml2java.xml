@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="RushApply1021" beanIdRef="RushApply1021" />
+</jb:bean>
+<jb:bean beanId="RushApply1021" class="java.util.HashMap" createOnElement="RushApply1021">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/RushApply1021/TaxOrgCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/RushApply1021/EntrustDate" />
+	<jb:value property="CancelNo" decoder="String" data="CFX/MSG/RushApply1021/CancelNo" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/RushApply1021/OriEntrustDate" />
+	<jb:value property="OriTraNo" decoder="String" data="CFX/MSG/RushApply1021/OriTraNo" />
+	<jb:value property="CancelReason" decoder="String" data="CFX/MSG/RushApply1021/CancelReason" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

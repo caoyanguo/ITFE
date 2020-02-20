@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e78c8356-a087-44bd-be02-df11236cf8a2" name="无纸化业务注册" ename="BizRegister">
+  <jproperties id="b145bff1-263e-4d78-8619-021e5d1a8bc1" key="GeneratedTime" value="1570518634947"/>
+  <refModule href="JModule_1e11a612-ec91-4218-9299-bf047ee9fc64.model#1e11a612-ec91-4218-9299-bf047ee9fc64"/>
+  <methods id="e4eee331-e36a-45ba-953d-15ca2c11fa32" ename="sendFile" name="发送文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="3eda81e4-cc4f-4897-8067-080f2867b23b" name="文件名记录参数集合" ename="list" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

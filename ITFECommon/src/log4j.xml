@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="|%d|%p-[%X{MSGNO}]-[%X{MSGID}]-[%m]-[%C{4}.%M,%L]-[t=%t]%n" />
+		</layout>
+	</appender>
+
+
+	<appender name="server"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/itfe/logs/Server.log" />
+		<param name="MaxFileSize" value="20480KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="|%d|%p-[%X{MSGNO}]-[%X{MSGID}]-[%m]-[%C{4}.%M,%L]-[t=%t]%n" />
+		</layout>
+	</appender>
+	
+	<logger name="org.mule" additivity="false">
+		<level value="info" />
+		<appender-ref ref="stdout" />
+	</logger>
+	
+	<logger name="org.mule.transport.vm.VMConnector" additivity="false">
+		<level value="error" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</logger>
+	
+	<logger name="com.cfcc.yak.transaction.YakTransactionManagerFactory" additivity="false">
+		<level value="error" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</logger>
+	
+	<!-- 
+	<logger name="com.cfcc.yak.transaction.YakTransactionInvoker" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</logger>
+	
+	<logger name="org.mule.transport.jdbc.xa.ConnectionWrapper" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</logger>
+	
+	<logger name="com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</logger>
+	
+	<logger name="com.ibm.mq.MQXAResource" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</logger>
+	
+	<logger name="com.ibm.mq.MQSESSIONClient" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</logger>
+	 -->
+	
+	<logger name="com.cfcc" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</logger>
+	<root>
+		<level value="error"/>
+		<appender-ref ref="stdout" />
+		<appender-ref ref="server" />
+	</root>
+</log4j:configuration>

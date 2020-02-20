@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b2677ca1-c432-4132-9d7d-9b05409769bf" name="支出核对包重发请求" ename="payoutCheckRequest">
+  <jproperties id="79f88bfd-7009-4025-9fef-90571538f5a9" key="GeneratedTime" value="1331531145703"/>
+  <refModule href="JModule_771e5765-c964-4a2b-a208-8dbc1e879d0f.model#771e5765-c964-4a2b-a208-8dbc1e879d0f"/>
+  <methods id="2c2435c8-5ffe-4381-a4d1-a2ad2778364c" ename="payoutCheckRequest" name="支出核对包重发请求" codecomment="支出核对包重发请求" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="ccb8a163-46c3-4ca9-8871-05ba4bc8b757" name="发起机构代码" ename="sendorgcode" type="java.lang.String" codecomment="发起机构代码"/>
+    <methodParams id="9f90861e-b42c-4985-979b-ef2f2d958c81" name="委托日期" ename="entrustdate" type="java.lang.String" codecomment="委托日期"/>
+    <methodParams id="6ddef4db-d2de-491f-ac1a-eeec5248e5de" name="原包报文编号" ename="oripackmsgno" type="java.lang.String" codecomment="原包报文编号"/>
+    <methodParams id="7069c7a7-4b84-4ffd-a373-5258613c8f22" name="原核对日期" ename="orichkdate" type="java.lang.String" codecomment="原核对日期"/>
+    <methodParams id="1d95a61a-04e3-4c04-9dad-6eef913ef5be" name="原包流水号" ename="oripackno" type="java.lang.String" codecomment="原包流水号"/>
+    <methodParams id="151428d9-1b15-41b0-af9f-c39883b0e9d0" name="机构类型" ename="orgtype" type="java.lang.String" codecomment="机构类型"/>
+  </methods>
+</model:JServiceComponent>

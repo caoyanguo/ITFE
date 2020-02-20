@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3b42f26b-4967-4059-8417-c61bc8af18ff" name="商行无纸化业务参数服务组件" ename="TsIsnopaper">
+  <jproperties id="5527a2b7-fad3-4d33-ba5f-e9498066c3dc" key="GeneratedTime" value="1400120475765"/>
+  <refModule href="JModule_4eb5e113-8839-4f19-8aef-0b18801fac62.model#4eb5e113-8839-4f19-8aef-0b18801fac62"/>
+  <methods id="fcd69a97-12b3-456b-a2f4-b4506e02d186" ename="addInfo" name="增加" codecomment="" returntype="com.cfcc.devplatform.customtype.Void" remark="">
+    <methodParams id="f8d7330b-b834-45cf-86f3-a34ad27e095b" name="商行无纸化业务参数DTO" ename="IDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="c265dbae-997b-4382-b3e7-9d80252eef6b" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8f7ee3dc-a551-4263-8c0e-780c2da99d87" name="商行无纸化业务参数DTO" ename="IDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="bd2ca352-34ee-41ec-a4b3-a9f227e54d2b" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="2ab5fa8b-0e13-4f1a-8bb8-02627402e960" name="商行无纸化业务参数DTO" ename="IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

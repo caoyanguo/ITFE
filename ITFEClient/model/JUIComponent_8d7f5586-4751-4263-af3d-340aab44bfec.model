@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8d7f5586-4751-4263-af3d-340aab44bfec" name="1001实时扣税查询" ename="onlineTaxQuery" globaltype="">
+  <jproperties id="04d6b14c-519f-4e49-a894-6b4abf7d16c1" key="GeneratedTime" value="1333769211255"/>
+  <refModule href="JModule_236d61e0-9a4f-4681-906f-316f44eb4cbf.model#236d61e0-9a4f-4681-906f-316f44eb4cbf"/>
+  <model id="08461358-8a37-4f34-afba-31a7b5c7caf9" name="JModelImpl-08461358-8a37-4f34-afba-31a7b5c7caf9">
+    <directions id="b7939099-6888-4d47-99fb-7ac2fe0541f2" viewers="fcef44d9-7de4-4d00-88a4-c1e43ed42ef0" name="查询" ename="query"/>
+    <directions id="002faac5-73e5-442a-a111-431e462cb47e" viewers="439aa87b-8c58-461c-97e6-0ea2b1b63e55" name="返回查询界面" ename="goback"/>
+    <directions id="d9d1254a-0589-4b7f-a1e7-2cf0b53341ac" name="单选" ename="singleSelect"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="8a22072b-0cf6-4c0d-96fe-54e23b23a533">
+    <contentareanode id="b1a6233e-bedf-4e23-9b0a-3fa1f15ab468" name="实时扣税查询条件" grouptitle="实时扣税查询条件">
+      <widgetRefs xsi:type="model:Text" id="c0998434-f826-4218-9ad6-d49e227ec4a0" name="征收机关代码" binding="taxdto.staxorgcode" visible="true" caption="征收机关代码" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Text" id="24cba387-a0d4-4e6a-8167-d355595ea3d7" name="委托日期" binding="taxdto.sentrustdate" visible="true" caption="委托日期" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Text" id="d3121660-8289-4814-a060-ede4f3c50c18" name="交易流水号" extpoperties="" binding="taxdto.strano" visible="true" caption="交易流水号" enable="true" editable="true"/>
+    </contentareanode>
+    <contentareanode id="2bfa21d1-a4db-4a70-b4af-7425a82b68e2" name="实时扣税查询结果" grouptitle="实时扣税查询结果">
+      <widgetRefs xsi:type="model:Table" id="32769d57-555f-4bda-b4dc-831446b1b915" name="实时扣税查询结果" binding="pagingcontext" visible="true" caption="实时扣税查询结果" enable="true" tabletype="paging" pagingtable="" refsingleclickdirection="d9d1254a-0589-4b7f-a1e7-2cf0b53341ac" height="200">
+        <columnlist id="2327fd1a-1f98-4c83-b320-cd708cc94dd0" name="staxorgcode" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="249edac5-a4d4-49fc-9289-6b2d4310a779" name="sentrustdate" binding="sentrustdate" caption="委托日期"/>
+        <columnlist id="a581dc51-327e-46b5-adb0-7683000b40e2" name="strano" binding="strano" caption="交易流水号"/>
+        <columnlist id="f685933a-be5e-490e-9566-85264df9dd83" name="smsgid" binding="smsgid" caption="报文标识号"/>
+        <columnlist id="9397222a-4df8-48fc-9877-dc8d3b517596" name="staxvouno" binding="staxvouno" caption="税票号码"/>
+        <columnlist id="66bb1952-c506-404c-b6d1-ea74b428375b" name="chandletype" binding="chandletype" caption="经收类别">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9d48abf8-2f72-488c-b6cf-adf965abd930"/>
+        </columnlist>
+        <columnlist id="d7a191ef-4ac9-4320-a0ff-c29bc758ea91" name="sbilldate" binding="sbilldate" caption="开票日期"/>
+        <columnlist id="84093d34-58c8-4e57-a1d0-2deff83ecb86" name="cbudgettype" binding="cbudgettype" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="6738d732-fc8c-4829-8e43-8bfcae6e7717" name="spayeebankno" binding="spayeebankno" caption="收款行行号"/>
+        <columnlist id="93cf1a1b-e246-497b-a5e4-06c129044bb5" name="spayeeopbkcode" binding="spayeeopbkcode" caption="收款开户行行号"/>
+        <columnlist id="4a848642-0262-4e0f-ac4d-38bb5519082c" name="spayeeacct" binding="spayeeacct" caption="收款人账号"/>
+        <columnlist id="e139f372-fd91-472e-ac72-683f88099bbe" name="spayeename" binding="spayeename" caption="收款人名称"/>
+        <columnlist id="d3f8b19a-7948-4d98-9e7c-8a5dcf8731f3" name="spayeeorgcode" binding="spayeeorgcode" caption="收款单位代码"/>
+        <columnlist id="e063f9a5-bf4c-4c37-b513-0e74efc0a593" name="spaybkcode" binding="spaybkcode" caption="付款行行号"/>
+        <columnlist id="c24149bd-6996-43ad-a0c7-c2953ac28cb2" name="spayopbkcode" binding="spayopbkcode" caption="付款开户行号"/>
+        <columnlist id="2d232d99-248f-4dde-a29f-551600ef176a" name="spayacct" binding="spayacct" caption="付款账户"/>
+        <columnlist id="0bad6f10-61df-43f4-b814-34898bbfda10" name="scorpcode" binding="scorpcode" caption="企业代码"/>
+        <columnlist id="795aa9a8-b90b-4200-9d95-3d68ad4ff038" name="sprotocolno" binding="sprotocolno" caption="协议书号"/>
+        <columnlist id="70abb934-807f-49eb-9955-02058e221e93" name="scorptype" binding="scorptype" caption="企业注册类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4338e7c6-ce99-4ad0-b91a-ee0c2ce668fd"/>
+        </columnlist>
+        <columnlist id="e0cd906e-297a-444b-8d44-f7e65f781b89" name="shandorgname" binding="shandorgname" caption="缴款单位名称"/>
+        <columnlist id="e5bd588d-255f-4591-b6ec-0f5cd75e8bf1" name="staxpaycode" binding="staxpaycode" caption="纳税人编码"/>
+        <columnlist id="cc112ec0-3aef-4c81-a7af-3dd8ae9b2fbb" name="staxpayname" binding="staxpayname" caption="纳税人名称"/>
+        <columnlist id="7af4d1f8-f756-459f-b374-493e6940b727" name="cprintflag" binding="cprintflag" caption="打印付款凭证标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#14b706d0-e2e3-425d-845a-15f83adf8803"/>
+        </columnlist>
+        <columnlist id="56f6c8ab-4c56-4de1-bb59-6ace5ea444f5" name="ctrimsign" binding="ctrimsign" caption="整理期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+        </columnlist>
+        <columnlist id="242c2cbe-d5e6-4765-bc33-a38d0753469f" name="ftraamt" binding="ftraamt" caption="交易金额"/>
+        <columnlist id="209d198f-dff2-4ab4-b495-663540725a90" name="sremark" binding="sremark" caption="备注"/>
+        <columnlist id="45d3bcdd-34d1-447e-bdb3-3d15d750f69d" name="sremark1" binding="sremark1" caption="备注1"/>
+        <columnlist id="563a0486-308e-4ba7-8cdf-d6cd512e4b77" name="sremark2" binding="sremark2" caption="备注2"/>
+        <columnlist id="202f3263-a3e9-46e2-87d6-8f25d5290937" name="itaxkindcount" binding="itaxkindcount" caption="税种数目"/>
+        <columnlist id="cbb86d13-62e9-4033-8d39-ed217747a79a" name="creckontype" binding="creckontype" caption="清算渠道">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#cb261dad-d38b-48d4-af05-1c736619fb3f"/>
+        </columnlist>
+        <columnlist id="39053598-ac62-449e-80f8-fab13fcace49" name="sprocstat" binding="sprocstat" caption="处理状态"/>
+        <columnlist id="cba28cc2-2c98-47c5-8ac8-40854aaf71e1" name="sstatus" binding="sstatus" caption="交易状态"/>
+        <columnlist id="d6e5ff4c-bf56-482e-88b2-b78d76213fe9" name="sresult" binding="sresult" caption="处理结果"/>
+        <columnlist id="396d9896-7c16-4850-b129-4c058f5eeeba" name="saddword" binding="saddword" caption="附言"/>
+        <columnlist id="352621d3-54a5-402d-b3e0-2ad237239d81" name="ccancelstat" binding="ccancelstat" caption="冲正状态"/>
+        <columnlist id="2c650db1-cac5-4b83-bc22-c85ef2ad6dd3" name="schkbatch" binding="schkbatch" caption="对账批次"/>
+        <columnlist id="350ae777-d726-4b0f-b4ff-93cb25f6dda1" name="sexporter" binding="sexporter" caption="导出员"/>
+        <columnlist id="b7613d04-c0de-4347-b779-60f917eb85ff" name="sacceptdate" binding="sacceptdate" caption="受理日期"/>
+        <columnlist id="3d713b82-e27f-46fd-906a-d345ef1b487f" name="spaydate" binding="spaydate" caption="缴款日期"/>
+        <columnlist id="b384c768-5f73-44e4-9203-afde12f32856" name="schkdate" binding="schkdate" caption="对账日期"/>
+        <columnlist id="9de1e7cf-a577-4b82-87c4-06af25b5f145" name="tsupdate" binding="tsupdate" caption="更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="06ab36ae-5760-41a9-830a-40055c154ca6" name="实时扣税税种列表" grouptitle="实时扣税税种列表">
+      <widgetRefs xsi:type="model:Table" id="45fb5472-e60f-4964-98bc-655d06dba764" name="实时扣税税种列表" binding="tvTaxKindList" caption="实时扣税税种列表" height="150">
+        <columnlist id="3ac8b784-5df0-4aa7-bc31-5a52b468f2d2" name="项目序号" binding="iprojectid" caption="项目序号"/>
+        <columnlist id="7b087927-8bcc-48a1-8af8-fbe6e8c72759" name="限缴日期" binding="slimitdate" caption="限缴日期"/>
+        <columnlist id="fa1457dd-aadc-4f90-8c17-9b8c3db6ab91" name="预算科目代码" binding="sbudgetsubjectcode" caption="预算科目代码"/>
+        <columnlist id="0b52d5e0-7c8c-47a8-afd7-aa951ea9bbef" name="税种名称" binding="staxtypename" caption="税种名称"/>
+        <columnlist id="3be5e3a1-a08f-4688-b6f1-31b8b3afb2d6" name="预算级次" binding="cbudgetlevel" caption="预算级次" enumparam="">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="a62e6c23-cbb6-4043-b7e8-cccbbf826a87" name="辅助标志" binding="svicesign" caption="辅助标志"/>
+        <columnlist id="a7ffd76b-b559-4341-a772-7a6f6157cab9" name="科目金额" binding="fsubjectamt" caption="科目金额"/>
+        <columnlist id="edf0a605-3e26-4e2a-86c3-110e274fb266" name="税款类型" binding="ctaxtype" caption="税款类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#a431955e-840b-4016-9a7a-3145c466ebe1"/>
+        </columnlist>
+        <columnlist id="dd11bc6f-83de-4669-999a-ec9f3f9a50d7" name="税款属期起" binding="staxstartdate" caption="税款属期起"/>
+        <columnlist id="a5745c19-eaba-492f-996c-86780c803e70" name="明细条数" binding="idetailno" caption="明细条数"/>
+        <columnlist id="db7bd4bc-8078-4718-80af-c416e1f046e0" name="税款属期止" binding="staxenddate" caption="税款属期止"/>
+        <columnlist id="0ff95cb6-7897-4ce1-95ae-87c01ad52726" name="更新时间" binding="tsupdate" caption="更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="65f1d211-e9af-4d69-9502-32f0a72a6863" name="实时扣税税目列表" grouptitle="实时扣税税目列表" binding="">
+      <widgetRefs xsi:type="model:Table" id="71aaf70b-6f34-493f-b5f0-93da5a974c05" name="实时扣税税目列表" binding="tvTaxItemList" caption="实时扣税税目列表" labelprovider="" height="150">
+        <columnlist id="ee0627df-4069-45d3-a784-5128b29b35a5" name="项目序号" binding="iprojectid" caption="项目序号"/>
+        <columnlist id="ac0448e1-e7c1-427f-acce-dde612d94ecf" name="明细序号" binding="idetailno" caption="明细序号"/>
+        <columnlist id="2285fb24-80c8-42d2-9214-2cf1f4dd30c3" name="税目代码" binding="staxsubjectcode" caption="税目代码"/>
+        <columnlist id="9f3141b0-06a3-4892-99c6-ab6475db2b92" name="税目名称" binding="staxsubjectname" caption="税目名称"/>
+        <columnlist id="3a85adde-d46c-456e-99a2-4911546f4d2c" name="课税数量" binding="itaxnumber" caption="课税数量"/>
+        <columnlist id="8c69c68b-e20c-4c0a-908b-962e8e4cdb6c" name="计税金额" binding="ftaxamt" caption="计税金额"/>
+        <columnlist id="5b0e005a-af5e-443f-9db6-3eef554821e4" name="税率" binding="ftaxrate" caption="税率"/>
+        <columnlist id="fb51e52d-0b73-4a50-81ec-05b870e1fb60" name="应缴税额" binding="fexptaxamt" caption="应缴税额"/>
+        <columnlist id="a9265543-c18d-438b-9122-724e42d937f7" name="扣除额" binding="fdiscounttaxamt" caption="扣除额"/>
+        <columnlist id="c2811765-1b9c-4159-a77e-eebca3d898b1" name="实缴金额" binding="frealamt" caption="实缴金额"/>
+        <columnlist id="34e1815c-4585-4918-b90b-4f8d38618389" name="更新时间" binding="tsupdate" caption="更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="1fc06195-5c31-417c-b3d7-fa491670db8f">
+    <pages id="822a5d74-2bdb-4afb-83c6-88d4be5a7b35" name="实时扣税查询">
+      <views id="439aa87b-8c58-461c-97e6-0ea2b1b63e55" name="实时扣税查询条件" isdefault="true" contentArea="b1a6233e-bedf-4e23-9b0a-3fa1f15ab468">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="b64ad024-ed0f-4cf0-9d74-37807c9895e4" name="JButtonAreaImpl-b64ad024-ed0f-4cf0-9d74-37807c9895e4">
+          <buttons id="3a797583-b11b-499a-ab0e-4d46e142802e" name="查询" caption="查询" direction="b7939099-6888-4d47-99fb-7ac2fe0541f2"/>
+        </buttonArea>
+      </views>
+      <views id="fcef44d9-7de4-4d00-88a4-c1e43ed42ef0" name="实时扣税查询结果" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="2bfa21d1-a4db-4a70-b4af-7425a82b68e2 06ab36ae-5760-41a9-830a-40055c154ca6 65f1d211-e9af-4d69-9502-32f0a72a6863">
+        <buttonArea id="20a94522-df20-4018-bba8-baa4d88df8f5" name="JButtonAreaImpl-20a94522-df20-4018-bba8-baa4d88df8f5">
+          <buttons id="9cd36179-e611-40f1-800c-5e7199460d1e" name="返回" caption="返回" direction="002faac5-73e5-442a-a111-431e462cb47e"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

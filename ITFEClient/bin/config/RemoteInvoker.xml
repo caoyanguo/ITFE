@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "file:./spring-beans.dtd">
+<beans default-lazy-init="true">
+
+	<bean id="serviceContextFactory.GLOBAL.ID" class="com.cfcc.itfe.service.ITFEServiceContextFactory" />
+	<!-- 配置文件入口 step1-->
+	<bean id="HoldDispatchInvoker" class="com.cfcc.jaf.core.invoker.dispatch.DispatchInovker"
+		name="handlerServiceInvoker.GLOBAL.ID">
+		<property name="dispatch">
+			<ref bean="cacheRegularDispatch" />
+		</property>
+		<property name="cacheable">
+			<value>true</value>
+		</property>
+	</bean>
+	<!-- remote mode step2-->
+	<bean id="cacheRegularDispatch" class="com.cfcc.jaf.core.invoker.dispatch.RegularDispatch"
+		init-method="init">
+		<property name="defaultInvoker">
+			<ref bean="WithFuncCode" />
+		</property>
+		
+		<property name="properties">
+			<props>				
+				<prop key="privateResultHold.ITFE.ID">
+					com.cfcc.itfe.service.commonsubsys.commondbaccess.IItfeCacheService.cache*
+				</prop>
+			</props>
+		</property>
+		
+	</bean>
+	
+
+	<!-- 不使用 
+	<bean id="publicResultHold.ITFE.ID"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.PublicResultHoldInvoker">
+		<property name="invoker">
+			<ref bean="advisorInvoker" />
+		</property>
+		<property name="publicDataFile">
+			<value>itfePublicResult.obj</value>
+		</property>
+	</bean>
+	-->
+	
+	<!-- 私有缓存 step3-->
+	<bean id="privateResultHold.ITFE.ID"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.PrivateResultHoldInvoker">
+		<property name="invoker">
+			<ref bean="WithFuncCode" />
+		</property>
+	</bean>
+	
+	<!-- 增加功能码 -->
+	<bean id="WithFuncCode" 
+		class="com.cfcc.itfe.client.FuncInvoker">
+		<property name="invoker">
+			<ref bean="httpServiceInvoker" />
+		</property>
+	</bean>
+	
+	<!-- httpServiceInvoker step4 -->
+	<bean id="httpServiceInvoker" class="com.cfcc.jaf.core.invoker.http.HttpServiceInvoker">
+		<property name="config">
+			<ref bean="httpConfig" />
+		</property>
+	</bean>
+	<!-- step5 -->
+	<bean id="httpConfig" class="com.cfcc.jaf.core.invoker.http.HttpConfig">
+		<property name="host">
+			<value>11.28.1.84</value>
+		</property>
+		<property name="port">
+			<value>9080</value>
+		</property>
+		<property name="serverFile">
+			<value>/ITFE/HttpInvoker</value>
+		</property>
+		<property name="SSL_Port">
+			<value>9443</value>
+		</property>
+		<property name="threadCount">
+			<value>10</value>
+		</property>
+		<property name="session">
+			<value>true</value>
+		</property>
+		<property name="secure">
+			<value>false</value>
+		</property>
+		<property name="zipStream">
+			<value>true</value>
+		</property>
+	</bean>
+
+	<bean id="clientFileTransferHelper"
+		class="com.cfcc.jaf.core.service.filetransfer.support.ClientFileTransferHelper">
+		<property name="config">
+			<ref bean="fileSystemConfigClient" />
+		</property>
+	</bean>
+
+	<bean id="fileSystemConfigClient"
+		class="com.cfcc.jaf.core.service.filetransfer.support.FileSystemConfig">
+		<property name="transferSize">
+			<value>1024000</value>
+		</property>
+		<property name="root">
+			<value>D:/ITFE/root</value>
+		</property>
+	</bean>
+	
+	<bean id="EditionUtil.ITFE.ID"
+		class="com.cfcc.itfe.util.EditionUtil">
+		<property name="edition">
+			<value>正式版</value>
+		</property>
+	</bean>
+		<bean id="FileUtil.ITFE.ID" class="com.cfcc.itfe.util.FileUtil">
+		<property name="statistics">
+			<value>true</value>
+		</property>
+	</bean>
+	
+	<bean id="AreaMode"
+		class="com.cfcc.itfe.util.AreaSpecUtil">
+		<property name="area">
+			<value>FUZHOU</value>
+		</property>
+		<property name="version">
+			<value>1.2</value>
+		</property>
+    </bean>
+    
+    <bean id="ApplicationPath"
+		class="com.cfcc.itfe.util.CallShellApplicationUtil">
+		<property name="appPath">
+			<value>C:/program files/szpbc/exchequer/exchequer2.exe</value>
+		</property>
+    </bean>
+
+	<!-- 使用TimerFactoryBean类，你可以让Spring使用配置创建触发器，并为一组指定的ScheduledTimerTask bean自动创建Timer实例 -->
+	<bean id="TimerFactory" class="org.springframework.scheduling.timer.TimerFactoryBean" lazy-init="true">
+		<property name="daemon" value="true"/>
+		<property name="scheduledTimerTasks">
+			<list>
+				<ref local="TimerVoucherInfoTask"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- ScheduledTimerTask类是对TimerTask的包装器实现，这样你就可以为自定义任务定义触发器信息。-->
+	<bean id="TimerVoucherInfoTask" class="org.springframework.scheduling.timer.ScheduledTimerTask" >
+		<!-- 在主进程启动5秒后再启动定时任务，以毫秒为单位 -->
+		<property name="delay" value="1500"/>
+		<!-- 定时任务每15分钟执行一次，以毫秒为单位 -->
+		<property name="period" value="600000"/>
+		<!-- 指定触发器信息 -->  
+        <property name="timerTask">  
+            <ref local="TimerVoucherInfo" />  
+        </property>  
+	</bean>
+	
+	<!-- 中心消息 -->
+	<bean id="TimerVoucherInfo" class="com.cfcc.itfe.client.common.TimerVoucherInfoTask" />
+	
+</beans>

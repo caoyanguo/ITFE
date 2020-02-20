@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="79a71f48-2c05-4f66-827d-d539c7e85c4e" name="实时冲正信息查询" ename="TvTaxCancel" shared="true"/>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="BizAuditInsert"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				#foreach($t in $BizTableList)
+				<ref local="${t.getIndex()}" />
+				#end
+			</list>
+		</property>
+	</bean>
+
+
+	#foreach($t in $BizTableList)
+	<bean id="${t.getIndex()}" class="com.cfcc.tas.facade.data.SQLMapping">
+		<property name="operSql"
+			value="insert into ${t.getDestable()}(${t.getStrColumns()}) select ${t.getStrColumns()} from ${t.getSrctable()} where s_BookOrgCode=? and S_BizType=?" />
+		<property name="operType" value="4" />
+	</bean>
+	#end
+</beans>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="839f7dc1-42ce-4360-ad64-e11a215a2059" isgenerated="false" name="登陆/退出TIPS" ename="LogInOutTips" shared="false"/>

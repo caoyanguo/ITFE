@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2f014075-e000-4a6e-a8b4-20cb0ce12903" name="辅助标志参数转化服务组件" ename="TsAssitflagtrans">
+  <jproperties id="ff4617cf-0828-4f1e-8215-d45236c92e71" key="GeneratedTime" value="1364109650015"/>
+  <refModule href="JModule_dfd8129a-3883-4877-a276-99ad526a0074.model#dfd8129a-3883-4877-a276-99ad526a0074"/>
+  <methods id="c776831e-be59-48ec-8b83-698145e6a13e" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void" remark="辅助标志参数转化">
+    <methodParams id="5bbdf250-e55c-4271-90fc-8b5f7fc9cf50" name="辅助标志参数转化" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="11e95b75-6775-4fa6-9217-e53357554f7f" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="5d2abbfd-45f7-4f9b-b158-aa533172953e" name="辅助标志参数转化" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="11e95b75-6775-4fa6-9217-e53357554f7f" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="583512e0-70c8-40cb-9451-cbf519bd1487" name="辅助标志参数转化" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	
+	
+#foreach($tabName in $TableList)
+<!-- ${tabName.getTabName()} -->
+	<bean
+	    id="CheckObject_${tabName.getTabID()}"
+	    class="com.cfcc.tas.util.CheckObjectInfo" singleton="false">
+	    <property name="properties">
+	    	<props>
+	    		#foreach($colData in ${tabName.getColList()})
+<prop key="${colData.getColid()}">${colData.getColname()}</prop>
+				#end
+	    	</props>
+	    </property>
+	</bean>
+#end
+</beans>

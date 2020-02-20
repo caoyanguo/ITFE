@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:ValidatorNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c0f952e4-88a7-450b-8035-ac678e13e57f" name="国库前置系统校验库" ename="DataCheck">
+  <refPackage href="JResourcePackage_0fd1a69b-a6e5-4662-88df-5f2d48829cdb.model#0fd1a69b-a6e5-4662-88df-5f2d48829cdb"/>
+  <refValidator id="275f1594-352d-43ad-860b-277c755b3614" name="机构代码" ename="OrgCodeCheck"/>
+  <refValidator id="538bd891-08c9-4845-a228-7b6f26ee0973" name="清算行行号" ename="spayBankno"/>
+  <refValidator id="bc1adc83-d92f-4a63-84b0-5bac6d1c4a2f" name="用户口令" ename="userPassword"/>
+  <refValidator id="ef0780c5-eb55-4476-ab43-609dfa45aa99" name="录入数值校验" ename="validInputCount"/>
+  <refValidator id="fc188264-5e10-43b4-a500-1106d2f93af1" name="金额" ename="money"/>
+  <refValidator id="511e3f19-6d5e-4665-98dd-5b624c1c747e" name="日期" ename="date"/>
+  <refValidator id="7a5692d3-1ba3-4b0b-b870-d68eb862c237" name="金额校验" ename="moneybigdecimal"/>
+</model:ValidatorNode>

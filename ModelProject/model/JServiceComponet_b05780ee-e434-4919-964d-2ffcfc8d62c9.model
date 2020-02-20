@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b05780ee-e434-4919-964d-2ffcfc8d62c9" name="批量拨付查询处理服务组件" ename="PayOutFinanceQuery">
+  <jproperties id="f8147a14-e9c0-4221-b7c4-7f56e500fdb6" key="GeneratedTime" value="1333110784796"/>
+  <refModule href="JModule_155399b1-8608-4372-bacd-ca29d348110a.model#155399b1-8608-4372-bacd-ca29d348110a"/>
+  <methods id="274c8092-b470-448f-81c3-ab6a9e4c88b2" ename="findMainByPage" name="分页查询批量拨付主信息" codecomment="分页查询批量拨付主信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="c6b143c8-3718-40d7-afb9-4a34123c4b90" name="查询批量拨付主信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPayoutfinanceMainDto" codecomment="查询批量拨付主信息条件DTO"/>
+    <methodParams id="76c36667-e1ba-4bbf-94e1-0ec8f05a9c49" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+  </methods>
+  <methods id="7a3d57c0-8358-441b-9b79-cc99a9595a9b" ename="findSubByPage" name="分页查询批量拨付子信息" codecomment="分页查询批量拨付子信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="01c2149c-bee7-4112-a67b-74d146d9c59e" name="查询批量拨付子信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPayoutfinanceMainDto" codecomment="查询批量拨付子信息条件DTO"/>
+    <methodParams id="3d2d4b91-4b73-48d3-8866-d5c33867a3d6" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+  </methods>
+  <methods id="8d5e821f-bdba-4779-a3bf-12bd4258393d" ename="findMainByPageForHis" name="分页查询批量拨付主信息(历史表)" codecomment="分页查询批量拨付主信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="0df7426e-2ac3-4c14-ba56-c3c43ee3e971" name="查询批量拨付主信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvPayoutfinanceMainDto" codecomment="查询批量拨付主信息条件DTO"/>
+    <methodParams id="8e23a521-a897-44a7-9fae-2ad68df71f63" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+  </methods>
+  <methods id="5ef5a454-d9a5-4626-a698-1b291106b884" ename="findSubByPageForHis" name="分页查询批量拨付子信息(历史表)" codecomment="分页查询批量拨付子信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="cad664d8-4f8e-4062-bf92-3d31cc0fa7ba" name="查询批量拨付子信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvPayoutfinanceMainDto" codecomment="查询批量拨付子信息条件DTO"/>
+    <methodParams id="29ba2d46-8b00-4a67-a118-9bd4e86520c4" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+  </methods>
+  <methods id="23d90506-0458-4511-86a8-c543036a2482" ename="searchForReport" name="打印对账单查询" returntype="java.util.List">
+    <methodParams id="1f24f161-19f1-4cb9-baa5-fe72e89982e1" name="选择的表" ename="selectTable" type="java.lang.String"/>
+    <methodParams id="a8054fee-5314-40c8-83f3-e26de7edab03" name="查询条件" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="6a471ae5-7a55-416d-b313-4df63253dcdd" ename="dataexport" name="dataExport" returntype="java.lang.String">
+    <methodParams id="43468358-764b-45fb-8ef4-8a05a4757b1b" name="查询条件DTO" ename="finddto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="ca807451-1154-4fa6-9238-c52d215241ac" name="选择的表" ename="selectedtable" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

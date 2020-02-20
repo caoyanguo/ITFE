@@ -1,0 +1,70 @@
+#dsingDN=C=CN, O=PBC CA, OU=PBC, OU=Server, CN=11.48.17.8
+dsingDN=C=CN, O=PBC Test CA, OU=789456@1, OU=Web Servers, CN=dongyabanktips
+
+dsignFile=c:/key/ServerConfig/dsign.properties
+errorInfoPath=D:/ITFE/errorinfo/
+file.util.root=D:/ITFE/root
+sent.newMsg.file.path=MsgLog/sentMsgLog
+received.orgMsg.file.path=MsgLog/recvMsgLog
+VER=1.0
+SRC=201410000010
+DES=100000000000
+APP=ITFE
+Reserve=ITFE
+
+#\u8fde\u63a5TIPS\u961f\u5217\u914d\u7f6e
+mq.HOST_TIPS =127.0.0.1
+mq.PORT_TIPS =5050
+mq.QM_TIPS =QM_TIPS_${SRC}_01
+mq.TO.PBC.BATCH=PBC.EXT.BATCH.IN
+mq.TO.PBC.ONLINE=PBC.EXT.ONLINE.IN
+mq.PBC.IN.BATCH=PBC.${SRC}.BATCH.OUT
+mq.PBC.IN.ONLINE=PBC.${SRC}.ONLINE.OUT
+
+#\u8fde\u63a5\u8d22\u653f\u5bf9\u5217\u914d\u7f6e
+mq.HOST_MOF =127.0.0.1
+mq.PORT_MOF =9019
+mq.QM_MOF =QM_ITFE_0000_01
+mq.TO.MOF.BATCH  =ITFE.9999.BATCH.OUT 
+mq.TO.MOF.ONLINE =ITFE.9999.ONLINE.OUT
+mq.MOF.IN.BATCH  =ITFE.EXT.BATCH.IN
+mq.MOF.IN.ONLINE =ITFE.EXT.ONLINE.IN
+#\u539f\u6765\u7684\u8fde\u63a5\u65b9\u5f0f
+#mq.jndiProviderUrl=file:/c:/jndi/tips
+#mq.naming.factory=com.sun.jndi.fscontext.RefFSContextFactory
+#mq.connectionFactoryJndiName=ITFE_QCF
+#mq.TO.PBC.BATCH=PBC.EXT.BATCH.IN
+#mq.TO.PBC.ONLINE=PBC.EXT.ONLINE.IN
+#mq.PBC.IN.BATCH=PBC.201057100006.BATCH.OUT
+#mq.PBC.IN.ONLINE=PBC.201057100006.ONLINE.OUT
+#\u8fde\u63a5\u6570\u636e\u5e93
+db.driverName=com.ibm.db2.jcc.DB2Driver
+db.url=jdbc:db2://127.0.0.1:50000/itfedb
+db.alias=itfedb
+db.username=db2admin
+db.password=db2admin
+recordErrorInterval=30000000
+#\u5b9a\u65f6\u53d1\u9001\u9891\u7387
+commitIncmBillInterval=90000
+commitIncmBillNum=30
+dayCutInterval=0 30 23 * * ?
+checkCAFlag=false
+
+#\u6279\u91cf\u62a5\u6587\u662f\u5426\u91c7\u7528\u5b9a\u65f6\u53d1\u9001 0\u4e0d\u5b9a\u65f6 1\u5b9a\u65f6
+ifsendbytimer=0		
+#\u5b9a\u65f6\u5220\u9664\u62a5\u6587\u4e34\u65f6\u6587\u4ef6
+deletetempfilescronexpression=0 30 0 1 * ?
+#\u62a5\u6587\u4e34\u65f6\u6587\u4ef6\u4fdd\u7559\u7684\u6700\u5927\u6708\u6570\uff0c\u53ea\u80fd\u586b\u6b63\u6574\u6570,\u5982\u679c\u6240\u586b\u8d1f\u6570\u6216\u8005\u4e3a0\u65f6\uff0c\u5219\u9ed8\u8ba4\u4e3a3
+deletetempfilesreservemonths=3
+#\u9000\u5e93\u7b49TIPS\u62a5\u6587\u662f\u5426\u91c7\u7528\u65b0\u63a5\u53e3 0\u4e0d \u91c7\u7528 1\u91c7\u7528 
+ifnewinterface=1
+#\u62a5\u6587\u662f\u5426\u8f6c\u53d1\u8d22\u653f 0\u4e0d\u8f6c\u53d1 1\u8f6c\u53d1
+ifsendmsgtofin=1
+#\u5165\u5e93\u6d41\u6c34\u662f\u5426\u66f4\u65b0\u539f\u59cb\u7a0e\u7968 0\u4e0d\u66f4\u65b0 1 \u66f4\u65b0
+ifupdatetaxvou=1
+
+
+#\u7a0b\u5e8f\u7248\u672c
+edition=2.0
+#\u5bf9\u5e94\u5ba2\u6237\u7aef\u7248\u672c
+clientedition=2.0

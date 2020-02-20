@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead9000" beanIdRef="BatchHead9000" />
+	<jb:wiring property="BillCheck9000" beanIdRef="BillCheck9000s" />
+</jb:bean>
+<jb:bean beanId="BillCheck9000s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="BillCheck9000" />
+</jb:bean>
+<jb:bean beanId="BillCheck9000" class="java.util.HashMap" createOnElement="BillCheck9000">
+	<jb:value property="PayoutVouType" decoder="String" data="CFX/MSG/BillCheck9000/PayoutVouType" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BillCheck9000/TreCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BillCheck9000/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BillCheck9000/PackNo" />
+</jb:bean>
+<jb:bean beanId="BatchHead9000" class="java.util.HashMap" createOnElement="BatchHead9000">
+	<jb:value property="AppDate" decoder="String" data="CFX/MSG/BatchHead9000/AppDate" />
+</jb:bean>
+
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

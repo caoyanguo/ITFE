@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b6992605-37ff-417a-92b5-ad26525d81ff" name="3128财政申请收入日报表查询" ename="TrIncomedayrpt" shared="true">
+  <jproperties id="a4fcddc3-2d83-49a8-b52f-9e2b24970932" key="GeneratedTime" value="1438654739260"/>
+  <refModule href="JModule_337bfdb9-fbe9-484b-b091-282875e45379.model#337bfdb9-fbe9-484b-b091-282875e45379"/>
+  <model id="a984e9d6-b977-4fcc-9619-4280c1fa9fd7" name="JModelImpl-a984e9d6-b977-4fcc-9619-4280c1fa9fd7">
+    <attributes id="0b3b735a-f2c5-4aef-8782-76dd18fd3988" name="dto" type="com.cfcc.itfe.persistence.dto.TrIncomedayrptDto"/>
+    <attributes id="3b6d2104-147a-4bbf-8e29-66a06dbb8500" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="6cad2206-f06c-41ca-b0a4-e8aa77ecf862" name="单选" ename="singleSelect"/>
+    <directions id="e753a303-ab07-4251-b31e-05b60ce38d16" viewers="83a466e2-93f0-4012-9798-0e935e430d55" name="查询" ename="query"/>
+    <directions id="221b68ec-cfbc-4dae-863d-eee227107b5e" viewers="7e813ffe-ad69-4d9f-9bb3-9de42ab24018" name="返回" ename="goBack"/>
+    <directions id="4a5b30c7-e8e0-4b9a-8c23-c1d0e3e6fad5" viewers="7e813ffe-ad69-4d9f-9bb3-9de42ab24018" name="导出文档" ename="exporttxt"/>
+    <directions id="959d776e-ca48-444c-906b-938084046de2" name="导出数据" ename="exportTable"/>
+    <directions id="ae227bc2-7450-48b0-9d43-5baa99cac1e0" viewers="7e813ffe-ad69-4d9f-9bb3-9de42ab24018" name="导出文档不分征收机关" ename="exporttxt0"/>
+    <directions id="decb1c6c-116b-4007-9c4b-b05914fd9128" viewers="83a466e2-93f0-4012-9798-0e935e430d55" name="返回到查询结果" ename="rebackToSelectResult"/>
+    <directions id="8119c90a-b497-4fa0-a799-2a214f551e3f" viewers="25eaefd4-e993-48f7-909c-221cd844f3c7" name="报表预览" ename="printReport"/>
+  </model>
+  <services href="JServiceComponet_dcc0d085-9a4f-432f-8d8e-6586ca4028d1.model#dcc0d085-9a4f-432f-8d8e-6586ca4028d1"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="11ce7471-5b87-4a65-b036-d900dc675b67">
+    <contentareanode id="0a6a7057-7ca3-4e6b-bd63-789d40718715" name="财政申请收入日报表查询" grouptitle="财政申请收入日报表查询" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="8b557e2c-0b09-4408-a8ef-c05f3d45aa24" name="sfinorgcode" binding="dto.sfinorgcode" caption="财政机关代码" editable="true">
+        <labelStyle id="ded840cf-db5e-4626-9231-878ee94f03e0" name="LabelStyleImpl-8f56a062-aa75-4147-afa5-c65d183af344" ename="LabelStyleImpld8f56a062-aa75-4147-afa5-c65d183af344"/>
+        <componentStyle id="0eb8dbe5-ba89-4c1b-b095-a0e57b242af4" name="ComponentStyleImpl-0fb78219-71f3-451d-8d51-b976052800ca" ename="ComponentStyleImpl0fb78219-71f3-451d-8d51-b976052800ca"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="71b390bf-ba03-4de9-a225-a1f5f3a27b6f" name="staxorgcode" binding="dto.staxorgcode" caption="征收机关代码" editable="true">
+        <labelStyle id="8f56a062-aa75-4147-afa5-c65d183af344" name="LabelStyleImpl-8f56a062-aa75-4147-afa5-c65d183af344" ename="LabelStyleImpld8f56a062-aa75-4147-afa5-c65d183af344"/>
+        <componentStyle id="0fb78219-71f3-451d-8d51-b976052800ca" name="ComponentStyleImpl-0fb78219-71f3-451d-8d51-b976052800ca" ename="ComponentStyleImpl0fb78219-71f3-451d-8d51-b976052800ca"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="5af14966-d3d1-45af-9f83-935fd1c80efe" name="strecode" binding="dto.strecode" caption="国库主体代码" editable="true">
+        <labelStyle id="cdea779b-1c3f-4193-8e17-efe82201a608" name="LabelStyleImpl-cdea779b-1c3f-4193-8e17-efe82201a608" ename="LabelStyleImpldcdea779b-1c3f-4193-8e17-efe82201a608"/>
+        <componentStyle id="ee3f3a2b-c802-4af1-bcab-70e59cd17d0f" name="ComponentStyleImpl-ee3f3a2b-c802-4af1-bcab-70e59cd17d0f" ename="ComponentStyleImplee3f3a2b-c802-4af1-bcab-70e59cd17d0f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a467d79c-6ec1-423d-851b-7228ddd91d99" name="报表日期" extpoperties="" binding="dto.srptdate" caption="报表日期" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="f009d544-f520-4a82-8e86-ce58f2e0b697" name="预算种类" binding="dto.sbudgettype" caption="预算种类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="f165a53c-a4f3-4786-bcbf-ff3298bdb464" name="预算级次" binding="dto.sbudgetlevelcode" caption="预算级次" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="366f8149-edab-4fe3-9ef9-03c4a4919635" name="辖属标志" extpoperties="" binding="dto.sbelongflag" caption="辖属标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="9a60ca73-18bf-4a3c-9860-fc3cd6a8420e" name="调整期标志" binding="dto.strimflag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="c7f5f443-ffc5-41b7-a34a-c97c3ef7343a" name="报表种类" binding="dto.sbillkind" caption="报表种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#bbdea100-83a4-4681-8ce9-94d18094c00d"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="d3733968-2cc3-4daf-bb07-6ca8c14c5a22" name="财政申请收入日报表查询结果" grouptitle="财政申请收入日报表查询结果">
+      <widgetRefs xsi:type="model:Table" id="498368ce-6e47-4dd5-ad41-d36bbfcb22b3" name="财政申请收入日报表查询结果" binding="pagingcontext" caption="财政申请收入日报表查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="6cad2206-f06c-41ca-b0a4-e8aa77ecf862">
+        <columnlist id="ae902510-2e19-48a1-a18c-bf3b4960c9ea" name="sfinorgcode" binding="sfinorgcode" caption="财政机关代码"/>
+        <columnlist id="71b390bf-ba03-4de9-a225-a1f5f3a27b6f" name="staxorgcode" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="5af14966-d3d1-45af-9f83-935fd1c80efe" name="strecode" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="c6c58788-b5a0-4243-a76f-8d3c204cb093" name="srptdate" binding="srptdate" caption="报表日期"/>
+        <columnlist id="1d563f20-2071-47c0-9724-6c20d3a90d17" name="sbudgettype" binding="sbudgettype" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="a8c6c3c7-07bc-4326-8d49-5778f9762056" name="sbudgetlevelcode" binding="sbudgetlevelcode" caption="预算级次代码">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="cc792092-3af9-441e-bf87-50a46570d543" name="sbudgetsubcode" binding="sbudgetsubcode" caption="预算科目"/>
+        <columnlist id="63e74e7b-2fc0-4b32-a18b-658e745cd9ae" name="sbudgetsubname" binding="sbudgetsubname" caption="预算科目名称"/>
+        <columnlist id="cc7569b2-685d-41dd-b8ef-10b0994ce614" name="nmoneyday" binding="nmoneyday" caption="日累计金额"/>
+        <columnlist id="dfe38767-f9ba-4d4e-b628-8180b396ccb2" name="nmoneytenday" binding="nmoneytenday" caption="旬累计金额"/>
+        <columnlist id="f1dd83a3-3206-4e5c-87c7-14a164620693" name="nmoneymonth" binding="nmoneymonth" caption="月累计金额"/>
+        <columnlist id="b4585b9c-61c6-4d65-a91e-48dcf12e4523" name="nmoneyquarter" binding="nmoneyquarter" caption="季累计金额"/>
+        <columnlist id="93ddb01c-cb30-4bf3-8d22-9c194ff66281" name="nmoneyyear" binding="nmoneyyear" caption="年累计金额"/>
+        <columnlist id="7441c929-4185-467e-ae53-bc6242b1eca5" name="sbelongflag" binding="sbelongflag" caption="辖属标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+        </columnlist>
+        <columnlist id="de409e44-4ee8-4ee9-a649-4b8a3ffc3fcd" name="strimflag" binding="strimflag" caption="调整期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+        </columnlist>
+        <columnlist id="31dca535-8397-4cc6-87a4-0f3ee3c9a4e0" name="sdividegroup" binding="sdividegroup" caption="分成组标志"/>
+        <columnlist id="6a950dde-a5dd-4e29-833a-657c2a170b68" name="sbillkind" binding="sbillkind" caption="报表种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#bbdea100-83a4-4681-8ce9-94d18094c00d"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a75d7553-bbd2-4fec-b4ad-f4d68f2df462" name="报表文件">
+      <jreportref id="0aac41a5-ce32-4497-9faa-fc2bf64f581d" name="财政申请收入日报表" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="ba616680-2ea5-43b1-a37c-006e0d66c51e">
+    <pages id="26eaeec0-8320-4cb3-bfd9-29b9c5d704a2" name="维护财政申请收入日报表查询">
+      <views id="7e813ffe-ad69-4d9f-9bb3-9de42ab24018" name="财政申请收入日报表查询" isdefault="true" contentArea="0a6a7057-7ca3-4e6b-bd63-789d40718715">
+        <buttonArea id="c6ee657c-4ede-4c80-ab09-d1c9734ce7af" name="JButtonAreaImpl-c6ee657c-4ede-4c80-ab09-d1c9734ce7af">
+          <buttons id="0576e173-af49-489d-8ce5-2a482294acb6" name="查询" caption="查询" direction="e753a303-ab07-4251-b31e-05b60ce38d16"/>
+          <buttons id="6a4eb836-bb83-4a9e-b559-57d54aee4ae2" name="导出日收入文档(all)" visible="false" caption="导出日收入文档(all)" enable="false" direction="4a5b30c7-e8e0-4b9a-8c23-c1d0e3e6fad5"/>
+          <buttons id="abd23417-2bbf-4e5e-abb5-04b7e7ab6cfd" name="按国库导出日收入文档(不分征收机关)" visible="false" caption="按国库导出日收入文档(不分征收机关)" enable="false" direction="ae227bc2-7450-48b0-9d43-5baa99cac1e0"/>
+        </buttonArea>
+      </views>
+      <views id="83a466e2-93f0-4012-9798-0e935e430d55" name="财政申请收入日报表查询结果" contentArea="d3733968-2cc3-4daf-bb07-6ca8c14c5a22">
+        <buttonArea id="13a44b91-6c6a-436d-b506-fdc4f17096c0" name="JButtonAreaImpl-13a44b91-6c6a-436d-b506-fdc4f17096c0">
+          <buttons id="3def24e3-df11-454c-8352-4c3099a50cf0" name="返回" caption="返回" direction="221b68ec-cfbc-4dae-863d-eee227107b5e"/>
+          <buttons id="c79131e0-ab2b-40b5-b1e7-19594c906dba" name="导出数据" caption="导出数据" direction="959d776e-ca48-444c-906b-938084046de2"/>
+          <buttons id="e7520546-60b3-4912-a3cd-fabf8016d6a8" name="报表" caption="报表" direction="8119c90a-b497-4fa0-a799-2a214f551e3f"/>
+        </buttonArea>
+      </views>
+      <views id="25eaefd4-e993-48f7-909c-221cd844f3c7" name="财政申请收入日报表打印界面" contentArea="a75d7553-bbd2-4fec-b4ad-f4d68f2df462">
+        <buttonArea id="05e70d66-e6da-4621-9d7e-54ea25708d88" name="JButtonAreaImpl-05e70d66-e6da-4621-9d7e-54ea25708d88">
+          <buttons id="dfff1646-3960-453f-8663-5d572d42e0bc" name="返回" caption="返回" direction="decb1c6c-116b-4007-9c4b-b05914fd9128"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

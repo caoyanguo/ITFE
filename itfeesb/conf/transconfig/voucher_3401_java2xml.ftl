@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GBK"?>
+<Voucher>
+	<Id>${Voucher.Id}</Id>
+	<AdmDivCode>${Voucher.AdmDivCode}</AdmDivCode> 
+	<StYear>${Voucher.StYear}</StYear>
+	<VtCode>${Voucher.VtCode}</VtCode> 
+	<VouDate>${Voucher.VouDate}</VouDate>
+	<VoucherNo>${Voucher.VoucherNo}</VoucherNo>
+	<FundTypeCode>${Voucher.FundTypeCode}</FundTypeCode> 
+	<BudgetType>${Voucher.BudgetType}</BudgetType>
+	<BelongFlag>${Voucher.BelongFlag}</BelongFlag>
+	<BudgetLevelCode>${Voucher.BudgetLevelCode}</BudgetLevelCode>
+	<#if Voucher.BillKind?exists>
+	<BillKind>${Voucher.BillKind}</BillKind>
+	</#if>
+	<ReportDate>${Voucher.ReportDate}</ReportDate>
+	<FinOrgCode>${Voucher.FinOrgCode}</FinOrgCode>
+	<TreCode>${Voucher.TreCode}</TreCode>
+	<TreName>${Voucher.TreName}</TreName>
+	<SumMoney>${Voucher.SumMoney}</SumMoney>
+	<PeriodType>正常业务</PeriodType>
+	<PeriodTypeCode>01</PeriodTypeCode>
+	<Hold1>${Voucher.Hold1}</Hold1>
+	<Hold2>${Voucher.Hold2}</Hold2>
+	<DetailList>
+	  <#list Voucher.DetailList.Detail as var>
+		  <Detail>
+			  <AdmDivCode>${var.AdmDivCode}</AdmDivCode>
+			  <StYear>${var.StYear}</StYear>
+			  <TaxOrgCode>${var.TaxOrgCode}</TaxOrgCode>
+			  <TaxOrgName>${var.TaxOrgName}</TaxOrgName>
+			  <FundTypeCode>${Voucher.FundTypeCode}</FundTypeCode>
+		  	  <BudgetType>${var.BudgetType}</BudgetType>
+			  <BudgetLevelCode>${var.BudgetLevelCode}</BudgetLevelCode>
+		  	  <BudgetSubjectCode>${var.BudgetSubjectCode}</BudgetSubjectCode>
+			  <BudgetSubjectName>${var.BudgetSubjectName}</BudgetSubjectName>
+			  <DayAmt>${var.DayAmt}</DayAmt>
+			  <TenDayAmt>${var.TenDayAmt}</TenDayAmt>
+			  <MonthAmt>${var.MonthAmt}</MonthAmt>
+			  <QuarterAmt>${var.QuarterAmt}</QuarterAmt>
+		  	  <YearAmt>${var.YearAmt}</YearAmt>
+			  <Hold1>${var.Hold1}</Hold1>
+		  	  <Hold2>${var.Hold2}</Hold2>
+			  <Hold3>${var.Hold3}</Hold3>
+			  <Hold4>${var.Hold4}</Hold4>		  
+		 </Detail>
+	</#list> 
+	</DetailList>
+</Voucher>

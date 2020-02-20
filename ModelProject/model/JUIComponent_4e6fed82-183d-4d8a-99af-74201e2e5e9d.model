@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="4e6fed82-183d-4d8a-99af-74201e2e5e9d" name="无纸化业务清单打印" ename="BusinessDetailList">
+  <jproperties id="af3d418a-c72a-49ae-8b3c-e67e8a80000b" key="GeneratedTime" value="1557294900479"/>
+  <refModule href="JModule_fd65102d-ee3b-42d9-9af1-b70aa0dbac1a.model#fd65102d-ee3b-42d9-9af1-b70aa0dbac1a"/>
+  <model id="812ffe00-b895-43ad-8606-538bbc1803e6" name="JModelImpl-812ffe00-b895-43ad-8606-538bbc1803e6">
+    <attributes id="0f722bee-d644-46e9-890e-9c3628d3ba16" name="param" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+    <attributes id="7f165d84-74fd-48ba-9363-ce2ad35efc82" name="biztype" type="java.lang.String"/>
+    <attributes id="a60b32d1-8ac3-4c1c-8eb7-274cf05aaabc" name="searchDto" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+    <directions id="eb45813a-bc88-473a-9755-0c9d018fa5b5" viewers="65683296-aa33-4712-85fd-94438b0d1e1f" name="报表打印" ename="printReport"/>
+    <directions id="d928cf6c-c9bf-441a-b486-8df6da29625f" viewers="3d3b022b-e7d2-4c94-9c0f-b2728dc2130d" name="回到查询界面" ename="backToQuery"/>
+    <directions id="5791084d-6697-4f78-ab4d-f06668236cd1" viewers="33173621-a012-4a05-bc7f-6ca86690dbf1" name="原始凭证打印" ename="printOriVou"/>
+    <directions id="aa517481-ebc4-4848-bed5-9f3c093e9832" name="批量打印" ename="batchPrint"/>
+    <directions id="6e3fcff6-09be-43ef-b136-f3f3d5fcfcae" name="查询打印主单信息" ename="toReport"/>
+    <directions id="0e2e5c32-e7e0-45e7-a8ca-d2f7db8be904" name="查询打印明细信息" ename="toReportOfDetail"/>
+    <directions id="9b8c5a17-4f1b-4fb3-8b25-cd5985b33c3a" name="代理库打印明细信息" ename="toReportDetailOfDlk"/>
+    <directions id="4c421844-f375-4da1-aa34-62b1dfb3b256" viewers="fb811a80-9a83-4138-9841-4d3f64d5d2de" name="返回到清单查询界面" ename="backToSearch"/>
+    <directions id="33f20531-192f-459c-9d83-d76b68d1ffc3" viewers="9d1a668e-8fe3-4aab-88f5-580aeff1f93d" name="凭证还原" ename="goVoucherViewer"/>
+    <directions id="381ca957-d241-4a82-9a10-4bf1f1c9a894" viewers="33173621-a012-4a05-bc7f-6ca86690dbf1" name="返回查询结果" ename="goSearchResultViewer"/>
+    <directions id="52515569-efc4-4711-9f06-a6e5482cb0d6" viewers="65683296-aa33-4712-85fd-94438b0d1e1f" name="集中支付对账单打印" ename="printcenterpay"/>
+    <directions id="7427b777-9973-4993-8f9e-f78758f9653b" viewers="65683296-aa33-4712-85fd-94438b0d1e1f" name="代理库清单查询打印" ename="agentNatiTrePrintRpt"/>
+  </model>
+  <services href="JServiceComponet_86ca98bf-68d5-432f-8d7d-7f6ba8b25830.model#86ca98bf-68d5-432f-8d7d-7f6ba8b25830"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="6c07cfdd-3b28-44bb-ad6a-0daaccda48ef">
+    <contentareanode id="43a261cc-dd4f-4dfd-b307-5be828f0d3f1" name="统计查询条件" grouptitle="统计查询条件">
+      <widgetRefs xsi:type="model:Combo" id="b0b7cd87-6d49-4463-98f6-be3e020e7fe6" name="国库代码" binding="param.strecode" caption="国库代码" required="true" display="" underly="" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="dce8dac4-7eae-4030-8d28-cc5beb2bc4f1" name="业务类型" binding="biztype" visible="false" caption="业务类型" display="displayValue" underly="underlyValue" modelsource="bizlist">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#62d4d215-0edc-433d-9864-fde1ba8af27f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="5b333258-7afe-4a46-93b5-077a38a7ed17" name="凭证状态" binding="param.sbeflag" caption="凭证状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1775bce2-cbc8-4221-88db-815b83f308e0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="3ebf914f-7e8c-4fbd-a061-ea0ad0892b40" name="开始日期" binding="param.startdate" caption="开始日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="3fa1b400-1f01-41b4-aac0-81c569ee404d" name="结束日期" binding="param.enddate" caption="结束日期" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="10b440b8-0c88-4fb6-94fa-0fe25e35d21d" name="代理银行" binding="param.sbankcode" caption="代理银行" display="displayValue" underly="underlyValue" modelsource="bankCodeList"/>
+      <widgetRefs xsi:type="model:Combo" id="b0404860-11d4-46ca-a2e9-f167a6c0acef" name="月份" binding="month" caption="月份" display="displayValue" underly="underlyValue" modelsource="monthlist"/>
+      <widgetRefs xsi:type="model:Combo" id="759e4087-a539-4951-8758-465464e5b6be" name="日期类型" binding="param.datatype" caption="日期类型" display="displayValue" underly="underlyValue" modelsource="datelist"/>
+    </contentareanode>
+    <contentareanode id="6adb60eb-b0f9-4a8a-b0fb-928b84ec7780" name="报表显示界面">
+      <jreportref id="fedecdb4-015d-4743-9ae0-e9b31404c265" name="业务统计报表" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="d7fe0fb0-d7d9-4b29-87c8-97def4ccda53" name="打印凭证类型选择" grouptitle="打印凭证类型选择">
+      <widgetRefs xsi:type="model:Checkbox" id="d4a81e19-88fb-4416-8558-6211cad86e67" name="实拨资金" binding="payOut" caption="实拨资金业务" underly="" display="">
+        <componentStyle id="66278973-e442-4191-818d-5bdfac95c102" name="ComponentStyleImpl-66278973-e442-4191-818d-5bdfac95c102" ename="ComponentStyleImpl66278973e4424191818d5bdfac95c102" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="67a1fed8-c82a-4e31-b344-64659a534a18" name="收入退付" binding="dwbk" caption="收入退付业务">
+        <componentStyle id="7cd6fc9d-a186-4859-930c-bdbf317bdeaa" name="ComponentStyleImpl-7cd6fc9d-a186-4859-930c-bdbf317bdeaa" ename="ComponentStyleImpl7cd6fc9da1864859930cbdbf317bdeaa" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="b0e94508-5195-4be0-a080-3ddb10c0876f" name="直接支付额度" binding="directPlan" caption="直接支付额度">
+        <componentStyle id="200d56a1-ecb7-4a8f-be28-a604c4d28c66" name="ComponentStyleImpl-200d56a1-ecb7-4a8f-be28-a604c4d28c66" ename="ComponentStyleImpl200d56a1ecb74a8fbe28a604c4d28c66" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="194acde1-e907-4e55-9d3a-59cf8cc9786e" name="授权支付额度" binding="grantPlan" caption="授权支付额度">
+        <componentStyle id="8790ffd8-6a4e-48bb-a7c6-ceac70ee23a3" name="ComponentStyleImpl-8790ffd8-6a4e-48bb-a7c6-ceac70ee23a3" ename="ComponentStyleImpl8790ffd86a4e48bba7c6ceac70ee23a3" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="92dbe05e-5f7a-45aa-96b5-2c87f7f4b107" name="直接支付划款" binding="directPayMoney" caption="直接支付划款">
+        <componentStyle id="9e411efe-0b25-43cf-9748-12516f4412f5" name="ComponentStyleImpl-9e411efe-0b25-43cf-9748-12516f4412f5" ename="ComponentStyleImpl9e411efe0b2543cf974812516f4412f5" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="c655a0fd-b107-4663-87bd-e3b3daded69b" name="授权支付划款" binding="grantPayMoney" caption="授权支付划款">
+        <componentStyle id="898e73a0-cad6-4710-80fb-719a6ed19bb4" name="ComponentStyleImpl-898e73a0-cad6-4710-80fb-719a6ed19bb4" ename="ComponentStyleImpl898e73a0cad6471080fb719a6ed19bb4" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="cb9b3af1-dde9-431d-b0e6-17458be3d8eb" name="直接支付退款" binding="directBckMoney" caption="直接支付退款">
+        <componentStyle id="9058cab1-5e9e-418e-bcff-4a6351474a8d" name="ComponentStyleImpl-9058cab1-5e9e-418e-bcff-4a6351474a8d" ename="ComponentStyleImpl9058cab15e9e418ebcff4a6351474a8d" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="3990fee5-808a-4c5e-b0e8-f64eed50412d" name="授权支付退款" binding="grantBckMoney" caption="授权支付退款">
+        <componentStyle id="cedd681b-0600-4822-858d-3c6a7f6a0e28" name="ComponentStyleImpl-cedd681b-0600-4822-858d-3c6a7f6a0e28" ename="ComponentStyleImplcedd681b06004822858d3c6a7f6a0e28" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a46c8a00-c8b7-4ee2-8e49-4a3ed74f8d2a" name="查询结果打印" grouptitle="查询结果打印">
+      <widgetRefs xsi:type="model:Table" id="15bd276a-e210-4bc8-94aa-f3c546903213" name="查询结果打印" binding="pagingcontext" caption="查询结果打印" tabletype="paging">
+        <columnlist id="432a7166-ba19-4c52-9e78-8e73058e0c48" name="受理日期" binding="screatdate" caption="受理日期"/>
+        <columnlist id="4213bc4d-9563-4c6f-95b7-aeb60d915fb8" name="国库代码 " binding="strecode" caption="    国库代码   "/>
+        <columnlist id="9d269979-dc48-4115-a4a3-7fcf036ac2e1" name="业务类型" binding="svtcode" caption="     业务类型       ">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+        </columnlist>
+        <columnlist id="50b4faa5-9026-49ce-9611-e4b95b3b8648" name="总笔数" binding="icount" caption="   总笔数   "/>
+        <columnlist id="fc92ec1a-aff6-4bf2-bdf7-235f8602b9bf" name="总金额" binding="ncheckmoney" caption="            总金额            "/>
+        <columnlist id="36831b60-50a4-4038-82e6-3228b206d220" name="凭证状态" binding="sstatus" caption="凭证状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1775bce2-cbc8-4221-88db-815b83f308e0"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="fc33506f-291c-4bf8-b1b5-1b36184cfdf4" name="业务清单查询条件" grouptitle="业务清单查询条件" binding="searchDto">
+      <widgetRefs xsi:type="model:Combo" id="0a36974e-fbc7-44df-8fa2-8a645ca21d57" name="ComboImpl-0a36974e-fbc7-44df-8fa2-8a645ca21d57" binding="strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="8255c1aa-2054-43ce-ab93-1e3470260f25" name="ComboImpl-8255c1aa-2054-43ce-ab93-1e3470260f25" binding="sbeflag" caption="凭证状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="f3fc2f5e-8308-4b1d-a94a-55350e7a66e2" name="TextImpl-f3fc2f5e-8308-4b1d-a94a-55350e7a66e2" binding="startdate" caption="开始日期"/>
+      <widgetRefs xsi:type="model:Text" id="dfc617ac-ea4d-4967-b177-47e579ab385c" name="TextImpl-dfc617ac-ea4d-4967-b177-47e579ab385c" binding="enddate" caption="结束日期"/>
+      <widgetRefs xsi:type="model:Combo" id="bff1a946-d285-4fba-98af-30cfc3ba8f24" name="代理银行" binding="sbankcode" caption="代理银行" display="displayValue" underly="underlyValue" modelsource="bankCodeList1"/>
+      <widgetRefs xsi:type="model:Combo" id="db686e06-b131-44c4-a881-6d1b2e9e94c4" name="日期类型" binding="datatype" visible="true" caption="日期类型" display="displayValue" underly="underlyValue" modelsource="datelist"/>
+    </contentareanode>
+    <contentareanode id="e63eb650-23ff-48de-9979-c1eb034a31df" name="业务清单类型选择" grouptitle="业务清单类型选择" columnnum="0">
+      <widgetRefs xsi:type="model:Checkbox" id="ceae92cb-eb89-4232-a030-5195f6afbc27" name="实拨资金业务" binding="payOut1" caption="实拨资金业务">
+        <componentStyle id="4903d388-7c44-4f36-8df1-7b2279e7c8ef" name="ComponentStyleImpl-4903d388-7c44-4f36-8df1-7b2279e7c8ef" ename="ComponentStyleImpl4903d3887c444f368df17b2279e7c8ef" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="ca7a104a-61d4-4f15-80d3-73891ab07497" name="实拨资金退款" binding="payOutBack" caption="实拨资金退款">
+        <componentStyle id="68c71a3f-11be-492d-9dbd-c0cc3b777c6c" name="ComponentStyleImpl-4903d388-7c44-4f36-8df1-7b2279e7c8ef" ename="ComponentStyleImpl4903d3887c444f368df17b2279e7c8ef" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="6ed3e8c8-3177-4a00-ab3b-bbb0d3c63c6f" name="CheckboxImpl-6ed3e8c8-3177-4a00-ab3b-bbb0d3c63c6f" binding="directPlan1" caption="直接支付额度">
+        <componentStyle id="ed16790a-c5eb-4709-911c-50ec3bb3c8b0" name="ComponentStyleImpl-ed16790a-c5eb-4709-911c-50ec3bb3c8b0" ename="ComponentStyleImpled16790ac5eb4709911c50ec3bb3c8b0" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="13b9a126-92ab-4ea2-8fb4-8624d5597b1b" name="CheckboxImpl-13b9a126-92ab-4ea2-8fb4-8624d5597b1b" binding="grantPlan1" caption="授权支付额度">
+        <componentStyle id="1f8dc90e-1716-4fcd-b3d2-d8b75479f44f" name="ComponentStyleImpl-1f8dc90e-1716-4fcd-b3d2-d8b75479f44f" ename="ComponentStyleImpl1f8dc90e17164fcdb3d2d8b75479f44f" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="ec9bf959-6eae-4d54-8455-9698500ff94a" name="直接支付划款" binding="directPayMoney1" caption="直接支付划款">
+        <componentStyle id="14539caf-305f-4fa1-97c0-ed23e7be853b" name="ComponentStyleImpl-14539caf-305f-4fa1-97c0-ed23e7be853b" ename="ComponentStyleImpl14539caf305f4fa197c0ed23e7be853b" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="c179bb98-1cac-4fe1-91b0-b751eebb58c9" name="授权支付划款" binding="grantPayMoney1" caption="授权支付划款">
+        <componentStyle id="c1b68da3-c315-4c4f-a009-dead90f880fd" name="ComponentStyleImpl-14539caf-305f-4fa1-97c0-ed23e7be853b" ename="ComponentStyleImpl14539caf305f4fa197c0ed23e7be853b" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="65825b48-ff1d-417b-8dc3-0333346f25c0" name="直接支付退款" binding="directBckMoney1" caption="直接支付退款">
+        <componentStyle id="2eb4019d-83a1-452e-810a-e9ba70a3511f" name="ComponentStyleImpl-ff451ca4-18ed-40b9-82ef-2a3b948f9412" ename="ComponentStyleImplff451ca418ed40b982ef2a3b948f9412" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="260acd41-3b61-4589-b270-de2b0aa8783d" name="授权支付退款" binding="grantBckMoney1" caption="授权支付退款">
+        <componentStyle id="ff451ca4-18ed-40b9-82ef-2a3b948f9412" name="ComponentStyleImpl-ff451ca4-18ed-40b9-82ef-2a3b948f9412" ename="ComponentStyleImplff451ca418ed40b982ef2a3b948f9412" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="e47491e9-dc70-4374-a948-b20cd1fcd7a1" name="收入退付业务" binding="dwbk1" caption="收入退付业务">
+        <componentStyle id="49b97ee0-fe57-42aa-9caf-4b0c18e46d0f" name="ComponentStyleImpl-49b97ee0-fe57-42aa-9caf-4b0c18e46d0f" ename="ComponentStyleImpl49b97ee0fe5742aa9caf4b0c18e46d0f" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Checkbox" id="d3ddaf4c-02f8-41c1-a7ca-5a1e00268a68" name="收入退付退款" binding="dwbkBack" caption="收入退付退款">
+        <componentStyle id="523c9d8d-59aa-4568-bde2-b65dd079dab4" name="ComponentStyleImpl-4903d388-7c44-4f36-8df1-7b2279e7c8ef" ename="ComponentStyleImpl4903d3887c444f368df17b2279e7c8ef" height="25" innercompositeheight="20"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="4f68ca9c-d4c4-4791-8d5d-550d86ea2f33" name="实拨资金业务报表">
+      <jreportref id="22c3cf45-1f54-46ef-bce8-eb1d2cc67451" name="实拨资金" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="3c22c325-39a7-4228-9a38-13592ef85c53" name="直接支付额度报表">
+      <jreportref id="7cb81eb8-cebe-47f0-8cb2-16d5f357e2d2" name="直接支付额度" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="9534249e-e82b-4fdb-ba94-226e31530c75" name="授权支付额度报表">
+      <jreportref id="6d253861-c133-4aff-8f94-81d78fd2b1e1" name="授权支付额度" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="2a95b4e7-8053-4bf8-a4f6-d066e8e71cc5" name="商行支付划款报表">
+      <jreportref id="6341f6cd-3aaa-428a-84a3-00d63d13d5bd" name="商行支付划款" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="d0e3d99a-1576-4a27-9719-9791170c36f4" name="商行支付退款报表">
+      <jreportref id="f159957e-52b6-4b55-a808-16a420c0ddc9" name="商行支付退款" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="ec8c647b-5086-45ce-8e9b-ca0d039c709b" name="收入退付业务报表">
+      <jreportref id="3269d14c-a3d5-46b3-878a-40d6555592b7" name="收入退付业务" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="107f727c-480e-4e89-9a93-c2cbfada8994" name="授权支付额度明细报表">
+      <jreportref id="c853914e-f14e-4c97-946c-7de77bf08a9d" name="授权支付额度明细" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="2f2f47e6-8fe7-49f7-9fc7-a0f3d6a5f3ed" name="直接支付额度明细报表">
+      <jreportref id="6263e71f-c045-4088-a30c-13bd17af873f" name="直接支付额度明细" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="5d8ca03c-c782-482f-be16-56f446a0d7df" name="商行支付划款明细报表">
+      <jreportref id="483f4bdc-e96c-43c2-80f4-8844e847c3e5" name="商行支付划款明细" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="897763ad-4c2d-4544-a081-4a3d0cebe128" name="商行支付退款明细报表">
+      <jreportref id="f8d4a120-1aa4-457d-997c-34aaae6491ed" name="商行支付退款明细" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="90faa77c-420f-42df-9cfb-0ec4ec41c973" name="集中支付对账单">
+      <jreportref id="dc669ee6-8870-420c-9b43-00edc1bff449" name="集中支付对账单" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="d2caf6d8-386c-43fc-a76a-f0dbde04e372">
+    <pages id="115f842b-6513-4aed-af38-f788b7959b84" name="无纸化业务凭证打印">
+      <views id="3d3b022b-e7d2-4c94-9c0f-b2728dc2130d" name="无纸化业务凭证打印" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="43a261cc-dd4f-4dfd-b307-5be828f0d3f1 d7fe0fb0-d7d9-4b29-87c8-97def4ccda53">
+        <buttonArea id="06d1e962-cb00-4cbe-a634-81a253aca98c" name="JButtonAreaImpl-06d1e962-cb00-4cbe-a634-81a253aca98c">
+          <buttons id="71afdb65-fbc6-4090-aab9-9f1abe443c0f" name="清单打印" visible="true" caption="查询清单打印" checkrequired="true" direction="eb45813a-bc88-473a-9755-0c9d018fa5b5"/>
+          <buttons id="2f4b914b-7b40-4e63-ab0a-680a98b7dc01" name="原始凭证查询打印" caption="查询凭证打印" checkrequired="true" direction="5791084d-6697-4f78-ab4d-f06668236cd1"/>
+          <buttons id="74f7402e-d921-4acc-a9cd-ac4a28db753c" name="集中支付对账单打印" caption="集中支付对账单打印" direction="52515569-efc4-4711-9f06-a6e5482cb0d6"/>
+          <buttons id="a197102a-bd0c-4099-a387-6255a8f56543" name="代理库清单打印" visible="true" caption="代理库清单打印" checkrequired="true" direction="7427b777-9973-4993-8f9e-f78758f9653b"/>
+        </buttonArea>
+      </views>
+      <views id="65683296-aa33-4712-85fd-94438b0d1e1f" name="报表显示界面" contentArea="6adb60eb-b0f9-4a8a-b0fb-928b84ec7780">
+        <buttonArea id="fc9eb47a-cd31-498a-853c-1595d0c02e7f" name="JButtonAreaImpl-fc9eb47a-cd31-498a-853c-1595d0c02e7f">
+          <buttons id="7ad765a4-0284-44a9-b0e0-e14d2d7d5a91" name="back" caption="返回" direction="d928cf6c-c9bf-441a-b486-8df6da29625f"/>
+        </buttonArea>
+      </views>
+      <views id="33173621-a012-4a05-bc7f-6ca86690dbf1" name="原始凭证打印统计" isdefault="false" contentArea="a46c8a00-c8b7-4ee2-8e49-4a3ed74f8d2a">
+        <buttonArea id="7e4c6b36-ee28-4661-9782-a486df2f8a84" name="JButtonAreaImpl-7e4c6b36-ee28-4661-9782-a486df2f8a84">
+          <buttons id="51731afc-3f0f-48cf-b6dd-ed8db305ca7d" name="凭证还原" caption="凭证还原" direction="33f20531-192f-459c-9d83-d76b68d1ffc3"/>
+          <buttons id="713301e2-348d-4c1d-a16e-4abb86859514" name="批量打印" caption="批量打印" direction="aa517481-ebc4-4848-bed5-9f3c093e9832"/>
+          <buttons id="0c7e4e7c-0682-4f8f-b6c0-52cd460cba8e" name="back" caption="返回" direction="d928cf6c-c9bf-441a-b486-8df6da29625f"/>
+        </buttonArea>
+      </views>
+      <views id="9d1a668e-8fe3-4aab-88f5-580aeff1f93d" name="凭证还原" type="ClassName" path="com.cfcc.itfe.client.sendbiz.bizcertsend.ActiveXCompositevoucherVoucherViewer">
+        <buttonArea id="20c65c85-c911-49ef-92c3-dc2bcbd528c8" name="JButtonAreaImpl-20c65c85-c911-49ef-92c3-dc2bcbd528c8">
+          <buttons id="a1b344a4-1051-4a57-a4d5-3224df2aa9ee" name="返回" caption="返回" direction="381ca957-d241-4a82-9a10-4bf1f1c9a894"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="50a33f4f-e846-4ebb-82ce-3867ac28fd5a" name="无纸化业务清单打印">
+      <views id="fb811a80-9a83-4138-9841-4d3f64d5d2de" name="无纸化业务清单打印" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="fc33506f-291c-4bf8-b1b5-1b36184cfdf4 e63eb650-23ff-48de-9979-c1eb034a31df">
+        <buttonArea id="cc147dea-b675-4669-91ba-70d60b7bbd93" name="JButtonAreaImpl-cc147dea-b675-4669-91ba-70d60b7bbd93">
+          <buttons id="ca9915b9-5312-4085-b8da-2afaf3656b45" name="ButtonImpl-ca9915b9-5312-4085-b8da-2afaf3656b45" caption="查询清单打印" checkrequired="true" direction="6e3fcff6-09be-43ef-b136-f3f3d5fcfcae"/>
+          <buttons id="9937c4e5-993f-458e-bf9b-ded86ece1c4b" name="查询明细清单打印" caption="查询明细清单打印" checkrequired="true" direction="0e2e5c32-e7e0-45e7-a8ca-d2f7db8be904"/>
+          <buttons id="d28615bf-5517-4a6a-843f-7e128ec92198" name="代理库明细清单打印" caption="代理库明细清单打印" direction="9b8c5a17-4f1b-4fb3-8b25-cd5985b33c3a"/>
+        </buttonArea>
+      </views>
+      <views id="71268702-985f-4925-9125-7312d296a53f" name="实拨资金业务报表" contentArea="4f68ca9c-d4c4-4791-8d5d-550d86ea2f33">
+        <buttonArea id="24e6c28a-6bab-41c9-b097-197de6c62e42" name="JButtonAreaImpl-24e6c28a-6bab-41c9-b097-197de6c62e42">
+          <buttons id="8c465f7a-d1a7-4226-8234-f16f378f2158" name="ButtonImpl-8c465f7a-d1a7-4226-8234-f16f378f2158" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="b6bc50c9-6d82-432d-a5f5-b78ee03bba9e" name="直接支付额度报表" contentArea="3c22c325-39a7-4228-9a38-13592ef85c53">
+        <buttonArea id="4b04cb93-b883-4a40-8932-9c33b26f14ee" name="JButtonAreaImpl-4b04cb93-b883-4a40-8932-9c33b26f14ee">
+          <buttons id="c3499f26-cdd3-432c-a671-7ffeb6150c69" name="ButtonImpl-c3499f26-cdd3-432c-a671-7ffeb6150c69" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="c1be8c6a-a4ab-4e10-ba82-f1aa63f22c8d" name="授权支付额度报表" contentArea="9534249e-e82b-4fdb-ba94-226e31530c75">
+        <buttonArea id="4208088e-8c78-469d-b2e5-30b6684d208d" name="JButtonAreaImpl-4208088e-8c78-469d-b2e5-30b6684d208d">
+          <buttons id="0b885ae3-ea6b-4f86-be5b-2dbaf9e93db3" name="ButtonImpl-0b885ae3-ea6b-4f86-be5b-2dbaf9e93db3" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="b2afffe1-6ad9-4b9d-9acb-3b83f912348c" name="商行支付划款报表" contentArea="2a95b4e7-8053-4bf8-a4f6-d066e8e71cc5">
+        <buttonArea id="e97e9e03-d7bf-4c1e-91db-e271e7129e61" name="JButtonAreaImpl-e97e9e03-d7bf-4c1e-91db-e271e7129e61">
+          <buttons id="86d868ed-41ee-4c67-a7c7-2f8a3b702cd0" name="ButtonImpl-86d868ed-41ee-4c67-a7c7-2f8a3b702cd0" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="cd98843a-fa9a-410c-b59a-3bae5e003681" name="商行支付退款报表" contentArea="d0e3d99a-1576-4a27-9719-9791170c36f4">
+        <buttonArea id="607924e4-9420-4b77-bc88-3b012ef470b0" name="JButtonAreaImpl-607924e4-9420-4b77-bc88-3b012ef470b0">
+          <buttons id="b9bab7e5-9309-46b5-a883-860dfbde3dae" name="ButtonImpl-b9bab7e5-9309-46b5-a883-860dfbde3dae" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="2842faf6-f65b-4048-93d7-f1d58b5f365c" name="收入退付业务报表" contentArea="ec8c647b-5086-45ce-8e9b-ca0d039c709b">
+        <buttonArea id="bef28138-9fab-448f-b131-2fa3619a7e5b" name="JButtonAreaImpl-bef28138-9fab-448f-b131-2fa3619a7e5b">
+          <buttons id="d2912502-0d17-4402-824c-4e8800d4d057" name="ButtonImpl-d2912502-0d17-4402-824c-4e8800d4d057" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="a8e1fe72-d913-4066-8a71-2ce653e6d175" name="直接支付额度明细报表" contentArea="2f2f47e6-8fe7-49f7-9fc7-a0f3d6a5f3ed">
+        <buttonArea id="2c41553c-cd15-49e3-ab80-bb78ee580dd0" name="JButtonAreaImpl-4b04cb93-b883-4a40-8932-9c33b26f14ee">
+          <buttons id="15c65ff4-a78c-4539-987b-3c8e7711aac8" name="ButtonImpl-c3499f26-cdd3-432c-a671-7ffeb6150c69" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="ee5d1371-06aa-4718-ae10-137f55c500af" name="授权支付额度明细报表" contentArea="107f727c-480e-4e89-9a93-c2cbfada8994">
+        <buttonArea id="4a97634f-03f8-4ff9-9027-19d85010084a" name="JButtonAreaImpl-4208088e-8c78-469d-b2e5-30b6684d208d">
+          <buttons id="aed217f7-6bdf-46f6-ab67-0861f91cbd09" name="ButtonImpl-0b885ae3-ea6b-4f86-be5b-2dbaf9e93db3" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="4ac9168a-bb0f-4b33-b6b2-eca6624aa400" name="商行支付划款明细报表" contentArea="5d8ca03c-c782-482f-be16-56f446a0d7df">
+        <buttonArea id="44e8e549-b66f-423c-8ea5-95db4fd6a95a" name="JButtonAreaImpl-e97e9e03-d7bf-4c1e-91db-e271e7129e61">
+          <buttons id="9d8a0c85-db72-483c-84f3-5c91b21c459f" name="ButtonImpl-86d868ed-41ee-4c67-a7c7-2f8a3b702cd0" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+      <views id="37859f6b-8ed9-4a85-9c40-3588fef47247" name="商行支付退款明细报表" contentArea="897763ad-4c2d-4544-a081-4a3d0cebe128">
+        <buttonArea id="fbed9f36-aaaa-4cef-b548-89955c3fbdda" name="JButtonAreaImpl-607924e4-9420-4b77-bc88-3b012ef470b0">
+          <buttons id="0d0738f4-c6bb-45bb-a39e-1312026d35db" name="ButtonImpl-b9bab7e5-9309-46b5-a883-860dfbde3dae" caption="返回" direction="4c421844-f375-4da1-aa34-62b1dfb3b256"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

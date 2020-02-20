@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="4d35efa7-2747-481a-a3b0-30476fd33314" name="财政直接支付调整凭证查询" ename="FinanceDirecPayAdjustVoucher">
+  <jproperties id="7d841594-f7c6-48e9-ad79-9a9ba4673e6c" key="GeneratedTime" value="1416184427598"/>
+  <refModule href="JModule_8992d0de-73de-4797-9b9b-4e02dda11c22.model#8992d0de-73de-4797-9b9b-4e02dda11c22"/>
+</model:JServiceComponent>

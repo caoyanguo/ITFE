@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="Database.Facade.Db.ITFEDB" class="com.cfcc.itfe.facade.DatabaseFacade">
+		<property name="ormTemplate" ref="ormTemplate.DB.ITFEDB" />
+		<property name="sqlExecutorFactory" ref="SQLExecutorFactory.DB.ITFEDB" />
+	</bean>
+	
+	<bean id="Common.Facade.Db.ODB" class="com.cfcc.itfe.facade.CommonFacade">
+		<property name="numPage" value="30" />
+		<property name="dbName" value="ITFEDB" />
+	</bean>
+	
+	<bean id="Common.Facade.Db.QDB" class="com.cfcc.itfe.facade.CommonFacade">
+		<property name="numPage" value="30" />
+		<property name="dbName" value="ITFEDB" />
+	</bean>
+
+	<!--
+		=========================业务受理系统数据库相关配置 ===========================
+	-->
+	<!--========================= ODB   Begin=========================-->
+	<bean id="ormTemplate.DB.ITFEDB" class="com.cfcc.jaf.persistence.jaform.JAFOrmTemplate">
+		<property name="dataSource" ref="JAFDataSource.DB.ITFEDB" />
+		<property name="databaseType">
+			<value>DB2</value>
+		</property>
+		<property name="statistics">
+			<value>true</value>
+		</property>
+		<property name="maxRows" value="30000" />
+		<property name="exceedRowLimitStrategy" value="ignore" />
+	</bean>
+
+	<!-- SQLExecutor 相关配置  -->
+	<bean id="SQLExecutorFactory.DB.ITFEDB" class="com.cfcc.jaf.persistence.jdbc.sql.SQLExecutorFactory">
+		<property name="dataSource" ref="JAFDataSource.DB.ITFEDB" />
+		<property name="databaseType" value="Oracle" />
+		<property name="maxRows" value="10000" />
+		<property name="exceedRowLimitStrategy" value="ignore" />
+		<property name="statistics" value="true" />
+		<property name="resultSetPositionStrategy" value="1" />
+	</bean>
+
+
+	<bean id="Common.Facade.Db.ITFEDB" class="com.cfcc.itfe.facade.CommonFacade">
+		<property name="numPage" value="30" />
+		<property name="dbName" value="ITFEDB" />
+	</bean>
+
+
+
+	<bean id="NamingConvention" class="com.cfcc.jaf.persistence.dao.NamingConvention">
+		<property name="conventionMock"
+			value="DTO_UNDERLINE_TO_UPPERCASE,COLUMN_IGNORE_UNDERLINE" />
+	</bean>
+
+	<bean id="JAFDataSource.DB.ITFEDB" class="com.cfcc.jaf.persistence.jdbc.core.JAFDataSource">
+		<property name="containDataSource" ref="DataSource.DB.ITFEDB" />
+		<property name="containerTransaction">
+			<value>false</value>
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="DataSource.DB.ITFEDB" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.ibm.db2.jcc.DB2Driver" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+		<property name="initialSize" value="5" />
+		<property name="maxActive" value="250" />
+		<property name="maxIdle" value="30" />
+		<property name="maxWait" value="1000" />
+		<property name="poolPreparedStatements" value="true" />
+		<property name="defaultAutoCommit" value="true" />
+	</bean>
+
+	
+
+</beans>

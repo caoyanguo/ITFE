@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a7ba3646-76e3-483d-9323-40e1d6b397d9" name="代码登记注册类型服务组件" ename="TsCoderegtype">
+  <jproperties id="8d1752a5-a3d1-49a3-9b0b-a2cbc8affff7" key="GeneratedTime" value="1330485996343"/>
+  <refModule href="JModule_2219f55f-80d1-465d-806a-f290995105a6.model#2219f55f-80d1-465d-806a-f290995105a6"/>
+  <methods id="e25533dd-158f-46da-be62-2e692c38f455" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void" remark="代码登记注册类型">
+    <methodParams id="4b75d41b-5217-4b76-b665-7acc0e14cf72" name="代码登记注册类型" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="69885118-24eb-4eab-a5cb-3a4d8f5a426a" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="e02fbb5b-6813-41c3-8a0e-38f22345d339" name="代码登记注册类型" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="69885118-24eb-4eab-a5cb-3a4d8f5a426a" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="3ef708f3-73d4-4574-816a-920b29d63c88" name="代码登记注册类型" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

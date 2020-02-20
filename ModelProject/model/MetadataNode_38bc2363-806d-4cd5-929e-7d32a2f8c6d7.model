@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:MetadataNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="38bc2363-806d-4cd5-929e-7d32a2f8c6d7" name="国库前置系统元数据" ename="ITFEMetaDataLib">
+  <refPackage href="JResourcePackage_0fd1a69b-a6e5-4662-88df-5f2d48829cdb.model#0fd1a69b-a6e5-4662-88df-5f2d48829cdb"/>
+  <refMetadata id="9517942e-02a1-48d3-9da9-891c6ffde93a" name="代码-10位Var，凭证代码" ename="dmTenLengthCode" lenprecise="1-10" type="VariableCharacters" describe="10位长的代码，业务凭证类型代码、模版ID、签章类型代码、签章类型代码"/>
+  <refMetadata id="754dce72-60d9-4cb6-82ed-76833dd126f4" name="代码-30位Var，用户代码" ename="dmCommonCode" lenprecise="1-30" type="VariableCharacters" describe="30位长代码，联标识、位置标识、签章标识、用户代码、功能代码、签章ID、TBS征收机关代码、TCBS征收机关代码、TBS辅助标志、接收单位、行号、联网机构代码、税务机关代码、预算单位代码、枚举值代码、所属列"/>
+  <refMetadata id="6183ebd3-a8c8-4688-931d-d30a549164ef" name="代码-发送（接收）流水号" ename="dmSeqCode" lenprecise="20-20" type="Characters" describe="发送（接收）日志中的流水号"/>
+  <refMetadata id="2ee18c57-8121-4c90-b3c3-00f1a45f4442" name="代码-国库主体" ename="dmTreCode" lenprecise="10-10" type="Characters" describe="因为国库主体代码都为10位长，所以单独一个类型"/>
+  <refMetadata id="f09046ad-c698-4619-9d1a-facdb01df785" name="代码-处理码" ename="dmRetCode" lenprecise="5-5" type="Characters" describe="处理码"/>
+  <refMetadata id="dcd35627-f66f-4ca5-bb1d-c37651ed8d4c" name="代码-核算主体" ename="dmBookOrgCode" lenprecise="12-12" type="Characters" describe="核算主体、清算行行号都为12位，所以单独一个类型"/>
+  <refMetadata id="67ee9547-176e-41f4-8530-75f35f4305db" name="代码-预算科目" ename="dmBudgetSub" lenprecise="1-30" type="VariableCharacters" describe="预算科目代码"/>
+  <refMetadata id="113b0a7c-8dbf-4579-abd5-045979d96750" name="名称-50位，口令" ename="dmFiftyName" lenprecise="1-50" type="VariableCharacters" describe="50位长的名称。出票单位名称、财政名称、签章位置描述、签章类型名称、用户口令、TIPS辅助标志、密钥"/>
+  <refMetadata id="42ba7ebc-b90e-4ca7-8029-46ea959a914a" name="名称-100位" ename="dmHundredName" lenprecise="1-100" type="VariableCharacters" describe="100位长的名称、描述、备注。核算主体名称、国库主体名称、业务凭证类型名称、用户姓名、联网机构名称、枚举值名称"/>
+  <refMetadata id="139d7a32-1cdd-447d-a4c8-f135bf88ec6d" name="字符串-200位" ename="dmTwoHundredStr" lenprecise="1-200" type="VariableCharacters" describe="200字符的字符串。保存路径、CA证书的DN"/>
+  <refMetadata id="7d49cfc3-bb16-4bfa-a61b-fc7c0fa9cb0a" name="字符串-备注" ename="dmDemoStr" lenprecise="1-100" type="VariableCharacters" describe="备注"/>
+  <refMetadata id="4c4df15f-609a-4104-b123-51615961b4fc" name="时间-8位字符串" ename="dmEightLenDate" lenprecise="8-8" type="Characters" describe="yyyymmdd格式"/>
+  <refMetadata id="a462e7e4-375b-4be5-a8d1-66b74535919a" name="时间-TIMESTAMP" ename="dmDatetime" type="Timestamp" describe="时间，日期 + 时间"/>
+  <refMetadata id="c783a128-24fd-4048-9ac7-a6c134bfa3e4" name="状态-1位长" ename="dmStatus" lenprecise="1-1" type="Characters" describe="各种用1位字符串表示的状态"/>
+  <refMetadata id="c4dd528e-dc85-42e3-8c64-60c07fb2ec25" name="金额" ename="dmMoney" lenprecise="20,2" type="Decimal" describe="金额"/>
+</model:MetadataNode>

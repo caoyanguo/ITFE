@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="TASparamsMerge"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				#foreach($tabName in $MoveTasTableList)
+				<ref local="merge_${tabName.getSrctable()}" />
+				#end
+			</list>
+		</property>
+	</bean>
+
+
+
+	#foreach($tabName in $MoveTasTableList)
+	<bean id="merge_${tabName.getSrctable()}"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="sourceList">
+			<list>
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="merge into ${tabName.getDestable()} as a using ${tabName.getSrctable()} as b on( ${tabName.getPriColumns()} and a.S_BOOKORGCODE=? ) when matched then update set a.s_AuditResult='Y',a.I_Num=b.i_ParamSeqNo" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="update ${tabName.getDestable()} set s_AuditResult='N' where s_AuditResult!='Y' and S_BOOKORGCODE=?" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="merge into ${tabName.getDestable()} as a using ${tabName.getSrctable()} as b on(${tabName.getStrColumns()} and a.S_BOOKORGCODE=? ) when matched then update set a.s_AuditResult='E',a.I_Num=b.i_ParamSeqNo" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="insert into tn_auditresultindex(s_BookOrgCode,s_AuditedTabCode,s_AuditTabSeq,s_TasTabCode,s_TasTabSeq,s_OfAuditType,s_OfBizKind,c_AuditState,s_AuditResult,c_AuditKind,ts_SysUpdate) select s_BookOrgCode,'${tabName.getDestable()}',i_ParamSeqNo,'${tabName.getSrctable()}',I_Num,'-1','01','1','0','1',current timestamp from ${tabName.getDestable()} where s_AuditResult='N' and S_BOOKORGCODE=?" />
+
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="merge into ${tabName.getSrctable()} as a using ${tabName.getDestable()} as b on(${tabName.getPriColumns()} and a.S_BOOKORGCODE=? ) when matched then update set a.s_AuditResult='Y',a.I_Num=b.i_ParamSeqNo" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="update ${tabName.getSrctable()} set s_AuditResult='N' where s_AuditResult!='Y' and S_BOOKORGCODE=?" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="merge into ${tabName.getSrctable()} as a using ${tabName.getDestable()} as b on(${tabName.getStrColumns()} and a.S_BOOKORGCODE=?) when matched then update set a.s_AuditResult='E',a.I_Num=b.i_ParamSeqNo" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="insert into tn_auditresultindex(s_BookOrgCode,s_AuditedTabCode,s_AuditTabSeq,s_TasTabCode,s_TasTabSeq,s_OfAuditType,s_OfBizKind,c_AuditState,s_AuditResult,c_AuditKind,ts_SysUpdate) select s_BookOrgCode,'${tabName.getDestable()}',I_Num,'${tabName.getSrctable()}',i_ParamSeqNo,'-1','01','1','0','1',current timestamp from ${tabName.getSrctable()} where s_AuditResult='N' and S_BOOKORGCODE=?" />
+					<property name="operType" value="4" />
+				</bean>
+
+				<bean class="com.cfcc.tas.facade.data.SQLMapping">
+					<property name="operSql"
+						value="insert into tn_auditresultindex(s_BookOrgCode,s_AuditedTabCode,s_AuditTabSeq,s_TasTabCode,s_TasTabSeq,s_OfAuditType,s_OfBizKind,c_AuditState,s_AuditResult,c_AuditKind,ts_SysUpdate) select s_BookOrgCode,'${tabName.getDestable()}',I_Num,'${tabName.getSrctable()}',i_ParamSeqNo,'-1','01','1','0','1',current timestamp from ${tabName.getSrctable()} where s_AuditResult='Y' and S_BOOKORGCODE=?" />
+					<property name="operType" value="4" />
+				</bean>
+
+			</list>
+		</property>
+	</bean>
+	#end
+</beans>

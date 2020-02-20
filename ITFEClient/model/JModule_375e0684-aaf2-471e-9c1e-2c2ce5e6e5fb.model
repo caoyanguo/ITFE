@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="375e0684-aaf2-471e-9c1e-2c2ce5e6e5fb" name="实拨资金数据导入(天津模式)" ename="fundpay"/>

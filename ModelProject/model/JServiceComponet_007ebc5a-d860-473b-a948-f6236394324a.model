@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="007ebc5a-d860-473b-a948-f6236394324a" name="实拨资金数据导入服务附件(福州工资文件)" ename="fundintoforfz">
+  <jproperties id="cd3d9379-933f-4670-aaf3-00cd91983c90" key="GeneratedTime" value="1380005725070"/>
+  <refModule href="JModule_2c29a3e9-add4-4004-ae17-aa3148b799fe.model#2c29a3e9-add4-4004-ae17-aa3148b799fe"/>
+  <methods id="3f92b4e8-dec7-4cad-9854-a280dc243983" ename="getdestorydata" name="获取查询列表" returntype="java.util.List">
+    <methodParams id="4b91d025-9540-4c9e-8299-e69c3e4ba9f1" name="临时表数据" ename="dto" type="com.cfcc.itfe.persistence.dto.TbsTvPayoutDto"/>
+  </methods>
+  <methods id="2fe5514b-5834-476a-b693-ba3547a4a6c3" ename="destorydata" name="销号" returntype="java.lang.Integer">
+    <methodParams id="cb63249b-5941-4eb7-8877-b5dabcac394e" name="临时表数据" ename="tmpdto" type="com.cfcc.itfe.persistence.dto.TbsTvPayoutDto"/>
+  </methods>
+</model:JServiceComponent>

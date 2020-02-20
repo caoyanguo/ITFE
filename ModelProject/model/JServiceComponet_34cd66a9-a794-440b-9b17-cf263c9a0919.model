@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="34cd66a9-a794-440b-9b17-cf263c9a0919" name="用户盖章权限维护服务组件" ename="TsUserstampfunction">
+  <jproperties id="a5e8c364-fa69-4912-86a9-5557a9f965f5" key="GeneratedTime" value="1330485996296"/>
+  <refModule href="JModule_db15c410-3a8b-4b4e-a8bc-0d2628adeb4c.model#db15c410-3a8b-4b4e-a8bc-0d2628adeb4c"/>
+  <methods id="07e4de74-f056-4e43-b30e-2f6cd81eceae" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="用户盖章权限维护">
+    <methodParams id="839ca264-466a-476d-ad56-ec4f56873736" name="用户盖章权限维护" ename="dtoInfo" type="java.util.List" codecomment="信息"/>
+  </methods>
+  <methods id="4b74b364-ff86-4619-ae8e-9eeb7f3ae9f7" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="833d5219-46ab-48dc-b117-6abd2bee7b29" name="用户盖章权限维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="4b74b364-ff86-4619-ae8e-9eeb7f3ae9f7" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="52e38da3-e74f-4e11-b0a4-79168eb29aa2" name="用户盖章权限维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="c2c0bb7f-ac20-4a15-a47d-424edb7980e7" ename="findUserInfo" name="查找用户签章对应关系" returntype="java.util.List">
+    <methodParams id="2a8a66fb-db4d-4be0-872e-21e5d9060bec" name="用户盖章权限维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="bc3ac6e7-2e59-4148-801c-0409f795c7e0" ename="findstampPosInfo" name="查找盖章位置信息" returntype="java.util.List">
+    <methodParams id="cb5a7d1c-03c4-4c2f-8d64-ede4c3b013ec" name="用户盖章权限维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="862d8f00-d4b3-43d0-a471-213884a95785" ename="findstampPosCheckInfo" name="查找盖章位置信息" returntype="java.util.List">
+    <methodParams id="ab036cbd-2dbe-44ce-9302-906c4462a5f8" name="用户盖章权限维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

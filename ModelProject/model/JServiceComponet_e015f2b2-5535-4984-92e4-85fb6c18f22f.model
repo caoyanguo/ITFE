@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e015f2b2-5535-4984-92e4-85fb6c18f22f" name="直接支付额度处理服务" ename="directPay">
+  <jproperties id="74619078-2fa3-4800-8098-22c73f5c52c4" key="GeneratedTime" value="1433817022751"/>
+  <refModule href="JModule_b1defe4c-3d2e-43d8-a828-8cb1d8a472a0.model#1071651b-9b36-407e-99cd-5e5946325d59"/>
+  <methods id="86713904-f235-47d0-8268-0148d886ee37" ename="findMainByPage" name="分页查询直接支付额度主信息" codecomment="分页查询直接支付额度主信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="5a9aad1c-14e0-4bff-a2c8-e33e8c0bc9b4" name="查询直接支付额度主信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvDirectpaymsgmainDto" codecomment="查询直接支付额度主信息条件DTO"/>
+    <methodParams id="0110227a-11d8-4a03-b615-5b37b7877bfb" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="cee75436-86ac-4221-aa1b-141bfd278df8" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="ef58efa4-bc9d-4ed2-a617-758391e42a9c" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="6a6408bf-2ad4-473c-9afd-96f09822ffb4" ename="findSubByPage" name="分页查询直接支付额度子信息" codecomment="分页查询直接支付额度子信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="e0255188-ac80-4f6c-8f33-f7399ef1f965" name="查询直接支付额度子信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvDirectpaymsgmainDto" codecomment="查询直接支付额度子信息条件DTO"/>
+    <methodParams id="d666a10d-6193-4ccf-bdf4-33985dd98dec" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="6d5f6528-a7df-40cd-8297-64d916889c3e" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="dddbb948-14c9-4aa9-b386-68f7c460e102" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="80d9538e-31e3-4bf9-ac79-89770723b3c6" ename="reSendMsg" name="丢失报文的重发" codecomment="重发TIPS没有收到的报文" returntype="java.lang.String">
+    <methodParams id="a401ade8-c12c-4d32-a582-d14a904a0213" name="委托日期" ename="scommitdate" type="java.lang.String" codecomment="委托日期"/>
+    <methodParams id="66dcd7ce-8e20-493e-9d60-6854971ab268" name="包流水号" ename="spackageno" type="java.lang.String" codecomment="包流水号"/>
+    <methodParams id="2d9938a5-baff-4a9c-948f-a6cdcaca0999" name="机构代码" ename="sorgcode" type="java.lang.String" codecomment="机构代码"/>
+    <methodParams id="f9ac4d17-99ea-4133-a509-9b346cd8b5d3" name="导入文件名称" ename="sfilename" type="java.lang.String" codecomment="导入文件名称"/>
+  </methods>
+  <methods id="6e025b13-88af-447c-a1fd-f904718b4091" ename="findMainByPageForHis" name="分页查询直接支付额度主信息" codecomment="分页查询直接支付额度主信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="e04fdea8-13b2-4d5f-ad1c-ffa8849d4a83" name="查询直接支付额度主信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvDirectpaymsgmainDto" codecomment="查询直接支付额度主信息条件DTO"/>
+    <methodParams id="131c9bd8-69fc-4f38-bc96-8798b1118fe7" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="a9b96f73-6624-44bf-990f-03326f33a870" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="c0633630-828b-4906-ab78-27f5a44a7b30" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="66c29e3f-90de-4396-a946-9d1c636f5fc7" ename="findSubByPageForHis" name="分页查询直接支付额度子信息" codecomment="分页查询直接支付额度子信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="3443644b-3e4c-4ae5-8872-dfe7c6fb79c8" name="查询直接支付额度子信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvDirectpaymsgmainDto" codecomment="查询直接支付额度子信息条件DTO"/>
+    <methodParams id="25332e5a-3219-405d-ab3e-a9fbc4981f08" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="c4701d32-51fe-41d1-8d12-553a95e1649e" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="60ce38ce-33e6-4e20-97e5-fa95fd8fbb75" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="0651c3cc-77e7-4509-b878-30daecf495d9" ename="dataexport" name="导出txt" codecomment="导出txt" returntype="java.lang.String">
+    <methodParams id="4adbed4a-f524-4c23-a671-c595a5bf394c" name="查询直接支付额度主信息条件DTO" ename="mainDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="4edc757f-b558-4b62-972a-74b7bdc652b8" name="选择的表" ename="selectedtable" type="java.lang.String"/>
+  </methods>
+  <methods id="d82edccc-a91f-4674-bbf4-b6a181f57045" ename="exportFile" name="导出CSV" codecomment="导出CSV" returntype="java.lang.String">
+    <methodParams id="dde27e19-dc18-493a-8fed-56634f73d2d4" name="查询直接支付额度主信息条件DTO" ename="mainDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="0d26e6e7-e2b8-4f8f-bd0a-a37c41213083" name="选择的表" ename="selectedtable" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="56da4127-782e-496c-ae32-4d04ad77a10a" name="电子印鉴信息访问服务组件" ename="StampDataAccess" shared="true">
+  <jproperties id="8c3a62e8-fcc5-4e92-9dc5-30253aaef11d" key="GeneratedTime" value="1330497803359"/>
+  <refModule href="JModule_57d74aac-5599-4965-be54-900a36b2a15f.model#57d74aac-5599-4965-be54-900a36b2a15f"/>
+  <methods id="2056c6bf-e8c8-4413-b0a6-44d671c22e00" ename="getOperationTypeByFileType" name="getOperationTypeByFileType" codecomment="根据文件种类获得业务凭证类型信息" returntype="com.cfcc.itfe.persistence.dto.TsOperationtypeDto">
+    <methodParams id="33d23cc7-f036-431f-8077-cb1f0d905d3c" name="fileType" ename="fileType" type="java.lang.String" codecomment="文件类型"/>
+  </methods>
+  <methods id="7c72a414-71ec-489a-aa5e-8ebcad9fda66" ename="getModelByOperationType" name="getModelByOperationType" codecomment="根据业务凭证种类获得Model信息" returntype="com.cfcc.itfe.persistence.dto.TsOperationmodelDto">
+    <methodParams id="d6efd1cc-4a02-4ba8-9b22-e0f382bbd7d2" name="operationType" ename="operationType" type="java.lang.String" codecomment="业务凭证种类"/>
+  </methods>
+  <methods id="4474ace1-eacf-4337-8c1d-f976e0bc6cd0" ename="getFormByModelId" name="getFormByModelId" codecomment="根据业务凭证的模版Id获得业务凭证联信息" returntype="java.util.List">
+    <methodParams id="31dad2c8-c106-4257-8381-10c3096a1e8c" name="modelId" ename="modelId" type="java.lang.String" codecomment="业务凭证模版ID"/>
+  </methods>
+  <methods id="e2267aff-cfce-48e0-bc1f-1e3ab937b37f" ename="getPlaceByModelId" name="getPlaceByModelId" codecomment="根据业务凭证模版Id获得业务凭证中所有盖章和验章位置" returntype="java.util.List">
+    <methodParams id="ff7912ec-1bc5-4adf-9ffb-4f36a8869b8d" name="modelId" ename="modelId" type="java.lang.String" codecomment="业务凭证模版ID"/>
+  </methods>
+  <methods id="e51539e9-64e1-45f1-89d4-9eaf449d25fe" ename="getStampInfoByModel" name="getStampInfoByModel" codecomment="根据业务凭证模版信息获得业务凭证盖章联、盖章位置、模版内容等信息" returntype="java.util.List">
+    <methodParams id="f00c99b0-fa77-4193-bc68-969fb487945e" name="model" ename="model" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="10aa5fa6-9b47-4ae0-b4ec-1be566a5704d" ename="getFileByPath" name="getFileByPath" codecomment="根据文件的相对路径，获得文件内容" returntype="java.lang.String">
+    <methodParams id="59a671a7-ed91-4b2f-8778-3235d847001e" name="path" ename="path" type="java.lang.String" codecomment="文件的相对路径&#xD;&#xA;文件的相对路径"/>
+  </methods>
+  <methods id="a7f91fb5-045d-4dda-a013-e3a00ff9074f" ename="getUserStampFuction" name="getUserStampFuction" codecomment="获得用户指定业务凭证的盖章权限" returntype="java.util.Map" remark="获得用户指定业务凭证的盖章权限">
+    <methodParams id="f36a2361-ce03-4a9d-ad10-0bc4463cf21c" name="modelId" ename="modelId" type="java.lang.String" codecomment="业务凭证模版ID"/>
+  </methods>
+</model:JServiceComponent>

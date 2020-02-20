@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+<wb-module deploy-name="ITFECommon">
+<wb-resource deploy-path="/" source-path="/"/>
+<wb-resource deploy-path="/" source-path="/ITFECommon"/>
+<wb-resource deploy-path="/" source-path="/gensrc"/>
+<wb-resource deploy-path="/" source-path="/src"/>
+</wb-module>
+</project-modules>

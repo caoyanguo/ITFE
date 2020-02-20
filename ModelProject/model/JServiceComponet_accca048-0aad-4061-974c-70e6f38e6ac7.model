@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="accca048-0aad-4061-974c-70e6f38e6ac7" name="缓存服务" ename="ItfeCache" shared="true">
+  <jproperties id="d5e16780-48d9-474e-ac69-ce0da3cd145c" key="GeneratedTime" value="1442541087760"/>
+  <refModule href="JModule_57d74aac-5599-4965-be54-900a36b2a15f.model#57d74aac-5599-4965-be54-900a36b2a15f"/>
+  <methods id="547edb3b-cd17-48fe-9d8f-ca1d102504eb" ename="cacheEnumValue" name="cacheEnumValue" codecomment="返回枚举值信息" returntype="java.util.List"/>
+  <methods id="0cd47f98-d75b-4385-b649-cdae9d24e600" ename="cacheEnumValueByCode" name="返回枚举值信息" codecomment="根据代码编号返回枚举值信息" returntype="java.util.List">
+    <methodParams id="08fc6112-a790-43a1-8c4b-f1667d3f636b" name="枚举类型编码" ename="typecode" type="java.lang.String"/>
+  </methods>
+  <methods id="337161bc-0313-4f9d-8ac8-15ac668588c2" ename="cacheGetCenterOrg" name="返回枚举值信息" codecomment="根据代码编号返回枚举值信息" returntype="java.lang.String"/>
+  <methods id="05a6c5ca-f0d2-467c-908b-9e3b345a69ea" ename="cacheGetValueByDto" name="根据传入的DTO查找对应的记录" returntype="java.util.List">
+    <methodParams id="43f57cd5-07af-4b95-8f7e-6d35ea85a773" name="查询条件DTO" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="7b6b9f53-d82e-4ab8-a242-887d49fc7ee9" ename="cacheEnumValueBySql" name="根据sql语句获取枚举" returntype="java.util.List">
+    <methodParams id="b5efabee-a9c3-4f38-9fe1-099b3844d1c0" name="sql语句" ename="sql" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

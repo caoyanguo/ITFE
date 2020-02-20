@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c5c65ffa-ee1d-4fb8-ba1d-286f51ca5666" name="退库原因对照维护" ename="TsDrawbackreason" shared="true">
+  <jproperties id="49d21d5a-06f5-4177-b249-c56b93587838" key="GeneratedTime" value="1380180330218"/>
+  <refModule href="JModule_ab9a5eb6-9710-45f0-ac49-506e06d3a2a3.model#ab9a5eb6-9710-45f0-ac49-506e06d3a2a3"/>
+  <model id="cd2fe7de-2ef6-462d-b970-39850e8ed9f9" name="JModelImpl-cd2fe7de-2ef6-462d-b970-39850e8ed9f9">
+    <attributes id="c2e0d740-ddd8-49a3-b3eb-de550eac3c9e" name="dto" type="com.cfcc.itfe.persistence.dto.TsDrawbackreasonDto"/>
+    <attributes id="d75847f0-1c7f-49e2-8e1c-0c2e6f07176e" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="37bea158-7778-429b-a749-a12ee2fc3a6f" viewers="d2858c80-51f0-41f0-a907-6ba80cf35fa5" name="跳转录入界面" ename="goInput"/>
+    <directions id="e85b95c3-1404-4f7d-a43a-2b67542a5894" name="录入保存" ename="inputSave"/>
+    <directions id="9ecf7326-953f-4d62-870e-56f60f98a18a" viewers="3d41e370-5696-41ab-9826-21ff1c04735d" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="62df400c-7f86-4284-ba8b-c67c9a703f16" name="单选" ename="singleSelect"/>
+    <directions id="91354d89-bbad-4b24-b876-9da91040a6dc" name="删除" ename="delete"/>
+    <directions id="522d0dd4-3e42-4165-8c51-fcc0a3b6a51c" viewers="ef7c8fb8-6df5-46e6-8183-0942f376a089" name="到修改界面" ename="goModify"/>
+    <directions id="42fdd83c-cd73-4d54-ac15-ba28d44a9c15" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_16a22faa-9a6b-4aef-a682-844f6cf30f5d.model#16a22faa-9a6b-4aef-a682-844f6cf30f5d"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="9861ad64-8683-4995-92e6-8ebefa2277fb">
+    <contentareanode id="90bf4bee-205a-4eb4-be6b-d5a7d07fde72" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="96405358-4455-4877-a10f-04194ee056d0" name="核算主体代码" binding="dto.sbookorgcode" visible="true" caption="核算主体代码" enable="false" editable="true" required="true" display="sorgname" underly="sorgcode" modelsource="organlist"/>
+      <widgetRefs xsi:type="model:Text" id="b55ab24b-b38a-4d58-ade3-e488ef9b1b5f" name="stbsdrawcode" binding="dto.stbsdrawcode" caption="横联退库原因代码" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="15319994-9e94-4f5d-8395-b11fb32718d3" name="stcbsdrawcode" binding="dto.stcbsdrawcode" caption="TIPS退库原因代码" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="f1b262be-aa01-4785-b566-194a444cb304" name="stbsdrawname" binding="dto.stbsdrawname" caption="横联退库原因说明" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="69b8acee-0856-4795-a266-10af8b1a86cb" name="stcbsdrawname" binding="dto.stcbsdrawname" caption="TIPS退库原因说明" editable="true" required="true"/>
+    </contentareanode>
+    <contentareanode id="4ff4ca89-c039-4da1-8d2e-af0fa316479a" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="378ac911-9449-48c5-846d-becbd5e69af5" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" refsingleclickdirection="62df400c-7f86-4284-ba8b-c67c9a703f16">
+        <columnlist id="eac44406-86cb-47c8-b51c-81dcd75bf2d9" name="核算主体代码" binding="sbookorgcode" caption="核算主体代码"/>
+        <columnlist id="f32b39fa-43e0-42b5-920f-b6c591c6b914" name="横联退库原因代码" binding="stbsdrawcode" caption="横联退库原因代码"/>
+        <columnlist id="67cf6826-fe00-4c32-a99c-69a975fdb771" name="横联退库原因说明" binding="stbsdrawname" caption="横联退库原因说明"/>
+        <columnlist id="fd9a86aa-51bf-48a0-b565-7ccf7fa57140" name="TIPS退库原因代码" binding="stcbsdrawcode" caption="TIPS退库原因代码"/>
+        <columnlist id="2e50be38-64a9-4a41-a55d-1c956498cd6c" name="TIPS退库原因说明" binding="stcbsdrawname" caption="TIPS退库原因说明"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="4a60d9fe-8817-47b8-afd8-fa7893327221" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="2eec53c3-d875-4151-9639-3ed91305731d" name="核算主体代码" binding="dto.sbookorgcode" caption="核算主体代码" enable="false" editable="false" required="true" display="sorgname" underly="sorgcode" modelsource="organlist"/>
+      <widgetRefs xsi:type="model:Text" id="7eae758d-0647-44ec-8335-81d5349b2b74" name="stbsdrawcode" binding="dto.stbsdrawcode" caption="横联退库原因代码" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="cb5f5689-7014-4d99-b14e-afb3d9da8ee6" name="stcbsdrawcode" binding="dto.stcbsdrawcode" caption="TIPS退库原因代码" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5ea0660a-56da-4b95-b4cf-8a6658b8e4c8" name="stbsdrawname" binding="dto.stbsdrawname" caption="横联退库原因说明" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="ed2e97b3-2e7f-4a1f-959b-f10d8282909e" name="stcbsdrawname" binding="dto.stcbsdrawname" caption="TIPS退库原因说明" editable="true" required="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="ac4aa885-7e9a-413d-9834-6df89a91c4bc">
+    <pages id="544b01b3-5115-42d0-a79e-64e83b7bfd50" name="维护退款原因代码对照表">
+      <views id="3d41e370-5696-41ab-9826-21ff1c04735d" name="维护界面" isdefault="true" contentArea="4ff4ca89-c039-4da1-8d2e-af0fa316479a">
+        <buttonArea id="3ded297a-e58d-4972-877b-80c72d2dbf6a" name="JButtonAreaImpl-3ded297a-e58d-4972-877b-80c72d2dbf6a">
+          <buttons id="8b9bca68-d9ee-44e8-9203-632fced4f6a2" name="maintenanceInput" caption="录入" direction="37bea158-7778-429b-a749-a12ee2fc3a6f"/>
+          <buttons id="22bdf18a-9e57-47fc-bb7e-86a8995e5d43" name="maintenanceDel" caption="删除" direction="91354d89-bbad-4b24-b876-9da91040a6dc"/>
+          <buttons id="9a2acbaa-1494-44a0-861f-8fda0845952a" name="maintenanceMod" caption="修改" direction="522d0dd4-3e42-4165-8c51-fcc0a3b6a51c"/>
+        </buttonArea>
+      </views>
+      <views id="ef7c8fb8-6df5-46e6-8183-0942f376a089" name="修改界面" contentArea="4a60d9fe-8817-47b8-afd8-fa7893327221">
+        <buttonArea id="ed0d86cb-842d-409e-9936-e948417e629b" name="JButtonAreaImpl-ed0d86cb-842d-409e-9936-e948417e629b">
+          <buttons id="b2a308a1-82b3-49d3-8f17-81acfcb8bd65" name="modifySave" caption="保存" checkrequired="true" direction="42fdd83c-cd73-4d54-ac15-ba28d44a9c15"/>
+          <buttons id="0356c875-4628-44fd-82b7-0cd857cb392a" name="modifyBack" caption="返回" direction="9ecf7326-953f-4d62-870e-56f60f98a18a"/>
+        </buttonArea>
+      </views>
+      <views id="d2858c80-51f0-41f0-a907-6ba80cf35fa5" name="录入界面" contentArea="90bf4bee-205a-4eb4-be6b-d5a7d07fde72">
+        <buttonArea id="89172898-0515-4016-a9d8-7430337243ad" name="JButtonAreaImpl-89172898-0515-4016-a9d8-7430337243ad">
+          <buttons id="fa8a7349-9f40-4e0d-8fdf-326bdb14e22d" name="保存" caption="保存" checkrequired="true" direction="e85b95c3-1404-4f7d-a43a-2b67542a5894"/>
+          <buttons id="921a5914-b050-45e1-9366-46a7339e1ce9" name="modifyBack" caption="返回" direction="9ecf7326-953f-4d62-870e-56f60f98a18a"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

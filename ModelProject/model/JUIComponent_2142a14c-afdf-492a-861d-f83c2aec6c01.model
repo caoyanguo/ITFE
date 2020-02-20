@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2142a14c-afdf-492a-861d-f83c2aec6c01" name="1021实时冲正信息查询" ename="TvTaxCancel" shared="true">
+  <jproperties id="feed7650-2531-4789-9f2a-c792a1bc7875" key="GeneratedTime" value="1363144892841"/>
+  <refModule href="JModule_79a71f48-2c05-4f66-827d-d539c7e85c4e.model#79a71f48-2c05-4f66-827d-d539c7e85c4e"/>
+  <model id="1a496167-7d34-4e60-a34f-d2f07b578f36" name="JModelImpl-3248e91c-8484-462a-8a9a-c09f744e9947">
+    <attributes id="7e91f896-d9e0-4286-aae7-b07c630289b6" name="dto" type="com.cfcc.itfe.persistence.dto.TvTaxCancelDto"/>
+    <attributes id="e3d953eb-e082-4c8b-b226-7c00f6ca1a34" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="eb8dfe40-0036-49a2-bccd-f0f4f7eb8f8b" name="单选" ename="singleSelect"/>
+    <directions id="dbcb85f5-ba77-491b-80ce-675fc2e5006b" viewers="f85673d8-66bf-4f3f-8a6b-96443f15fec3" name="查询" ename="taxCancelQuery"/>
+    <directions id="4f3667b7-87d2-406f-ac49-75549d9086c1" viewers="758da281-a047-4b45-922a-c20ee4b0fd95" name="返回" ename="goBack"/>
+  </model>
+  <services href="JServiceComponet_61aa6a87-54c0-480d-98f1-2ac54a74ac8c.model#61aa6a87-54c0-480d-98f1-2ac54a74ac8c"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="a8b5697c-3f4f-4cc3-b72f-76f37a53bf2a">
+    <contentareanode id="915a02db-344b-4af0-9591-bd97eb3a74e5" name="实时冲正信息查询" grouptitle="实时冲正信息查询" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="ec2cfc67-0c58-496b-864d-f876ceb2eb33" name="staxorgcode" binding="dto.staxorgcode" caption="征收机关代码" editable="true">
+        <labelStyle id="b7c40eca-78b1-43aa-9731-b4dbf08e0194" name="LabelStyleImpl-48b2b29f-a347-4019-a1e8-be78859ddd4a" ename="LabelStyleImpld48b2b29f-a347-4019-a1e8-be78859ddd4a"/>
+        <componentStyle id="e866bd7b-53ed-4df1-a536-bc2b2118cb66" name="ComponentStyleImpl-1b611681-4d15-4f7a-893e-25a23c8ff7d6" ename="ComponentStyleImpl1b611681-4d15-4f7a-893e-25a23c8ff7d6"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="87da9ff2-20cb-4acd-8eaf-60c25701510a" name="sentrustdate" binding="dto.sentrustdate" caption="委托日期" editable="true">
+        <labelStyle id="a4307a3b-41a2-4601-ab1a-ea9e0e8f3afe" name="LabelStyleImpl-125b03a7-d89a-4b80-9658-f23c3fbbf29e" ename="LabelStyleImpld125b03a7-d89a-4b80-9658-f23c3fbbf29e"/>
+        <componentStyle id="8ccfc6c9-fefb-4a1b-b0fd-ff6ccdf1b3ea" name="ComponentStyleImpl-cf8dd661-0894-48a8-93a9-d9ed477d41d3" ename="ComponentStyleImplcf8dd661-0894-48a8-93a9-d9ed477d41d3"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="3d0601af-bc43-49ea-adc4-85cc72db3c22" name="scancelappno" binding="dto.scancelappno" caption="冲正申请号" editable="true">
+        <labelStyle id="e93e098f-1b2c-4d8f-bfee-4b27fe39f5af" name="LabelStyleImpl-3d7c7266-5381-435f-aa7f-c00c2e33a25b" ename="LabelStyleImpld3d7c7266-5381-435f-aa7f-c00c2e33a25b"/>
+        <componentStyle id="baa92318-314a-4718-8a9a-6f18a3b96a45" name="ComponentStyleImpl-57fd4b24-f538-4f9a-9864-484ba9ffa704" ename="ComponentStyleImpl57fd4b24-f538-4f9a-9864-484ba9ffa704"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="16a97e93-6cff-4980-8304-1032c78c6a62" name="smsgid" binding="dto.smsgid" caption="报文标识号" editable="true">
+        <labelStyle id="e1a5372d-bc1c-4677-9612-8a62a9e366f5" name="LabelStyleImpl-fcad0eb0-a851-4154-a34e-b490281bfcdb" ename="LabelStyleImpldfcad0eb0-a851-4154-a34e-b490281bfcdb"/>
+        <componentStyle id="adb5a71b-b055-421f-965f-223ce20b04ad" name="ComponentStyleImpl-680d4af3-d081-42cb-a45e-ef0b2eabf2b3" ename="ComponentStyleImpl680d4af3-d081-42cb-a45e-ef0b2eabf2b3"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="85d225c7-2222-4fd8-8a4a-fc36b8ed46c1" name="soritrano" binding="dto.soritrano" caption="原交易流水号" editable="true">
+        <labelStyle id="5386fe72-75cd-4b5a-a3ef-f60344fa89a5" name="LabelStyleImpl-8cb3732c-14f1-4682-b165-298202094564" ename="LabelStyleImpld8cb3732c-14f1-4682-b165-298202094564"/>
+        <componentStyle id="0673bb92-f9d7-4d48-920c-e8ee5d6b18f9" name="ComponentStyleImpl-2e1e92e7-a21e-4635-8963-1654cc6f358b" ename="ComponentStyleImpl2e1e92e7-a21e-4635-8963-1654cc6f358b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="3b6dfe5e-b74e-42cf-837d-391f1f7468f6" name="sorientrustdate" binding="dto.sorientrustdate" caption="原委托日期" editable="true">
+        <labelStyle id="783dbf43-df4d-4823-aff4-21ade27122f4" name="LabelStyleImpl-35fea8a3-4df2-487b-875f-5fa9581bd8eb" ename="LabelStyleImpld35fea8a3-4df2-487b-875f-5fa9581bd8eb"/>
+        <componentStyle id="0ba4ffd2-0ae5-46db-b8fc-e1fa489da03b" name="ComponentStyleImpl-c4cf30d1-9be6-4a3e-a866-e6ea3516de76" ename="ComponentStyleImplc4cf30d1-9be6-4a3e-a866-e6ea3516de76"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a60ee540-a9da-4239-8a80-c292f22574a6" name="实时冲正查询结果" grouptitle="实时冲正查询结果">
+      <widgetRefs xsi:type="model:Table" id="f6593193-50e0-4743-a54c-964e020e4e32" name="实时冲正查询结果" binding="pagingcontext" caption="实时冲正查询结果" tabletype="paging" pagingtable="">
+        <columnlist id="abd04fa2-033d-40bb-ad4a-74db01c81d16" name="tsupdate" binding="tsupdate" caption="更新时间"/>
+        <columnlist id="d53a8816-e1d7-46b5-ac29-e2d63b3db515" name="staxorgcode" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="54c28046-3f85-4cc0-a12e-99476fdc8c59" name="sentrustdate" binding="sentrustdate" caption="委托日期"/>
+        <columnlist id="b5fedc3f-6cf6-4ae6-9269-f4e8c256a145" name="scancelappno" binding="scancelappno" caption="冲正申请号"/>
+        <columnlist id="0e165ef1-eff2-4792-8f5d-0f630fa79c72" name="ccancelanswer" binding="ccancelanswer" caption="冲正应答">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1c453045-fc91-44e9-90a5-c1bb681f197b"/>
+        </columnlist>
+        <columnlist id="68b865de-d5c4-4d8c-b462-1a277585f366" name="smsgid" binding="smsgid" caption="报文标识号"/>
+        <columnlist id="68ef420c-e682-42de-a908-22e80892ba9f" name="soritrano" binding="soritrano" caption="原交易流水号"/>
+        <columnlist id="078bc0d0-66ba-4f3e-aeda-9964b3e4b3b5" name="sorientrustdate" binding="sorientrustdate" caption="原委托日期"/>
+        <columnlist id="ade01235-b0cc-477c-9ea1-5ac3d4624caa" name="scancelreason" binding="scancelreason" caption="冲正原因"/>
+        <columnlist id="eb918170-1eb2-4036-89c0-4733e5e70f3d" name="saddword" binding="saddword" caption="附言"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="ec2231ed-a00d-4d68-8185-61a7ea25f31a">
+    <pages id="5b395b99-3b8b-4f10-a511-00860f172f8b" name="维护实时冲正信息查询">
+      <views id="758da281-a047-4b45-922a-c20ee4b0fd95" name="实时冲正信息查询" isdefault="true" contentArea="915a02db-344b-4af0-9591-bd97eb3a74e5">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="bf810005-34e2-4438-bee1-4f836627e484" name="JButtonAreaImpl-da93485b-c33a-4ae9-a21d-65b4dd582546">
+          <buttons id="aab67847-d5be-4cd6-9104-1c994c8c5f79" name="查询" caption="查询" direction="dbcb85f5-ba77-491b-80ce-675fc2e5006b"/>
+        </buttonArea>
+      </views>
+      <views id="f85673d8-66bf-4f3f-8a6b-96443f15fec3" name="实时冲正查询结果" contentArea="a60ee540-a9da-4239-8a80-c292f22574a6">
+        <buttonArea id="275994cd-b68d-45cf-a019-231b1e0aaa47" name="JButtonAreaImpl-ed908678-aa90-4aec-9a23-15de004ef1a7">
+          <buttons id="c9b047cb-1f30-40d5-b347-e4e6e931e357" name="返回" caption="返回" direction="4f3667b7-87d2-406f-ac49-75549d9086c1"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

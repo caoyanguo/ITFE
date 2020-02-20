@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b2487cb6-3d6a-4f54-a090-e7e885395f96" name="清算行" ename="TsPaybank" shared="true"/>

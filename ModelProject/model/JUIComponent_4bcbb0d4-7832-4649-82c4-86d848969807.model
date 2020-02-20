@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="4bcbb0d4-7832-4649-82c4-86d848969807" name="珠海征收机关转换" ename="tsconvertax">
+  <jproperties id="188c4792-1b73-4ce7-ae08-fe9c298af614" key="GeneratedTime" value="1380183021921"/>
+  <refModule href="JModule_fdccb851-d21b-4a88-9d75-9d23448e3f3e.model#fdccb851-d21b-4a88-9d75-9d23448e3f3e"/>
+  <model id="5526c508-4ac0-4249-a683-b2e504c116c1" name="JModelImpl-5526c508-4ac0-4249-a683-b2e504c116c1">
+    <attributes id="8380c8f7-1ad1-495a-b970-37d88f2fb614" name="searchDto" type="com.cfcc.itfe.persistence.dto.TsConvertaxDto"/>
+    <attributes id="30c08f2d-08ee-4db6-a490-22fad0fc293a" name="detailDto" type="com.cfcc.itfe.persistence.dto.TsConvertaxDto"/>
+    <attributes id="b4a6c0e7-2459-4a91-92ad-c7b2c558a795" name="oriDto" type="com.cfcc.itfe.persistence.dto.TsConvertaxDto"/>
+    <attributes id="05dc1de7-8184-43ab-925e-9c4b3029a95c" name="searchresult" type="java.util.List"/>
+    <directions id="ec840ffa-3308-4316-bf33-273449e43090" name="表格单击" ename="singleclick"/>
+    <directions id="1152e356-1c3f-4807-9c9e-ca1a166760b0" viewers="5c813c5d-68a4-4ecb-b858-592b33e41e06" name="返回默认页面" ename="gomainview"/>
+    <directions id="5cc9174f-c8d4-45f6-b669-63aaf88bd77a" name="删除" ename="del"/>
+    <directions id="ded3396a-cea1-4ca1-8c06-56722f1cadeb" viewers="088b909f-8202-46a3-aeac-82ee681d60d1" name="跳转录入页面" ename="goaddview"/>
+    <directions id="58ccabf8-407d-4100-9e52-3efae774b109" viewers="6e635afe-07b8-4478-b13c-86ff2f168431" name="跳转更新页面" ename="gomodview"/>
+    <directions id="194b8543-d0cd-4cfe-b22b-2c0745e92133" name="查询" ename="search"/>
+    <directions id="f0159646-26c4-4c4d-b870-f4a52340e1e2" viewers="5c813c5d-68a4-4ecb-b858-592b33e41e06" name="添加信息" ename="addInfo"/>
+    <directions id="3b54542a-0deb-4b8b-823d-4b523bc9a851" viewers="5c813c5d-68a4-4ecb-b858-592b33e41e06" name="修改信息" ename="modInfo"/>
+  </model>
+  <services href="JServiceComponet_29140f32-0339-4f31-ab90-861d460e7842.model#29140f32-0339-4f31-ab90-861d460e7842"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="9591b604-354f-4ceb-9767-2fc159eacaa1">
+    <contentareanode id="b7d727f7-acea-4cd0-8559-e90805cfb186" name="查询" grouptitle="查询">
+      <widgetRefs xsi:type="model:Text" id="2cd1966d-e74f-469d-89aa-7b9bdae480c4" name="横联征收机关代码" binding="searchDto.staxcode" caption="横联征收机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="91721eeb-195b-4be5-93ea-ae8512f67b80" name="TCBS征收机关代码" binding="searchDto.stcbstax" caption="TBS征收机关代码"/>
+    </contentareanode>
+    <contentareanode id="92b2730d-f19d-481d-af16-f15e8dcdaee1" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="9e80f79c-0414-4ae1-9dc2-65b7a6161b0b" name="TableImpl-9e80f79c-0414-4ae1-9dc2-65b7a6161b0b" binding="searchresult" refsingleclickdirection="ec840ffa-3308-4316-bf33-273449e43090">
+        <columnlist id="27822c2e-5c34-4543-be1b-f49568a32146" name="横联征收机关代码" binding="staxcode" caption="横联征收机关代码"/>
+        <columnlist id="04fe8b9b-8b1d-43da-852e-4e65d5dc5e02" name="BS征收机关代码" binding="stcbstax" caption="TBS征收机关代码"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="c4339e23-a5a5-4590-ac66-1e0327255d9a" name="信息录入" grouptitle="信息录入">
+      <widgetRefs xsi:type="model:Text" id="61394388-1b2b-4e85-9ba3-5b0593f55880" name="横联征收机关代码" binding="detailDto.staxcode" caption="横联征收机关代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="f9f5eb41-9d61-43cc-9fb2-fd7364a923ba" name="TBS征收机关代码" binding="detailDto.stcbstax" caption="TBS征收机关代码" required="true"/>
+    </contentareanode>
+    <contentareanode id="845bdec8-94c3-4b81-b732-8e08b3830cb9" name="信息修改" grouptitle="信息修改">
+      <widgetRefs xsi:type="model:Text" id="b1b0f05f-813d-46f4-ae6b-3e9416cc6685" name="横联征收机关代码" binding="detailDto.staxcode" caption="横联征收机关代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="8f7976da-1b3b-454b-a966-e8df65e4dcc0" name="TCBS征收机关代码" binding="detailDto.stcbstax" caption="TCBS征收机关代码" required="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="77a26872-f77a-425c-9a63-187e8774fa0e">
+    <pages id="ff42392e-d3cb-4114-b669-24866b01478f" name="珠海征收机关转换">
+      <views id="5c813c5d-68a4-4ecb-b858-592b33e41e06" name="查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="b7d727f7-acea-4cd0-8559-e90805cfb186 92b2730d-f19d-481d-af16-f15e8dcdaee1">
+        <buttonArea id="5c51a64d-d21d-4dd0-b995-f54bc29b7bc3" name="JButtonAreaImpl-5c51a64d-d21d-4dd0-b995-f54bc29b7bc3">
+          <buttons id="eda32f6f-c812-40e7-ac37-77e345e21f7d" name="查询" caption="查询" direction="194b8543-d0cd-4cfe-b22b-2c0745e92133"/>
+          <buttons id="4e94d008-8009-4964-a9ec-c1a006c9294b" name="录入" caption="录入" direction="ded3396a-cea1-4ca1-8c06-56722f1cadeb"/>
+          <buttons id="afa51185-3f19-4450-a704-abec8a88df18" name="修改" caption="修改" direction="58ccabf8-407d-4100-9e52-3efae774b109"/>
+          <buttons id="e906a4ff-d0b0-4a2e-8441-cd4a8a32532f" name="删除" caption="删除" direction="5cc9174f-c8d4-45f6-b669-63aaf88bd77a"/>
+        </buttonArea>
+      </views>
+      <views id="088b909f-8202-46a3-aeac-82ee681d60d1" name="信息录入" contentArea="c4339e23-a5a5-4590-ac66-1e0327255d9a">
+        <buttonArea id="44c30f9f-b039-431b-a81d-82cb6ea920fc" name="JButtonAreaImpl-44c30f9f-b039-431b-a81d-82cb6ea920fc">
+          <buttons id="520c6675-d1bd-4346-b74a-268aabcc2a76" name="保存" caption="保存" checkrequired="true" direction="f0159646-26c4-4c4d-b870-f4a52340e1e2"/>
+          <buttons id="7dabdfa5-f698-4be4-9aab-48fc1ef02d4e" name="返回" caption="返回" direction="1152e356-1c3f-4807-9c9e-ca1a166760b0"/>
+        </buttonArea>
+      </views>
+      <views id="6e635afe-07b8-4478-b13c-86ff2f168431" name="信息修改" contentArea="845bdec8-94c3-4b81-b732-8e08b3830cb9">
+        <buttonArea id="0663214d-ba84-412d-8262-8bc382e7ab33" name="JButtonAreaImpl-0663214d-ba84-412d-8262-8bc382e7ab33">
+          <buttons id="dbd25b6b-db0b-49a1-922c-93723b7ea1a3" name="保存" caption="保存" checkrequired="true" direction="3b54542a-0deb-4b8b-823d-4b523bc9a851"/>
+          <buttons id="8944d1e2-0153-46b9-b3b1-518adef52e0c" name="返回" caption="返回" direction="1152e356-1c3f-4807-9c9e-ca1a166760b0"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

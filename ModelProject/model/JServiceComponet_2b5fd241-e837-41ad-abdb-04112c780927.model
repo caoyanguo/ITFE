@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2b5fd241-e837-41ad-abdb-04112c780927" name="系统日志服务组件" ename="TsSyslog">
+  <jproperties id="a1ecb181-1990-4dc5-bb97-9465120ea826" key="GeneratedTime" value="1258532473437"/>
+  <refModule href="JModule_5a629cec-8999-4f2e-8a61-f124596c60c7.model#5a629cec-8999-4f2e-8a61-f124596c60c7"/>
+  <methods id="37dd9ed5-fa65-477d-a3c5-fd74fab34a54" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="系统日志">
+    <methodParams id="00131e24-1b23-4a28-8b76-5f8182cd5345" name="系统日志" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="ef002542-2023-463f-bab0-f64374036a3c" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="fc8e70a2-5daa-4097-86fe-300bd60e3cb8" name="系统日志" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="ef002542-2023-463f-bab0-f64374036a3c" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="5da64125-1559-441e-a7ec-041a7d139e6d" name="系统日志" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

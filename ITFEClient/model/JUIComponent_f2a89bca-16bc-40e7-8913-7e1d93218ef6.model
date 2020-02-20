@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f2a89bca-16bc-40e7-8913-7e1d93218ef6" name="财政专户参数维护" ename="tsMtofAccpt">
+  <jproperties id="a575e412-1c59-4c06-b7aa-2a11afaba7c3" key="GeneratedTime" value="1441865314450"/>
+  <refModule href="JModule_fe2c9fb2-e123-404f-a76a-7eb94161ed8c.model#fe2c9fb2-e123-404f-a76a-7eb94161ed8c"/>
+  <model id="31216207-73fa-47ac-95fa-b09fdc5f0281" name="JModelImpl-31216207-73fa-47ac-95fa-b09fdc5f0281">
+    <directions id="38c40957-9a77-4b9b-8906-82baa4cc67a0" viewers="83e1542d-a858-4410-8300-9060d7add9bb" name="跳转录入界面" ename="goInput"/>
+    <directions id="df635dac-8052-4186-bd64-2314e5c98933" name="删除" ename="delete"/>
+    <directions id="773cacd5-a1b0-4ed3-a31f-3044b6311b95" viewers="2b3ede3f-d05a-4615-9357-bc69ef1996ec" name="到修改界面" ename="goModify"/>
+    <directions id="72563974-4252-4e6d-a3b9-456eab9c05b5" viewers="397048a7-d7b8-4273-bf84-891485793607" name="修改保存" ename="modifySave"/>
+    <directions id="ce7328be-d0b0-4983-968b-f81da8bbcf7c" viewers="397048a7-d7b8-4273-bf84-891485793607" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="ac6065d9-14d3-4930-b81a-c04efc9c55bf" viewers="397048a7-d7b8-4273-bf84-891485793607" name="录入保存" ename="inputSave"/>
+    <directions id="efc63265-7282-4cf8-b95a-001d562aba93" name="单选" ename="singleSelect"/>
+    <directions id="de301b91-383b-4bf9-9209-8ff4645a32bc" viewers="397048a7-d7b8-4273-bf84-891485793607" name="查询" ename="search"/>
+    <directions id="665f5438-72c5-4906-a754-80eb2265338b" viewers="8bbd659d-ef4e-4be3-81df-0e207235ab13" name="返回" ename="goBack"/>
+    <directions id="3aa960ab-f33e-4630-bd1f-aa71aca58afd" name="数据导入" ename="uploadimport"/>
+    <directions id="222b6caf-ba2e-4b2e-9fab-5188edd16839" viewers="55c9336a-5034-4a1e-9b17-5c4019c3be8d" name="报表打印" ename="reportprint"/>
+    <directions id="e27e98ec-6429-4d22-909c-f240efc8bf8a" viewers="f5ecb4b5-303e-4bd9-8bd2-cc6ffeb9f004" name="到数据导入界面" ename="gouploadimport"/>
+    <directions id="245fdaf4-f2b5-42fe-9598-1562d48c1965" viewers="83e1542d-a858-4410-8300-9060d7add9bb" name="到录入界面" ename="searchgoinput"/>
+  </model>
+  <contentAreas id="718b5487-401c-4677-84c7-1baa97472614">
+    <contentareanode id="7d19463d-c756-479c-8771-3d5f8293d2bf" name="信息录入" grouptitle="信息录入">
+      <widgetRefs xsi:type="model:Combo" id="335ad219-4ab5-4c42-ab43-de4729547c70" name="账户归属国库" binding="updatedto.strecode" caption="账户归属国库" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8e94facf-d2a2-4a2d-a77c-dd7ac0dd8b6d" name="账户账号" binding="updatedto.spayeeacct" caption="账户账号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5692ba3c-b312-4ad4-bd22-85aaa248517c" name="账户名称" binding="updatedto.spayeename" caption="账户名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="53eda448-0d8d-4209-950b-442faa3e5a02" name="开户行行号" binding="updatedto.sopnbankcode" caption="开户行行号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="eb52c5fb-34c9-4a23-bcc0-2d6a7e9c01c4" name="开户行名称" binding="updatedto.sopnbankname" caption="开户行名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="565a11d6-f376-45d6-ba64-bfbe655b1ef3" name="开户行类别" binding="updatedto.sext1" caption="开户行类别" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="2828ad8f-2196-411a-8cd6-adf9b004b86c" name="账户性质" binding="updatedto.sacctnature" caption="账户性质" required="true" display="displayValue" underly="underlyValue" modelsource="sacctnaturelist"/>
+      <widgetRefs xsi:type="model:Text" id="dfa4c0b4-e722-442c-8ef8-a0089438f506" name="开户日期" binding="updatedto.sopendate" caption="开户日期"/>
+      <widgetRefs xsi:type="model:Text" id="b18d6146-6702-45cc-92f9-4f06f5b6c6ba" name="销户日期" binding="updatedto.sclosedate" caption="销户日期"/>
+      <widgetRefs xsi:type="model:Text" id="2c782445-5653-4760-91f1-d3e312ad9996" name="账户用途" binding="updatedto.sacctused" caption="账户用途"/>
+      <widgetRefs xsi:type="model:Text" id="c7c024e4-de93-42f6-b86b-cae30a640450" name="备注" binding="updatedto.sremark" caption="备注"/>
+      <widgetRefs xsi:type="model:Combo" id="6a2195b0-adab-4012-a5f0-73d5597c2ad3" name="状态" binding="updatedto.sstates" caption="状态" required="true" display="displayValue" underly="underlyValue" modelsource="sstateslist"/>
+    </contentareanode>
+    <contentareanode id="99279333-1078-4bf4-8baa-4c7cd836c635" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="6734bbc2-ae5b-415f-90a6-fed8902c93a6" name="maintenanceResult" binding="paging" tabletype="paging" showcheckbox="true" selectedrows="checklist">
+        <columnlist id="3fda476e-e8a1-4fd8-9ded-8bb5276a84f2" name="sorgcode" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="0abc40ea-2a9a-4c94-b820-404757128e67" name="strecode" binding="strecode" caption="账户所属国库">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+        </columnlist>
+        <columnlist id="a11e1588-6867-409c-bbdf-14fba8363093" name="spayeeacct" binding="spayeeacct" caption="专户账户账号"/>
+        <columnlist id="caa52803-aa6a-425b-a584-5295901cbe70" name="spayeename" binding="spayeename" caption="专户账户名称"/>
+        <columnlist id="304f9931-94e9-40eb-a7f3-f82cd447e7ac" name="sopnbankcode" binding="sopnbankcode" caption="专户账户开户行行号"/>
+        <columnlist id="be1e5c2a-20fd-4e08-ba57-4e9f62e6f2da" name="sopnbankname" binding="sopnbankname" caption="专户账户开户行名称"/>
+        <columnlist id="15ee9ba0-c824-46f0-922f-73192f831c46" name="sext1" binding="sbnktype" caption="专户账户开户行类别"/>
+        <columnlist id="54c311c7-8d6b-4989-8fe9-508883d5706a" name="sacctnature" binding="sacctnature" caption="专户账户性质"/>
+        <columnlist id="cc815e61-4763-46c0-8525-82213b2475b7" name="sopendate" binding="sopendate" caption="开户日期"/>
+        <columnlist id="01d69974-5a9f-4bda-86c7-9731b77edc81" name="sclosedate" binding="sclosedate" caption="销户日期"/>
+        <columnlist id="f0cca9cd-7471-44db-aa4d-0845a7d24dc5" name="sacctused" binding="sacctused" caption="账户用途"/>
+        <columnlist id="dcdfe03c-674d-4920-8c7e-3eabd0bf4d1d" name="sremark" binding="sremark" caption="备注"/>
+        <columnlist id="7d4bda22-7c68-4ecc-a4a7-c6d9c094e9ca" name="sstates" binding="sstates" caption="账户状态"/>
+        <columnlist id="a69bf37f-64e0-4750-9ab5-fa8bcb4e4bec" name="tssysupdate" binding="tssysupdate" caption="系统更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="cd32cb2e-c083-4e76-9b67-7f9463042738" name="信息修改" grouptitle="信息修改">
+      <widgetRefs xsi:type="model:Combo" id="6687ecf0-5dcd-43d8-9bef-0fb4623fc36d" name="账户归属国库" binding="updatedto.strecode" caption="账户归属国库" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ffc71951-3ca4-4988-b4bf-ee49a5830f9f" name="账户账号" binding="updatedto.spayeeacct" caption="账户账号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="8389d4ac-2220-41e3-85f4-73f2af4d4e87" name="账户名称" binding="updatedto.spayeename" caption="账户名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="9bad8425-71af-40d1-9173-84f7cd6dcad1" name="开户行行号" binding="updatedto.sopnbankcode" caption="开户行行号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="553eb12a-f934-4cf0-baa6-9690a577a730" name="开户行名称" binding="updatedto.sopnbankname" caption="开户行名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="461560dc-b15c-42e3-bdd5-21dd8908d34d" name="开户行类别" binding="updatedto.sext1" caption="开户行类别" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="acaca241-3ceb-41ab-8ba7-a56a2630f90b" name="账户性质" binding="updatedto.sacctnature" caption="账户性质" display="displayValue" underly="underlyValue" modelsource="sacctnaturelist"/>
+      <widgetRefs xsi:type="model:Text" id="bc4f436c-6695-49dc-b7fb-9d4376cc7be5" name="开户日期" binding="updatedto.sopendate" caption="开户日期"/>
+      <widgetRefs xsi:type="model:Text" id="bd4ebe8d-7d39-49f1-9e80-5c0952b6af49" name="销户日期" binding="updatedto.sclosedate" caption="销户日期"/>
+      <widgetRefs xsi:type="model:Text" id="1f317a68-0819-4d17-9cba-12c54b8410bd" name="账户用途" binding="updatedto.sacctused" caption="账户用途"/>
+      <widgetRefs xsi:type="model:Text" id="408e2bf3-3cde-4a34-af81-bf69fa187731" name="备注" binding="updatedto.sremark" caption="备注"/>
+      <widgetRefs xsi:type="model:Combo" id="516748ad-b4ae-4802-9314-9c0281a56301" name="状态" binding="updatedto.sstates" caption="状态" display="displayValue" underly="underlyValue" modelsource="sstateslist"/>
+    </contentareanode>
+    <contentareanode id="b5d4e8a4-e08d-42aa-8541-1a7f913daa0f" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Combo" id="2bad7a25-50ce-4087-9806-c81576c9b7a0" name="账户归属国库" binding="searchdto.strecode" caption="账户归属国库">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8faee2bf-8918-4a4b-b7ee-bd54e3efd3ae" name="账户账号" binding="searchdto.spayeeacct" caption="账户账号"/>
+      <widgetRefs xsi:type="model:Text" id="08d9c54b-bed3-40a1-8ad4-1fb9006e29e5" name="账户名称" binding="searchdto.spayeename" caption="账户名称"/>
+      <widgetRefs xsi:type="model:Text" id="e8fe3a9b-e162-4ce5-ab7a-3e180c0969c7" name="开户行行号" binding="searchdto.sopnbankcode" caption="开户行行号"/>
+      <widgetRefs xsi:type="model:Text" id="89e824bd-421f-4a2d-a3b1-75ee89e574fe" name="开户行名称" binding="searchdto.sopnbankname" caption="开户行名称"/>
+      <widgetRefs xsi:type="model:Text" id="12de59f7-480e-4c5c-9a33-8e6862f069c1" name="开户行类别" binding="searchdto.sext1" caption="开户行类别" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="259edc20-8ace-4c3f-af3e-bcfa36b5bae6" name="账户性质" binding="searchdto.sacctnature" caption="账户性质" display="displayValue" underly="underlyValue" modelsource="sacctnaturelist"/>
+      <widgetRefs xsi:type="model:Text" id="df62fa03-4893-48da-8333-bf2a1d8ff3c9" name="开户日期" binding="searchdto.sopendate" caption="开户日期"/>
+      <widgetRefs xsi:type="model:Text" id="ddbeae9c-00af-4b46-8fc7-52d3237e8ee2" name="销户日期" binding="searchdto.sclosedate" caption="销户日期"/>
+      <widgetRefs xsi:type="model:Text" id="cde07e24-a554-4441-94ce-e0de3d1176df" name="账户用途" binding="searchdto.sacctused" caption="账户用途"/>
+      <widgetRefs xsi:type="model:Text" id="015d45c3-ffeb-4855-9a8f-14ea147d6dcf" name="备注" binding="searchdto.sremark" caption="备注"/>
+      <widgetRefs xsi:type="model:Combo" id="f094bf48-afdd-451d-a770-7d299de5a192" name="状态" binding="searchdto.sstates" caption="状态" display="displayValue" underly="underlyValue" modelsource="sstateslist"/>
+    </contentareanode>
+    <contentareanode id="7fa42f87-3db2-48ed-92ce-a57beac9755c" name="数据导入" grouptitle="数据导入">
+      <widgetRefs xsi:type="model:FileUploader" id="5f602066-93ea-4e6d-afb3-5b5665cdc6ac" name="选择文件" extpoperties="" binding="uploadfile" caption="选择文件" enable="true" editable="true" message="" pattern="" required="true" isdirectory="false" ismult="false"/>
+      <widgetRefs xsi:type="model:Textarea" id="ab0ceaed-0bba-41db-a2f0-a074e7a7f0c0" name="TextareaImpl-ab0ceaed-0bba-41db-a2f0-a074e7a7f0c0" binding="tips" caption="功能说明" editable="false">
+        <componentStyle id="76d24c9f-3680-4a1a-98e2-2444480d8b1a" name="ComponentStyleImpl-76d24c9f-3680-4a1a-98e2-2444480d8b1a" ename="ComponentStyleImpl76d24c9f36804a1a98e22444480d8b1a" width="820" height="50" widthhint="820" heighthint="50" componentheight="50" innercompositewidth="820" innerhorizontalalignment="" innerverticalalignment=""/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a1f1b76d-3921-47aa-9c36-16eb0f08816a" name="报表打印" grouptitle="">
+      <jreportref id="85e7bbca-a905-462e-a6b1-ec54ee0f480b" name="财政专户账户统计" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="9954024a-4b43-4287-9e22-984af3e83531">
+    <pages id="cc7e3143-f5a9-478e-bcd6-9e245dc3cb4f" name="财政专户参数维护" functioncode="">
+      <views id="8bbd659d-ef4e-4be3-81df-0e207235ab13" name="信息查询" isdefault="true" contentArea="b5d4e8a4-e08d-42aa-8541-1a7f913daa0f">
+        <buttonArea id="c3e1b9cc-82ad-415a-a91d-a05685f3607b" name="JButtonAreaImpl-c3e1b9cc-82ad-415a-a91d-a05685f3607b">
+          <buttons id="fa8a8f46-8f47-492b-8e57-20c2a54111de" name="导入" caption="导入" direction="e27e98ec-6429-4d22-909c-f240efc8bf8a"/>
+          <buttons id="737cef92-0990-4afc-949c-ceca88d674c4" name="maintenanceInput" caption="录入" direction="245fdaf4-f2b5-42fe-9598-1562d48c1965"/>
+          <buttons id="65844ac4-b77a-40cd-ae67-1896dfee355f" name="查询" caption="查询" direction="de301b91-383b-4bf9-9209-8ff4645a32bc"/>
+        </buttonArea>
+      </views>
+      <views id="83e1542d-a858-4410-8300-9060d7add9bb" name="录入界面" contentArea="7d19463d-c756-479c-8771-3d5f8293d2bf">
+        <buttonArea id="d2cc2816-efd1-459c-a760-aa6ac7755e4f" name="JButtonAreaImpl-d2cc2816-efd1-459c-a760-aa6ac7755e4f">
+          <buttons id="ff8b5697-0968-4203-868d-b13acc0fc442" name="inputSave" caption="保存" required="true" checkrequired="true" direction="ac6065d9-14d3-4930-b81a-c04efc9c55bf"/>
+          <buttons id="682d5376-7b16-4894-b544-20d9b8b6d11d" name="modifyBack" caption="返回" direction="ce7328be-d0b0-4983-968b-f81da8bbcf7c"/>
+        </buttonArea>
+      </views>
+      <views id="397048a7-d7b8-4273-bf84-891485793607" name="查询结果" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="99279333-1078-4bf4-8baa-4c7cd836c635">
+        <buttonArea id="23ae572f-6c59-4d19-936e-e354f9e98066" name="JButtonAreaImpl-23ae572f-6c59-4d19-936e-e354f9e98066">
+          <buttons id="f6b270d2-83c9-4a7c-ac3e-7f1b0ec9bd37" name="maintenanceInput" caption="录入" direction="38c40957-9a77-4b9b-8906-82baa4cc67a0"/>
+          <buttons id="31aec467-5b1c-41ea-97c1-f7280d6b038a" name="maintenanceMod" caption="修改" direction="773cacd5-a1b0-4ed3-a31f-3044b6311b95"/>
+          <buttons id="a201bcdc-3a38-4624-8a14-94d560aca258" name="maintenanceDel" caption="删除" direction="df635dac-8052-4186-bd64-2314e5c98933"/>
+          <buttons id="4de1d948-e9ff-4293-876b-30e25ecb3fe7" name="打印" caption="打印" direction="222b6caf-ba2e-4b2e-9fab-5188edd16839"/>
+          <buttons id="5b5e00f3-8e41-463d-b74a-cb673216e987" name="返回" caption="返回" direction="665f5438-72c5-4906-a754-80eb2265338b"/>
+        </buttonArea>
+      </views>
+      <views id="2b3ede3f-d05a-4615-9357-bc69ef1996ec" name="修改界面" contentArea="cd32cb2e-c083-4e76-9b67-7f9463042738">
+        <buttonArea id="21e34e0c-7ac0-4124-a74c-74cb110a5bdf" name="JButtonAreaImpl-49e38c44-57fb-40e3-9442-27ae0bb3fcd6">
+          <buttons id="e9531538-f980-4110-b80f-73031856b72f" name="modifySave" caption="保存" required="true" checkrequired="true" direction="72563974-4252-4e6d-a3b9-456eab9c05b5"/>
+          <buttons id="2f99756f-4af5-4456-80e8-72d73371b25b" name="modifyBack" caption="返回" direction="ce7328be-d0b0-4983-968b-f81da8bbcf7c"/>
+        </buttonArea>
+      </views>
+      <views id="f5ecb4b5-303e-4bd9-8bd2-cc6ffeb9f004" name="数据导入" contentArea="7fa42f87-3db2-48ed-92ce-a57beac9755c">
+        <buttonArea id="9a838729-e8dd-466a-8f11-b8441bc86c36" name="JButtonAreaImpl-9a838729-e8dd-466a-8f11-b8441bc86c36">
+          <buttons id="ce449c25-8d53-4eb5-88e9-4573ca6c67aa" name="导入" caption="导入" checkrequired="true" direction="3aa960ab-f33e-4630-bd1f-aa71aca58afd"/>
+          <buttons id="f4025220-254d-4f84-8ff7-2f84d301f715" name="返回" caption="返回" direction="665f5438-72c5-4906-a754-80eb2265338b"/>
+        </buttonArea>
+      </views>
+      <views id="55c9336a-5034-4a1e-9b17-5c4019c3be8d" name="报表打印" contentArea="a1f1b76d-3921-47aa-9c36-16eb0f08816a">
+        <buttonArea id="754bc209-8e63-486c-ac79-4e87369356d7" name="JButtonAreaImpl-754bc209-8e63-486c-ac79-4e87369356d7">
+          <buttons id="40f98f7f-c7b9-4002-9c6c-1b8865d6d942" name="返回" caption="返回" direction="ce7328be-d0b0-4983-968b-f81da8bbcf7c"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#503104e7-c167-4a8a-b58c-494fdbb335d9"/>
+</model:JUIComponent>

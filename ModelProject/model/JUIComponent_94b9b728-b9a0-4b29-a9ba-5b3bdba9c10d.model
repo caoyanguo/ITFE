@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="94b9b728-b9a0-4b29-a9ba-5b3bdba9c10d" name="预算科目查询" ename="TsBudgetsubject" shared="true">
+  <jproperties id="d7cf6eed-97d2-476d-bff0-f95c79729099" key="GeneratedTime" value="1441681603335"/>
+  <refModule href="JModule_dff45652-f27d-4f37-844b-83db8bb8d4a9.model#dff45652-f27d-4f37-844b-83db8bb8d4a9"/>
+  <model id="7b02f11e-190c-469a-bf4d-2a57b01cf6b9" name="JModelImpl-7b02f11e-190c-469a-bf4d-2a57b01cf6b9">
+    <directions id="dd52ab3e-1dd5-4921-8af4-b90aa8524011" viewers="93730bc1-be72-440c-ab60-93b30e622dc3" name="跳转录入界面" ename="goInput"/>
+    <directions id="fab88114-27cc-421e-8ef9-ecd682694a37" name="录入保存" ename="inputSave"/>
+    <directions id="df37d532-f857-4aa6-86de-aa73837208d6" viewers="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="aef248fc-7a0b-484d-a8a1-d55519d0f438" name="单选" ename="singleSelect"/>
+    <directions id="fcc408cf-291d-4f75-b036-88b81bf8c2ca" name="删除" ename="delete"/>
+    <directions id="ee0fbbcd-82b5-4640-aa99-2ae883ada6a4" viewers="830a53a9-f638-41be-9592-8dba42d0d27a" name="到修改界面" ename="goModify"/>
+    <directions id="906bc916-c6ec-4ea0-8d2f-8976d0e7dba4" name="修改保存" ename="modifySave"/>
+    <directions id="7c645d16-610c-4e96-a7b7-2062bd388e67" viewers="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="查询" ename="queryBudget"/>
+    <directions id="f192de23-dd9a-4da8-8956-4f652bf0c83f" viewers="f9acdb32-8f47-45ea-82a4-b845af74d23e" name="返回" ename="goBack"/>
+    <directions id="ba145e71-e266-4faa-9f9b-2febd1d450df" name="导出" ename="expfile"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_506b8066-bcc1-4f6d-aca4-f54b24f85f38.model#506b8066-bcc1-4f6d-aca4-f54b24f85f38"/>
+  <contentAreas id="99e3d667-99bb-46bd-a43c-eda30d44cfb2">
+    <contentareanode id="77fe103b-5874-4804-9d31-2ba6c8bd418c" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Text" id="b3d61f9a-b5d9-4833-813c-2a488925ceb8" name="科目代码" binding="querydto.ssubjectcode" caption="科目代码"/>
+      <widgetRefs xsi:type="model:Combo" id="8325c067-e043-44c6-beb2-4a7d7250289c" name="科目种类" binding="querydto.ssubjectclass" caption="科目种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#df715eda-8d3a-4871-9b8e-bd8494c02ba2"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="82fdcbe8-44f2-490d-80ca-d5f1160cc220" name="科目分类" binding="querydto.sclassflag" caption="科目分类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b02bac21-1a22-4704-b4af-56d5542e9de8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="d428a5b3-2cf8-47de-8929-627c561bbcd9" name="预算属性" extpoperties="" binding="querydto.sbudgettype" caption="预算属性">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4a2a1b30-1705-4183-8c27-9848583f3f26"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4566fac0-4b46-4484-b64c-4cc36efd2afb" name="科目类型" binding="querydto.ssubjecttype" caption="科目类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aee6ea4c-1e24-4167-88ca-28b74274d1ea"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="dd7828d0-5444-49ee-b006-cabd05586b3f" name="录入标志" binding="querydto.swriteflag" caption="录入标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c826ddbf-b705-4220-b4a5-4b33d8850769"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="2731ac85-3c5b-48ec-a978-e7ad256a71e2" name="科目属性" binding="querydto.ssubjectattr" caption="科目属性">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9f12ef04-1702-463b-a0b8-6af4ac3f9e95"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="69f42f9d-0e8d-454c-a6ac-6cb8afc60242" name="调拨标志" binding="querydto.smoveflag" caption="调拨标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ecf0ef12-269d-481d-8deb-fb5ebc3cb903"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ef675005-aabc-4271-a15b-82982cc151e9" name="收支标志" binding="querydto.sinoutflag" caption="收支标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#087554ad-fd37-41a4-8813-75127eeced90"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="3cfaf175-fee5-4c8d-8da8-f57f0c9def86" name="退税类别" binding="querydto.sdrawbacktype" visible="false" caption="退税类别" enable="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8425b24a-f674-46f4-b242-d035295b3b64"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="adc38458-bfd4-4997-8d86-df6d122896a1" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="d2e4d7d0-80c1-43df-ab85-16fa73248f72" name="sorgcode" extpoperties="" binding="dto.sorgcode" visible="true" caption="核算主体代码" enable="false" editable="false" required="true">
+        <labelStyle id="74bbdb86-c16b-430f-b43b-4a1edb2eb476" name="LabelStyleImpl-74bbdb86-c16b-430f-b43b-4a1edb2eb476" ename="LabelStyleImpld74bbdb86-c16b-430f-b43b-4a1edb2eb476"/>
+        <componentStyle id="4b90fdbf-96cf-4e70-8d58-9d60cd6291f7" name="ComponentStyleImpl-4b90fdbf-96cf-4e70-8d58-9d60cd6291f7" ename="ComponentStyleImpl4b90fdbf-96cf-4e70-8d58-9d60cd6291f7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0bcc023f-5a18-4b03-9c40-41e41eb9ab98" name="ssubjectcode" binding="dto.ssubjectcode" caption="科目代码" editable="true" required="true">
+        <labelStyle id="ef108db8-577f-41df-80c7-ade59ef8850d" name="LabelStyleImpl-ef108db8-577f-41df-80c7-ade59ef8850d" ename="LabelStyleImpldef108db8-577f-41df-80c7-ade59ef8850d"/>
+        <componentStyle id="72cbc33e-026a-47c0-b131-1452b899a543" name="ComponentStyleImpl-72cbc33e-026a-47c0-b131-1452b899a543" ename="ComponentStyleImpl72cbc33e-026a-47c0-b131-1452b899a543"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8d13b986-33af-443a-8629-d56cdb7b0c48" name="ssubjectname" binding="dto.ssubjectname" caption="科目名称" editable="true" required="true">
+        <labelStyle id="2c6e17cd-dfa9-4b31-a9a3-60ede142c0bd" name="LabelStyleImpl-2c6e17cd-dfa9-4b31-a9a3-60ede142c0bd" ename="LabelStyleImpld2c6e17cd-dfa9-4b31-a9a3-60ede142c0bd"/>
+        <componentStyle id="06f4bdaa-bac2-4a03-9669-f8a5bdc86027" name="ComponentStyleImpl-06f4bdaa-bac2-4a03-9669-f8a5bdc86027" ename="ComponentStyleImpl06f4bdaa-bac2-4a03-9669-f8a5bdc86027"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6be55e04-4087-429c-86cf-152a21008268" name="imodicount" binding="dto.imodicount" caption="修改次数" editable="true">
+        <labelStyle id="dfc3c648-13c1-47c6-860e-9a1342d62d2c" name="LabelStyleImpl-dfc3c648-13c1-47c6-860e-9a1342d62d2c" ename="LabelStyleImplddfc3c648-13c1-47c6-860e-9a1342d62d2c"/>
+        <componentStyle id="afd72c5a-af65-468e-9618-c66d4da3b5f1" name="ComponentStyleImpl-afd72c5a-af65-468e-9618-c66d4da3b5f1" ename="ComponentStyleImplafd72c5a-af65-468e-9618-c66d4da3b5f1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="054e9844-1667-4a5d-86ce-f4ccfe9d4c85" name="收支标志" binding="dto.sinoutflag" caption="收支标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#087554ad-fd37-41a4-8813-75127eeced90"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ff3dcfd1-1296-4fff-b1b8-8e228e6353fd" name="科目种类" binding="dto.ssubjectclass" caption="科目种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#df715eda-8d3a-4871-9b8e-bd8494c02ba2"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="53ad1527-2156-492c-8066-2c0355729d84" name="科目分类" binding="dto.sclassflag" caption="科目分类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b02bac21-1a22-4704-b4af-56d5542e9de8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="99b31e23-b1a7-4aed-805a-77d2178606d3" name="预算属性" extpoperties="" binding="dto.sbudgettype" caption="预算属性" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4a2a1b30-1705-4183-8c27-9848583f3f26"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="10fc8cd1-9772-421f-b8bb-bda6c4b367a0" name="科目类型" binding="dto.ssubjecttype" caption="科目类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aee6ea4c-1e24-4167-88ca-28b74274d1ea"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="3874a878-cabf-44e8-8158-dfcfe8d6a4e3" name="录入标志" binding="dto.swriteflag" caption="录入标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c826ddbf-b705-4220-b4a5-4b33d8850769"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="c1000618-d4b0-4141-8dbb-59ac6dca7c60" name="科目属性" binding="dto.ssubjectattr" caption="科目属性" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9f12ef04-1702-463b-a0b8-6af4ac3f9e95"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="06a2b5ec-630f-433f-a0b7-87def3b08772" name="调拨标志" binding="dto.smoveflag" caption="调拨标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ecf0ef12-269d-481d-8deb-fb5ebc3cb903"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="227a6aaf-7670-420e-b53a-86b2134f2650" name="退税类别" binding="dto.sdrawbacktype" caption="退税类别" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8425b24a-f674-46f4-b242-d035295b3b64"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="f342e0ba-2ef8-489d-90aa-6cbd288c22de" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="d2e4d7d0-80c1-43df-ab85-16fa73248f72" name="sorgcode" extpoperties="" binding="dto.sorgcode" visible="true" caption="核算主体代码" enable="true" editable="false" message="" required="true">
+        <labelStyle id="74bbdb86-c16b-430f-b43b-4a1edb2eb476" name="LabelStyleImpl-74bbdb86-c16b-430f-b43b-4a1edb2eb476" ename="LabelStyleImpld74bbdb86-c16b-430f-b43b-4a1edb2eb476"/>
+        <componentStyle id="4b90fdbf-96cf-4e70-8d58-9d60cd6291f7" name="ComponentStyleImpl-4b90fdbf-96cf-4e70-8d58-9d60cd6291f7" ename="ComponentStyleImpl4b90fdbf-96cf-4e70-8d58-9d60cd6291f7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0bcc023f-5a18-4b03-9c40-41e41eb9ab98" name="ssubjectcode" binding="dto.ssubjectcode" visible="true" caption="科目代码" enable="true" editable="false" required="true">
+        <labelStyle id="ef108db8-577f-41df-80c7-ade59ef8850d" name="LabelStyleImpl-ef108db8-577f-41df-80c7-ade59ef8850d" ename="LabelStyleImpldef108db8-577f-41df-80c7-ade59ef8850d"/>
+        <componentStyle id="72cbc33e-026a-47c0-b131-1452b899a543" name="ComponentStyleImpl-72cbc33e-026a-47c0-b131-1452b899a543" ename="ComponentStyleImpl72cbc33e-026a-47c0-b131-1452b899a543"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8d13b986-33af-443a-8629-d56cdb7b0c48" name="ssubjectname" binding="dto.ssubjectname" caption="科目名称" editable="true" required="true">
+        <labelStyle id="2c6e17cd-dfa9-4b31-a9a3-60ede142c0bd" name="LabelStyleImpl-2c6e17cd-dfa9-4b31-a9a3-60ede142c0bd" ename="LabelStyleImpld2c6e17cd-dfa9-4b31-a9a3-60ede142c0bd"/>
+        <componentStyle id="06f4bdaa-bac2-4a03-9669-f8a5bdc86027" name="ComponentStyleImpl-06f4bdaa-bac2-4a03-9669-f8a5bdc86027" ename="ComponentStyleImpl06f4bdaa-bac2-4a03-9669-f8a5bdc86027"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6be55e04-4087-429c-86cf-152a21008268" name="imodicount" binding="dto.imodicount" caption="修改次数" editable="true">
+        <labelStyle id="dfc3c648-13c1-47c6-860e-9a1342d62d2c" name="LabelStyleImpl-dfc3c648-13c1-47c6-860e-9a1342d62d2c" ename="LabelStyleImplddfc3c648-13c1-47c6-860e-9a1342d62d2c"/>
+        <componentStyle id="afd72c5a-af65-468e-9618-c66d4da3b5f1" name="ComponentStyleImpl-afd72c5a-af65-468e-9618-c66d4da3b5f1" ename="ComponentStyleImplafd72c5a-af65-468e-9618-c66d4da3b5f1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="d6577e62-6a93-4632-881b-64b4c50780b8" name="收支标志" binding="dto.sinoutflag" caption="收支标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#087554ad-fd37-41a4-8813-75127eeced90"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="2a657478-ea39-4a46-8744-e8cface1a51e" name="科目种类" binding="dto.ssubjectclass" caption="科目种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#df715eda-8d3a-4871-9b8e-bd8494c02ba2"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="7f2e90a1-f232-4799-8d17-9a3fc6b82f5a" name="科目分类" binding="dto.sclassflag" caption="科目分类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b02bac21-1a22-4704-b4af-56d5542e9de8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="02ef0ec5-ac36-401f-9d05-3aaf5d441fb6" name="预算属性" extpoperties="" binding="dto.sbudgettype" caption="预算属性" enable="false" editable="false" required="true" readonly="true" underly="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4a2a1b30-1705-4183-8c27-9848583f3f26"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="557f86f4-5932-42cc-8def-527e158807be" name="科目类型" binding="dto.ssubjecttype" caption="科目类型" enable="false" editable="false" required="true" readonly="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aee6ea4c-1e24-4167-88ca-28b74274d1ea"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="9ddcbf7f-888c-4137-a935-e19319d803e8" name="录入标志" binding="dto.swriteflag" caption="录入标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c826ddbf-b705-4220-b4a5-4b33d8850769"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="78422faa-ea4f-4f1b-9c10-5d7ca8e95405" name="科目属性" binding="dto.ssubjectattr" caption="科目属性" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9f12ef04-1702-463b-a0b8-6af4ac3f9e95"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="16d0f189-e215-4edb-9610-7e131abecd66" name="调拨标志" binding="dto.smoveflag" caption="调拨标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ecf0ef12-269d-481d-8deb-fb5ebc3cb903"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="3bde2758-de1c-4eb6-8117-a7158899ffed" name="退税类别" binding="dto.sdrawbacktype" caption="退税类别" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8425b24a-f674-46f4-b242-d035295b3b64"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="9ed2254c-b1c3-43eb-b439-138406749c56" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="51b09dfe-d37a-4514-bdd6-2dac041a0574" name="维护查询结果" binding="pagingcontext" caption="维护查询结果" message="" tabletype="paging" pagingtable="" refsingleclickdirection="aef248fc-7a0b-484d-a8a1-d55519d0f438">
+        <columnlist id="d2e4d7d0-80c1-43df-ab85-16fa73248f72" name="sorgcode" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="0bcc023f-5a18-4b03-9c40-41e41eb9ab98" name="ssubjectcode" binding="ssubjectcode" caption="科目代码"/>
+        <columnlist id="8d13b986-33af-443a-8629-d56cdb7b0c48" name="ssubjectname" binding="ssubjectname" caption="科目名称"/>
+        <columnlist id="b46aa9b4-e601-47bb-8703-5f9cfde0c091" name="ssubjectclass" binding="ssubjectclass" caption="科目种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#df715eda-8d3a-4871-9b8e-bd8494c02ba2"/>
+        </columnlist>
+        <columnlist id="66f07836-33ad-4c1c-bbed-5a751d106db8" name="ssubjecttype" binding="ssubjecttype" caption="科目类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aee6ea4c-1e24-4167-88ca-28b74274d1ea"/>
+        </columnlist>
+        <columnlist id="5a8c7fa8-e67e-46d9-a58a-56374ee9997a" name="ssubjectattr" binding="ssubjectattr" caption="科目属性">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9f12ef04-1702-463b-a0b8-6af4ac3f9e95"/>
+        </columnlist>
+        <columnlist id="f82c15fa-c17b-4515-bb5b-da7e7b3af25c" name="swriteflag" binding="swriteflag" caption="录入标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c826ddbf-b705-4220-b4a5-4b33d8850769"/>
+        </columnlist>
+        <columnlist id="a7bac14c-a27e-4dc5-a1bd-ff0f687b203f" name="smoveflag" binding="smoveflag" caption="调拨标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ecf0ef12-269d-481d-8deb-fb5ebc3cb903"/>
+        </columnlist>
+        <columnlist id="c355ab31-4750-4574-a159-b8b8713c975f" name="sbudgettype" binding="sbudgettype" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4a2a1b30-1705-4183-8c27-9848583f3f26"/>
+        </columnlist>
+        <columnlist id="79cea8a3-4f69-4e1e-bd10-360c158acac7" name="sclassflag" binding="sclassflag" caption="科目分类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b02bac21-1a22-4704-b4af-56d5542e9de8"/>
+        </columnlist>
+        <columnlist id="bb56bd90-2b41-485a-ba38-00ef834dcdca" name="sinoutflag" binding="sinoutflag" caption="收支标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#087554ad-fd37-41a4-8813-75127eeced90"/>
+        </columnlist>
+        <columnlist id="6be55e04-4087-429c-86cf-152a21008268" name="imodicount" binding="imodicount" caption="修改次数"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="f2905a45-3d15-49a5-9477-16800a19546f">
+    <pages id="180f65c6-a5bd-415c-99ba-f1108638d07c" name="维护预算科目维护">
+      <views id="830a53a9-f638-41be-9592-8dba42d0d27a" name="修改界面" contentArea="f342e0ba-2ef8-489d-90aa-6cbd288c22de">
+        <buttonArea id="88b7c805-977a-4019-97b8-47afac028116" name="JButtonAreaImpl-88b7c805-977a-4019-97b8-47afac028116">
+          <buttons id="0dce7b3b-c7f7-4739-bd80-4a2aaa9425e0" name="modifySave" caption="保存" checkrequired="true" direction="906bc916-c6ec-4ea0-8d2f-8976d0e7dba4"/>
+          <buttons id="382aa79d-9e2e-481f-a78d-def94bd43642" name="modifyBack" caption="返回" direction="df37d532-f857-4aa6-86de-aa73837208d6"/>
+        </buttonArea>
+      </views>
+      <views id="93730bc1-be72-440c-ab60-93b30e622dc3" name="录入界面" contentArea="adc38458-bfd4-4997-8d86-df6d122896a1">
+        <buttonArea id="27218a17-edb2-46c3-8dfe-f176856a17e5" name="JButtonAreaImpl-27218a17-edb2-46c3-8dfe-f176856a17e5">
+          <buttons id="c359a179-aef3-486e-b51a-01d831b85391" name="保存" caption="保存" checkrequired="true" direction="fab88114-27cc-421e-8ef9-ecd682694a37"/>
+          <buttons id="382aa79d-9e2e-481f-a78d-def94bd43642" name="modifyBack" caption="返回" direction="df37d532-f857-4aa6-86de-aa73837208d6"/>
+        </buttonArea>
+      </views>
+      <views id="f9acdb32-8f47-45ea-82a4-b845af74d23e" name="信息查询" isdefault="true" contentArea="77fe103b-5874-4804-9d31-2ba6c8bd418c">
+        <buttonArea id="9f682520-342a-403e-a63a-5c1c31f17798" name="JButtonAreaImpl-9f682520-342a-403e-a63a-5c1c31f17798">
+          <buttons id="1af53126-fd11-4bf9-b891-589afea589c2" name="查询" caption="查询" direction="7c645d16-610c-4e96-a7b7-2062bd388e67"/>
+        </buttonArea>
+      </views>
+      <views id="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="查询结果" contentArea="9ed2254c-b1c3-43eb-b439-138406749c56">
+        <buttonArea id="2a129b0b-daf6-49d7-9103-b2992f61e29f" name="JButtonAreaImpl-2a129b0b-daf6-49d7-9103-b2992f61e29f">
+          <buttons id="f3bf9177-7a3e-4889-aa63-7087bf1d7f8f" name="返回" caption="返回" direction="f192de23-dd9a-4da8-8956-4f652bf0c83f"/>
+          <buttons id="bb46e40f-3516-4f03-9764-b6a4fffd8f92" name="录入" caption="录入" direction="dd52ab3e-1dd5-4921-8af4-b90aa8524011"/>
+          <buttons id="1a5bf16b-2b26-4215-b4b4-e5fd79955211" name="修改" caption="修改" direction="ee0fbbcd-82b5-4640-aa99-2ae883ada6a4"/>
+          <buttons id="529e1e24-36e0-48ce-a66d-8db94e33f7dc" name="删除" caption="删除" direction="fcc408cf-291d-4f75-b036-88b81bf8c2ca"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#f1b3782c-7190-4ede-8194-7c819304d738"/>
+</model:JUIComponent>

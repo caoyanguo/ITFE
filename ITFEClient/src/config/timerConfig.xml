@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>  
+   <!-- 定时运行的类 -->
+	<bean id="scheduledTimerTBS" class="com.cfcc.itfe.client.common.QuartzDemo"></bean>
+	
+    <!--定义定时执行ScheduledTimer类中   的startRun()方法-->
+	<bean id="scheduledTaskTBS"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="scheduledTimerTBS" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+ 
+
+	<!--
+		触发器的bean的设置，在这里我们设置了我们要触发的jobDetail是哪个。
+		这里我们定义了要触发的jobDetail，即触发器去触发哪个bean..并且我们还定义了触发的时间
+	-->
+	<bean id="cronTriggerTBS" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="scheduledTaskTBS" />
+		</property>
+		<property name="cronExpression">
+			<value>10,15,20,25,30,35,40,45,50,55 * * * * ?</value>
+		</property>
+	</bean>
+	
+    <!--管理触发器的总设置,可以放置多个触发器。-->
+	<bean id="cronTriggerList" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTriggerTBS" />
+			</list>
+		</property>
+	</bean>
+</beans>

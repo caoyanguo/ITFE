@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="433b3d6d-99a3-4f1a-b0a2-9973e0927427" name="无纸化业务注册" ename="BizRegister">
+  <jproperties id="1cece229-0c2f-4fdd-9d4d-05d8a2064319" key="GeneratedTime" value="1570518634884"/>
+  <refModule href="JModule_1e11a612-ec91-4218-9299-bf047ee9fc64.model#1e11a612-ec91-4218-9299-bf047ee9fc64"/>
+  <model id="657f59fe-6ec3-4bf6-8626-31317923d86e" name="JModelImpl-657f59fe-6ec3-4bf6-8626-31317923d86e">
+    <attributes id="83bdaf52-13b5-4836-b48b-b8ffa69f1713" name="filepath" type="java.util.List"/>
+    <directions id="de19127d-abfd-4eeb-87d7-cee07ac48692" name="注册" ename="sendfileRegister"/>
+  </model>
+  <services href="JServiceComponet_e78c8356-a087-44bd-be02-df11236cf8a2.model#e78c8356-a087-44bd-be02-df11236cf8a2"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="06a466f7-1c14-4aa2-8389-bb73b3da249c">
+    <contentareanode id="5f411721-32b1-4f4f-bc14-20997bcc2f15" name="选择注册文件" grouptitle="选择注册文件">
+      <widgetRefs xsi:type="model:FileUploader" id="75b68cb5-a918-416d-b81d-5dfb9a3956b9" name="选择文件" binding="filepath" caption="选择文件" pattern="" isdirectory="false" ismult="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="98ce77ed-7a0b-4488-bbf4-74ae00c3efc5">
+    <pages id="ecfacf19-5cd2-410c-887f-5f5c1a789ad2" name="无纸化业务注册">
+      <views id="f26bae60-d594-4b96-8cb4-21a94a9fbb13" name="JViewerImpl-f26bae60-d594-4b96-8cb4-21a94a9fbb13" isdefault="true" contentArea="5f411721-32b1-4f4f-bc14-20997bcc2f15">
+        <buttonArea id="2c886513-16b8-437e-91a8-0c4fb9e6658e" name="JButtonAreaImpl-2c886513-16b8-437e-91a8-0c4fb9e6658e">
+          <buttons id="0579a02c-e7cf-448d-bd80-ecb6ecf8416b" name="注册" caption="注册" direction="de19127d-abfd-4eeb-87d7-cee07ac48692"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

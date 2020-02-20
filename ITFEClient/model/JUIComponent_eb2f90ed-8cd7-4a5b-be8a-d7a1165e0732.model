@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="eb2f90ed-8cd7-4a5b-be8a-d7a1165e0732" name="常用失败原因维护" ename="TsCheckFailReason">
+  <jproperties id="7f6a87d9-1b6e-4eb4-aea7-5b4a844e3e67" key="GeneratedTime" value="1378707210593"/>
+  <refModule href="JModule_f4639461-646f-47f8-9e06-f7ef999c7e4d.model#f4639461-646f-47f8-9e06-f7ef999c7e4d"/>
+  <model id="9b1c4bf3-bcf0-43a8-a6ac-7f1d2ec6faf9" name="JModelImpl-9b1c4bf3-bcf0-43a8-a6ac-7f1d2ec6faf9">
+    <attributes id="f4a07f5c-aa95-4b22-9e44-3e6194fbd5e7" name="dto" type="com.cfcc.itfe.persistence.dto.TsCheckfailreasonDto"/>
+    <attributes id="d0187f21-bdda-4e31-80f4-db094c157c15" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="4bbde0c5-a4c9-4618-a177-ec81008f061a" name="selectedDto" type="com.cfcc.itfe.persistence.dto.TsCheckfailreasonDto"/>
+    <directions id="0e0fc0e6-4f16-4100-9871-95969b4b816a" viewers="e061545c-f777-4a20-94d8-68b3b93c25f2" name="查询" ename="search"/>
+    <directions id="9a11e543-c894-4f08-b01a-e6a0d78d0789" viewers="7efce7f1-620f-422c-80ee-7ed6437fa1ad" name="录入" ename="newInput"/>
+    <directions id="3f9fcca6-fc88-4f01-bdb0-9db7706fabcf" viewers="51c630f6-dadb-482f-8e11-291ece770f6e" name="修改跳转" ename="updateDireck"/>
+    <directions id="0c0be12d-4073-4812-ae06-83645021ba02" viewers="e061545c-f777-4a20-94d8-68b3b93c25f2" name="保存" ename="save"/>
+    <directions id="ea788615-fb04-4b49-b42b-ba9512cc6618" viewers="e061545c-f777-4a20-94d8-68b3b93c25f2" name="修改" ename="update"/>
+    <directions id="5e136a94-b72c-44a9-9c3b-8be889a109d8" viewers="e061545c-f777-4a20-94d8-68b3b93c25f2" name="取消" ename="exit"/>
+    <directions id="ea3ec47a-adae-4251-9e19-0ece15237b90" viewers="e061545c-f777-4a20-94d8-68b3b93c25f2" name="删除" ename="delete"/>
+    <directions id="a45f04d2-521d-4524-a825-61305403d08c" viewers="51c630f6-dadb-482f-8e11-291ece770f6e" name="双击跳转修改" ename="doubleclickToUpdate"/>
+    <directions id="51e9bb21-82cf-42ae-b790-b452312b6180" name="单击事件" ename="singleSelect"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="5b92d0d5-81b8-44e0-b373-56fec368dc2a">
+    <contentareanode id="9edd483f-43fe-49a9-afbc-cbb40d52ed73" name="失败原因录入" grouptitle="失败原因录入" binding="dto">
+      <widgetRefs xsi:type="model:Text" id="22b75e3d-90c7-4921-b22b-9d92c500b028" name="失败原因代码" binding="scheckfailcode" caption="失败原因代码" required="true"/>
+      <widgetRefs xsi:type="model:Textarea" id="f299a3b7-50d1-4d3e-9d26-64a6a554e3ad" name="失败原因描述" binding="scheckfaildsp" caption="失败原因描述" required="true"/>
+    </contentareanode>
+    <contentareanode id="4794e3a3-a897-4ff8-a53c-3ac8d344d17a" name="失败原因修改" grouptitle="失败原因修改" binding="dto">
+      <widgetRefs xsi:type="model:Text" id="482d517e-e3a8-497d-9f14-fbea5adc8e60" name="失败原因代码" binding="scheckfailcode" caption="失败原因代码" editable="false" required="true"/>
+      <widgetRefs xsi:type="model:Textarea" id="0b3e2910-ecbf-4e2f-aaf5-08d84f5daa92" name="失败原因描述" binding="scheckfaildsp" caption="失败原因描述" required="true"/>
+    </contentareanode>
+    <contentareanode id="8e85833f-95c0-48f4-9212-3844c3beb01f" name="失败原因查询结果" grouptitle="失败原因查询结果">
+      <widgetRefs xsi:type="model:Table" id="1cc6ae99-ab73-4f71-8be5-9481bebc0053" name="失败原因查询结果" binding="pagingcontext" caption="失败原因查询结果" tabletype="paging" refdoubleclickdirection="a45f04d2-521d-4524-a825-61305403d08c" refsingleclickdirection="51e9bb21-82cf-42ae-b790-b452312b6180">
+        <columnlist id="95be8786-a22d-4e0d-960b-f86979c39f6a" name="失败原因代码" binding="scheckfailcode" caption="失败原因代码"/>
+        <columnlist id="365406dd-9fb0-4f55-b73a-ab7fde047ad8" name="核算主体代码" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="eb58f5ab-88a4-490c-b90a-deb165ac8726" name="失败原因描述" binding="scheckfaildsp" caption="失败原因描述"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="a15bd96d-9e44-4332-a9f4-a10e4eb5e952">
+    <pages id="8b0c7bd8-427a-4920-8ba5-1de77bf182e9" name="常用失败原因维护界面">
+      <views id="e061545c-f777-4a20-94d8-68b3b93c25f2" name="常用失败原因维护页" isdefault="true" contentArea="8e85833f-95c0-48f4-9212-3844c3beb01f">
+        <buttonArea id="68989176-0a47-4058-8ae4-e0616ea424ec" name="JButtonAreaImpl-68989176-0a47-4058-8ae4-e0616ea424ec">
+          <buttons id="b9f70020-5e50-468e-8319-69732c83b166" name="录入" caption="录入" direction="9a11e543-c894-4f08-b01a-e6a0d78d0789"/>
+          <buttons id="d09f3ddd-2c1d-47e6-bead-0a078f70b84d" name="修改" caption="修改" direction="3f9fcca6-fc88-4f01-bdb0-9db7706fabcf"/>
+          <buttons id="51eaf6ba-1a0b-44f6-ae15-592418854520" name="删除" caption="删除" direction="ea3ec47a-adae-4251-9e19-0ece15237b90"/>
+        </buttonArea>
+      </views>
+      <views id="7efce7f1-620f-422c-80ee-7ed6437fa1ad" name="常用失败原因录入页" contentArea="9edd483f-43fe-49a9-afbc-cbb40d52ed73">
+        <buttonArea id="e783e465-b671-4289-b285-50251665a22d" name="JButtonAreaImpl-e783e465-b671-4289-b285-50251665a22d">
+          <buttons id="78f6364f-aa79-478e-9e8a-ec2ab2241795" name="保存" caption="保存" checkrequired="true" direction="0c0be12d-4073-4812-ae06-83645021ba02"/>
+          <buttons id="ddd180e3-b73d-4e0e-97e9-ee3a48c0debc" name="返回" caption="返回" direction="5e136a94-b72c-44a9-9c3b-8be889a109d8"/>
+        </buttonArea>
+      </views>
+      <views id="51c630f6-dadb-482f-8e11-291ece770f6e" name="常用失败原因修改页" contentArea="4794e3a3-a897-4ff8-a53c-3ac8d344d17a">
+        <buttonArea id="685f3d79-5a8c-482d-94c1-e91060074774" name="JButtonAreaImpl-685f3d79-5a8c-482d-94c1-e91060074774">
+          <buttons id="e6056d7f-c934-4c06-a8bc-c25d2fc0f6a4" name="保存" caption="保存" checkrequired="true" direction="ea788615-fb04-4b49-b42b-ba9512cc6618"/>
+          <buttons id="e2037e03-fd2f-434f-adea-c65e156c633c" name="返回" caption="返回" direction="5e136a94-b72c-44a9-9c3b-8be889a109d8"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="84270185-2873-46a8-8837-e9b23c11eace" name="代理库统计分析数据导入" ename="AgentBankCountAnalyseDataImport"/>

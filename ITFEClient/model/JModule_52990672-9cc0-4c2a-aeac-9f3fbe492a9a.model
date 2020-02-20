@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="52990672-9cc0-4c2a-aeac-9f3fbe492a9a" isgenerated="false" name="业务凭证比对" ename="voucherDataCompare" shared="false"/>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:file="http://www.mulesource.org/schema/mule/file/2.2"
+	xmlns:http="http://www.mulesource.org/schema/mule/http/2.2"
+	xmlns:https="http://www.mulesource.org/schema/mule/https/2.2"
+	xmlns:jbossts="http://www.mulesource.org/schema/mule/jbossts/2.2"
+	xmlns:jms="http://www.mulesource.org/schema/mule/jms/2.2"
+	xmlns:scripting="http://www.mulesource.org/schema/mule/scripting/2.2"
+	xmlns:client="http://www.mulesource.org/schema/mule/client/2.2"
+	xmlns:ognl="http://www.mulesource.org/schema/mule/ognl/2.2" xmlns:axis="http://www.mulesource.org/schema/mule/axis/2.2"
+	xmlns:cxf="http://www.mulesource.org/schema/mule/cxf/2.2"
+	xmlns:servlet="http://www.mulesource.org/schema/mule/servlet/2.2"
+	xmlns:stdio="http://www.mulesource.org/schema/mule/stdio/2.2" xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.2"
+	xmlns:tcp="http://www.mulesource.org/schema/mule/tcp/2.2"
+	xmlns:management="http://www.mulesource.org/schema/mule/management/2.2"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:sxc="http://www.mulesource.org/schema/mule/sxc/2.2"
+	xmlns:test="http://www.mulesource.org/schema/mule/test/2.2"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		     http://www.mulesource.org/schema/mule/jbossts/2.2  http://www.mulesource.org/schema/mule/jbossts/2.2/mule-jbossts.xsd
+	      http://www.mulesource.org/schema/mule/ftp/2.2 http://www.mulesource.org/schema/mule/ftp/2.2/mule-ftp.xsd
+          http://www.mulesource.org/schema/mule/file/2.2 http://www.mulesource.org/schema/mule/file/2.2/mule-file.xsd
+          http://www.mulesource.org/schema/mule/http/2.2 http://www.mulesource.org/schema/mule/http/2.2/mule-http.xsd
+          http://www.mulesource.org/schema/mule/https/2.2 http://www.mulesource.org/schema/mule/https/2.2/mule-https.xsd
+          http://www.mulesource.org/schema/mule/jdbc/2.2 http://www.mulesource.org/schema/mule/jdbc/2.2/mule-jdbc.xsd
+          http://www.mulesource.org/schema/mule/scripting/2.2 http://www.mulesource.org/schema/mule/scripting/2.2/mule-scripting.xsd
+          http://www.mulesource.org/schema/mule/management/2.2 http://www.mulesource.org/schema/mule/management/2.2/mule-management.xsd
+          http://www.mulesource.org/schema/mule/client/2.2 http://www.mulesource.org/schema/mule/client/2.2/mule-client.xsd
+          http://www.mulesource.org/schema/mule/ognl/2.2 http://www.mulesource.org/schema/mule/ognl/2.2/mule-ognl.xsd
+          http://www.mulesource.org/schema/mule/quartz/2.2 http://www.mulesource.org/schema/mule/quartz/2.2/mule-quartz.xsd
+          http://www.mulesource.org/schema/mule/soap/2.2 http://www.mulesource.org/schema/mule/soap/2.2/mule-soap.xsd
+          http://www.mulesource.org/schema/mule/axis/2.2 http://www.mulesource.org/schema/mule/axis/2.2/mule-axis.xsd
+          http://www.mulesource.org/schema/mule/cxf/2.2 http://www.mulesource.org/schema/mule/cxf/2.2/mule-cxf.xsd
+          http://www.mulesource.org/schema/mule/sxc/2.2 http://www.mulesource.org/schema/mule/sxc/2.2/mule-sxc.xsd
+          http://www.mulesource.org/schema/mule/servlet/2.2 http://www.mulesource.org/schema/mule/servlet/2.2/mule-servlet.xsd
+          http://www.mulesource.org/schema/mule/core/2.2 http://www.mulesource.org/schema/mule/core/2.2/mule.xsd   
+          http://www.mulesource.org/schema/mule/stdio/2.2 http://www.mulesource.org/schema/mule/stdio/2.2/mule-stdio.xsd
+          http://www.mulesource.org/schema/mule/tcp/2.2 http://www.mulesource.org/schema/mule/tcp/2.2/mule-tcp.xsd
+          http://www.mulesource.org/schema/mule/jms/2.2 http://www.mulesource.org/schema/mule/jms/2.2/mule-jms.xsd
+		  http://www.mulesource.org/schema/mule/vm/2.2 http://www.mulesource.org/schema/mule/vm/2.2/mule-vm.xsd
+          http://www.mulesource.org/schema/mule/xml/2.2 http://www.mulesource.org/schema/mule/xml/2.2/mule-xml.xsd
+          http://www.mulesource.org/schema/mule/test/2.2 http://www.mulesource.org/schema/mule/test/2.2/mule-test.xsd">
+
+	<custom-transformer name="jmsmessage-to-object"
+		class="com.cfcc.yak.transformer.YakJMSMessageToObject" />
+	<message-properties-transformer name="setXmlMsgHeader">
+		<add-message-property key="MSG_NO_KEY"
+			value="#[xpath:/CFX/HEAD/MsgNo]" />
+		<add-message-property key="MSG_REF"
+			value="#[xpath:/CFX/HEAD/MsgRef]" />
+		<add-message-property key="MSG_ID"
+			value="#[xpath:/CFX/HEAD/MsgID]" />
+	</message-properties-transformer>
+	
+	<byte-array-to-string-transformer
+		name="byte-array-to-string" />
+		
+	<!-- 设置报文发送方向，从人行接收 -->
+	<message-properties-transformer name="msgrcv">
+		<add-message-property key="BANK_SEND" value="2" />
+	</message-properties-transformer>
+	<!-- 设置报文发送方向，向人行发送 -->
+	<message-properties-transformer name="msgsend">
+		<add-message-property key="BANK_SEND" value="1" />
+	</message-properties-transformer>
+
+	<!-- 将报文信息放到$MSG_INFO Message的属性信息中 -->
+	<scripting:transformer name="setMsgProp">
+		<scripting:script engine="groovy">
+			<property key="MSG_INFO" value="MSG_INFO" />
+			<scripting:text>
+				message.setProperty("$MSG_INFO",payload)
+				return payload
+           </scripting:text>
+		</scripting:script>
+	</scripting:transformer>
+	<!-- 将Prop的信息放到Message payload中 -->
+	<scripting:transformer name="getMsgProp">
+		<scripting:script engine="groovy">
+			<scripting:text>
+				return message.getProperty("MSG_INFO")
+           </scripting:text>
+		</scripting:script>
+	</scripting:transformer>
+
+	<!--将报文转成JMSMessage -->
+	<jms:object-to-jmsmessage-transformer name="ojbect2JMS" />
+
+	<custom-transformer name="string2bytes"
+		class="com.cfcc.yak.transformer.String2BytesTransformer">
+		<spring:property name="encoding" value="GBK" />
+	</custom-transformer>
+	<!--将javaObject转换成xml报文-->
+	<custom-transformer name="java2xml"
+		class="com.cfcc.itfe.transformer.JavaXmlTransformer">
+		<spring:property name="msgNoKey" value="MSG_NO_KEY" />
+		<spring:property name="tradDirection" value="java2xml" />
+		<spring:property name="domain" value="itfe" />
+		<spring:property name="encoding" value="GB18030" />
+		<spring:property name="beanid" value="cfx" />
+	</custom-transformer>
+	
+	
+	<!--将XML报文转换成javaObject-->
+	<custom-transformer name="xml2java"
+		class="com.cfcc.itfe.transformer.JavaXmlTransformer">
+		<spring:property name="msgNoKey" value="MSG_NO_KEY" />
+		<spring:property name="tradDirection" value="xml2java" />
+		<spring:property name="domain" value="itfe" />
+		<spring:property name="encoding" value="GB18030" />
+		<spring:property name="beanid" value="CFX" />
+	</custom-transformer>
+	
+	<!--对要发送的报文进行加签 -->
+	<custom-transformer name="casign"
+		class="com.cfcc.itfe.transformer.CATransformer">
+		<spring:property name="tradDirection" value="sign" />
+	</custom-transformer>
+	
+	<!--对要发送的报文进行加签 -->
+	<custom-transformer name="sm3sign"
+		class="com.cfcc.itfe.transformer.SM3Transformer">
+		<spring:property name="tradDirection" value="sign" />
+	</custom-transformer>
+	
+	<!--对接收的报文进行验签 -->
+	<custom-transformer name="sm3verify"
+		class="com.cfcc.itfe.transformer.SM3Transformer">
+		<spring:property name="tradDirection" value="verifysign" />
+	</custom-transformer>
+	
+	<!--取得报文指定字段的值 -->
+	<custom-transformer name="getmsgproptmp"
+		class="com.cfcc.itfe.transformer.GetPropTransformer">
+		<spring:property name="label" value="MsgNo" />
+		<spring:property name="prop" value="MSG_NO_KEY" />
+	</custom-transformer>
+	
+	<!--转换报文的报文编号 -->
+	<custom-transformer name="changeMsgNo"
+		class="com.cfcc.itfe.transformer.ChangeMsgNoTransformer">
+	</custom-transformer>
+	
+	<message-properties-transformer name="setMsgDirectionIn">
+		<add-message-property key="MSG_TAG"	value="1" />
+	</message-properties-transformer>
+	
+	<!--保存文件 -->
+	<custom-transformer name="sentXml2file"
+		class="com.cfcc.yak.transformer.StringToFileTransformer">
+		<spring:property name="rootDir" value="${file.util.root}/temp/${sent.newMsg.file.path}" />
+		<spring:property name="fileNameGenerator">
+			<spring:bean class="com.cfcc.itfe.transformer.SendMsgFileNameGenerator" />
+		</spring:property>
+		<spring:property name="messagePropertyKeyFilePath"
+			value="XML_MSG_FILE_PATH" />
+	</custom-transformer>
+	<custom-transformer name="receiveXml2file"
+		class="com.cfcc.yak.transformer.StringToFileTransformer">
+		<spring:property name="rootDir" value="${file.util.root}/temp/${received.orgMsg.file.path}" />
+		<spring:property name="fileNameGenerator">
+			<spring:bean class="com.cfcc.itfe.transformer.MsgFileNameGenerator" />
+		</spring:property>
+		<spring:property name="messagePropertyKeyFilePath"
+			value="XML_MSG_FILE_PATH" />
+	</custom-transformer>
+	
+	<!--更新发送日志文件路径 -->
+	<custom-transformer name="uptsendlogfilepath" class="com.cfcc.itfe.transformer.UpdateSendLogFilePathTransformer"/>
+	<custom-transformer name="file2String"
+		class="com.cfcc.itfe.transformer.FileToStringTransformer" />
+		
+	<!-- 设置报文发起方 前置发起为0，Tips发起为1，财政发起为2,Tips文件加载为3 -->
+	<message-properties-transformer name="msgsenderisitfe">
+		<add-message-property key="MSG_SENDER" value="0" />
+	</message-properties-transformer>
+	<message-properties-transformer name="msgsenderistips">
+		<add-message-property key="MSG_SENDER" value="1" />
+	</message-properties-transformer>
+	<message-properties-transformer name="msgsenderisfin">
+		<add-message-property key="MSG_SENDER" value="2" />
+	</message-properties-transformer>
+	<message-properties-transformer name="msgsenderisitfeuploadfortips">
+		<add-message-property key="MSG_SENDER" value="3" />
+	</message-properties-transformer>
+</mule>

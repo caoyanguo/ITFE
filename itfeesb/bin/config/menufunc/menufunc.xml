@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<!-- 管理员权限 -->
+	<bean id="ADMIN_FUNC"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				<value>S_011</value>
+				<value>S_012</value>
+				<value>S_013</value>
+				<value>S_001</value>
+				<value>S_002</value>
+				<value>S_008</value>
+				<value>B_201</value>
+				<value>S_102</value>
+				<value>S_010</value>
+				<value>S_027</value>
+				<value>S_101</value>
+				<value>B_231</value>
+				<value>B_202</value>
+				<value>B_236</value>
+				<value>B_101</value>
+				<value>B_102</value>
+				<value>B_103</value>
+				<value>B_317</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

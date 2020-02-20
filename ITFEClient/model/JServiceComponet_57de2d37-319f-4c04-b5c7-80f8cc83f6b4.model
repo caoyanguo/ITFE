@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="57de2d37-319f-4c04-b5c7-80f8cc83f6b4" name="取得SEQNO服务组件" ename="SequenceHelper" shared="true">
+  <jproperties id="c7cef13a-a784-41b7-99dd-75e651cb2522" key="GeneratedTime" value="1331531145468"/>
+  <refModule href="JModule_57d74aac-5599-4965-be54-900a36b2a15f.model#57d74aac-5599-4965-be54-900a36b2a15f"/>
+  <methods id="7ab917bd-6a24-4f54-8b80-dfa1b1fcc379" ename="getSeqNo" name="取得指定序列的序列号" codecomment="取得指定序列的序列号" returntype="java.lang.String">
+    <methodParams id="75e4938e-7a8e-4d03-b4dc-4f5941cb2acf" name="指定序列的名称" ename="seqname" type="java.lang.String" codecomment="指定序列的名称"/>
+  </methods>
+</model:JServiceComponent>

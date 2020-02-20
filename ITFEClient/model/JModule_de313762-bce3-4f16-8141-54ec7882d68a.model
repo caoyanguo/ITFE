@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="de313762-bce3-4f16-8141-54ec7882d68a" name="商行办理支付划款申请退款数据导入" ename="commercialbankPayBackment"/>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a87e5805-1cd5-4492-8b4f-dd11418a5567" name="预算收入报表解付（上海）" ename="orgAndMoneyDetail" shared="true">
+  <jproperties id="5e328525-44be-4f31-be26-606fb1388785" key="GeneratedTime" value="1371173340640"/>
+  <refModule href="JModule_e3ad8e72-5129-4809-9ada-e19bdcb57835.model#e3ad8e72-5129-4809-9ada-e19bdcb57835"/>
+  <model id="e376cd7d-c551-475c-a543-f82c1dc5fa4b" name="JModelImpl-e376cd7d-c551-475c-a543-f82c1dc5fa4b">
+    <attributes id="e89340d7-f72c-461b-8c0e-fd6587922083" name="filepath" type="java.util.List"/>
+    <directions id="88e29e29-d572-4450-91b9-b7507d5b53c2" viewers="55525ca9-e2b7-4454-aca2-6b078cbf362f" name="省级预算收入报表解付" ename="provinceDetail"/>
+    <directions id="7810bd60-b43b-4676-87b0-74562748a4c7" viewers="55525ca9-e2b7-4454-aca2-6b078cbf362f" name="市级预算收入报表解付" ename="cityDetail"/>
+    <directions id="c7d6805d-e91d-4ec2-a419-454778bbc1f5" viewers="55525ca9-e2b7-4454-aca2-6b078cbf362f" name="区县级预算收入报表解付" ename="townDetail"/>
+    <directions id="69a767bd-de7b-4d05-96b5-0115bb9d12fb" viewers="176c1e6a-429a-44b5-a28a-4dd96313dfdc" name="返回" ename="reback"/>
+  </model>
+  <services href="JServiceComponet_35216845-25cc-41c7-bc78-3c4c5475b7cf.model#35216845-25cc-41c7-bc78-3c4c5475b7cf"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="5ddf012b-ca66-40e8-9611-e9ce612224fa">
+    <contentareanode id="f78817e3-08ed-4c83-9462-4f2c26b447b0" name="数据汇总">
+      <widgetRefs xsi:type="model:FileUploader" id="9a47f447-5102-4eb6-9852-212ad186f748" name="加载文件路径" binding="filepath" caption="加载文件路径" enable="true" editable="true" required="true" isdirectory="true"/>
+    </contentareanode>
+    <contentareanode id="72d3f545-8b11-4995-827e-fa630541a505" name="报表文件">
+      <jreportref id="cd34706a-aecf-40eb-ab2d-c74ac8f7ddf8" name="预算收入报表解付汇总报表" reportpath="reportpath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="118d872a-989f-48a8-a770-c4b4d95d28b7">
+    <pages id="91b9fe03-8ad7-4610-a002-7e684bd227e0" name="预算收入报表解付界面">
+      <views id="176c1e6a-429a-44b5-a28a-4dd96313dfdc" name="文件导入界面" isdefault="true" contentArea="f78817e3-08ed-4c83-9462-4f2c26b447b0">
+        <buttonArea id="65816763-616d-4e1a-bb51-fc7e56ae29ca" name="功能按钮区">
+          <buttons id="a2969d72-291d-4e69-a1a6-1a603f9c8f1e" name="中央明细" caption="中央明细" checkrequired="true" direction="88e29e29-d572-4450-91b9-b7507d5b53c2"/>
+          <buttons id="e517488f-e44b-4aa9-a013-52eb7eb7b590" name="省明细" caption="省明细" checkrequired="true" direction="7810bd60-b43b-4676-87b0-74562748a4c7"/>
+          <buttons id="df3de6a1-c8aa-4638-a676-44e5b80e45b1" name="区县明细" caption="区县明细" checkrequired="true" direction="c7d6805d-e91d-4ec2-a419-454778bbc1f5"/>
+        </buttonArea>
+      </views>
+      <views id="55525ca9-e2b7-4454-aca2-6b078cbf362f" name="预算收入报表解付报表界面" contentArea="72d3f545-8b11-4995-827e-fa630541a505">
+        <buttonArea id="6e319e1a-711f-4b3a-916b-88cd7bd1734b" name="功能按钮区">
+          <buttons id="554f03d9-6aa3-42e2-87f0-cb19692fb118" name="返回" caption="返回" direction="69a767bd-de7b-4d05-96b5-0115bb9d12fb"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:UiProcessorsNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="48993b95-20ec-4bc0-bffa-4fd62486692e" name="光标回车和上下键处理" ename="ArrowKeyProcessors" remark="">
+  <refPackage href="JResourcePackage_0fd1a69b-a6e5-4662-88df-5f2d48829cdb.model#0fd1a69b-a6e5-4662-88df-5f2d48829cdb"/>
+  <uiprocessor id="14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f" name="回车跳转" ename="UIenterProcesser" fullpath="com.cfcc.itfe.client.processor.ArrowKeyTraverseProcessor"/>
+  <uiprocessor id="6526cf6a-bd13-4b74-9830-c37f0c15bd15" name="针对一个文本框添加回车处理" ename="enterkeydispose" fullpath="com.cfcc.itfe.client.processor.ArrowKeyTraverseProcessor2"/>
+  <uiprocessor id="109806d0-798b-4668-91b9-57f526a8ede8" name=" 控制页面控件是否显示" ename="widgetisvisble"/>
+  <uiprocessor id="f1dcbc6f-0750-4898-a073-e04bcc8a6c01" name="控制文本框是否可见" ename="ControlTextVisible"/>
+  <uiprocessor id="510d5574-f874-4e68-b05b-7dda72fa2e37" name="控制table列是否可见" ename="ControlTableColumnVisible"/>
+  <uiprocessor id="f1b3782c-7190-4ede-8194-7c819304d738" name="无纸化系统隐藏控件" ename="wzhWidgetisvisble"/>
+  <uiprocessor id="9018ba55-72c7-4228-904d-a724a7eb7272" name="浙江财政机构隐藏控件" ename="zjFinorgWidgetisvisble"/>
+  <uiprocessor id="503104e7-c167-4a8a-b58c-494fdbb335d9" name="报表对帐签章按钮隐藏控件" ename="stampMode"/>
+  <uiprocessor id="f63c099b-982e-466a-9f4a-091dcc6f7d86" name="控制业务凭证处理界面按钮显示" ename="ConlBizProcButtonVisible" describe="控制业务凭证处理界面按钮显示"/>
+</model:UiProcessorsNode>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="60358067-0795-4b8f-b0e5-38f079f2d64f" name="额度控制信息" ename="TvAmtControlInfo">
+  <jproperties id="3eb57433-f7d3-47ba-bd9f-8e0da79b594a" key="GeneratedTime" value="1380877691984"/>
+  <refModule href="JModule_91adf356-11e4-4751-b243-1efbb802c15a.model#91adf356-11e4-4751-b243-1efbb802c15a"/>
+  <model id="4fa44b1b-939f-45ce-8577-d78ddbb50d3d" name="JModelImpl-4fa44b1b-939f-45ce-8577-d78ddbb50d3d">
+    <attributes id="c163f3bd-2931-411b-be66-0803dcef7673" name="selectedDto" type="com.cfcc.itfe.persistence.dto.TvAmtControlInfoDto"/>
+    <attributes id="08c7f3d3-62d6-4cc2-af17-74a6d72e5783" name="searchDto" type="com.cfcc.itfe.persistence.dto.TvAmtControlInfoDto"/>
+    <directions id="b5036ec8-131b-4b41-88cc-e2fbdbe27794" name="单击" ename="singleclick"/>
+    <directions id="f094f5d9-c6f4-4b94-920d-14f795e06c2e" viewers="beb76693-e854-4342-88f7-39a2eafcb8f1" name="双击" ename="doubleclick"/>
+    <directions id="32e255e0-7180-43fd-89a7-1d513daacfd7" viewers="64f8a13b-35cd-4acb-bd1d-143973b4891d" name="返回" ename="backmain"/>
+    <directions id="b65fa309-1ed2-4776-8116-479e5d9fe64e" name="查询" ename="searchinfo"/>
+    <directions id="b16b7dfa-fb27-4038-bf1d-3c697a4af3d3" viewers="beb76693-e854-4342-88f7-39a2eafcb8f1" name="跳转至详细界面" ename="godetailview"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="954b0fba-d3f5-413f-88b4-bd7cb9fba2ad">
+    <contentareanode id="e287a202-777f-4b0f-9324-dfd7caf12644" name="查询条件" grouptitle="查询条件" binding="searchDto">
+      <widgetRefs xsi:type="model:Combo" id="9cfdb777-5670-4cf8-9c13-e1e2727013c5" name="国库主体名称" binding="strecode" caption="国库主体名称">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="5adf9715-b6ae-4f0a-891f-835107955ed9" name="代理银行编码" binding="sbankcode" caption="代理银行编码"/>
+      <widgetRefs xsi:type="model:Text" id="9d841eee-e08c-48bd-bd67-1a7e409299c9" name="sbudgetunitcode" binding="sbudgetunitcode" caption="预算单位编码"/>
+      <widgetRefs xsi:type="model:Text" id="6ec12371-f607-4bd8-abd5-bfb56dc87008" name="sfuncbdgsbtcode" binding="sfuncbdgsbtcode" caption="功能类科目代码"/>
+      <widgetRefs xsi:type="model:Combo" id="8f2d78f5-7e8c-49fa-adf8-245f7acfe226" name="sbudgettype" binding="sbudgettype" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="08bf7267-b80a-472d-b082-c586138ca4f5" name="syear" binding="syear" caption="年度"/>
+      <widgetRefs xsi:type="model:Combo" id="298a39f6-ff38-4e9f-805b-087a5e9a3e62" name="spaytypecode" binding="spaytypecode" caption="支付方式">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#fe3dd2bc-7527-4d01-856e-a0751c878760"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="f95f1c11-6ae6-4c7a-9526-b70483b72f07" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="783f2369-d31b-45c9-b31c-ccc5ca7bf132" name="TableImpl-783f2369-d31b-45c9-b31c-ccc5ca7bf132" binding="pagingcontext" tabletype="paging" refdoubleclickdirection="f094f5d9-c6f4-4b94-920d-14f795e06c2e" refsingleclickdirection="b5036ec8-131b-4b41-88cc-e2fbdbe27794">
+        <columnlist id="e25243c4-f57e-4885-96c4-33d622e53c43" name="国库主体名称" binding="strecode" caption="国库主体名称" editable="false">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+        </columnlist>
+        <columnlist id="4b9219ba-006d-4f06-b7e3-ac84bcf17d03" name="代理银行编码" binding="sbankcode" caption="代理银行编码" editable="false"/>
+        <columnlist id="1193d2b3-2cd4-4e44-afb2-17f835f97e2a" name="预算单位编码" binding="sbudgetunitcode" caption="预算单位编码" editable="false"/>
+        <columnlist id="bd2767cc-1e60-40ec-b9be-e42982d3bc15" name="功能类科目代码" binding="sfuncbdgsbtcode" caption="功能类科目代码" editable="false"/>
+        <columnlist id="933d1278-5ee3-4c53-97f1-264738b5062d" name="预算种类" binding="sbudgettype" caption="预算种类" editable="false">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="9c2a9369-e139-4ed3-a3dd-78b91fcfbdee" name="年度" binding="syear" caption="年度" editable="false"/>
+        <columnlist id="73cae32b-765e-4a88-99dc-0a49e076ed92" name="预算额度" binding="namt" caption="预算额度" editable="false"/>
+        <columnlist id="f16fa91a-dffe-467b-bf40-79d614b9c91b" name="支付方式" binding="spaytypecode" caption="支付方式" editable="false">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#885c9c45-d96e-45c4-b4b2-999539f84772"/>
+        </columnlist>
+        <columnlist id="9e0c6ce6-50c9-402a-8bbf-223a0dda05b2" name="备注" binding="sremark" caption="备注" editable="false"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="04a7dff3-59c6-4cd9-b737-13527b098afc" name="详细信息" grouptitle="详细信息" binding="selectedDto">
+      <widgetRefs xsi:type="model:Text" id="fb065746-f5c0-46ff-bebf-87c213a6e369" name="国库主体名称" binding="strecode" caption="国库主体名称" editable="false">
+        <refenum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="654ddcf4-a795-495c-94b7-a5c4bbbf023e" name="代理银行编码" binding="sbankcode" caption="代理银行编码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="7e74c390-4c1b-43a4-9a4f-405a18879cd6" name="预算单位编码" binding="sbudgetunitcode" caption="预算单位编码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="7da5e8dc-ad6b-4bad-9e1b-06ada4e72cfa" name="功能类科目代码" binding="sfuncbdgsbtcode" caption="功能类科目代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="d0da2ba6-90cb-4f33-ad4e-3c0e961ce0f4" name="预算种类" binding="sbudgettype" caption="预算种类" editable="false">
+        <refenum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="42a30126-e891-45f0-bd7c-2ad21fe50eda" name="年度" binding="syear" caption="年度" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="e1b32d78-5d63-4830-8bf3-a335ca9f4323" name="预算额度" binding="namt" caption="预算额度" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="744fd104-e4df-4a0b-9057-a96b21ca581d" name="支付方式" binding="spaytypecode" caption="支付方式" editable="false">
+        <refenum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#fe3dd2bc-7527-4d01-856e-a0751c878760"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="eec0f5ab-f84a-4bc8-8161-d305243e26a3" name="备注" binding="sremark" caption="备注" editable="false"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="6c0ecb02-64d8-431e-b02f-ac01121f436e">
+    <pages id="743d9fd5-f706-40e0-9452-61a7e629de49" name="JPageImpl-743d9fd5-f706-40e0-9452-61a7e629de49">
+      <views id="64f8a13b-35cd-4acb-bd1d-143973b4891d" name="额度控制信息查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="e287a202-777f-4b0f-9324-dfd7caf12644 f95f1c11-6ae6-4c7a-9526-b70483b72f07">
+        <buttonArea id="9eeac9e4-cd5d-46ab-a3c0-51a6b527794e" name="JButtonAreaImpl-9eeac9e4-cd5d-46ab-a3c0-51a6b527794e">
+          <buttons id="05e27160-55e3-46c0-b1f8-ddf462622a84" name="查询" caption="查询" direction="b65fa309-1ed2-4776-8116-479e5d9fe64e"/>
+          <buttons id="dab243b6-b7fa-49be-9da4-2e8b30150c0d" name="明细" caption="明细" direction="b16b7dfa-fb27-4038-bf1d-3c697a4af3d3"/>
+        </buttonArea>
+      </views>
+      <views id="beb76693-e854-4342-88f7-39a2eafcb8f1" name="明细信息" contentArea="04a7dff3-59c6-4cd9-b737-13527b098afc">
+        <buttonArea id="b5cc54f8-fe62-4094-abaa-1e529c240b85" name="JButtonAreaImpl-b5cc54f8-fe62-4094-abaa-1e529c240b85">
+          <buttons id="a8209fbd-de0d-46bc-80b7-9528eea9bde9" name="返回" caption="返回" direction="32e255e0-7180-43fd-89a7-1d513daacfd7"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

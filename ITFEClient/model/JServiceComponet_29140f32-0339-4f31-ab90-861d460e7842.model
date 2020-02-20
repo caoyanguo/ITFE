@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="29140f32-0339-4f31-ab90-861d460e7842" name="珠海征收机关转换服务组件" ename="tsconvertax">
+  <jproperties id="67ff5d68-a819-4641-8635-8c59584e9a78" key="GeneratedTime" value="1366098097786"/>
+  <refModule href="JModule_fdccb851-d21b-4a88-9d75-9d23448e3f3e.model#fdccb851-d21b-4a88-9d75-9d23448e3f3e"/>
+  <methods id="daf60c8e-c645-4301-bbaa-62d558f909d4" ename="addInfo" name="添加信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="64f9edef-8b44-4a33-8d6a-d13ed914d04b" name="dto信息" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="974feff7-5e74-4b33-b33c-f93fc2bc8e2d" ename="modInfo" name="修改信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="71e169e3-a971-4839-9a00-1e7b402a2396" name="更新的dto信息" ename="nowdto" type="com.cfcc.itfe.persistence.dto.TsConvertaxDto"/>
+    <methodParams id="ea59bc4f-dc78-4b5a-a212-43dcd7e0bbf0" name="原始dto信息" ename="oridto" type="com.cfcc.itfe.persistence.dto.TsConvertaxDto"/>
+  </methods>
+  <methods id="b088ccc3-20eb-426d-88ba-46a2d3fc7d57" ename="delInfo" name="删除dto信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="41480fb2-965c-483f-ba58-60a0097cf9dd" name="dto信息" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

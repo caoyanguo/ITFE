@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3a07f892-840f-4db9-a280-03539f7e576f" name="银行代码表服务组件" ename="TdBank" shared="true">
+  <jproperties id="912a3528-70e8-4bc6-af6a-3b39693ad90d" key="GeneratedTime" value="1362359836195"/>
+  <refModule href="JModule_8d92364d-ff84-4177-afa3-acaee1103d0c.model#8d92364d-ff84-4177-afa3-acaee1103d0c"/>
+  <methods id="2f7d3a17-8d81-4f28-9457-2aa00147b5b6" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="71651bb9-1c28-4937-bae7-f24cd4245505" name="银行代码" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="c038dfc5-c566-4e75-aa01-9b120abdb61a" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="7431582e-fb97-451c-8153-0e5251279d54" name="银行代码" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="21aec928-d760-4575-8130-9a52e6430e09" ename="modInfo" name="修改" codecomment="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="0ff310fc-abbc-40c3-81fa-93c7f68cd6a7" name="银行代码" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

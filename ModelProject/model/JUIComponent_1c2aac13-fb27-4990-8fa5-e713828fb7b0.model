@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1c2aac13-fb27-4990-8fa5-e713828fb7b0" name="信息凭证发送窗口" ename="MessDebtSendUI" shared="false">
+  <jproperties id="f0421d8f-6a94-4fdc-b123-20ccbf31da79" key="GeneratedTime" value="1330497803062"/>
+  <refModule href="JModule_533ce64d-c1b4-4810-b353-74af4826cb14.model#533ce64d-c1b4-4810-b353-74af4826cb14"/>
+  <model id="3396770a-f8e2-4477-9a6b-e5a144b92331" name="JModelImpl-3396770a-f8e2-4477-9a6b-e5a144b92331"/>
+  <services href="JServiceComponet_1d0694c5-b879-4f2a-b72c-a88ac2ac265d.model#1d0694c5-b879-4f2a-b72c-a88ac2ac265d"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="4352c739-bc49-42ef-a72e-0e08acca0462"/>
+  <pagenodes id="71c46bc5-6b22-4635-b652-cef70fe11a50">
+    <pages id="1c0b6e9d-53c3-4004-991c-63f4fa5cf0a6" name="信息凭证发送">
+      <views id="ce80d587-e2e1-40c3-8902-df80ae778c1d" name="信息凭证发送页面" type="ClassName" path="com.cfcc.itfe.client.sendbiz.infocertsend.MessDebtUIComposite" isdefault="true"/>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

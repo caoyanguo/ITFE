@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchReturn3136" beanIdRef="BatchReturn3136" />
+</jb:bean>
+<jb:bean beanId="BatchReturn3136" class="java.util.HashMap" createOnElement="BatchReturn3136">
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BatchReturn3136/TreCode" />
+	<jb:value property="OriBillOrg" decoder="String" data="CFX/MSG/BatchReturn3136/OriBillOrg" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchReturn3136/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchReturn3136/PackNo" />
+	<jb:value property="OriPackNo" decoder="String" data="CFX/MSG/BatchReturn3136/OriPackNo" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/BatchReturn3136/OriEntrustDate" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchReturn3136/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchReturn3136/AllAmt" />
+	<jb:value property="PayoutVouType" decoder="String" data="CFX/MSG/BatchReturn3136/PayoutVouType" />
+	<jb:value property="VouNo" decoder="String" data="CFX/MSG/BatchReturn3136/VouNo" />
+	<jb:value property="VouDate" decoder="String" data="CFX/MSG/BatchReturn3136/VouDate" />
+	<jb:value property="Result" decoder="String" data="CFX/MSG/BatchReturn3136/Result" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/BatchReturn3136/AddWord" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

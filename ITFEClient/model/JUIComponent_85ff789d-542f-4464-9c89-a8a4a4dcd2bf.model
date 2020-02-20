@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="85ff789d-542f-4464-9c89-a8a4a4dcd2bf" name="代理库统计分析数据导入" ename="AgentBankCountAnalyseDataImport">
+  <jproperties id="1fc374cc-563c-497a-b66d-ca71ad41ea02" key="GeneratedTime" value="1427265307115"/>
+  <refModule href="JModule_84270185-2873-46a8-8837-e9b23c11eace.model#84270185-2873-46a8-8837-e9b23c11eace"/>
+  <model id="f383cf8a-b3e2-489a-9527-1a0d02c6aa5b" name="JModelImpl-f383cf8a-b3e2-489a-9527-1a0d02c6aa5b">
+    <attributes id="3d49b35f-919b-4d1c-bd12-df8edf359a96" name="filePath" type="java.util.List"/>
+    <attributes id="c3dd9e82-31cc-4a48-983a-3a57b953adf3" name="srSearchDto" type="com.cfcc.itfe.persistence.dto.TrIncomedayrptDto"/>
+    <attributes id="ac6841a6-7173-4440-980d-439d7d880de2" name="kcSearchDto" type="com.cfcc.itfe.persistence.dto.TrStockdayrptDto"/>
+    <attributes id="9a7f0f35-62df-4637-b925-c8b3e99c3f9e" name="treCode" type="java.lang.String"/>
+    <attributes id="f21efd08-3961-4421-a80f-7087611c52e4" name="treCodelist" type="java.util.List"/>
+    <attributes id="352c7363-db21-43a6-a6b9-dfb17575ed26" name="rptDate" type="java.lang.String"/>
+    <attributes id="fe767278-1064-4d99-9dbf-0a1cc5ed9fbb" name="bizTypeList" type="java.util.List"/>
+    <attributes id="4d0a00b2-6052-4c00-9cab-1b1af4b22d84" name="bizType" type="java.lang.String"/>
+    <attributes id="2c2b5305-6697-4ddd-9a2c-8e7e392c2f56" name="msg" type="java.lang.String"/>
+    <directions id="28f366be-3a9d-4228-bf50-56ccfbdc6e90" name="代理库统计分析数据导入" ename="dataImport"/>
+    <directions id="2cf8b262-65bf-41bc-b694-fa394f549056" name="发送报表数据" ename="sendDate"/>
+  </model>
+  <services href="JServiceComponet_9ebf13fd-7987-4213-82d7-0148c12d6b6b.model#9ebf13fd-7987-4213-82d7-0148c12d6b6b"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="40397e18-794f-495e-accd-b7d1d8ba6993">
+    <contentareanode id="e56af118-b3ea-4646-b8db-484ce651699d" name="代理库统计分析数据导入" grouptitle="代理库统计分析数据导入">
+      <widgetRefs xsi:type="model:FileUploader" id="fe3e953c-3851-4966-9fe3-f5fdd952db83" name="选择文件路径" binding="filePath" visible="true" caption="选择文件路径" enable="true" editable="true" required="true" isdirectory="false" ismult="true"/>
+      <widgetRefs xsi:type="model:Textarea" id="d6a73820-1a27-44fc-85b9-be445b32893a" name="数据导入说明" binding="msg" caption="数据导入说明" editable="false" defaultvalue="请选择需要导入的库存和收入报表数据，（库存文件k20141110t2800000000zc.txt或k20141110t2801000000sr.txt）" warp="true">
+        <componentStyle id="2c1ab93e-6d09-4b35-a562-bf5f9fbbe9e6" name="ComponentStyleImpl-2c1ab93e-6d09-4b35-a562-bf5f9fbbe9e6" ename="ComponentStyleImpl2c1ab93e6d094b35a562bf5f9fbbe9e6" width="600" componentwidth="80" innercompositewidth="800" innercompositeheight="100"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2d248b12-bcc5-4c4b-96a8-bf817594815e" name="报表数据发送" grouptitle="报表数据发送">
+      <widgetRefs xsi:type="model:Combo" id="20d64ea6-6f50-4d8e-a5ce-ae6e3919d80b" name="国库代码" binding="treCode" caption="国库代码" required="true" display="strename" underly="strecode" modelsource="treCodelist"/>
+      <widgetRefs xsi:type="model:Text" id="d8a1f7b6-b613-48f9-a64b-ccb6fbc152aa" name="报表日期" binding="rptDate" caption="报表日期" required="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="9b160bdf-5176-4fc1-ae26-b470947b02c2">
+    <pages id="e35c91df-9803-4871-8687-e8a80ba86cfc" name="代理库统计分析数据导入">
+      <views id="b7d86b69-0eab-41c0-b5b0-d6a245652b95" name="代理库统计分析数据导入" isdefault="true" contentArea="e56af118-b3ea-4646-b8db-484ce651699d">
+        <buttonArea id="6c10579e-a03d-4430-be1b-6aa674803195" name="JButtonAreaImpl-6c10579e-a03d-4430-be1b-6aa674803195">
+          <buttons id="8c13c86c-086b-4385-9132-aba7d25a1be4" name="导入" caption="导入" checkrequired="true" direction="28f366be-3a9d-4228-bf50-56ccfbdc6e90"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="479c945b-8789-4da8-b095-4f607a9c49a3" name="报表数据发送">
+      <views id="eafb5670-f5b1-487b-8308-a7ee8620b9ea" name="报表数据发送" isdefault="true" contentArea="2d248b12-bcc5-4c4b-96a8-bf817594815e">
+        <buttonArea id="5470deba-cd45-46ba-a7ca-cb0332f2bb64" name="JButtonAreaImpl-5470deba-cd45-46ba-a7ca-cb0332f2bb64">
+          <buttons id="4892bfc1-c03f-459d-8c35-0a62e09ab9e8" name="发送" caption="发送" checkrequired="true" direction="2cf8b262-65bf-41bc-b694-fa394f549056"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

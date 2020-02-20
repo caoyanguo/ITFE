@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d2043ede-0078-43d8-9e6e-4d49e98a62fc" isgenerated="false" name="支出报表业务" ename="PayoutReport" shared="false"/>

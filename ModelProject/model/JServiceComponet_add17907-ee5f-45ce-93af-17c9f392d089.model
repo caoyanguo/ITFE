@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="add17907-ee5f-45ce-93af-17c9f392d089" name="辅助标志对照表服务组件" ename="TsConvertassitsign">
+  <jproperties id="2f68080a-67ea-4b12-8cca-e74e4cc7d0ee" key="GeneratedTime" value="1368954141296"/>
+  <refModule href="JModule_dffdf204-88a2-4570-94f5-48908beef4de.model#dffdf204-88a2-4570-94f5-48908beef4de"/>
+  <methods id="ce268bb6-da3c-4ef2-9a1a-603de72ab87d" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="辅助标志对照表">
+    <methodParams id="a25631e1-d2dd-4926-b3fc-7d81ae4b5f78" name="辅助标志对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="edc37e48-5733-4c10-b7ef-098496a727fa" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="cdfb7b0e-be2f-46db-92fb-d608ed9a196c" name="辅助标志对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="edc37e48-5733-4c10-b7ef-098496a727fa" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="325d273c-1367-4bca-a67f-02876dad83c6" name="辅助标志对照表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="c11e8be5-c0e9-4b86-acd7-d80dbfc02171" ename="dataimport" name="导入数据文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a97d9f43-a47b-47ba-b394-09c40f82419c" name="文件路径" ename="filepath" type="java.lang.String"/>
+    <methodParams id="aee4a553-04fb-4f12-a738-428cf5bdc5c7" name="导入类型" ename="importtype" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

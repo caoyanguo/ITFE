@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c7258d18-ffa3-44f5-b9cc-0e85a455cd76" name="收入报表和分户账导入及查询" ename="trIncomeReport"/>

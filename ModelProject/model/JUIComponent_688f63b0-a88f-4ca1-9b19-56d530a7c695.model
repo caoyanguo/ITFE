@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="688f63b0-a88f-4ca1-9b19-56d530a7c695" name="查询海关电子税票3178" ename="TvFinIncomecustom">
+  <jproperties id="b548b973-7f94-4ef7-a6dd-54108e656fa8" key="GeneratedTime" value="1557209656385"/>
+  <refModule href="JModule_9350c233-0f15-4cf1-b476-5541eae3f5c9.model#9350c233-0f15-4cf1-b476-5541eae3f5c9"/>
+  <model id="be4a4ac0-6e72-4f7d-b8f8-0df2569f32b1" name="JModelImpl-be4a4ac0-6e72-4f7d-b8f8-0df2569f32b1">
+    <attributes id="8f4a6fda-8de9-4024-8493-74b1ae2f397a" name="dto" type="com.cfcc.itfe.persistence.dto.TvFinCustomonlineDto"/>
+    <attributes id="c821a0d4-0c43-4fbf-bf07-a5ff4237a690" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="3d8c3eb2-ffb8-42b4-83d5-8b7c91150717" name="单选" ename="singleSelect"/>
+    <directions id="b3f593c0-b28b-4c5f-a187-3fcf79b0b2dc" viewers="e1b0159d-f2a9-479b-b346-caef3e98b87b" name="查询" ename="query"/>
+    <directions id="9c451965-53cf-4602-b171-60b27fc2cf9b" viewers="efa81744-86d8-46fd-94ed-831c1b835ce5" name="返回" ename="goBack"/>
+    <directions id="e6945c36-76de-4ab4-822a-a5b2215fa01d" name="校验纳税人与国库对应关系" ename="checkTaxPayCodeOrTrecode"/>
+    <directions id="342da01d-e231-4f13-90e5-d008cd89d690" name="手动处理共享分成" ename="makeDivide"/>
+    <directions id="65636101-e4bd-41b0-b1de-2ef901a28677" name="全选/反选" ename="selectAllOrNone"/>
+    <directions id="4ebccdf3-7772-4420-962d-8472708f4579" name="导出" ename="exportTable"/>
+  </model>
+  <services href="JServiceComponet_27233001-4a40-484d-9db8-e79925589594.model#27233001-4a40-484d-9db8-e79925589594"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="8cb62018-2d6b-47cd-ba3b-1a65e3700d05">
+    <contentareanode id="22285fb8-877d-42c2-bcc5-ae3ec33d561a" name="电子税票信息查询条件" grouptitle="电子税票信息查询条件" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="e93e8d70-cf8c-4a7c-a42a-0f49c4b6e405" name="sapplydate" binding="dto.sapplydate" caption="开始日期" editable="true" required="true">
+        <labelStyle id="6ceb85cf-ef91-4790-bc38-da8349e634e9" name="LabelStyleImpl-6ceb85cf-ef91-4790-bc38-da8349e634e9" ename="LabelStyleImpld6ceb85cf-ef91-4790-bc38-da8349e634e9"/>
+        <componentStyle id="1ab22432-dff9-4ca2-a755-e19dec6b6674" name="ComponentStyleImpl-1ab22432-dff9-4ca2-a755-e19dec6b6674" ename="ComponentStyleImpl1ab22432-dff9-4ca2-a755-e19dec6b6674"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="28f74423-62a5-43d9-a26c-ef3b3aef3185" name="sapplydate" binding="dto.sbilldate" caption="结束日期" editable="true" required="true">
+        <labelStyle id="f2d6e754-56dd-4f68-93dc-f545d228cc57" name="LabelStyleImpl-6ceb85cf-ef91-4790-bc38-da8349e634e9" ename="LabelStyleImpld6ceb85cf-ef91-4790-bc38-da8349e634e9"/>
+        <componentStyle id="678206eb-aa06-4e87-b7d5-647408151975" name="ComponentStyleImpl-1ab22432-dff9-4ca2-a755-e19dec6b6674" ename="ComponentStyleImpl1ab22432-dff9-4ca2-a755-e19dec6b6674"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="5dee52b7-d70f-4f0d-82e9-482db3752ff7" name="sorgcode" binding="dto.sfinorgcode" caption="财政机关代码" editable="true">
+        <labelStyle id="4b36716d-a90f-4667-a8c2-57e65c72a561" name="LabelStyleImpl-f311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7" ename="LabelStyleImpldf311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7"/>
+        <componentStyle id="da5892fd-58ec-49d8-a620-fd150b6fad23" name="ComponentStyleImpl-a3824a45-0648-4ef8-9b17-261b8b0875ae" ename="ComponentStyleImpla3824a45-0648-4ef8-9b17-261b8b0875ae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="b6acd986-14a7-4d68-a2dc-143a61219cab" name="征收机关代码" binding="dto.staxorgcode" caption="征收机关代码" display="staxorgname" underly="staxorgcode" modelsource="taxorgList"/>
+      <widgetRefs xsi:type="model:Text" id="888105fe-69c5-4abd-89b8-c07b2f0ecd8f" name="strecode" binding="dto.strecode" caption="国库代码" editable="true">
+        <labelStyle id="1057b138-79ae-4810-a44c-2cd21efc4ad0" name="LabelStyleImpl-1057b138-79ae-4810-a44c-2cd21efc4ad0" ename="LabelStyleImpld1057b138-79ae-4810-a44c-2cd21efc4ad0"/>
+        <componentStyle id="9cfdad26-0d68-4ed4-b97d-968360e100c0" name="ComponentStyleImpl-9cfdad26-0d68-4ed4-b97d-968360e100c0" ename="ComponentStyleImpl9cfdad26-0d68-4ed4-b97d-968360e100c0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4fa12b05-e73e-4c1d-acd2-880eb109e353" name="spackno" binding="dto.spackno" caption="包流水号" editable="true">
+        <labelStyle id="cb7d1093-cd0d-4a6b-a37e-affbca3c66cd" name="LabelStyleImpl-cb7d1093-cd0d-4a6b-a37e-affbca3c66cd" ename="LabelStyleImpldcb7d1093-cd0d-4a6b-a37e-affbca3c66cd"/>
+        <componentStyle id="ce9b3b53-ff7e-46c2-861c-a2570bc44d7b" name="ComponentStyleImpl-ce9b3b53-ff7e-46c2-861c-a2570bc44d7b" ename="ComponentStyleImplce9b3b53-ff7e-46c2-861c-a2570bc44d7b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="449f9161-039b-4dfa-b06e-7902a1060370" name="strano" binding="dto.strano" caption="交易流水号" editable="true">
+        <labelStyle id="14b2e39c-0fad-420c-9fe4-91376fc200da" name="LabelStyleImpl-14b2e39c-0fad-420c-9fe4-91376fc200da" ename="LabelStyleImpld14b2e39c-0fad-420c-9fe4-91376fc200da"/>
+        <componentStyle id="2afa9a12-7c61-4afb-8c4c-3e93163e1772" name="ComponentStyleImpl-2afa9a12-7c61-4afb-8c4c-3e93163e1772" ename="ComponentStyleImpl2afa9a12-7c61-4afb-8c4c-3e93163e1772"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4f0fa3bd-d75c-4c72-9042-a3b2eccf0778" name="staxvouno" binding="dto.staxvouno" caption="税票号码" editable="true">
+        <labelStyle id="ee866a61-1e41-4059-a0bc-e9173d6a709d" name="LabelStyleImpl-ee866a61-1e41-4059-a0bc-e9173d6a709d" ename="LabelStyleImpldee866a61-1e41-4059-a0bc-e9173d6a709d"/>
+        <componentStyle id="a18eb2a6-a29a-48c4-88c1-eaf4c400684f" name="ComponentStyleImpl-a18eb2a6-a29a-48c4-88c1-eaf4c400684f" ename="ComponentStyleImpla18eb2a6-a29a-48c4-88c1-eaf4c400684f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="bc06bb08-d2bf-4d7c-a753-c8201d589728" name="staxpaycode" binding="dto.staxpaycode" caption="纳税人编号" editable="true">
+        <labelStyle id="cd839fd3-2add-48f3-881d-0a923fee9649" name="LabelStyleImpl-f311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7" ename="LabelStyleImpldf311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7"/>
+        <componentStyle id="b7a16365-869d-4531-a83f-098f89e6d457" name="ComponentStyleImpl-a3824a45-0648-4ef8-9b17-261b8b0875ae" ename="ComponentStyleImpla3824a45-0648-4ef8-9b17-261b8b0875ae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="30b4f7ae-cc06-477f-b151-1f339fb5e031" name="staxpayname" binding="staxpayname" caption="纳税人名称" editable="true">
+        <labelStyle id="2b922f68-9770-48ee-b285-eb2a12c8e9fb" name="LabelStyleImpl-f311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7" ename="LabelStyleImpldf311ac0f-7f1c-4ebc-90c5-6bedfb3d38a7"/>
+        <componentStyle id="c3cdaf43-fb04-4064-aba2-621b3f027eeb" name="ComponentStyleImpl-a3824a45-0648-4ef8-9b17-261b8b0875ae" ename="ComponentStyleImpla3824a45-0648-4ef8-9b17-261b8b0875ae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="d5c83107-b971-430e-8f5f-7f6e5d13f5a0" name="ctrimflag" binding="dto.strimsign" caption="整理期标志" defaultvalue="1">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="82e1aace-b8c0-4056-b1e4-6e7d2769985d" name="cbudgettype" binding="dto.sbudgettype" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="625c6d61-fc29-49ca-9d28-abb2c067ebc8" name="电子税票信息查询结果" grouptitle="电子税票信息查询结果">
+      <widgetRefs xsi:type="model:Table" id="5ca1b715-d008-495a-83cd-84e3883f6788" name="电子税票信息查询结果" binding="pagingcontext" caption="电子税票信息查询结果" tabletype="paging" pagingtable="" selectedrows="" refsingleclickdirection="3d8c3eb2-ffb8-42b4-83d5-8b7c91150717">
+        <columnlist id="5ef5f81c-2c10-48c4-9e2b-000ca54f47f0" name="tssysupdate" binding="sext1" caption="系统更新时间"/>
+        <columnlist id="92d5f35f-06dc-407d-92a6-c15b69a0ac51" name="sorgcode" binding="sfinorgcode" caption="财政机关代码"/>
+        <columnlist id="e93e8d70-cf8c-4a7c-a42a-0f49c4b6e405" name="sapplydate" binding="sapplydate" caption="申请日期"/>
+        <columnlist id="888105fe-69c5-4abd-89b8-c07b2f0ecd8f" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="32536924-d98a-4d1e-a48c-a82292921c8f" name="strename" binding="strename" caption="国库名称"/>
+        <columnlist id="ae907094-c422-43c1-823a-f8e7e9a1b402" name="staxorgcode" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="3d1e99d1-c570-400e-9270-7dd7c744c72f" name="cbdglevel" binding="sbudgetlevelcode" caption="预算级次">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="8ac9aae6-d440-4a27-bc20-0189885513d5" name="cbdglevelname" binding="sbudgetlevelname" caption="预算级次名称"/>
+        <columnlist id="98cefdbb-f157-461f-9d24-6c8eb6a79927" name="ctrimflag" binding="strimsign" caption="调整期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+        </columnlist>
+        <columnlist id="94d571d1-f459-4214-b9c0-c99748bbd430" name="staxpaycode" binding="staxpaycode" caption="纳税人编号"/>
+        <columnlist id="055d9ca6-b54c-4966-afca-d8a848670f68" name="staxpayname" binding="staxpayname" caption="纳税人名称"/>
+        <columnlist id="da6b1f8e-d69d-44a3-8dd7-03d77a5adb9e" name="sbdgsbtcode" binding="sbudgetsubjectcode" caption="预算科目代码"/>
+        <columnlist id="698a1124-a7d3-4159-afe7-95f568c05830" name="sbdgsbtname" binding="sbudgetsubjectname" caption="预算科目名称"/>
+        <columnlist id="4b47c069-0fd2-416e-8a5a-9d85621e6d88" name="cbudgettype" binding="sbudgettype" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="4fa12b05-e73e-4c1d-acd2-880eb109e353" name="spackno" binding="spackno" caption="包流水号"/>
+        <columnlist id="4bfe7ecd-fc6f-418f-8433-9bfcb3437186" name="spaybnkno" binding="spaybnkno" caption="付款行行号"/>
+        <columnlist id="449f9161-039b-4dfa-b06e-7902a1060370" name="strano" binding="strano" caption="交易流水号"/>
+        <columnlist id="59bd23ef-80fa-4975-901f-8863f10f90cc" name="sorimsgno" binding="sorimsgno" caption="原报文编号"/>
+        <columnlist id="6e445b6f-4ffc-4ac2-ae9b-ad808510a2a6" name="ftraamt" binding="ntraamt" caption="交易金额"/>
+        <columnlist id="4caa2b81-3f6d-4948-8a4e-b5e10e203640" name="spayeropnbnkno" binding="spayeropbkno" caption="付款人开户行行号"/>
+        <columnlist id="f08b1d3e-1dfe-4500-a6fc-cbb2e7e032e8" name="shandorgname" binding="shandorgname" caption="缴款单位名称"/>
+        <columnlist id="178ec8d7-28ec-42f6-baa6-b8f3bcadde08" name="spayacct" binding="spayacct" caption="付款人账号"/>
+        <columnlist id="4f0fa3bd-d75c-4c72-9042-a3b2eccf0778" name="staxvouno" binding="staxvouno" caption="税票号码"/>
+        <columnlist id="f9eeb56b-e647-4d21-bc96-7a0a4a0a1023" name="sbilldate" binding="sbilldate" caption="开票日期"/>
+        <columnlist id="2b54412b-d9b8-4500-8df8-376b3173f118" name="setpcode" binding="scorpcode" caption="企业代码"/>
+        <columnlist id="18181346-01a1-4e5e-9497-8f8bd2ddd2a1" name="setpname" binding="scorpname" caption="企业名称"/>
+        <columnlist id="16758fa2-5081-4b13-a6ec-66c19449cfd1" name="setptype" binding="scorptype" caption="企业类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4338e7c6-ce99-4ad0-b91a-ee0c2ce668fd"/>
+        </columnlist>
+        <columnlist id="db2d6d0b-8e2b-4081-89f4-d42f12b5c1ab" name="slimit" binding="slimitdate" caption="限缴日期"/>
+        <columnlist id="1533bdbe-c901-470a-947d-e8ebed0ddb99" name="staxtypecode" binding="staxtypecode" caption="税种代码"/>
+        <columnlist id="ba4e4968-edc2-4010-a508-d287537edeab" name="staxkindname" binding="staxtypename" caption="税种名称"/>
+        <columnlist id="e3e98c61-dc28-4e13-a84c-1e8cdeed738c" name="staxstartdate" binding="staxstartdate" caption="税款所属日期起"/>
+        <columnlist id="27facbf9-f4c8-4103-93c8-56535a03b0a3" name="staxenddate" binding="staxenddate" caption="税款所属日期止"/>
+        <columnlist id="cb1ce7d5-e311-4202-bba9-dd951847713e" name="sastflag" binding="svicesign" caption="辅助标志"/>
+        <columnlist id="46bb7050-55b4-40da-988b-c833205bb999" name="ctaxtype" binding="staxtype" caption="税款类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#a431955e-840b-4016-9a7a-3145c466ebe1"/>
+        </columnlist>
+        <columnlist id="8236fb28-9daa-40db-b6e5-4da222045257" name="strastate" binding="sopstat" caption="处理状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#14bd5859-08f9-466f-88d1-06ea2162f0cc"/>
+        </columnlist>
+        <columnlist id="90f4901f-4f68-4cfb-bfe9-82f1d0b3d9fe" name="sremark" binding="sremark" caption="备注"/>
+        <columnlist id="0faf219c-0438-4214-bf20-d862bcef0eba" name="sremark1" binding="sremark1" caption="备注1"/>
+        <columnlist id="964cc86e-50f0-42d7-87a2-051bafa748fc" name="sremark2" binding="sremark2" caption="备注2"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="7e93cf4c-582e-4551-ad75-3871dfdaa4f2">
+    <pages id="570d6a7b-4e36-47cf-b8a4-2bb0e33c017f" name="海关电子税票信息查询">
+      <views id="efa81744-86d8-46fd-94ed-831c1b835ce5" name="海关电子税票信息查询条件" isdefault="true" contentArea="22285fb8-877d-42c2-bcc5-ae3ec33d561a">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="7d5ee78a-a9c4-4061-b9c6-a2968f6a09f3" name="JButtonAreaImpl-7d5ee78a-a9c4-4061-b9c6-a2968f6a09f3">
+          <buttons id="d3845110-8837-4378-93a5-3beaf48b80f3" name="查询" caption="查询" direction="b3f593c0-b28b-4c5f-a187-3fcf79b0b2dc"/>
+        </buttonArea>
+      </views>
+      <views id="e1b0159d-f2a9-479b-b346-caef3e98b87b" name="海关电子税票信息查询结果" contentArea="625c6d61-fc29-49ca-9d28-abb2c067ebc8">
+        <buttonArea id="27196506-6c26-40e0-84f4-3a912e4a35b2" name="JButtonAreaImpl-27196506-6c26-40e0-84f4-3a912e4a35b2">
+          <buttons id="1778bed4-229a-4d58-8b13-4031f7993e11" name="全选/反选" visible="false" caption="全选/反选" enable="false" direction="65636101-e4bd-41b0-b1de-2ef901a28677"/>
+          <buttons id="4a6f057d-2de8-4857-8dc7-d39dfea90865" name="校验纳税人与国库对应关系" visible="false" caption="校验纳税人与国库对应关系" enable="false" direction="e6945c36-76de-4ab4-822a-a5b2215fa01d"/>
+          <buttons id="00afd267-5c05-4fde-9eda-ab0eb34188d6" name="手动处理共享分成" visible="false" caption="手动处理共享分成" enable="false" direction="342da01d-e231-4f13-90e5-d008cd89d690"/>
+          <buttons id="4d15a446-a70b-44a7-9a36-ee2e47f5b428" name="导出数据" caption="导出数据" direction="4ebccdf3-7772-4420-962d-8472708f4579"/>
+          <buttons id="41f1c6aa-5f1d-40c0-b28f-5e2dafda67d0" name="返回" caption="返回" direction="9c451965-53cf-4602-b171-60b27fc2cf9b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

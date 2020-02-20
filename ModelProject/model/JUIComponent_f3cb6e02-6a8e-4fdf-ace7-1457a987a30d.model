@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f3cb6e02-6a8e-4fdf-ace7-1457a987a30d" name="分科目查询统计分析表(上海)" ename="BudgetIncomeQuerySubjectReport">
+  <jproperties id="a02993dd-64ed-4c2d-9e07-800f46895fd5" key="GeneratedTime" value="1380246476250"/>
+  <refModule href="JModule_44c0a324-0687-45b5-8468-27ccf3e9f7de.model#44c0a324-0687-45b5-8468-27ccf3e9f7de"/>
+  <model id="d27878ab-bd74-412a-ab11-820c166d4a96" name="JModelImpl-d27878ab-bd74-412a-ab11-820c166d4a96">
+    <directions id="f8041c74-9519-4394-ab39-438a003a475f" viewers="c0a4352c-337c-4db6-b33f-bce1a7937e77" name="查询" ename="query"/>
+    <directions id="29e3d1ef-30cf-4d87-ba25-874c05e95ba6" viewers="d65a4a17-4f85-4e84-b4f8-3e93b7ad8fc5" name="返回" ename="goBack"/>
+    <directions id="0f5e7510-b2c4-4c49-ab42-25d2d4b2098b" name="导出标准Excel" ename="exportExcelFile"/>
+  </model>
+  <contentAreas id="15b5d895-5ca6-42ff-95a7-b67c674a5f62">
+    <contentareanode id="513dfa4b-254a-4814-9fb9-3eb5165c8721" name="分科目统计分析查询条件" grouptitle="分科目统计分析查询条件">
+      <widgetRefs xsi:type="model:Combo" id="7daebdf2-3cd6-4f15-8c5f-833e802d3c0e" name="报表收支类型" binding="reporttype" caption="报表收支类型" required="true" display="displayValue" underly="underlyValue" modelsource="reporttypelist"/>
+      <widgetRefs xsi:type="model:Text" id="b34c9187-b0ec-4657-a07a-76f1e8f917eb" name="报表日期" binding="sdate" caption="报表日期"/>
+      <widgetRefs xsi:type="model:Combo" id="17c5abca-ad40-4aee-afb2-f91be7328c3e" name="国库代码" binding="sleTreCode" caption="国库代码" display="strename" underly="strecode" modelsource="treList"/>
+      <widgetRefs xsi:type="model:Combo" id="3b200ba6-2648-445d-8c69-c1329d04d132" name="科目类型" binding="sleSubjectType" caption="科目类型" display="staxorgname" underly="staxorgcode" modelsource="taxorgList">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aee6ea4c-1e24-4167-88ca-28b74274d1ea"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="68b9e5ae-637f-426b-9b71-22fda2c0720a" name="预算种类" binding="sleBudKind" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="feb1124a-a41f-4f65-817e-b77b6cf64c0a" name="辖属标志" binding="sleOfFlag" caption="辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8502f57a-8b74-4a2a-b358-90f359c6a43b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="8766619a-87ce-4c8b-a0fa-7cdb8fadc59e" name="预算级次" binding="sleBudLevel" caption="预算级次">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3d280685-50b6-49c3-b6a7-57640479b49d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="2aa6c7fd-f92c-4bbf-9f0a-d47deb7b4ccb" name="调整期标志" binding="sleTrimFlag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="fa2facb0-2bcd-4a1f-9143-5333651ee41e" name="报表种类" binding="sleBillType" caption="报表种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3e431b8d-c784-4699-99a0-d683d38a9f29"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6f953538-8246-49e3-92b3-95107f70f0a7" name="报表类型" binding="rptType" caption="报表类型" display="displayValue" underly="underlyValue" modelsource="rptTypeList"/>
+      <widgetRefs xsi:type="model:Combo" id="a98561eb-9d19-4d1f-b4db-608a000772fb" name="调拨标志" binding="smoveflag" caption="调拨标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#1224c7ae-7b59-409f-98fb-6286e8df9295"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="2e088909-762f-49f1-b33a-435918fb38af" name="金额单位" binding="sleMoneyUnit" caption="金额单位">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4becbd9c-60df-4c15-aec5-13e3c4016b00"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="9816df4f-50a1-4382-b6fc-9068f4f9810b" name="占比预算科目" binding="sbasebudgetsubcode" caption="占比预算科目"/>
+      <widgetRefs xsi:type="model:Text" id="5343d4b6-dfdd-47b9-99e3-da3adb126671" name="预算科目代码" binding="sbudgetsubcode" caption="预算科目代码" enable="true" editable="false"/>
+    </contentareanode>
+    <contentareanode id="35863148-8470-4822-8108-d63918964f2b" name="分科目统计分析查询结果" grouptitle="">
+      <jreportref id="beffcefa-40ee-4a3d-bb48-e032f4236889" name="预算收入分科目统计分析查询结果报表" reportpath="reportPath" binding="reportList" parammap="reportMap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="a5ecec52-ae1e-4fe9-a51c-be385a9f613e">
+    <pages id="0b42d561-29d7-4161-90ac-db2ffef11f98" name="分科目统计分析查询界面">
+      <views id="d65a4a17-4f85-4e84-b4f8-3e93b7ad8fc5" name="分科目统计分析查询条件显示界面" isdefault="true" genarateprocessorname="BudgetSubCode" contentArea="513dfa4b-254a-4814-9fb9-3eb5165c8721">
+        <buttonArea id="a5d0b567-5cd7-442d-9abf-2c75d64f63e0" name="JButtonAreaImpl-a5d0b567-5cd7-442d-9abf-2c75d64f63e0">
+          <buttons id="6736ae3a-aeab-4880-bdc8-8fdc7446cdb1" name="查询" caption="查询" direction="f8041c74-9519-4394-ab39-438a003a475f"/>
+        </buttonArea>
+      </views>
+      <views id="c0a4352c-337c-4db6-b33f-bce1a7937e77" name="分科目统计分析查询结果显示界面" contentArea="35863148-8470-4822-8108-d63918964f2b">
+        <buttonArea id="4cadff82-3eea-47d5-8715-6743b932395a" name="JButtonAreaImpl-4cadff82-3eea-47d5-8715-6743b932395a">
+          <buttons id="2bd6948a-6447-447a-bff8-8a8ea111478a" name="返回" caption="返回" direction="29e3d1ef-30cf-4d87-ba25-874c05e95ba6"/>
+          <buttons id="8092ea8d-93eb-4de6-8fa8-dc944b5953a7" name="导出Excel文件" caption="导出Excel文件" direction="0f5e7510-b2c4-4c49-ab42-25d2d4b2098b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

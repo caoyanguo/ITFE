@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f1b47442-e7f5-4ac0-b519-682b9c9097b9" name="前置接收Tips数据导出" ename="TipsDataExport"/>

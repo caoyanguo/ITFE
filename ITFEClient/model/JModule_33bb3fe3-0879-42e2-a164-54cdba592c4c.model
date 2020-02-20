@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="33bb3fe3-0879-42e2-a164-54cdba592c4c" name="批次信息" ename="TsSysbatch" shared="true"/>

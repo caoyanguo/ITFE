@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1d0694c5-b879-4f2a-b72c-a88ac2ac265d" name="总库信息文件发送服务器组件" ename="MessDataUpload" shared="false">
+  <jproperties id="d21d53b0-ff94-4920-84a0-7d3b9a8d47d5" key="GeneratedTime" value="1330497803390"/>
+  <refModule href="JModule_533ce64d-c1b4-4810-b353-74af4826cb14.model#533ce64d-c1b4-4810-b353-74af4826cb14"/>
+  <methods id="3d6dd073-38c0-47d9-8bdd-20ac8f48a317" ename="upload" name="upload" codecomment="信息凭证上传" returntype="com.cfcc.devplatform.customtype.Void" remark="信息凭证上传">
+    <methodParams id="3ddfe1e8-1f92-4a17-bd74-af41c36b7cb2" name="strTitle" ename="strTitle" type="java.lang.String" codecomment="信息文件标题&#xD;&#xA;信息文件标题"/>
+    <methodParams id="656bfc0f-475c-4dd3-a361-740bb6ae79d7" name="strContent" ename="strContent" type="java.lang.String" codecomment="信息文件正文内容&#xD;&#xA;信息文件内容"/>
+    <methodParams id="d59d7df8-1fc9-4b95-aed7-32526526aa12" name="recvOrgList" ename="recvOrgList" type="java.util.List" codecomment="接收机构集合"/>
+    <methodParams id="1a7ca821-1edb-4f9e-8bc0-a32430642968" name="upLoadFileList" ename="upLoadFileList" type="java.util.List" codecomment="上载文件的集合"/>
+  </methods>
+  <methods id="e8a26e7c-e016-478f-8e55-6fe4ba27f631" ename="getAllConnOrgs" name="getAllConnOrgs" codecomment="获得全部连通机构信息" returntype="java.util.List" remark="获得全部连通机构信息"/>
+  <methods id="056ff025-44c2-4a87-8865-2e156567f289" ename="deleteOneFile" name="deleteOneFile" codecomment="删除一个已经上载的文件" returntype="com.cfcc.devplatform.customtype.Void" remark="删除一个已经上载的文件">
+    <methodParams id="7cb6e60c-975c-4cfa-91ff-64e54ce5e4ab" name="filePath" ename="filePath" type="java.lang.String" codecomment="文件在服务器上的相对路径"/>
+  </methods>
+  <methods id="116832f9-3a89-49c9-9bb7-3320f4db3e61" ename="addErrorSendLog" name="addErrorSendLog" codecomment="记录错误发送日志" returntype="com.cfcc.devplatform.customtype.Void" remark="记录错误发送日志">
+    <methodParams id="473c1745-7d63-4e4a-9ca8-799ba54cc79f" name="title" ename="title" type="java.lang.String" codecomment="信息文件标题"/>
+    <methodParams id="238e7a93-ae86-4ff3-8a7a-f40d525f26f3" name="errMsg" ename="errMsg" type="java.lang.String" codecomment="错误信息"/>
+  </methods>
+</model:JServiceComponent>

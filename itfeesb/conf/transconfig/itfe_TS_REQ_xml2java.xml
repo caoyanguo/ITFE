@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+	xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+	<jb:bean beanId="MSG" class="java.util.HashMap"
+		createOnElement="MSG">
+		<jb:wiring property="HEAD" beanIdRef="HEAD" />
+		<jb:wiring property="DATA" beanIdRef="DATA" />
+	</jb:bean>
+	<jb:bean beanId="HEAD" class="java.util.HashMap"
+		createOnElement="HEAD">
+		  <jb:value property="Sender" decoder="String"
+			data="MSG/HEAD/Sender" />
+		  <jb:value property="Receiver" decoder="String"
+			data="MSG/HEAD/Receiver" />
+			<jb:value property="MsgDate" decoder="String"
+			data="MSG/HEAD/MsgDate" />
+			<jb:value property="FileName" decoder="String"
+			data="MSG/HEAD/FileName" />
+			<jb:value property="MsgClass" decoder="String"
+			data="MSG/HEAD/MsgClass" />
+			<jb:value property="MsgType" decoder="String"
+			data="MSG/HEAD/MsgType" />
+			<jb:value property="RetDate" decoder="String"
+			data="MSG/HEAD/RetDate" />
+	</jb:bean>
+	<jb:bean beanId="DATA" class="java.util.HashMap"
+		createOnElement="DATA">
+		<jb:wiring property="SUM" beanIdRef="SUM" />
+		<jb:wiring property="DETAILS" beanIdRef="DETAILS" />
+	</jb:bean>
+	<jb:bean beanId="SUM" class="java.util.HashMap"
+		createOnElement="SUM">
+		  <jb:value property="Sender" decoder="String"
+			data="MSG/DATA/SUM/Sender" />
+		  <jb:value property="DealDate" decoder="String"
+			data="MSG/DATA/SUM/DealDate" />
+			<jb:value property="SumCount" decoder="String"
+			data="MSG/DATA/SUM/SumCount" />
+			<jb:value property="SumMoney" decoder="String"
+			data="MSG/DATA/SUM/SumMoney" />
+			<jb:value property="Idle" decoder="String"
+			data="MSG/DATA/SUM/Idle" />
+	</jb:bean>
+	<jb:bean beanId="DETAILS" class="java.util.HashMap"
+		createOnElement="DETAILS">
+			<jb:wiring property="DETAIL" beanIdRef="DETAIL" />
+	</jb:bean>
+	<jb:bean beanId="DETAIL" class="java.util.HashMap"
+		createOnElement="DETAIL">
+		  <jb:value property="Sender" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/Sender" />
+		  <jb:value property="TaxCode" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxCode" />
+			<jb:value property="TaxName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxName" />
+			<jb:value property="CommitDate" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/CommitDate" />
+		  <jb:value property="DealNo" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/DealNo" />
+			<jb:value property="VouNo" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/VouNo" />
+		   <jb:value property="GenDate" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/GenDate" />
+		  <jb:value property="TreCode" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxCode" />
+			<jb:value property="TreName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TreName" />
+			<jb:value property="PayeeCode" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PayeeCode" />
+		  <jb:value property="PayeeType" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PayeeType" />
+			<jb:value property="PayeeTypeName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PayeeTypeName" />
+			<jb:value property="TreCode" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TaxCode" />
+			<jb:value property="TreName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/TreName" />
+			<jb:value property="PayeeName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PayeeName" />
+		  <jb:value property="PayeeBankNo" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PayeeBankNo" />
+			<jb:value property="PayeeBankName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PayeeBankName" />
+			<jb:value property="PayeeAcc" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/PayeeAcc" />
+			<jb:value property="BackMoney" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BackMoney" />
+		  <jb:value property="BudgetSubjectCode" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BudgetSubjectCode" />
+			<jb:value property="BudgetSubjectName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BudgetSubjectName" />
+			<jb:value property="BudgetLevel" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BudgetLevel" />
+			<jb:value property="BudgetLevelName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BudgetLevelName" />
+			<jb:value property="OriginNo" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/OriginNo" />
+		  <jb:value property="OriginDate" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/OriginDate" />
+			<jb:value property="OriginTaxItemName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/OriginTaxItemName" />
+			<jb:value property="BackFlag" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BackFlag" />
+			<jb:value property="BackReason" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BackReason" />
+		  <jb:value property="BackReasonName" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/BackReasonName" />
+			<jb:value property="Idle" decoder="String"
+			data="MSG/DATA/DETAILS/DETAIL/Idle" />
+	</jb:bean>
+</smooks-resource-list>

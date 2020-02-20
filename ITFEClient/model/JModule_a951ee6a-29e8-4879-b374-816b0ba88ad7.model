@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a951ee6a-29e8-4879-b374-816b0ba88ad7" name="业务凭证发送" ename="BizCertSend"/>

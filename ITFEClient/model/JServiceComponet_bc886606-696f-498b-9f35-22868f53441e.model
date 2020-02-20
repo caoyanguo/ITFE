@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bc886606-696f-498b-9f35-22868f53441e" name="报表数据导出（云南）" ename="FinDataStatDownForYN">
+  <jproperties id="1e6a1201-ab1f-440d-b082-adef28acab7f" key="GeneratedTime" value="1366338448000"/>
+  <refModule href="JModule_bee4662c-1251-43f4-ba6d-76d8a47e58ef.model#bee4662c-1251-43f4-ba6d-76d8a47e58ef"/>
+  <methods id="b484c151-cfdf-4a8c-b36e-9570dc2e6a52" ename="makeRptFile" name="生成报表文件" returntype="java.util.List">
+    <methodParams id="9aab15f8-becf-40c6-a6a1-6b28ed0b70c2" name="查询条件" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="72389305-0ed0-4e80-bda7-2b85c0a37fc0" ename="queryCondition" name="查询科目代码条件信息" returntype="java.lang.String">
+    <methodParams id="f2d3b965-6f4a-40e3-9f62-8bd85254709b" name="tvUsersconditionDto" ename="tvUsersconditionDto" type="com.cfcc.itfe.persistence.dto.TvUsersconditionDto"/>
+  </methods>
+  <methods id="bced1c48-5214-4992-ba2a-7f408a9f29f0" ename="saveCondition" name="保持查询条件信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="751cca5b-0e86-453a-b22e-2d8dc9c629f0" name="tvUsersconditionDto" ename="tvUsersconditionDto" type="com.cfcc.itfe.persistence.dto.TvUsersconditionDto"/>
+  </methods>
+</model:JServiceComponent>

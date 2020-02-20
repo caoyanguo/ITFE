@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="faabc444-dea9-4ddc-98a6-f4909c355e9f" name="连接性测试" ename="testConnection">
+  <jproperties id="c6a6af6d-6b01-4d71-97f7-c45f3bfbbca2" key="GeneratedTime" value="1492734834954"/>
+  <refModule href="JModule_18e214bc-072f-4211-8998-4aab83b37efa.model#18e214bc-072f-4211-8998-4aab83b37efa"/>
+  <model id="bac9ed49-aaac-439a-b7d6-2b889dc35723" name="JModelImpl-bac9ed49-aaac-439a-b7d6-2b889dc35723">
+    <attributes id="e8617cf2-cf92-4664-bf91-d07b94a22333" name="srcvmsgnode" type="java.lang.String"/>
+    <attributes id="1d894da4-a528-4fd8-a10b-1d927255c042" name="smsgdate" type="java.lang.String"/>
+    <attributes id="35e53ce7-b7c1-4d76-adcd-5d127fa96aef" name="resultList" type="java.util.List"/>
+    <directions id="99be9c56-bee8-4e2b-8e13-6b6df0e467da" name="连接性测试" ename="testConnect"/>
+    <directions id="760ff7e1-b5f0-4160-b0dd-b8a8d96d0275" name="测试结果查询" ename="testResult"/>
+    <directions id="a4d66d50-5bde-4c90-b75a-98b7d32194c5" name="北京连接性测试" ename="connect"/>
+  </model>
+  <services href="JServiceComponet_550d70b8-6196-449c-85e2-21b0f46a6c06.model#550d70b8-6196-449c-85e2-21b0f46a6c06"/>
+  <contentAreas id="87ff8c1d-5cec-4864-9d83-171d94af8507">
+    <contentareanode id="72db4940-107e-49b6-b2ef-4b290e590b2e" name="连接性测试界面" grouptitle="连接性测试界面">
+      <widgetRefs xsi:type="model:Text" id="3f4da29b-a7c5-4cf8-aaf4-467b960849b1" name="接收节点" binding="srcvmsgnode" caption="接收节点"/>
+      <widgetRefs xsi:type="model:Text" id="58d59efd-63e2-4733-a37a-0e040e5989f9" name="查询日期" binding="smsgdate" caption="查询日期"/>
+    </contentareanode>
+    <contentareanode id="7c107141-9e0a-4746-9873-7807a14ba312" name="测试结果列表" grouptitle="测试结果列表">
+      <widgetRefs xsi:type="model:Table" id="495dbb98-1e13-4859-bf16-d4cb076ff098" name="测试结果列表" binding="resultList" caption="测试结果列表">
+        <columnlist id="4e47d57c-15db-43a3-8307-0cec719ef19a" name="报文编号" binding="soperationtypecode" caption="报文编号"/>
+        <columnlist id="b1b70488-9157-4def-a103-516bb2ca31d1" name="处理结果" binding="sretcode" caption="处理结果"/>
+        <columnlist id="5bba91bf-0987-40b1-8fe9-7f7b27cce205" name="处理说明" binding="sretcode" caption="处理说明">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#284abc56-86ca-4763-bf39-94c2b2d300a6"/>
+        </columnlist>
+        <columnlist id="0b8dbbe9-6f21-44b7-a301-6f1b13cc47ff" name="详细信息" binding="sdemo" caption="详细信息"/>
+        <columnlist id="c72b4165-6b51-4f37-9add-bccebccd6540" name="发送时间" binding="ssendtime" caption="发送时间"/>
+        <columnlist id="ff792b5a-b9af-49f9-a2eb-9d9311f03054" name="处理时间" binding="sproctime" caption="处理时间"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="68a1a129-af49-4532-a4c5-e95c738a9ad3">
+    <pages id="6d73be9e-4251-454d-8435-66f3a7f03514" name="连接性测试视图">
+      <views id="0530e4fc-ff7f-4985-aabf-684d6719603c" name="连接性测试界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="72db4940-107e-49b6-b2ef-4b290e590b2e 7c107141-9e0a-4746-9873-7807a14ba312">
+        <buttonArea id="50855b9c-54ac-4cf2-9b5a-0824d67103c2" name="JButtonAreaImpl-50855b9c-54ac-4cf2-9b5a-0824d67103c2">
+          <buttons id="23eb1057-0472-4b9a-a4b1-ebf4355ef274" name="ButtonImpl-23eb1057-0472-4b9a-a4b1-ebf4355ef274" caption="代理库连接性测试" direction="a4d66d50-5bde-4c90-b75a-98b7d32194c5"/>
+          <buttons id="39f321c7-8d7b-4292-8214-11cd26ce5a0b" name="连接性测试" caption="连接性测试" direction="99be9c56-bee8-4e2b-8e13-6b6df0e467da"/>
+          <buttons id="6aaebfb8-ba81-4a0c-a918-7a94999da422" name="测试结果查询" caption="测试结果查询" direction="760ff7e1-b5f0-4160-b0dd-b8a8d96d0275"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

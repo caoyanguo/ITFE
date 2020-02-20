@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="2be06d21-8417-49df-80c2-b7a382a26367" name="1025征收机关报表申请" ename="TaxBureau">
+  <jproperties id="c074bf60-5c6e-4404-93d7-d3efc19336d9" key="GeneratedTime" value="1357805821037"/>
+  <refModule href="JModule_cc372fd3-3c8e-405c-82f6-ef7a789cff50.model#cc372fd3-3c8e-405c-82f6-ef7a789cff50"/>
+  <model id="acb3ce78-49f4-4db0-86f7-893d14a6ede6" name="JModelImpl-acb3ce78-49f4-4db0-86f7-893d14a6ede6">
+    <directions id="b04d4432-2ebe-4754-ba56-db3c045bfdff" name="申请" ename="applyReport"/>
+  </model>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_d1458362-c22c-4f03-9e63-e09051f81036.model#d1458362-c22c-4f03-9e63-e09051f81036"/>
+  <contentAreas id="be06d3a9-3ab3-4171-8e12-36e974c5681d">
+    <contentareanode id="b805f5da-b7a3-4027-9776-e78c9d75cb5f" name="申请界面" grouptitle="请求信息">
+      <widgetRefs xsi:type="model:Text" id="0cd58682-56b7-40c9-89dd-9e56af613a93" name="发起机构代码" binding="sendorgcode" caption="发起机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="8442be01-6ff0-47c6-a12a-f4ffcc87605c" name="报表日期" binding="reportDate" caption="报表日期"/>
+      <widgetRefs xsi:type="model:Combo" id="777895dc-8684-4126-826a-1119fdd1faff" name="报表范围" binding="reportArea" caption="报表范围">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ae08c58a-4e90-42bb-b2b7-378ade4989d0"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="62efc7e9-b937-4810-ac68-994bf317bbfb">
+    <pages id="52d2b697-ac54-4c09-97ac-83b5a821ccf4" name="JPageImpl-52d2b697-ac54-4c09-97ac-83b5a821ccf4">
+      <views id="3df57d42-0123-4c23-bc93-d8146ac7514d" name="申请界面" isdefault="true" contentArea="b805f5da-b7a3-4027-9776-e78c9d75cb5f">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="eeb70b1f-85c7-4d25-86e5-337c0c48e057" name="JButtonAreaImpl-eeb70b1f-85c7-4d25-86e5-337c0c48e057">
+          <buttons id="00303f02-f7f4-4e3b-85c5-fd57db8d9717" name="申请" caption="申请" direction="b04d4432-2ebe-4754-ba56-db3c045bfdff"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

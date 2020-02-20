@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="490b1165-2a79-4840-89b5-0516987b3fcc" name="总额分成报表查询导出" ename="totalReportSearchAndExport">
+  <jproperties id="652eaba3-4c86-484a-bd32-8f3032315fb6" key="GeneratedTime" value="1366249863625"/>
+  <refModule href="JModule_50f18298-3e41-4bda-818e-8273867924f8.model#50f18298-3e41-4bda-818e-8273867924f8"/>
+  <model id="33c61209-e5d7-4293-9ce8-39fc6f29e91d" name="JModelImpl-33c61209-e5d7-4293-9ce8-39fc6f29e91d">
+    <attributes id="9e969d43-2bf1-41e8-bd3f-26e6144263d8" name="findto" type="com.cfcc.itfe.persistence.dto.TrIncomedayrptDto"/>
+    <directions id="e05968be-8680-454c-bd06-859f92e7b16c" viewers="0ec05cb2-6793-479f-b4e8-752918ad4358" name="查询列表" ename="searchTotalReport"/>
+    <directions id="94fc8f4a-cbe5-4400-a790-0e30d614cfd2" viewers="bc4152af-332c-4c81-ab92-df1a95222b70" name="返回查询" ename="returnTotalReport"/>
+    <directions id="a46ef059-31d6-4062-bb57-44ce2b1c7b9e" name="导出TXT" ename="exportTotalReport"/>
+    <directions id="04fb04e4-3e7e-41aa-9303-31a602b617b9" name="全选" ename="selectedAll"/>
+  </model>
+  <services href="JServiceComponet_ad0523aa-a397-4f3c-9196-1ad62ffb0b8a.model#ad0523aa-a397-4f3c-9196-1ad62ffb0b8a"/>
+  <contentAreas id="01c552d1-4f5c-44a8-9ed4-750a66dd918a">
+    <contentareanode id="69ee38a1-3ab9-41d0-a334-7e8406c3c702" name="总额分成报表查询" grouptitle="查询条件">
+      <widgetRefs xsi:type="model:Combo" id="bbd67876-998e-426e-b260-eb148362ac7e" name="选择要查询的表" binding="selectedtable" caption="选择要查询的表" required="true" display="stypecode" underly="svalue" modelsource="statelist2"/>
+      <widgetRefs xsi:type="model:Combo" id="18fce36e-0fca-4d02-84a7-a7f1425a8cc8" name="国库代码" binding="strecode" caption="国库代码" required="true" display="strename" underly="strecode" modelsource="treList"/>
+      <widgetRefs xsi:type="model:Text" id="e34464ae-2203-49b8-b590-daec59170927" name="账务日期" binding="findto.srptdate" caption="账务日期" required="true"/>
+    </contentareanode>
+    <contentareanode id="b35b5cf8-ae46-4bd9-9ae2-5d6a417823ce" name="总额分成报表查询列表" grouptitle="查询列表">
+      <widgetRefs xsi:type="model:Table" id="fd71e2bb-5b65-475e-910a-42d78c623889" name="总额分成报表查询列表" binding="pagingcontext" caption="总额分成报表查询列表" tabletype="paging" selectedrows="">
+        <columnlist id="c3a0de4b-2fad-4b2e-a447-d621f6837d23" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="afd7b4ce-eb15-4c10-8da3-d59ed2036e7d" name="预算级次" binding="sbudgetlevelcode" caption="预算级次"/>
+        <columnlist id="e9c2e38a-35b1-43e1-b736-fb2ad8cffdd2" name="科目代码" binding="sbudgetsubcode" caption="科目代码"/>
+        <columnlist id="026fd1eb-5a52-4c88-a05d-395af053aadf" name="账务日期" binding="srptdate" caption="账务日期"/>
+        <columnlist id="d7eaacf8-0d58-4cd2-a0b1-74f37b67e2c3" name="预算种类" binding="sbudgettype" caption="预算种类"/>
+        <columnlist id="551e452f-4d2a-478f-8e29-9953a6be69d8" name="日累计" binding="nmoneyday" caption="日累计"/>
+        <columnlist id="5438dd26-7543-49e5-83a6-63a09d02e3ad" name="月累计" binding="nmoneymonth" caption="月累计"/>
+        <columnlist id="4eb534fa-784d-4b4d-832c-d73781a34cce" name="年累计" binding="nmoneyyear" caption="年累计"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="ba5b8d8a-388d-4453-bb8d-89793f74f055" name="下级国库列表" grouptitle="下级国库列表">
+      <widgetRefs xsi:type="model:Table" id="2550eba3-4065-4cb1-8985-4bf6dff15cea" name="下级国库列表" binding="childList" caption="下级国库列表" showcheckbox="true" selectedrows="checkList">
+        <columnlist id="e04ac13c-de2a-42cc-8d8d-cc81e190e409" name="是否导出" binding="strecode" caption="是否导出"/>
+        <columnlist id="5407ef9b-98b8-4a41-9ab6-0911c3b20699" name="国库名称" binding="strename" caption="国库名称"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="3449fc02-8005-4ad5-941f-d42fa95ba9b6">
+    <pages id="963addc9-9a79-4805-9553-e27e7030287b" name="总额分成报表查询">
+      <views id="bc4152af-332c-4c81-ab92-df1a95222b70" name="总额分成查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="69ee38a1-3ab9-41d0-a334-7e8406c3c702 ba5b8d8a-388d-4453-bb8d-89793f74f055">
+        <buttonArea id="86c0a678-c9ca-416e-b389-471cd970f653" name="JButtonAreaImpl-86c0a678-c9ca-416e-b389-471cd970f653">
+          <buttons id="4d017073-3210-419b-a481-e10baa2a6ed5" name="全选" caption="全选" direction="04fb04e4-3e7e-41aa-9303-31a602b617b9"/>
+          <buttons id="2af9bb04-72f8-47d3-b106-84a21591195c" name="查询" caption="查询" direction="e05968be-8680-454c-bd06-859f92e7b16c"/>
+          <buttons id="364d952a-ecdd-45de-a84f-c04bfbe7aa74" name="导出TXT" caption="导出TXT" direction="a46ef059-31d6-4062-bb57-44ce2b1c7b9e"/>
+        </buttonArea>
+      </views>
+      <views id="0ec05cb2-6793-479f-b4e8-752918ad4358" name="总额分成列表" contentArea="b35b5cf8-ae46-4bd9-9ae2-5d6a417823ce">
+        <buttonArea id="39c981e1-472d-43d6-a4df-62bafcca3093" name="JButtonAreaImpl-39c981e1-472d-43d6-a4df-62bafcca3093">
+          <buttons id="c0ff3c46-a718-4c3a-972d-e4b0a4e6bce7" name="导出TXT" caption="导出TXT" direction="a46ef059-31d6-4062-bb57-44ce2b1c7b9e"/>
+          <buttons id="ba454a94-26e5-4f71-99bd-1948ee456431" name="返回" caption="返回" direction="94fc8f4a-cbe5-4400-a790-0e30d614cfd2"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

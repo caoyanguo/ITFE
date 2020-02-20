@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="fb4e7acb-1df7-4835-bfe1-1114249470f1" name="财政授权支付调整凭证查询" ename="financeGrantPayAdjustVoucher"/>

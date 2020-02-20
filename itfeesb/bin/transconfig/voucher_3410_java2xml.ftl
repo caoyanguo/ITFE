@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<Voucher>
+	<Id>${Voucher.Id}</Id>
+	<AdmDivCode>${Voucher.AdmDivCode}</AdmDivCode>
+	<StYear>${Voucher.StYear}</StYear>
+	<VtCode>${Voucher.VtCode}</VtCode>
+	<VouDate>${Voucher.VouDate}</VouDate>
+	<VoucherNo>${Voucher.VoucherNo}</VoucherNo>
+	<BudgetType>${Voucher.BudgetType}</BudgetType>
+	<BelogFlag>${Voucher.BelogFlag}</BelogFlag>
+	<BillKind>${Voucher.BillKind}</BillKind>
+	<FinOrgCode>${Voucher.FinOrgCode}</FinOrgCode>
+	<TreCode>${Voucher.TreCode}</TreCode>
+	<TreName>${Voucher.TreName}</TreName>
+	<ReportDate>${Voucher.ReportDate}</ReportDate>
+	<SumMoney>${Voucher.SumMoney}</SumMoney>
+	<SumMonthAmt>${Voucher.SumMonthAmt}</SumMonthAmt>
+	<SumQuarterAmt>${Voucher.SumQuarterAmt}</SumQuarterAmt>
+	<SumYearAmt>${Voucher.SumYearAmt}</SumYearAmt>
+	<Hold1>${Voucher.Hold1}</Hold1>
+	<Hold2>${Voucher.Hold2}</Hold2>
+	<DetailList>
+	  <#list Voucher.DetailList.Detail as var>
+	  <Detail>
+		<Id>${var.Id}</Id>
+		<AgentBillId>${var.AgentBillId}</AgentBillId>
+		<AdmDivCode>${var.AdmDivCode}</AdmDivCode>
+		<StYear>${var.StYear}</StYear>
+		<BudgetSubjectCode>${var.BudgetSubjectCode}</BudgetSubjectCode>
+		<BudgetSubjectName>${var.BudgetSubjectName}</BudgetSubjectName>
+		<PayAmt>${var.PayAmt}</PayAmt>
+		<SumTenDayAmt>${var.SumTenDayAmt}</SumTenDayAmt>
+		<MonthAmt>${var.MonthAmt}</MonthAmt>
+		<QuarterAmt>${var.QuarterAmt}</QuarterAmt>
+		<YearAmt>${var.YearAmt}</YearAmt>
+		<Hold1>${var.Hold1}</Hold1>
+		<Hold2>${var.Hold2}</Hold2>
+		<Hold3>${var.Hold3}</Hold3>
+		<Hold4>${var.Hold4}</Hold4>	  
+	 </Detail>
+	</#list> 
+	</DetailList>  
+</Voucher>

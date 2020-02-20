@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="RequestHead5001" beanIdRef="RequestHead5001" />
+	<jb:wiring property="RequestReport5001" beanIdRef="RequestReport5001" />
+</jb:bean>
+<jb:bean beanId="RequestHead5001" class="java.util.HashMap" createOnElement="RequestHead5001">
+	<jb:value property="SendOrgCode" decoder="String" data="CFX/MSG/RequestHead5001/SendOrgCode" />
+	<jb:value property="ReportDate" decoder="String" data="CFX/MSG/RequestHead5001/ReportDate" />
+</jb:bean>
+<jb:bean beanId="RequestReport5001" class="java.util.HashMap" createOnElement="RequestReport5001">
+	<jb:value property="NrBudget" decoder="String" data="CFX/MSG/RequestReport5001/NrBudget" />
+	<jb:value property="NrDrawBack" decoder="String" data="CFX/MSG/RequestReport5001/NrDrawBack" />
+	<jb:value property="NrRemove" decoder="String" data="CFX/MSG/RequestReport5001/NrRemove" />
+	<jb:value property="Amount" decoder="String" data="CFX/MSG/RequestReport5001/Amount" />
+	<jb:value property="NrShare" decoder="String" data="CFX/MSG/RequestReport5001/NrShare" />
+	<jb:value property="TrBudget" decoder="String" data="CFX/MSG/RequestReport5001/TrBudget" />
+	<jb:value property="TrDrawBack" decoder="String" data="CFX/MSG/RequestReport5001/TrDrawBack" />
+	<jb:value property="TrRemove" decoder="String" data="CFX/MSG/RequestReport5001/TrRemove" />
+	<jb:value property="TrShare" decoder="String" data="CFX/MSG/RequestReport5001/TrShare" />
+	<jb:value property="Stock" decoder="String" data="CFX/MSG/RequestReport5001/Stock" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

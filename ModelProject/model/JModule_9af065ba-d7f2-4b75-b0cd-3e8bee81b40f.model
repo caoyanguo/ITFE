@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9af065ba-d7f2-4b75-b0cd-3e8bee81b40f" name="数据备份" ename="dataBackup" shared="true"/>

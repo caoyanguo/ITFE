@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f7c7c7a2-cecd-43be-b965-6608b09b72e1" name="财政申请入库流水明细查询服务组件" ename="TvFinIncomeDetail">
+  <jproperties id="aa92eff3-9bef-4a84-9377-573ca718c1ed" key="GeneratedTime" value="1331712033390"/>
+  <refModule href="JModule_511cae02-c103-4a3b-b3c5-13016ec8f953.model#511cae02-c103-4a3b-b3c5-13016ec8f953"/>
+  <methods id="977728f7-e5fc-473c-8544-c921f7cf055e" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="财政申请入库流水明细查询">
+    <methodParams id="c7953947-39dc-48a0-9e60-7a5af616a6ba" name="财政申请入库流水明细查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="26a4af23-1b68-47fb-9071-c4a1a2589287" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="3888cae9-fe8e-40df-9d7e-51f34d591521" name="财政申请入库流水明细查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="26a4af23-1b68-47fb-9071-c4a1a2589287" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="509e2af4-0a21-454c-9cb6-3381e949e47f" name="财政申请入库流水明细查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="99c0c549-63c9-43ee-b41f-520693299234" ename="makeDivide" name="手动处理共享分成" codecomment="手动处理共享分成" returntype="java.lang.String">
+    <methodParams id="ce852afe-31f8-41dd-be05-128f27296e0d" name="选中电子税票信息" ename="excheckList" type="java.util.List"/>
+    <methodParams id="ced88d49-07c5-445b-9e6e-d8357f770697" name="查询时间" ename="reportdate" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

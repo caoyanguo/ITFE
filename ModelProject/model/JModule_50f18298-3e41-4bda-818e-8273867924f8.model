@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="50f18298-3e41-4bda-818e-8273867924f8" name="总额分成报表查询导出" ename="totalReportSearchAndExport"/>

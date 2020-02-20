@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	
+	<!-- 3210收入退付退款通知单 -->
+	<bean id="VOUCHER_3210" class="com.cfcc.itfe.msgmanager.msg.Voucher3210MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5207实拨资金通知单 -->
+	<bean id="VOUCHER_5207" class="com.cfcc.itfe.msgmanager.msg.Voucher5207MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 实拨拨款凭证明细清单<5257>-->
+	<bean id="VOUCHER_5257" class="com.cfcc.itfe.msgmanager.msg.Recv5257MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5267专户实拨资金通知单 -->
+	<bean id="VOUCHER_5267" class="com.cfcc.itfe.msgmanager.msg.Voucher5267MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 2301申请划款凭证回单知单 -->
+	<bean id="VOUCHER_2301" class="com.cfcc.itfe.msgmanager.msg.Voucher2301MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 2302申请退款凭证回单 -->
+	<bean id="VOUCHER_2302" class="com.cfcc.itfe.msgmanager.msg.Voucher2302MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 大数据2303申请划款凭证 -->
+	<bean id="VOUCHER_2305" class="com.cfcc.itfe.msgmanager.msg.Voucher2305MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 大数据2304申请退款凭证-->
+	<bean id="VOUCHER_2306" class="com.cfcc.itfe.msgmanager.msg.Voucher2306MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5671非税收入缴款通知 -->
+	<bean id="VOUCHER_5671" class="com.cfcc.itfe.msgmanager.msg.Voucher5671MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5408天津非税收入缴款通知 -->
+	<bean id="VOUCHER_5408" class="com.cfcc.itfe.msgmanager.msg.Voucher5408MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5106授权支付额度通知单 -->
+	<bean id="VOUCHER_5106" class="com.cfcc.itfe.msgmanager.msg.Voucher5106MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5108直接支付额度通知单 -->
+	<bean id="VOUCHER_5108" class="com.cfcc.itfe.msgmanager.msg.Voucher5108MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5209收入退付 -->
+	<bean id="VOUCHER_5209" class="com.cfcc.itfe.msgmanager.msg.Voucher5209MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+	<!-- 5951单位清册 -->
+	<bean id="VOUCHER_5951" class="com.cfcc.itfe.msgmanager.msg.Voucher5951MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+	<!-- 2252收款银行退款通知 -->
+	<bean id="VOUCHER_2252" class="com.cfcc.itfe.msgmanager.msg.Voucher2252MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+	<!-- 5201直接支付 -->
+	<bean id="VOUCHER_5201" class="com.cfcc.itfe.msgmanager.msg.Voucher5201MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+	<!-- 5253直接支付调整书 -->
+	<bean id="VOUCHER_5253" class="com.cfcc.itfe.msgmanager.msg.Voucher5253MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+	<!-- 5351授权支付调整书 -->
+	<bean id="VOUCHER_5351" class="com.cfcc.itfe.msgmanager.msg.Voucher5351MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+
+	<!-- 8207财政批量支付明细 -->
+	<bean id="VOUCHER_8207" class="com.cfcc.itfe.msgmanager.msg.Voucher8207MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3507商行回执2507 -->
+	<bean id="VOUCHER_2507" class="com.cfcc.itfe.msgmanager.msg.Voucher2507MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3507财政回执5507 -->
+	<bean id="VOUCHER_5507" class="com.cfcc.itfe.msgmanager.msg.Voucher5507MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3508商行回执5508 -->
+	<bean id="VOUCHER_5508" class="com.cfcc.itfe.msgmanager.msg.Voucher5508MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!--3509商行回执5509-->
+	<bean id="VOUCHER_5509" class="com.cfcc.itfe.msgmanager.msg.Voucher5509MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3510商行回执5510 -->
+	<bean id="VOUCHER_5510" class="com.cfcc.itfe.msgmanager.msg.Voucher5510MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3511商行回执5511 -->
+	<bean id="VOUCHER_5511" class="com.cfcc.itfe.msgmanager.msg.Voucher5511MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3512商行回执5512 -->
+	<bean id="VOUCHER_5512" class="com.cfcc.itfe.msgmanager.msg.Voucher5512MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3513商行回执5513 -->
+	<bean id="VOUCHER_5513" class="com.cfcc.itfe.msgmanager.msg.Voucher5513MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3507接收清算信息对帐 -->
+	<bean id="VOUCHER_3507" class="com.cfcc.itfe.msgmanager.msg.Voucher3507MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3508接收实拨信息对帐 -->
+	<bean id="VOUCHER_3508" class="com.cfcc.itfe.msgmanager.msg.Voucher3508MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3509接收收入退付对帐 -->
+	<bean id="VOUCHER_3509" class="com.cfcc.itfe.msgmanager.msg.Voucher3509MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3510接收清算额度对帐 -->
+	<bean id="VOUCHER_3510" class="com.cfcc.itfe.msgmanager.msg.Voucher3510MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3511接收收入报表对帐 -->
+	<bean id="VOUCHER_3511" class="com.cfcc.itfe.msgmanager.msg.Voucher3511MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3512接收支出报表对帐 -->
+	<bean id="VOUCHER_3512" class="com.cfcc.itfe.msgmanager.msg.Voucher3512MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 3513接收库款账户对帐 -->
+	<bean id="VOUCHER_3513" class="com.cfcc.itfe.msgmanager.msg.Voucher3513MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+	<!-- 5207陕西财政统一银行接口实拨资金通知单 -->
+	<bean id="VOUCHER_SX_C025" class="com.cfcc.itfe.msgmanager.msg.VoucherSX5207MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 2301陕西财政统一银行接口申请划款凭证回单 -->
+	<bean id="VOUCHER_SX_C026" class="com.cfcc.itfe.msgmanager.msg.VoucherSX2301MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 2302陕西财政统一银行接口申请退款凭证回单 -->
+	<bean id="VOUCHER_SX_C027" class="com.cfcc.itfe.msgmanager.msg.VoucherSX2302MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5106陕西财政统一银行接口授权支付额度通知单 -->
+	<bean id="VOUCHER_SX_C017" class="com.cfcc.itfe.msgmanager.msg.VoucherSX5106MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5108陕西财政统一银行接口直接支付额度通知单 -->
+	<bean id="VOUCHER_SX_C021" class="com.cfcc.itfe.msgmanager.msg.VoucherSX5108MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	<!-- 5901基础元数据 -->
+	<bean id="VOUCHER_5901" class="com.cfcc.itfe.msgmanager.msg.Voucher5901MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+	
+		<!-- 更正调库报文 厦门需求<5407>-->
+	<bean id="VOUCHER_5407" class="com.cfcc.itfe.msgmanager.msg.Voucher5407MsgServer"
+		scope="prototype">
+		<property name="voucher" ref="Voucher"></property>
+	</bean>
+	
+	<bean id="Voucher" class="com.cfcc.itfe.voucher.service.Voucher" scope="prototype">
+	</bean>
+	<bean id="VoucherReadShanXiService" class="com.cfcc.itfe.voucher.sxservice.VoucherReadShanXiService" scope="prototype">
+	</bean>
+	<!-- From SYSConfig -->
+	<bean id="VOUCHER" class="com.cfcc.itfe.voucher.service.Voucher" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3401" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3401" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3410" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3410" scope="prototype">
+	</bean>
+	<!--收入月报由3507修改为3567-->
+	<bean id="VoucherDto2MapFor3567" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3567" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3402" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3402" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3453" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3453" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3454" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3454" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3455" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3455" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3501" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3501" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3502" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3502" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3507" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3507" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor5507" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor5507" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor2507" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor2507" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3208" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3208" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3268" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3268" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3251" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3251" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3503" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3503" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3504" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3504" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3505" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3505" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3506" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3506" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3550" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3550" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3551" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3551" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3552" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3552" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3554" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3554" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3558" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3558" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3452" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3452" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3562" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3562" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3560" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3560" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor4004" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor4004" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor4005" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor4005" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor4006" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor4006" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3210" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3210" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3403" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3403" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3404" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3404" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3405" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3405" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3406" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3406" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3508" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3508" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor5508" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor5508" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3509" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3509" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor5509" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor5509" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3510" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3510" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor5510" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor5510" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3511" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3511" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor5511" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor5511" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3512" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3512" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor5512" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor5512" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3513" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3513" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor5513" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor5513" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3514" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3514" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor2301" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor2301" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor2302" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor2302" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor2203" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor2203" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor2206" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor2206" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor5901" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor5901" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3580" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3580" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3582" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3582" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3583" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3583" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3587" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3587" scope="prototype">
+	</bean>
+	<bean id="VoucherDto2MapFor3588" class="com.cfcc.itfe.util.transformer.VoucherDto2MapFor3588" scope="prototype">
+	</bean>
+	<!-- TBS代理库报文 -->
+	<bean id="MSG_TBS_1000" class="com.cfcc.itfe.msgmanager.msg.SendVoucherTbsMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_TBS_1000_REISSUE" class="com.cfcc.itfe.msgmanager.msg.Reissue1000MsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_TBS_3001_OUT" class="com.cfcc.itfe.msgmanager.msg.Send3001TbsMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_3001" class="com.cfcc.itfe.msgmanager.msg.RecvTBS3001MsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_3000_OUT" class="com.cfcc.itfe.msgmanager.msg.Send3000TbsMsgServer"
+		scope="prototype">
+	</bean>
+	<bean id="MSG_3000" class="com.cfcc.itfe.msgmanager.msg.Recv3000TbsMsgServer"
+		scope="prototype">
+	</bean>
+</beans>

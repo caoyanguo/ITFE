@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="GetMsg9117" beanIdRef="GetMsg9117" />
+</jb:bean>
+<jb:bean beanId="GetMsg9117" class="java.util.HashMap" createOnElement="GetMsg9117">
+	<jb:value property="SendOrgCode" decoder="String" data="CFX/MSG/GetMsg9117/SendOrgCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/GetMsg9117/EntrustDate" />
+	<jb:value property="OriPackMsgNo" decoder="String" data="CFX/MSG/GetMsg9117/OriPackMsgNo" />
+	<jb:value property="OriChkDate" decoder="String" data="CFX/MSG/GetMsg9117/OriChkDate" />
+	<jb:value property="OriPackNo" decoder="String" data="CFX/MSG/GetMsg9117/OriPackNo" />
+	<jb:value property="OrgType" decoder="String" data="CFX/MSG/GetMsg9117/OrgType" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

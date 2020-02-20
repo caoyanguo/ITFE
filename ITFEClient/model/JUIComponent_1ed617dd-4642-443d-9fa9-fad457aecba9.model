@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1ed617dd-4642-443d-9fa9-fad457aecba9" name="征收机关代码维护" ename="TdTaxorgParam" shared="true">
+  <jproperties id="9409eb9c-96ad-428b-9da7-865bba3b20d9" key="GeneratedTime" value="1384222091859"/>
+  <refModule href="JModule_42fde19c-2c67-4a29-bfd4-9db00325cd65.model#42fde19c-2c67-4a29-bfd4-9db00325cd65"/>
+  <model id="3995ea79-2826-439b-8269-f5d17975c8f6" name="JModelImpl-3995ea79-2826-439b-8269-f5d17975c8f6">
+    <attributes id="880771f8-2c88-497a-b55d-8da2992cf951" name="dto" type="com.cfcc.itfe.persistence.dto.TdTaxorgParamDto"/>
+    <attributes id="cf11b69d-782a-4710-aa39-e271c2f83c28" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="b9a90f26-cf98-42eb-bd5c-15dd0260ea2a" name="finddto" type="com.cfcc.itfe.persistence.dto.TdTaxorgParamDto"/>
+    <directions id="e87c02a7-956f-41ac-b53b-4eb054b4f586" viewers="a5197cb7-ff12-4146-9e18-19681627598a" name="跳转录入界面" ename="goInput"/>
+    <directions id="c3ad3985-dfb9-495a-8530-56e0e0c9bbe7" name="录入保存" ename="inputSave"/>
+    <directions id="724f95d8-1522-49e9-918e-a890cab930c0" viewers="fc99be97-cd90-4f42-bf11-5df6121521f7" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="d2299f3c-5025-48c0-8ca0-df4cdb17aa89" name="单选" ename="singleSelect"/>
+    <directions id="2a1acacc-1776-475f-b5b3-41e6bad19033" name="删除" ename="delete"/>
+    <directions id="a69156f0-c8ce-4a9e-9ac5-1bf5e0ba8581" viewers="6cc02556-5d47-4217-b00b-65a01afa7e0e" name="到修改界面" ename="goModify"/>
+    <directions id="c5682a75-9ff3-455e-8d44-c15d640ec4d6" name="修改保存" ename="modifySave"/>
+    <directions id="b356a949-6f9c-4284-87f1-5b2d1b2c4234" viewers="fc99be97-cd90-4f42-bf11-5df6121521f7" name="查询" ename="searchRs"/>
+    <directions id="2ea20409-4acc-49b5-8e3a-2bcac8da1539" viewers="ff4bccc2-7986-4a58-8363-935b0a67ec0c" name="返回查询界面" ename="rebackSearch"/>
+    <directions id="8741b2f0-21e3-4923-b42c-c133bb6d6565" name="文件导出" ename="expfile"/>
+  </model>
+  <services href="JServiceComponet_70a097ae-8d34-4ba6-a1a8-89bd00db80af.model#70a097ae-8d34-4ba6-a1a8-89bd00db80af"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="da6c480f-7a89-413a-8068-895c19814025">
+    <contentareanode id="8f93d044-dd15-46d0-af0c-a67e7b24ba80" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="7672bee4-9462-4f91-a619-c8db52f63ec0" name="sbookorgcode" binding="dto.sbookorgcode" caption="核算主体代码" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="c67ab955-f14d-4d8d-846d-7c6e3100ed81" name="ctrimflag" binding="dto.ctrimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="484d88c1-92ac-423a-bd5d-122c5330d242" name="staxorgcode" binding="dto.staxorgcode" caption="征收机关代码" pattern="@12" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="c943b984-50a5-4bcd-a80d-1926df039670" name="staxorgname" binding="dto.staxorgname" caption="征收机关名称" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="595299c0-8bc1-4d47-a497-935829f2d14b" name="ctaxorgprop" binding="dto.ctaxorgprop" caption="征收机关性质" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#6ad16cab-7239-4119-8be6-cbeb547846cf"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="13d4862a-b917-4969-85a2-9fdd48527767" name="staxorgsht" binding="dto.staxorgsht" caption="征收机关简码"/>
+      <widgetRefs xsi:type="model:Text" id="66ec9de0-baf1-4914-a3f2-184977ee8862" name="staxorgphone" binding="dto.staxorgphone" caption="征收机关电话"/>
+    </contentareanode>
+    <contentareanode id="ed04159c-bba8-45a2-9b7c-0754f9af67a5" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="1d02e58f-32bf-4378-a70c-357244694c8b" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" refsingleclickdirection="d2299f3c-5025-48c0-8ca0-df4cdb17aa89">
+        <columnlist id="a09b5cd1-91a2-41be-a7cf-e2a6348d7765" name="iseqno" binding="iseqno" caption="序号"/>
+        <columnlist id="99005f44-d5d8-4044-aee8-edd9dc726808" name="sbookorgcode" binding="sbookorgcode" caption="核算主体代码"/>
+        <columnlist id="646eef48-3f9a-476d-b968-6cb46ae7d5c1" name="ctrimflag" binding="ctrimflag" caption="调整期标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+        </columnlist>
+        <columnlist id="7b85db07-6a6a-4abe-bcf6-bad2452ca69c" name="staxorgcode" binding="staxorgcode" caption="征收机关代码"/>
+        <columnlist id="e54e04ac-acc5-4432-be7c-0117c7282666" name="staxorgname" binding="staxorgname" caption="征收机关名称"/>
+        <columnlist id="29de3270-7be9-4fed-974b-2dd7f55c63a0" name="ctaxorgprop" binding="ctaxorgprop" caption="征收机关性质">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#6ad16cab-7239-4119-8be6-cbeb547846cf"/>
+        </columnlist>
+        <columnlist id="9c2dd31a-4c7b-41ae-80e0-37c914569f7e" name="staxorgphone" binding="staxorgphone" caption="征收机关电话"/>
+        <columnlist id="81b842b9-47e4-466f-9927-5d5242bceefd" name="staxorgsht" binding="staxorgsht" caption="征收机关简码"/>
+        <columnlist id="dfc04688-3e86-4a20-bc8b-26923439293e" name="tssysupdate" binding="tssysupdate" caption="系统更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a5859692-5295-478b-a82d-bf1968796228" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="8b00c420-c230-4ea8-9675-a67d8d8fc995" name="iseqno" binding="dto.iseqno" caption="序号" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="3df7784c-3e02-4b85-a563-8d6044ab0731" name="sbookorgcode" binding="dto.sbookorgcode" caption="核算主体代码" enable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="d55304cc-6983-4284-b79b-5184d84c3c30" name="ctrimflag" binding="dto.ctrimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a2291a17-bb14-4b53-b683-58185f93bbb0" name="staxorgcode" binding="dto.staxorgcode" caption="征收机关代码" pattern="@12" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="54973018-9936-4f62-a640-8877c42b3e63" name="staxorgname" binding="dto.staxorgname" caption="征收机关名称" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="c7154af3-83ee-4816-b31b-8eeebc4dc870" name="ctaxorgprop" binding="dto.ctaxorgprop" caption="征收机关性质" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#6ad16cab-7239-4119-8be6-cbeb547846cf"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8ef5aadb-192b-44bc-86e2-84dfa629ba9f" name="staxorgphone" binding="dto.staxorgphone" caption="征收机关电话"/>
+      <widgetRefs xsi:type="model:Text" id="65d98a51-eca2-4434-bafd-3873ef8e9602" name="staxorgsht" binding="dto.staxorgsht" caption="征收机关简码"/>
+    </contentareanode>
+    <contentareanode id="f572f777-f489-4fb1-9f19-02e81575ae8e" name="查询条件" grouptitle="查询条件" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="9e35f6e3-a2dc-47c1-83e6-08001f98c88f" name="ctrimflag" binding="finddto.ctrimflag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6ed4a361-30a1-4726-8998-83901832ad5f" name="staxorgcode" binding="finddto.staxorgcode" caption="征收机关代码" pattern="@12"/>
+      <widgetRefs xsi:type="model:Text" id="1129fb11-c078-47b1-9552-95999f1507a2" name="staxorgname" binding="finddto.staxorgname" caption="征收机关名称"/>
+      <widgetRefs xsi:type="model:Combo" id="00611f5e-bbb0-49d5-bd54-8fb08356807f" name="ctaxorgprop" binding="finddto.ctaxorgprop" caption="征收机关性质">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#6ad16cab-7239-4119-8be6-cbeb547846cf"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="caad0ca8-7607-4aa0-a035-41817a4b27a1" name="staxorgphone" binding="finddto.staxorgphone" caption="征收机关电话"/>
+      <widgetRefs xsi:type="model:Text" id="3aefbff9-02b3-4b7d-84ba-0945b408a61b" name="staxorgsht" binding="finddto.staxorgsht" caption="征收机关简码"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="95c1b951-e5a2-497c-8c40-fcb8eda361c9">
+    <pages id="3de0d3ed-b1a4-4300-b10b-244ccc3d22ae" name="征收机关代码维护">
+      <views id="ff4bccc2-7986-4a58-8363-935b0a67ec0c" name="查询界面" isdefault="true" contentArea="f572f777-f489-4fb1-9f19-02e81575ae8e">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="373fff16-b344-4550-a154-4979078eb642" name="JButtonAreaImpl-373fff16-b344-4550-a154-4979078eb642">
+          <buttons id="1094c01f-00d8-472b-aeab-587f1d19d698" name="查询" caption="查询" direction="b356a949-6f9c-4284-87f1-5b2d1b2c4234"/>
+        </buttonArea>
+      </views>
+      <views id="fc99be97-cd90-4f42-bf11-5df6121521f7" name="维护界面" contentArea="ed04159c-bba8-45a2-9b7c-0754f9af67a5">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="603ca40b-3d67-47a1-950e-92c541289b64" name="JButtonAreaImpl-603ca40b-3d67-47a1-950e-92c541289b64">
+          <buttons id="b6ef0225-cb4b-4cdb-88e2-deb8aa8b61be" name="maintenanceInput" caption="录入" direction="e87c02a7-956f-41ac-b53b-4eb054b4f586"/>
+          <buttons id="d95ec288-61b1-4b88-bb86-2d2a66e03bbc" name="maintenanceDel" caption="删除" direction="2a1acacc-1776-475f-b5b3-41e6bad19033"/>
+          <buttons id="c7f3797e-36f8-4550-a67b-ea5418ce169a" name="maintenanceMod" caption="修改" direction="a69156f0-c8ce-4a9e-9ac5-1bf5e0ba8581"/>
+          <buttons id="7be354fb-65c6-4ee1-b7c3-56bd7f408567" name="导出" caption="导出" direction="8741b2f0-21e3-4923-b42c-c133bb6d6565"/>
+          <buttons id="ed15f040-92bb-4b9b-a55f-ed458848c037" name="返回" caption="返回" direction="2ea20409-4acc-49b5-8e3a-2bcac8da1539"/>
+        </buttonArea>
+      </views>
+      <views id="6cc02556-5d47-4217-b00b-65a01afa7e0e" name="修改界面" contentArea="a5859692-5295-478b-a82d-bf1968796228">
+        <buttonArea id="84a1dc81-0661-46b2-b288-8dd8de77136a" name="JButtonAreaImpl-84a1dc81-0661-46b2-b288-8dd8de77136a">
+          <buttons id="146e78f2-78e7-4fee-8947-d4791b589e57" name="modifySave" caption="保存" checkrequired="true" direction="c5682a75-9ff3-455e-8d44-c15d640ec4d6"/>
+          <buttons id="b3586a3f-d9d7-4f16-8c10-f7e849525bf7" name="返回" caption="返回" direction="724f95d8-1522-49e9-918e-a890cab930c0"/>
+        </buttonArea>
+      </views>
+      <views id="a5197cb7-ff12-4146-9e18-19681627598a" name="录入界面" contentArea="8f93d044-dd15-46d0-af0c-a67e7b24ba80">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="b6fadf6f-c7d6-4a2e-9577-b9267fb3016a" name="JButtonAreaImpl-b6fadf6f-c7d6-4a2e-9577-b9267fb3016a">
+          <buttons id="be7c395c-c1d1-40bf-88bc-4eaf7bd74203" name="保存" caption="保存" checkrequired="true" direction="c3ad3985-dfb9-495a-8530-56e0e0c9bbe7"/>
+          <buttons id="bbfdc654-0d8a-4bf6-b768-d2b27524575b" name="返回" caption="返回" direction="724f95d8-1522-49e9-918e-a890cab930c0"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

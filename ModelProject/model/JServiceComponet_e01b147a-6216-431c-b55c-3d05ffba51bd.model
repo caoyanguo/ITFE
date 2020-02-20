@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e01b147a-6216-431c-b55c-3d05ffba51bd" name="数据变更及文件比对" ename="datachangeAndCompare">
+  <jproperties id="e30bbd78-3458-45e6-9bd4-8f0c9d64ab13" key="GeneratedTime" value="1487259721016"/>
+  <refModule href="JModule_4b57d516-6d96-41cb-93ca-60c01ebb585a.model#4b57d516-6d96-41cb-93ca-60c01ebb585a"/>
+  <methods id="9a6844d5-5410-454a-811d-351fba626c5c" ename="runsql" name="更新数据" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="66e7c200-36dc-42a9-ab58-cc90c82a93dc" name="sql" ename="sql" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

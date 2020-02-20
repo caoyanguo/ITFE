@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bfef4032-621d-4d86-a70b-688c8fad437a" name="9113收入核对包信息重发请求" ename="incomecheckresendrequest"/>

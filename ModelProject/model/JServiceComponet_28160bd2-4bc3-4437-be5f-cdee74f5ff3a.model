@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="28160bd2-4bc3-4437-be5f-cdee74f5ff3a" name="接收TIPS数据导出服务" ename="TipsDataExport">
+  <jproperties id="8c06e8d2-b157-463c-b1a9-53aeaf83ce4d" key="GeneratedTime" value="1337320387949"/>
+  <refModule href="JModule_f1b47442-e7f5-4ac0-b519-682b9c9097b9.model#f1b47442-e7f5-4ac0-b519-682b9c9097b9"/>
+  <methods id="0ccb8f11-e649-4500-a036-40462322bb8c" ename="generateTipsToFile" name="生成导出Tips文件" returntype="java.util.Map">
+    <methodParams id="87951c5d-8c63-4aff-af78-ba7cc249e8e3" name="数据种类" ename="list" type="java.util.List"/>
+    <methodParams id="284a00f3-ce37-46a7-b83c-0b6c069a9b3c" name="备用数据" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="b85bda0c-37ca-402e-a9a7-5481ef194b08" name="备用数据2" ename="str" type="java.lang.String"/>
+  </methods>
+  <methods id="15fbe373-b188-4978-b27c-faa69664480a" ename="deleteTheFiles" name="删除服务器文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="177604e4-8320-4330-b65a-ef1a4f3c35ba" name="filelist" ename="filelist" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

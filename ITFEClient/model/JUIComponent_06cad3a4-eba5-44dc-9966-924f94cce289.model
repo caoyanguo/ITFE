@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="06cad3a4-eba5-44dc-9966-924f94cce289" name="商行无纸化业务参数维护" ename="TsIsnopaper">
+  <jproperties id="1eb48969-9a7a-4e23-93c1-58d44bdaf55f" key="GeneratedTime" value="1401346599266"/>
+  <refModule href="JModule_4eb5e113-8839-4f19-8aef-0b18801fac62.model#4eb5e113-8839-4f19-8aef-0b18801fac62"/>
+  <model id="60aa612b-f203-4815-a391-9bd6cfba5f9e" name="JModelImpl-2f60177c-7ac1-48ca-aebf-2e2196112b0f">
+    <directions id="fd80a1ad-9dc0-44b5-a64f-3fbecfcdc95a" viewers="7c9129af-3609-483f-abef-77082032ee52" name="查询" ename="queryResult"/>
+    <directions id="3d937105-3b1d-44e7-950f-a085b05d0f07" name="单选" ename="singleSelect"/>
+    <directions id="55163541-e1be-450b-bf25-b1ca795efe70" viewers="cf837e97-4d20-40b6-ad12-bf990871c387" name="跳转录入界面" ename="goInput"/>
+    <directions id="02fff4d3-3b7e-48f1-ba5e-d4f866d99f41" name="录入保存" ename="inputSave"/>
+    <directions id="1d5725ed-e3b5-444a-9c28-0a932e287b75" viewers="7c9129af-3609-483f-abef-77082032ee52" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="513b8c5b-f576-4f89-bd66-93564beabbfb" name="删除" ename="delete"/>
+    <directions id="21f877ac-6050-4499-a51b-21bfaf78c33f" viewers="bdf71aae-63f6-48de-b655-d18fca54534d" name="到修改界面" ename="goModify"/>
+    <directions id="46332f74-49de-43a6-8196-b7c749df6723" name="修改保存" ename="modifySave"/>
+    <directions id="e128b306-7314-4430-86a3-f5143d718b2b" viewers="5f650f56-405b-418a-8a18-480d904d508b" name="返回" ename="goBack"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_3b42f26b-4967-4059-8417-c61bc8af18ff.model#3b42f26b-4967-4059-8417-c61bc8af18ff"/>
+  <contentAreas id="a25681a3-bf62-4482-b215-6a607d6976e9">
+    <contentareanode id="c5cf6b91-1945-47f5-8a04-4c9fea9e9779" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Text" id="7ee0f23c-d523-4b69-af01-a219afa44f48" name="机构代码" binding="querydto.sorgcode" visible="true" caption="机构代码" enable="true" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="fc578141-507c-461e-b7fe-81c46d7fba29" name="国库代码" binding="querydto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="409a275a-1e0f-4452-aabc-52a2a1169a06" name="代理银行代码" binding="querydto.sbankcode" visible="true" caption="代理银行代码" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Text" id="50084b87-bbc5-465c-87e6-0b28680954f2" name="代理银行名称" binding="querydto.sbankname" visible="true" caption="代理银行名称" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Combo" id="9a3f6703-9db8-4b55-a093-2d14dfa0e360" name="业务类型" binding="querydto.svtcode" caption="业务类型" display="stypecode" underly="svalue" modelsource="biztypelist"/>
+      <widgetRefs xsi:type="model:Combo" id="c166ee55-0a76-44aa-b47a-133a629017f0" name="无纸化标志" binding="querydto.sisnopaper" caption="无纸化标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#95b91075-2835-4152-a313-c2919eabb2f8"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="111e0634-612d-42b5-b802-7faec027534e" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="88f7543b-ac43-46bd-b826-6b5b4334f2c6" name="维护查询结果" binding="pagingcontext" caption="维护查询结果" tabletype="paging">
+        <columnlist id="387e2c0d-3bfa-45c6-af7a-b7411fcade7e" name="sorgcode" binding="sorgcode" caption="机构代码"/>
+        <columnlist id="e6fb6c2c-4317-4b1f-98a7-e30019eee477" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="de6b3ccb-9827-4ac4-965c-54a9a00602c9" name="sbankcode" binding="sbankcode" caption="代理银行代码"/>
+        <columnlist id="9fea22f4-14cb-4412-8cfb-478aa53ede38" name="sbankname" binding="sbankname" caption="代理银行名称"/>
+        <columnlist id="169c31af-c934-46b4-a224-bb5440fd284c" name="svtcode" binding="svtcode" caption="业务类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+        </columnlist>
+        <columnlist id="7f794cc9-cb80-4029-8d47-79582edf83d6" name="sisnopaper" binding="sisnopaper" caption="无纸化标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#95b91075-2835-4152-a313-c2919eabb2f8"/>
+        </columnlist>
+        <refsingleclickdirection href="JUIComponent_52b87428-8d7e-4a40-8745-ce577b048a18.model#a7f0a5b4-b0cd-4197-bdb3-dfed59c88d56"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="85236be5-08b3-4f21-9d90-5c17d3b7000a" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="ae7ba335-810d-4a80-b2fd-e32a6fe6f695" name="sorgcode" binding="dto.sorgcode" visible="true" caption="机构代码" enable="true" editable="false" required="true">
+        <labelStyle id="24a0f367-d3e1-48ed-8306-ab4e40a09313" name="LabelStyleImpl-fc93fac1-d767-442d-b682-3ad0e5399538" ename="LabelStyleImplfc93fac1d767442db6823ad0e5399538"/>
+        <componentStyle id="6d32f8cd-69bf-4fa8-99a8-ea93ce215cdd" name="ComponentStyleImpl-47c09f40-7136-488a-a48e-44a06f58870d" ename="ComponentStyleImpl47c09f407136488aa48e44a06f58870d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="df610934-7ec9-402a-aec4-be0f1ede7ae8" name="国库代码" binding="dto.strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="da75192c-fdb4-477b-9d9d-7092c07703fa" name="sbankcode" binding="dto.sbankcode" visible="true" caption="代理银行代码" enable="true" editable="true" required="true">
+        <labelStyle id="ea479e29-fcb3-45ca-a110-8e9fa6af608e" name="LabelStyleImpl-3f8d16f9-3475-4db4-81cb-1375038e7081" ename="LabelStyleImpl3f8d16f934754db481cb1375038e7081"/>
+        <componentStyle id="4c104982-b633-4915-9e66-333b83044269" name="ComponentStyleImpl-364809d6-cff1-4cc4-8c18-efcfa0f729f1" ename="ComponentStyleImpl364809d6cff14cc48c18efcfa0f729f1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="3c6eb7ef-0112-4ade-96fa-9aab1cc87e67" name="sbankname" binding="dto.sbankname" visible="true" caption="代理银行名称" enable="true" editable="true">
+        <labelStyle id="abbb1966-454f-4f68-b570-ee1779497922" name="LabelStyleImpl-f4a87b5c-fd0d-48e4-bd9f-70a2218ad0e2" ename="LabelStyleImplf4a87b5cfd0d48e4bd9f70a2218ad0e2"/>
+        <componentStyle id="bbf4429b-086f-4524-a819-063aff880b41" name="ComponentStyleImpl-2d91da2a-28dd-401c-9923-644e3e3fcb0a" ename="ComponentStyleImpl2d91da2a28dd401c9923644e3e3fcb0a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="65873819-fe57-43ce-9fdb-d75674dd7310" name="业务类型" binding="dto.svtcode" caption="业务类型" required="true" display="stypecode" underly="svalue" modelsource="biztypelist"/>
+      <widgetRefs xsi:type="model:Combo" id="bd1603da-14d0-424d-bdce-37712b24d3c9" name="无纸化标志" binding="dto.sisnopaper" caption="无纸化标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#95b91075-2835-4152-a313-c2919eabb2f8"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="5984449a-622e-4167-99ea-9de339d05f40" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="deab5e45-07cb-4991-869a-ec5d01e11cc9" name="sorgcode" binding="dto.sorgcode" visible="true" caption="机构代码" enable="false" editable="false" required="true">
+        <labelStyle id="6b70c4a6-9f55-4bdb-b444-443fd3fdb2a2" name="LabelStyleImpl-1fd39d88-7ff4-47cb-917c-0048ab959477" ename="LabelStyleImpl1fd39d887ff447cb917c0048ab959477"/>
+        <componentStyle id="4faa7f15-f2b8-4a51-94c0-4ae0427aeac2" name="ComponentStyleImpl-2411f79d-4004-47d6-b263-81851962a534" ename="ComponentStyleImpl2411f79d400447d6b26381851962a534"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="a2b2d423-4178-4e52-bbd9-46cc43b117a6" name="国库代码" binding="dto.strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="77b6f087-b5ca-4f91-8dbc-9842d87a0673" name="sbankcode" binding="dto.sbankcode" visible="true" caption="代理银行代码" enable="true" editable="false" required="true">
+        <labelStyle id="e822596a-400a-4454-8dbe-a4ea1d15529c" name="LabelStyleImpl-92ab0395-f6ad-41dc-a69d-11b60870214b" ename="LabelStyleImpl92ab0395f6ad41dca69d11b60870214b"/>
+        <componentStyle id="f933682c-e63c-4c3e-b2c5-f5681a4afc09" name="ComponentStyleImpl-07b01cfc-a5c3-4944-b786-0ebdcfdd26bf" ename="ComponentStyleImpl07b01cfca5c34944b7860ebdcfdd26bf"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="48ebaeb1-3522-41e5-b8f1-662aabe83a31" name="sbankname" binding="dto.sbankname" visible="true" caption="代理银行名称" enable="true" editable="true">
+        <labelStyle id="2bbf28ef-f315-47e5-b6cb-c0704124acf7" name="LabelStyleImpl-06b0ba4b-5055-4f76-9516-616ac863e95f" ename="LabelStyleImpl06b0ba4b50554f769516616ac863e95f"/>
+        <componentStyle id="d0595f6c-45ba-4eb8-878d-38d082a28655" name="ComponentStyleImpl-a2251375-695b-4dfc-b1a3-1a34a59810b1" ename="ComponentStyleImpla2251375695b4dfcb1a31a34a59810b1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="39f4874a-1f90-43e4-bffc-bae39d1d2123" name="业务类型" binding="dto.svtcode" caption="业务类型" required="true" display="stypecode" underly="svalue" modelsource="biztypelist"/>
+      <widgetRefs xsi:type="model:Combo" id="feb69df2-bb23-4a29-96d7-1efee9df1732" name="无纸化标志" binding="dto.sisnopaper" caption="无纸化标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#95b91075-2835-4152-a313-c2919eabb2f8"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="cd86f860-5c70-4f34-b5cb-ad870d68db47">
+    <pages id="18b88eb1-0a3f-47fd-94ca-18a89f122e5f" name="商行无纸化业务参数维护">
+      <views id="5f650f56-405b-418a-8a18-480d904d508b" name="信息查询" isdefault="true" contentArea="c5cf6b91-1945-47f5-8a04-4c9fea9e9779">
+        <buttonArea id="a0c0c357-b3eb-48c0-8417-2b8bb0777372" name="JButtonAreaImpl-ccc09baa-91f7-43dd-9aab-7c93c0b7546f">
+          <buttons id="1ccf66d0-e3e3-4c25-b03b-85c850fac2e6" name="查询" caption="查询" direction="fd80a1ad-9dc0-44b5-a64f-3fbecfcdc95a"/>
+        </buttonArea>
+      </views>
+      <views id="7c9129af-3609-483f-abef-77082032ee52" name="查询结果" contentArea="111e0634-612d-42b5-b802-7faec027534e">
+        <buttonArea id="d675c9b2-ea3c-432a-8ba3-44f4b84d087c" name="JButtonAreaImpl-6ef65aff-ef0e-4726-a4cd-b1ddd42e5cc3">
+          <buttons id="f18d41fa-c61b-447a-bcd9-d377110bf3ec" name="录入" caption="录入" direction="55163541-e1be-450b-bf25-b1ca795efe70"/>
+          <buttons id="27384b24-e7c2-44a3-89b3-aa0e969c4fb0" name="修改" caption="修改" direction="21f877ac-6050-4499-a51b-21bfaf78c33f"/>
+          <buttons id="220c379b-bcf4-4aa5-9f49-f51ad1ae3928" name="删除" caption="删除" direction="513b8c5b-f576-4f89-bd66-93564beabbfb"/>
+          <buttons id="b3f733ec-5485-45ef-9d63-32573926a2c3" name="返回" caption="返回" direction="e128b306-7314-4430-86a3-f5143d718b2b"/>
+        </buttonArea>
+      </views>
+      <views id="cf837e97-4d20-40b6-ad12-bf990871c387" name="录入界面" contentArea="85236be5-08b3-4f21-9d90-5c17d3b7000a">
+        <buttonArea id="1e06a3b9-23fc-4d9e-86e9-0493e99d4fd0" name="JButtonAreaImpl-addca932-1849-4826-8870-4c12638183a2">
+          <buttons id="39277285-32ae-4da3-a8e2-53e3e00e0ade" name="保存" caption="保存" checkrequired="true" direction="02fff4d3-3b7e-48f1-ba5e-d4f866d99f41"/>
+          <buttons id="10ad2dce-3570-48bd-8cef-071d73582a73" name="modifyBack" caption="返回" direction="1d5725ed-e3b5-444a-9c28-0a932e287b75"/>
+        </buttonArea>
+      </views>
+      <views id="bdf71aae-63f6-48de-b655-d18fca54534d" name="修改界面" contentArea="5984449a-622e-4167-99ea-9de339d05f40">
+        <buttonArea id="84b97deb-ddd6-4c5a-9a15-9162b28d8f06" name="JButtonAreaImpl-ef6733fd-4207-4661-9e39-2bac87209b9e">
+          <buttons id="febfde53-4f86-4327-81c0-89107313a3c2" name="modifySave" caption="保存" checkrequired="true" direction="46332f74-49de-43a6-8196-b7c749df6723"/>
+          <buttons id="eb932282-8a01-44fe-8eec-c928f15d9fc0" name="modifyBack" caption="返回" direction="1d5725ed-e3b5-444a-9c28-0a932e287b75"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

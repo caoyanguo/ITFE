@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9c256912-c251-4889-b966-7aa04b8b402b" name="中心密钥模式维护服务" ename="TsMankeymode">
+  <jproperties id="3150e841-2e94-43c9-9931-824602c4d446" key="GeneratedTime" value="1340675234838"/>
+  <refModule href="JModule_fe419070-3ec2-4fb0-9998-0a8a344a61c6.model#fe419070-3ec2-4fb0-9998-0a8a344a61c6"/>
+  <methods id="3d515513-3761-4b80-89c7-6aac31da255c" ename="keymodeModify" name="密钥模式修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="de27921f-4993-4634-aa98-b74da513ebb1" name="密钥模式对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="3caf6ec6-879f-4e45-91ba-24b9b0013944" ename="keyList" name="密钥模式列表" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="5fba8e00-4966-445f-a5c0-c75d45237877" name="密钥模式对象" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="0a584027-5ecb-4e60-95df-7ad7aa4fa5e5" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest"/>
+  </methods>
+</model:JServiceComponent>

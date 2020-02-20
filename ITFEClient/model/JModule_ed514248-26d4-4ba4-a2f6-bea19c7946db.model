@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="ed514248-26d4-4ba4-a2f6-bea19c7946db" name="报表与入库流水核对" ename="tvIncomeDetailReportCheck"/>

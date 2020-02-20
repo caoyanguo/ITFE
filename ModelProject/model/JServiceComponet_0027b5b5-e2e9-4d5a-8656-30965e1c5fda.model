@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0027b5b5-e2e9-4d5a-8656-30965e1c5fda" name="预算单位信息维护服务组件" ename="TdCorp">
+  <jproperties id="dbe59e20-d222-4196-80cf-479e326c1954" key="GeneratedTime" value="1362711744097"/>
+  <refModule href="JModule_943c62fe-1391-4b46-9927-96d9e231b364.model#943c62fe-1391-4b46-9927-96d9e231b364"/>
+  <methods id="200abf01-122f-46ec-9b32-8f17cff326ff" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="预算单位信息维护">
+    <methodParams id="7cbd48ad-d70c-4682-84b9-5604ce0055cc" name="预算单位信息维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="3cf76e5d-944b-4c60-a709-259f3b227c45" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="d0ffd3ed-a763-4aa2-a73c-87a90044afde" name="预算单位信息维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="3cf76e5d-944b-4c60-a709-259f3b227c45" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="b437c9c8-74ab-4028-87f0-fca2f9baf7b9" name="预算单位信息维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BillHead3139" beanIdRef="BillHead3139" />
+	<jb:wiring property="Bill3139" beanIdRef="Bill3139s" />
+</jb:bean>
+<jb:bean beanId="BillHead3139" class="java.util.HashMap" createOnElement="BillHead3139">
+	<jb:value property="FinOrgCode" decoder="String" data="CFX/MSG/BillHead3139/FinOrgCode" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BillHead3139/TreCode" />
+	<jb:value property="InTreDate" decoder="String" data="CFX/MSG/BillHead3139/InTreDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BillHead3139/PackNo" />
+	<jb:value property="ChildPackNum" decoder="String" data="CFX/MSG/BillHead3139/ChildPackNum" />
+	<jb:value property="CurPackNo" decoder="String" data="CFX/MSG/BillHead3139/CurPackNo" />
+	<jb:value property="TaxAllNum" decoder="String" data="CFX/MSG/BillHead3139/TaxAllNum" />
+	<jb:value property="DrawBackAllNum" decoder="String" data="CFX/MSG/BillHead3139/DrawBackAllNum" />
+	<jb:value property="CorrAllNum" decoder="String" data="CFX/MSG/BillHead3139/CorrAllNum" />
+	<jb:value property="FreeAllNum" decoder="String" data="CFX/MSG/BillHead3139/FreeAllNum" />
+</jb:bean>
+<jb:bean beanId="Bill3139s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="Bill3139" />
+</jb:bean>
+<jb:bean beanId="Bill3139" class="java.util.HashMap" createOnElement="Bill3139">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/Bill3139/TaxOrgCode" />
+	<jb:value property="ExportVouType" decoder="String" data="CFX/MSG/Bill3139/ExportVouType" />
+	<jb:value property="ExpTaxVouNo" decoder="String" data="CFX/MSG/Bill3139/ExpTaxVouNo" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/Bill3139/BudgetType" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/Bill3139/BudgetLevelCode" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/Bill3139/BudgetSubjectCode" />
+	<jb:value property="TraAmt" decoder="String" data="CFX/MSG/Bill3139/TraAmt" />
+	<jb:value property="Origin" decoder="String" data="CFX/MSG/Bill3139/Origin" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

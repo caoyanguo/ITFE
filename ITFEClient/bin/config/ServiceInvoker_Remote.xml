@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "file:./spring-beans.dtd">
+<beans default-lazy-init="true">
+
+	<bean id="serviceContextFactory.GLOBAL.ID" class="com.cfcc.itfe.service.ITFEServiceContextFactory" />
+
+<!-- remote mode -->
+		<bean id ="httpServiceInvoker" 
+	   name="handlerServiceInvoker.GLOBAL.ID"
+		class="com.cfcc.jaf.core.invoker.http.HttpServiceInvoker" >
+		<property name="config">
+			<ref bean="httpConfig" />
+		</property>
+	</bean>
+
+	<bean id ="httpConfig" class="com.cfcc.jaf.core.invoker.http.HttpConfig" >
+		<property name="host">
+			<value>10.1.4.133</value>
+		</property>
+		<property name="port">
+			<value>9080</value>
+		</property>
+		<property name="serverFile">
+			<value>/ITFE/HttpInvoker</value>
+		</property>
+		<property name="SSL_Port">
+			<value>9443</value>
+		</property>
+		<property name="threadCount">
+			<value>5</value>
+		</property>
+		<property name="session">
+			<value>true</value>
+		</property>
+		<property name="secure">
+			<value>false</value>
+		</property>
+		<property name="zipStream"><value>true</value></property>
+	
+	</bean>
+
+	<!--HoldDispatchInvoker-->
+	<bean id="HoldDispatchInvoker" class="com.cfcc.jaf.core.invoker.dispatch.DispatchInovker">
+		<property name="dispatch">
+			<ref bean="HoldRegularDispatch" />
+		</property>
+		<property name="cacheable">
+			<value>true</value>
+		</property>
+	</bean>
+	<!--HoldRegularDispatch-->
+	<bean id="HoldRegularDispatch" class="com.cfcc.jaf.core.invoker.dispatch.RegularDispatch"
+		init-method="init">
+		<property name="defaultInvoker">
+			<ref bean="advisorInvoker" />
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="publicResultHold.ITFE.ID">
+					<!--package.class.method,-->
+					<!--package.class.method-->
+				</prop>
+				<prop key="privateResultHold.ITfE.ID">
+					com.cfcc.itfe.service.commonsubsys.commondbaccess.IITFECacheService.*
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="advisorInvoker" class="com.cfcc.jaf.core.invoker.aop.advisor.AdvisorInvoker"
+		name="httpServiceInvoker.GLOBAL.ID">
+		<property name="invoker">
+			<ref bean="statisticInvoker" />
+		</property>
+		<!--
+			<property name="adviceNames"> <list> <value>operLogInvoker</value>
+			</list> </property>
+		-->
+	</bean>
+	
+	<!-- 
+	<bean id="statisticInvoker"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.StatisticInvoker">
+		<property name="invoker">
+			<ref bean="transactionInvoker" />
+
+		</property>
+		<property name="statistics" value="true"></property>
+	</bean>
+
+
+	<bean id="transactionInvoker" class="com.cfcc.jaf.core.invoker.transation.TransationInvoker">
+		<property name="invoker">
+			<ref bean="operLogInvoker" />
+		</property>
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributeSource">
+			<ref bean="RegularMatchService" />
+		</property>
+	</bean>
+
+	<bean id="RegularMatchService"
+		class="com.cfcc.jaf.core.invoker.transation.RegularMatchTransactionAttributeSource">
+		<property name="properties">
+			<props>
+				<prop key="*.*.*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-BaseServiceException</prop>
+				<prop key="*.*.update*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-BaseServiceException</prop>
+				<prop key="*.*.modify*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-BaseServiceException</prop>
+				<prop key="*.*.delete*">
+					PROPAGATION_REQUIRES_NEW,-RuntimeException,-BaseServiceException</prop>
+				<prop key="*.*.import*">PROPAGATION_REQUIRES_NEW,-RuntimeException,-BaseServiceException</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="beanInvoker" class="com.cfcc.jaf.core.invoker.bean.BeanServiceInvoker">
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="DataSource.DB.ODB" />
+	</bean>
+
+
+
+ -->
+
+	<bean id="publicResultHold.ITFE.ID"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.PublicResultHoldInvoker">
+		<property name="invoker">
+			<ref bean="advisorInvoker" />
+		</property>
+		<property name="publicDataFile">
+			<value>tasPublicResult.obj</value>
+		</property>
+
+
+	</bean>
+
+	<bean id="privateResultHold.ITFE.ID"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.PrivateResultHoldInvoker">
+		<property name="invoker">
+			<ref bean="advisorInvoker" />
+		</property>
+	</bean>
+
+	<bean id="operLogInvoker" class="com.cfcc.itfe.service.advice.ITFEOperLogInvoker">
+		<property name="invoker" ref="beanInvoker"></property>
+	</bean>
+
+	<bean id="clientFileTransferHelper"
+		class="com.cfcc.jaf.core.service.filetransfer.support.ClientFileTransferHelper">
+		<property name="config">
+			<ref bean="fileSystemConfigClient" />
+		</property>
+	</bean>
+
+	<bean id="fileSystemConfigClient"
+		class="com.cfcc.jaf.core.service.filetransfer.support.FileSystemConfig">
+		<property name="transferSize">
+			<value>102400</value>
+		</property>
+		<property name="root">
+			<value>${file.util.root}</value>
+		</property>
+	</bean>
+
+
+</beans>

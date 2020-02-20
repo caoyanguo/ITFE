@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9868e5e4-de76-43d8-bbf1-f2551deb3ba3" name="联网机构服务组件" ename="TsInfoconnorg">
+  <jproperties id="cb2c067d-07dd-42ad-94a4-c560d8bfd0f4" key="GeneratedTime" value="1331531146015"/>
+  <refModule href="JModule_b2ce493b-1652-4bee-a33c-b849eb58945d.model#b2ce493b-1652-4bee-a33c-b849eb58945d"/>
+  <methods id="ca7caec9-a804-4a34-9a50-7d373785bbc6" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="联网机构">
+    <methodParams id="abf55e14-272e-410d-9e06-e4fc139cb123" name="联网机构" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="7f07c611-cf32-47cb-b409-766c9889e1ad" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="be70e249-7f55-4662-9b8e-500c3f70a748" name="联网机构" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="7f07c611-cf32-47cb-b409-766c9889e1ad" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="002f4421-e44a-44d5-b19b-5472287fde8c" name="联网机构" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="726dd096-11df-4377-bac5-bd13f9e19482" name="核算主体密钥参数维护" ename="TsMankey">
+  <jproperties id="0cf92bee-39d0-4190-8136-f30013e0671e" key="GeneratedTime" value="1492398869975"/>
+  <refModule href="JModule_e6c51f9b-5fbb-4abb-a29d-d7bcbd1cacc7.model#e6c51f9b-5fbb-4abb-a29d-d7bcbd1cacc7"/>
+  <model id="28853394-2c39-43fa-9a46-a9e71c0422a0" name="JModelImpl-28853394-2c39-43fa-9a46-a9e71c0422a0">
+    <attributes id="46073149-2496-47c2-a1a6-39473a53fc10" name="dto" type="com.cfcc.itfe.persistence.dto.TsMankeyDto"/>
+    <attributes id="5b3bd6f5-5339-4108-939a-63748905f6fa" name="pagingContext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="eba520c4-3b72-4fa0-9909-d57aafa3b211" name="repeatkey" type="java.lang.String"/>
+    <directions id="68790454-47ce-4a9b-ad7f-f39ebb49a971" viewers="456fc76b-52fc-412d-8099-7d61dd25e451" name="转到密钥参数录入" ename="toKeysave"/>
+    <directions id="314c6c80-17f0-4b72-b50a-5a92df051170" viewers="1b953723-304b-47b8-80d8-39ad6d627251" name="密钥参数删除" ename="keyDelete"/>
+    <directions id="9f69ee14-83e7-4624-add1-942e3162e754" viewers="1cae501f-0973-4325-a26c-6a7d5258a632" name="转到密钥参数修改" ename="toKeymodify"/>
+    <directions id="6edb2871-3d4b-4209-b622-101e78b39640" viewers="1b953723-304b-47b8-80d8-39ad6d627251" name="密钥参数录入" ename="keySave"/>
+    <directions id="9c8f946f-3264-48cf-81db-77954afd05ce" viewers="1b953723-304b-47b8-80d8-39ad6d627251" name="转到密钥参数列表" ename="toKeylist"/>
+    <directions id="50c6e243-97ab-402a-8ce3-31d77c1267e9" viewers="1b953723-304b-47b8-80d8-39ad6d627251" name="密钥参数修改" ename="keyModify"/>
+    <directions id="c9b4d861-55b1-4010-b7b3-7e806690aa2d" name="单击选中对象" ename="clickSelect"/>
+    <directions id="728dbf21-7574-49ab-ae6e-50b04108ad73" name="更新密钥并导出" ename="updateAndExport"/>
+    <directions id="bdafb148-6789-4500-8420-202a234ea54d" name="自动获取出票单位" ename="autoGetBillOrg"/>
+    <directions id="f4195509-6a0c-46eb-a497-94738446358d" name="生成新密钥" ename="geneNewKey"/>
+    <directions id="b024ce8b-03d6-4915-b9c3-cf96b554904e" name="全选" ename="allSelect"/>
+    <directions id="63280810-790d-488d-8445-90ec9d91675d" name="已生效密钥导出" ename="affKeyExport"/>
+  </model>
+  <services href="JServiceComponet_0d9b40c9-8ebe-4677-b0f9-289be008b62c.model#0d9b40c9-8ebe-4677-b0f9-289be008b62c"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="893fe4f1-6bbd-4ac6-a46f-3afd6970bd7f">
+    <contentareanode id="67eff7cd-db55-4609-8d79-e1c805e19331" name="密钥参数列表" grouptitle="密钥参数列表">
+      <widgetRefs xsi:type="model:Table" id="4dd797b1-f4f2-414e-8bd2-477556ecd195" name="密钥参数列表" binding="pagingContext" visible="true" caption="密钥参数列表" enable="true" editable="false" tabletype="paging" showcheckbox="true" selectedrows="checkList" refsingleclickdirection="c9b4d861-55b1-4010-b7b3-7e806690aa2d">
+        <columnlist id="c5651dcb-33eb-427c-9c45-8cce911d2cfa" name="选择" caption="选择"/>
+        <columnlist id="08a6521d-a9dc-4f6a-885a-6aa12e71f575" name="密钥维护模式" binding="skeymode" visible="true" caption="密钥维护模式" enable="true" editable="false">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aa9f1c56-ad40-47b8-86bf-88399cacd97d"/>
+        </columnlist>
+        <columnlist id="fa6d0ddc-e337-4109-8e5e-6ad62d78d2e6" name="核算主体代码" binding="sorgcode" visible="true" caption="核算主体代码" enable="true" editable="false"/>
+        <columnlist id="7c3eece3-009f-4092-a1cb-a9ab723c491d" name="密钥机构代码" binding="skeyorgcode" visible="true" caption="密钥机构代码" enable="true" editable="false"/>
+        <columnlist id="a8c20804-6a69-4f34-8b8d-aed249e53ea1" name="密钥机构名称" binding="skeyorgcode" caption="密钥机构名称">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4c3d0fe8-c136-453c-9239-fb15bd53ce4d"/>
+        </columnlist>
+        <columnlist id="7dd24e8a-1f43-4614-a750-4e19d7243e65" name="密钥状态" binding="imodicount" caption="密钥状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee1e22a8-1ae8-41f5-a7be-baf8ef16c2df"/>
+        </columnlist>
+        <columnlist id="e2716753-3c1d-4f3a-a37b-10013545883d" name="密钥生效日期" binding="daffdate" caption="新密钥生效日期"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="b1cc0d54-c0ce-4d9a-9180-459067b0aa9d" name="密钥参数录入" grouptitle="密钥参数录入">
+      <widgetRefs xsi:type="model:Combo" id="b698d407-8bea-4453-a347-8842db55249e" name="密钥维护模式" binding="skeymode" visible="true" caption="密钥维护模式" enable="true" editable="true" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aa9f1c56-ad40-47b8-86bf-88399cacd97d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="a265eded-71f9-4e56-b386-e05fb3a5b194" name="密钥机构代码" binding="dto.skeyorgcode" caption="密钥机构代码" required="true" display="svaluecmt" underly="svalue" modelsource="list" enumparam=""/>
+      <widgetRefs xsi:type="model:Password" id="0d93a280-06d0-4e2e-b4ea-fd45b16808ae" name="机构签名密钥" binding="dto.skey" visible="true" caption="机构签名密钥" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Password" id="a0ce0896-92ec-4f31-90f9-87ce704e8aae" name="确认签名密钥" binding="repeatkey" visible="true" caption="确认签名密钥" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Password" id="362a9971-a422-430c-99dd-d5f9a0a0203a" name="机构加密密钥" binding="dto.sencryptkey" visible="true" caption="机构加密密钥" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Password" id="9e4895b2-fd49-4061-a06d-43f7f85ed5c7" name="确认加密密钥" binding="repeatencryptkey" visible="true" caption="确认加密密钥" enable="true" editable="true"/>
+    </contentareanode>
+    <contentareanode id="e9cdaf81-6283-41e5-a08d-d4c95980ba80" name="密钥参数修改" grouptitle="密钥参数修改">
+      <widgetRefs xsi:type="model:Combo" id="e2a10da8-bb3b-4885-96c2-ed804de77b13" name="密钥维护模式" binding="skeymode" visible="false" caption="密钥维护模式" enable="true" editable="true" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#aa9f1c56-ad40-47b8-86bf-88399cacd97d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6a1b047c-8fc2-4d48-9cfc-4cf083eb4b33" name="密钥机构代码" binding="dto.skeyorgcode" visible="false" caption="密钥机构代码" required="true" display="svaluecmt" underly="svalue" modelsource="list"/>
+      <widgetRefs xsi:type="model:Password" id="3f182b4c-fbd0-4e4e-82a0-c7b2850c19f1" name="机构签名密钥" binding="dto.skey" visible="false" caption="机构签名密钥" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Password" id="5470ce8d-ecd8-4e98-8943-785fa56e82cc" name="确认签名密钥" binding="repeatkey" visible="false" caption="确认签名密钥" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Password" id="e229a6a4-a92b-4317-8e61-85bf80c2a3de" name="机构加密密钥" binding="dto.snewkey" visible="true" caption="机构加密密钥" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Password" id="71c1de0d-0505-482f-a537-68a81f2b937b" name="确认加密密钥" binding="dto.snewencryptkey" visible="true" caption="确认加密密钥" enable="true" editable="true"/>
+    </contentareanode>
+    <contentareanode id="66fce37e-2eb6-4dd2-8b01-393cc33c8c5f" name="密钥生效日期" grouptitle="">
+      <widgetRefs xsi:type="model:Text" id="da704365-3118-4057-98e3-ad60227a53a1" name="密钥生效日期" binding="daffdate" caption="密钥生效日期"/>
+      <widgetRefs xsi:type="model:Textarea" id="57e33635-1d4b-43f2-b786-1f138088cdb0" name="TextareaImpl-57e33635-1d4b-43f2-b786-1f138088cdb0" binding="funcinfo" caption="按钮功能说明" enable="false" warp="true">
+        <componentStyle id="4e4b49ec-db76-4b3b-a47f-1a7140876177" name="ComponentStyleImpl-4e4b49ec-db76-4b3b-a47f-1a7140876177" ename="ComponentStyleImpl4e4b49ecdb764b3ba47f1a7140876177" width="600" height="40" componentheight="20" innercompositewidth="800" innercompositeheight="60"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="8d8a48f8-b31f-45b9-8776-05a4996377b1">
+    <pages id="8253d9c2-f78e-414b-87f8-382b7f83ffaa" name="核算主体密钥参数维护界面">
+      <views id="1b953723-304b-47b8-80d8-39ad6d627251" name="密钥维护列表" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="66fce37e-2eb6-4dd2-8b01-393cc33c8c5f 67eff7cd-db55-4609-8d79-e1c805e19331">
+        <buttonArea id="531766dc-d4ba-4a9e-a2f4-c5fc5a40664a" name="JButtonAreaImpl-531766dc-d4ba-4a9e-a2f4-c5fc5a40664a">
+          <buttons id="0927f103-6273-4421-b36a-1a4e2c6e5719" name="ButtonImpl-0927f103-6273-4421-b36a-1a4e2c6e5719" caption="全选" direction="b024ce8b-03d6-4915-b9c3-cf96b554904e"/>
+          <buttons id="6d8d7521-6afa-4e16-93a3-b563abd5c019" name="录入" visible="true" caption="录入" enable="true" editable="false" direction="68790454-47ce-4a9b-ad7f-f39ebb49a971"/>
+          <buttons id="0c9c23e9-076c-4049-9fd0-e1c73a76565f" name="删除" visible="true" caption="删除" enable="true" editable="false" direction="314c6c80-17f0-4b72-b50a-5a92df051170"/>
+          <buttons id="8fa0027d-a41f-47d6-adbc-c30a5c17ea1e" name="修改密钥" visible="true" caption="修改密钥" enable="true" editable="false" direction="9f69ee14-83e7-4624-add1-942e3162e754"/>
+          <buttons id="e0bb4c35-d189-4313-b15d-30ca5a48a48e" name="" caption="已生效密钥导出" direction="63280810-790d-488d-8445-90ec9d91675d"/>
+          <buttons id="e6f8a2be-3abe-412c-8a91-7a823574ed55" name="ButtonImpl-e6f8a2be-3abe-412c-8a91-7a823574ed55" caption="自动获取密钥机构" direction="bdafb148-6789-4500-8420-202a234ea54d"/>
+          <buttons id="b05e5fee-8492-44eb-b01f-0fb800745f8e" name="ButtonImpl-b05e5fee-8492-44eb-b01f-0fb800745f8e" caption="密钥更新及导出" checkrequired="false" direction="728dbf21-7574-49ab-ae6e-50b04108ad73"/>
+        </buttonArea>
+      </views>
+      <views id="456fc76b-52fc-412d-8099-7d61dd25e451" name="密钥参数录入" contentArea="b1cc0d54-c0ce-4d9a-9180-459067b0aa9d">
+        <buttonArea id="6fefd7ea-b2ad-475d-9e30-16030770d237" name="JButtonAreaImpl-6fefd7ea-b2ad-475d-9e30-16030770d237">
+          <buttons id="66f257db-72f7-49ed-ad16-21aebe5ad1c3" name="保存" visible="true" caption="保存" editable="false" checkrequired="true" direction="6edb2871-3d4b-4209-b622-101e78b39640"/>
+          <buttons id="e3431a60-6550-44ce-8250-4431119f20ab" name="返回" visible="true" caption="返回" enable="true" editable="false" direction="9c8f946f-3264-48cf-81db-77954afd05ce"/>
+        </buttonArea>
+      </views>
+      <views id="1cae501f-0973-4325-a26c-6a7d5258a632" name="密钥参数修改" contentArea="e9cdaf81-6283-41e5-a08d-d4c95980ba80">
+        <buttonArea id="2ca2339c-b337-4e13-8e31-8c2371429656" name="JButtonAreaImpl-2ca2339c-b337-4e13-8e31-8c2371429656">
+          <buttons id="2e49f0c7-b1e8-40e7-86ba-6cad2a1afa54" name="提交" visible="true" caption="保存" enable="true" editable="false" checkrequired="true" direction="50c6e243-97ab-402a-8ce3-31d77c1267e9"/>
+          <buttons id="f21a84d0-320b-4f2f-a2b0-46a3fde2b05a" name="返回" visible="true" caption="返回" editable="false" direction="9c8f946f-3264-48cf-81db-77954afd05ce"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#6526cf6a-bd13-4b74-9830-c37f0c15bd15"/>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#109806d0-798b-4668-91b9-57f526a8ede8"/>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#f1dcbc6f-0750-4898-a073-e04bcc8a6c01"/>
+</model:JUIComponent>

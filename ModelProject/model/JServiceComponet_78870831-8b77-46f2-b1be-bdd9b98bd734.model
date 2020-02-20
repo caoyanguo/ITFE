@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="78870831-8b77-46f2-b1be-bdd9b98bd734" name="导出TBS文件" ename="exportTBSfiletxt">
+  <jproperties id="c45873be-b87e-40fb-b1b2-740c901aa41a" key="GeneratedTime" value="1384757451171"/>
+  <refModule href="JModule_71d52652-39d7-4075-aaa6-087e5c7ee011.model#71d52652-39d7-4075-aaa6-087e5c7ee011"/>
+  <methods id="85888525-0ca2-4ee4-b4d3-357be848211d" ename="exportTBSdata" name="导出TBS文件" returntype="java.util.List">
+    <methodParams id="49df4995-5646-48a6-b9f9-e8f16c3665d9" name="业务类型" ename="sbiztypetbs" type="java.lang.String"/>
+    <methodParams id="17abea72-d190-4272-872d-fce939b8401c" name="核算主体" ename="orgcode" type="java.lang.String"/>
+    <methodParams id="b6b15adb-020b-4afc-9bb6-a15846093851" name="账务日期" ename="dacctdate" type="java.sql.Date"/>
+    <methodParams id="8686d854-7413-4483-b323-4333cd9858d0" name="调整期标志" ename="ctrimflag" type="java.lang.String"/>
+    <methodExceptions id="2b8e80af-55b0-4954-b351-620c972df8d6" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="7d0525de-104d-4406-a0de-ef3acab1f83d" ename="getsubinfo" name="获取明细信息" returntype="java.util.List">
+    <methodParams id="4bc914d5-f0af-4551-86b8-4a2cd5d8b661" name="主表dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodExceptions id="d551068c-a8b5-4a80-9b03-3365b3a9d91a" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="87a97b3f-6d5e-4014-bcca-f98f894fba6e" ename="getTBSNum" name="生成文件批次号" returntype="java.lang.String">
+    <methodExceptions id="2666320b-a7eb-4aaa-a71c-68d60dd67ba4" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="60dae27f-ee02-4978-8b06-e93dac366234" ename="gettspayacctinfo" name="获取收付款人信息" returntype="com.cfcc.itfe.persistence.dto.TsPayacctinfoDto">
+    <methodParams id="4e3fd170-016c-48bf-8a57-30d8e432cd62" name="收付款人信息" ename="paramdto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainDto"/>
+  </methods>
+  <methods id="f63ddabe-1661-4acf-be6e-46cf1de747f4" ename="getmoveflag" name="获取调拨标志" returntype="java.lang.String">
+    <methodParams id="a32eccbd-947a-40c1-bc7f-5c679dd29f7f" name="参数" ename="dto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainDto"/>
+    <methodParams id="9892454d-a27b-4cad-ba96-de0a02aa9487" name="sub参数" ename="subdto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgsubDto"/>
+  </methods>
+  <methods id="59acaa84-488f-4139-93a3-55066b4a127e" ename="updateVdtoStatus" name="跟新凭证索引表数据状态" codecomment="跟新凭证索引表数据状态" returntype="com.cfcc.devplatform.customtype.Void" remark="跟新凭证索引表数据状态">
+    <methodParams id="206a48c4-e9bf-4bfc-a272-1c8af60b9a59" name="数据列表" ename="list" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="63140129-5ebe-4c8e-99e9-2b32dbd2de96" name="退付原因参数维护" ename="TsDwbkReason" shared="true"/>

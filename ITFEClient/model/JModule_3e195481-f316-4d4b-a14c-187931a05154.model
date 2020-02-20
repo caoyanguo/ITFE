@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3e195481-f316-4d4b-a14c-187931a05154" name="商行数据验证" remark="目的是将商行发往财政和发往人行的凭证进行验证比对" ename="bankVoucherValidate"/>

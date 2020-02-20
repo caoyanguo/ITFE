@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="566b9487-de98-4125-bbd2-0b49ba32fff5" isgenerated="false" name="计息统计信息" ename="InterestrateMsg" shared="false"/>

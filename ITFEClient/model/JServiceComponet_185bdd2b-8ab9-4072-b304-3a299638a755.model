@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="185bdd2b-8ab9-4072-b304-3a299638a755" name="利息参数维护" ename="interestParam">
+  <jproperties id="de4109fe-0066-4093-a520-a79ae08d5d66" key="GeneratedTime" value="1432087855375"/>
+  <refModule href="JModule_a8d48e51-b301-4a69-84f6-8101b3a9f677.model#a8d48e51-b301-4a69-84f6-8101b3a9f677"/>
+  <methods id="2762af0b-ac46-4f63-81b1-52aeb834f41b" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="增加">
+    <methodParams id="f66b32c3-fc2f-4130-b6f4-ed368d26a0bd" name="" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment=""/>
+  </methods>
+  <methods id="cf927e62-d1cb-4cf8-93c8-eb0eeb3806eb" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void" remark="删除">
+    <methodParams id="2b8a82c8-fb7e-4163-8351-ee71603468f5" name="" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment=""/>
+  </methods>
+  <methods id="5f826162-f75a-4558-a1a6-d7f08285b42f" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="152c31c4-789f-4b8e-b0e7-af40a4d11d2d" name="" ename="dtoInfo" codecomment=""/>
+  </methods>
+  <methods id="7a01cfb5-23aa-4024-bb87-40f1f926b60c" ename="addJXInfo" name="增加计息账户" codecomment="增加计息账户" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto">
+    <methodParams id="3cae4d71-c934-44d3-94de-326f23498ea9" name="JXDtoInfo" ename="JXDtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="63ac7a27-3e84-4a7e-9cdb-69bf5483bcb4" ename="delJXInfo" name="删除计息账户" codecomment="删除计息账户" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="7c043a17-144a-4e67-9139-69d035f49582" name="JXDtoInfo" ename="JXDtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="3184aa47-0756-41a0-96f0-3e593f1e94dd" ename="modJXInfo" name="修改计息账户" codecomment="修改计息账户" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="322d5d00-42a7-4625-99b1-3108017dee1e" name="tsJxAcctinfoDto" ename="tsJxAcctinfoDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="e9ca2276-4ff2-438d-a7ae-523c11e6a57f" name="JXDtoInfo" ename="JXDtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

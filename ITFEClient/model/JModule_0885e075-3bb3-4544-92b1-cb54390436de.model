@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0885e075-3bb3-4544-92b1-cb54390436de" isgenerated="false" name="系统日志" ename="OperLogQuery" shared="false"/>

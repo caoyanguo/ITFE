@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>1.0</VER>
+		<SRC>100000000000</SRC>
+		<DES>202057100007</DES>
+		<APP>TIPS</APP>
+		<MsgNo>3201</MsgNo>
+		<MsgID>20100319320100002049</MsgID>
+		<MsgRef>20100319320100002049</MsgRef>
+		<WorkDate>20100125</WorkDate>
+		<Reserve></Reserve>
+	</HEAD>
+	<MSG>
+		<BatchHead3201>
+			<ChkDate>20100125</ChkDate>
+			<PackNo>00000845</PackNo>
+			<BillOrg>3301000000</BillOrg>
+			<OrgType>4</OrgType>
+			<AllSendNum>1000</AllSendNum>
+			<ChildPackNum>2</ChildPackNum>
+			<CurPackNo>5</CurPackNo>
+			<CurPackNum>800</CurPackNum>
+			<CurPackAmt>1000</CurPackAmt>
+		</BatchHead3201>
+		<CompDeduct3201>
+			<OriMsgNo>5102</OriMsgNo>
+			<OriSendOrgCode>3301000000</OriSendOrgCode>
+			<OriEntrustDate>20100125</OriEntrustDate>
+			<OriPackNo>00000845</OriPackNo>
+			<AllNum>10</AllNum>
+			<AllAmt>200</AllAmt>
+		</CompDeduct3201>
+		<CompDeduct3201>
+			<OriMsgNo>5102</OriMsgNo>
+			<OriSendOrgCode>3301000000</OriSendOrgCode>
+			<OriEntrustDate>20100125</OriEntrustDate>
+			<OriPackNo>00000846</OriPackNo>
+			<AllNum>10</AllNum>
+			<AllAmt>200</AllAmt>
+		</CompDeduct3201>
+	</MSG>
+</CFX>

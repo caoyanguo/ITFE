@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c4b306b5-51b1-475a-87e9-5b8bec832b18" name="大额税源支出统计表" ename="TrecodeLargeTaxAndPayTable">
+  <jproperties id="9871d315-a630-4bfd-a544-43097ee54916" key="GeneratedTime" value="1402046269109"/>
+  <refModule href="JModule_95c1c2cb-b17e-4252-b8fc-ba31ec527891.model#95c1c2cb-b17e-4252-b8fc-ba31ec527891"/>
+  <methods id="a28b9d47-be54-45ae-abcd-873a5798124d" ename="queryByPage" name="大额税源支出统计表查询分页" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="16e676b0-a70d-4a10-82be-b34d622f2de9" name="查询方式" ename="queryStyle" type="java.lang.String"/>
+    <methodParams id="ab0944c1-e06c-426e-ade5-a96b67466395" name="分页请求" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodParams id="2d9ba4e2-3c7d-4377-9e2f-7f9f09c1cef2" name="IDto" ename="IDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="f6c3d2d6-bc5c-49e1-9258-76761086cc80" ename="exportFile" name="导出" returntype="java.lang.String">
+    <methodParams id="fdb4795e-da46-4beb-89a2-499d55bb7ae4" name="查询方式" ename="queryStype" type="java.lang.String"/>
+    <methodParams id="6fb054e4-99d8-4724-a7e9-a20d881c335d" name="导出列表" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="2b9fe811-c8f4-4fb8-be25-87fbd816e15f" ename="queryByList" name="大额税源支出统计表查询列表" returntype="java.util.List">
+    <methodParams id="532a43b3-22ec-490b-8a2d-88e02ec07f93" name="查询方式" ename="queryStyle" type="java.lang.String"/>
+    <methodParams id="72faefa8-58c6-4ce7-b25e-cbde54e4f84c" name="IDto" ename="IDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+</model:JServiceComponent>

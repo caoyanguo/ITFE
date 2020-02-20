@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="13d53b24-d47c-4697-8345-76376ce3bb8b" name="国库对应关系维护" ename="tsconvertrea">
+  <jproperties id="687a32ba-92a6-40d8-801c-3ec5b1430544" key="GeneratedTime" value="1367027178358"/>
+  <refModule href="JModule_06d6a7ca-cc1f-4e9d-b6bc-d682477513e4.model#06d6a7ca-cc1f-4e9d-b6bc-d682477513e4"/>
+  <model id="b457f25f-a67f-4295-9fb0-4665d14454ad" name="JModelImpl-b457f25f-a67f-4295-9fb0-4665d14454ad">
+    <attributes id="ef8d5614-c910-4609-a535-296a0d62bca4" name="searchDto" type="com.cfcc.itfe.persistence.dto.TsConvertreaDto"/>
+    <attributes id="cdce5c6a-c8d3-47da-952a-b65268ae5271" name="detailDto" type="com.cfcc.itfe.persistence.dto.TsConvertreaDto"/>
+    <attributes id="b1e4799b-9dd3-433b-bf00-d2a9db6e7702" name="searchResult" type="java.util.List"/>
+    <directions id="3696baff-9fb7-4776-8a49-18630b858d0d" name="表格单击" ename="singleclick"/>
+    <directions id="075f7280-96b7-40d6-8f79-74690cfbc9d8" name="查询" ename="search"/>
+    <directions id="41565c71-5d58-492d-9201-9499aedce8c0" name="删除" ename="del"/>
+    <directions id="9fbd8f20-fd70-460c-a162-a489a2ff55ca" viewers="e09e2836-b9ec-4281-aea5-5c51937baa76" name="跳转修改信息页面" ename="gomodview"/>
+    <directions id="8f99872e-fbf5-4cb0-b83f-cdee565af220" viewers="f8413b5c-5f9c-495f-ad60-96b4ae1b825e" name="跳转添加信息页面" ename="goaddview"/>
+    <directions id="719d559a-fed8-4e65-9032-48094db6848b" viewers="68366458-7ef9-45a5-8b73-b3ccd34baf00" name="返回默认界面" ename="gomainview"/>
+    <directions id="4babb40e-2bb9-4cf8-8d36-7fe9f9082ba7" viewers="68366458-7ef9-45a5-8b73-b3ccd34baf00" name="添加信息" ename="addInfo"/>
+    <directions id="c370c2ad-f539-4b9a-9c26-17a004206536" viewers="68366458-7ef9-45a5-8b73-b3ccd34baf00" name="修改信息" ename="modInfo"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_4b45927c-78eb-4a2a-86c4-79cf7b5286ac.model#4b45927c-78eb-4a2a-86c4-79cf7b5286ac"/>
+  <contentAreas id="582859b8-8c00-4ab0-b3b9-94ca4a1993be">
+    <contentareanode id="4c6b5891-fa6a-4f74-8221-4f5fe31c827d" name="查询" grouptitle="查询">
+      <widgetRefs xsi:type="model:Text" id="ea66ac1f-a7f1-4945-97d1-43811af900a6" name="横联国库代码" binding="searchDto.strecode" caption="横联国库代码"/>
+      <widgetRefs xsi:type="model:Combo" id="70c45a4f-511c-4efa-9cf7-ff22e2596ed6" name="TCBS国库代码" binding="searchDto.stcbstrea" caption="TCBS国库代码" display="strename" underly="strecode" modelsource="trelist"/>
+    </contentareanode>
+    <contentareanode id="0f21f257-7fa5-4e9a-a595-f545b9631523" name="信息录入" grouptitle="信息录入">
+      <widgetRefs xsi:type="model:Text" id="d31bbcc3-b5aa-42ac-8f2e-bc39a199d55b" name="横联国库代码" binding="detailDto.strecode" caption="横联国库代码" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="0a6d20fb-d256-4651-b5cb-0f09ea487b12" name="TCBS国库代码" binding="detailDto.stcbstrea" caption="TCBS国库代码" required="true" display="strename" underly="strecode" modelsource="trelist"/>
+    </contentareanode>
+    <contentareanode id="996f0999-d413-47e4-bb9d-66c4e0b34e14" name="修改信息" grouptitle="修改信息">
+      <widgetRefs xsi:type="model:Text" id="c1a8883d-e5f9-4cbf-a1f3-89017ada6cc5" name="横联国库代码" binding="detailDto.strecode" caption="横联国库代码" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="71a47270-7d5b-4ef0-9162-980a89534880" name="TCBS国库代码" binding="detailDto.stcbstrea" caption="TCBS国库代码" required="true" display="strename" underly="strecode" modelsource="trelist"/>
+    </contentareanode>
+    <contentareanode id="e1401f0f-47c4-49ea-8fed-e2c46e83d811" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="334f8914-5e05-4600-adad-4e11985d549e" name="TableImpl-334f8914-5e05-4600-adad-4e11985d549e" binding="searchResult" refsingleclickdirection="3696baff-9fb7-4776-8a49-18630b858d0d">
+        <columnlist id="62b6c4fa-70a2-473c-89fc-6d30743407d6" name="横联国库代码" binding="strecode" caption="横联国库代码"/>
+        <columnlist id="54acb003-9e65-4043-80a7-02b3ba286a4b" name="TCBS国库代码" binding="stcbstrea" caption="TCBS国库代码"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="7d7ca3d0-6d02-4460-b6f5-d0b8e55af295">
+    <pages id="e005d235-77ed-45e1-8e93-c93367cd6fa8" name="国库对应关系维护">
+      <views id="68366458-7ef9-45a5-8b73-b3ccd34baf00" name="查询" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="4c6b5891-fa6a-4f74-8221-4f5fe31c827d e1401f0f-47c4-49ea-8fed-e2c46e83d811">
+        <buttonArea id="6aaac054-be12-46f1-a106-510e9d0a661f" name="JButtonAreaImpl-6aaac054-be12-46f1-a106-510e9d0a661f">
+          <buttons id="eb37b561-84ac-4ca1-b7b0-11731a4cbb02" name="查询" caption="查询" direction="075f7280-96b7-40d6-8f79-74690cfbc9d8"/>
+          <buttons id="a38c205b-248d-40ba-ba2f-e1528d8be0a5" name="录入" caption="录入" direction="8f99872e-fbf5-4cb0-b83f-cdee565af220"/>
+          <buttons id="f8717632-cccd-49ed-84cf-b8c5802ebd62" name="修改" caption="修改" direction="9fbd8f20-fd70-460c-a162-a489a2ff55ca"/>
+          <buttons id="e86e8549-ff0f-45c2-a192-ef4f93af9dfc" name="删除" caption="删除" direction="41565c71-5d58-492d-9201-9499aedce8c0"/>
+        </buttonArea>
+      </views>
+      <views id="f8413b5c-5f9c-495f-ad60-96b4ae1b825e" name="新增" contentArea="0f21f257-7fa5-4e9a-a595-f545b9631523">
+        <buttonArea id="943281c4-699d-4a2d-8e55-483c3cf946f3" name="JButtonAreaImpl-943281c4-699d-4a2d-8e55-483c3cf946f3">
+          <buttons id="07fac402-45a5-4525-8fd9-e0ff94a2f032" name="保存" caption="保存" checkrequired="true" direction="4babb40e-2bb9-4cf8-8d36-7fe9f9082ba7"/>
+          <buttons id="b0d7692b-77da-4cd8-9980-7509eacac12b" name="返回" caption="返回" direction="719d559a-fed8-4e65-9032-48094db6848b"/>
+        </buttonArea>
+      </views>
+      <views id="e09e2836-b9ec-4281-aea5-5c51937baa76" name="修改" contentArea="996f0999-d413-47e4-bb9d-66c4e0b34e14">
+        <buttonArea id="16cb5281-3584-41ca-b67e-6846ac5eb897" name="JButtonAreaImpl-16cb5281-3584-41ca-b67e-6846ac5eb897">
+          <buttons id="130f7d4b-c95d-4185-849a-b8c00f042fb6" name="保存" caption="保存" checkrequired="true" direction="c370c2ad-f539-4b9a-9c26-17a004206536"/>
+          <buttons id="0d8ac3ed-9d54-4019-a841-3d5c58878975" name="返回" caption="返回" direction="719d559a-fed8-4e65-9032-48094db6848b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

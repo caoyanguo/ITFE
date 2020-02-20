@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b3602247-d38f-422a-ad79-d3c0c0ce1112" name="分科目月度汇总表服务组件(上海)" ename="budgetsubcodemonthlyreport">
+  <jproperties id="b9ee02fb-121e-4dc4-8dbc-2da46df299c5" key="GeneratedTime" value="1378262096365"/>
+  <refModule href="JModule_ff78dbc9-2646-49b5-aafb-17c1e37c7cfc.model#ff78dbc9-2646-49b5-aafb-17c1e37c7cfc"/>
+  <methods id="9d689f2d-e2f7-4e51-a3d8-ca750d23a7b8" ename="getReportData" name="获取报表内容" returntype="java.util.List">
+    <methodParams id="962e977e-2fd6-4d03-9aa8-4f14eca789d9" name="报表内容" ename="searchdto" type="com.cfcc.itfe.persistence.dto.ShanghaiReport"/>
+    <methodParams id="1268b286-eb16-4a1d-8860-89cc8c29ab55" name="报表类型" ename="reporttype" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

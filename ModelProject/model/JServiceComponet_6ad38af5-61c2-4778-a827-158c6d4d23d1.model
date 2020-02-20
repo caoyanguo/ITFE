@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6ad38af5-61c2-4778-a827-158c6d4d23d1" name="数据加载" ename="UploadUI" shared="true">
+  <jproperties id="dee4dca4-b997-4fe5-9729-c5d1249727ed" key="GeneratedTime" value="1372329271921"/>
+  <refModule href="JModule_066e4b34-9a7f-49b4-9c92-29048dc16020.model#066e4b34-9a7f-49b4-9c92-29048dc16020"/>
+  <methods id="9071baf7-f97a-4e33-8d7e-cf221c8e825f" ename="UploadDate" name="加载数据" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="c7503dd7-4582-462f-9ac8-eb89b18629c3" name="解析文件结果集合DTO" ename="fileResultDto" type="com.cfcc.itfe.persistence.dto.FileResultDto"/>
+  </methods>
+  <methods id="a3d52911-d7cf-411d-8958-2a35c875fdf6" ename="searchByTraSrlNo" name="查询资金收纳流水信息" returntype="java.util.List">
+    <methodParams id="595fe4ec-d1e8-40fd-bf1e-8dd21b82bb89" name="资金收纳流水号" ename="strasrlno" type="java.lang.String"/>
+    <methodParams id="80253735-5cef-4216-b2e7-f693d6163974" name="资金流水总金额" ename="totalmoney" type="java.math.BigDecimal"/>
+  </methods>
+  <methods id="9c40dcd6-8011-46f5-941d-6cc106724c82" ename="delByTraSrlNo" name="按照资金收纳流水号删除信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="20c7a61d-dc2f-4551-a4f8-38f20cf30983" name="资金收纳流水号" ename="strasrlno" type="java.lang.String"/>
+  </methods>
+  <methods id="78719a27-ee96-46ca-92cd-2017f756f28b" ename="commitByTraSrlNo" name="按照资金收纳流水号提交信息" returntype="com.cfcc.devplatform.customtype.Int">
+    <methodParams id="969540f1-eca6-410c-b022-d82d44cd00a9" name="资金收纳流水号" ename="strasrlno" type="java.lang.String"/>
+    <methodParams id="c868ca43-76b0-4c51-ba8d-e7233a868d3e" name="文件名称列表" ename="fileList" type="java.util.List"/>
+  </methods>
+  <methods id="1596579d-db39-4cf8-8d43-1fccf3dfeb35" ename="delByCheckFileList" name="根据选择列表删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="c70f98b7-978d-4a06-8093-022c584d00a8" name="选择列表" ename="checkList" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

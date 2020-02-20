@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+    <MSG>
+        <MsgReturn9122>
+            <OriMsgNo>${cfx.MSG.MsgReturn9122.OriMsgNo}</OriMsgNo>
+            <OriSendOrgCode>${cfx.MSG.MsgReturn9122.OriSendOrgCode}</OriSendOrgCode>
+            <OriEntrustDate>${cfx.MSG.MsgReturn9122.OriEntrustDate}</OriEntrustDate>
+            <OriRequestNo>${cfx.MSG.MsgReturn9122.OriRequestNo}</OriRequestNo>
+            <Result>${cfx.MSG.MsgReturn9122.Result}</Result>
+            <AddWord>${cfx.MSG.MsgReturn9122.AddWord}</AddWord>
+        </MsgReturn9122>
+    </MSG>
+</CFX>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="TroubleInfo9102" beanIdRef="TroubleInfo9102" />
+</jb:bean>
+<jb:bean beanId="TroubleInfo9102" class="java.util.HashMap" createOnElement="TroubleInfo9102">
+	<jb:value property="TroubleNode" decoder="String" data="CFX/MSG/TroubleInfo9102/TroubleNode" />
+	<jb:value property="NodeState" decoder="String" data="CFX/MSG/TroubleInfo9102/NodeState" />
+	<jb:value property="TroubleReason" decoder="String" data="CFX/MSG/TroubleInfo9102/TroubleReason" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

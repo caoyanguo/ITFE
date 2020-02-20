@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GBK"?>
+<Voucher>
+	<Id>${Voucher.Id}</Id>
+	<AdmDivCode>${Voucher.AdmDivCode}</AdmDivCode>
+	<StYear>${Voucher.StYear}</StYear>
+	<VtCode>${Voucher.VtCode}</VtCode>
+	<VouDate>${Voucher.VouDate}</VouDate>
+	<VoucherNo>${Voucher.VoucherNo}</VoucherNo>
+	<DataEle>${Voucher.DataEle}</DataEle>
+	<DataEleName>${Voucher.DataEleName}</DataEleName>
+	<Hold1>${Voucher.Hold1}</Hold1>
+	<Hold2>${Voucher.Hold2}</Hold2>
+	<Hold3>${Voucher.Hold3}</Hold3>
+	<Hold4>${Voucher.Hold4}</Hold4>
+	<DetailList>
+	  <#list Voucher.DetailList.Detail as var>
+	  <Detail>
+	  	<Id>${var.Id}</Id>
+		<Subjectcode>${var.Subjectcode}</Subjectcode>
+		<Subjectname>${var.Subjectname}</Subjectname>
+		<Subjecttype>${var.Subjecttype}</Subjecttype>
+		<Subjectclassification>${var.Subjectclassification}</Subjectclassification>
+		<IEsign>${var.IEsign}</IEsign>
+		<Entrymark>${var.Entrymark}</Entrymark>
+		<Subjectattribute>${var.Subjectattribute}</Subjectattribute>
+		<Allocationmark>${var.Allocationmark}</Allocationmark>
+		<SubjectcodeSimplify>${var.SubjectcodeSimplify}</SubjectcodeSimplify>
+		<FiscalCode>${var.FiscalCode}</FiscalCode>
+		<TaxCode>${var.TaxCode}</TaxCode>
+		<SuperiorsCode>${var.SuperiorsCode}</SuperiorsCode>
+		<UniformCode>${var.UniformCode}</UniformCode>
+		<Statisticalcode>${var.Statisticalcode}</Statisticalcode>
+		
+		<Paylinenumber>${var.Paylinenumber}</Paylinenumber>
+		<Status>${var.Status}</Status>
+		<Liquidationlinenumber>${var.Liquidationlinenumber}</Liquidationlinenumber>
+		<City>${var.City}</City>
+		<Participantsfullname>${var.Participantsfullname}</Participantsfullname>
+		<effectivedate>${var.effectivedate}</effectivedate>
+		<Expirationdate>${var.Expirationdate}</Expirationdate>
+		<Remark>${var.Remark}</Remark>
+		
+		<ZeroAccount>${var.ZeroAccount}</ZeroAccount>
+		<ZBAsstate>${var.ZBAsstate}</ZBAsstate>
+		<Zerotime>${var.Zerotime}</Zerotime>
+		<ZeroBanknumber>${var.ZeroBanknumber}</ZeroBanknumber>
+		<ZeroBankname>${var.ZeroBankname}</ZeroBankname>
+		<Zerocodingunit>${var.Zerocodingunit}</Zerocodingunit>
+		<ZeroAccountName>${var.ZeroAccountName}</ZeroAccountName>
+		
+		<SupDepName>${var.SupDepName}</SupDepName>
+		<SupDepCode>${var.SupDepCode}</SupDepCode>
+		<UnitChangeStatus>${var.UnitChangeStatus}</UnitChangeStatus>
+		<IssuedDate>${var.IssuedDate}</IssuedDate>
+		<EffectiveDate1>${var.EffectiveDate}</EffectiveDate>
+	</Detail>
+	</#list> 
+	</DetailList>  
+</Voucher>

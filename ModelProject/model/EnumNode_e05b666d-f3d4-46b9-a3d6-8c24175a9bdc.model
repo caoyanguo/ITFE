@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:EnumNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="e05b666d-f3d4-46b9-a3d6-8c24175a9bdc" name="国库前置系统枚举值" ename="ITFEEnumLib">
+  <refPackage href="JResourcePackage_0fd1a69b-a6e5-4662-88df-5f2d48829cdb.model#0fd1a69b-a6e5-4662-88df-5f2d48829cdb"/>
+  <refEnum id="8e2e9b72-40e5-4287-a765-78594b2a5885" name="机构级次" ename="orgLevel"/>
+  <refEnum id="522ec834-1449-4af8-864f-a1329e3aafab" name="机构状态" ename="orgstate"/>
+  <refEnum id="7aeae388-b10a-4ab2-9ca8-b4e8cac478c7" name="是否发送" ename="Whethersend"/>
+  <refEnum id="91c106fb-375c-4e55-9e47-bffcc6a309d7" name="是否接收" ename="Whetherincept"/>
+  <refEnum id="dcc44f89-55f6-4e7f-afbc-3ddd5fef5076" name="调整期标志" ename="strimflag"/>
+  <refEnum id="4f512a70-f00b-45c6-8179-c8fb8be64b79" name="国库级次" ename="strelevel"/>
+  <refEnum id="19eecbae-0ae6-4296-9976-9123e042bdaa" name="国库属性" ename="streattrib"/>
+  <refEnum id="37292d65-072a-43cd-9ed6-a1b25da01631" name="是否合设机构" ename="sisuniontre"/>
+  <refEnum id="b29f127a-e555-41d6-8405-4af269bf3f53" name="查询种类" ename="queryKind"/>
+  <refEnum id="16406a7f-4c5b-4a61-a7f2-f95ece647ec9" name="数据处理状态" ename="procFlag"/>
+  <refEnum id="fa77e1b5-f611-45bd-8a2d-e5b005592102" name="是否启用" ename="sisuse"/>
+  <refEnum id="6a4b65d5-66f9-4ef6-a9ab-f1c7fe9bac57" name="联类型" ename="sformtype"/>
+  <refEnum id="9f890e45-eacf-4107-b590-5eccd3ac3f5f" name="用户类型" ename="susertype"/>
+  <refEnum id="268a761a-cd12-45dd-869a-e4e57d5eb394" name="用户状态" ename="suserstatus"/>
+  <refEnum id="71e88bd3-24d0-426d-809b-ac9c23483dd7" name="签章位置类型" ename="splacetype"/>
+  <refEnum id="d8b30d8a-42bd-4f93-8aff-e8233b5009cc" name="是否有效" ename="sisvalid"/>
+  <refEnum id="67df1bd2-e96b-4921-9f4c-0a0b6796e445" name="操作类型" ename="manipulationtype"/>
+  <refEnum id="edae32fd-b403-439a-9d50-e7018c3c8323" name="文件类型" ename="fileType"/>
+  <refEnum id="c2562732-8626-426e-aa03-156a81f6a28a" name="签章类型" ename="stamptype"/>
+  <refEnum id="5d479188-977d-45d2-a6cc-5c6123a9d3c6" name="凭证类型" ename="billtype"/>
+  <refEnum id="e52833f5-5422-4d26-a86e-cd7e055ed1c0" name="状态处理码" ename="stateProCode"/>
+  <refEnum id="faa6f709-04a4-4e16-951a-b81569f62acb" name="预算种类" ename="bdgKind"/>
+  <refEnum id="ee783a69-08d5-4eba-a8ac-17ddf49ca794" name="预算级次" ename="bdglevel"/>
+  <refEnum id="284abc56-86ca-4763-bf39-94c2b2d300a6" name="处理码" ename="retCode"/>
+  <refEnum id="b9f3aa23-2b67-4086-821d-2a3b4b9c3e92" name="业务类型" ename="operationType"/>
+  <refEnum id="76752ce1-ccfd-47f9-b055-3fc2e5c45762" name="报文类型" ename="messageType"/>
+  <refEnum id="df715eda-8d3a-4871-9b8e-bd8494c02ba2" name="科目种类" ename="subjectClass"/>
+  <refEnum id="b02bac21-1a22-4704-b4af-56d5542e9de8" name="科目分类" ename="classFlag"/>
+  <refEnum id="4a2a1b30-1705-4183-8c27-9848583f3f26" name="预算属性" ename="budgetType"/>
+  <refEnum id="aee6ea4c-1e24-4167-88ca-28b74274d1ea" name="科目类型" ename="subjectType"/>
+  <refEnum id="c826ddbf-b705-4220-b4a5-4b33d8850769" name="录入标志" ename="writeFlag"/>
+  <refEnum id="9f12ef04-1702-463b-a0b8-6af4ac3f9e95" name="科目属性" ename="subjectAttr"/>
+  <refEnum id="ecf0ef12-269d-481d-8deb-fb5ebc3cb903" name="调拨标志" ename="moveFlag"/>
+  <refEnum id="8425b24a-f674-46f4-b242-d035295b3b64" name="退税类别" ename="sdrawbacktype"/>
+  <refEnum id="087554ad-fd37-41a4-8813-75127eeced90" name="收支标志" ename="sinoutflag"/>
+  <refEnum id="bccc07b4-ef39-4fa0-b98f-c10b01ec4c44" name="登记代码" ename="sregcode"/>
+  <refEnum id="e22b23d3-9297-46d6-8f8a-704281a44f5e" name="导入类别" ename="importtype"/>
+  <refEnum id="c4a7fc97-1516-46fc-93d0-d84a56012a0d" name="辖属标志" ename="sbelongflag"/>
+  <refEnum id="ddec9b41-360b-4273-8fec-f465f64bc3d7" name="国库主体代码" ename="strecodemsg"/>
+  <refEnum id="6ad16cab-7239-4119-8be6-cbeb547846cf" name="征收机关性质" ename="staxprop"/>
+  <refEnum id="bbdea100-83a4-4681-8ce9-94d18094c00d" name="报表种类" ename="sbillkind"/>
+  <refEnum id="4338e7c6-ce99-4ad0-b91a-ee0c2ce668fd" name="企业注册类型" ename="scorptype"/>
+  <refEnum id="a431955e-840b-4016-9a7a-3145c466ebe1" name="税款类型" ename="ctaxtype"/>
+  <refEnum id="525157a1-fd49-4220-b511-a22fb5ddd627" name="凭证来源" ename="svouchannel"/>
+  <refEnum id="4cae6a32-36b0-428c-8e26-22cea721715d" name="导出凭证类型" ename="sexpvoutype"/>
+  <refEnum id="f4e13617-a917-4495-91ce-938968d2eece" name="报文来源" ename="smsgsender"/>
+  <refEnum id="f3493a22-44f5-4cf5-ba9b-20c4ae9b1878" name="支出凭证类型" ename="spayoutvoutype"/>
+  <refEnum id="583df486-4a1f-4ef7-8383-8e233be9ceeb" name="交易状态" ename="tradState"/>
+  <refEnum id="42c32f92-43e0-4e63-8fd9-2f94c4ac6e1a" name="是否款合计" ename="ifSumKuan"/>
+  <refEnum id="2a6c1989-f84c-4ae4-92d5-3c2a34f1b415" name="核对结果" ename="checkResult"/>
+  <refEnum id="89c2cf78-6be1-423b-b152-996e4cbd8051" name="交易状态(业务)" ename="tradStateForBus"/>
+  <refEnum id="c631186c-332e-4f93-a7a2-eb509f8a1a61" name="查询类型" ename="searchType"/>
+  <refEnum id="4d06f918-15af-4185-9161-962238159c66" name="业务凭证类型" ename="operType"/>
+  <refEnum id="2b746a39-0007-4033-992a-2944d3b51412" name="机构类型" ename="sOrgType"/>
+  <refEnum id="14b706d0-e2e3-425d-845a-15f83adf8803" name="打印付款凭证标志" ename="printvousign"/>
+  <refEnum id="cb261dad-d38b-48d4-af05-1c736619fb3f" name="清算渠道" ename="creckontype"/>
+  <refEnum id="9d48abf8-2f72-488c-b6cf-adf965abd930" name="经收类别" ename="handletype"/>
+  <refEnum id="4d35a42b-9325-46e9-990c-be4d850bdeb2" name="是否包含下级国库" ename="containSubTre"/>
+  <refEnum id="9e538a99-d585-4a9b-8df8-60bedac81a50" name="电子税票导出格式" ename="eleExpType"/>
+  <refEnum id="193d6317-7c7f-4c72-9a04-2c152105dcbf" name="中心密钥设置模式" ename="CenterKeyMode" describe="中心密钥设置模式"/>
+  <refEnum id="aa9f1c56-ad40-47b8-86bf-88399cacd97d" name="核算主体内密钥设置模式" ename="BookKeyMode" describe="核算主体内密钥设置模式"/>
+  <refEnum id="53c43e20-f5d4-4a79-a956-564164d86b82" name="销号状态" ename="confirmStatus"/>
+  <refEnum id="b29578c1-fbf3-42b4-9e96-59f15401ec99" name="集中支付业务类型" ename="DirectGrantBiztype"/>
+  <refEnum id="ae08c58a-4e90-42bb-b2b7-378ade4989d0" name="报表范围" ename="reportArea"/>
+  <refEnum id="ea355dfa-12ba-4d7d-a57f-260e40e690e5" name="监控域" ename="sysMoniterArea"/>
+  <refEnum id="f9c3751d-38f4-4289-a798-1ae9721c4300" name="分隔符" ename="ColSeparator"/>
+  <refEnum id="0c4fde9a-bd2b-4496-9b31-aabb64f50e5e" name="收入是否汇总" ename="isCollect"/>
+  <refEnum id="ab5caf1c-cfcc-4655-9e86-b1441958152b" name="财政机构代码" ename="TsConvertfinorg"/>
+  <refEnum id="d100127a-bfaa-4bca-be04-61a0be3a9816" name="通用是否（0 否 1是）" ename="commonyesno"/>
+  <refEnum id="07cb8ea0-bbd5-4e7d-95f0-d37a061df757" name="密钥机构代码" ename="tskeyorg"/>
+  <refEnum id="ee1e22a8-1ae8-41f5-a7be-baf8ef16c2df" name="密钥机构状态" ename="KeyOrgStatus"/>
+  <refEnum id="4c3d0fe8-c136-453c-9239-fb15bd53ce4d" name="密钥机构名称" ename="tskeyorgname"/>
+  <refEnum id="44a60b20-5195-430d-8426-edbf7c402f53" name="支付报文编号" ename="PayMsgNO"/>
+  <refEnum id="729a0b9d-f9e2-4a8e-a90e-1ead8f249a3f" name="代理银行下拉框" ename="GenBankSel"/>
+  <refEnum id="06501fc6-35d6-4b6b-83c6-fa1de4a204d4" name="出票单位" ename="BillOrgCode"/>
+  <refEnum id="4fb315f6-1e0f-40f9-b00a-f12bdbd6062f" name="用户是否登录" ename="userloginstatus"/>
+  <refEnum id="5afea23d-c4de-4564-88a3-2a1e4d5f74bb" name="业务类型描述" ename="biztypedes"/>
+  <refEnum id="0113cdaf-5245-4062-a807-7a9c339fec0b" name="税票交易状态" ename="taxTradState"/>
+  <refEnum id="5a79b301-c7af-444c-b104-36f73a669566" name="支出报表种类" ename="payOutBillKind"/>
+  <refEnum id="5be6c469-73cd-41c1-9ca5-196b90f31cf3" name="集中支付种类" ename="ConpayBillKind"/>
+  <refEnum id="8f44cc30-3b2a-4be4-b2b4-831570d20974" name="额度种类" ename="ConpayPlanKind"/>
+  <refEnum id="d262c804-efc2-467e-b95a-9f2856a586f3" name="用户类型列表翻译" ename="sUseTypeList"/>
+  <refEnum id="885c9c45-d96e-45c4-b4b2-999539f84772" name="集中支付方式0125" ename="commonApplyType"/>
+  <refEnum id="7d202609-5411-4d85-8ddb-78b5900f369a" name="日志查询处理码" ename="logRetLog"/>
+  <refEnum id="14bd5859-08f9-466f-88d1-06ea2162f0cc" name="电子税票查询处理状态" ename="tvinfilestate"/>
+  <refEnum id="bfc3904f-f9a9-4a4c-8f40-11cbdf93bfa6" name="导出范围" ename="exportarea"/>
+  <refEnum id="62d4d215-0edc-433d-9864-fde1ba8af27f" name="凭证库业务类型" ename="sVoucherType"/>
+  <refEnum id="1775bce2-cbc8-4221-88db-815b83f308e0" name="凭证销号状态" ename="sVoucherStatus"/>
+  <refEnum id="41d39d21-50ff-4926-9aef-58708c840582" name="凭证自动处理参数" ename="voucherAuto" describe="是否自动读取 0 自动 1 本地';是否自动提交 0 自动 1 本地';是否自动签章 0 自动 1 本地 ';(签章成功)是否自动发回执 0 自动 1 本地;'失败）是否自动发回执 0 自动 1 本地'"/>
+  <refEnum id="66948eb7-3674-4278-aa53-41c0b442e3ba" name="是否具有签章权限" ename="ispermission"/>
+  <refEnum id="bbcab134-bcce-4a3f-ad46-2acccfb7b3f7" name="补录复核状态" ename="scheckstatus"/>
+  <refEnum id="c6249526-371c-44ba-af6c-156b355d6a48" name="凭证报表业务类型" ename="voucherReport"/>
+  <refEnum id="25991a0f-767a-495d-873a-9c6dae26c561" name="凭证报表销号状态" ename="VoucherReportStatus"/>
+  <refEnum id="3e431b8d-c784-4699-99a0-d683d38a9f29" name="报表类型" ename="sbilltype"/>
+  <refEnum id="8502f57a-8b74-4a2a-b358-90f359c6a43b" name="辖属标志(上海)" ename="belongflag"/>
+  <refEnum id="3d280685-50b6-49c3-b6a7-57640479b49d" name="预算级次(上海)" ename="budgetlevel"/>
+  <refEnum id="1224c7ae-7b59-409f-98fb-6286e8df9295" name="调拨标志(上海)" ename="goflag"/>
+  <refEnum id="62de973a-5b57-469c-84b1-5c1713ed3cc4" name="具体科目属性" ename="budgetattribute"/>
+  <refEnum id="4becbd9c-60df-4c15-aec5-13e3c4016b00" name="金额单位" ename="moneyunit"/>
+  <refEnum id="35ffaf98-6009-44f0-88f8-cb5c29276882" name="凭证与财政定期对账类型" ename="voucherFinanceRegularCheckAccountSvtcode"/>
+  <refEnum id="350c233c-d0e0-4e84-9ee1-886a094edefc" name="凭证对账状态" ename="voucherCheckAccountStatus"/>
+  <refEnum id="aebaf658-983e-4af2-afaf-91d268da64ce" name="旬报类型" ename="tenrpttype"/>
+  <refEnum id="3b938a02-d175-4825-bc0a-7821c24f3dd5" name="季报类型" ename="quarterrpttype"/>
+  <refEnum id="34f13557-7300-4344-8a62-df5aa2ee9fb3" name="半年报类型" ename="halfyearrpttype"/>
+  <refEnum id="5b9ab7a7-4364-41de-b589-5178f42e423f" name="对账类型" ename="dztype"/>
+  <refEnum id="e3accac5-0981-4461-93c7-eacf180ee5ea" name="对账凭证类型" ename="compareVoucherType"/>
+  <refEnum id="76362398-5b06-448c-8582-69ce3b8d4ccd" name="财政对账类型" ename="compareVoucherTypeMof"/>
+  <refEnum id="570aba83-f544-40ff-9a72-87ce425b4294" name="代理行对账类型" ename="compareVoucherTypeBank"/>
+  <refEnum id="2f7e7e1e-5078-40d1-ba47-38848a7dfc1d" name="凭证与代理银行定期对账类型" ename="voucherBankRegularCheckAccountSvtcode"/>
+  <refEnum id="7765b7c1-7622-4537-b00c-bdb4591fbf7f" name="查询年度" ename="queryyear"/>
+  <refEnum id="fe3dd2bc-7527-4d01-856e-a0751c878760" name="支付方式" ename="spaytypecode" describe="支付方式 spaytypecode = 0127"/>
+  <refEnum id="7799c091-bd40-43f5-83a5-c744bb7f4582" name="无纸化全业务类型" ename="allVoucherType"/>
+  <refEnum id="7d47c0e6-52d4-49d6-9517-1bd76f00d79a" name="凭证对账查询状态" ename="VoucherCheckAccountQueryStatus"/>
+  <refEnum id="ddd926a6-43bd-46f1-b5fd-ccf414b243ca" name="凭证与财政对账结果查询类型" ename="VoucherCheckFinanceAccountQuery"/>
+  <refEnum id="39c976d2-272a-4583-893c-393bcd761a98" name="凭证对账结果查询类型" ename="voucherCheckAccount"/>
+  <refEnum id="66aad533-eaf0-4a6a-9736-89f2fc84b870" name="业务类型TBS专用" ename="SBIZTYPETBS" describe="用于导出TBS功能定义的业务类型"/>
+  <refEnum id="5d7c7735-595f-4216-9518-a286a8ddaa80" name="账户性质" ename="ACCTPROP" describe="账户性质 ACCTPROP  = 0116"/>
+  <refEnum id="fb4835fc-4b03-4c23-867e-a401b2cfe41b" name="退回标志" ename="backflag" describe="退回标志 = 0117"/>
+  <refEnum id="a096bd3c-4479-40ba-9a50-be6a6ee96a39" name="支付系统行号状态" ename="bankcodestatus"/>
+  <refEnum id="1ac0fe27-8160-434b-a25c-7b137220c549" name="实拨资金退款标志" ename="payoutbackflag"/>
+  <refEnum id="ef9eca62-4968-4a20-be8e-0870a705c18b" name="凭证库业务类型(陕西)" ename="sVoucherTypeSX"/>
+  <refEnum id="8a145fd6-772d-4a1a-a54f-cf950e56eb5e" name="山东一本通ftp批量读取枚举" ename="ftpfilestate"/>
+  <refEnum id="abd73f35-bcf9-4da8-9cb7-a04a889c232a" name="核对状态" ename="checkStatus"/>
+  <refEnum id="c08ef4ea-b8c9-41b4-ac61-dc33d6c14284" name="签章用户" ename="stampuser"/>
+  <refEnum id="f91a71e5-02fc-4827-a9ae-d8c8797e1578" name="库款账户" ename="bookAccount"/>
+  <refEnum id="6d859cda-43ed-48b2-992f-b3192e58bc67" name="报表类型（日月年）" ename="reportType"/>
+  <refEnum id="c2db24f8-cae9-4a3b-837e-4361f2601c9e" name="生成报表选择征收机关" ename="reporttaxorgcode"/>
+  <refEnum id="95b91075-2835-4152-a313-c2919eabb2f8" name="无纸化标志" ename="noPaperFlag"/>
+  <refEnum id="0a6715b4-7c05-489d-ba30-4508cc53944d" name="查询方式" ename="queryStype"/>
+  <refEnum id="ec34b16f-4ff2-466c-8cea-dce3f0e34b31" name="资金报文类型" ename="fundtype"/>
+  <refEnum id="bdf8ff81-0e4e-45e3-a133-5c151b501053" name="TCBS收入类报表种类" ename="reportStyle"/>
+  <refEnum id="35e693f2-e6dc-4b2d-8430-99bff7d09b33" name="凭证业务对账状态" ename="voucherRegularStatus"/>
+  <refEnum id="3d78a1e2-6197-4ec6-82bf-c61d1faf0655" name="凭证个性化对账单(广西)" ename="VoucherIndividualStatement"/>
+  <refEnum id="301cf790-fe2b-4c67-b152-904ab06762b1" name="季度" ename="quarter"/>
+  <refEnum id="daa949d5-d1f5-42b6-aa35-d500a0447341" name="TBS业务类型(北京区县)" ename="TBSBizTypeForBJ" describe="这是跟TBS保持一致的业务类型，如划款申请分直接和授权"/>
+  <refEnum id="2b43f924-6a24-4afd-b212-7ae0ad457cf8" name="全量标志" ename="allflag" describe="单位清册&#xD;&#xA;单位清册"/>
+  <refEnum id="0b499639-fe66-4ea2-ba37-4ee39780ae82" name="报表业务对账读取回单状态" ename="reportBussReadReturn"/>
+  <refEnum id="67104e10-ff96-41f7-91f1-fdda407361df" name="业务类型编码" ename="BusinessTypeCode"/>
+  <refEnum id="61b75bbd-3b83-4e2d-b161-b7eb66d0d1b0" name="退款类型" ename="Refundtype"/>
+  <refEnum id="1d3813c5-aaca-4796-b69d-a38585617601" name="支付方式(上海)" ename="paymode"/>
+  <refEnum id="07289937-3868-4f8a-be6c-ea2694c1f065" name="业务类型标识（上海）" ename="biztypemapper" describe="0直接支付91实拨资金退款"/>
+  <refEnum id="fc540909-9bad-4fd6-933b-7386b7a94e74" name="统计报表栏式" ename="billMode"/>
+  <refEnum id="0e67b819-2d7f-4497-99d8-ab89eba9deac" name="报表自动参数征收机关代码" ename="BillAutoTax"/>
+  <refEnum id="dd351ab3-eda6-402e-966d-53385c48acc8" name="代理库对账凭证类型" ename="checkPayoutVouType"/>
+  <refEnum id="2efa9863-3a6c-489e-b1c4-4771e1af4567" name="代理库资金清算凭证类型" ename="fundClearVouType"/>
+  <refEnum id="ad089046-f99a-4593-94e6-596ba314f7a1" name="代理库对账结果" ename="tbsCheckResult"/>
+  <refEnum id="d5f6e3bd-bd63-4dd5-b005-97c81c3a87fc" name="收款方标识" ename="recvFlag"/>
+  <refEnum id="01963d38-e224-4d82-9b6b-33044639ecb6" name="清算状态" ename="clearStatus"/>
+</model:EnumNode>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d60eb1bc-8abf-4288-8456-df0c2a26dfc3" isgenerated="false" name="批量拨付（库区移民发放）" ename="MassPayIntoForSDNXS" shared="false"/>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="4eef52c4-09fc-4a2c-8583-37d7081ab624" name="业务凭证盖章位置服务组件" ename="TsOperationplace">
+  <jproperties id="547eaf49-23a7-4204-ae4a-3ac2027b843b" key="GeneratedTime" value="1330485996281"/>
+  <refModule href="JModule_850607cd-76cd-4bdf-84d1-3cd999bca234.model#850607cd-76cd-4bdf-84d1-3cd999bca234"/>
+  <methods id="256ac8f9-efea-4d1f-bf74-bd9ce59aad0e" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="业务凭证盖章位置">
+    <methodParams id="3ddb290b-f185-44c9-8292-23f3f2a6dead" name="业务凭证盖章位置" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="287539e4-63c1-45b0-886a-82ed99c8612e" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="796c20ff-764b-42ba-9d1f-880fe044a895" name="业务凭证盖章位置" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="287539e4-63c1-45b0-886a-82ed99c8612e" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bcf70bdb-8c96-46ec-bfd2-78e4b54d86e3" name="业务凭证盖章位置" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

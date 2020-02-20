@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="fbe699eb-fd90-476d-97e5-51086d49de6a" name="用户权限维护服务组件" ename="TsUsersfunc">
+  <jproperties id="199407a2-3543-45ab-abe9-c61a5e31153c" key="GeneratedTime" value="1383272494177"/>
+  <refModule href="JModule_315e8034-3ab2-4103-acb7-1d2d2f3ba401.model#315e8034-3ab2-4103-acb7-1d2d2f3ba401"/>
+  <methods id="b25949e7-03fd-4140-a778-826d8c89c62c" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void" remark="用户权限维护">
+    <methodParams id="b895b65e-3bec-4776-9d84-62f428c958f0" name="用户权限维护" ename="listInfo" type="java.util.List" codecomment="信息"/>
+  </methods>
+  <methods id="60348c89-f6e4-40c2-8db9-19c5640cbdef" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="c73a8283-08ec-4fc6-b3ff-c055a63fc003" name="用户权限维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="60348c89-f6e4-40c2-8db9-19c5640cbdef" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="dbe1701a-9869-49ee-b28a-390f5c44ca42" name="用户权限维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="28ff25d6-16f9-4158-945e-3ef2be055db9" ename="queryOrg" name="查询机构代码" returntype="java.util.List">
+    <methodParams id="80d06ac5-d251-4d0e-a53c-f31dce6f8213" name="用户权限维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="24c352f7-a7e0-43c7-9910-5720dc955825" ename="queryUserFunc" name="查询用户功能" returntype="java.util.List">
+    <methodParams id="f93492ed-83e0-4fe3-aecf-f808e2049662" name="用户dto" ename="dtoInfo" type="com.cfcc.itfe.persistence.dto.TsUsersDto" codecomment="信息"/>
+  </methods>
+  <methods id="88f2584c-f6fa-48c4-a290-7c81bc7646aa" ename="sysFuncList" name="查询系统功能list" returntype="java.util.List">
+    <methodParams id="1b60af15-4cbc-4892-8289-daf73ddd264d" name="用户Dto" ename="dtoInfo" codecomment="信息"/>
+  </methods>
+  <methods id="93b8a380-5cd6-4ca3-830b-f0110d5da354" ename="initSysFunc" name="初始化系统权限" returntype="java.util.List">
+    <methodParams id="5dbf8752-d866-425e-b032-359024b50dba" name="参数" ename="dto" type="com.cfcc.itfe.persistence.dto.TsSysfuncDto"/>
+    <methodExceptions id="dfdf676c-4581-4363-aff9-1af1ce171d85" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

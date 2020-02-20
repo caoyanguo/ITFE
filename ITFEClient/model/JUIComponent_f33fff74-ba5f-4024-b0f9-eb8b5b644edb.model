@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f33fff74-ba5f-4024-b0f9-eb8b5b644edb" name="电子税票业务量统计" ename="tmpfilestatistics">
+  <jproperties id="67d53741-9adb-46c0-b5ea-1155a8b77664" key="GeneratedTime" value="1337928603597"/>
+  <refModule href="JModule_7ac2fca6-b87b-4622-bc02-37fceffbb150.model#7ac2fca6-b87b-4622-bc02-37fceffbb150"/>
+  <model id="fde53a52-bb5c-4035-ab5e-1f6a5e93e8c1" name="JModelImpl-fde53a52-bb5c-4035-ab5e-1f6a5e93e8c1">
+    <attributes id="0247bed4-0b5e-4369-886b-652008bfd418" name="starttime" type="java.lang.String"/>
+    <attributes id="7a68b662-5239-4f70-95da-d216f4566934" name="endtime" type="java.lang.String"/>
+    <attributes id="0e7ced10-fd76-42c5-9189-c43e4c9047f2" name="reportpath" type="java.lang.String"/>
+    <attributes id="541dd715-aaf6-4101-8384-d69755b555dc" name="reportlist" type="java.util.List"/>
+    <attributes id="e217df17-4cae-48f1-bb25-2043da2ab7f6" name="reportmap" type="java.util.Map"/>
+    <attributes id="4f241ab1-a469-4a9d-b75f-f892b10ac088" name="orgcode" type="java.lang.String"/>
+    <attributes id="b6e540fd-30a7-4db4-9061-1f18b23a7156" name="trecode" type="java.lang.String"/>
+    <attributes id="ddcf03bb-0a7a-473e-b58d-2abb6b09ba96" name="trecodelist" type="java.util.List"/>
+    <directions id="01bde55a-c373-4d7a-bf64-be69f418940a" name="信息查询" ename="searchDto"/>
+    <directions id="c335d3f3-933a-4ab1-a453-02d5e0aba816" viewers="139547c9-cdad-41fb-91c5-96d8de08d500" name="打印信息" ename="toReport"/>
+    <directions id="af7be33f-2dba-4151-a791-e5a0956f8886" viewers="c62550b2-c5a5-4534-9b40-d124616a2b04" name="返回查询界面" ename="toback"/>
+  </model>
+  <services href="JServiceComponet_06540144-650c-4f6f-a667-133e433e58e6.model#06540144-650c-4f6f-a667-133e433e58e6"/>
+  <contentAreas id="87886f61-c7c9-4155-ade7-4b4398c637ba">
+    <contentareanode id="efcb3474-ecd4-4eef-9f08-2f3e186a816d" name="查询信息" grouptitle="查询信息">
+      <widgetRefs xsi:type="model:Text" id="fe2076a8-27e6-4e67-acf6-d5fce7195911" name="核算主体代码" binding="orgcode" caption="核算主体代码" enable="false" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="58eb8a9c-bd2e-413e-ad14-674adea2ce0c" name="国库名称" binding="trecode" caption="国库名称" required="false" display="strename" underly="strecode" modelsource="trecodelist"/>
+      <widgetRefs xsi:type="model:Text" id="bfbefd13-3caf-4793-bbef-8af2b5dcca2d" name="起始时间" binding="starttime" caption="起始时间" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="808ea348-c07a-4c01-9db7-9aed777f6260" name="结束时间" binding="endtime" caption="结束时间" required="true"/>
+    </contentareanode>
+    <contentareanode id="0234cc03-e031-4699-bd19-b4cd542800e6" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="6aa41082-3fbe-4738-9d46-fe82e65c2968" name="TableImpl-6aa41082-3fbe-4738-9d46-fe82e65c2968" binding="reportlist">
+        <columnlist id="5e8b6630-be58-4137-9152-0a184ad63e59" name="地区编码" binding="strecode" caption="地区编码"/>
+        <columnlist id="a11cb5cf-270c-4bf1-a5d2-5cbc0b960436" name="地区名称" binding="strecodename" caption="地区名称"/>
+        <columnlist id="6140c898-7e9d-4d2d-9d2c-5dc2340fed10" name="银行代码" binding="bankno" caption="银行代码"/>
+        <columnlist id="4f75b857-d902-4193-b832-62106263c3bf" name="银行名称" binding="bankname" caption="银行名称"/>
+        <columnlist id="d2792b3c-f682-499a-8cf0-6f92f00c6d0a" name="业务类型" binding="biztype" caption="业务类型"/>
+        <columnlist id="21d4f131-641c-4544-87f3-60ad80fc8531" name="国地税" binding="placename" caption="国地税"/>
+        <columnlist id="4e5f51a8-b4e3-489d-8111-6c29915853af" name="笔数" binding="sunnum" caption="笔数"/>
+        <columnlist id="a6629fae-ec3c-421b-a530-6cbd3aef148e" name="金额" binding="sumamt" caption="金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="72552fcb-889b-495e-9b7a-dbeb986a8069" name="打印结果">
+      <jreportref id="aa47c8e9-3698-49de-84a7-198a5a1cac13" name="打印结果" reportpath="reportpath" binding="reportlist" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="50c8d67f-5055-4c06-bf96-c4782e8f9ddd">
+    <pages id="8e3250ab-f908-4976-8f65-ba36a1df7c42" name="电子税票统计信息">
+      <views id="c62550b2-c5a5-4534-9b40-d124616a2b04" name="查询信息" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="efcb3474-ecd4-4eef-9f08-2f3e186a816d 0234cc03-e031-4699-bd19-b4cd542800e6">
+        <buttonArea id="35d61f80-d6af-4bf0-8b6d-f1574c388f5a" name="JButtonAreaImpl-35d61f80-d6af-4bf0-8b6d-f1574c388f5a">
+          <buttons id="2e9536d6-f98b-4037-97af-516ad3a3828d" name="查询" caption="查询" checkrequired="true" direction="01bde55a-c373-4d7a-bf64-be69f418940a"/>
+          <buttons id="12215318-c34e-4f23-aa5f-098b80f1639c" name="打印" caption="打印" direction="c335d3f3-933a-4ab1-a453-02d5e0aba816"/>
+        </buttonArea>
+      </views>
+      <views id="139547c9-cdad-41fb-91c5-96d8de08d500" name="打印结果" contentArea="72552fcb-889b-495e-9b7a-dbeb986a8069">
+        <buttonArea id="b3f08a3d-c971-4c33-adbb-fc5e11915a70" name="JButtonAreaImpl-b3f08a3d-c971-4c33-adbb-fc5e11915a70">
+          <buttons id="3bdb91da-7171-4c60-b2df-b5c3e6bca3ff" name="返回" caption="返回" direction="af7be33f-2dba-4151-a791-e5a0956f8886"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

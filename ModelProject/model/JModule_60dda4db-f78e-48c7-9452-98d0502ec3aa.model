@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="60dda4db-f78e-48c7-9452-98d0502ec3aa" name="财政数据统计下载" ename="FinDataStatDown"/>

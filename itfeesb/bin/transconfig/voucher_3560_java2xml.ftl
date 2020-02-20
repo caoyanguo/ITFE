@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK"?>
+<Voucher>
+	<Id>${Voucher.Id}</Id>
+	<AdmDivCode>${Voucher.AdmDivCode}</AdmDivCode> 
+	<StYear>${Voucher.StYear}</StYear>
+	<VtCode>${Voucher.VtCode}</VtCode> 
+	<VouDate>${Voucher.VouDate}</VouDate>
+	<VoucherNo>${Voucher.VoucherNo}</VoucherNo> 
+	<BudgetType>${Voucher.BudgetType}</BudgetType>
+	<ReportDate>${Voucher.ReportDate}</ReportDate>
+	<TreCode>${Voucher.TreCode}</TreCode>
+	<TreName>${Voucher.TreName}</TreName>
+	<FinOrgCode>${Voucher.FinOrgCode}</FinOrgCode>
+	<SumTotalMoney>${Voucher.SumTotalMoney}</SumTotalMoney>
+	<SumEtaMoney>${Voucher.SumEtaMoney}</SumEtaMoney>
+	<SumTaxMoney>${Voucher.SumTaxMoney}</SumTaxMoney>
+	<Hold1>${Voucher.Hold1}</Hold1>
+	<Hold2>${Voucher.Hold2}</Hold2>
+	<#list Voucher.DetailList as var1>
+	<DetailList>
+	  <#list var1.Detail as var>
+	  <Detail>
+		  <AdmDivCode>${var.AdmDivCode}</AdmDivCode>
+		  <StYear>${var.StYear}</StYear>
+		  <TaxOrgCode>${var.TaxOrgCode}</TaxOrgCode>
+		  <TaxOrgName>${var.TaxOrgName}</TaxOrgName>
+		  <BankCode>${var.BankCode}</BankCode>
+	  	  <TreName>${var.TreName}</TreName>
+	  	  <BudgetType>${var.BudgetType}</BudgetType>
+	  	  <TotalAmt>${var.TotalAmt}</TotalAmt>
+	  	  <EtaAmt>${var.EtaAmt}</EtaAmt>
+	  	  <TaxAmt>${var.TaxAmt}</TaxAmt>
+		  <Hold1>${var.Hold1}</Hold1>
+	  	  <Hold2>${var.Hold2}</Hold2>
+		  <Hold3>${var.Hold3}</Hold3>
+		  <Hold4>${var.Hold4}</Hold4>		  
+	 </Detail>
+	</#list> 
+	</DetailList>
+	</#list> 
+</Voucher>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="InsertAuditIndex"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				#foreach($t in $InsSelTableList)
+				<ref local="index_${t.getTbsname()}" />
+				#end
+			</list>
+		</property>
+	</bean>
+
+
+	#foreach($t in $InsSelTableList)
+	<bean id="index_${t.getTbsname()}" class="com.cfcc.tas.facade.data.SQLMapping">
+		<property name="operSql"
+			value="insert into tn_auditresultindex(S_BOOKORGCODE,S_TRECODE,S_TRASRLNO,d_Acct,S_AUDITEDTABCODE,S_TASTABCODE,S_AUDITSUBTABCODE,S_TASSUBTABCODE,S_OFAUDITTYPE,S_OFBIZKIND,C_AUDITSTATE,S_AUDITRESULT,C_AUDITKIND,ts_SysUpdate,I_GRPSEQNO,F_AMT,S_GRPNO) select b.S_BOOKORGCODE,b.gkdm,b.s_TraSrlNo,(select D_STDDATAACCT from td_bookorg where S_BOOKORGCODE=? fetch first 1 rows only ),'${t.getTbsname()}','${t.getTasname()}','${t.getTbssubname()}','${t.getTassubname()}',b.S_BIZTYPE,'00','1','0','1',current timestamp,b.zxh,b.F_AMT,a.s_grpno from tbs_tv_group_head a,${t.getTbsname()} b where S_BOOKORGCODE=? and a.S_BOOKORGCODE=b.S_BOOKORGCODE and a.I_GRPSEQNO=b.I_GRPSEQNO" />
+ 		<property name="operType" value="4" />
+	</bean>
+	#end
+</beans>

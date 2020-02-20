@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7e693f1b-5d98-4fdb-b462-79ed60581017" name="用户与电子签章对应表" ename="TsUserstamp" shared="true">
+  <jproperties id="feb64761-abeb-490f-9c76-1d289fc4549f" key="GeneratedTime" value="1330914326343"/>
+  <jproperties id="feb64761-abeb-490f-9c76-1d289fc4549f" key="GeneratedTime" value="1330914326343"/>
+  <refModule href="JModule_87beff55-0742-4d97-939f-bb7e0d64fe12.model#87beff55-0742-4d97-939f-bb7e0d64fe12"/>
+  <model id="f0c70c64-34dc-4462-b4e8-7cac8974eaf2" name="JModelImpl-f0c70c64-34dc-4462-b4e8-7cac8974eaf2">
+    <attributes id="a7efb37b-5f86-4326-81aa-564143cb8bd2" name="dto" type="com.cfcc.itfe.persistence.dto.TsUserstampDto"/>
+    <attributes id="204a1dd2-ce63-4015-b258-d1711f025152" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="025bce4f-410a-4856-b7e5-9e015627a991" viewers="cce112ef-2d1b-4278-b1f6-938f8d005c2e" name="跳转录入界面" ename="goInput"/>
+    <directions id="cde2a664-7a61-4885-a559-2096061f825b" name="录入保存" ename="inputSave"/>
+    <directions id="2061e0e8-501c-4296-b64f-aeae0fc8d7f1" viewers="805f154b-5d5d-4ec3-b1dd-87d46dbe9460" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="c42ba390-ae66-4db1-b49a-1341ce74e1c3" name="单选" ename="singleSelect"/>
+    <directions id="61de585c-9094-48f2-912f-1d0515230397" name="删除" ename="delete"/>
+    <directions id="d929b917-e8aa-4225-9ad3-08235e9b78d1" viewers="4cadd3df-7848-4cb5-8c7e-788f9ba195f7" name="到修改界面" ename="goModify"/>
+    <directions id="726052a5-9387-42dc-94f6-7aae54285a98" name="修改保存" ename="modifySave"/>
+    <directions id="c0d3661e-1656-42aa-b9fa-e2e53e3aa856" name="获取Key中的电子印鉴" ename="getEsealId"/>
+  </model>
+  <services href="JServiceComponet_66601663-ef8a-47b5-9caf-78d06497dfa0.model#66601663-ef8a-47b5-9caf-78d06497dfa0"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="24442001-bb11-45ad-b62f-8ac68a4008f2">
+    <contentareanode id="0f34db1c-9512-4fc2-825f-28c205bc9a41" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="408f6519-b56a-4a96-b55a-d7de7194ba2e" name="sorgcode" binding="sorgcode" caption="所属机构" display="sorgname" underly="sorgcode" modelsource="list1" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="a9827932-4b97-496d-a756-8310c606672d" name="susercode" binding="susercode" caption="操作员名称" display="susername" underly="susercode" modelsource="list3" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="491b9931-5f68-49ee-8948-5fa6aa52b7cc" name="sstamptypecode" binding="sstamptypecode" caption="签章类型" display="sstamptypename" underly="sstamptypecode" modelsource="list2" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="fc308436-4243-4e18-bd19-74fb859e41cd" name="sisvalid" binding="sisvalid" caption="是否有效" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d8b30d8a-42bd-4f93-8aff-e8233b5009cc"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a82f34d0-52ae-4536-a61e-66d7a373ccb9" name="sstampid" binding="dto.sstampid" caption="签章ID" editable="false">
+        <labelStyle id="09f1278e-1b89-482f-b9d5-62127f21dd63" name="LabelStyleImpl-09f1278e-1b89-482f-b9d5-62127f21dd63" ename="LabelStyleImpld09f1278e-1b89-482f-b9d5-62127f21dd63"/>
+        <componentStyle id="e9e83a62-a097-48a7-b0e4-312e4ff96f2a" name="ComponentStyleImpl-e9e83a62-a097-48a7-b0e4-312e4ff96f2a" ename="ComponentStyleImple9e83a62-a097-48a7-b0e4-312e4ff96f2a"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="7f25a21a-6336-4037-b734-7d1b8dd0c9fe" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="11fca826-2334-479a-ad29-f930ceca5c5f" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="c42ba390-ae66-4db1-b49a-1341ce74e1c3">
+        <columnlist id="37d0b279-f173-424e-9cc4-0ffa85e5e5dc" name="sorgcode" binding="sorgcode" caption="所属机构"/>
+        <columnlist id="50d77106-f70b-4c63-b85c-22050428c4d9" name="susercode" binding="susercode" caption="操作员名称"/>
+        <columnlist id="cffa2439-a0a3-4ddb-b41f-495ef792333d" name="sstamptypecode" binding="sstamptypecode" caption="签章类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c2562732-8626-426e-aa03-156a81f6a28a"/>
+        </columnlist>
+        <columnlist id="a82f34d0-52ae-4536-a61e-66d7a373ccb9" name="sstampid" binding="sstampid" caption="签章ID"/>
+        <columnlist id="8c328e59-ce49-46b4-8cc9-29cfb7f6b746" name="sisvalid" binding="sisvalid" caption="是否有效">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d8b30d8a-42bd-4f93-8aff-e8233b5009cc"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2637e664-8c71-46d6-aed7-5575d24e35a3" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="f61650c8-964e-4eba-96c9-b88028dd449b" name="sorgcode" binding="sorgcode" caption="所属机构" display="sorgname" underly="sorgcode" modelsource="list1" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="7fadc8cb-520d-496a-837d-948e7d39bb07" name="susercode" binding="susercode" caption="操作员名称" display="susername" underly="susercode" modelsource="list3" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b646f93a-5dce-4c38-8e94-133392fe167d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="b54eeeb7-1cd7-4a12-806e-9ae8b57d27cf" name="sstamptypecode" binding="sstamptypecode" caption="签章类型" display="sstamptypename" underly="sstamptypecode" modelsource="list2" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="89421628-eddf-40f7-834b-9c6676f49ef8" name="sisvalid" binding="sisvalid" caption="是否有效" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d8b30d8a-42bd-4f93-8aff-e8233b5009cc"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e08051df-030e-424a-9799-063db16b8b70" name="sstampid" binding="dto.sstampid" caption="签章ID" editable="false">
+        <labelStyle id="9dd56655-38e4-4586-9f84-4489c031c3af" name="LabelStyleImpl-09f1278e-1b89-482f-b9d5-62127f21dd63" ename="LabelStyleImpld09f1278e-1b89-482f-b9d5-62127f21dd63"/>
+        <componentStyle id="2955572f-c407-48fa-aa1a-16073265f57e" name="ComponentStyleImpl-e9e83a62-a097-48a7-b0e4-312e4ff96f2a" ename="ComponentStyleImple9e83a62-a097-48a7-b0e4-312e4ff96f2a"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="7d8d685d-3554-4631-82f6-cdaa8ca94e54">
+    <pages id="83935556-e61f-406e-92cc-c02d4246efe8" name="维护用户与电子签章对应表">
+      <views id="805f154b-5d5d-4ec3-b1dd-87d46dbe9460" name="维护界面" isdefault="true" contentArea="7f25a21a-6336-4037-b734-7d1b8dd0c9fe">
+        <buttonArea id="10dadf4f-e268-4b83-b73f-a44ca4007cfe" name="JButtonAreaImpl-10dadf4f-e268-4b83-b73f-a44ca4007cfe">
+          <buttons id="e64fd0ca-f532-475d-9aa1-8c629f2f8a62" name="maintenanceInput" caption="录入" direction="025bce4f-410a-4856-b7e5-9e015627a991"/>
+          <buttons id="ed8c5666-b780-4357-9b56-df8f103d8030" name="maintenanceDel" caption="删除" direction="61de585c-9094-48f2-912f-1d0515230397"/>
+          <buttons id="e48196be-f305-42ed-9b19-35a098d317c5" name="maintenanceMod" caption="修改" direction="d929b917-e8aa-4225-9ad3-08235e9b78d1"/>
+        </buttonArea>
+      </views>
+      <views id="4cadd3df-7848-4cb5-8c7e-788f9ba195f7" name="修改界面" contentArea="2637e664-8c71-46d6-aed7-5575d24e35a3">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="b80b37e9-3c03-49b4-a99c-46674c04d97a" name="JButtonAreaImpl-b80b37e9-3c03-49b4-a99c-46674c04d97a">
+          <buttons id="7c1d9555-4227-4bfe-a085-278abe89137a" name="获取key" caption="获取key" direction="c0d3661e-1656-42aa-b9fa-e2e53e3aa856"/>
+          <buttons id="9c3e36d5-ed67-43e6-82dc-762d0b5af723" name="modifySave" caption="保存" checkrequired="true" direction="726052a5-9387-42dc-94f6-7aae54285a98"/>
+          <buttons id="ce36b8e6-44e2-483f-9ae3-8097557f3222" name="modifyBack" caption="返回" direction="2061e0e8-501c-4296-b64f-aeae0fc8d7f1"/>
+        </buttonArea>
+      </views>
+      <views id="cce112ef-2d1b-4278-b1f6-938f8d005c2e" name="录入界面" contentArea="0f34db1c-9512-4fc2-825f-28c205bc9a41">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="184c9816-0260-4bb2-856d-15137ffd305d" name="JButtonAreaImpl-184c9816-0260-4bb2-856d-15137ffd305d">
+          <buttons id="2f9a8492-944c-455a-b2f1-cb9fe7d15ebb" name="获取key" caption="获取key" direction="c0d3661e-1656-42aa-b9fa-e2e53e3aa856"/>
+          <buttons id="24a3d63a-ccda-4581-b166-edc7487f2b9e" name="保存" caption="保存" checkrequired="true" direction="cde2a664-7a61-4885-a559-2096061f825b"/>
+          <buttons id="ce36b8e6-44e2-483f-9ae3-8097557f3222" name="modifyBack" caption="返回" direction="2061e0e8-501c-4296-b64f-aeae0fc8d7f1"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

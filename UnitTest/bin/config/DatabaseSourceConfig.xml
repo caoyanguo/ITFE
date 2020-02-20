@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!--
+		=========================业务受理系统数据库相关配置 ===========================
+	-->
+	<!--========================= ODB   Begin=========================-->
+	<bean id="ormTemplate.DB.ODB" class="com.cfcc.jaf.persistence.jaform.JAFOrmTemplate">
+		<property name="dataSource" ref="JAFDataSource.DB.ODB" />
+		<property name="databaseType">
+			<value>DB2</value>
+		</property>
+		<property name="statistics">
+			<value>true</value>
+		</property>
+		<property name="maxRows" value="10000" />
+		<property name="exceedRowLimitStrategy" value="ignore" />
+	</bean>
+
+	<!-- SQLExecutor 相关配置  -->
+	<bean id="SQLExecutorFactory.DB.ODB" class="com.cfcc.jaf.persistence.jdbc.sql.SQLExecutorFactory">
+		<property name="dataSource" ref="JAFDataSource.DB.ODB" />
+		<property name="databaseType" value="db2" />
+		<property name="maxRows" value="10000" />
+		<property name="exceedRowLimitStrategy" value="ignore" />
+		<property name="statistics" value="true" />
+		<property name="resultSetPositionStrategy" value="1" />
+	</bean>
+
+	<bean id="JAFDataSource.DB.ODB" class="com.cfcc.jaf.persistence.jdbc.core.JAFDataSource">
+		<property name="containDataSource" ref="DataSource.DB.ODB" />
+		<property name="containerTransaction">
+			<value>false</value>
+		</property>
+	</bean>
+
+
+	<bean id="DataSource.DB.ODB" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.ibm.db2.jcc.DB2Driver" />
+		<property name="url" value="jdbc:db2://127.0.0.1:50001/wzhdb" />
+		<property name="username" value="db2admin" />
+		<property name="password" value="db2admin" />
+	</bean>
+
+
+	<bean id="Database.Facade.Db.TWCSDB" class="com.cfcc.twcs.facade.DatabaseFacade">
+		<property name="ormTemplate" ref="ormTemplate.DB.ODB" />
+		<property name="sqlExecutorFactory" ref="SQLExecutorFactory.DB.ODB" />
+	</bean>
+	<!--========================= ODB   end=========================-->
+
+	<bean id="TransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="DataSource.DB.ODB" />
+	</bean>
+
+
+	<bean id="Common.Facade.Db.ODB" class="com.cfcc.twcs.facade.CommonFacade">
+		<property name="numPage" value="30" />
+		<property name="dbName" value="ODB" />
+	</bean>
+
+
+
+
+	<bean id="NamingConvention" class="com.cfcc.jaf.persistence.dao.NamingConvention">
+		<property name="conventionMock"
+			value="DTO_UNDERLINE_TO_UPPERCASE,COLUMN_IGNORE_UNDERLINE" />
+	</bean>
+</beans>

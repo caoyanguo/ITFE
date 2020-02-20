@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="69ee84cd-02b1-45ce-9273-b081d8e2c19b" name="对账结果" ename="TfResultReconci" shared="true">
+  <jproperties id="c81b8b9b-0aa3-457f-801a-db6d31803b6b" key="GeneratedTime" value="1491291890058"/>
+  <refModule href="JModule_9144b78c-dc1e-46f5-8fb9-fed33761e08f.model#9144b78c-dc1e-46f5-8fb9-fed33761e08f"/>
+  <model id="4c3e2408-3c80-4691-97db-595656b5732d" name="JModelImpl-4c3e2408-3c80-4691-97db-595656b5732d">
+    <attributes id="d42161cb-7865-4fe8-9969-2c7e3268de64" name="searchDto" type="com.cfcc.itfe.persistence.dto.TfResultReconciDto"/>
+    <attributes id="0106ea48-a1d1-43a3-aa98-14d702016854" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="6f61d8ba-ca25-4cab-af02-5dc5d57357ba" name="reportPath" type="java.lang.String"/>
+    <attributes id="8ee26735-354f-4d67-bcaa-75ddc8c70396" name="rsList" type="java.util.List"/>
+    <attributes id="69a7e013-41ff-41f6-bb92-8139d6a267d8" name="paramMap" type="java.util.HashMap"/>
+    <attributes id="a799d93e-61cf-403e-a06c-67e646464f59" name="printDto" type="com.cfcc.itfe.persistence.dto.TfResultReconciDto"/>
+    <attributes id="272334a1-1437-4821-8a31-f917460b5834" name="reportPathDetail" type="java.lang.String"/>
+    <attributes id="86aa5c39-95da-433c-85d3-985e338ce855" name="rsListDetail" type="java.util.List"/>
+    <attributes id="12fe4033-4400-4afc-9a69-b3ca0a9e869c" name="paramMapDetail" type="java.util.HashMap"/>
+    <directions id="fa4459a0-7efa-42fc-81f3-2fe8d256c5ba" viewers="32d5b242-23b3-479d-be6d-64fd46df9695" name="查询到结果界面" ename="queryResult"/>
+    <directions id="766a01f0-0c7d-4b44-b5d5-67ded2c47d56" viewers="2ae3116f-c08f-4062-a360-bd39eb0e274d" name="返回到查询界面" ename="backQuery"/>
+    <directions id="347a8ea3-3f12-4580-b482-5e2a838e0f49" name="单选" ename="singleSelect"/>
+    <directions id="c0fa9b3d-0345-47a1-93bf-a205cdb6ebf0" viewers="765444bd-4b4d-468f-82a2-33750be5ee44" name="报表" ename="toReport"/>
+    <directions id="a43e72d8-187e-44f5-9b66-2de043f00d5e" viewers="fbc9261a-e802-4c74-aa90-a088fad3a1f5" name="报文明细" ename="detail"/>
+    <directions id="7080380d-23bb-4152-b33e-ce7b2d2d8f39" viewers="008d4b86-6267-4b8a-8d58-29249e7750eb" name="打印明细" ename="printDetail"/>
+    <directions id="6d5400b5-59d3-462b-b7ef-d68e3dbafb7a" viewers="fbc9261a-e802-4c74-aa90-a088fad3a1f5" name="返回明细" ename="backToDetail"/>
+  </model>
+  <services href="JServiceComponet_6807060e-ada9-4e37-93e7-10456d5b9910.model#6807060e-ada9-4e37-93e7-10456d5b9910"/>
+  <contentAreas id="55d4f691-2a23-4c4f-a6d4-aa7708b36ca3">
+    <contentareanode id="1a2a1898-6e85-41dc-9606-490dd835f0ca" name="信息查询" grouptitle="信息查询" binding="searchDto" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="23131f18-c0fa-4a3f-a782-a8c217a53a47" name="schkdate" binding="schkdate" caption="对账日期" editable="true">
+        <labelStyle id="343ca902-04ca-4e45-8be5-dc16669192f7" name="LabelStyleImpl-343ca902-04ca-4e45-8be5-dc16669192f7" ename="LabelStyleImpld343ca902-04ca-4e45-8be5-dc16669192f7"/>
+        <componentStyle id="440430bd-5cb4-4ec0-96a6-37b2ac945e39" name="ComponentStyleImpl-440430bd-5cb4-4ec0-96a6-37b2ac945e39" ename="ComponentStyleImpl440430bd-5cb4-4ec0-96a6-37b2ac945e39"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="24e983e3-0120-4318-bd1f-ed312803513a" name="strecode" binding="strecode" caption="国库主体代码" editable="false">
+        <labelStyle id="5886e16f-31f3-46e2-94e3-836775086821" name="LabelStyleImpl-5886e16f-31f3-46e2-94e3-836775086821" ename="LabelStyleImpld5886e16f-31f3-46e2-94e3-836775086821"/>
+        <componentStyle id="502a31a2-d459-48fd-a0c4-135ad16e79a0" name="ComponentStyleImpl-502a31a2-d459-48fd-a0c4-135ad16e79a0" ename="ComponentStyleImpl502a31a2-d459-48fd-a0c4-135ad16e79a0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8c889a7f-20c9-480d-a521-5271a6d738d5" name="ipackno" binding="ipackno" caption="对账次数" editable="true">
+        <labelStyle id="bcfd7326-7154-44e2-b781-8f04cf45519a" name="LabelStyleImpl-bcfd7326-7154-44e2-b781-8f04cf45519a" ename="LabelStyleImpldbcfd7326-7154-44e2-b781-8f04cf45519a"/>
+        <componentStyle id="897b0ffa-f4a5-402b-a462-3ecb93242555" name="ComponentStyleImpl-897b0ffa-f4a5-402b-a462-3ecb93242555" ename="ComponentStyleImpl897b0ffa-f4a5-402b-a462-3ecb93242555"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ad628719-8026-4aad-abed-c7b5b381e5be" name="scheckresult" binding="scheckresult" caption="对账结果" editable="true">
+        <labelStyle id="9f5e7948-47e0-4e98-ba8d-b6aafb6c47cc" name="LabelStyleImpl-9f5e7948-47e0-4e98-ba8d-b6aafb6c47cc" ename="LabelStyleImpld9f5e7948-47e0-4e98-ba8d-b6aafb6c47cc"/>
+        <componentStyle id="6388b460-c4cc-4ffc-9aa4-f5baef4eceb3" name="ComponentStyleImpl-6388b460-c4cc-4ffc-9aa4-f5baef4eceb3" ename="ComponentStyleImpl6388b460-c4cc-4ffc-9aa4-f5baef4eceb3"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="645b7070-5170-4035-91ed-61b5534ac1df" name="isendpacknum" binding="isendpacknum" caption="发送包对账差额" editable="true">
+        <labelStyle id="9e483e1f-7e77-4d10-b90a-a9ec52d921b4" name="LabelStyleImpl-9e483e1f-7e77-4d10-b90a-a9ec52d921b4" ename="LabelStyleImpld9e483e1f-7e77-4d10-b90a-a9ec52d921b4"/>
+        <componentStyle id="a299b059-b8fb-4ffb-bc6b-39504e6413f0" name="ComponentStyleImpl-a299b059-b8fb-4ffb-bc6b-39504e6413f0" ename="ComponentStyleImpla299b059-b8fb-4ffb-bc6b-39504e6413f0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0efe0421-3aa8-46d4-8de5-99db55c3c94e" name="irecvpacknum" binding="irecvpacknum" caption="接收包对账差额" editable="true">
+        <labelStyle id="9168dd84-2116-43ab-85eb-c9eb141d547d" name="LabelStyleImpl-9168dd84-2116-43ab-85eb-c9eb141d547d" ename="LabelStyleImpld9168dd84-2116-43ab-85eb-c9eb141d547d"/>
+        <componentStyle id="c43e622b-df13-460c-9746-c4cc8f785e6e" name="ComponentStyleImpl-c43e622b-df13-460c-9746-c4cc8f785e6e" ename="ComponentStyleImplc43e622b-df13-460c-9746-c4cc8f785e6e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="22a1cb96-b94f-4371-801f-79f75ea6611e" name="ComboImpl-22a1cb96-b94f-4371-801f-79f75ea6611e" binding="spayoutvoutype" caption="凭证类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dd351ab3-eda6-402e-966d-53385c48acc8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8f50ce22-68e1-4eb0-a8da-fba49ab3a1ab" name="spackno" binding="spackno" caption="包流水号" editable="true">
+        <labelStyle id="82c20950-9c04-4f09-a972-ea5bc18f464b" name="LabelStyleImpl-82c20950-9c04-4f09-a972-ea5bc18f464b" ename="LabelStyleImpld82c20950-9c04-4f09-a972-ea5bc18f464b"/>
+        <componentStyle id="88c00e28-3e5a-45b2-bad0-62557b2a7db8" name="ComponentStyleImpl-88c00e28-3e5a-45b2-bad0-62557b2a7db8" ename="ComponentStyleImpl88c00e28-3e5a-45b2-bad0-62557b2a7db8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="65f5f220-d243-43c4-a81e-2abe5ee9bc7b" name="icurpackvounum" binding="icurpackvounum" caption="本包凭证总笔数" editable="true">
+        <labelStyle id="c84e8753-cf95-4f9c-a4a9-917c9c0a05ab" name="LabelStyleImpl-c84e8753-cf95-4f9c-a4a9-917c9c0a05ab" ename="LabelStyleImpldc84e8753-cf95-4f9c-a4a9-917c9c0a05ab"/>
+        <componentStyle id="178b457c-1f61-4ea1-a3ea-2175ce67b718" name="ComponentStyleImpl-178b457c-1f61-4ea1-a3ea-2175ce67b718" ename="ComponentStyleImpl178b457c-1f61-4ea1-a3ea-2175ce67b718"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ff83fc3d-14e5-4d4c-adf0-09c1b792c9ce" name="ncurpackvouamt" binding="ncurpackvouamt" caption="本包凭证金额" editable="true">
+        <labelStyle id="84ca7992-9b1c-44b8-9366-f168683d9ada" name="LabelStyleImpl-84ca7992-9b1c-44b8-9366-f168683d9ada" ename="LabelStyleImpld84ca7992-9b1c-44b8-9366-f168683d9ada"/>
+        <componentStyle id="d460bd13-63ef-4ca5-8436-cc86e4bd28bc" name="ComponentStyleImpl-d460bd13-63ef-4ca5-8436-cc86e4bd28bc" ename="ComponentStyleImpld460bd13-63ef-4ca5-8436-cc86e4bd28bc"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="40ccb098-cca7-468d-9dbb-b05a014bb917" name="信息查询结果" grouptitle="信息查询结果">
+      <widgetRefs xsi:type="model:Table" id="f6138313-74de-4bd7-9bdd-e79b4fc4289c" name="queryResult" binding="pagingcontext" caption="查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="347a8ea3-3f12-4580-b482-5e2a838e0f49">
+        <columnlist id="23131f18-c0fa-4a3f-a782-a8c217a53a47" name="schkdate" binding="schkdate" caption="对账日期"/>
+        <columnlist id="24e983e3-0120-4318-bd1f-ed312803513a" name="strecode" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="8c889a7f-20c9-480d-a521-5271a6d738d5" name="ipackno" binding="ipackno" caption="对账次数"/>
+        <columnlist id="ad628719-8026-4aad-abed-c7b5b381e5be" name="scheckresult" binding="scheckresult" caption="对账结果">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ad089046-f99a-4593-94e6-596ba314f7a1"/>
+        </columnlist>
+        <columnlist id="645b7070-5170-4035-91ed-61b5534ac1df" name="isendpacknum" binding="isendpacknum" caption="发送包对账差额"/>
+        <columnlist id="0efe0421-3aa8-46d4-8de5-99db55c3c94e" name="irecvpacknum" binding="irecvpacknum" caption="接收包对账差额"/>
+        <columnlist id="6f632203-95b7-4b69-858f-0a6e025f758b" name="spayoutvoutype" binding="spayoutvoutype" caption="凭证类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dd351ab3-eda6-402e-966d-53385c48acc8"/>
+        </columnlist>
+        <columnlist id="8f50ce22-68e1-4eb0-a8da-fba49ab3a1ab" name="spackno" binding="spackno" caption="包流水号"/>
+        <columnlist id="65f5f220-d243-43c4-a81e-2abe5ee9bc7b" name="icurpackvounum" binding="icurpackvounum" caption="本包凭证总笔数"/>
+        <columnlist id="ff83fc3d-14e5-4d4c-adf0-09c1b792c9ce" name="ncurpackvouamt" binding="ncurpackvouamt" caption="本包凭证金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="bcae8e92-8abe-4903-bed6-b5cde4efd999" name="报表" grouptitle="">
+      <jreportref id="3b9e1c07-01cb-44d3-8842-1457e97c22c9" name="report" reportpath="reportPath" binding="rsList" parammap="paramMap"/>
+    </contentareanode>
+    <contentareanode id="5ec34657-f7cd-47d8-9bb0-3cd80cdd4974" name="报文明细" grouptitle="报文明细" binding="printDto" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="89fd9f17-7a65-4d4e-b5c6-dab786a2a387" name="smsgid" binding="smsgid" caption="报文标识号" editable="false">
+        <labelStyle id="ace64b81-3546-402e-8761-4ec9ec02c553" name="LabelStyleImpl-ace64b81-3546-402e-8761-4ec9ec02c553" ename="LabelStyleImpldace64b81-3546-402e-8761-4ec9ec02c553"/>
+        <componentStyle id="8bd63c9d-f147-4f02-a3ef-03a6657f4c70" name="ComponentStyleImpl-8bd63c9d-f147-4f02-a3ef-03a6657f4c70" ename="ComponentStyleImpl8bd63c9d-f147-4f02-a3ef-03a6657f4c70"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6c2121cc-dbf4-42e1-80ac-0f210472ec22" name="smsgno" binding="smsgno" caption="报文编号" editable="false">
+        <labelStyle id="dff896f8-f676-4160-bfc5-c5c97a59cb91" name="LabelStyleImpl-dff896f8-f676-4160-bfc5-c5c97a59cb91" ename="LabelStyleImplddff896f8-f676-4160-bfc5-c5c97a59cb91"/>
+        <componentStyle id="e89a3523-aca2-4357-a511-82906faa9a05" name="ComponentStyleImpl-e89a3523-aca2-4357-a511-82906faa9a05" ename="ComponentStyleImple89a3523-aca2-4357-a511-82906faa9a05"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e545f39b-b2a9-4fe7-9057-645dbca0216d" name="smsgref" binding="smsgref" caption="报文参考号" editable="false">
+        <labelStyle id="0cafef32-23e0-4da9-87aa-b39048d81176" name="LabelStyleImpl-0cafef32-23e0-4da9-87aa-b39048d81176" ename="LabelStyleImpld0cafef32-23e0-4da9-87aa-b39048d81176"/>
+        <componentStyle id="5fc35d1a-380c-4eb8-b4d4-e868f637e91e" name="ComponentStyleImpl-5fc35d1a-380c-4eb8-b4d4-e868f637e91e" ename="ComponentStyleImpl5fc35d1a-380c-4eb8-b4d4-e868f637e91e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="23131f18-c0fa-4a3f-a782-a8c217a53a47" name="schkdate" binding="schkdate" caption="对账日期" editable="false">
+        <labelStyle id="343ca902-04ca-4e45-8be5-dc16669192f7" name="LabelStyleImpl-343ca902-04ca-4e45-8be5-dc16669192f7" ename="LabelStyleImpld343ca902-04ca-4e45-8be5-dc16669192f7"/>
+        <componentStyle id="440430bd-5cb4-4ec0-96a6-37b2ac945e39" name="ComponentStyleImpl-440430bd-5cb4-4ec0-96a6-37b2ac945e39" ename="ComponentStyleImpl440430bd-5cb4-4ec0-96a6-37b2ac945e39"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="24e983e3-0120-4318-bd1f-ed312803513a" name="strecode" binding="strecode" caption="国库主体代码" editable="false">
+        <labelStyle id="5886e16f-31f3-46e2-94e3-836775086821" name="LabelStyleImpl-5886e16f-31f3-46e2-94e3-836775086821" ename="LabelStyleImpld5886e16f-31f3-46e2-94e3-836775086821"/>
+        <componentStyle id="502a31a2-d459-48fd-a0c4-135ad16e79a0" name="ComponentStyleImpl-502a31a2-d459-48fd-a0c4-135ad16e79a0" ename="ComponentStyleImpl502a31a2-d459-48fd-a0c4-135ad16e79a0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8c889a7f-20c9-480d-a521-5271a6d738d5" name="ipackno" binding="ipackno" caption="对账次数" editable="false">
+        <labelStyle id="bcfd7326-7154-44e2-b781-8f04cf45519a" name="LabelStyleImpl-bcfd7326-7154-44e2-b781-8f04cf45519a" ename="LabelStyleImpldbcfd7326-7154-44e2-b781-8f04cf45519a"/>
+        <componentStyle id="897b0ffa-f4a5-402b-a462-3ecb93242555" name="ComponentStyleImpl-897b0ffa-f4a5-402b-a462-3ecb93242555" ename="ComponentStyleImpl897b0ffa-f4a5-402b-a462-3ecb93242555"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ad628719-8026-4aad-abed-c7b5b381e5be" name="scheckresult" binding="scheckresult" caption="对账结果" editable="false">
+        <labelStyle id="9f5e7948-47e0-4e98-ba8d-b6aafb6c47cc" name="LabelStyleImpl-9f5e7948-47e0-4e98-ba8d-b6aafb6c47cc" ename="LabelStyleImpld9f5e7948-47e0-4e98-ba8d-b6aafb6c47cc"/>
+        <componentStyle id="6388b460-c4cc-4ffc-9aa4-f5baef4eceb3" name="ComponentStyleImpl-6388b460-c4cc-4ffc-9aa4-f5baef4eceb3" ename="ComponentStyleImpl6388b460-c4cc-4ffc-9aa4-f5baef4eceb3"/>
+        <refenum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ad089046-f99a-4593-94e6-596ba314f7a1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="645b7070-5170-4035-91ed-61b5534ac1df" name="isendpacknum" binding="isendpacknum" caption="发送包对账差额" editable="false">
+        <labelStyle id="9e483e1f-7e77-4d10-b90a-a9ec52d921b4" name="LabelStyleImpl-9e483e1f-7e77-4d10-b90a-a9ec52d921b4" ename="LabelStyleImpld9e483e1f-7e77-4d10-b90a-a9ec52d921b4"/>
+        <componentStyle id="a299b059-b8fb-4ffb-bc6b-39504e6413f0" name="ComponentStyleImpl-a299b059-b8fb-4ffb-bc6b-39504e6413f0" ename="ComponentStyleImpla299b059-b8fb-4ffb-bc6b-39504e6413f0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0efe0421-3aa8-46d4-8de5-99db55c3c94e" name="irecvpacknum" binding="irecvpacknum" caption="接收包对账差额" editable="false">
+        <labelStyle id="9168dd84-2116-43ab-85eb-c9eb141d547d" name="LabelStyleImpl-9168dd84-2116-43ab-85eb-c9eb141d547d" ename="LabelStyleImpld9168dd84-2116-43ab-85eb-c9eb141d547d"/>
+        <componentStyle id="c43e622b-df13-460c-9746-c4cc8f785e6e" name="ComponentStyleImpl-c43e622b-df13-460c-9746-c4cc8f785e6e" ename="ComponentStyleImplc43e622b-df13-460c-9746-c4cc8f785e6e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6f632203-95b7-4b69-858f-0a6e025f758b" name="spayoutvoutype" binding="spayoutvoutype" caption="凭证类型" editable="false">
+        <labelStyle id="de278e47-10da-4384-b5af-7c6e23d9ed24" name="LabelStyleImpl-de278e47-10da-4384-b5af-7c6e23d9ed24" ename="LabelStyleImpldde278e47-10da-4384-b5af-7c6e23d9ed24"/>
+        <componentStyle id="630840fd-88eb-4081-9272-f63f3549d567" name="ComponentStyleImpl-630840fd-88eb-4081-9272-f63f3549d567" ename="ComponentStyleImpl630840fd-88eb-4081-9272-f63f3549d567"/>
+        <refenum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dd351ab3-eda6-402e-966d-53385c48acc8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8f50ce22-68e1-4eb0-a8da-fba49ab3a1ab" name="spackno" binding="spackno" caption="包流水号" editable="false">
+        <labelStyle id="82c20950-9c04-4f09-a972-ea5bc18f464b" name="LabelStyleImpl-82c20950-9c04-4f09-a972-ea5bc18f464b" ename="LabelStyleImpld82c20950-9c04-4f09-a972-ea5bc18f464b"/>
+        <componentStyle id="88c00e28-3e5a-45b2-bad0-62557b2a7db8" name="ComponentStyleImpl-88c00e28-3e5a-45b2-bad0-62557b2a7db8" ename="ComponentStyleImpl88c00e28-3e5a-45b2-bad0-62557b2a7db8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="65f5f220-d243-43c4-a81e-2abe5ee9bc7b" name="icurpackvounum" binding="icurpackvounum" caption="本包凭证总笔数" editable="false">
+        <labelStyle id="c84e8753-cf95-4f9c-a4a9-917c9c0a05ab" name="LabelStyleImpl-c84e8753-cf95-4f9c-a4a9-917c9c0a05ab" ename="LabelStyleImpldc84e8753-cf95-4f9c-a4a9-917c9c0a05ab"/>
+        <componentStyle id="178b457c-1f61-4ea1-a3ea-2175ce67b718" name="ComponentStyleImpl-178b457c-1f61-4ea1-a3ea-2175ce67b718" ename="ComponentStyleImpl178b457c-1f61-4ea1-a3ea-2175ce67b718"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ff83fc3d-14e5-4d4c-adf0-09c1b792c9ce" name="ncurpackvouamt" binding="ncurpackvouamt" caption="本包凭证金额" editable="false">
+        <labelStyle id="84ca7992-9b1c-44b8-9366-f168683d9ada" name="LabelStyleImpl-84ca7992-9b1c-44b8-9366-f168683d9ada" ename="LabelStyleImpld84ca7992-9b1c-44b8-9366-f168683d9ada"/>
+        <componentStyle id="d460bd13-63ef-4ca5-8436-cc86e4bd28bc" name="ComponentStyleImpl-d460bd13-63ef-4ca5-8436-cc86e4bd28bc" ename="ComponentStyleImpld460bd13-63ef-4ca5-8436-cc86e4bd28bc"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="3a882985-8ac0-4644-b002-5b21e2f1c23f" name="明细报表" grouptitle="">
+      <jreportref id="0ab4b869-55f1-4dac-91c2-ab98eafa68c1" name="reportDetail" reportpath="reportPathDetail" binding="rsListDetail" parammap="paramMapDetail"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="fd84379a-91b8-4b18-b9e1-2e82236441d7">
+    <pages id="6d43f61b-5f17-4d27-ba11-38b1c4185f1e" name="查询对账结果">
+      <views id="2ae3116f-c08f-4062-a360-bd39eb0e274d" name="查询界面" isdefault="true" contentArea="1a2a1898-6e85-41dc-9606-490dd835f0ca">
+        <buttonArea id="b7da9347-0e2d-44b4-8ec0-83d5265f1972" name="JButtonAreaImpl-b7da9347-0e2d-44b4-8ec0-83d5265f1972">
+          <buttons id="50b2da1d-97ff-47dc-b7f4-425c1b8e15af" name="query" caption="查询" direction="fa4459a0-7efa-42fc-81f3-2fe8d256c5ba"/>
+        </buttonArea>
+      </views>
+      <views id="32d5b242-23b3-479d-be6d-64fd46df9695" name="查询结果界面" contentArea="40ccb098-cca7-468d-9dbb-b05a014bb917">
+        <buttonArea id="eab4d251-e5f2-4b63-b257-f25c618f22d1" name="JButtonAreaImpl-eab4d251-e5f2-4b63-b257-f25c618f22d1">
+          <buttons id="46595d82-730a-42a6-a213-0a725d229d3d" name="print" caption="查看明细" direction="a43e72d8-187e-44f5-9b66-2de043f00d5e"/>
+          <buttons id="7facad77-68a7-4926-9b4b-367b75e4d757" name="print" caption="打印" direction="c0fa9b3d-0345-47a1-93bf-a205cdb6ebf0"/>
+          <buttons id="9b99d802-8f4e-401f-a7da-e01bfb832aac" name="backQuery" caption="返回" direction="766a01f0-0c7d-4b44-b5d5-67ded2c47d56"/>
+        </buttonArea>
+      </views>
+      <views id="765444bd-4b4d-468f-82a2-33750be5ee44" name="报表" contentArea="bcae8e92-8abe-4903-bed6-b5cde4efd999">
+        <buttonArea id="64d1f501-c074-4ce6-8d4f-09bdb7e3b4c1" name="JButtonAreaImpl-64d1f501-c074-4ce6-8d4f-09bdb7e3b4c1">
+          <buttons id="78defe2e-8c3c-4fe2-a358-50e5ffc4e83c" name="backQueryList" caption="返回" direction="fa4459a0-7efa-42fc-81f3-2fe8d256c5ba"/>
+        </buttonArea>
+      </views>
+      <views id="fbc9261a-e802-4c74-aa90-a088fad3a1f5" name="报文明细" contentArea="5ec34657-f7cd-47d8-9bb0-3cd80cdd4974">
+        <buttonArea id="a6d7e7dc-66c5-48a6-b992-92bbfa999122" name="JButtonAreaImpl-a6d7e7dc-66c5-48a6-b992-92bbfa999122">
+          <buttons id="c0af17ed-6892-40bf-b787-226bc75c8c9a" name="printDetail" caption="打印" direction="7080380d-23bb-4152-b33e-ce7b2d2d8f39"/>
+          <buttons id="78defe2e-8c3c-4fe2-a358-50e5ffc4e83c" name="backQueryList" caption="返回" direction="fa4459a0-7efa-42fc-81f3-2fe8d256c5ba"/>
+        </buttonArea>
+      </views>
+      <views id="008d4b86-6267-4b8a-8d58-29249e7750eb" name="明细报表" contentArea="3a882985-8ac0-4644-b002-5b21e2f1c23f">
+        <buttonArea id="23ee6722-7907-4d02-8c02-59f82972f0b8" name="JButtonAreaImpl-23ee6722-7907-4d02-8c02-59f82972f0b8">
+          <buttons id="7aa16312-3814-4457-8b51-4d4ca869649c" name="backDetail" caption="返回" direction="6d5400b5-59d3-462b-b7ef-d68e3dbafb7a"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

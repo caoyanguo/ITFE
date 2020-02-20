@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "file:./spring-beans.dtd">
+<beans default-lazy-init="true">
+
+	<bean id="serviceContextFactory.GLOBAL.ID" class="com.cfcc.itfe.service.ITFEServiceContextFactory" />
+	<!-- 配置文件入口 step1-->
+	<bean id="HoldDispatchInvoker" class="com.cfcc.jaf.core.invoker.dispatch.DispatchInovker"
+		name="handlerServiceInvoker.GLOBAL.ID">
+		<property name="dispatch">
+			<ref bean="cacheRegularDispatch" />
+		</property>
+		<property name="cacheable">
+			<value>true</value>
+		</property>
+	</bean>
+	<!-- remote mode step2-->
+	<bean id="cacheRegularDispatch" class="com.cfcc.jaf.core.invoker.dispatch.RegularDispatch"
+		init-method="init">
+		<property name="defaultInvoker">
+			<ref bean="WithFuncCode" />
+		</property>
+		
+		<property name="properties">
+			<props>				
+				<prop key="privateResultHold.ITFE.ID">
+					com.cfcc.itfe.service.commonsubsys.commondbaccess.IITFECacheService.cache*
+				</prop>
+			</props>
+		</property>
+		
+	</bean>
+	
+
+	<!-- 不使用 
+	<bean id="publicResultHold.ITFE.ID"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.PublicResultHoldInvoker">
+		<property name="invoker">
+			<ref bean="advisorInvoker" />
+		</property>
+		<property name="publicDataFile">
+			<value>itfePublicResult.obj</value>
+		</property>
+	</bean>
+	-->
+	
+	<!-- 私有缓存 step3-->
+	<bean id="privateResultHold.ITFE.ID"
+		class="com.cfcc.jaf.core.invoker.aop.interceptor.PrivateResultHoldInvoker">
+		<property name="invoker">
+			<ref bean="WithFuncCode" />
+		</property>
+	</bean>
+	
+	<!-- 增加功能码 -->
+	<bean id="WithFuncCode" 
+		class="com.cfcc.itfe.client.FuncInvoker">
+		<property name="invoker">
+			<ref bean="httpServiceInvoker" />
+		</property>
+	</bean>
+	
+	<!-- httpServiceInvoker step4 -->
+	<bean id="httpServiceInvoker" class="com.cfcc.jaf.core.invoker.http.HttpServiceInvoker">
+		<property name="config">
+			<ref bean="httpConfig" />
+		</property>
+	</bean>
+	<!-- step5 -->
+	<bean id="httpConfig" class="com.cfcc.jaf.core.invoker.http.HttpConfig">
+		<property name="host">
+			<value>10.1.4.117</value>
+		</property>
+		<property name="port">
+			<value>8080</value>
+		</property>
+		<property name="serverFile">
+			<value>/ITFE/HttpInvoker</value>
+		</property>
+		<property name="SSL_Port">
+			<value>8443</value>
+		</property>
+		<property name="threadCount">
+			<value>10</value>
+		</property>
+		<property name="session">
+			<value>true</value>
+		</property>
+		<property name="secure">
+			<value>false</value>
+		</property>
+		<property name="zipStream">
+			<value>true</value>
+		</property>
+	</bean>
+	
+	<bean id="ITFE.CONFIG" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+				<entry key="ITFE_NAME" value="ITFE" />
+				<!-- 系统文件根路径 -->
+				<entry key="FILE_ROOT_PATH" value="${file.util.root}/temp/" />
+				<!-- 每次取出的 最大记录数 -->
+				<entry key="MAX_RECORD_RRETRIEVE" value="1000" />
+				<!-- 每包最大的记录数 -->
+				<entry key="CHARSET_NAME" value="GBK" />
+				<!-- 文件缓冲区大小 -->
+				<entry key="FILE_BUF_SIZE" value="1024" />
+				<!-- 文件上传路径 -->
+				<entry key="FILE_UPLOAD" value="ITFEDATA/" />
+				<!-- 文件解压缩路径 -->
+				<entry key="FILE_UNZIP_PATH" value="ITFEDATA/" />
+				<entry key="default_pwd" value="99999999" />
+				<!--  系统管理员-->
+				<entry key="ADMIN" value="ADMIN" />
+			</map>
+		</property>
+	</bean>
+	
+	<!-- 管理员权限 -->
+	<bean id="ADMIN_FUNC"
+		class="org.springframework.beans.factory.config.ListFactoryBean" >
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				<value>S_0024</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="clientFileTransferHelper"
+		class="com.cfcc.jaf.core.service.filetransfer.support.ClientFileTransferHelper">
+		<property name="config">
+			<ref bean="fileSystemConfigClient" />
+		</property>
+	</bean>
+
+	<bean id="fileSystemConfigClient"
+		class="com.cfcc.jaf.core.service.filetransfer.support.FileSystemConfig">
+		<property name="transferSize">
+			<value>1024000</value>
+		</property>
+		<property name="root">
+			<value>c:/itfe</value>
+		</property>
+	</bean>
+	
+	<bean id="FileUtil.ITFE.ID" class="com.cfcc.itfe.util.FileUtil">
+		<property name="statistics">
+			<value>true</value>
+		</property>
+	</bean>
+
+<!-- xmltojava报文配置信息列表 -->
+	<bean id="xml2javaMsgConfig" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+				<entry key="9110" value="classpath:/transconfig/itfe_9110_xml2java.xml" />
+				<entry key="9121" value="classpath:/transconfig/itfe_9121_xml2java.xml" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- javatoxml报文配置信息列表 -->
+	<bean id="java2xmlMsgConfig" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+				<entry key="1103" value="itfe_1103_java2xml.ftl" />
+				<entry key="5102" value="itfe_5102_java2xml.ftl" />
+				<entry key="5103" value="itfe_5103_java2xml.ftl" />
+				<entry key="9005" value="itfe_9005_java2xml.ftl" />
+			</map>
+		</property>
+	</bean>
+</beans>

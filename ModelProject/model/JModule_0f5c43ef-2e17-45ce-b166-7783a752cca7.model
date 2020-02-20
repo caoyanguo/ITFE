@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0f5c43ef-2e17-45ce-b166-7783a752cca7" name="下载报表情况检查" ename="checkStatusOfReportDownload"/>

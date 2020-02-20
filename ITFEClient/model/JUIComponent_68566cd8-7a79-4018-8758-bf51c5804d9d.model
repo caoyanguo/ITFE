@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="68566cd8-7a79-4018-8758-bf51c5804d9d" name="预算科目时序查询(上海)" ename="shbudgetsubcodesearch">
+  <jproperties id="344632c5-1a26-4525-9c3e-d69d6c418f8d" key="GeneratedTime" value="1380249066906"/>
+  <refModule href="JModule_2c761605-1d14-4e48-93a1-af46261639e8.model#2c761605-1d14-4e48-93a1-af46261639e8"/>
+  <model id="7003f3b1-eb25-4f1e-8f37-985881ed6fb4" name="JModelImpl-7003f3b1-eb25-4f1e-8f37-985881ed6fb4">
+    <directions id="bc90dbb6-5934-4d43-a71a-db2edcac6c95" name="导出" ename="export"/>
+  </model>
+  <services href="JServiceComponet_4c9b4d19-07d3-4f37-b280-4054162d1374.model#4c9b4d19-07d3-4f37-b280-4054162d1374"/>
+  <contentAreas id="8bfdea97-072c-4965-bc65-d086c9a732ef">
+    <contentareanode id="be934317-5b11-4529-87c4-236932467267" name="预算科目序时查询查询条件" grouptitle="预算科目序时查询查询条件">
+      <widgetRefs xsi:type="model:Combo" id="b200c6e6-ab8a-48c4-bcd9-2dffa5cdba64" name="业务类型" binding="bizkind" caption="业务类型" required="true" display="displayValue" underly="underlyValue" modelsource="reporttypelist"/>
+      <widgetRefs xsi:type="model:Combo" id="15398379-ac3e-4ee4-b294-3e8f446452fe" name="国库代码" binding="searchdto.trecode" caption="国库代码" required="true" display="strename" underly="strecode" modelsource="trelist"/>
+      <widgetRefs xsi:type="model:Combo" id="d9c05da3-16e9-49d7-891d-bbc367e59f03" name="调整期标志" binding="searchdto.strimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="205923ff-d9a5-45bd-b5c1-e80156f52c82" name="辖属标志" binding="searchdto.sbelongflag" caption="辖属标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8502f57a-8b74-4a2a-b358-90f359c6a43b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="a1e106a9-07b1-4e24-9edb-a6e31547c4dd" name="预算级次" binding="searchdto.slevelcode" caption="预算级次" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3d280685-50b6-49c3-b6a7-57640479b49d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ba784ef6-f724-4baa-aa6b-1f392e1c6f11" name="报表类型" binding="reporttype" caption="报表类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3e431b8d-c784-4699-99a0-d683d38a9f29"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="91d51ea4-3f45-4e64-8fdc-1588c7421902" name="报表种类" binding="searchdto.reportkind" caption="报表种类" display="displayValue" underly="underlyValue" modelsource="reportkind"/>
+      <widgetRefs xsi:type="model:Combo" id="6722aee5-33e7-43d0-b950-674151327a51" name="金额单位" binding="searchdto.moneyunit" caption="金额单位" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4becbd9c-60df-4c15-aec5-13e3c4016b00"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d42f9305-fb1d-4fa1-ac0e-e8b3f79d1e5d" name="开始日期" binding="startdate" caption="开始日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="d28a2c81-545f-4605-91d5-92c9365e38b6" name="结束日期" binding="searchdto.enddate" caption="结束日期"/>
+      <widgetRefs xsi:type="model:Text" id="04bed783-6445-4cef-9ab0-362677c28da0" name="预算科目代码" binding="subcode" caption="预算科目代码" editable="false"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="4678fd15-ac72-4d2a-a805-00930b6c315f">
+    <pages id="9572245d-1b69-4955-9d24-b30e4bc6cb22" name="预算科目序时查询">
+      <views id="35189d3e-ea6b-4063-93f2-15952bffb4d1" name="预算科目序时查询" isdefault="true" genarateprocessorname="SubjectCodeTimerSearch" contentArea="be934317-5b11-4529-87c4-236932467267">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="6ff6044a-2f04-4207-944e-916bef63bb9f" name="JButtonAreaImpl-6ff6044a-2f04-4207-944e-916bef63bb9f">
+          <buttons id="8feaccd2-66c4-4d5f-a456-20060085b5a0" name="导出" caption="导出" checkrequired="true" direction="bc90dbb6-5934-4d43-a71a-db2edcac6c95"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

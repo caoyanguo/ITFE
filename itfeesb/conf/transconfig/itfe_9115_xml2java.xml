@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="ProveReturn9115" beanIdRef="ProveReturn9115" />
+</jb:bean>
+<jb:bean beanId="ProveReturn9115" class="java.util.HashMap" createOnElement="ProveReturn9115">
+	<jb:value property="OriSendOrgCode" decoder="String" data="CFX/MSG/ProveReturn9115/OriSendOrgCode" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/ProveReturn9115/OriEntrustDate" />
+	<jb:value property="OriVCNo" decoder="String" data="CFX/MSG/ProveReturn9115/OriVCNo" />
+	<jb:value property="VCSign" decoder="String" data="CFX/MSG/ProveReturn9115/VCSign" />
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/ProveReturn9115/TaxOrgCode" />
+	<jb:value property="TaxPayName" decoder="String" data="CFX/MSG/ProveReturn9115/TaxPayName" />
+	<jb:value property="TaxPayCode" decoder="String" data="CFX/MSG/ProveReturn9115/TaxPayCode" />
+	<jb:value property="PayOpBkCode" decoder="String" data="CFX/MSG/ProveReturn9115/PayOpBkCode" />
+	<jb:value property="PayBkCode" decoder="String" data="CFX/MSG/ProveReturn9115/PayBkCode" />
+	<jb:value property="PayAcct" decoder="String" data="CFX/MSG/ProveReturn9115/PayAcct" />
+	<jb:value property="HandOrgName" decoder="String" data="CFX/MSG/ProveReturn9115/HandOrgName" />
+	<jb:value property="ProtocolNo" decoder="String" data="CFX/MSG/ProveReturn9115/ProtocolNo" />
+	<jb:value property="VCResult" decoder="String" data="CFX/MSG/ProveReturn9115/VCResult" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/ProveReturn9115/AddWord" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

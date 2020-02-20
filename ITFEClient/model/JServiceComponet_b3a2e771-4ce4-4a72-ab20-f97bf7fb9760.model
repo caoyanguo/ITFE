@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="b3a2e771-4ce4-4a72-ab20-f97bf7fb9760" name="财政预算支出统计报表服务组件" ename="finpaystatisticalreport">
+  <jproperties id="8b99b981-891b-4c74-b641-b49e620fa453" key="GeneratedTime" value="1431934808885"/>
+  <refModule href="JModule_fd53f0f4-9dd7-46e1-aa44-8ab07d9fd260.model#fd53f0f4-9dd7-46e1-aa44-8ab07d9fd260"/>
+  <methods id="92a3bb7f-00d3-41d4-8488-9989d4e23934" ename="makeIncomeBill" name="财政收入日报" codecomment="财政收入日报" returntype="java.util.List">
+    <methodParams id="a99dfc9f-6f36-4b0d-898d-4a722035afee" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="afe878b3-5d40-47fa-b778-161190e8df6d" name="报表代码" ename="billCode" type="java.lang.String"/>
+    <methodParams id="91f0b8b9-60cf-419c-b671-c7231dec9da1" name="金额单位" ename="moneyUnit" type="java.lang.String"/>
+    <methodParams id="e1a01c2c-b50d-4c29-8059-1ff46f5a5efb" name="报表日期" ename="rptDate"/>
+  </methods>
+  <methods id="19e61acb-070e-4e1f-9caf-1800218923c6" ename="makePayoutBill" name="财政支出日报" codecomment="财政支出日报" returntype="java.util.List">
+    <methodParams id="a8676d4e-7f03-48b2-839e-f50f4220fbf5" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="363fc142-39d5-4847-8f11-ff38ff6dab22" name="报表代码" ename="billCode" type="java.lang.String"/>
+    <methodParams id="707720c9-fbcc-44f4-a8b1-54f2b185345b" name="金额单位" ename="moneyUnit" type="java.lang.String"/>
+    <methodParams id="af8cf3ed-2b5f-419e-bbd6-123d09583550" name="报表日期" ename="rptDate" type="java.lang.String"/>
+  </methods>
+  <methods id="722981e4-770b-41c8-bdd2-968a0284555c" ename="makeAllTaxBill" name="财政全口径税收日报" codecomment="财政全口径税收日报" returntype="java.util.List">
+    <methodParams id="e19cfd8d-80d9-463d-9e72-ec3e24b81801" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="78e41462-a968-4897-bf76-649973ed1999" name="报表代码" ename="billCode" type="java.lang.String"/>
+    <methodParams id="f2941613-ab5f-446e-af52-65e725503ebf" name="金额单位" ename="moneyUnit" type="java.lang.String"/>
+    <methodParams id="fdbd999a-cfc6-45a8-a068-0832ae21833a" name="报表日期" ename="rptDate" type="java.lang.String"/>
+  </methods>
+  <methods id="51fc42e6-ffc6-456b-b864-19921cb86ca2" ename="makeFinincomeOnlineBill" name="区支库市级下划企业电子税票日报" codecomment="区支库市级下划企业电子税票日报" returntype="java.util.List">
+    <methodParams id="ea8fbf56-a718-4cb9-99f4-c05a24249f54" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="53eff952-bb35-4520-88b8-4f26c16c9fc8" name="起始日期" ename="startdate" type="java.lang.String"/>
+    <methodParams id="e6bcba49-4002-4f44-a1ff-9c729c6e1919" name="结束日期" ename="enddate" type="java.lang.String"/>
+    <methodParams id="b99fa0d6-68cc-483d-a326-ef0d0c1fbf1c" name="备注" ename="remake"/>
+  </methods>
+  <methods id="97fd7558-f44a-4450-88ac-dcc977ffec0a" ename="makeExcelInOutBillSer" name="取得excel财政收支报表数据" codecomment="取得excle财政收支报表数据" returntype="java.lang.String">
+    <methodParams id="e7ab1bc3-53f6-43d4-851e-cf53d6ac81a4" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="4f47d022-d431-48af-b982-a4ee150856c7" name="报表代码" ename="billCode" type="java.lang.String"/>
+    <methodParams id="f0aca95d-23fb-4fa0-aa5a-6c295e31ed5f" name="金额单位" ename="moneyUnit" type="java.lang.String"/>
+    <methodParams id="e53490fb-280e-406a-9176-69e0b7f9b33e" name="报表日期" ename="rptDate" type="java.lang.String"/>
+    <methodParams id="6889e4c9-7144-4b89-80f8-8aa53af62c94" name="报表类型" ename="rptType"/>
+    <methodParams id="6dc3e3cd-ba43-4151-a6b2-b1ae050e68eb" name="新建报表名称" ename="copyFilename"/>
+    <methodParams id="d35bec07-0ddf-4b9a-99ec-63afe492c35e" name="报表标题" ename="reporttitle"/>
+    <methodParams id="866cd5ea-342b-4ca3-a06e-1c24d948c5b4" name="出表单位" ename="unitname"/>
+  </methods>
+  <methods id="95578077-6772-4ac9-bdcb-3047f129a2ef" ename="makeExcelInOutBill" name="取得excel财政收支报表数据" codecomment="取得excle财政收支报表数据" returntype="java.util.HashMap">
+    <methodParams id="af148868-1b5b-49e0-bd40-a2e780cc9e2a" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="b7e50c18-e9ea-433b-951f-10f2aa2d5630" name="报表代码" ename="billCode" type="java.lang.String"/>
+    <methodParams id="08c6984d-ecc2-4cd6-a54f-1efb2e484e00" name="金额单位" ename="moneyUnit" type="java.lang.String"/>
+    <methodParams id="44f75b1e-6122-4182-be89-06dd010d8528" name="报表日期" ename="rptDate" type="java.lang.String"/>
+    <methodParams id="a0216967-ac5f-4bdc-a104-a11438de7343" name="报表类型" ename="rptType"/>
+    <methodParams id="f3317624-d6f6-44ea-bf05-a38ac30caa97" name="新建报表名称" ename="copyFilename"/>
+    <methodParams id="090aef44-5e09-43aa-b60b-216dbf0c73d4" name="报表标题" ename="reporttitle"/>
+    <methodParams id="72dfb4e2-b4dd-4277-a19b-1a01bda90f25" name="出表单位" ename="unitname"/>
+  </methods>
+  <methods id="bbe7800a-a26c-4eba-ada4-88a8c123a8f7" ename="makeNonBudgetary" name="财政预算外收入查询" codecomment="财政预算外收入查询" returntype="java.util.List">
+    <methodParams id="67166d3c-8e50-4376-a899-d0b38f1f1641" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="385fdb7d-20c6-4cfd-9602-1fdcf47db881" name="起始日期" ename="startdate" type="java.lang.String"/>
+    <methodParams id="f7fc3c53-55b6-40b1-9423-70cebb051e59" name="结束日期" ename="enddate" type="java.lang.String"/>
+    <methodParams id="8191f62b-ee8a-42b5-a547-3c845f6b0ab5" name="备注" ename="remake"/>
+  </methods>
+  <methods id="49060d27-69ef-4802-a989-e86e12045719" ename="FinOutBookSerial" name="财政授权收支流水统计查询" codecomment="财政授权收支流水统计查询" returntype="java.util.List">
+    <methodParams id="f523a560-b9db-4964-b5e9-0ae5585d46a8" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="a6c27662-8eaa-498e-b883-dd77dea0e060" name="起始日期" ename="startdate" type="java.lang.String"/>
+    <methodParams id="275db1f7-548e-4914-9956-87386a1f559d" name="结束日期" ename="enddate" type="java.lang.String"/>
+    <methodParams id="5d9699fb-c3e7-4bc3-8485-4a5f8815d185" name="备注" ename="remake"/>
+  </methods>
+  <methods id="67c23306-93f5-4d36-bc09-01983c2b1e87" ename="FinExcelIncomeMonthLevel" name="EXCEL财政分月分级预算收入统计查询" codecomment="EXCEL财政分月分级预算收入统计查询" returntype="java.util.List">
+    <methodParams id="7d87c551-ae91-43bb-891c-7e6e82e88d6c" name="相关dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="1f2bed4c-02f9-4de1-94ab-86c0f4d53800" name="起始日期" ename="startdate" type="java.lang.String"/>
+    <methodParams id="aa01dbb1-013d-49d8-87ba-c3c5e6c0ec82" name="结束日期" ename="enddate" type="java.lang.String"/>
+    <methodParams id="e23e4686-dd9a-4ec4-b129-4e6357da4854" name="备注" ename="remake"/>
+  </methods>
+</model:JServiceComponent>

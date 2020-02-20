@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="896cfa49-3a85-4d0d-bf89-cc54bcc54de3" name="业务凭证比对" ename="voucherDataCompare" shared="true">
+  <jproperties id="29a88f49-2153-48ab-b495-ced775dc85ce" key="GeneratedTime" value="1385100848618"/>
+  <refModule href="JModule_52990672-9cc0-4c2a-aeac-9f3fbe492a9a.model#52990672-9cc0-4c2a-aeac-9f3fbe492a9a"/>
+  <methods id="d33faf5a-dd7e-4782-a4d9-223ee0083dae" ename="voucherDataCompare" name="凭证比对" returntype="com.cfcc.itfe.facade.data.MulitTableDto">
+    <methodParams id="1679341b-371d-47f7-a4bb-4cad35d80f1b" name="凭证列表" ename="checkList" type="java.util.List"/>
+  </methods>
+  <methods id="008eb85c-e5f1-4c35-b0a5-bbfde9f667fb" ename="voucherReturnSuccess" name="凭证回单" returntype="java.lang.Integer">
+    <methodParams id="28226f79-1cb5-4ce4-ac21-5397682222e1" name="成功凭证发送数据列表" ename="succList" type="java.util.List"/>
+  </methods>
+  <methods id="761d0927-1f32-4ffb-9487-96e16eaddc53" ename="voucherVerify" name="凭证校验" returntype="java.lang.Integer">
+    <methodParams id="c5dd1bf9-6e61-45d2-9966-6274c176d795" name="凭证列表" ename="checkList" type="java.util.List"/>
+  </methods>
+  <methods id="4324c269-a66d-4715-9695-fefbad4659df" ename="voucherRead" name="凭证读取" returntype="java.lang.Integer">
+    <methodParams id="f660b246-ec27-4e39-a205-18af67d89e5d" name="凭证类型" ename="svtcode" type="java.lang.String"/>
+    <methodParams id="f1d0f903-2961-4aa5-bfe1-b6c3d1ee1a7b" name="机构代码" ename="sorgcode"/>
+  </methods>
+  <methods id="629f5a33-3275-4018-8d36-f8146fc15b9d" ename="generateData" name="生成正式数据" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="7ff9db0b-76f7-4bf8-91b5-11ae1fac3e47" name="凭证列表" ename="checkList" type="java.util.List"/>
+  </methods>
+  <methods id="05402f46-6635-41b3-ab8a-8072a49b6065" ename="sendReturnVoucher" name="发送回单" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bc5519fe-ab9a-4dff-8a6c-4def676f5f09" name="凭证列表" ename="checkList" type="java.util.List"/>
+  </methods>
+  <methods id="5cf70b3d-8718-4505-9de2-2f07d159196f" ename="updateStatus" name="更新状态" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="b471b5fc-1dde-4199-8131-f0252cf4b467" name="核算主体代码" ename="loginSorgcode" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

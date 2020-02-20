@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="54e47daf-8a52-40e7-bbc4-f01658e4027e" name="登录TIPS" ename="LogInOutTips">
+  <jproperties id="876b75e6-c57c-4781-aedc-66f4a7c9fbe8" key="GeneratedTime" value="1364055702787"/>
+  <refModule href="JModule_839f7dc1-42ce-4360-ad64-e11a215a2059.model#839f7dc1-42ce-4360-ad64-e11a215a2059"/>
+  <model id="156ad1b4-b20b-483a-acc9-a54d768f79ac" name="JModelImpl-156ad1b4-b20b-483a-acc9-a54d768f79ac">
+    <directions id="5b02f8e1-f125-4c10-8f7b-fea871158170" name="登陆TIPS" ename="login"/>
+    <directions id="bf875d20-19aa-4f86-9e36-88f7be6e363f" name="签退TIPS" ename="logout"/>
+  </model>
+  <services href="JServiceComponet_a10d6250-125f-4328-acc0-e61b7fd061ca.model#a10d6250-125f-4328-acc0-e61b7fd061ca"/>
+  <contentAreas id="1c0f0770-9f6a-4dc9-b183-c801ab2b31b5">
+    <contentareanode id="dee524f9-a684-4a08-a14b-0b6a96c4d8c9" name="登录TIPS界面" grouptitle="登录TIPS界面">
+      <widgetRefs xsi:type="model:Password" id="7e200b49-5b1b-427b-9eea-b67f59adec21" name="登录密码" binding="password" caption="登录密码" required="true"/>
+      <widgetRefs xsi:type="model:Password" id="503a0ae6-35f8-47ef-9194-f884c4b50490" name="原密码" binding="newpassword" caption="登录新密码"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="c85b1f13-7849-4c9f-b585-1dc0ed14639a">
+    <pages id="dc5a5afa-a3ca-466f-8a97-534b2297fcaa" name="登录TIPS视图">
+      <views id="40e1d73a-d643-4584-a66e-76dd0ed92dd3" name="登录TIPS界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="dee524f9-a684-4a08-a14b-0b6a96c4d8c9">
+        <buttonArea id="ae7f118a-8e85-425d-9fba-e6fdfaaa5d89" name="JButtonAreaImpl-ae7f118a-8e85-425d-9fba-e6fdfaaa5d89">
+          <buttons id="8ed70a06-0214-40af-920c-a56bd126185f" name="登录/退出TIPS" caption="登录TIPS" direction="5b02f8e1-f125-4c10-8f7b-fea871158170"/>
+          <buttons id="d5e892a4-463d-4bff-8f59-b1b2183baf66" name="签退TIPS" visible="true" caption="签退TIPS" editable="false" required="false" direction="bf875d20-19aa-4f86-9e36-88f7be6e363f"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

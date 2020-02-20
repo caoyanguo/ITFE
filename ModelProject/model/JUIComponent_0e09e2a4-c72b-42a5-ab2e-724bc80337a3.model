@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0e09e2a4-c72b-42a5-ab2e-724bc80337a3" name="1024征收机关，社保机构申请入库流水" ename="TaxOrgSoSecry">
+  <jproperties id="efb8bffb-e6f6-4456-abca-ad5a50f064fe" key="GeneratedTime" value="1357804569667"/>
+  <refModule href="JModule_69d4f83e-0628-431a-8141-51f97c9afc67.model#69d4f83e-0628-431a-8141-51f97c9afc67"/>
+  <model id="e5801f3c-12c0-4de4-970f-85d8781abe86" name="JModelImpl-e5801f3c-12c0-4de4-970f-85d8781abe86">
+    <directions id="b04d4432-2ebe-4754-ba56-db3c045bfdff" name="申请" ename="applyReport"/>
+  </model>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_45d3d505-c1a7-4e90-9505-e5f59d374843.model#45d3d505-c1a7-4e90-9505-e5f59d374843"/>
+  <contentAreas id="964ce44a-50c3-4fd6-b766-24a4d83d6f03">
+    <contentareanode id="b805f5da-b7a3-4027-9776-e78c9d75cb5f" name="申请界面" grouptitle="请求信息">
+      <widgetRefs xsi:type="model:Text" id="0cd58682-56b7-40c9-89dd-9e56af613a93" name="发起机构代码" binding="sendOrgCode" caption="发起机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="8442be01-6ff0-47c6-a12a-f4ffcc87605c" name="入库日期" binding="inTreDate" caption="入库日期"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="6d786984-7ecc-4035-82ef-6d3951b3f9be">
+    <pages id="52d2b697-ac54-4c09-97ac-83b5a821ccf4" name="JPageImpl-52d2b697-ac54-4c09-97ac-83b5a821ccf4">
+      <views id="3df57d42-0123-4c23-bc93-d8146ac7514d" name="申请界面" isdefault="true" contentArea="b805f5da-b7a3-4027-9776-e78c9d75cb5f">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="eeb70b1f-85c7-4d25-86e5-337c0c48e057" name="JButtonAreaImpl-eeb70b1f-85c7-4d25-86e5-337c0c48e057">
+          <buttons id="00303f02-f7f4-4e3b-85c5-fd57db8d9717" name="申请" caption="申请" direction="b04d4432-2ebe-4754-ba56-db3c045bfdff"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

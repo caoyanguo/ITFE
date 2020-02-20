@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="cbb7ff1e-2cdf-4fd9-8405-958aee2c318e" name="已入库电子税票导出" ename="elecTaxBillExport">
+  <jproperties id="83ed2bca-7f2b-4878-af03-c6773e1be220" key="GeneratedTime" value="1502674903718"/>
+  <refModule href="JModule_5f3b9ebb-8f72-42cb-8810-bff8af408a58.model#5f3b9ebb-8f72-42cb-8810-bff8af408a58"/>
+  <model id="a5844f30-142c-4a88-8b8c-3359b3fbec42" name="JModelImpl-a5844f30-142c-4a88-8b8c-3359b3fbec42">
+    <directions id="daf8a904-b76e-4efd-9772-4b68efd5c1cc" name="数据导出TXT" ename="exportToTxt"/>
+    <directions id="c4b0f2e5-53f8-43dc-a8f5-309339ef844a" name="业务量统计" ename="busworkcount"/>
+    <directions id="2d968994-1d14-4ed1-97f4-13646d10b5a9" name="业务量统计导出" ename="busexport"/>
+  </model>
+  <services href="JServiceComponet_b67a1470-fe81-46dc-8200-0bb992b913ba.model#b67a1470-fe81-46dc-8200-0bb992b913ba"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_e9cebfba-d396-4e98-88eb-0426d938c2dc.model#e9cebfba-d396-4e98-88eb-0426d938c2dc"/>
+  <contentAreas id="ee7be759-2055-4392-b97c-17e7ba59bdc1">
+    <contentareanode id="37aa1592-4db5-426f-9e53-00068a02c089" name="已入库电子税票查询条件" binding="" visible="true">
+      <widgetRefs xsi:type="model:Combo" id="fc8f5df0-60ed-40f4-a588-7dde9071668e" name="国库代码" binding="dto.strecode" caption="国库代码" required="true" display="strename" underly="strecode" modelsource="treCodeList"/>
+      <widgetRefs xsi:type="model:Combo" id="a59addca-a3e2-44d0-8db5-4495972b474a" name="报表范围" binding="dto.sorgcode" caption="报表范围" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ae08c58a-4e90-42bb-b2b7-378ade4989d0"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="704ea940-4d67-4fc8-8bb9-e27f355eb2b3" name="凭证来源" binding="dto.cvouchannel" caption="凭证来源">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#525157a1-fd49-4220-b511-a22fb5ddd627"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="68f96b90-d349-48cd-b57d-d49d9e3d6ed5" name="预算种类" binding="dto.cbdgkind" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="1bc6d8b3-7237-4e83-bf4c-9f0b730dc115" name="凭证类型" binding="dto.sexpvoutype" caption="凭证类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4cae6a32-36b0-428c-8e26-22cea721715d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="35d94c5e-fdd1-410a-8765-6ffb1cc53f0e" name="征收机关代码" binding="dto.staxorgcode" visible="true" caption="征收机关代码" enable="true"/>
+      <widgetRefs xsi:type="model:Text" id="c4098caf-baf8-42b1-84a9-e332175a9591" name="入库日期起" binding="dto.sintredate" caption="入库日期起" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="9fb20f6c-44c4-4a55-bb69-fa48c243d436" name="入库日期止" binding="dto.ipkgseqno" caption="入库日期止"/>
+      <widgetRefs xsi:type="model:Text" id="9075b1e6-b565-4263-9752-c2764744a50b" name="凭证编号" binding="dto.sexpvouno" visible="true" caption="凭证编号" enable="true"/>
+      <widgetRefs xsi:type="model:Text" id="96ab4d61-073d-4169-aae3-59985bbf0896" name="预算科目代码" binding="dto.sbdgsbtcode" caption="预算科目代码"/>
+    </contentareanode>
+    <contentareanode id="0e806c27-733f-43ed-94fc-99e1fd356cf9" name="业务量统计结果">
+      <widgetRefs xsi:type="model:Table" id="78eab334-27a3-47ad-a117-e4dc93d1380d" name="业务量统计结果" binding="buslist" caption="业务量统计结果">
+        <columnlist id="d4dbabcf-c43f-41af-9942-059e7457bc56" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="19eaed35-6bfd-4c54-89e9-1b9b31b47477" name="报表范围" binding="sorgcode" caption="报表范围"/>
+        <columnlist id="79dff469-f61c-4452-ab18-65d8fdadc2a6" name="预算种类" binding="cbdgkind" caption="预算种类"/>
+        <columnlist id="afa21747-b1d8-42c5-bd99-12741394db35" name="征收机关" binding="staxorgcode" caption="征收机关"/>
+        <columnlist id="4fbf0bb8-883c-45c5-b868-2ffbcab8f556" name="总笔数" binding="allcount" caption="总笔数"/>
+        <columnlist id="2bb058e6-1454-454a-b1eb-9120d3d67088" name="电子" binding="autocount" caption="电子"/>
+        <columnlist id="eaf94d12-cb3f-4b72-a9f6-73cbc84ba5db" name="手工" binding="workcount" caption="手工"/>
+        <columnlist id="a1b36e24-f200-4eb3-a99d-9cb4e9017b65" name="无法区分" binding="nocount" caption="无法区分"/>
+        <columnlist id="29c65e4c-5a90-4d55-aa1d-83cd684bceae" name="总金额" binding="allamt" caption="总金额"/>
+        <columnlist id="a65abac0-0d83-4069-bd9f-01e45ca48485" name="电子金额" binding="autoamt" caption="电子金额"/>
+        <columnlist id="cbb62379-1324-4e25-b945-f1c28644579c" name="手工金额" binding="workamt" caption="手工金额"/>
+        <columnlist id="20284026-1eb4-42f3-8656-d287ffdab6c3" name="无法区分金额" binding="noamt" caption="无法区分金额"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="0ceaf0e9-2386-4e21-adb2-3a78af39dab5">
+    <pages id="c9418f76-585f-4294-8be6-3064397adf59" name="已入库电子税票导出">
+      <views id="b3dd0e66-4fe3-4ac7-938e-e1f7aca26d5f" name="已入库电子税票查询条件" path="" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="37aa1592-4db5-426f-9e53-00068a02c089 0e806c27-733f-43ed-94fc-99e1fd356cf9">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="82e16608-5ab7-4cb2-8556-34c48b34f24f" name="JButtonAreaImpl-82e16608-5ab7-4cb2-8556-34c48b34f24f">
+          <buttons id="9211ee7d-3b4c-4a47-b7ac-2a740de37d65" name="导出" caption="导出" required="true" checkrequired="true" direction="daf8a904-b76e-4efd-9772-4b68efd5c1cc"/>
+          <buttons id="c025475a-9f4f-4856-be6b-03d29526bbf4" name="业务量导出" caption="业务量导出" direction="2d968994-1d14-4ed1-97f4-13646d10b5a9"/>
+          <buttons id="7b416c74-38d3-4cb4-868a-2173374afccb" name="业务量统计" caption="业务量统计" required="true" direction="c4b0f2e5-53f8-43dc-a8f5-309339ef844a"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

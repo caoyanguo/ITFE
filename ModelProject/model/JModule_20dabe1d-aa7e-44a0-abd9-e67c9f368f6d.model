@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="20dabe1d-aa7e-44a0-abd9-e67c9f368f6d" name="授权支付额度导入" ename="overdrawPayInto"/>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8c853ca5-0f06-4c79-9b60-a23c2c5580d1" name="转发银行" ename="TsConverttobank" shared="true">
+  <jproperties id="7c5f07a9-a4d6-410a-ae8b-4a66d2dcd057" key="GeneratedTime" value="1406701071945"/>
+  <refModule href="JModule_7741fe02-eef5-4677-aa2a-3021d35772ab.model#7741fe02-eef5-4677-aa2a-3021d35772ab"/>
+  <model id="05d783ce-fca2-4bbe-b0a1-6f80c35a53d8" name="JModelImpl-05d783ce-fca2-4bbe-b0a1-6f80c35a53d8">
+    <attributes id="7c6699fa-8304-482f-b388-9fc58e20e77d" name="dto" type="com.cfcc.itfe.persistence.dto.TsConverttobankDto"/>
+    <attributes id="ca72ccf2-05ae-452a-a93d-b8202de3e303" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="c7b76bed-02e5-4e5f-a70b-f3db3ab68911" viewers="1cfe2817-3149-43e0-996f-4a8165639616" name="跳转录入界面" ename="goInput"/>
+    <directions id="dd89fab1-be3c-4048-8fc8-8e02bbea919c" name="录入保存" ename="inputSave"/>
+    <directions id="a4760d0e-94d5-4650-ac32-0b58bdaa8ff7" viewers="ae76ae3c-dc9d-47ad-a4b0-57545ea4d920" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="48d620fd-47a1-4d3c-aca9-c56ebfc92873" name="单选" ename="singleSelect"/>
+    <directions id="114fb585-e301-43f1-bdf0-3c22e9101d0e" name="删除" ename="delete"/>
+    <directions id="d393b4ca-c322-44ce-8a45-62c73e7d8e14" viewers="532ea792-acfd-4797-8ae3-755b4f4c2474" name="到修改界面" ename="goModify"/>
+    <directions id="fa1ccbf9-3f9f-4976-8039-49e357d4479f" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_3d164807-851d-4803-aed8-4b035fe58aca.model#3d164807-851d-4803-aed8-4b035fe58aca"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="8c6a3c28-7f87-4957-9d50-b7f326dad646">
+    <contentareanode id="298e7416-17d2-4943-a305-bc7d9438294c" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="6f3e6d3b-cc80-4167-83e9-b8bc6b6b1ad6" name="核算主体代码" binding="dto.sorgcode" caption="核算主体代码" enable="false" editable="false" required="true" display="sorgname" underly="sorgcode" modelsource="list"/>
+      <widgetRefs xsi:type="model:Text" id="ee6b7ed1-21f3-43b6-88ca-c31ccc943312" name="接收单位" binding="dto.srecvunit" visible="true" caption="接收单位" enable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="8a27556c-61e9-4bdd-bba9-83ad23b6f04d" name="国库代码" binding="dto.strecode" visible="true" caption="国库代码" enable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5fa00f82-7d9c-429b-9050-8913fcd81de9" name="代理银行" binding="dto.sagentbank" caption="代理银行" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="ce75344d-1278-45f7-9673-b4653181ebe1" name="转发银行" binding="dto.stobank" visible="true" caption="转发银行" enable="true" required="true"/>
+    </contentareanode>
+    <contentareanode id="80024ba0-18f3-40f1-9498-e9bb0e377a36" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="10ee2890-f029-4aff-8ea6-4207e7ee95c7" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="48d620fd-47a1-4d3c-aca9-c56ebfc92873">
+        <columnlist id="ea41298b-97cb-4dc1-8013-d939fba71223" name="核算主体代码" binding="sorgcode" caption="核算主体代码" editable="true"/>
+        <columnlist id="773643d2-32b3-4a32-810f-37277d02c1ec" name="接收单位" binding="srecvunit" caption="接收单位" editable="true"/>
+        <columnlist id="04ae4968-a0bd-49b3-9262-68c8c588a645" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="3a1f7681-22cd-4158-a1ab-d47aedd59005" name="代理银行" binding="sagentbank" caption="代理银行"/>
+        <columnlist id="4809fd13-4cd2-486a-b4ab-b137d5c8ba17" name="转发银行" binding="stobank" caption="转发银行" editable="true"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="34ab215f-9959-4cee-a530-7e7957739bf9" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="8e885f53-201e-4416-8235-f591ec4e7d98" name="核算主体代码" binding="dto.sorgcode" visible="true" caption="核算主体代码" enable="false" editable="false" required="true" display="sorgname" underly="sorgcode" modelsource="list"/>
+      <widgetRefs xsi:type="model:Text" id="773643d2-32b3-4a32-810f-37277d02c1ec" name="接收单位" binding="dto.srecvunit" visible="true" caption="接收单位" enable="false" editable="false" required="true">
+        <labelStyle id="41bed860-f805-46e9-80ce-6d1231adc496" name="LabelStyleImpl-41bed860-f805-46e9-80ce-6d1231adc496" ename="LabelStyleImpld41bed860-f805-46e9-80ce-6d1231adc496"/>
+        <componentStyle id="fe4da986-439f-45f0-8582-be5182a3d100" name="ComponentStyleImpl-fe4da986-439f-45f0-8582-be5182a3d100" ename="ComponentStyleImplfe4da986-439f-45f0-8582-be5182a3d100"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d5ed5b0f-1e12-40de-be1a-e0ac07ba571e" name="国库代码" binding="dto.strecode" visible="true" caption="国库代码" enable="false" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="bd95a740-a3ac-42f0-9320-eb9dbdd22308" name="代理银行" binding="dto.sagentbank" caption="代理银行" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="4809fd13-4cd2-486a-b4ab-b137d5c8ba17" name="转发银行" binding="dto.stobank" visible="true" caption="转发银行" enable="true" editable="true" required="true">
+        <labelStyle id="46f7d265-64a8-414f-8e97-54ff777b4a29" name="LabelStyleImpl-46f7d265-64a8-414f-8e97-54ff777b4a29" ename="LabelStyleImpld46f7d265-64a8-414f-8e97-54ff777b4a29"/>
+        <componentStyle id="98322131-d4a1-47ef-80f4-32f662147b05" name="ComponentStyleImpl-98322131-d4a1-47ef-80f4-32f662147b05" ename="ComponentStyleImpl98322131-d4a1-47ef-80f4-32f662147b05"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="eda9e932-d877-4b6b-b06c-82cd6410b4bd">
+    <pages id="88f0f91c-8edc-4da9-88c7-ee76e0a119c0" name="维护转发银行">
+      <views id="ae76ae3c-dc9d-47ad-a4b0-57545ea4d920" name="维护界面" isdefault="true" contentArea="80024ba0-18f3-40f1-9498-e9bb0e377a36">
+        <buttonArea id="814bebfb-20d5-4d9c-85ae-34c38cbab41e" name="JButtonAreaImpl-814bebfb-20d5-4d9c-85ae-34c38cbab41e">
+          <buttons id="fcf412c6-8883-4bd9-b7fb-caad3edb0751" name="maintenanceInput" caption="录入" direction="c7b76bed-02e5-4e5f-a70b-f3db3ab68911"/>
+          <buttons id="6286c1f8-0a4d-403a-a7a3-689ebf988be5" name="maintenanceDel" caption="删除" direction="114fb585-e301-43f1-bdf0-3c22e9101d0e"/>
+          <buttons id="5b77cdf0-69e5-4151-ae01-08d2976b0c14" name="maintenanceMod" caption="修改" direction="d393b4ca-c322-44ce-8a45-62c73e7d8e14"/>
+        </buttonArea>
+      </views>
+      <views id="532ea792-acfd-4797-8ae3-755b4f4c2474" name="修改界面" contentArea="34ab215f-9959-4cee-a530-7e7957739bf9">
+        <buttonArea id="5f91f378-e3bf-45e5-b1c1-e68b446c14fa" name="JButtonAreaImpl-5f91f378-e3bf-45e5-b1c1-e68b446c14fa">
+          <buttons id="6f40215b-7b87-422a-9eea-da0e0af72fd9" name="modifySave" caption="保存" checkrequired="true" direction="fa1ccbf9-3f9f-4976-8039-49e357d4479f"/>
+          <buttons id="1a30173b-ed17-46ee-900c-2efcc7ba1cca" name="modifyBack" caption="返回" direction="a4760d0e-94d5-4650-ac32-0b58bdaa8ff7"/>
+        </buttonArea>
+      </views>
+      <views id="1cfe2817-3149-43e0-996f-4a8165639616" name="录入界面" contentArea="298e7416-17d2-4943-a305-bc7d9438294c">
+        <buttonArea id="c5745cc5-70a2-4f33-a6db-3b4a2efb7721" name="JButtonAreaImpl-c5745cc5-70a2-4f33-a6db-3b4a2efb7721">
+          <buttons id="3265d3da-bea3-4483-977a-bab00322f1ba" name="保存" caption="保存" checkrequired="true" direction="dd89fab1-be3c-4048-8fc8-8e02bbea919c"/>
+          <buttons id="1a30173b-ed17-46ee-900c-2efcc7ba1cca" name="modifyBack" caption="返回" direction="a4760d0e-94d5-4650-ac32-0b58bdaa8ff7"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

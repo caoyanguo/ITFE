@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f66493ae-37cc-40c6-95b7-4f0e00952b8d" name="大额税源支出统计表" ename="TrecodeLargeTaxAndPayTable">
+  <jproperties id="81da8457-fb37-407d-b3c1-5f077e28c369" key="GeneratedTime" value="1447033342412"/>
+  <refModule href="JModule_95c1c2cb-b17e-4252-b8fc-ba31ec527891.model#95c1c2cb-b17e-4252-b8fc-ba31ec527891"/>
+  <model id="7c5afc74-624c-45ca-99d2-033404f9c91d" name="JModelImpl-7c5afc74-624c-45ca-99d2-033404f9c91d">
+    <attributes id="7acf55ad-ff02-409a-a597-1b5c7034f724" name="dto" type="com.cfcc.itfe.persistence.dto.TvFinIncomeonlineDto"/>
+    <attributes id="c8d53a26-7ebf-4e16-956e-26b85edecc53" name="payoutDto" type="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainDto"/>
+    <directions id="b11c0169-a264-4c3a-b27b-04d27719277a" name="查询" ename="queryResult"/>
+    <directions id="40a7f9a8-6508-425c-8fe4-d1422c0bd986" name="全选" ename="selectAll"/>
+    <directions id="6e913d03-d148-479a-a0f0-1c106b00cb17" name="导出" ename="exportFile"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_c4b306b5-51b1-475a-87e9-5b8bec832b18.model#c4b306b5-51b1-475a-87e9-5b8bec832b18"/>
+  <contentAreas id="0616198b-d651-4139-87a7-446e79792efe">
+    <contentareanode id="27e6c75a-6625-4537-9474-80b4016be8da" name="查询条件" grouptitle="查询条件">
+      <widgetRefs xsi:type="model:Combo" id="efca35d2-8e82-419d-ac79-621dc308f0d9" name="查询方式" binding="queryStyle" caption="查询方式" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#0a6715b4-7c05-489d-ba30-4508cc53944d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4497534b-cdc7-496e-ae78-973d8e03ae89" name="设定金额" binding="limitMoney" caption="设定金额"/>
+    </contentareanode>
+    <contentareanode id="43a08b66-b24a-4f72-9e00-7eb0bf829f8f" name="大额税源查询条件" grouptitle="大额税源查询条件">
+      <widgetRefs xsi:type="model:Combo" id="67ba892b-d70d-468f-b7b4-444496b14e26" name="国库代码" binding="dto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4b9d7ac7-4520-48f5-b4c2-c9ef9cfe8d85" name="税收科目代码" binding="dto.sbdgsbtcode" caption="税收科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="ea9b974b-b438-4cc6-b413-634eec29138b" name="入库日期起" binding="applydateStart" caption="入库日期起"/>
+      <widgetRefs xsi:type="model:Text" id="33105ded-b623-4988-b5d1-bab31ea791ad" name="入库日期止" binding="applydateEnd" caption="入库日期止"/>
+      <widgetRefs xsi:type="model:Text" id="f7820b43-7ab1-414f-9609-2054961f6c17" name="税款所属日期起" binding="billdateStart" caption="税款所属日期起"/>
+      <widgetRefs xsi:type="model:Text" id="adf5ddf1-c5af-431f-b476-ccfa8adee891" name="税款所属日期止" binding="billdateEnd" caption="税款所属日期止"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="94145d0c-b5c1-48ac-9ddb-b243d18d28f2" name="PlaceHolderImpl-94145d0c-b5c1-48ac-9ddb-b243d18d28f2"/>
+      <widgetRefs xsi:type="model:Button" id="1f8bc642-a850-43d1-9d8a-b1b26e2530ac" name="查询" caption="查询" layout="GridLayout" direction="b11c0169-a264-4c3a-b27b-04d27719277a"/>
+    </contentareanode>
+    <contentareanode id="933ef525-83bc-4810-9492-efc677bfe07b" name="大额支出查询条件" grouptitle="大额支出查询条件" processors="" visible="false">
+      <widgetRefs xsi:type="model:Combo" id="f17b31d3-e3b2-40d8-a1ac-1bdf5100a3a7" name="国库代码" binding="payoutDto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="4fdf59f1-0d83-405d-a2a9-6f6c471a5de4" name="支出科目代码" binding="payoutDto.sbudgetunitcode" caption="支出科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="392a6356-2440-4f6a-a397-dbeaf6f059e1" name="委托日期起" binding="commdateStart" caption="委托日期起"/>
+      <widgetRefs xsi:type="model:Text" id="65f808f4-0184-4dea-bf46-2b4ade35d74d" name="委托日期止" binding="commdateEnd" caption="委托日期止"/>
+      <widgetRefs xsi:type="model:Text" id="8a8a8757-7705-40e6-beaf-2d2f81406fcf" name="支出日期起" binding="sgenticketdateStart" caption="支出日期起"/>
+      <widgetRefs xsi:type="model:Text" id="ee536da2-3e37-4e29-8dd9-8622d6464d5b" name="支出日期止" binding="sgenticketdateEnd" caption="支出日期止"/>
+      <widgetRefs xsi:type="model:Text" id="803aa95a-1a45-477c-97a0-d18e4d54da9f" name="收款人账号" binding="payoutDto.srecacct" caption="收款人账号"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="2f83979f-ef27-4ff7-88b1-f4807f5fc598" name="PlaceHolderImpl-2f83979f-ef27-4ff7-88b1-f4807f5fc598"/>
+      <widgetRefs xsi:type="model:Button" id="04715483-5890-4dae-8e60-28bf040b8bd2" name="查询" caption="查询" layout="GridLayout" direction="b11c0169-a264-4c3a-b27b-04d27719277a"/>
+    </contentareanode>
+    <contentareanode id="e24e947b-66c1-4207-b29e-5f9848bb01da" name="大额税源查询一览表" grouptitle="大额税源查询一览表">
+      <widgetRefs xsi:type="model:Table" id="c8bc836d-bbaf-4ec6-9984-eae01c8ad2e7" name="大额税源查询一览表" binding="taxList" caption="大额税源查询一览表" tabletype="" showcheckbox="true" selectedrows="checkTaxList">
+        <columnlist id="56a6a813-5e87-47d2-bf3a-36be4382751c" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="92e7c195-efe2-4caa-b2f5-11d00cf2a9dd" name="sapplydate" binding="sapplydate" caption="入库日期"/>
+        <columnlist id="79806c28-51b7-4887-bf45-a5f128689ea9" name="staxpayname" binding="staxpayname" caption="纳税人名称"/>
+        <columnlist id="7bc4a6c5-ce8d-490f-992a-d8661dd268df" name="sbdgsbtcode" binding="sbdgsbtcode" caption="税收科目代码"/>
+        <columnlist id="537a0a83-b3dc-4d0b-b7a6-de8df09f3043" name="sbdgsbtname" binding="sbdgsbtname" caption="税收科目名称"/>
+        <columnlist id="c4ee8da5-6b51-443a-bf3e-091d9f00af5e" name="cbdglevel" binding="cbdglevel" caption="预算级次">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ee783a69-08d5-4eba-a8ac-17ddf49ca794"/>
+        </columnlist>
+        <columnlist id="630a8482-eac2-44e2-8537-0595c87da3af" name="ftraamt" binding="ftraamt" caption="金额"/>
+        <columnlist id="89c09e7b-21e8-4001-9ad9-9f9e32a77ee8" name="sbilldate" binding="sbilldate" caption="税款所属日期"/>
+        <columnlist id="ec70acef-4eb7-4e36-9475-0d90e3687c18" name="sremark" binding="sremark" caption="备注"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="8cc959ab-c71e-4a5c-896e-3521e9438332" name="大额支出查询一览表" grouptitle="大额支出查询一览表" visible="false">
+      <widgetRefs xsi:type="model:Table" id="8c97a874-e078-4750-a0b5-3eb03c9af500" name="大额支出查询一览表" binding="payList" caption="大额支出查询一览表" tabletype="" showcheckbox="true" selectedrows="checkPayList">
+        <columnlist id="38644f6c-c07b-4a9b-a054-05f93c2c7532" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="145bf2ba-8a24-40d9-be54-54d1ad6dbc48" name="sgenticketdate" binding="sgenticketdate" caption="支出日期"/>
+        <columnlist id="52c4be2f-52be-438d-9424-04aa7d40e785" name="sbudgetunitcode" binding="sbudgetunitcode" caption="支出科目代码"/>
+        <columnlist id="e265b8ed-0005-4147-a041-3b9d26e46c5e" name="sunitcodename" binding="sunitcodename" caption="支出科目名称"/>
+        <columnlist id="3121485e-3d64-4229-beb3-4768a61dad1f" name="srecacct" binding="srecacct" caption="收款人账号"/>
+        <columnlist id="2507769c-166c-4bce-8e48-e7586b0ebba4" name="srecname" binding="srecname" caption="收款人名称"/>
+        <columnlist id="58547030-56af-473f-bd4f-25b1d4f2f259" name="srecbankno" binding="srecbankno" caption="收款人开户行名称"/>
+        <columnlist id="34c6564b-9af4-4855-9556-7242c94d2e45" name="nmoney" binding="nmoney" caption="金额"/>
+        <columnlist id="251b6535-8382-42a3-a551-1574c1c4a6e7" name="saddword" binding="saddword" caption="摘要"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="9cfd7859-689f-4843-9176-c81c3c63bdfb">
+    <pages id="34b5fd3a-3329-47ad-8270-6f900a3cc431" name="大额税源支出统计表显示页面">
+      <views id="9a8a4ab0-ac98-4e6b-9b25-b66898ad1c93" name="大额税源支出统计表显示页面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="27e6c75a-6625-4537-9474-80b4016be8da 43a08b66-b24a-4f72-9e00-7eb0bf829f8f 933ef525-83bc-4810-9492-efc677bfe07b e24e947b-66c1-4207-b29e-5f9848bb01da 8cc959ab-c71e-4a5c-896e-3521e9438332">
+        <buttonArea id="68ed132a-0a2a-4a2f-b4dd-8482a149e6f9" name="JButtonAreaImpl-68ed132a-0a2a-4a2f-b4dd-8482a149e6f9">
+          <buttons id="6b2aca0b-bc89-4a58-8779-1a70715afa0a" name="全选" caption="全选" direction="40a7f9a8-6508-425c-8fe4-d1422c0bd986"/>
+          <buttons id="5c3e8b89-df52-4e0e-b140-8ed9f9015940" name="导出" caption="导出" direction="6e913d03-d148-479a-a0f0-1c106b00cb17"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

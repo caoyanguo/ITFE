@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="59ed6fb2-e572-4d72-ba07-2a79d17783a7" name="盖章位置参数维护" ename="tsstampposition" shared="true">
+  <jproperties id="6c046490-cb80-41b8-8056-b7f843252a47" key="GeneratedTime" value="1502675865625"/>
+  <refModule href="JModule_5cdecc34-87e0-4b40-b573-0681a16c73d0.model#5cdecc34-87e0-4b40-b573-0681a16c73d0"/>
+  <model id="5d7df6b6-bfc8-40bc-b405-2ff22a3f5eee" name="JModelImpl-5d7df6b6-bfc8-40bc-b405-2ff22a3f5eee">
+    <attributes id="5c1332fa-71dd-4fee-91a7-8210248b1fb0" name="tsstamppositionDto" type="com.cfcc.itfe.persistence.dto.TsStamppositionDto"/>
+    <attributes id="b0551cfd-4d63-40f0-9a51-0eaed38f10a9" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="0117b108-2228-4cc9-a8e7-b8e7e1ddec3f" name="tsstamppositionDtoList" type="java.util.List"/>
+    <directions id="7c655e85-2cd4-4843-99fb-ca240aeb917c" viewers="a6ccb3aa-bfb7-4ac6-b5cb-2e352cb8b0ad" name="跳转录入界面" ename="goInput"/>
+    <directions id="cd196326-1616-4ca2-8049-fc643f48a920" name="录入保存" ename="inputSave"/>
+    <directions id="af827a7e-2851-44fc-a08a-527bfa0a36ed" viewers="b0d21142-890c-47c6-9a3c-dddfbbaeb8db" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="6740ea36-a9d1-4efe-a141-b6e08f2e2e4b" name="单选" ename="singleSelect"/>
+    <directions id="a108f144-ce77-4350-a850-df1a4974a316" name="删除" ename="delete"/>
+    <directions id="613746bc-1d8f-4345-ac5b-e416a61af92b" viewers="8eefc66d-1e39-4242-95d3-7d4338102592" name="到修改界面" ename="goModify"/>
+    <directions id="8d2e4851-43bf-4f34-86e9-f8bb93e8a503" name="修改保存" ename="modifySave"/>
+    <directions id="52f6fff1-f024-4364-8b6d-72cbd75c2043" viewers="b0d21142-890c-47c6-9a3c-dddfbbaeb8db" name="查询" ename="queryBudget"/>
+    <directions id="a9b87582-6ee8-40cc-8d2d-1fe0a3d0bfc9" viewers="ba6383ed-126b-4a1e-b055-ea5e80761b7d" name="返回" ename="goBack"/>
+    <directions id="b4447a00-3d29-4e94-a2ca-de043ccbf001" name="读取签章位置" ename="queryStampPosition"/>
+    <directions id="11391dba-bd5c-49c1-8e84-c76611ff6563" name="批量修改签章用户" ename="editStampUsers"/>
+    <directions id="6c0c87c9-d7af-4581-a038-7f26992c8140" name="全选" ename="selectall"/>
+  </model>
+  <services href="JServiceComponet_f3414c80-469a-4737-8523-b7653eabad6e.model#f3414c80-469a-4737-8523-b7653eabad6e"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="38441a58-e6f8-4f35-9843-050d26a33994">
+    <contentareanode id="45bcb3c8-1dcc-4c21-a642-dce936f8427f" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Combo" id="104cec04-a740-45cd-a092-6ea59fa5f623" name="国库代码" binding="tsstamppositionDto.strecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="bfe5fa22-6823-4804-a5ba-c624506c0948" name="sadmdivcode" binding="tsstamppositionDto.sadmdivcode" caption="区划代码"/>
+      <widgetRefs xsi:type="model:Combo" id="038f9287-bb49-4d44-bc74-cf9769c6cf1b" name="凭证类型" binding="tsstamppositionDto.svtcode" caption="凭证类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="1b4464d8-aa5e-468b-8b44-fdee9073a40b" name="sstampname" binding="tsstamppositionDto.sstampname" caption="签章名称"/>
+      <widgetRefs xsi:type="model:Text" id="5b5314ba-ea7a-4153-b28f-f60e88cb9afc" name="sstampposition" binding="tsstamppositionDto.sstampposition" caption="签章位置"/>
+      <widgetRefs xsi:type="model:Combo" id="92e643eb-3a29-4177-ac45-07bb7b48016b" name="默认签章用户" binding="tsstamppositionDto.sstampuser" caption="默认签章用户" display="" underly="" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c08ef4ea-b8c9-41b4-ac61-dc33d6c14284"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a0ec7591-fdcc-45de-9bef-bf6b5812ac10" name="信息录入" grouptitle="信息录入">
+      <widgetRefs xsi:type="model:Combo" id="b188aa3f-6185-4ee3-8215-1797e45ad1c0" name="国库代码" binding="strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="13ef06f2-f55b-45cf-9b5f-c4a19696381c" name="凭证类型" binding="readStamppositionDto.svtcode" caption="凭证类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="81be7f75-9130-4310-8c12-2984f5623218" name="区划代码" binding="sadmdivcode" caption="区划代码" display="sadmdivcode" underly="sadmdivcode" modelsource="admlist"/>
+    </contentareanode>
+    <contentareanode id="3620da75-26ab-4854-b7d8-458f9aaa8b91" name="信息修改" grouptitle="信息修改">
+      <widgetRefs xsi:type="model:Combo" id="139e8c8e-2649-41cb-a966-be5db992bbff" name="国库代码" binding="selectStamppositionDto.strecode" caption="国库代码" enable="false" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="cedbdff0-7dcf-4473-a3b3-85d3ea66bc28" name="sadmdivcode" binding="selectStamppositionDto.sadmdivcode" caption="区划代码" enable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="d2fb408a-fa6a-48e8-9c22-b01246f8a566" name="凭证类型" binding="selectStamppositionDto.svtcode" caption="凭证类型" enable="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="cd43ce2f-50ed-499e-82e9-7876c8d15d12" name="sstampname" binding="selectStamppositionDto.sstampname" caption="签章名称" enable="false"/>
+      <widgetRefs xsi:type="model:Text" id="773fa1c3-431b-40a0-95d4-86184fd4546c" name="sstampposition" binding="selectStamppositionDto.sstampposition" caption="签章位置" enable="false"/>
+      <widgetRefs xsi:type="model:Text" id="70549013-703a-4679-8ddd-9448896307c1" name="签章顺序" binding="selectStamppositionDto.sstampsequence" caption="签章顺序"/>
+      <widgetRefs xsi:type="model:Combo" id="531d51d2-3f8e-4a63-a408-738805d9f27b" name="默认签章用户" binding="selectStamppositionDto.sstampuser" caption="默认签章用户" display="" underly="" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c08ef4ea-b8c9-41b4-ac61-dc33d6c14284"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="6c3ffb63-b078-4305-8f21-c01fc569f32d" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="02f97109-9338-49cd-bceb-6683c7a9a7a6" name="TableImpl-02f97109-9338-49cd-bceb-6683c7a9a7a6" binding="pagingcontext" tabletype="paging" showcheckbox="true" selectedrows="checklist" refsingleclickdirection="6740ea36-a9d1-4efe-a141-b6e08f2e2e4b">
+        <columnlist id="46ea16bc-e6dd-49a2-91f4-4fd4f3163524" name="核算主体代码" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="e2813fed-16eb-477b-b268-79b052b8a341" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="e904fadd-714d-49f0-b043-564eed225774" name="区划代码" binding="sadmdivcode" caption="区划代码"/>
+        <columnlist id="ec8c749b-14c2-43d5-a59c-6ac16a1465ba" name="凭证类型" binding="svtcode" caption="凭证类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+        </columnlist>
+        <columnlist id="f231cb2d-cbd9-4203-9d56-e22a9f4f653c" name="签章名称" binding="sstampname" caption="签章名称"/>
+        <columnlist id="8ff6086e-6614-4f9c-91a2-8abe080f56e6" name="签章位置" binding="sstampposition" caption="签章位置"/>
+        <columnlist id="46259957-f875-48b4-994e-940a5ff0e264" name="签章顺序" binding="sstampsequence" caption="签章顺序"/>
+        <columnlist id="e0b70a6f-c7cd-4de4-8be0-7775b393aa70" name="默认签章用户" binding="sstampuser" caption="默认签章用户">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c08ef4ea-b8c9-41b4-ac61-dc33d6c14284"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="0e9760dd-1e5e-45c2-93b3-8c24fe29b1cd" name="读取签章位置" grouptitle="读取签章位置">
+      <widgetRefs xsi:type="model:Table" id="770a1eef-dd8d-4045-9631-636a144b5645" name="TableImpl-770a1eef-dd8d-4045-9631-636a144b5645" binding="tsstamppositionDtoList">
+        <columnlist id="ecd3cb61-893d-4a34-8ffe-243ede943e52" name="签章名称" binding="sstampname" caption="签章名称"/>
+        <columnlist id="8165206f-9d27-451f-935e-f6b293dcd04a" name="签章位置" binding="sstampposition" caption="签章位置"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="be81659c-29dd-4d77-b376-b5df2918d9c1">
+    <pages id="c1844b74-7409-4c6b-a92d-7872cf259b50" name="签章位置参数维护">
+      <views id="8eefc66d-1e39-4242-95d3-7d4338102592" name="修改界面" contentArea="3620da75-26ab-4854-b7d8-458f9aaa8b91">
+        <buttonArea id="07a2fbcb-b20f-4dc3-be77-e78a97538c4b" name="JButtonAreaImpl-07a2fbcb-b20f-4dc3-be77-e78a97538c4b">
+          <buttons id="62e0be51-8f88-4f29-8a81-c569e75189f6" name="modifySave" caption="保存" checkrequired="true" direction="8d2e4851-43bf-4f34-86e9-f8bb93e8a503"/>
+          <buttons id="9ab8a900-45fd-4aaf-b3fd-f128f71addf1" name="modifyBack" caption="返回" direction="af827a7e-2851-44fc-a08a-527bfa0a36ed"/>
+        </buttonArea>
+      </views>
+      <views id="a6ccb3aa-bfb7-4ac6-b5cb-2e352cb8b0ad" name="录入界面" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="a0ec7591-fdcc-45de-9bef-bf6b5812ac10 0e9760dd-1e5e-45c2-93b3-8c24fe29b1cd">
+        <buttonArea id="8500a8a3-8356-42b2-bbec-b4683b7761ff" name="JButtonAreaImpl-8500a8a3-8356-42b2-bbec-b4683b7761ff">
+          <buttons id="91a09b01-76ab-47d6-8718-72f7a61e3ab0" name="读取签章位置" caption="读取签章位置" checkrequired="true" direction="b4447a00-3d29-4e94-a2ca-de043ccbf001"/>
+          <buttons id="93cfd821-eae4-4414-b208-b7473fcdce7d" name="modifySave" caption="保存" checkrequired="true" direction="cd196326-1616-4ca2-8049-fc643f48a920"/>
+          <buttons id="ea451b57-52f0-4ae0-974c-b8074c320700" name="modifyBack" caption="返回" direction="af827a7e-2851-44fc-a08a-527bfa0a36ed"/>
+        </buttonArea>
+      </views>
+      <views id="ba6383ed-126b-4a1e-b055-ea5e80761b7d" name="信息查询" isdefault="true" contentArea="45bcb3c8-1dcc-4c21-a642-dce936f8427f">
+        <buttonArea id="7ce5b462-72ee-4c49-902f-4d127f0a32dd" name="JButtonAreaImpl-7ce5b462-72ee-4c49-902f-4d127f0a32dd">
+          <buttons id="63a01166-99be-490d-b2f6-3773bf1e875f" name="queryBudget" caption="查询" direction="52f6fff1-f024-4364-8b6d-72cbd75c2043"/>
+        </buttonArea>
+      </views>
+      <views id="b0d21142-890c-47c6-9a3c-dddfbbaeb8db" name="查询结果" contentArea="6c3ffb63-b078-4305-8f21-c01fc569f32d">
+        <buttonArea id="7c28106f-3c91-449e-9c85-81de12b019a3" name="JButtonAreaImpl-7c28106f-3c91-449e-9c85-81de12b019a3">
+          <buttons id="7dffc412-1533-47bb-84ac-856367e6cadc" name="全选" caption="全选" direction="6c0c87c9-d7af-4581-a038-7f26992c8140"/>
+          <buttons id="086d2d2c-9ce2-418a-b20f-cce19124deaf" name="获取签章位置" caption="获取签章位置" direction="7c655e85-2cd4-4843-99fb-ca240aeb917c"/>
+          <buttons id="7357ce67-4859-4934-a119-ef9b58055ad0" name="修改签章用户" caption="修改签章用户" direction="11391dba-bd5c-49c1-8e84-c76611ff6563"/>
+          <buttons id="0763c8c9-78f0-403e-91e1-05832baa49a6" name="修改" caption="修改" direction="613746bc-1d8f-4345-ac5b-e416a61af92b"/>
+          <buttons id="b5d7e592-e1d8-437f-a2d0-fda6ff0f0f96" name="删除" caption="删除" direction="a108f144-ce77-4350-a850-df1a4974a316"/>
+          <buttons id="d37c093c-5c98-4e08-b36a-c0b2a4e77b30" name="返回" caption="返回" direction="a9b87582-6ee8-40cc-8d2d-1fe0a3d0bfc9"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

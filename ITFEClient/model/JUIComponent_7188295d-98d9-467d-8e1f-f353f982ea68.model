@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7188295d-98d9-467d-8e1f-f353f982ea68" name="业务量统计" ename="bizDataCount">
+  <jproperties id="1e3b4d6c-3c5c-4dd7-91f7-8ad3091f9eed" key="GeneratedTime" value="1457485645234"/>
+  <refModule href="JModule_a67cff96-36f8-4dda-bf4c-47a81bcc90b4.model#a67cff96-36f8-4dda-bf4c-47a81bcc90b4"/>
+  <model id="2a671e01-b07b-4586-b000-84b5a12c9dbc" name="JModelImpl-2a671e01-b07b-4586-b000-84b5a12c9dbc">
+    <attributes id="af809f68-db98-4823-8cf8-097a2c69a855" name="param" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+    <attributes id="69ea9194-cdd2-476c-af31-6bc1a672740e" name="biztype" type="java.lang.String"/>
+    <attributes id="ce4bfd32-95c7-49f3-b6d6-4240156b3148" name="bizlist" type="java.util.List"/>
+    <attributes id="90338289-2871-4a8f-aab0-0aee5206e7db" name="paramdto" type="com.cfcc.itfe.facade.data.TipsParamDto"/>
+    <attributes id="989fffaf-a776-41af-9fe0-272a3d947645" name="biztypelist" type="java.util.List"/>
+    <attributes id="2257a677-72ce-4464-8e95-6c98be47c22a" name="bizbudgetlist" type="java.util.List"/>
+    <directions id="6eacb3e6-709c-4b1c-91c0-587b122f842c" viewers="f042e706-5893-4529-8c03-08e39b5a5782" name="报表打印" ename="printReport"/>
+    <directions id="13edc44b-f87c-46e4-8027-6ae2be2e77c1" viewers="dfc1ca15-1655-49f8-bce3-d2adc55cff40" name="回到查询界面" ename="backToQuery"/>
+    <directions id="f59c296c-e3d6-4d63-becc-734b94e98864" viewers="224ac891-3b74-4c97-85fc-1b260b19478c" name="查询代理行业务量" ename="printBankReport"/>
+    <directions id="19243d1e-6e7c-4a9c-a411-d61b79fe7801" viewers="6eb43bdd-8def-4213-9680-94c33f6eeda7" name="返回代理行查询界面" ename="bacTokBankQuery"/>
+    <directions id="828b68e8-1882-4241-aade-23f8e65166b4" name="导出代理行报表" ename="exportBankReport"/>
+  </model>
+  <services href="JServiceComponet_351144da-6438-4ca5-9771-c2047bf337d0.model#351144da-6438-4ca5-9771-c2047bf337d0"/>
+  <contentAreas id="ab76d9d1-17ed-423f-84be-aab79888a4c7">
+    <contentareanode id="60b7074f-0c51-48b2-ad40-64adecfc8412" name="统计查询条件" grouptitle="统计查询条件">
+      <widgetRefs xsi:type="model:Combo" id="30041ee2-c1a5-4fad-acc8-512f06112512" name="业务类型" binding="biztype" caption="业务类型" display="displayValue" underly="underlyValue" modelsource="bizlist"/>
+      <widgetRefs xsi:type="model:Combo" id="d3b16d4f-9187-471b-9f77-a6ce4371b86a" name="国库代码" binding="param.strecode" caption="国库代码" required="true" display="strename" underly="strecode" modelsource="treCodeList"/>
+      <widgetRefs xsi:type="model:Text" id="5712b894-28bb-4395-b19d-ebcab37d1d43" name="开始日期" binding="param.startdate" caption="开始日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="b7d71032-2d69-4d7e-8328-3d3195df18e8" name="结束日期" binding="param.enddate" caption="结束日期" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="43dbfd4e-3dad-4bd0-b76a-b8a1c5e60218" name="代理银行" binding="param.sbankcode" caption="代理银行" display="displayValue" underly="underlyValue" modelsource="bizbanklist"/>
+      <widgetRefs xsi:type="model:Combo" id="4c837431-19d5-488a-8718-697a5c1106d8" name="支付方式" binding="param.paymode" caption="支付方式" display="displayValue" underly="underlyValue" modelsource="biztypelist"/>
+      <widgetRefs xsi:type="model:Combo" id="a0b51e81-57cd-49cb-9bc5-f273bc968fb9" name="预算种类" binding="param.sbudgettype" caption="预算种类" display="displayValue" underly="underlyValue" modelsource="bizbudgetlist"/>
+    </contentareanode>
+    <contentareanode id="d17fead9-3916-4901-bb92-eda0f4c4fe9b" name="报表显示界面">
+      <jreportref id="d01c151a-9649-4d3f-bef8-5ac29cb2a67b" name="业务统计报表" reportpath="reportPath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+    <contentareanode id="304bee7a-e8a3-4d6a-8bd7-3113bd47f3db" name="代理行业务查询界面" grouptitle="代理行业务查询界面">
+      <widgetRefs xsi:type="model:Combo" id="1ebf99c8-14df-4f1b-b4bc-6a920bfef0b8" name="国库主体代码" binding="paramdto.strecode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="820b1641-c161-490e-acb5-1fc95ccbecc7" name="开始日期" binding="paramdto.startdate" caption="开始日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="810413da-b83d-4a70-aafe-551595f0add3" name="结束日期" binding="paramdto.enddate" caption="结束日期" required="true"/>
+    </contentareanode>
+    <contentareanode id="8676e306-003e-4c41-9b69-89aff427c62e" name="代理行报表显示界面">
+      <jreportref id="b9d3f814-5d44-44d8-bde4-bdcdff67a015" name="代理行业务量统计报表" reportpath="bankReportPath" binding="bankReportRs" parammap="bankReportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="c9a8f604-1ba5-4cdb-89c7-a7ec6908ea67">
+    <pages id="ffd469ec-60e9-45c5-947a-d9ab0c1abe93" name="业务量统计">
+      <views id="dfc1ca15-1655-49f8-bce3-d2adc55cff40" name="业务量统计" isdefault="true" contentArea="60b7074f-0c51-48b2-ad40-64adecfc8412">
+        <buttonArea id="0507c6f8-6214-4d56-a593-c771bf3ecac7" name="JButtonAreaImpl-0507c6f8-6214-4d56-a593-c771bf3ecac7">
+          <buttons id="9a64ba6d-dc21-4e70-a68b-3e82b74b2050" name="查询打印" caption="查询打印" direction="6eacb3e6-709c-4b1c-91c0-587b122f842c"/>
+        </buttonArea>
+      </views>
+      <views id="f042e706-5893-4529-8c03-08e39b5a5782" name="报表显示界面" contentArea="d17fead9-3916-4901-bb92-eda0f4c4fe9b">
+        <buttonArea id="e1c50c4b-7479-45de-b031-abe0b8eeaba7" name="JButtonAreaImpl-e1c50c4b-7479-45de-b031-abe0b8eeaba7">
+          <buttons id="0056525a-1e65-4d61-9797-a22d2fcd1d93" name="back" caption="返回" direction="13edc44b-f87c-46e4-8027-6ae2be2e77c1"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="11b02a15-a28b-4083-b681-5f5c0973533f" name="代理行业务量统计">
+      <views id="6eb43bdd-8def-4213-9680-94c33f6eeda7" name="代理行业务查询界面" isdefault="true" contentArea="304bee7a-e8a3-4d6a-8bd7-3113bd47f3db">
+        <buttonArea id="26b1dec3-31de-48ff-b4b7-efd7c9c6b3ce" name="JButtonAreaImpl-26b1dec3-31de-48ff-b4b7-efd7c9c6b3ce">
+          <buttons id="e731d9bd-47ef-47cf-a740-eb2853666e60" name="代理行业务查询" caption="查询" direction="f59c296c-e3d6-4d63-becc-734b94e98864"/>
+        </buttonArea>
+      </views>
+      <views id="224ac891-3b74-4c97-85fc-1b260b19478c" name="代理行报表显示界面" contentArea="8676e306-003e-4c41-9b69-89aff427c62e">
+        <buttonArea id="4459fa37-339d-40fd-9bba-2baa1d25f426" name="JButtonAreaImpl-4459fa37-339d-40fd-9bba-2baa1d25f426">
+          <buttons id="3a2ad324-6de3-44b6-bc81-81048b29dc68" name="返回查询界面" caption="返回" direction="19243d1e-6e7c-4a9c-a411-d61b79fe7801"/>
+          <buttons id="5decf3aa-e9ef-439e-a4d4-8d069cfec884" name="导出报表" caption="导出" direction="828b68e8-1882-4241-aade-23f8e65166b4"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

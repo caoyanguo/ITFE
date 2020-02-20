@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7dc3f614-bb7d-4118-8cbf-a24f4eda8b4a" name="凭证接收窗口" ename="ReceiveUI" shared="false">
+  <jproperties id="55d91796-9491-4fbc-953d-ba31770f58d0" key="GeneratedTime" value="1330483908031"/>
+  <refModule href="JModule_25d11261-dcf7-4812-b1b5-99be397ccae9.model#25d11261-dcf7-4812-b1b5-99be397ccae9"/>
+  <model id="2e21fbae-1b56-4c2b-9bb1-7f0d4e93f862" name="JModelImpl-2e21fbae-1b56-4c2b-9bb1-7f0d4e93f862">
+    <directions id="ee85cc0b-7536-44d4-9547-d77a3b3abb1b" viewers="b1c9e56a-c699-4025-ae16-8897598c103e" name="凭证明细查询" ename="queryCerDetail"/>
+    <directions id="b17e0f50-56cb-4e66-a410-15a612a09a7c" viewers="2e6530a9-d73b-4998-9ce9-ac6e58daaf5f" name="返回凭证接收" ename="backReceiveCer"/>
+    <directions id="1b9b1b56-ceed-4522-a73f-d9ee0cf261d7" name="附件批量下载" ename="downloadSelectedFiles" tipscontent=""/>
+    <directions id="fa2180db-0857-4eb4-9cf0-dd4f8347bcd1" name="单个附件下载" ename="downloadOneFile" tipscontent=""/>
+    <directions id="1206aaec-b88a-49ef-8559-74751729da16" name="列表数据选择" ename="selectOneRow" tipscontent=""/>
+    <directions id="77e725e7-a2ad-41a0-8dd2-a6cd70d114dc" name="下载路径选择" ename="pathSelect"/>
+    <directions id="ed54aaab-82ad-4390-8eb4-f0322441e80d" name="备份路径选择" ename="backupPathSelect"/>
+    <directions id="7bef787f-57ec-4c4e-8520-8dc3fa558af1" name="接收日志查询" ename="queryRecvLog"/>
+    <directions id="30ffa39e-a54e-450c-a741-a3355872f2f7" viewers="3044b662-88a7-414c-86a9-b6fc3dba2a0c" name="接收数据统计" ename="queryRecvLogReport"/>
+    <directions id="698b3575-4aaa-4b69-b0ca-5080cf7ba5f8" name="作废收到的信息" ename="recvDelete"/>
+  </model>
+  <services href="JServiceComponet_6ff0a226-7b81-402b-8426-0d6b74b8d5cb.model#6ff0a226-7b81-402b-8426-0d6b74b8d5cb"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="c294a91b-7464-42b7-999c-b1e38923bc95">
+    <contentareanode id="9c601a35-1da1-49ac-abc3-65aefcb3d4a9" name="凭证接收界面">
+      <widgetRefs xsi:type="model:Table" id="44693482-fb15-4457-90db-7fbb518e52f8" name="certlist" binding="recvLogs" caption="凭证列表" tabletype="" showcheckbox="true" selectedrows="selectedRecvLogs" refsingleclickdirection="1206aaec-b88a-49ef-8559-74751729da16">
+        <columnlist id="5d4e9f87-7e34-4a36-b7da-737f1d21876c" name="是否新邮件" binding="sretcode" caption="是否新邮件"/>
+        <columnlist id="b20ae6e5-bb2d-486e-93dc-52949c7a18e8" name="日期" binding="srecvtime" caption="日期            "/>
+        <columnlist id="41c29ccc-a706-48ae-8450-2ff0fe1542d1" name="发送机构" binding="sorgname" caption="发送机构"/>
+        <columnlist id="12bfe29c-c76b-4a58-8157-ac0d2260c838" name="文件类型" binding="soperationtypename" caption="文件类型"/>
+        <columnlist id="20e02ad4-d81a-4b53-8171-0f7efb9d7865" name="文件标题" binding="stitle" caption="文件标题             " message=""/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="8a7214b0-289e-4abc-8e85-fa3c2b44c6b3" name="凭证明细界面">
+      <widgetRefs xsi:type="model:Text" id="2ef24686-9ab3-4902-be89-6b7ab2b83c16" name="接收时间" binding="detailDto.sdate" visible="true" caption="接收时间" enable="true" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="0944d266-71f7-49bd-b2ce-8378bd474c43" name="发送机构" binding="detailDto.ssendorgcode" visible="true" caption="发送机构" enable="true" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="8e4ecc26-bf93-43aa-a47c-55ebfcecd575" name="接收机构" binding="detailDto.srecvorgcode" visible="true" caption="接收机构" enable="true" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="b91dc4bc-78c8-477e-a105-31852083fc04" name="标题" binding="detailDto.stitle" visible="true" caption="标题" enable="true" editable="false"/>
+      <widgetRefs xsi:type="model:Textarea" id="0c5c4e08-7e02-49f2-9f2e-c329d3b2ad40" name="内容" binding="oneFile.scontent" visible="true" caption="内容" enable="true" editable="false"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="821433b8-3e82-471b-a9b1-714fb785b17a" name="占位符" caption="占位符"/>
+      <widgetRefs xsi:type="model:Textarea" id="b81a0ccf-6bb1-405c-8680-806dc447b689" name="附件列表" binding="attachFileNames" caption="附件列表" editable="false"/>
+    </contentareanode>
+    <contentareanode id="0b5433a5-8ee7-4738-9ddc-a7f9fdff279b" name="接收日志日期、下载路径选择" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="bfcb4f1f-c2a0-453f-945a-222f82d8dbe0" name="recvDate" binding="recvDate" caption="接收日期" editable="true" readonly="false" display="display" underly="data" modelsource="dateList"/>
+      <widgetRefs xsi:type="model:Text" id="268539e4-9d31-4bbc-93a6-530f41dc30d4" name="downloadPath" binding="downloadPath" caption="下载路径" editable="false"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="680145cb-46e1-41a0-828d-965cf0a38813" name="PlaceHolderImpl-680145cb-46e1-41a0-828d-965cf0a38813"/>
+      <widgetRefs xsi:type="model:Text" id="028d5de4-1794-4830-85cd-ceebba2270d9" name="backupPath" binding="backupPath" caption="备份路径" editable="false"/>
+    </contentareanode>
+    <contentareanode id="aac98815-c2b0-4cf9-9fca-04492a1ded46" name="接收数据统计">
+      <jreportref id="968ee334-52d8-4b9c-b315-3e873feea67c" name="recvLogReport" reportpath="recvLogReportPath" binding="recvLogList" parammap="recvLogParam"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="5589d50a-2e13-42cb-bee7-7443a785d130">
+    <pages id="6de19be9-9236-44f7-abeb-55933523e254" name="凭证接收">
+      <views id="fc444902-9169-42f6-8451-4a875d0fe622" name="凭证接收" type="" isdefault="false" direct="" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" genarateprocessorname="" gmetadataprocessorname="" contentArea="0b5433a5-8ee7-4738-9ddc-a7f9fdff279b 9c601a35-1da1-49ac-abc3-65aefcb3d4a9">
+        <buttonArea id="4d4c20cc-f3d9-481a-ad16-603945e3f2a4" name="JButtonAreaImpl-4d4c20cc-f3d9-481a-ad16-603945e3f2a4">
+          <buttons id="077a2d2e-567c-4052-a764-8da980760bdf" name="btnBackupPathSelect" visible="true" caption="备份路径设置" enable="true" action="com.cfcc.itfe.client.recbiz.certrec.BtnShowDetailSelectionAction" direction="ed54aaab-82ad-4390-8eb4-f0322441e80d"/>
+          <buttons id="03973179-7d95-45c5-835c-284975978974" name="btnPathSelect" visible="true" caption="下载路径设置" enable="true" direction="77e725e7-a2ad-41a0-8dd2-a6cd70d114dc"/>
+          <buttons id="db183a2f-dbc7-4bfa-8e1a-a2606b521e3a" name="btnQuery" caption="查询" direction="7bef787f-57ec-4c4e-8520-8dc3fa558af1"/>
+          <buttons id="229ea1a2-31cc-42b1-ab16-e846d69142ee" name="接收数据统计" visible="true" caption="接收数据统计" enable="true" pattern="" action="" direction="30ffa39e-a54e-450c-a741-a3355872f2f7"/>
+          <buttons id="3877ec0c-445a-48d4-b1d6-2e147d9b1445" name="附件下载" visible="true" caption="附件下载" enable="true" direction="1b9b1b56-ceed-4522-a73f-d9ee0cf261d7"/>
+        </buttonArea>
+      </views>
+      <views id="b1c9e56a-c699-4025-ae16-8897598c103e" name="凭证明细" isdefault="false" contentArea="8a7214b0-289e-4abc-8e85-fa3c2b44c6b3">
+        <buttonArea id="461f43e0-f6cb-4169-8ef3-d407fd4da8b2" name="JButtonAreaImpl-461f43e0-f6cb-4169-8ef3-d407fd4da8b2">
+          <buttons id="d708dfc0-fa6a-4543-adfd-6d75eead9408" name="附件下载" visible="true" caption="附件下载" enable="true" direction="fa2180db-0857-4eb4-9cf0-dd4f8347bcd1"/>
+          <buttons id="7d753f3d-3f1b-4276-aadb-7309ac1dbca3" name="返回" visible="true" caption="返回" enable="true" direction="b17e0f50-56cb-4e66-a410-15a612a09a7c"/>
+        </buttonArea>
+      </views>
+      <views id="3044b662-88a7-414c-86a9-b6fc3dba2a0c" name="接收数据统计" isdefault="false" contentArea="aac98815-c2b0-4cf9-9fca-04492a1ded46">
+        <buttonArea id="9f21f99e-1f9e-4e8f-bc91-15fd23ec79d1" name="JButtonAreaImpl-9f21f99e-1f9e-4e8f-bc91-15fd23ec79d1">
+          <buttons id="2c34b6f2-0e10-4a59-bcc4-8ee64ff6d71c" name="返回" caption="返回" direction="b17e0f50-56cb-4e66-a410-15a612a09a7c"/>
+        </buttonArea>
+      </views>
+      <views id="2e6530a9-d73b-4998-9ce9-ac6e58daaf5f" name="新凭证接收" type="ClassName" path="com.cfcc.itfe.client.recbiz.certrec.ReceiveUIComposite" isdefault="true"/>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

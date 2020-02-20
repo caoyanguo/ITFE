@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="50ee33bd-438f-4365-8a10-e4f8ab02a056" name="银行与付款行对应关系查询服务组件" ename="TsBankandpay">
+  <jproperties id="ef149c02-9207-4f09-a884-8872463629f5" key="GeneratedTime" value="1330485996343"/>
+  <refModule href="JModule_349a3c89-bbdd-454d-b758-bdee0385d6d7.model#349a3c89-bbdd-454d-b758-bdee0385d6d7"/>
+  <methods id="f6a50be8-39be-4c9d-b72d-ee2faec06a97" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.devplatform.customtype.Void" remark="银行与付款行对应关系查询">
+    <methodParams id="74ea9ecb-bedc-4351-bb9b-fbe3d8e3aa98" name="银行与付款行对应关系查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="5b3bcf95-1d1e-47d4-a274-db57e30e3bc0" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a6c43f2b-e122-4b47-87b8-d4d6c28cb588" name="银行与付款行对应关系查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="5b3bcf95-1d1e-47d4-a274-db57e30e3bc0" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="b8b0ed83-2234-4ab3-a200-9bffeb8cf429" name="银行与付款行对应关系查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f5fc0002-b270-422c-9183-531465c33ba0" name="销号删除数据查询" ename="deleteDataQuery">
+  <jproperties id="5d86832e-e359-4c63-a05d-4d454eb66c66" key="GeneratedTime" value="1342832309873"/>
+  <refModule href="JModule_fcf48d62-0488-4bae-98e4-d29d638a2575.model#fcf48d62-0488-4bae-98e4-d29d638a2575"/>
+  <model id="cf3c4f49-92c1-4600-adbb-fd4dc01bcbf1" name="JModelImpl-cf3c4f49-92c1-4600-adbb-fd4dc01bcbf1">
+    <attributes id="0d93c34c-10fa-40af-8a23-ea55440c3f43" name="sbiztype" type="java.lang.String"/>
+    <attributes id="52bb5be9-5307-407a-9f0e-a51a8c43621a" name="svouno" type="java.lang.String"/>
+    <attributes id="4a66e555-3ada-4ee3-98e2-a4ba059f96c3" name="startdate" type="java.sql.Date"/>
+    <attributes id="dcff5a8d-74d1-45a4-b5ce-d45021aa5158" name="enddate" type="java.sql.Date"/>
+    <directions id="b93d092e-4d7f-4803-a4cf-8d1699aa12c8" viewers="9d43d7ad-51b5-40bd-9955-be21a152aaf7" name="查询打印" ename="queryService"/>
+    <directions id="2c0f6405-1450-45b0-bd6b-926b27d66ad0" viewers="f98e4ae8-79ef-4c3a-a010-f88a5f73a862" name="返回到默认界面" ename="backToDef"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="e15c54a6-1d40-4151-b502-405af6297ca1">
+    <contentareanode id="794a5040-3609-4b10-ad67-25160bd975dd" name="数据查询条件" grouptitle="数据查询条件">
+      <widgetRefs xsi:type="model:Combo" id="589ba88a-f1d9-4319-9629-c62c9b5710bb" name="业务类型" binding="sbiztype" caption="业务类型">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4d06f918-15af-4185-9161-962238159c66"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="37cbc6c6-9351-4f0b-b989-09975d48c6d4" name="凭证编号" binding="svouno" caption="凭证编号"/>
+      <widgetRefs xsi:type="model:Text" id="0ffa0354-e5fb-426c-97b3-84a79cef6540" name="开始日期" binding="startdate" caption="开始日期"/>
+      <widgetRefs xsi:type="model:Text" id="972bd30b-e56b-45a1-955b-86f5683c9b86" name="截止日期" binding="enddate" caption="截止日期"/>
+    </contentareanode>
+    <contentareanode id="57ca7683-9bb6-458c-a3d8-0d1a1ea71aca" name="报表信息显示" grouptitle="">
+      <jreportref id="1b4a38e2-2172-42fb-9047-08738669109b" name="销号日志报表" reportpath="reportpath" binding="reportRs" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="22e20165-13b0-4e5e-8561-2643729addfd">
+    <pages id="3d754648-8f56-4470-aabd-8e24b5adb4ae" name="销号删除数据">
+      <views id="f98e4ae8-79ef-4c3a-a010-f88a5f73a862" name="销号操作数据查询" isdefault="true" contentArea="794a5040-3609-4b10-ad67-25160bd975dd">
+        <buttonArea id="3d0d0a6d-0eaa-4f62-b492-b0be279e5491" name="JButtonAreaImpl-3d0d0a6d-0eaa-4f62-b492-b0be279e5491">
+          <buttons id="5638a5b4-3a4a-43b6-856d-8e708c6ee5b7" name="查询打印" caption="查询打印" direction="b93d092e-4d7f-4803-a4cf-8d1699aa12c8"/>
+        </buttonArea>
+      </views>
+      <views id="9d43d7ad-51b5-40bd-9955-be21a152aaf7" name="销号日志界面" contentArea="57ca7683-9bb6-458c-a3d8-0d1a1ea71aca">
+        <buttonArea id="2e7260df-e837-4a7f-bb2d-2be9e8a6586d" name="JButtonAreaImpl-2e7260df-e837-4a7f-bb2d-2be9e8a6586d">
+          <buttons id="5e743d1d-b40b-4895-8301-bca25cefd303" name="返回" caption="返回" direction="2c0f6405-1450-45b0-bd6b-926b27d66ad0"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

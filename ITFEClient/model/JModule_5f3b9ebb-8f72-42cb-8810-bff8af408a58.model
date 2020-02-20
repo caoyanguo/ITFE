@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5f3b9ebb-8f72-42cb-8810-bff8af408a58" name="已入库电子税票导出" ename="elecTaxBillQuery"/>

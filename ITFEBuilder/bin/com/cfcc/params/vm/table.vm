@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="TBSTableDescribe"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				#foreach($tabName in $TasTableList)
+                    <ref local="bean_${tabName.getTabEname()}" />
+				#end
+            </list>
+		</property>
+	</bean>
+
+
+	#foreach($tabName in $TasTableList)
+        <bean id="bean_${tabName.getTabEname()}" class="com.cfcc.tas.facade.data.TableDesDto">
+		<property name="tabEname" value="${tabName.getTabEname()}" />
+		<property name="tabCname" value="${tabName.getTabCname()}" />
+		<property name="tabModuleName" value="${tabName.getTabModuleName()}" />
+		<property name="tabUIName" value="${tabName.getTabUIName()}" />
+		<property name="tabDtoClsName" value="${tabName.getTabDtoClsName()}" />
+		<property name="tabBeanClsName"	value="${tabName.getTabBeanClsName()}" />
+		</bean>
+	#end
+</beans>
+
+

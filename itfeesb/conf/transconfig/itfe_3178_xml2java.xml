@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead3178" beanIdRef="BatchHead3178" />
+	<jb:wiring property="TaxBody3178" beanIdRef="TaxBody3178" />
+</jb:bean>
+<jb:bean beanId="BatchHead3178" class="java.util.HashMap" createOnElement="BatchHead3178">
+	<jb:value property="FinOrgCode" decoder="String" data="CFX/MSG/BatchHead3178/FinOrgCode" />
+	<jb:value property="ApplyDate" decoder="String" data="CFX/MSG/BatchHead3178/ApplyDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead3178/PackNo" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BatchHead3178/TreCode" />
+	<jb:value property="TreName" decoder="String" data="CFX/MSG/BatchHead3178/TreName" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead3178/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead3178/AllAmt" />
+	<jb:value property="ChildPackNum" decoder="String" data="CFX/MSG/BatchHead3178/ChildPackNum" />
+	<jb:value property="CurPackNo" decoder="String" data="CFX/MSG/BatchHead3178/CurPackNo" />
+	<jb:value property="CurPackNum" decoder="String" data="CFX/MSG/BatchHead3178/CurPackNum" />
+	<jb:value property="CurPackAmt" decoder="String" data="CFX/MSG/BatchHead3178/CurPackAmt" />
+</jb:bean>
+<jb:bean beanId="TaxBody3178" class="java.util.HashMap" createOnElement="TaxBody3178">
+	<jb:wiring property="TaxInfo3178" beanIdRef="TaxInfo3178s" />
+</jb:bean>
+<jb:bean beanId="TaxInfo3178s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="TaxInfo3178" />
+</jb:bean>
+<jb:bean beanId="TaxInfo3178" class="java.util.HashMap" createOnElement="TaxInfo3178">
+	<jb:wiring property="TaxVou3178" beanIdRef="TaxVou3178" />
+</jb:bean>
+<jb:bean beanId="TaxVou3178" class="java.util.HashMap" createOnElement="TaxVou3178">
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxOrgCode" />
+	<jb:value property="PayBnkNo" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/PayBnkNo" />
+	<jb:value property="TraNo" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TraNo" />
+	<jb:value property="OriMsgNo" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/OriMsgNo" />
+	<jb:value property="TraAmt" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TraAmt" />
+	<jb:value property="PayerOpBkNo" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/PayerOpBkNo" />
+	<jb:value property="PayerOpBkName" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/PayerOpBkName" />
+	<jb:value property="HandOrgName" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/HandOrgName" />
+	<jb:value property="PayAcct" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/PayAcct" />
+	<jb:value property="TaxVouNo" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxVouNo" />
+	<jb:value property="BillDate" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/BillDate" />
+	<jb:value property="TaxPayCode" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxPayCode" />
+	<jb:value property="TaxPayName" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxPayName" />
+	<jb:value property="TaxPayCode1" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxPayCode1" />
+	<jb:value property="TaxPayName1" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxPayName1" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/BudgetType" />
+	<jb:value property="TrimSign" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TrimSign" />
+	<jb:value property="CorpCode" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/CorpCode" />
+	<jb:value property="CorpName" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/CorpName" />
+	<jb:value property="CorpType" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/CorpType" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/BudgetSubjectCode" />
+	<jb:value property="BudgetSubjectName" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/BudgetSubjectName" />
+	<jb:value property="LimitDate" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/LimitDate" />
+	<jb:value property="TaxTypeCode" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxTypeCode" />
+	<jb:value property="TaxTypeName" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxTypeName" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/BudgetLevelCode" />
+	<jb:value property="BudgetLevelName" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/BudgetLevelName" />
+	<jb:value property="TaxStartDate" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxStartDate" />
+	<jb:value property="TaxEndDate" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxEndDate" />
+	<jb:value property="ViceSign" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/ViceSign" />
+	<jb:value property="TaxType" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/TaxType" />
+	<jb:value property="Remark" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/Remark" />
+	<jb:value property="Remark1" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/Remark1" />
+	<jb:value property="Remark2" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/Remark2" />
+	<jb:value property="OpStat" decoder="String" data="CFX/MSG/TaxBody3178/TaxInfo3178/TaxVou3178/OpStat" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

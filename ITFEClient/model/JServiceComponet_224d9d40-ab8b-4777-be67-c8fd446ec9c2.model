@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="224d9d40-ab8b-4777-be67-c8fd446ec9c2" name="收入报表和分户账导入服务组件" ename="trIncomeReport">
+  <jproperties id="d86cd8dd-d2a7-4e56-a21d-8e8f378c62d3" key="GeneratedTime" value="1490578466241"/>
+  <refModule href="JModule_c7258d18-ffa3-44f5-b9cc-0e85a455cd76.model#c7258d18-ffa3-44f5-b9cc-0e85a455cd76"/>
+  <methods id="724c1c6c-3712-4d32-aed0-016508e60ec3" ename="importFile" name="收入类报表文件导入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="12f57ce4-befd-42dd-a6a8-9485a5cda696" name="文件列表" ename="fileList" type="java.util.List"/>
+    <methodParams id="2ef1e2ad-7dac-4650-bf77-ec2fea6f5f86" name="IDto" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="7c290a3c-31fa-4a7d-88ee-015ae4095175" name="报表种类" ename="reportStyle" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

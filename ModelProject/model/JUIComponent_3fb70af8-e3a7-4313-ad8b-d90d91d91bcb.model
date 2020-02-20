@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3fb70af8-e3a7-4313-ad8b-d90d91d91bcb" name="报表数据导出（云南）" ename="FinDataStatDownForYN" shared="true">
+  <jproperties id="2def457e-5e7e-4cc9-a423-caa2dd390438" key="GeneratedTime" value="1502850806343"/>
+  <refModule href="JModule_bee4662c-1251-43f4-ba6d-76d8a47e58ef.model#bee4662c-1251-43f4-ba6d-76d8a47e58ef"/>
+  <model id="80e80f25-efaa-470e-8309-53f5b20bda26" name="JModelImpl-80e80f25-efaa-470e-8309-53f5b20bda26">
+    <directions id="bac46f8f-528e-49fd-8d29-31ec733ded35" name="导出文件" ename="exportFile"/>
+  </model>
+  <services href="JServiceComponet_bc886606-696f-498b-9f35-22868f53441e.model#bc886606-696f-498b-9f35-22868f53441e"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="9504fe64-24ff-4aec-8dcd-bd3e878b6e32">
+    <contentareanode id="5bcd56ef-dcd8-4a88-9ca4-9f4639a5257e" name="报表数据导出查询条件" grouptitle="选择导出条件">
+      <widgetRefs xsi:type="model:Combo" id="4294f182-12e4-4b74-9d7a-07ec0c06b93e" name="调整期标志" binding="sleTrimFlag" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="913dc829-d072-464f-8fd8-b03b2d4e5186" name="预算种类" binding="sleBudKind" caption="预算种类" defaultvalue="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="39cdda8f-effe-497a-a631-1aa988fc4cc1" name="国库代码" binding="sleTreCode" caption="国库代码" display="strename" underly="strecode" modelsource="treList"/>
+      <widgetRefs xsi:type="model:Combo" id="76963e47-94f3-4e5a-a5d7-4a91a58726fa" name="征收机关代码" binding="sleTaxOrgCode" caption="征收机关代码" display="staxorgname" underly="staxorgcode" modelsource="taxorgList"/>
+      <widgetRefs xsi:type="model:Combo" id="268fe802-ef02-469a-9661-9b2058bac0f9" name="辖属标志" binding="sleOfFlag" caption="辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="c6934516-4bc9-464e-9d09-04efb6a55594" name="是否含款合计" binding="sleSumItem" caption="是否含款合计">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#42c32f92-43e0-4e63-8fd9-2f94c4ac6e1a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="2c28cc64-8eec-4b25-a540-5853b0fb78a5" name="查询日期起" binding="sdate" caption="查询日期起"/>
+      <widgetRefs xsi:type="model:Text" id="76bb4214-b6ab-433f-8ab1-11afcf44b91f" name="查询日期止" binding="sdateend" caption="查询日期止"/>
+      <widgetRefs xsi:type="model:Combo" id="99fcb1ea-aeac-45bc-bddc-cbf183fcc33b" name="导出范围" binding="exportarea" visible="true" caption="导出范围">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#bfc3904f-f9a9-4a4c-8f40-11cbdf93bfa6"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Textarea" id="0d057220-a2b0-46ce-afd7-b72130d91188" name="预算科目代码" binding="sfuncbdgsbtcode" caption="预算科目代码"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="55d6a6d5-dcb9-4017-b3f6-99436e2d49ed">
+    <pages id="280590c0-ab69-47a3-8663-fc1044806347" name="JPageImpl-280590c0-ab69-47a3-8663-fc1044806347">
+      <views id="056bb207-51ac-47f5-8b51-43d73a7bb7a5" name="报表数据导出" isdefault="true" contentArea="5bcd56ef-dcd8-4a88-9ca4-9f4639a5257e">
+        <buttonArea id="180c1231-06de-4955-92cb-d5b333dca158" name="JButtonAreaImpl-180c1231-06de-4955-92cb-d5b333dca158">
+          <buttons id="8a9c4b22-b247-4084-aeeb-df5b630efa74" name="导出" caption="导出" direction="bac46f8f-528e-49fd-8d29-31ec733ded35"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#109806d0-798b-4668-91b9-57f526a8ede8"/>
+</model:JUIComponent>

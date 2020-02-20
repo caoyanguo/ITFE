@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="fcf48d62-0488-4bae-98e4-d29d638a2575" name="销号删除查询" ename="deleteDataQuery"/>

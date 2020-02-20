@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bae41fa4-5c6d-4092-97d9-e94d1b4b27e6" name="代理库清算回执" ename="TfFundClearReceipt" shared="true"/>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a60b23f2-ce4c-4bfb-8501-4ea050f0bed4" isgenerated="false" name="导出回执给国税" ename="ExportRecp" shared="false"/>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3fb23d05-8372-489a-bf62-4e419ab6ea31" name="导出TBS文件服务(北京区县)" ename="exportTBSForBJ">
+  <jproperties id="e2a9921f-513a-48a7-aeba-4d6013849296" key="GeneratedTime" value="1427264721310"/>
+  <refModule href="JModule_582ab2d8-d76b-40ee-a56d-fe6c2850d147.model#582ab2d8-d76b-40ee-a56d-fe6c2850d147"/>
+  <methods id="36ac100b-8096-4ceb-b0b1-3946128376e5" ename="exportTBS" name="导出TBS格式文件" returntype="java.util.List">
+    <methodParams id="6a612e9e-73af-4d7a-b0b2-2d75167f9195" name="业务类型" ename="bizType" type="java.lang.String"/>
+    <methodParams id="d57e006e-f2a5-44b1-b3d7-23ed035997ae" name="国库主体代码" ename="treCode" type="java.lang.String"/>
+    <methodParams id="c3f9dfe4-5a12-4532-a906-c99210aff683" name="账务日期" ename="acctDate" type="java.util.Date"/>
+    <methodParams id="a2491551-df3a-4b8a-8bf7-d862e6bb84ae" name="调整期标志" ename="trimFlag" type="java.lang.String"/>
+    <methodParams id="bba2216f-babe-4442-a86a-e903d5942e9e" name="备用参数" ename="backParam" type="java.lang.Object"/>
+    <methodExceptions id="4cb480dc-4d07-49da-9d9a-a4b1fc746e0f" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="6088b598-d125-434c-9f7f-91e63524e08b" ename="findSubInfoByMain" name="根据主表信息查找字表" returntype="java.util.List">
+    <methodParams id="47c5b299-ea8e-4c04-970c-b9b6e646b075" name="主表信息" ename="mainDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodExceptions id="fba531a6-9502-4214-bd89-e9c8f8d5f0af" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="96ff6ab3-f2c3-4445-9f15-a8fb81bd8e49" ename="importTBS" name="导入TBS回执" returntype="com.cfcc.itfe.facade.data.MulitTableDto">
+    <methodParams id="68c5c7d7-7731-4b8d-906b-f95f17b8d93b" name="文件列表" ename="fileList" type="java.util.List"/>
+    <methodParams id="6bf3dae1-9466-42e8-b5af-f3993359bffd" name="备用字段" ename="param" type="java.lang.Object"/>
+  </methods>
+  <methods id="2bcc62df-dc46-4d5a-b55b-00e4c16ea434" ename="updateVouStatus" name="更新凭证状态" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="6f760409-a2aa-4c61-84c2-dd4b0935b7a0" name="需要更新的凭证对象" ename="list" type="java.util.List"/>
+  </methods>
+  <methods id="f3f1d493-b68e-496d-9d3c-997b30111bd2" ename="deleteServerFile" name="删除服务器文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="5194b85b-e9be-4ab7-8ff4-0eecb897be66" name="服务器文件路径" ename="fileName" type="java.lang.String"/>
+  </methods>
+  <methods id="4b2a4641-f828-4317-a8cb-c363ecd95640" ename="writeTbsFileLog" name="记录导入导出TBS文件日志" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a70d258d-536b-4625-97f0-aaa9fb437a8d" name="日志数据" ename="logList" type="java.util.List"/>
+  </methods>
+  <methods id="d8eed251-2d9a-4abe-8a40-9ff59c2cfc44" ename="fetchVoucherInfoForClientTimer" name="定时任务数据获取" returntype="java.util.Map">
+    <methodParams id="41ed8ace-f63b-407f-bf6c-0983d9dcd988" name="信息统计开始时间" ename="startDate" type="java.lang.String"/>
+    <methodParams id="7c3a4b22-5c2b-403f-b3b7-8732580c2479" name="信息统计结束时间" ename="endDate" type="java.lang.String"/>
+    <methodParams id="1e09e93a-4b6c-4d57-b882-c961cb3cb703" name="参数传输对象" ename="paramDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="009eac6d-fa34-4a0a-af7d-e04059e1da2b" name="备用参数字段" ename="backParamString" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

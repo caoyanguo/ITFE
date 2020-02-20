@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/sharedlibs"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ITFECommon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ITFEService"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.core.resources.compatibility_3.4.0.v20080604-1400.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.core.resources.compatibility.source_3.4.0.v20080604-1400.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.emf.common_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.editors_3.4.0.v20080603-2000.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.editors.source_3.4.0.v20080603-2000.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.externaltools_3.2.0.v20080514-1542.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.externaltools.source_3.2.0.v20080514-1542.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.intro.universal.source_3.2.200.v20080508.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.net_1.0.0.I20080605.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.net.source_1.0.0.I20080605.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.presentations.r21_3.2.100.I20080512-2000.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.presentations.r21.source_3.2.100.I20080512-2000.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.win32_3.2.100.v20080408-0800.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.win32.source_3.2.100.v20080408-0800.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.ui.workbench.compatibility.source_3.2.0.I20080509-2000.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/ca/DSignClient.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/ca/DSignServer.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/ca/pkitool20.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-attributes-api.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-beanutils-1.7.0-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-codec-1.3-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-collections-3.2-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-configuration-1.4.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-dbcp-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-dbutils-1.1-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-digester.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-discovery-0.4-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-fileupload-1.2.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-httpclient-3.1-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-httpclient-contrib.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-jxpath-1.3-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-lang-2.4-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-net-1.4.1-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-pool-1.4.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/commons/commons-validator.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/jaf/com.cfcc.jaf.persistence.jar" sourcepath="D:/国库前置资料文件/JAF_src.zip"/>
+	<classpathentry kind="lib" path="/sharedlibs/jaf/com.cfcc.jaf.core.jar" sourcepath="D:/国库前置资料文件/JAF_src.zip"/>
+	<classpathentry kind="lib" path="/sharedlibs/velocity-dep-1.4.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/jaf/com.cfcc.jaf.common.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-context-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-context-support-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-core-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-beans-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-aop-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-jdbc-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-jms-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-modules-jbpm31-0.9-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-orm-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-security-core-2.0.4.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-tx-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/spring/spring-web-2.5.6.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/jaf/com.cfcc.devplatform.emf.generate.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/jaf/com.cfcc.devplatform.emf.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/jaf/com.cfcc.devplatform.emf.overview.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.emf.ecore.sdo.source_2.4.0.v200902171115"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.emf.ecoretools.source_0.8.0.v200806130600"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.emf.ecore_2.4.2.v200902171115.jar"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/org.eclipse.emf.ecore.xmi_2.4.1.v200902171115.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/jaf/com.cfcc.jaf.ui.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/Yak.jar" sourcepath="D:/国库前置资料文件/yaksource.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-core-2.2.1-tests.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-core-2.2.1.jar" sourcepath="D:/国库前置资料文件/source/mule-2.2.1-src.zip"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-jdbc-2.2.1.jar" sourcepath="D:/国库前置资料文件/source/mule-2.2.1-src.zip"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-local-install.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-acegi-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-builders-2.2.1.jar" sourcepath="D:/国库前置资料文件/source/mule-2.2.1-src.zip"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-client-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-jaas-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-jbossts-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-management-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-ognl-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-pgp-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-scripting-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-spring-config-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-spring-extras-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-spring-security-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-sxc-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-module-xml-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-axis-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-bpm-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-cxf-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-ejb-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-email-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-file-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-ftp-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-http-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-jbpm-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-jetty-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-jms-2.2.1.jar" sourcepath="D:/国库前置资料文件/source/mule-2.2.1-src.zip"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-multicast-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-quartz-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-rmi-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-servlet-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-soap-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-ssl-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-stdio-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-tcp-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-udp-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-vm-2.2.1.jar" sourcepath="D:/国库前置资料文件/source/mule-2.2.1-src.zip"/>
+	<classpathentry kind="lib" path="/sharedlibs/mule/mule-transport-xmpp-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/backport-util-concurrent-3.1-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/bcprov-jdk14-129.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/cglib-nodep-2.1_3-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/dom4j-1.6.1-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/freemarker-2.3.11.jar" sourcepath="C:/freemarker-2.3.11/src/"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/geronimo-stax-api_1.0_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/groovy-all-1.5.6-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/groovy-engine-1.1-osgi-jdk14.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/jaxen-1.1.1-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/jug-2.0.0-osgi-asl.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/mvel2-2.0.9.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/ognl-2.7.3-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/opencsv-1.8.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/quartz-all-1.6.0-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/stax-utils-20080702-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/sxc-core-0.7.3-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/sxc-runtime-0.7.3-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/sxc-xpath-0.7.3-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/wstx-asl-3.2.6-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/xapool-1.4-osgi.jar" sourcepath="D:/xapool-1.6.beta-src/xapool-1.6.beta-src/src"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/xpp3_min-1.1.3.4.O-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/xstream-1.3.1.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/jee/geronimo-jta_1.0.1B_spec-1.1-osgi.jar"/>
+	<classpathentry kind="lib" path="/sharedlibs/yakreq/aopalliance-1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

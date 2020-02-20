@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JSubSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="72364987-d729-4074-adbd-818333c2b6e6" name="公共服务子系统" ename="CommonSubSys" shared="true">
+  <refModules href="JModule_57d74aac-5599-4965-be54-900a36b2a15f.model#57d74aac-5599-4965-be54-900a36b2a15f"/>
+</model:JSubSystem>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8aead895-c88f-44ff-a460-7259e0358780" name="9111包明细重发请求" ename="PackDetailSendRequest">
+  <jproperties id="14cd38bd-a602-4aff-a76d-dba0a481fb34" key="GeneratedTime" value="1332227425140"/>
+  <refModule href="JModule_d4be8f79-0032-40a1-94e5-9d20bd3ce6b6.model#d4be8f79-0032-40a1-94e5-9d20bd3ce6b6"/>
+  <model id="d4ab8e42-13e6-4fe2-bed3-e49c3fbba7bc" name="JModelImpl-d4ab8e42-13e6-4fe2-bed3-e49c3fbba7bc">
+    <directions id="163db117-a4fd-4105-b435-eb060bb31e6e" name="发送" ename="send"/>
+    <directions id="a1c58438-1589-402f-942e-325ee5e19394" name="关闭" ename="close"/>
+  </model>
+  <services href="JServiceComponet_9ed22498-e754-4ad3-a774-81802b8fbc56.model#9ed22498-e754-4ad3-a774-81802b8fbc56"/>
+  <contentAreas id="8a40784c-01d2-4f47-bcc2-ee5d01d40290">
+    <contentareanode id="34a45124-15c0-4629-af50-f21b0981bce7" name="9111包明细重发请求界面" grouptitle="9111包明细重发请求界面">
+      <widgetRefs xsi:type="model:Text" id="7d8cac6a-3cd4-4582-b8d2-eafe08300bb0" name="原发起机构代码" binding="oriSendOrgCode" caption="原发起机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="7f825e92-e19c-4522-a833-1e7861db9bee" name="原包报文编号" binding="oriPackMsgNo" caption="原包报文编号"/>
+      <widgetRefs xsi:type="model:Text" id="a7198a5b-418e-446c-b052-ce3c9deb3334" name="原委托日期" binding="oriEntrustDate" caption="原委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="e23caa25-bb6d-4f66-b068-8f40ec9a98d7" name="原包流水号" binding="oriPackNo" caption="原包流水号"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="b0ffec7f-5ba0-4b26-9101-da2d613bd84a">
+    <pages id="474052a3-5450-47c3-a6b3-d167aa8bce30" name="9111包明细重发请求视图">
+      <views id="d674b6f9-56ca-45e8-bd94-190ed7be5b52" name="9111包明细重发请求界面" isdefault="true" contentArea="34a45124-15c0-4629-af50-f21b0981bce7">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="bb349ef0-4fba-4211-b5e8-125a47faa9eb" name="JButtonAreaImpl-bb349ef0-4fba-4211-b5e8-125a47faa9eb">
+          <buttons id="020cbc66-252e-423f-845c-16e6e11bec29" name="发送" caption="发送" direction="163db117-a4fd-4105-b435-eb060bb31e6e"/>
+          <buttons id="032399cb-05ff-4e02-b04c-95e385c23940" name="关闭" caption="关闭" direction="a1c58438-1589-402f-942e-325ee5e19394"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

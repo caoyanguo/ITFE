@@ -1,0 +1,13 @@
+#foreach($tabName in $InsTasTableList)
+delete from ${tabName.getSrctable()};
+#end
+
+#foreach($tabName in $InsTasTableList)
+import from ${tabName.getSrctable()}.del of del insert into ${tabName.getSrctable()} ;
+#end
+	
+	
+#foreach($tabName in $InsTasTableList)
+export to ${tabName.getSrctable()}.del of del select * from ${tabName.getSrctable()} ;
+#end
+	

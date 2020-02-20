@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="dce380b6-7f46-4b58-ac99-a19187cbe2c8" name="用户盖章权限维护" ename="TsUserstampfunction" shared="true">
+  <jproperties id="e1b1a158-b646-4b9e-ac1c-667101fba3a1" key="GeneratedTime" value="1330914322375"/>
+  <refModule href="JModule_db15c410-3a8b-4b4e-a8bc-0d2628adeb4c.model#db15c410-3a8b-4b4e-a8bc-0d2628adeb4c"/>
+  <model id="f77232f2-a949-4f43-889f-664c39a2a4e9" name="JModelImpl-f77232f2-a949-4f43-889f-664c39a2a4e9">
+    <attributes id="89b75aa0-4609-486b-9b05-e77c13f9cb4b" name="dto" type="com.cfcc.itfe.persistence.dto.TsUserstampfunctionDto"/>
+    <directions id="65b889ee-0d49-40e4-8af2-9fd8cdd81a4a" viewers="a29fd2f5-072e-4ee3-b46c-9cabb6920a33" name="跳转录入界面" ename="goInput"/>
+    <directions id="a8013a97-ad5b-43e0-b839-085df4e99e7d" name="录入保存" ename="inputSave"/>
+    <directions id="9db7dd16-f32d-4dda-9c14-036a7ff19d0b" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="7d69fe48-2b91-4311-bcfd-eb5730248186" name="单选" ename="singleSelect"/>
+    <directions id="e43a0497-44f9-4956-bd17-d1a49651c904" name="删除" ename="delete"/>
+    <directions id="654c1919-db40-4426-9be5-f76852290692" name="到修改界面" ename="goModify"/>
+    <directions id="7713fd62-22d3-4ad1-ac75-9fc09a453dd4" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_34cd66a9-a794-440b-9b17-cf263c9a0919.model#34cd66a9-a794-440b-9b17-cf263c9a0919"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="2022b2a1-d4a1-4ad4-8ee2-6060441bd54a">
+    <contentareanode id="852307ab-066f-4586-8345-23246c969df2" name="机构选择" grouptitle="机构选择" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="309a5561-8cf3-4f4c-b9bd-165db563bcf8" name="sorgcode" binding="selectorgcode" caption="所属机构" readonly="false" display="sorgname" underly="sorgcode" modelsource="orginfoList" enumparam=""/>
+    </contentareanode>
+    <contentareanode id="a2d3f12e-c096-4836-8238-c2c6b72a9aa0" name="维护查询结果" grouptitle="用户列表">
+      <widgetRefs xsi:type="model:Table" id="0fe1ec23-0e73-4c61-bdb3-e0f092e25343" name="maintenanceResult" binding="userStampList" caption="用户与电子签章列表" tabletype="" pagingtable="" refsingleclickdirection="7d69fe48-2b91-4311-bcfd-eb5730248186" height="400">
+        <columnlist id="56147d6c-ec45-40e9-a132-0691c6d5d1af" name="susercode" binding="susercode" caption="操作员代码"/>
+        <columnlist id="3a7d1a25-4d79-4930-a4ce-844f172095bc" name="susername" binding="susername" caption="操作员名称"/>
+        <columnlist id="283b904a-690c-40c2-b71f-8c9d370bb123" name="sstamptypecode" binding="sstamptypecode" caption="签章类型代码"/>
+        <columnlist id="11ac1dff-fedf-4801-a3b9-8a8614fd2143" name="sstamptypename" binding="sstamptypename" caption="签章类型名称"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode xsi:type="model:JContentAreaSeparator" name="" grouptitle="" binding="" layout="" layoutdata="" specify="" processors=""/>
+    <contentareanode id="d10d3d56-36b0-4d71-9b66-ecf49d73c20c" name="盖章位置维护" grouptitle="盖章位置维护" columnnum="2">
+      <widgetRefs xsi:type="model:Table" id="0e2375d8-aee2-4763-ba94-48761c06d3e3" name="maintenanceResult" binding="userStampInfoList" caption="用户与电子签章列表" tabletype="" pagingtable="" showcheckbox="true" selectedrows="userStampInfoCheckList" refsingleclickdirection="7d69fe48-2b91-4311-bcfd-eb5730248186" height="500">
+        <columnlist id="952af35b-f54b-4f1f-a651-1afea91ca7b7" name="smodelid" binding="smodelid" caption="模板ID"/>
+        <columnlist id="b20643dc-0b65-4676-ae71-ae27976757e4" name="soperationtype" binding="soperationtypename" caption="业务凭证名称"/>
+        <columnlist id="fcde82c3-9cbb-4537-866b-b61bf3e5e176" name="splaceid" binding="splaceid" caption="签章位置标识"/>
+        <columnlist id="1bad434d-e0cf-484c-ad10-0421a5e0e9ff" name="splacedesc" binding="splacedesc" caption="签章位置描述"/>
+        <columnlist id="00fb65af-c335-419c-b032-48d29dc803c5" name="sstamptypename" binding="sstamptypename" caption="签章类型名称"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="ee1e14e1-f80e-49bb-9163-d07ad3400519">
+    <pages id="4de00c0d-ef6d-45b2-bd27-4a9dcdfada57" name="维护用户盖章权限维护">
+      <views id="a29fd2f5-072e-4ee3-b46c-9cabb6920a33" name="录入界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.LeftToRightViewerImpl" contentArea="852307ab-066f-4586-8345-23246c969df2 a2d3f12e-c096-4836-8238-c2c6b72a9aa0 //@contentAreas/@contentareanode.2 d10d3d56-36b0-4d71-9b66-ecf49d73c20c">
+        <buttonArea id="1d4d2cf0-3412-4099-acd1-d08f4bbe5af0" name="JButtonAreaImpl-1d4d2cf0-3412-4099-acd1-d08f4bbe5af0">
+          <buttons id="9c23825d-ebf0-400f-a41d-07740fd198fc" name="保存" caption="保存" direction="a8013a97-ad5b-43e0-b839-085df4e99e7d"/>
+          <buttons id="0ce66380-af68-4b16-8c41-88baa8379cb9" name="modifyBack" caption="关闭" direction="9db7dd16-f32d-4dda-9c14-036a7ff19d0b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

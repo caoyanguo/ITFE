@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="72b48a73-9b39-4e4e-98b0-19856d7d7989" name="库存日报表查询服务组件" ename="TrStockdayrpt">
+  <jproperties id="36b924b0-447d-44fb-b989-15ca598f95e2" key="GeneratedTime" value="1403002721312"/>
+  <refModule href="JModule_5bb909c0-75d8-4906-997e-e95dc0cdf888.model#5bb909c0-75d8-4906-997e-e95dc0cdf888"/>
+  <methods id="b235463f-cae4-4057-b955-3fcac68a9599" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="库存日报表查询">
+    <methodParams id="fba8cfa9-d469-417a-a490-636845a5a10b" name="库存日报表查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="2df56bbc-1765-4d8f-b2ea-6e14f90a8b0f" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="036f33bc-1ac4-48f0-aeac-4097a5e6da99" name="库存日报表查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="2df56bbc-1765-4d8f-b2ea-6e14f90a8b0f" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a89d9438-5984-4d9f-8d64-1a8eabad977c" name="库存日报表查询" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="cf14f43b-5284-4e10-8a38-bb07ab185656" ename="findTotalBalForExport" name="查询同日同账户余额累计数据（当前和历史）" returntype="java.util.List">
+    <methodParams id="11dc3bc8-e923-44e3-a1f4-f2c7043daf27" name="库存日报表信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="d19bc3da-6b66-4227-9380-4ef496ca413c" name="财政标志参数对照信息" ename="finddtolist" type="java.util.List"/>
+    <methodParams id="dfc950b4-1f2a-4be4-89f3-cdee7161bcf1" name="起始日期" ename="startDate" type="java.lang.String"/>
+    <methodParams id="01b9d6b7-3dc0-42e4-a117-f03adab20234" name="终止日期" ename="endDate" type="java.lang.String"/>
+  </methods>
+  <methods id="721edf03-5f20-414f-a19b-eee27d6bdc47" ename="findAcctName" name="根据账号查询户名" returntype="java.lang.String">
+    <methodParams id="cd305dcc-760e-4644-ac34-c6c3c7671025" name="账号" ename="acctNo" type="java.lang.String"/>
+    <methodParams id="28624ca7-8a88-4e7f-93a9-01d0052bbdc7" name="起始日期" ename="startDate" type="java.lang.String"/>
+    <methodParams id="f5d26a4e-d135-4108-b93c-5c478142dbbc" name="终止日期" ename="endDate" type="java.lang.String"/>
+  </methods>
+  <methods id="57096260-4c69-40c1-a2f0-7d35afe40a4d" ename="findRsByDtoWithWhere" name="根据条件查找记录" returntype="java.util.List">
+    <methodParams id="97037de8-77dc-406b-bc8c-18403717373b" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="f7d91600-3879-4d3d-a106-5718f1c11e7c" name="where" ename="where" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

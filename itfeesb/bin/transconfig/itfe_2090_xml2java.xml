@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="DeHead2090" beanIdRef="DeHead2090" />
+	<jb:wiring property="Declare2090" beanIdRef="Declare2090" />
+</jb:bean>
+<jb:bean beanId="DeHead2090" class="java.util.HashMap" createOnElement="DeHead2090">
+	<jb:value property="BankNo" decoder="String" data="CFX/MSG/DeHead2090/BankNo" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/DeHead2090/EntrustDate" />
+	<jb:value property="LevyNo" decoder="String" data="CFX/MSG/DeHead2090/LevyNo" />
+</jb:bean>
+<jb:bean beanId="Declare2090" class="java.util.HashMap" createOnElement="Declare2090">
+	<jb:value property="TaxPayCode" decoder="String" data="CFX/MSG/Declare2090/TaxPayCode" />
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/Declare2090/TaxOrgCode" />
+	<jb:value property="PayOpBkCode" decoder="String" data="CFX/MSG/Declare2090/PayOpBkCode" />
+	<jb:value property="PayAcct" decoder="String" data="CFX/MSG/Declare2090/PayAcct" />
+	<jb:value property="HandOrgName" decoder="String" data="CFX/MSG/Declare2090/HandOrgName" />
+	<jb:value property="LevyState" decoder="String" data="CFX/MSG/Declare2090/LevyState" />
+	<jb:value property="OuterLevyNo" decoder="String" data="CFX/MSG/Declare2090/OuterLevyNo" />
+	<jb:value property="TraAmt" decoder="String" data="CFX/MSG/Declare2090/TraAmt" />
+	<jb:value property="DetailNum" decoder="String" data="CFX/MSG/Declare2090/DetailNum" />
+	<jb:value property="TaxTypeList2090" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090" />
+	<jb:wiring property="TaxTypeList2090" beanIdRef="TaxTypeList2090s" />
+	<jb:wiring property="TaxSubjectList2090" beanIdRef="TaxSubjectList2090s" />
+</jb:bean>
+<jb:bean beanId="TaxTypeList2090s" class="java.util.ArrayList" createOnElement="Declare2090">
+	<jb:wiring beanIdRef="TaxTypeList2090" />
+</jb:bean>
+<jb:bean beanId="TaxTypeList2090" class="java.util.HashMap" createOnElement="TaxTypeList2090">
+	<jb:value property="ProjectId" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090/ProjectId" />
+	<jb:value property="TaxTypeCode" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090/TaxTypeCode" />
+	<jb:value property="TaxStartDate" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090/TaxStartDate" />
+	<jb:value property="TaxEndDate" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090/TaxEndDate" />
+	<jb:value property="TaxType" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090/TaxType" />
+	<jb:value property="TaxTypeAmt" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090/TaxTypeAmt" />
+	<jb:value property="DetailNum" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090/DetailNum" />
+	<jb:value property="TaxSubjectList2090" decoder="String" data="CFX/MSG/Declare2090/TaxTypeList2090/TaxSubjectList2090" />
+</jb:bean>
+<jb:bean beanId="TaxSubjectList2090s" class="java.util.ArrayList" createOnElement="Declare2090">
+	<jb:wiring beanIdRef="TaxSubjectList2090" />
+</jb:bean>
+<jb:bean beanId="TaxSubjectList2090" class="java.util.HashMap" createOnElement="TaxSubjectList2090">
+	<jb:value property="DetailNo" decoder="String" data="CFX/MSG/Declare2090/TaxSubjectList2090/DetailNo" />
+	<jb:value property="TaxSubjectCode" decoder="String" data="CFX/MSG/Declare2090/TaxSubjectList2090/TaxSubjectCode" />
+	<jb:value property="TaxNumber" decoder="String" data="CFX/MSG/Declare2090/TaxSubjectList2090/TaxNumber" />
+	<jb:value property="TaxAmt" decoder="String" data="CFX/MSG/Declare2090/TaxSubjectList2090/TaxAmt" />
+	<jb:value property="FactTaxAmt" decoder="String" data="CFX/MSG/Declare2090/TaxSubjectList2090/FactTaxAmt" />
+</jb:bean>
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

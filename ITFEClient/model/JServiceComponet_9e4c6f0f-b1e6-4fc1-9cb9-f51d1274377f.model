@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9e4c6f0f-b1e6-4fc1-9cb9-f51d1274377f" name="两表数据校验" ename="DataCheck">
+  <jproperties id="b9e531e1-c8e3-4a63-bf0e-a03a7329311d" key="GeneratedTime" value="1256466344703"/>
+  <refModule href="JModule_de1e9ed7-43d5-41a2-9a72-c90eec5c97a2.model#de1e9ed7-43d5-41a2-9a72-c90eec5c97a2"/>
+  <methods id="d23e7fb5-07c0-452d-9a02-ebbe586596e8" ename="datacheck" name="两表数据校验" codecomment="两表数据校验" returntype="java.lang.Boolean">
+    <methodParams id="3a7845f4-fc7b-4040-bc41-380d9d0bc8aa" name="批次号" ename="batchNum" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

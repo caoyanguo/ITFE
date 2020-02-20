@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6e7c84eb-2374-4878-b2bc-8f1bc1aab107" name="浙江专用数据加载" ename="UploadUIForZj">
+  <jproperties id="a6ab0e53-ef32-48e8-b7e7-b30c8a948853" key="GeneratedTime" value="1406016573107"/>
+  <refModule href="JModule_5eb35bb9-99eb-4840-9be6-1e434f8b6030.model#5eb35bb9-99eb-4840-9be6-1e434f8b6030"/>
+  <model id="cea34a89-709f-46da-a211-13b8919942db" name="JModelImpl-cea34a89-709f-46da-a211-13b8919942db">
+    <attributes id="f0831ada-51bc-4b5d-8158-90984232592b" name="fileList" type="java.util.List"/>
+    <directions id="03e8b088-60bf-4dc1-8cd3-f1861affec91" name="数据加载提交" ename="upload"/>
+    <directions id="2e2421f3-d513-458f-9f7b-f03ad3f20b99" name="关闭窗口" ename="close"/>
+    <directions id="48c4bbfe-8a30-4e89-8208-9b70cdb61e60" viewers="7bf1b737-a674-4b5a-88ce-d25372558f95" name="跳转收入确认提交" ename="gotocommitincome"/>
+    <directions id="5e97e989-e2e7-40b6-83a7-7de27b8cb2eb" viewers="ae9a424e-5e95-47a3-9301-a7b99c72b063" name="收入确认提交" ename="commitincome"/>
+    <directions id="0bef51bb-dc92-4fca-bd54-bc1269452c74" viewers="ae9a424e-5e95-47a3-9301-a7b99c72b063" name="删除错误数据" ename="delErrorData"/>
+    <directions id="4040efad-0509-4032-b764-5c37a539d627" name="查询文件列表" ename="searchFileListBySrlno"/>
+    <directions id="850cf11a-37f7-4257-9237-79501cc1237c" viewers="ae9a424e-5e95-47a3-9301-a7b99c72b063" name="返回到数据加载窗口" ename="goback"/>
+  </model>
+  <services href="JServiceComponet_ffb22940-9c6a-4a02-a78a-9226f96b415a.model#ffb22940-9c6a-4a02-a78a-9226f96b415a"/>
+  <services href="JServiceComponet_57de2d37-319f-4c04-b5c7-80f8cc83f6b4.model#57de2d37-319f-4c04-b5c7-80f8cc83f6b4"/>
+  <contentAreas id="eb214877-99d6-4ab0-9228-ebbdaf1fc7a0">
+    <contentareanode id="f353a6a8-cc11-455c-98b1-990a74bd8537" name="数据加载内容">
+      <widgetRefs xsi:type="model:FileUploader" id="3b5f9a14-a4f7-4dfd-abae-d365687b099e" name="FileUploaderImpl-3b5f9a14-a4f7-4dfd-abae-d365687b099e" binding="fileList" caption="加载文件路径" enable="true" editable="true" pattern="" isdirectory="false" ismult="true">
+        <labelStyle id="b7f4f8cb-dad1-41b8-a72e-f9bb19022eb1" name="LabelStyleImpl-b7f4f8cb-dad1-41b8-a72e-f9bb19022eb1" ename="LabelStyleImplb7f4f8cbdad141b8a72ef9bb19022eb1" labelwidth="80"/>
+        <componentStyle id="cea656ba-09bb-4979-8358-119ccd3a1518" name="ComponentStyleImpl-cea656ba-09bb-4979-8358-119ccd3a1518" ename="ComponentStyleImplcea656ba09bb49798358119ccd3a1518" horizontalspan="2" innercompositewidth="300"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="723e7143-ad70-43d8-b2ba-e2128ae91eb3" name="下面要素为收入业务处理专用" grouptitle="下面要素为收入业务处理专用">
+      <widgetRefs xsi:type="model:Text" id="54bcc6fe-1342-409e-a73c-e0785cb31a62" name="资金收纳流水号" binding="inputsrlnodto.strasrlno" caption="资金收纳流水号"/>
+    </contentareanode>
+    <contentareanode id="eca31678-7608-4c0e-906f-02aca5d39b6c" name="下面要素为支出类业务处理专用（直接、授权、实拨）" grouptitle="下面要素为支出类业务处理专用（直接、授权、实拨）">
+      <widgetRefs xsi:type="model:Text" id="48083f9c-e1e3-4081-9bad-96bd870ecad7" name="文件总金额" binding="inputsrlnodto.nmoney" caption="文件总金额"/>
+    </contentareanode>
+    <contentareanode id="712cdddd-ef3f-4ef2-a711-70d904006088" name="提交确认条件" grouptitle="提交确认条件">
+      <widgetRefs xsi:type="model:Text" id="d7aeaba0-16ca-4805-bf00-1862c8fe314a" name="资金收纳流水号" binding="affirmsrlnodto.strasrlno" caption="资金收纳流水号"/>
+      <widgetRefs xsi:type="model:Text" id="7ef82858-b899-4b6b-b8b0-4c61ffeaae4c" name="资金流水总金额" binding="affirmsrlnodto.nmoney" caption="资金流水总金额"/>
+    </contentareanode>
+    <contentareanode id="e01c2be1-aa67-4913-94d8-39ab1b436a3f" name="确认提交列表" grouptitle="确认提交列表">
+      <widgetRefs xsi:type="model:Table" id="e2290355-3c86-46b6-bca9-e2c6f3e481ea" name="确认信息列表" binding="affirmList" caption="确认信息列表" showcheckbox="true" selectedrows="checkFileList">
+        <columnlist id="57ed39d1-d7df-411a-9c07-a564ace764dc" name="资金收纳流水号" binding="strasrlno" caption="资金收纳流水号"/>
+        <columnlist id="ac1c583f-a966-4208-a2c0-e07f2606b27e" name="文件名称" binding="sfilename" caption="文件名称"/>
+        <columnlist id="dd10f1b3-0193-4e92-90b2-c8108f923df3" name="总金额" binding="nmoney" caption="总金额"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="eaf4e2c0-1183-4a88-ae0b-557a3f020109">
+    <pages id="2cb3d03f-24c8-478c-a727-8660468c3eb9" name="数据加载页面">
+      <views id="ae9a424e-5e95-47a3-9301-a7b99c72b063" name="数据加载界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="f353a6a8-cc11-455c-98b1-990a74bd8537 723e7143-ad70-43d8-b2ba-e2128ae91eb3 eca31678-7608-4c0e-906f-02aca5d39b6c">
+        <buttonArea id="fd4ed88f-e4f9-45c7-9e3f-3a2cdac566c9" name="数据加载按钮">
+          <buttons id="c117620b-ac34-4d32-984d-9aedb8f4634d" name="数据加载" visible="true" caption="数据加载" enable="true" direction="03e8b088-60bf-4dc1-8cd3-f1861affec91"/>
+          <buttons id="4491ef79-c15d-4c48-ab42-782100fd6597" name="收入确认提交" caption="收入确认提交" direction="48c4bbfe-8a30-4e89-8208-9b70cdb61e60"/>
+        </buttonArea>
+      </views>
+      <views id="7bf1b737-a674-4b5a-88ce-d25372558f95" name="收入确认提交" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="712cdddd-ef3f-4ef2-a711-70d904006088 e01c2be1-aa67-4913-94d8-39ab1b436a3f">
+        <buttonArea id="22d849a8-827b-4319-b7aa-ab46bfda52a2" name="JButtonAreaImpl-22d849a8-827b-4319-b7aa-ab46bfda52a2">
+          <buttons id="7b54f2ae-8689-4879-b6a7-191d741cf345" name="查询" caption="查询" direction="4040efad-0509-4032-b764-5c37a539d627"/>
+          <buttons id="9583e8ca-014e-48a9-8d75-8de5c658e26b" name="确认提交" caption="确认提交" direction="5e97e989-e2e7-40b6-83a7-7de27b8cb2eb"/>
+          <buttons id="68bfb2ed-979d-46ca-8afd-9513aa996bd2" name="删除" caption="删除" direction="0bef51bb-dc92-4fca-bd54-bc1269452c74"/>
+          <buttons id="16bdbbe8-9752-4294-a579-07180928d397" name="返回" visible="true" caption="返回" enable="true" direction="850cf11a-37f7-4257-9237-79501cc1237c"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

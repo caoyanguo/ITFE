@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="cf124442-4ac0-4704-a0a0-9e989a2a5a35" name="数据备份" ename="dataBackup" shared="true">
+  <jproperties id="18f41c99-0820-4b0d-88df-9522a09493b9" key="GeneratedTime" value="1344266883853"/>
+  <refModule href="JModule_9af065ba-d7f2-4b75-b0cd-3e8bee81b40f.model#9af065ba-d7f2-4b75-b0cd-3e8bee81b40f"/>
+  <methods id="c8332e26-16dd-47b6-bcf6-7ebca3271394" ename="databackup" name="数据备份" codecomment="按照核算主体代码进行数据备份" returntype="java.util.List" remark="返回一个包含所有备份文件的完整路径列表">
+    <methodParams id="671a62cd-7f34-433f-9751-5997fa7e7a4b" name="机构代码" ename="sorgcode" type="java.lang.String" codecomment="核算主体代码"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5bf516b9-b956-4c57-a4af-9532af537da9" name="商行办理支付划款申请退回查询处理" ename="commApplyPayBackQuery">
+  <jproperties id="31a2faca-6789-4363-b921-f8f0de167a23" key="GeneratedTime" value="1433839697671"/>
+  <refModule href="JModule_87c56a03-15af-4d52-9d24-d8e45427dcdd.model#87c56a03-15af-4d52-9d24-d8e45427dcdd"/>
+  <model id="73ba307b-e4da-46dd-89c0-d6394fceb31c" name="JModelImpl-73ba307b-e4da-46dd-89c0-d6394fceb31c">
+    <attributes id="b34b8df7-7012-4b40-8a43-fa52a7a0ad8a" name="selectDataList" type="java.util.List"/>
+    <directions id="3adc3498-592e-44c7-9bdd-4e9b266e07b7" viewers="74f7ce16-37d2-4250-bced-a9b31d5e17d3" name="查询列表事件" ename="searchList"/>
+    <directions id="7d0e53d0-3c8d-48d6-8a89-a4614d310024" viewers="b57a3388-989c-4086-bbeb-0d606cdbfc57" name="返回查询界面" ename="rebackSearch"/>
+    <directions id="21e5e41e-f6e5-423c-8d19-b0787c88859e" name="主信息双击事件" ename="doubleclickMain"/>
+    <directions id="5fa32079-1ad2-4d74-ac7e-9872adad8a32" name="主信息单击事件" ename="singleclickMain"/>
+    <directions id="77f6e1bd-c8be-4048-8c85-e6cb73f54bca" name="导出txt" ename="exportCommApplyPayBack"/>
+    <directions id="ac095cad-f9da-4717-9771-23849f2d6bbe" name="导出选中回单" ename="exportSelectData"/>
+    <directions id="00208a43-d981-4175-b5f3-b5ccec70dea7" name="导出文件CSV" ename="exportFile"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_f16d8d05-2f24-4af0-804b-eca52cba474b.model#f16d8d05-2f24-4af0-804b-eca52cba474b"/>
+  <contentAreas id="d74cc2a8-93f4-48c4-9845-fff0dbd4d429">
+    <contentareanode id="c54a1179-9b3b-4fc4-866d-a1399e7f7b72" name="商行办理支付划款申请退回查询界面" grouptitle="商行办理支付划款申请退回查询界面">
+      <widgetRefs xsi:type="model:Text" id="8276f939-26a9-4737-9efa-22d041e8b0bb" name="国库主体代码" binding="finddto.strecode" caption="国库主体代码"/>
+      <widgetRefs xsi:type="model:Text" id="fbea1bb6-dcc2-4286-9450-8f4f7f058954" name="包流水号" binding="finddto.spackno" caption="包流水号"/>
+      <widgetRefs xsi:type="model:Text" id="9136066c-55c4-403d-8e55-187096bb1ec6" name="委托日期起" binding="dentrustdatestart" caption="委托日期起"/>
+      <widgetRefs xsi:type="model:Text" id="c8ec269f-54b5-4841-a5b7-6297f759f726" name="委托日期止" binding="dentrustdateend" caption="委托日期止"/>
+      <widgetRefs xsi:type="model:Combo" id="149627de-a7da-4ac2-b92c-2ed18eab9d51" name="支付方式" binding="finddto.spaymode" caption="支付方式" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#885c9c45-d96e-45c4-b4b2-999539f84772"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="3165b181-0966-4be1-935b-5afb5d1f6bcf" name="文件名称" binding="finddto.sfilename" caption="文件名称"/>
+      <widgetRefs xsi:type="model:Text" id="2004c3d5-41b0-41de-b519-ef7ca4d4e13c" name="财政机关代码" binding="finddto.sfinorgcode" caption="财政机关代码"/>
+      <widgetRefs xsi:type="model:Text" id="b4b96935-fb95-4ad1-8173-64025c194029" name="凭证编号" binding="finddto.svouno" caption="凭证编号"/>
+      <widgetRefs xsi:type="model:Text" id="ba2532d9-1f7e-447e-b789-bbd6f1a46e29" name="凭证日期" binding="dvoudate" caption="凭证日期"/>
+      <widgetRefs xsi:type="model:Text" id="c27c6b04-d457-4d03-aedd-d92aefc0a5dc" name="交易金额" binding="finddto.famt" caption="交易金额">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#fc188264-5e10-43b4-a500-1106d2f93af1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8c3f4769-009b-4ee5-9242-1292a1e9735d" name="付款人账号" binding="finddto.spayeracct" caption="付款人账号"/>
+      <widgetRefs xsi:type="model:Text" id="e4371a80-b3e4-46e9-afcd-7111dda378a6" name="收款人账号" binding="finddto.spayeeacct" caption="收款人账号"/>
+      <widgetRefs xsi:type="model:Text" id="713a7e2e-0289-43a5-bb26-0897d766c10a" name="原交易流水号" binding="finddto.soritrano" caption="原交易流水号"/>
+      <widgetRefs xsi:type="model:Text" id="212705d9-9432-4bd3-b343-4f8b326f6fbc" name="原委托日期" binding="dorientrustdate" caption="原委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="3651e5c5-a3a2-45b5-9491-a276846e6e8a" name="原凭证编号" binding="finddto.sorivouno" caption="原凭证编号"/>
+      <widgetRefs xsi:type="model:Text" id="ed845395-1b9c-4413-835c-1444e42ec6c9" name="原凭证日期" binding="dorivoudate" caption="原凭证日期"/>
+      <widgetRefs xsi:type="model:Text" id="43397c3d-0637-47bc-8a6c-8bfd359d9621" name="支付交易序号" binding="finddto.spaydictateno" caption="支付交易序号"/>
+      <widgetRefs xsi:type="model:Text" id="11050761-d700-4162-8bd4-0c2e2854ea3e" name="支付报文编号 " binding="finddto.spaymsgno" caption="支付报文编号 "/>
+      <widgetRefs xsi:type="model:Text" id="75df431a-7dfc-4753-91bd-d6d46810f549" name="支付委托日期 " binding="dpayentrustdate" caption="支付委托日期 "/>
+      <widgetRefs xsi:type="model:Text" id="51f66123-97fc-4809-9610-e92f1fe12972" name="支付发起行行号" binding="finddto.spaysndbnkno" caption="支付发起行行号"/>
+      <widgetRefs xsi:type="model:Text" id="e08958b6-2ac8-4253-9a1a-b7e9dc72f468" name="所属年度" binding="finddto.sofyear" caption="所属年度"/>
+      <widgetRefs xsi:type="model:Combo" id="c41f6744-5a5a-4814-9492-94ab51f68215" name="交易状态" binding="finddto.sstatus" caption="交易状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="8be27551-7447-42ec-893d-b50922e8b5f9" name="调整期标志" binding="finddto.strimsign" caption="调整期标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="344f8d54-bd8d-4770-b36a-8f651421cea5" name="预算种类" binding="finddto.sbudgettype" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="90233a6b-fd9e-4e03-a349-b792b8a9363d" name="科目代码" binding="expfunccode" caption="科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="b335c047-501a-49bd-b477-798f98bb1b89" name="明细金额" binding="payamt" caption="明细金额"/>
+    </contentareanode>
+    <contentareanode id="e81b450a-9117-4cac-85db-cf32ab399fce" name="商行办理支付划款申请退回主表信息列表" grouptitle="商行办理支付划款申请退回主表信息列表">
+      <widgetRefs xsi:type="model:Table" id="856d0878-5346-4073-a994-b9a9142431ef" name="商行办理支付划款申请退回主表信息列表" binding="mainCommApplyPayBackBean.maintablepage" caption="商行办理支付划款申请退回主表信息列表" tabletype="paging" showcheckbox="true" selectedrows="selectDataList" refdoubleclickdirection="21e5e41e-f6e5-423c-8d19-b0787c88859e" refsingleclickdirection="5fa32079-1ad2-4d74-ac7e-9872adad8a32" height="300">
+        <columnlist id="b4589f05-e25c-4bbc-8598-dea0a4e68cdd" name="包流水号" binding="spackno" caption="包流水号"/>
+        <columnlist id="cbe1cbaf-d179-4fd9-8cf4-b0930b6fc3df" name="国库主体代码" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="6531518a-6e1e-4af7-88c5-e661b29c7ada" name="支付交易序号" binding="spaydictateno" caption="支付交易序号"/>
+        <columnlist id="48e2726c-7814-4c59-82af-a7d043a405b4" name="支付报文编号" binding="spaymsgno" caption="支付报文编号"/>
+        <columnlist id="9fd4046a-52d0-4915-bd02-8969bcedebe0" name="支付发起行行号" binding="spaysndbnkno" caption="支付发起行行号"/>
+        <columnlist id="25a79c4a-a422-4673-9c6f-7e3ba8d9acd7" name="财政机关代码" binding="sfinorgcode" caption="财政机关代码"/>
+        <columnlist id="4329c24f-8db8-464a-b1f0-c3bdb26e4c86" name="委托日期" binding="dentrustdate" caption="委托日期"/>
+        <columnlist id="bbdece66-d175-4cdf-a52a-d0a50fc819af" name="交易金额" binding="famt" caption="交易金额"/>
+        <columnlist id="ef701e7d-bf20-4ae3-b6a3-f6285048b7be" name="凭证编号" binding="svouno" caption="凭证编号"/>
+        <columnlist id="ccf28da2-7e3e-4328-a33a-b874202cbce3" name="支付委托日期" binding="dpayentrustdate" caption="支付委托日期"/>
+        <columnlist id="e4dececc-2e28-4ec9-a1e2-8b54e2b3bdca" name="原交易流水号" binding="soritrano" caption="原交易流水号"/>
+        <columnlist id="d0bafd36-4700-4c90-a45a-a292f7fd97f1" name="原委托日期" binding="dorientrustdate" caption="原委托日期"/>
+        <columnlist id="9d68610b-a6e5-4d60-a460-e2dcc4fa225e" name="原凭证编号" binding="sorivouno" caption="原凭证编号"/>
+        <columnlist id="f4cb5620-9e19-40cf-a73b-12186a48e311" name="所属年度 " binding="sofyear" caption="所属年度 "/>
+        <columnlist id="562fd4fe-a3e7-4f49-8465-16df400f1266" name="交易状态" binding="sstatus" caption="交易状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        </columnlist>
+        <columnlist id="6ca4f9e9-9f71-45dd-a309-805f9d942705" name="文件名称" binding="sfilename" caption="文件名称"/>
+        <columnlist id="326eedcd-588a-41fa-957f-bc3ec22d6331" name="支付方式" binding="spaymode" caption="支付方式">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#885c9c45-d96e-45c4-b4b2-999539f84772"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="18b787a8-57bd-4fe5-9c28-cf435ed1ee86" name="商行办理支付划款申请退回明细信息列表" grouptitle="商行办理支付划款申请退回明细信息列表">
+      <widgetRefs xsi:type="model:Table" id="7ca9c238-a161-4a58-a647-07364cef16a0" name="商行办理支付划款申请退回明细信息列表" binding="subCommApplyPayBackBean.subtablepage" caption="商行办理支付划款申请退回明细信息列表" tabletype="paging" height="200">
+        <columnlist id="ee57b55a-f53a-4809-9669-c4f2b6eb2820" name="组内序号" binding="iseqno" caption="组内序号"/>
+        <columnlist id="c039d7e8-f50d-48e4-aebe-69663af4ee17" name="原凭证编号" binding="sorivouno" caption="原凭证编号"/>
+        <columnlist id="d238ec1b-42c9-41cd-a0bd-b2103fd45628" name="原凭证日期" binding="dorivoudate" caption="原凭证日期"/>
+        <columnlist id="3d4fd3db-c13f-47fe-89df-a0eb5e9f11d2" name="预算单位代码" binding="sbdgorgcode" caption="预算单位代码"/>
+        <columnlist id="5ebd6eb4-a29d-40e4-be1b-ad12e1bc2a0c" name="功能类科目代码" binding="sfuncbdgsbtcode" caption="功能类科目代码"/>
+        <columnlist id="c025e7f6-3233-4195-b9cb-6276486a1557" name="经济类科目代码" binding="secnomicsubjectcode" caption="经济类科目代码"/>
+        <columnlist id="4361632d-fea0-4061-aa53-b94860cbe38b" name="账户性质" binding="sacctprop" caption="账户性质"/>
+        <columnlist id="e49ecc2c-fc61-448c-b5cb-337044ee3993" name="金额" binding="famt" caption="金额"/>
+        <columnlist id="a69794d2-b8bc-46a6-aff2-80e8d9af9740" name="系统更新时间" binding="tsupdate" caption="系统更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="73a71475-bab7-4c66-8623-65bea161a672">
+    <pages id="29372aa5-530b-4837-a489-a4a349ef4e4c" name="商行办理支付划款申请退回视图信息">
+      <views id="b57a3388-989c-4086-bbeb-0d606cdbfc57" name="商行办理支付划款申请退回查询界面" isdefault="true" contentArea="c54a1179-9b3b-4fc4-866d-a1399e7f7b72">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="dda7ebdf-2c61-49b4-8979-7d3d28876af4" name="JButtonAreaImpl-dda7ebdf-2c61-49b4-8979-7d3d28876af4">
+          <buttons id="f446f0d5-f426-4013-b810-3eb2e0fb0ffb" name="查询" caption="查询" direction="3adc3498-592e-44c7-9bdd-4e9b266e07b7"/>
+        </buttonArea>
+      </views>
+      <views id="74f7ce16-37d2-4250-bced-a9b31d5e17d3" name="商行办理支付划款申请退回主表信息界面" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="e81b450a-9117-4cac-85db-cf32ab399fce 18b787a8-57bd-4fe5-9c28-cf435ed1ee86">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="0487556e-1a85-4664-972e-307afb9bc115" name="JButtonAreaImpl-0487556e-1a85-4664-972e-307afb9bc115">
+          <buttons id="5c69d143-49a5-40a4-a69a-2856a311dfec" name="返回" caption="返回" direction="7d0e53d0-3c8d-48d6-8a89-a4614d310024"/>
+          <buttons id="15b50ac4-854c-4a1c-bfde-d7f5e99a5dd5" name="导出TXT" caption="导出全部回单" direction="77f6e1bd-c8be-4048-8c85-e6cb73f54bca"/>
+          <buttons id="55c83fa7-8852-4a87-9874-72591e420227" name="导出选中回单" caption="导出选中回单" direction="ac095cad-f9da-4717-9771-23849f2d6bbe"/>
+          <buttons id="f04ca776-cb87-462a-a079-a2a1bfbec44e" name="导出文件" caption="导出文件" direction="00208a43-d981-4175-b5f3-b5ccec70dea7"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#f1b3782c-7190-4ede-8194-7c819304d738"/>
+</model:JUIComponent>

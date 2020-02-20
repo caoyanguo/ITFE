@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="850607cd-76cd-4bdf-84d1-3cd999bca234" name="业务凭证盖章位置" ename="TsOperationplace" shared="true"/>

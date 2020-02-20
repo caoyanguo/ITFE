@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5cdecc34-87e0-4b40-b573-0681a16c73d0" name="盖章位置参数维护" ename="tsstampposition" shared="true"/>

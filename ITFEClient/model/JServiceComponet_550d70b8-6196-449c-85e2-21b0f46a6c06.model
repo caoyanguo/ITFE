@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="550d70b8-6196-449c-85e2-21b0f46a6c06" name="连接性测试服务组件" ename="testConnection">
+  <jproperties id="08de91a6-7f0e-4d7b-87f7-1c2ab939bf32" key="GeneratedTime" value="1492734834985"/>
+  <refModule href="JModule_18e214bc-072f-4211-8998-4aab83b37efa.model#18e214bc-072f-4211-8998-4aab83b37efa"/>
+  <methods id="d647d17e-f3a4-486d-a5a5-af5af0b1c444" ename="sendTestMsg" name="发送测试报文" codecomment="发送测试报文" returntype="java.lang.String">
+    <methodParams id="2eac8a70-1c1a-485e-acb0-00827dfd4f58" name="测试报文接收方节点" ename="srcvMsgNoade" type="java.lang.String" codecomment="测试报文接收方节点"/>
+  </methods>
+  <methods id="2dd156b0-cc91-47dc-b5be-9bf426efa7fd" ename="searchTestResult" name="查询测试结果" codecomment="查询测试结果" returntype="java.util.List">
+    <methodParams id="80582a01-5bf8-42e7-b8f1-744835f1bacc" name="报文编号" ename="sMsgNo" type="java.lang.String" codecomment="报文编号"/>
+    <methodParams id="09e8a272-d47f-4699-bacb-a9277ae859ea" name="查询日期" ename="sMsgDate" type="java.lang.String" codecomment="查询日期"/>
+  </methods>
+  <methods id="c38a933c-def7-4cab-b6a3-f7b0de67aa54" ename="testMsg" name="北京测试" returntype="com.cfcc.devplatform.customtype.Void"/>
+</model:JServiceComponent>

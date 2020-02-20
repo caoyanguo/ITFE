@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="576fd938-a46b-4b69-9b81-7a687fb24374" name="9113收入核对包信息重发请求" ename="incomecheckresendrequest">
+  <jproperties id="91ba0791-b7f5-4cbd-bd4c-819c6e94ccee" key="GeneratedTime" value="1331531143734"/>
+  <refModule href="JModule_bfef4032-621d-4d86-a70b-688c8fad437a.model#bfef4032-621d-4d86-a70b-688c8fad437a"/>
+  <model id="9eb18e57-c737-40b3-b8b7-45caf2bed385" name="JModelImpl-9eb18e57-c737-40b3-b8b7-45caf2bed385">
+    <directions id="0f262ca4-651b-430a-9ea5-e49e96553edd" name="发送" ename="send"/>
+    <directions id="b291ab3a-afed-4f15-a645-5810751a8854" name="关闭" ename="close"/>
+  </model>
+  <services href="JServiceComponet_66ce8b71-c6b0-45da-93cd-b9c55240020d.model#66ce8b71-c6b0-45da-93cd-b9c55240020d"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <contentAreas id="bad37be5-20a5-41c2-a6c2-285153d084e6">
+    <contentareanode id="99b1d0de-6f3a-4507-83f8-7aee44ef1c05" name="9113收入核对包信息重发请求界面" grouptitle="请求信息">
+      <widgetRefs xsi:type="model:Text" id="5ddb4b7f-b06a-404b-982b-6852df963e25" name="发起机构代码" binding="dto.ssendorgcode" caption="发起机构代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="8b47adfb-93df-4960-86e5-e65eaca991fc" name="委托日期" binding="dto.sdate" caption="委托日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="33583fca-6866-44a9-9e6e-1c404faebc1b" name="原包报文编号" binding="dto.soperationtypecode" caption="原包报文编号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="491c689b-943c-4d3a-a64f-49f85f922330" name="原对账日期" binding="dto.ssenddate" caption="原对账日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="3ef59909-9624-4ee7-bc06-e3f6f9706de1" name="原包流水号" binding="dto.spackno" caption="原包流水号"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="f0f8eac8-e47f-42cb-99ab-15c43540b93b">
+    <pages id="c2948348-12fb-4044-8fce-1a10314c06b3" name="9113收入核对包信息重发请求界面">
+      <views id="c10c6ce0-6f7a-43bd-b3cd-266dd41c1bf5" name="9113收入核对包信息重发请求界面" isdefault="true" contentArea="99b1d0de-6f3a-4507-83f8-7aee44ef1c05">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="d2f6321c-dafe-4565-8296-80416bf59a3e" name="JButtonAreaImpl-d2f6321c-dafe-4565-8296-80416bf59a3e">
+          <buttons id="94415f5f-3939-4153-93ad-5da49c1f4f46" name="申请" caption="申请" direction="0f262ca4-651b-430a-9ea5-e49e96553edd"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="dd642004-723a-4aa2-b38e-f5d6e9c80fdf" name="国库收入查询处理" ename="dealIncome">
+  <jproperties id="279b588c-5cbd-4a1f-b6b9-085c21757e87" key="GeneratedTime" value="1437554212796"/>
+  <refModule href="JModule_e3b97f45-7625-4d15-bbe1-26206856b1c7.model#e3b97f45-7625-4d15-bbe1-26206856b1c7"/>
+  <model id="8865b4de-2369-452f-a0fe-f872d01fc3e8" name="JModelImpl-8865b4de-2369-452f-a0fe-f872d01fc3e8">
+    <directions id="285cc629-e691-4a97-83e3-ff40e3aa8dc6" viewers="89249189-c467-4fde-bc2a-963923842762" name="国库收入查询" ename="queryIncome"/>
+    <directions id="2f76df09-f0e1-412e-b5e9-1d775c3a97ce" viewers="89249189-c467-4fde-bc2a-963923842762" name="返回国库收入查询结果" ename="backSearchResult"/>
+    <directions id="565330d8-015d-40f1-9639-31f0a51d94b5" name="单选一条记录" ename="selOneRecode"/>
+    <directions id="271ee8f5-fce2-4156-b126-603901412e86" viewers="2ab467f0-fd09-43b3-bdab-86e5e7e229b0" name="报解清单打印" ename="queryPrint"/>
+    <directions id="65093953-72a9-459b-b038-365b814fcc28" viewers="32d3aa9d-efb3-48f8-b5fc-5cfac85494e2" name="返回国库收入查询" ename="backSearch"/>
+  </model>
+  <services href="JServiceComponet_992219e2-02b5-4d33-a128-e96f0921acc3.model#992219e2-02b5-4d33-a128-e96f0921acc3"/>
+  <contentAreas id="f85fff2a-ec0f-48d3-999e-246913f878f6">
+    <contentareanode id="f843e340-3af8-4a3d-b1f2-8ddfa88c215b" name="国库收入报解清单查询条件界面">
+      <widgetRefs xsi:type="model:Text" id="d7eeed20-8426-444f-8fff-6e195a9c3541" name="资金收纳流水号" binding="finddto.strasrlno" visible="true" caption="资金收纳流水号" enable="true" editable="true" pattern="@18" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="2e1db2e2-2ac6-420e-bb69-02c3c0695e73" name="帐务日期" binding="finddto.saccdate" visible="true" caption="帐务日期" enable="true" editable="true" pattern="@8"/>
+      <widgetRefs xsi:type="model:Text" id="a379b822-a97b-4cf5-9fca-2e514e3bcfdf" name="收款国库代码" binding="finddto.srecvtrecode" visible="true" caption="收款国库代码" enable="true" editable="true" pattern="@10"/>
+    </contentareanode>
+    <contentareanode id="aa62d6af-5dc0-4f89-81fb-28d75ed489d7" name="国库收入报解清单查询结果界面">
+      <widgetRefs xsi:type="model:Table" id="61fe9951-cfa8-4747-9537-61805cc8c320" name="国库收入查询结果" binding="incometablepage" caption="国库收入查询结果" tabletype="paging" refsingleclickdirection="565330d8-015d-40f1-9639-31f0a51d94b5">
+        <columnlist id="1f62638c-833d-4d93-be57-95ddd7c68a01" name="收款国库代码" binding="srecvtrecode" caption="收款国库代码"/>
+        <columnlist id="5c2a72e6-e420-453e-8a94-e37b701ea84f" name="帐务日期" binding="saccdate" caption="帐务日期"/>
+        <columnlist id="0a1f13cc-6d5c-4a33-bd0b-60e92a4f3add" name="导入文件名" binding="sfilename" caption="导入文件名"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="aaeef3d6-9caa-45f0-addd-544a63864e21" name="国库收入报解清单打印">
+      <jreportref id="0ec16d67-80e7-40e6-b7ea-3b977ff377b5" name="报解清单打印显示" reportpath="reportPath" binding="reportRs" parammap="reportmap" width="0" height="0"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="71ad9e27-0b8d-4060-abc0-2f6756503d80">
+    <pages id="6a24a4c7-ccf9-4484-ae12-c1aa74f69325" name="国库收入查询处理">
+      <views id="32d3aa9d-efb3-48f8-b5fc-5cfac85494e2" name="国库收入查询" isdefault="true" contentArea="f843e340-3af8-4a3d-b1f2-8ddfa88c215b">
+        <buttonArea id="f3e897c6-669d-4bc3-9ce2-3d01d418f2e4" name="JButtonAreaImpl-f3e897c6-669d-4bc3-9ce2-3d01d418f2e4">
+          <buttons id="b75ab926-f20a-4f92-a835-d54ba9d0e0a1" name="查询" visible="true" caption="查询" enable="true" direction="285cc629-e691-4a97-83e3-ff40e3aa8dc6"/>
+        </buttonArea>
+      </views>
+      <views id="89249189-c467-4fde-bc2a-963923842762" name="查询处理" contentArea="aa62d6af-5dc0-4f89-81fb-28d75ed489d7">
+        <buttonArea id="2c619eb1-1723-4296-ad11-43af0a19c89d" name="JButtonAreaImpl-2c619eb1-1723-4296-ad11-43af0a19c89d">
+          <buttons id="22994be3-6b51-4242-bbaf-1dac06d02d14" name="报解清单打印" visible="true" caption="报解清单打印" enable="true" direction="271ee8f5-fce2-4156-b126-603901412e86"/>
+          <buttons id="ec1a37c8-f9f5-4d61-baea-dc64350f1ce1" name="返回" caption="返回" direction="65093953-72a9-459b-b038-365b814fcc28"/>
+        </buttonArea>
+      </views>
+      <views id="2ab467f0-fd09-43b3-bdab-86e5e7e229b0" name="国库收入报解清单打印" contentArea="aaeef3d6-9caa-45f0-addd-544a63864e21">
+        <buttonArea id="3eef06f2-770b-4c06-b145-0f1452799ac9" name="JButtonAreaImpl-3eef06f2-770b-4c06-b145-0f1452799ac9">
+          <buttons id="980e529e-a320-4223-98ff-cd39ff73c503" name="返回" visible="true" caption="返回" enable="true" direction="2f76df09-f0e1-412e-b5e9-1d775c3a97ce"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

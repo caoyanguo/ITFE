@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="30401493-6003-43f7-9928-b32944c9fd3a" name="9003交易状态查询请求" ename="TraStatusCheck" shared="true">
+  <jproperties id="fe1947de-cba6-4dc9-aa0a-89635de854d2" key="GeneratedTime" value="1331718694031"/>
+  <refModule href="JModule_56517688-ae53-427b-8c87-e7f3a3e1f04e.model#56517688-ae53-427b-8c87-e7f3a3e1f04e"/>
+  <methods id="c9d021ec-5bf7-4462-a750-1a27c0fb8bbe" ename="traStatusCheck" name="查询请求" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="0d06fb05-5437-4885-b749-4d06a4a7cc6f" name="发起机构代码" ename="sendOrgCode" type="java.lang.String"/>
+    <methodParams id="e3e7cef8-7cb9-4c42-830a-2ebcca16bbaa" name="查询类型" ename="searchType" type="java.lang.String"/>
+    <methodParams id="49a89e08-814c-4b58-8d52-02bd4c21edad" name="原报文编号" ename="oriMsgNo" type="java.lang.String"/>
+    <methodParams id="b108145b-fd4f-4558-bf24-da7734f67ea1" name="原委托日期" ename="oriEntrustDate" type="java.lang.String"/>
+    <methodParams id="927d4eae-3f5e-4111-aae6-d4f632400570" name="原包流水号" ename="oriPackNo" type="java.lang.String"/>
+    <methodParams id="be41e4f1-5d33-44cd-86ce-2e0ac527616f" name="原交易流水号" ename="oriTraNo" type="java.lang.String"/>
+  </methods>
+  <methods id="799451bd-0fe2-484b-bd21-110810495118" ename="viewSelectRusult" name="查看查询结果" returntype="java.util.List">
+    <methodParams id="e35cef91-3501-4d21-b366-2067d38eff08" name="发起机构代码" ename="sendOrgCode" type="java.lang.String"/>
+    <methodParams id="138674ae-a92a-4696-9262-3147ba9de3bb" name="查询类型" ename="searchType" type="java.lang.String"/>
+    <methodParams id="72ecdd5a-c9e8-4b47-b65e-1affab3c33de" name="原报文编号" ename="oriMsgNo" type="java.lang.String"/>
+    <methodParams id="8ed08c46-2e88-4da7-82a5-76870e28302c" name="原委托日期" ename="oriEntrustDate" type="java.lang.String"/>
+    <methodParams id="902d12a1-a410-439d-aa29-1f09c5aaa3dd" name="原包流水号" ename="oriPackNo" type="java.lang.String"/>
+    <methodParams id="97fae374-8e04-476f-8383-78bafe5b8f20" name="原交易流水号" ename="oriTraNo" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

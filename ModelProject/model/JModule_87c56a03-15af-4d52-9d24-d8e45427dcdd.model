@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="87c56a03-15af-4d52-9d24-d8e45427dcdd" name="商行办理支付划款申请退回查询处理" ename="commApplyPayBackQuery"/>

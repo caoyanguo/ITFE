@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c144f373-1fbf-401b-8c84-0949f1edcb29" name="数据校验窗口" ename="DataValidateUI">
+  <jproperties id="df3b4dc9-43f9-421a-94cf-657b3ffe8b41" key="GeneratedTime" value="1330485995859"/>
+  <refModule href="JModule_de1e9ed7-43d5-41a2-9a72-c90eec5c97a2.model#de1e9ed7-43d5-41a2-9a72-c90eec5c97a2"/>
+  <model id="cee39fe9-7893-4991-9431-e16321fc808d" name="JModelImpl-cee39fe9-7893-4991-9431-e16321fc808d">
+    <directions id="b741ac73-6c4b-4774-8095-6a8d21178e93" viewers="556a2dd0-e408-4816-9141-f525006137ab" name="查询校验数据" ename="queryValDatas"/>
+    <directions id="edc763bb-885c-41a8-b22f-66b6517fa2c4" viewers="4c0465cd-d35a-4f08-a4cb-bb943999497a" name="查询数据明细" ename="queryDataDetail"/>
+    <directions id="3c3d8241-1fcb-4e5b-ae96-c51671a59eb0" viewers="f33ec769-8a47-4f69-92ab-f305889f5895" name="返回查询数据" ename="backQueryDatas"/>
+    <directions id="d5bd7471-d372-444d-9dea-837a2e4ea3ad" viewers="556a2dd0-e408-4816-9141-f525006137ab" name="返回明细查询" ename="backQueryDataDetail"/>
+  </model>
+  <contentAreas id="b7d1769b-0ca2-4a20-901e-2da77320e322">
+    <contentareanode id="16493c8c-7596-4f0b-9727-5d67f6378e13" name="数据校验界面">
+      <widgetRefs xsi:type="model:Table" id="931e402b-e4e5-41df-bfba-3341a51105db" name="数据列表" visible="true" caption="数据列表" enable="true" tabletype="paging">
+        <columnlist id="67899183-89a9-4124-a8fb-5fd5ce9bc9ba" name="批次号" caption="批次号"/>
+        <columnlist id="9fe11951-b0e0-4f80-9478-d35473958f73" name="纳税人编码" caption="纳税人编码"/>
+        <columnlist id="85364ca5-d161-4c8e-975c-932dec18adab" name="收款单位" caption="收款单位"/>
+        <columnlist id="19959341-0e56-4e39-9bbe-a58f558eac05" name="退税数据总额" caption="退税数据总额"/>
+        <columnlist id="63805739-2b1f-4f94-bb60-f61bf8c46adf" name="对应申报表总额" caption="对应申报表总额"/>
+        <columnlist id="1b3d249e-dafd-4c67-b09c-304188cdbfe1" name="校验结果" caption="校验结果"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="d823455d-08af-4837-a847-468d7f560b74" name="数据查询界面">
+      <widgetRefs xsi:type="model:Text" id="f7fb61e7-dec8-49ad-8ef9-97e1167bf650" name="日期" visible="true" caption="日期" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Combo" id="122bf77c-c8ad-463c-b53f-de118b237d81" name="处理结果" visible="true" caption="处理结果" enable="true" readonly="true" defaultvalue="1" visibleitemcount="3" size="3"/>
+      <widgetRefs xsi:type="model:Text" id="10ac2cad-d57a-42cf-9a66-a3597a5211f1" name="批次号" visible="true" caption="批次号" enable="true" editable="true"/>
+    </contentareanode>
+    <contentareanode id="8131feb8-cdfc-4cbb-9274-730634ac6506" name="查询结果界面">
+      <widgetRefs xsi:type="model:Table" id="757af714-596e-4ca2-8479-839ded76b502" name="退税数据列表" visible="true" caption="退税数据列表" enable="true" tabletype="paging">
+        <columnlist id="baa69d57-b444-470a-9873-2cc67e4ff63d" name="批次号" caption="批次号"/>
+        <columnlist id="196299ce-c8cf-41e8-a965-326b8447d826" name="纳税人编码" caption="纳税人编码"/>
+        <columnlist id="853c1549-79d3-47ac-8d0e-ac6cb8198489" name="收款单位" caption="收款单位"/>
+        <columnlist id="ef06331e-26b7-456f-acc2-5e95fe048c0f" name="退税数据总额" caption="退税数据总额"/>
+        <columnlist id="e3167e04-4df2-4713-8a1f-01ea0b10a7dc" name="对应申报表总额" caption="对应申报表总额"/>
+        <columnlist id="2594954a-772e-4746-8327-0a7e88b24a8a" name="校验结果" caption="校验结果"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="fa3fd255-dbe6-4577-989a-2a69397cf8d7">
+    <pages id="f9a1029f-e958-4dfa-9aa5-f9ebe60b56e4" name="数据校验">
+      <views id="f33ec769-8a47-4f69-92ab-f305889f5895" name="数据校验" isdefault="true" contentArea="16493c8c-7596-4f0b-9727-5d67f6378e13">
+        <buttonArea id="fa6c69f8-b9fe-417a-bec2-703aa33e360f" name="JButtonAreaImpl-fa6c69f8-b9fe-417a-bec2-703aa33e360f">
+          <buttons id="743dbf0d-a3da-4133-b90f-0a4c6a4e7234" name="校验" visible="true" caption="校验" enable="true"/>
+          <buttons id="73e825a8-3099-46b8-a9e4-30a3a429b051" name="查询" visible="true" caption="查询" enable="true" direction="b741ac73-6c4b-4774-8095-6a8d21178e93"/>
+        </buttonArea>
+      </views>
+      <views id="556a2dd0-e408-4816-9141-f525006137ab" name="数据查询" contentArea="d823455d-08af-4837-a847-468d7f560b74">
+        <buttonArea id="ccea634b-5436-4829-acd6-5dcb28cd1b96" name="JButtonAreaImpl-ccea634b-5436-4829-acd6-5dcb28cd1b96">
+          <buttons id="43f814ff-cffd-475d-a779-4584f2fc68d5" name="查询" visible="true" caption="查询" enable="true" direction="edc763bb-885c-41a8-b22f-66b6517fa2c4"/>
+          <buttons id="859dea1a-34d8-4463-b1fe-be2625bf1f7d" name="返回" visible="true" caption="返回" enable="true" direction="3c3d8241-1fcb-4e5b-ae96-c51671a59eb0"/>
+        </buttonArea>
+      </views>
+      <views id="4c0465cd-d35a-4f08-a4cb-bb943999497a" name="查询结果" contentArea="8131feb8-cdfc-4cbb-9274-730634ac6506">
+        <buttonArea id="a41542cf-f4d6-4ad4-8590-5136dd85a5df" name="JButtonAreaImpl-a41542cf-f4d6-4ad4-8590-5136dd85a5df">
+          <buttons id="7964cd6e-0a04-4530-b1c5-a301bdb5d24c" name="返回" visible="true" caption="返回" enable="true" direction="d5bd7471-d372-444d-9dea-837a2e4ea3ad"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6fd63206-5623-4c91-8fbb-27dcff109da5" name="报表数据下载" ename="FinDataStatDown">
+  <jproperties id="c95428da-61a6-4707-8d71-88da96d354a0" key="GeneratedTime" value="1337320085412"/>
+  <jproperties id="c95428da-61a6-4707-8d71-88da96d354a0" key="GeneratedTime" value="1337320085412"/>
+  <refModule href="JModule_60dda4db-f78e-48c7-9452-98d0502ec3aa.model#60dda4db-f78e-48c7-9452-98d0502ec3aa"/>
+  <methods id="542e51b1-d7e8-4c49-bdbb-69218adef79c" ename="makeRptFile" name="生成报表文件" returntype="java.util.List">
+    <methodParams id="f5de9b03-fd89-45a7-8520-7dcf093097e2" name="查询条件" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="af078f67-7d5a-4898-968f-5b56157f60d8" name="报表类型的列表" ename="billTypeList" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

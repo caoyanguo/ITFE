@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="34bd27ab-4d07-4a87-bef5-4477dc088d3f" name="更正凭证数据导入" ename="updateInto">
+  <jproperties id="2b309837-fc77-4375-a165-49b967d7c2be" key="GeneratedTime" value="1342784622275"/>
+  <refModule href="JModule_30aa3c15-1828-4a62-96eb-1fae64913e36.model#30aa3c15-1828-4a62-96eb-1fae64913e36"/>
+  <model id="c96badeb-33d3-48e9-b5f3-bd6625da9716" name="JModelImpl-c96badeb-33d3-48e9-b5f3-bd6625da9716">
+    <attributes id="1ceb7bdc-a43d-4c9e-b3d8-5638c00a5dd9" name="filepath" type="java.util.List"/>
+    <attributes id="dee25b7e-80cc-4a91-a93d-2b2186e8233f" name="selectedfilelist" type="java.util.List"/>
+    <attributes id="c95665a4-fd52-4b1a-a03c-033e036f02fa" name="showfilelist" type="java.util.List"/>
+    <attributes id="bd9a65bf-905b-4759-8d58-6206a189d41e" name="selecteddatalist" type="java.util.List"/>
+    <attributes id="c7c01fe5-d14c-477f-a345-1c2c6701fc31" name="showdatalist" type="java.util.List"/>
+    <attributes id="f95716e0-14f7-4117-94a8-eac3549e4fe4" name="filedata" type="com.cfcc.itfe.persistence.dto.FileResultDto"/>
+    <attributes id="8aa541ca-3993-4311-be2f-981cb3e33241" name="searchdto" type="com.cfcc.itfe.persistence.dto.TbsTvInCorrhandbookDto"/>
+    <directions id="cde67219-a5da-4b8b-ac84-dc9edce1b6b6" name="数据加载" ename="dateload"/>
+    <directions id="3c7f4d5a-1892-44d8-af78-8ddbb74cf8db" viewers="7c46c1b7-ae2e-411d-abcf-9eaa2f86340c" name="跳转批量销号查询" ename="topiliangxh"/>
+    <directions id="31074336-9c01-4cdc-8e42-38728fb73174" viewers="2488f4f9-a77b-4fc7-ab63-8393a3d4d00f" name="跳转逐笔销号查询" ename="tozhubixh"/>
+    <directions id="2d8aa636-e211-4cdb-a0bd-939eaaac2e82" name="直接提交" ename="submit"/>
+    <directions id="f3c2ac35-2a7a-43b3-9341-be39b2908aef" viewers="f121c473-3ac5-4e43-8968-dfe2a012de12" name="返回默认界面" ename="goback"/>
+    <directions id="0ea92106-8c4b-4fda-872d-ef9f019fa4cd" name="批量确认" ename="plsubmit"/>
+    <directions id="abbd8b71-e194-4e5f-8b3a-1baae613ad1e" name="批量删除" ename="pldel"/>
+    <directions id="a4272a66-137f-4741-ba03-2ff9b4285f88" name="逐笔提交" ename="zbsubmit"/>
+    <directions id="24b9dbf7-3fea-441c-b693-80147fff26e9" name="批量销号查询" ename="plsearch"/>
+    <directions id="a57d6c4a-690b-4234-87b5-0953ba97145d" name="逐笔销号查询" ename="zbsearch"/>
+    <directions id="945f651d-0989-428e-8307-422ac3aada41" name="全选" ename="selectall"/>
+  </model>
+  <services href="JServiceComponet_24004fb7-a6a5-4b53-919e-814eb3d8b209.model#24004fb7-a6a5-4b53-919e-814eb3d8b209"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_beb03805-6ee7-4d8d-8e8f-44645cc9e02c.model#beb03805-6ee7-4d8d-8e8f-44645cc9e02c"/>
+  <contentAreas id="bc91affd-045d-4411-a4b7-4eb8b42c2d63">
+    <contentareanode id="ec92ec6f-ed46-4649-b8f0-da4aaac5d85e" name="数据导入" grouptitle="数据导入">
+      <widgetRefs xsi:type="model:FileUploader" id="87c87026-b524-423f-b862-5647f49c5361" name="加载文件路径" binding="filepath" caption="加载文件路径" isdirectory="false" ismult="true"/>
+    </contentareanode>
+    <contentareanode id="3c5dcb3d-2614-46ce-ac70-d52f09a5cbb4" name="批量销号-查询" grouptitle="批量销号-查询">
+      <widgetRefs xsi:type="model:Text" id="1dbbfc04-fad8-42c6-af2d-fb04965c26f7" name="凭证总笔数" binding="vouCount" caption="凭证总笔数" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="2312124f-6f8c-44e0-8f3f-4b25e3092860" name="总金额" binding="sumamt" caption="总金额" required="true"/>
+    </contentareanode>
+    <contentareanode id="b7eb59de-ff56-4300-88bb-81bac6d3b3d0" name="文件汇总列表" grouptitle="文件汇总列表">
+      <widgetRefs xsi:type="model:Table" id="6f59b5ea-f8d6-4c6e-9119-34accd9c4fcd" name="TableImpl-6f59b5ea-f8d6-4c6e-9119-34accd9c4fcd" binding="showfilelist" showcheckbox="true" selectedrows="selectedfilelist" height="420">
+        <columnlist id="453b28cd-03cd-4025-939b-28a49c657c23" name="选择" extpoperties="" binding="" caption="选择" pattern=""/>
+        <columnlist id="2716274a-2c38-49b6-89e7-797cb9319516" name="文件名" binding="sfilename" caption="文件名"/>
+        <columnlist id="e6572f21-5487-4e4a-a520-70a7be9fae86" name="总笔数" binding="icount" caption="总笔数"/>
+        <columnlist id="9e979731-a564-4f7f-ab3d-41fcf7f2d922" name="总金额" binding="nmoney" caption="总金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="032eb7c5-81f3-424f-96ad-6709aca4c353" name="逐笔销号-查询" grouptitle="逐笔销号-查询">
+      <widgetRefs xsi:type="model:Text" id="d04adf64-3c68-462b-ac8b-4ad22a17f28c" name="受理日期" binding="searchdto.daccept" caption="受理日期"/>
+      <widgetRefs xsi:type="model:Text" id="73d49157-af45-44df-a509-625d3d9c12d1" name="现收款国库代码" binding="searchdto.scurpayeetrecode" caption="现收款国库代码"/>
+      <widgetRefs xsi:type="model:Text" id="90213aae-e959-4d7c-866b-22584097d704" name="现科目代码" binding="searchdto.scurbdgsbtcode" caption="现科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="ff6290e3-497f-47c2-bd02-18db0589268c" name="金额" binding="searchdto.fcurcorramt" caption="金额"/>
+      <widgetRefs xsi:type="model:Text" id="1bb49e3d-8ebe-410e-b220-2f8e5e9f4039" name="凭证编号" binding="searchdto.scorrvouno" caption="凭证编号"/>
+      <widgetRefs xsi:type="model:Button" id="ef3e8adc-3a81-4da2-b18e-aec97c3e9b2e" name="查询" caption="查询" layout="GridLayout" direction="a57d6c4a-690b-4234-87b5-0953ba97145d"/>
+    </contentareanode>
+    <contentareanode id="7ff1ee15-f9ea-462c-8245-2c115474609d" name="文件明细列表" grouptitle="文件明细列表">
+      <widgetRefs xsi:type="model:Table" id="9c463ec3-ed2e-410d-ba71-7e70c7c79e85" name="TableImpl-9c463ec3-ed2e-410d-ba71-7e70c7c79e85" binding="showdatalist" showcheckbox="true" selectedrows="selecteddatalist" height="348">
+        <columnlist id="6cdff416-182f-45fc-b395-23274976d76d" name="选择" caption="选择"/>
+        <columnlist id="eab63f34-f59c-4782-9d59-d0093d1c1872" name="导入文件名" binding="sfilename" caption="导入文件名"/>
+        <columnlist id="5d46b71c-9b54-4864-9e36-fc7eff78a708" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="267322ed-4f47-4051-a360-d182cbf26e6f" name="凭证流水号" binding="ivousrlno" caption="凭证流水号"/>
+        <columnlist id="2b349def-3efb-4e36-b60d-688359515f34" name="电子凭证编号" binding="selecvouno" caption="电子凭证编号"/>
+        <columnlist id="00910030-a236-4246-b73a-16deb81e3060" name="更正凭证编号" binding="scorrvouno" caption="更正凭证编号"/>
+        <columnlist id="fb03e00c-7dd4-4753-b1a2-0715aa921beb" name="受理日期" binding="daccept" caption="受理日期"/>
+        <columnlist id="12e4103d-1a81-426d-904e-2c985737782d" name="账务日期" binding="dacct" caption="账务日期"/>
+        <columnlist id="0f510d80-97b2-4749-910c-51ba9cdf01e6" name="凭证日期" binding="dvoucher" caption="凭证日期"/>
+        <columnlist id="7707044b-a64d-4085-96e9-141bbd703322" name="原收款国库代码" binding="soripayeetrecode" caption="原收款国库代码"/>
+        <columnlist id="5dd6a596-169c-4596-8d8c-a312295de163" name="原目的国库代码" binding="soriaimtrecode" caption="原目的国库代码"/>
+        <columnlist id="e5173d4a-07cd-47ce-a254-6b3a7fea6447" name="原征收机关代码" binding="soritaxorgcode" caption="原征收机关代码"/>
+        <columnlist id="13498ed9-6c2e-42ab-8a14-1cf8df0f8b61" name="原预算科目代码" binding="soribdgsbtcode" caption="原预算科目代码"/>
+        <columnlist id="73f857df-ffed-4b60-9b31-1e7c40649135" name="原预算级次" binding="coribdglevel" caption="原预算级次"/>
+        <columnlist id="2274e93b-4ae0-40fe-b4ae-dbe45e48ee86" name="原预算种类" binding="coribdgkind" caption="原预算种类"/>
+        <columnlist id="e121194a-7783-4773-841b-3a620c8889e1" name="原辅助标志" binding="soriastflag" caption="原辅助标志"/>
+        <columnlist id="b0a49aa9-1acb-4462-8891-be080a5d14c9" name="原更正金额" binding="foricorramt" caption="原更正金额"/>
+        <columnlist id="ddc336ec-d216-4a6f-bffb-60dd5f0541f9" name="现收款国库代码" binding="scurpayeetrecode" caption="现收款国库代码"/>
+        <columnlist id="1c2a7e1d-3a7b-4a35-b673-2f3cbcb01b6a" name="现目的国库代码" binding="scuraimtrecode" caption="现目的国库代码"/>
+        <columnlist id="15803b74-0769-4c72-9460-7dc2caa3ee88" name="现征收机关代码" binding="scurtaxorgcode" caption="现征收机关代码"/>
+        <columnlist id="ee1f8bea-722f-4b2a-86c8-65ef51d395d9" name="现预算科目代码" binding="scurbdgsbtcode" caption="现预算科目代码"/>
+        <columnlist id="d1ea565f-87a6-4d61-9a62-e163b4f3ebaf" name="现预算级次" binding="ccurbdglevel" caption="现预算级次"/>
+        <columnlist id="d0b30888-6130-4893-b322-08333ebc966e" name="现预算种类" binding="ccurbdgkind" caption="现预算种类"/>
+        <columnlist id="91bc23c6-a3d1-4725-a848-a17504a3be2a" name="现辅助标志" binding="scurastflag" caption="现辅助标志"/>
+        <columnlist id="9d5cf425-635b-4565-bafa-55ad20b6e727" name="现更正金额" binding="fcurcorramt" caption="现更正金额"/>
+        <columnlist id="c6653b8a-bf31-48a1-b778-ca3672160a3e" name="更正原因代码" binding="sreasoncode" caption="更正原因代码"/>
+        <columnlist id="7ec23edc-60fc-491f-98f3-5ce675cfbd52" name="现调整期标志" binding="ctrimflag" caption="现调整期标志"/>
+        <columnlist id="72056452-6d20-49ec-b036-01d11a47f701" name="交易状态" binding="sstatus" caption="交易状态"/>
+        <columnlist id="2cf57b01-cb18-45ed-9ad3-4d6d7c1bfc3f" name="核算主体代码" binding="sbookorgcode" caption="核算主体代码"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="f2e714df-5b98-49a1-a31f-5b515032bbc8">
+    <pages id="0c3dbe3d-8b6f-4cb2-9c18-566743157b1b" name="更正凭证数据导入">
+      <views id="f121c473-3ac5-4e43-8968-dfe2a012de12" name="更正凭证数据导入" isdefault="true" contentArea="ec92ec6f-ed46-4649-b8f0-da4aaac5d85e">
+        <buttonArea id="fd8e3dfb-0f97-44fc-9a19-97371c01eb13" name="JButtonAreaImpl-fd8e3dfb-0f97-44fc-9a19-97371c01eb13">
+          <buttons id="94b5b69f-708c-4abb-94ad-409afc45b131" name="数据加载" caption="数据加载" direction="cde67219-a5da-4b8b-ac84-dc9edce1b6b6"/>
+          <buttons id="92fc1bce-5010-4e94-9979-68533114b222" name="批量销号" caption="批量销号" direction="3c7f4d5a-1892-44d8-af78-8ddbb74cf8db"/>
+          <buttons id="20f09514-fd80-4ee0-8c08-22df48032a8b" name="逐笔销号" caption="逐笔销号" direction="31074336-9c01-4cdc-8e42-38728fb73174"/>
+          <buttons id="032f5cbb-dee1-4138-a53c-7a8c243f7e6f" name="直接提交" caption="直接提交" direction="2d8aa636-e211-4cdb-a0bd-939eaaac2e82"/>
+        </buttonArea>
+      </views>
+      <views id="7c46c1b7-ae2e-411d-abcf-9eaa2f86340c" name="批量销号" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="3c5dcb3d-2614-46ce-ac70-d52f09a5cbb4 b7eb59de-ff56-4300-88bb-81bac6d3b3d0">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#6526cf6a-bd13-4b74-9830-c37f0c15bd15"/>
+        <buttonArea id="bf5f04ad-9ea7-4af9-a861-89571ac2e840" name="JButtonAreaImpl-bf5f04ad-9ea7-4af9-a861-89571ac2e840">
+          <buttons id="ca951b8f-8a52-4477-96bb-bcc8452302fd" name="确认提交" caption="确认提交" direction="0ea92106-8c4b-4fda-872d-ef9f019fa4cd"/>
+          <buttons id="388cbb1d-f89f-4946-806a-751706b408f9" name="删除" caption="删除" direction="abbd8b71-e194-4e5f-8b3a-1baae613ad1e"/>
+          <buttons id="bc2e68c3-0c2d-497e-bc3b-6604c836d159" name="返回" caption="返回" direction="f3c2ac35-2a7a-43b3-9341-be39b2908aef"/>
+        </buttonArea>
+      </views>
+      <views id="2488f4f9-a77b-4fc7-ab63-8393a3d4d00f" name="逐笔销号" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="032eb7c5-81f3-424f-96ad-6709aca4c353 7ff1ee15-f9ea-462c-8245-2c115474609d">
+        <buttonArea id="46d81e90-1e2d-495d-9269-41e51be84966" name="JButtonAreaImpl-46d81e90-1e2d-495d-9269-41e51be84966">
+          <buttons id="74d2d059-7487-42d7-9066-3f44014624df" name="全选" caption="全选" direction="945f651d-0989-428e-8307-422ac3aada41"/>
+          <buttons id="3bbf1652-b2c2-4d1a-b8c6-5f122fd01eaf" name="确认提交" caption="确认提交" direction="a4272a66-137f-4741-ba03-2ff9b4285f88"/>
+          <buttons id="3f083977-6e52-4ea6-ad5e-fec987b67cd0" name="返回" caption="返回" direction="f3c2ac35-2a7a-43b3-9341-be39b2908aef"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

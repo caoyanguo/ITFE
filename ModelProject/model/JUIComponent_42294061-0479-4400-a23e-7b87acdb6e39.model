@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="42294061-0479-4400-a23e-7b87acdb6e39" name="收发日志监控" ename="queryLogConsole">
+  <jproperties id="bce78d6e-1100-4fa5-b669-880235b3cf1f" key="GeneratedTime" value="1330485995812"/>
+  <refModule href="JModule_c2fd4276-2e55-4a8b-9e73-fbf7084b34f1.model#c2fd4276-2e55-4a8b-9e73-fbf7084b34f1"/>
+  <model id="2e922ec0-2e14-40b9-8d04-a28a38319adf" name="JModelImpl-2e922ec0-2e14-40b9-8d04-a28a38319adf"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_6346050c-bf64-4e30-97ff-8eb906d770f5.model#6346050c-bf64-4e30-97ff-8eb906d770f5"/>
+  <contentAreas id="ee52ea78-e770-4514-8faa-7552c6c3f279"/>
+  <pagenodes id="e2863c75-4c6e-4f56-8bfe-76d51adf707a">
+    <pages id="319731f0-cad2-476f-aaad-bed7c8bc61a5" name="收发日志监控">
+      <views id="09aadc06-242c-4115-8d6b-23858fc2052b" name="收发日志监控" type="ClassName" path="com.cfcc.itfe.client.dataquery.querylogconsole.QueryLogConsoleComposite" isdefault="true"/>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

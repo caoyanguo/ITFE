@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="a497c0f5-90f6-4ae8-849a-55452fd7057a" name="中心密钥模式维护" ename="TsMankeymode">
+  <jproperties id="6577b0f0-37eb-4610-ac51-17f064f39a2c" key="GeneratedTime" value="1341538128281"/>
+  <refModule href="JModule_fe419070-3ec2-4fb0-9998-0a8a344a61c6.model#fe419070-3ec2-4fb0-9998-0a8a344a61c6"/>
+  <model id="b254a126-9df3-4c94-a2a7-5aec10dcc970" name="JModelImpl-b254a126-9df3-4c94-a2a7-5aec10dcc970">
+    <attributes id="14405a3c-179c-4b9e-8a77-66de9aee091a" name="dto" type="com.cfcc.itfe.persistence.dto.TsMankeymodeDto"/>
+    <attributes id="eb7dfc95-bdcf-4982-b49b-80498eaf31f7" name="pagingContext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="53c5706c-eee3-467e-a4aa-baa8c57c2741" viewers="b1b96611-6b0a-44c4-80f5-2bb933819832" name="转到密钥模式修改" ename="toKeymodemodify"/>
+    <directions id="bab9a79d-0d9b-4472-970a-c08229c3e17a" viewers="550f47c4-0489-44c1-be3f-7c521f26061e" name="密钥模式修改" ename="keymodeModify"/>
+    <directions id="fd0afdcc-fe35-4399-b296-92d16f579cca" viewers="550f47c4-0489-44c1-be3f-7c521f26061e" name="转到密钥模式列表" ename="toKeylist"/>
+    <directions id="234420c2-eb3f-463d-91e8-f60f6abc34ce" name="单击选中对象" ename="clickSelect"/>
+  </model>
+  <services href="JServiceComponet_9c256912-c251-4889-b966-7aa04b8b402b.model#9c256912-c251-4889-b966-7aa04b8b402b"/>
+  <contentAreas id="a35dd147-b4f6-4b64-a4ce-5906f2c448e6">
+    <contentareanode id="712708ad-8b85-4ffa-8baf-f520e4487558" name="密钥模式列表" grouptitle="密钥模式列表">
+      <widgetRefs xsi:type="model:Table" id="865213f8-b77b-4e7c-b2e2-9f5316843987" name="密钥模式列表" binding="pagingContext" visible="true" caption="密钥模式列表" enable="true" editable="true" tabletype="paging" refsingleclickdirection="234420c2-eb3f-463d-91e8-f60f6abc34ce">
+        <columnlist id="b7b64b57-d43c-4412-88d4-4255d91a52b0" name="密钥模式维护方式" binding="skeymode" visible="true" caption="密钥模式维护方式" enable="true" editable="false" align="">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#193d6317-7c7f-4c72-9a04-2c152105dcbf"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="5b461679-82d7-4fcc-a91b-170bff860ced" name="密钥模式修改" grouptitle="密钥模式修改">
+      <widgetRefs xsi:type="model:Combo" id="6f423441-96dd-4eb4-8384-5f540d4a5863" name="密钥模式维护方式" binding="dto.skeymode" visible="true" caption="密钥模式维护方式" enable="true" editable="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#193d6317-7c7f-4c72-9a04-2c152105dcbf"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="d8eb3a06-3b80-4e27-b44a-525acc70c247">
+    <pages id="cb21ea9e-3539-43d3-a63a-ab12a7781356" name="中心密钥模式维护界面">
+      <views id="550f47c4-0489-44c1-be3f-7c521f26061e" name="密钥模式列表" isdefault="true" contentArea="712708ad-8b85-4ffa-8baf-f520e4487558">
+        <buttonArea id="25f15e2e-3541-4b32-82d5-278787b63c29" name="JButtonAreaImpl-25f15e2e-3541-4b32-82d5-278787b63c29">
+          <buttons id="41fb86ff-1be5-4d70-bc12-cdd7e55570e5" name="修改" visible="true" caption="修改" enable="true" editable="false" direction="53c5706c-eee3-467e-a4aa-baa8c57c2741"/>
+        </buttonArea>
+      </views>
+      <views id="b1b96611-6b0a-44c4-80f5-2bb933819832" name="密钥模式修改" contentArea="5b461679-82d7-4fcc-a91b-170bff860ced">
+        <buttonArea id="f241d1a6-3c2e-40f5-b957-ec74c737531f" name="JButtonAreaImpl-f241d1a6-3c2e-40f5-b957-ec74c737531f">
+          <buttons id="060afabe-3423-489d-8faa-edaec307edaf" name="提交" visible="true" caption="提交" enable="true" editable="false" direction="bab9a79d-0d9b-4472-970a-c08229c3e17a"/>
+          <buttons id="6ff782da-b2ad-4058-beda-3a2d1e043c55" name="返回" visible="true" caption="返回" enable="true" editable="false" direction="fd0afdcc-fe35-4399-b296-92d16f579cca"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

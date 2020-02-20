@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead3133" beanIdRef="BatchHead3133" />
+	<jb:wiring property="BatchReturn3133" beanIdRef="BatchReturn3133s" />
+</jb:bean>
+<jb:bean beanId="BatchReturn3133s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="BatchReturn3133" />
+</jb:bean>
+<jb:bean beanId="BatchReturn3133" class="java.util.HashMap" createOnElement="BatchReturn3133">
+	<jb:value property="VouNo" decoder="String" data="CFX/MSG/BatchReturn3133/VouNo" />
+	<jb:value property="VouDate" decoder="String" data="CFX/MSG/BatchReturn3133/VouDate" />
+	<jb:value property="OriTraNo" decoder="String" data="CFX/MSG/BatchReturn3133/OriTraNo" />
+	<jb:value property="SumAmt" decoder="String" data="CFX/MSG/BatchReturn3133/SumAmt" />
+	<jb:value property="AcctDate" decoder="String" data="CFX/MSG/BatchReturn3133/AcctDate" />
+	<jb:value property="Result" decoder="String" data="CFX/MSG/BatchReturn3133/Result" />
+	<jb:value property="Description" decoder="String" data="CFX/MSG/BatchReturn3133/Description" />
+</jb:bean>
+<jb:bean beanId="BatchHead3133" class="java.util.HashMap" createOnElement="BatchHead3133">
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BatchHead3133/TreCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead3133/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead3133/PackNo" />
+	<jb:value property="BillOrg" decoder="String" data="CFX/MSG/BatchHead3133/BillOrg" />
+	<jb:value property="OriEntrustDate" decoder="String" data="CFX/MSG/BatchHead3133/OriEntrustDate" />
+	<jb:value property="OriPackNo" decoder="String" data="CFX/MSG/BatchHead3133/OriPackNo" />
+	<jb:value property="PayoutVouType" decoder="String" data="CFX/MSG/BatchHead3133/PayoutVouType" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

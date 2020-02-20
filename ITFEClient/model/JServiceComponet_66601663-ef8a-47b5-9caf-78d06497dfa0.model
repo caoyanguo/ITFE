@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="66601663-ef8a-47b5-9caf-78d06497dfa0" name="用户与电子签章对应表服务组件" ename="TsUserstamp">
+  <jproperties id="75931c7a-dc37-4823-b14a-aa419e619658" key="GeneratedTime" value="1330485996296"/>
+  <jproperties id="75931c7a-dc37-4823-b14a-aa419e619658" key="GeneratedTime" value="1330485996296"/>
+  <refModule href="JModule_87beff55-0742-4d97-939f-bb7e0d64fe12.model#87beff55-0742-4d97-939f-bb7e0d64fe12"/>
+  <methods id="49d0aede-5b5f-44cb-a9d8-b0e3eed5b6d7" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="用户与电子签章对应表">
+    <methodParams id="cecb4856-cfbe-47ce-a5be-315885f98416" name="用户与电子签章对应表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="768225e8-0940-4f9e-b7a0-38e9981988e2" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="5bf6ed2e-fb23-481b-855d-d4f8d68892d4" name="用户与电子签章对应表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="768225e8-0940-4f9e-b7a0-38e9981988e2" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="1e30138e-5e41-4c5a-8137-f6676e3607cd" name="用户与电子签章对应表" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

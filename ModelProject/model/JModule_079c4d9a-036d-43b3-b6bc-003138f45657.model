@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="079c4d9a-036d-43b3-b6bc-003138f45657" name="电子签章类型" ename="TsStamptype" shared="true"/>

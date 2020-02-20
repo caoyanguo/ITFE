@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="ac7d26f5-0e9f-4b1e-b2fa-c8b70e351615" name="数据备份" ename="dataBackupUI" shared="true">
+  <jproperties id="deaa0e73-6b40-4ea2-ac7a-41dd6aa6c5b7" key="GeneratedTime" value="1443508223375"/>
+  <refModule href="JModule_9af065ba-d7f2-4b75-b0cd-3e8bee81b40f.model#9af065ba-d7f2-4b75-b0cd-3e8bee81b40f"/>
+  <model id="e763ef68-3478-4680-84c0-0c449a236506" name="JModelImpl-e763ef68-3478-4680-84c0-0c449a236506">
+    <directions id="9231f1ab-372b-469c-b843-d3691220e232" viewers="cf124e61-c467-4f9d-9749-2e6f7eb51f3f" name="数据备份" ename="databackup"/>
+  </model>
+  <services href="JServiceComponet_cf124442-4ac0-4704-a0a0-9e989a2a5a35.model#cf124442-4ac0-4704-a0a0-9e989a2a5a35"/>
+  <contentAreas id="77adc4d0-91af-4baf-aa76-c4b6ad33ac64">
+    <contentareanode id="7d212c3b-f36d-418c-a04b-a9d605d17d59" name="条件" grouptitle="条件">
+      <widgetRefs xsi:type="model:Text" id="36a012e0-1461-44a6-9438-22e129376d4e" name="机构代码" binding="sorgcode" caption="机构代码" editable="false">
+        <labelStyle id="f59f0f8f-20bb-469b-9e0a-a2fc9fa144a2" name="LabelStyleImpl-f59f0f8f-20bb-469b-9e0a-a2fc9fa144a2" ename="LabelStyleImplf59f0f8f20bb469b9e0aa2fc9fa144a2"/>
+        <componentStyle id="4b5b84e6-d0f2-44a2-861f-eaf4020126d1" name="ComponentStyleImpl-4b5b84e6-d0f2-44a2-861f-eaf4020126d1" ename="ComponentStyleImpl4b5b84e6d0f244a2861feaf4020126d1"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="094532e9-a46f-48d9-835a-7fe1f1b4a371">
+    <pages id="fd7740ad-f5ab-43f1-b8e7-26ba6f6b35fc" name="JPageImpl-fd7740ad-f5ab-43f1-b8e7-26ba6f6b35fc">
+      <views id="cf124e61-c467-4f9d-9749-2e6f7eb51f3f" name="数据备份" isdefault="true" contentArea="7d212c3b-f36d-418c-a04b-a9d605d17d59">
+        <buttonArea id="e4566ef1-e453-4adc-8672-5e4b7786cf0a" name="JButtonAreaImpl-e4566ef1-e453-4adc-8672-5e4b7786cf0a">
+          <buttons id="c80de0cc-aa66-4b0c-b61e-37f8ab22b3b9" name="数据备份" caption="数据备份" direction="9231f1ab-372b-469c-b843-d3691220e232"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

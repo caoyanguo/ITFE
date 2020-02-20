@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="d8866cd0-eff3-4de6-bb47-5f5ee4f73701" name="机构信息服务组件" ename="TsOrgan">
+  <jproperties id="a88732e9-6dd3-43e3-a674-d8ec5544bda2" key="GeneratedTime" value="1331531145984"/>
+  <refModule href="JModule_d1aa6571-d99a-46ca-a48b-796905a1dba7.model#d1aa6571-d99a-46ca-a48b-796905a1dba7"/>
+  <methods id="fa151788-60c4-4b8b-adfd-2ce5e71a24f3" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="机构信息">
+    <methodParams id="ebc0b549-2a4c-42d0-a367-063cc48d3bfb" name="机构信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="a3df442e-a068-4aa6-a2f1-44cf047bb625" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="39a0db79-76b3-47ce-b3db-31fb7c34a0c4" name="机构信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="a3df442e-a068-4aa6-a2f1-44cf047bb625" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="adc8c23e-c40c-4821-a834-c4552ce6e39c" name="机构信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

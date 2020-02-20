@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3bb89483-78b3-445b-97d2-0b4674b5dfa0" name="导出TBS文件" ename="exportTBSfiletxt">
+  <jproperties id="f020a246-efc8-409a-bfc4-ee90bb711446" key="GeneratedTime" value="1384933609093"/>
+  <refModule href="JModule_71d52652-39d7-4075-aaa6-087e5c7ee011.model#71d52652-39d7-4075-aaa6-087e5c7ee011"/>
+  <model id="e85819ff-2a29-43bb-8cb3-93065af08dc5" name="JModelImpl-e85819ff-2a29-43bb-8cb3-93065af08dc5">
+    <attributes id="ddcff042-c253-421e-aedb-8c633b8cb26d" name="tabList" type="java.util.List"/>
+    <attributes id="95a9ad63-1c8f-4792-ae88-2abececd4516" name="checkList" type="java.util.List"/>
+    <directions id="c9230690-2f29-4f16-a3b2-1d8804a92090" name="导出" ename="exportTBS"/>
+    <directions id="421a4d56-ab15-45dc-91f1-79da1d979761" name="全选" ename="selectedAll"/>
+  </model>
+  <services href="JServiceComponet_78870831-8b77-46f2-b1be-bdd9b98bd734.model#78870831-8b77-46f2-b1be-bdd9b98bd734"/>
+  <contentAreas id="45aa49cb-6c21-4503-b234-fb8e925146c9">
+    <contentareanode id="3e02743e-95cd-4728-bc48-decff21173b3" name="导出参数设置" grouptitle="查询条件">
+      <widgetRefs xsi:type="model:Combo" id="53ee824d-7502-49a6-9155-44e37e8499f5" name="业务类型" binding="sbiztypetbs" caption="业务类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#66aad533-eaf0-4a6a-9736-89f2fc84b870"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="5bb08b9b-a205-407b-a284-26a32236ef43" name="国库主体名称" binding="strecode" caption="国库主体名称" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="82b5febf-bd99-47e0-aa1e-26faa109ab70" name="账务日期" binding="dacctdate" caption="账务日期" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="1c620204-de11-48d3-8ffe-2bb0b8b8028d" name="调整期标志" binding="ctrimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="7b609663-2194-4d3d-ae10-cda5e8a98e6a" name="导出业务类型选择" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="47eebb54-6435-4ce3-aa44-53fba68967e7" name="TableImpl-47eebb54-6435-4ce3-aa44-53fba68967e7" binding="tabList" selectedrows="checkList" width="500" height="500">
+        <columnlist id="1f94f31a-feea-4796-8858-f9e5b6342b14" name="导出业务类型" binding="svaluecmt" caption="业务类型"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="236b492e-417d-41ca-ba10-5d9c93a065e3">
+    <pages id="e4b0927c-b5b6-4f37-ba38-19aa19daa892" name="JPageImpl-e4b0927c-b5b6-4f37-ba38-19aa19daa892">
+      <views id="123d834f-128d-4781-90e2-7eae7b9fee2b" name="导出TBS文件" isdefault="true" contentArea="3e02743e-95cd-4728-bc48-decff21173b3">
+        <buttonArea id="f5cb8282-2924-404d-baae-db66691026c8" name="JButtonAreaImpl-f5cb8282-2924-404d-baae-db66691026c8">
+          <buttons id="a656090f-6964-477e-b53f-4994daa4e628" name="导出" caption="导出" checkrequired="true" direction="c9230690-2f29-4f16-a3b2-1d8804a92090"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

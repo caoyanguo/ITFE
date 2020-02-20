@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+		<Reserve>${cfx.HEAD.Reserve}</Reserve>
+	</HEAD>
+	<MSG>
+		<BatchHead1002>
+			<ChkDate>${cfx.MSG.BatchHead1002.ChkDate}</ChkDate>
+			<TreCode>${cfx.MSG.BatchHead1002.TreCode}</TreCode>
+			<PackNo>${cfx.MSG.BatchHead1002.PackNo}</PackNo>
+			<CheckResult>${cfx.MSG.BatchHead1002.CheckResult}</CheckResult>
+			<SendPackNum>${cfx.MSG.BatchHead1002.SendPackNum}</SendPackNum>
+			<RecvPackNum>${cfx.MSG.BatchHead1002.RecvPackNum}</RecvPackNum>
+		</BatchHead1002>
+		<#list cfx.MSG.BillCheck1002 as var1>
+		<BillCheck1002>
+			<PayoutVouType>${var1.PayoutVouType}</PayoutVouType>
+			<PackNo>${var1.PackNo}</PackNo>
+			<CurPackVouNum>${var1.CurPackVouNum}</CurPackVouNum>
+			<CurPackVouAmt>${var1.CurPackVouAmt}</CurPackVouAmt>
+		</BillCheck1002>
+		</#list>
+	</MSG>
+</CFX>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="GetMsg9116" beanIdRef="GetMsg9116" />
+</jb:bean>
+<jb:bean beanId="GetMsg9116" class="java.util.HashMap" createOnElement="GetMsg9116">
+	<jb:value property="SendOrgCode" decoder="String" data="CFX/MSG/GetMsg9116/SendOrgCode" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/GetMsg9116/EntrustDate" />
+	<jb:value property="OriPackMsgNo" decoder="String" data="CFX/MSG/GetMsg9116/OriPackMsgNo" />
+	<jb:value property="OriChkDate" decoder="String" data="CFX/MSG/GetMsg9116/OriChkDate" />
+	<jb:value property="OriChkAcctType" decoder="String" data="CFX/MSG/GetMsg9116/OriChkAcctType" />
+	<jb:value property="OriReportMonth" decoder="String" data="CFX/MSG/GetMsg9116/OriReportMonth" />
+	<jb:value property="OirDocNameMonth" decoder="String" data="CFX/MSG/GetMsg9116/OirDocNameMonth" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

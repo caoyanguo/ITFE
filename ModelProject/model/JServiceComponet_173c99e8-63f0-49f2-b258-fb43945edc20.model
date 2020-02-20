@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="173c99e8-63f0-49f2-b258-fb43945edc20" name="发送报文查询处理" ename="DealSendMsg">
+  <jproperties id="71730c22-e283-429a-bd67-fd262a33374f" key="GeneratedTime" value="1363075418183"/>
+  <refModule href="JModule_887973f5-7c29-40ce-9c68-bd7d8c6672ad.model#887973f5-7c29-40ce-9c68-bd7d8c6672ad"/>
+  <methods id="70109f51-086d-48d7-b99a-ef85ddc1dd78" ename="findMsgByPage" name="分页查询发送报文信息" codecomment="分页查询发送报文信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="f51bf717-cd38-4e10-9a40-18934c2fc513" name="查询发送报文信息条件DTO" ename="finddto" type="com.cfcc.itfe.persistence.dto.TvFilepackagerefDto" codecomment="查询发送报文信息条件DTO"/>
+    <methodParams id="9a8d6987-e329-474a-bf61-f1d79fc77027" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="fa0ffe7f-70f0-48ed-9423-0c2bc30eafb3" name="起始日期" ename="startdate" type="java.lang.String"/>
+    <methodParams id="1ec0d4da-b597-49b3-b828-d8da40d2f934" name="结束日期" ename="enddate" type="java.lang.String"/>
+  </methods>
+  <methods id="7fd71f7f-58bc-40a4-91c3-f0c04e5db6c0" ename="sendMsgRepeat" name="重发报文信息" codecomment="重发报文信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="ed5d1126-7337-423d-8067-98f056d0980f" name="重发报文信息对象DTO" ename="senddto" type="com.cfcc.itfe.persistence.dto.TvFilepackagerefDto" codecomment="重发报文信息对象DTO"/>
+  </methods>
+  <methods id="2743d021-72bc-4c1f-9ea0-f0ec2368714e" ename="findMsgByPrint" name="查询打印发送报文信息" codecomment="查询打印发送报文信息" returntype="java.util.List">
+    <methodParams id="5c12481c-4eef-4220-9528-70b1230c8d98" name="查询发送报文信息条件DTO" ename="printdto" type="com.cfcc.itfe.persistence.dto.TvFilepackagerefDto" codecomment="查询发送报文信息条件DTO"/>
+  </methods>
+</model:JServiceComponent>

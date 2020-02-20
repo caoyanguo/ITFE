@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="be606b3f-96fa-4339-b70d-1e44e9d39591" name="收付款人信息维护" ename="tspayacctinfo">
+  <jproperties id="ad4ff764-0599-4718-8edb-19ab2e8e1da5" key="GeneratedTime" value="1472178603750"/>
+  <refModule href="JModule_bedc8ff0-9a87-47a1-9826-b5af36f49883.model#bedc8ff0-9a87-47a1-9826-b5af36f49883"/>
+  <model id="54dd7470-5e8e-4906-a7bb-38f683e49964" name="JModelImpl-54dd7470-5e8e-4906-a7bb-38f683e49964">
+    <attributes id="7fffa0d7-683e-4288-b640-595816b418ee" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="536f884a-da75-48dc-b6c2-849e626996c5" name="searchDto" type="com.cfcc.itfe.persistence.dto.TsPayacctinfoDto"/>
+    <attributes id="0acea462-3a90-4fe0-9b25-e2e8199b7780" name="detailDto" type="com.cfcc.itfe.persistence.dto.TsPayacctinfoDto"/>
+    <directions id="111e92c2-a24f-4de5-bdc8-7012c8691621" name="表格点击" ename="singleclick"/>
+    <directions id="00564745-8cda-4f75-8d4e-28c4188acda5" viewers="361d33c2-fbc4-4e8f-9e68-84a70d78f77d" name="跳转录入" ename="goinput"/>
+    <directions id="ae30faa5-cc42-4980-87b6-9f218a7be5e0" viewers="6e079905-f9b5-4040-bc29-d075df126dc0" name="跳转修改" ename="gomod"/>
+    <directions id="8d755d1d-3683-4264-8723-0a59cfc4b3ce" name="删除信息" ename="del"/>
+    <directions id="190fa0fe-3a80-4dd9-bfa3-c1dde8e21efa" viewers="b3434e35-8e98-41f9-824e-734daf008548" name="保存" ename="save"/>
+    <directions id="a774b493-d2cc-4512-9f3a-df6e8b83b11c" viewers="b3434e35-8e98-41f9-824e-734daf008548" name="返回" ename="gomain"/>
+    <directions id="28d4d748-f0a2-4d19-9115-7290dcbee3f3" viewers="b3434e35-8e98-41f9-824e-734daf008548" name="修改信息" ename="mod"/>
+  </model>
+  <services href="JServiceComponet_fb26210d-20c0-475d-9a61-90cb8f58cb85.model#fb26210d-20c0-475d-9a61-90cb8f58cb85"/>
+  <contentAreas id="2bce8b72-f879-40d9-a292-d7dc19b26256">
+    <contentareanode id="8125ffeb-30c9-4699-8a74-b2d2976477a3" name="参数查询一览表" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="3a31d35c-872f-4d4f-bde5-fc046f2829a9" name="TableImpl-3a31d35c-872f-4d4f-bde5-fc046f2829a9" binding="pagingcontext" tabletype="paging" refsingleclickdirection="111e92c2-a24f-4de5-bdc8-7012c8691621">
+        <columnlist id="08d23917-9bc3-4c86-b62d-ddc33b3d9279" name="国库主体代码" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="e8ec309e-d978-4e77-91a0-07b7cabc0193" name="代理银行行号" binding="sgenbankcode" caption="代理银行行号"/>
+        <columnlist id="d6a7b523-47bb-4ee9-b5af-89a35706bad1" name="付款人账户" binding="spayeracct" caption="付款人账户"/>
+        <columnlist id="e3b5a81d-4d2f-49a3-8257-6fc4d88bbb51" name="付款人名称" binding="spayername" caption="付款人名称"/>
+        <columnlist id="f8b43242-2fe0-4305-b256-296ea52acf59" name="收款人账户" binding="spayeeacct" caption="收款人账户"/>
+        <columnlist id="16d68b36-48b1-4ce4-b4b9-f2bb8f21ba81" name="收款人名称" binding="spayeename" caption="收款人名称"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="e6f900f4-06ff-4d1e-922d-fa6826b80e0f" name="信息录入" grouptitle="信息录入">
+      <widgetRefs xsi:type="model:Combo" id="60ad396a-96c1-4d3f-a6f5-a199ce831495" name="国库主体代码" binding="detailDto.strecode" caption="国库主体代码" required="true" display="strename" underly="strecode" modelsource="list2"/>
+      <widgetRefs xsi:type="model:Combo" id="f793349e-90dc-472d-bc33-746f4e773266" name="代理银行行号dfhl" binding="detailDto.sgenbankcode" caption="代理银行行号 " required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#729a0b9d-f9e2-4a8e-a90e-1ead8f249a3f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d3b93b84-9f43-4eec-96d4-618bb3880d4e" name="代理银行行号wzh" binding="detailDto.sgenbankcode" caption="代理银行行号 " required="true"/>
+      <widgetRefs xsi:type="model:Text" id="c1b5566d-e10d-447d-99eb-4a6d6a2f5d05" name="付款人账户" binding="detailDto.spayeracct" caption="付款人账户" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="13aacb9a-9e4f-497b-9c2c-93d8b2b3d631" name="付款人名称" binding="detailDto.spayername" caption="付款人名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="79cbf038-e30a-4a3c-b697-16a76d323bcf" name="收款人账户" binding="detailDto.spayeeacct" caption="收款人账户" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="e97d4be3-cfe0-43b5-affc-c7cb1c7a9bf7" name="收款人名称" binding="detailDto.spayeename" caption="收款人名称" required="true"/>
+    </contentareanode>
+    <contentareanode id="26168b80-782f-481e-ba41-72f5a6fc0dc7" name="修改信息" grouptitle="修改信息">
+      <widgetRefs xsi:type="model:Combo" id="60ar396a-96c1-4d3f-a6f5-a199ce831495" name="国库主体代码" binding="detailDto.strecode" caption="国库主体代码" required="true" display="strename" underly="strecode" modelsource="list2"/>
+      <widgetRefs xsi:type="model:Combo" id="397c3612-394d-4c5e-ad34-2f52d15361f7" name="代理银行行号dfhl" binding="detailDto.sgenbankcode" caption="代理银行行号 " required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#729a0b9d-f9e2-4a8e-a90e-1ead8f249a3f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="5e3696a1-1656-4ab7-9d6b-ca7542cd4fbe" name="代理银行行号wzh" binding="detailDto.sgenbankcode" caption="代理银行行号 " required="true"/>
+      <widgetRefs xsi:type="model:Text" id="c1b5526d-e10d-447d-99eb-4a6d6a2f5d05" name="付款人账户" binding="detailDto.spayeracct" caption="付款人账户" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="13aac49a-9e4f-497b-9c2c-93d8b2b3d631" name="付款人名称" binding="detailDto.spayername" caption="付款人名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="79cbf538-e30a-4a3c-b697-16a76d323bcf" name="收款人账户" binding="detailDto.spayeeacct" caption="收款人账户" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="b971ccda-f589-45ec-8ff7-3a27190b5d74" name="收款人名称" binding="detailDto.spayeename" caption="收款人名称" required="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="4fc2ab5b-cb27-4a18-ab9b-28280d96bf02">
+    <pages id="29b5374d-df8d-49a5-90e3-2059404c3414" name="收付款人信息维护">
+      <views id="b3434e35-8e98-41f9-824e-734daf008548" name="参数查询一览表" isdefault="true" contentArea="8125ffeb-30c9-4699-8a74-b2d2976477a3">
+        <buttonArea id="be103633-e2ed-44c2-ade2-5f112bc026d2" name="JButtonAreaImpl-be103633-e2ed-44c2-ade2-5f112bc026d2">
+          <buttons id="70c811df-655e-44eb-aa13-e7814f705a20" name="录入" caption="录入" direction="00564745-8cda-4f75-8d4e-28c4188acda5"/>
+          <buttons id="ed401e15-2b5b-433b-b47b-dff32775e5d5" name="修改" caption="修改" direction="ae30faa5-cc42-4980-87b6-9f218a7be5e0"/>
+          <buttons id="bfbc9ed0-e877-46d6-8660-4a4c921fae59" name="删除" caption="删除" direction="8d755d1d-3683-4264-8723-0a59cfc4b3ce"/>
+        </buttonArea>
+      </views>
+      <views id="361d33c2-fbc4-4e8f-9e68-84a70d78f77d" name="信息录入" contentArea="e6f900f4-06ff-4d1e-922d-fa6826b80e0f">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="97dab5f8-5c1a-4f29-b246-6523b39b0d78" name="JButtonAreaImpl-97dab5f8-5c1a-4f29-b246-6523b39b0d78">
+          <buttons id="e1dfe5a5-1022-4cc9-8a49-98a5ff7ea8b6" name="保存" caption="保存" checkrequired="true" direction="190fa0fe-3a80-4dd9-bfa3-c1dde8e21efa"/>
+          <buttons id="8f3dd415-a634-4c2a-9e68-6cba7da266f5" name="返回" caption="返回" direction="a774b493-d2cc-4512-9f3a-df6e8b83b11c"/>
+        </buttonArea>
+      </views>
+      <views id="6e079905-f9b5-4040-bc29-d075df126dc0" name="修改信息" contentArea="26168b80-782f-481e-ba41-72f5a6fc0dc7">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="98fc7fe9-4b36-4e91-a16d-e76f9e1e7275" name="JButtonAreaImpl-98fc7fe9-4b36-4e91-a16d-e76f9e1e7275">
+          <buttons id="5b3fc95e-7d84-4016-8a1a-2823c0601ee6" name="保存" caption="保存" checkrequired="true" direction="28d4d748-f0a2-4d19-9115-7290dcbee3f3"/>
+          <buttons id="a1c404df-8a67-41d1-95fc-6d828bd8bb4d" name="返回" caption="返回" direction="a774b493-d2cc-4512-9f3a-df6e8b83b11c"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#f1dcbc6f-0750-4898-a073-e04bcc8a6c01"/>
+</model:JUIComponent>

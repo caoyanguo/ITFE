@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5b564119-be1a-4cf4-a664-ba63b2141d29" name="用户权限维护" ename="TsUsersfunc" shared="true">
+  <jproperties id="198bec1e-90c0-498c-bc92-90219e69cd43" key="GeneratedTime" value="1433836517904"/>
+  <refModule href="JModule_315e8034-3ab2-4103-acb7-1d2d2f3ba401.model#315e8034-3ab2-4103-acb7-1d2d2f3ba401"/>
+  <model id="144ca4dc-d830-4c8a-8ced-587101b33ecb" name="JModelImpl-144ca4dc-d830-4c8a-8ced-587101b33ecb">
+    <attributes id="2c40946e-4447-489f-a6f9-a9bf9bf50ebc" name="dto" type="com.cfcc.itfe.persistence.dto.TsUsersfuncDto"/>
+    <directions id="5cd6633f-a912-4ab2-b6f4-385ef90332e6" viewers="e1d742e1-f914-40f1-96b7-3df0e4997a32" name="跳转录入界面" ename="goInput"/>
+    <directions id="5716ee46-ff30-42d1-87ce-83a8b3e9ae60" name="录入保存" ename="inputSave"/>
+    <directions id="d79adc80-150b-49bf-b984-4d73b96191de" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="328dc1e6-1c91-4393-ad7f-924a3d53eeeb" name="单选" ename="singleSelect"/>
+    <directions id="76a5ca33-0410-4f76-9a17-8f5cf9309778" name="删除" ename="delete"/>
+    <directions id="d39c4cba-0cce-4723-bf64-6a4fa2f19797" name="到修改界面" ename="goModify"/>
+    <directions id="528df62f-7577-4441-afd6-f905a204574f" name="修改保存" ename="modifySave"/>
+    <directions id="08eed498-7844-4613-a7ab-5f07fd5ec101" name="全选" ename="selectAll"/>
+    <directions id="f0862304-8ada-4809-a5f6-59912fc23866" name="重置密码" ename="repeatPwd"/>
+    <directions id="b94eb057-485b-419a-b52d-852c8505dcdc" name="单选" ename="oprSingleSelect"/>
+    <directions id="62dbd3c4-ab49-41d2-989f-4c2347067132" name="全选1" ename="selectFundAll"/>
+    <directions id="f86d3699-711f-49f5-bc92-c8efe37b47ed" name="保存1" ename="inputSaveOpr"/>
+  </model>
+  <services href="JServiceComponet_fbe699eb-fd90-476d-97e5-51086d49de6a.model#fbe699eb-fd90-476d-97e5-51086d49de6a"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="e23ff484-19a4-48dd-a96a-a7e9064d1c93">
+    <contentareanode id="f5e14244-1c67-4f0d-9f32-44664e171fe5" name="机构选择" grouptitle="机构选择" columnnum="1" layout="">
+      <widgetRefs xsi:type="model:Combo" id="c3e98c97-b9ef-429a-bb59-3b70d3b7cb2b" name="sorgcode" binding="selectorgcode" caption="用户所属机构" display="sorgname" underly="sorgcode" modelsource="orginfoList"/>
+    </contentareanode>
+    <contentareanode id="f32a419e-4254-4ca0-aff6-14af5ccfd9e1" name="用户列表" grouptitle="用户列表" columnnum="2" layout="" marginheight="5">
+      <widgetRefs xsi:type="model:Table" id="349d4cc0-ef71-444d-8589-c0accd49bcd7" name="susercode" binding="userList" caption="用户列表" tabletype="" selectedrows="" refsingleclickdirection="328dc1e6-1c91-4393-ad7f-924a3d53eeeb" width="0" height="400">
+        <columnlist id="0eb23935-dcbd-4e79-a356-ce79bb651c58" name="用户代码" binding="susercode" caption="用户代码"/>
+        <columnlist id="e1e406bb-70a2-4e38-b9ca-a83addb529de" name="用户名称" binding="susername" caption="用户名称"/>
+        <columnlist id="fed50089-99f0-4784-a333-e7b2a1c96838" name="用户类型" binding="susertype" caption="用户类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9f890e45-eacf-4107-b590-5eccd3ac3f5f"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="5490f127-2437-4fa8-a8ea-29471c8eb1b6" name="功能列表" grouptitle="功能列表" marginheight="15">
+      <widgetRefs xsi:type="model:Table" id="241eaff8-fd47-480d-a6f1-cd76e9e2bff9" name="sfunccode" binding="sysFuncList" caption="功能列表" tabletype="" showcheckbox="true" align="" tablefacade="" selectedrows="checkSysFuncList" width="0" height="500">
+        <columnlist id="ed46f028-2c75-48ed-a04b-e2340eb3c99e" name="是否选择" binding="" caption="是否选择"/>
+        <columnlist id="beb07e72-9a8b-4378-a034-6a76e856b029" name="功能代码" binding="sfunccode" caption="功能代码"/>
+        <columnlist id="d033130a-ef1a-40e6-8f57-523263ebdd18" name="功能名称" binding="sfuncname" caption="功能名称"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode xsi:type="model:JContentAreaSeparator"/>
+    <contentareanode id="7c72a773-6f27-4177-bcc5-b5a66e50644a" name="机构选择" grouptitle="机构选择" columnnum="1" layout="">
+      <widgetRefs xsi:type="model:Combo" id="8a61de78-7201-4535-8af8-2056cdf61a4d" name="sorgcode" binding="oprorgcode" caption="用户所属机构" display="sorgname" underly="sorgcode" modelsource="orginfoList"/>
+    </contentareanode>
+    <contentareanode id="ff47bae4-5adb-4ee1-b1ef-58f735d8cc26" name="操作员列表" grouptitle="操作员列表" columnnum="2" layout="" marginheight="5">
+      <widgetRefs xsi:type="model:Table" id="62fac26d-2085-4865-9b1f-1a2b193b49b8" name="操作员用户列表" binding="oprUserList" caption="操作员列表" tabletype="" selectedrows="" refsingleclickdirection="b94eb057-485b-419a-b52d-852c8505dcdc" width="0" height="400">
+        <columnlist id="1be2db13-0c04-4e47-b310-7f8e5c290f2b" name="用户代码" binding="susercode" caption="用户代码"/>
+        <columnlist id="c1dbf4c2-2d61-4c41-9c88-2a2a3eb4c2bc" name="用户名称" binding="susername" caption="用户名称"/>
+        <columnlist id="30cc62e7-176e-4021-8d77-8dd2b87ac383" name="用户类型" binding="susertype" caption="用户类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#9f890e45-eacf-4107-b590-5eccd3ac3f5f"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="3db72746-4898-4de6-b20f-1e69a05c1cd6" name="权限列表" grouptitle="权限列表" marginheight="15">
+      <widgetRefs xsi:type="model:Table" id="94554474-e168-459b-9c92-29a853852010" name="sfunccode" binding="buttonFuncList" caption="功能列表" tabletype="" showcheckbox="true" tablefacade="" selectedrows="checkButtonFuncList" width="0" height="450">
+        <columnlist id="54c598e4-5c21-454a-b993-15e338b62f51" name="权限选择" binding="" caption="权限选择"/>
+        <columnlist id="e92c2143-87c9-4890-b681-fd49c79fd193" name="功能序号" binding="svalue" caption="功能序号"/>
+        <columnlist id="948b41d4-a997-4de3-8f2d-e49311524c16" name="按钮功能" binding="svaluecmt" caption="         按钮功能                                              "/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="6c714977-9499-49e4-aca1-e12fa3b68a48">
+    <pages id="f367aab3-ecf2-4d54-88fb-272ecace2433" name="用户权限维护">
+      <views id="e1d742e1-f914-40f1-96b7-3df0e4997a32" name="用户权限维护" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.LeftToRightViewerImpl" contentArea="f5e14244-1c67-4f0d-9f32-44664e171fe5 f32a419e-4254-4ca0-aff6-14af5ccfd9e1 //@contentAreas/@contentareanode.3 5490f127-2437-4fa8-a8ea-29471c8eb1b6">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#109806d0-798b-4668-91b9-57f526a8ede8"/>
+        <buttonArea id="9ad4effc-259f-4da5-986b-afa781e6f78f" name="JButtonAreaImpl-9ad4effc-259f-4da5-986b-afa781e6f78f">
+          <buttons id="da5ca5af-de1c-4a87-81b8-ea77a967eb19" name="全选" caption="全选" direction="08eed498-7844-4613-a7ab-5f07fd5ec101"/>
+          <buttons id="639ce2a1-2012-4e4f-a183-2b43e5e2e836" name="保存" caption="保存" direction="5716ee46-ff30-42d1-87ce-83a8b3e9ae60"/>
+          <buttons id="931191f1-c649-4904-ba89-11fa162329e4" name="clearFunc" caption="清除权限" direction="76a5ca33-0410-4f76-9a17-8f5cf9309778"/>
+          <buttons id="4a563150-08c1-4f49-8d15-ffde14c07109" name="重置密码" visible="false" caption="重置密码" direction="f0862304-8ada-4809-a5f6-59912fc23866"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="22a5550c-ec56-4a0d-8169-7af921ac2583" name="业务处理权限维护">
+      <views id="ad9b2506-7bfe-43f3-ad53-dcfd96502294" name="业务处理权限维护" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.LeftToRightViewerImpl" contentArea="7c72a773-6f27-4177-bcc5-b5a66e50644a ff47bae4-5adb-4ee1-b1ef-58f735d8cc26 //@contentAreas/@contentareanode.3 3db72746-4898-4de6-b20f-1e69a05c1cd6">
+        <buttonArea id="2de199bd-a7ab-4bbc-95df-2ea7153d594d" name="JButtonAreaImpl-2de199bd-a7ab-4bbc-95df-2ea7153d594d">
+          <buttons id="89a9bccf-f316-46f0-b671-8a7990283bd9" name="全选12" caption="全选" direction="62dbd3c4-ab49-41d2-989f-4c2347067132"/>
+          <buttons id="7b37bd21-c4c3-417d-96e2-51c3e8d94aa3" name="保存1" caption="保存" direction="f86d3699-711f-49f5-bc92-c8efe37b47ed"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

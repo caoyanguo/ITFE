@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="TASDelete"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				#foreach($tabData in $tasList)
+				<ref local="del_${tabData.getTabID()}" />
+				#end
+			</list>
+		</property>
+	</bean>
+
+	<bean id="TBSDelete"
+		class="org.springframework.beans.factory.config.ListFactoryBean">
+		<property name="targetListClass" value="java.util.ArrayList"></property>
+		<property name="sourceList">
+			<list>
+				#foreach($tabData in $tbsList)
+				<ref local="del_${tabData.getTabID()}" />
+				#end
+			</list>
+		</property>
+	</bean>
+	#foreach($tabData in $tasList)
+	<bean id="del_${tabData.getTabID()}" class="com.cfcc.tas.facade.data.SQLMapping">
+		<property name="operSql" value="delete from  ${tabData.getTabName()} where s_BookOrgCode=?" />
+		<property name="operType" value="4" />
+		<property name="filterKey" value="${tabData.getTabName()}" />
+	</bean>
+	#end
+	#foreach($tabData in $tbsList)
+	<bean id="del_${tabData.getTabID()}" class="com.cfcc.tas.facade.data.SQLMapping">
+		<property name="operSql" value="delete from  ${tabData.getTabName()} where s_BookOrgCode=?" />
+		<property name="operType" value="4" />
+		<property name="filterKey" value="${tabData.getTabName()}" />
+	</bean>
+	#end
+</beans>

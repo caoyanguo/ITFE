@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="ce971e15-68c8-4cad-b35b-1a2a115511ae" name="上传文件服务器" ename="uploadfiletoserver">
+  <jproperties id="d1134110-9e17-4a14-86f2-a75c628d95ac" key="GeneratedTime" value="1497948158477"/>
+  <refModule href="JModule_08db75ea-da9d-4bec-8b99-95592576b3d7.model#08db75ea-da9d-4bec-8b99-95592576b3d7"/>
+  <model id="8cdd216a-48d4-4bec-a3b9-4562effac3b7" name="JModelImpl-8cdd216a-48d4-4bec-a3b9-4562effac3b7">
+    <directions id="30898452-5899-41b1-9b99-da6734c8fd12" name="上传" ename="uploadfile"/>
+    <directions id="1ee41ae8-b64f-4a35-82e2-aad3aba31d2e" name="查询" ename="searchfile"/>
+    <directions id="3cfd23c5-8196-449f-9e66-13f7482bebe3" name="删除" ename="deletefile"/>
+    <directions id="bc178695-ddb7-40e6-9011-945a66d7b3f2" name="下载" ename="downloadfile"/>
+  </model>
+  <services href="JServiceComponet_69c3953c-af51-4988-b886-56589097a141.model#69c3953c-af51-4988-b886-56589097a141"/>
+  <contentAreas id="0592f1b0-ed6b-434b-827c-86b43e7806eb">
+    <contentareanode id="655c027a-a392-416e-8095-1201deec17e5" name="上传文件" grouptitle="上传文件">
+      <widgetRefs xsi:type="model:Combo" id="38a3e5f0-9bfe-4db1-8573-fdcdcd310769" name="国库代码" binding="trecode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8d3433b1-647d-476b-bac3-bbbff3954616" name="服务器日志路径" binding="serverlogpath" caption="服务器日志路径"/>
+      <widgetRefs xsi:type="model:FileUploader" id="d0131321-7711-4168-a658-911a4dad9709" name="选择文件" binding="filepath" caption="选择文件" isdirectory="false" ismult="true"/>
+    </contentareanode>
+    <contentareanode id="c24a90e7-4896-48ee-aa66-454a6c42db9c" name="文件列表" grouptitle="文件列表">
+      <widgetRefs xsi:type="model:Table" id="99570b74-953d-4843-bdb9-fccb1e290eb9" name="文件列表" binding="searchlist" caption="文件列表" showcheckbox="true" selectedrows="checklist">
+        <columnlist id="8c162a99-0f4f-4e5e-b8c4-76c29a2ef44d" name="国库代码" binding="trecode" caption="国库代码"/>
+        <columnlist id="17554e01-6496-473d-9962-3ee5f94998a1" name="文件名称" binding="filename" caption="文件名称"/>
+        <columnlist id="a7ca2f7e-969c-498f-b9db-731f3530800e" name="文件大小" binding="filesize" caption="文件大小"/>
+        <columnlist id="d22821c2-0c13-4b5f-bf8f-4b842f04bc93" name="修改时间" binding="filetime" caption="修改时间"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="a5f839ad-5156-4c84-9703-a9f4757d32a1">
+    <pages id="0d271e5d-e23f-40b3-8398-ab510257bd3a" name="文件上传服务器" functioncode="">
+      <views id="1d488bc4-bb29-48ed-bc38-d715277f875e" name="文件上传" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="655c027a-a392-416e-8095-1201deec17e5 c24a90e7-4896-48ee-aa66-454a6c42db9c">
+        <buttonArea id="9e4ef52e-81c1-414b-ba1a-a1a16db11ff6" name="JButtonAreaImpl-9e4ef52e-81c1-414b-ba1a-a1a16db11ff6">
+          <buttons id="01d9bc7e-4309-4be5-b568-0214c417cba8" name="查询" caption="查询" direction="1ee41ae8-b64f-4a35-82e2-aad3aba31d2e"/>
+          <buttons id="162ca708-a580-4afd-ad45-e070880ee486" name="上传" caption="上传" direction="30898452-5899-41b1-9b99-da6734c8fd12"/>
+          <buttons id="612b9219-a44c-4b70-aba2-50ca21f69537" name="下载" caption="下载" direction="bc178695-ddb7-40e6-9011-945a66d7b3f2"/>
+          <buttons id="e5b43c71-a14b-47a4-b19d-d8b491e76961" name="删除" caption="删除" direction="3cfd23c5-8196-449f-9e66-13f7482bebe3"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

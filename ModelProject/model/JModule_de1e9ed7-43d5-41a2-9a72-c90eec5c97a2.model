@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="de1e9ed7-43d5-41a2-9a72-c90eec5c97a2" name="数据校验" ename="DataAudit"/>

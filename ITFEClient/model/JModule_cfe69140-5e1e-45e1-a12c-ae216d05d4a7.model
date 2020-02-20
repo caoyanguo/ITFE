@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="cfe69140-5e1e-45e1-a12c-ae216d05d4a7" name="文件接口转换" ename="taxFileConvert"/>

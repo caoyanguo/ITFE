@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="94af15ad-2466-47a7-bb50-e499c4f7636e" name="授权支付额度处理服务" ename="grantPay">
+  <jproperties id="9b269953-4230-4dc9-bbc2-673f9ef4c1da" key="GeneratedTime" value="1433818828173"/>
+  <refModule href="JModule_a4f810db-aa64-4f67-b772-4bad6a342de7.model#a4f810db-aa64-4f67-b772-4bad6a342de7"/>
+  <methods id="a09454fe-1cf7-4da9-bebc-8a5412368e85" ename="findMainByPage" name="分页查询授权支付额度主信息" codecomment="分页查询授权支付额度主信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="c0584591-bb0e-48f9-ad82-bf10b3f1d86b" name="查询授权支付额度主信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvGrantpaymsgmainDto" codecomment="查询授权支付额度主信息条件DTO"/>
+    <methodParams id="5fb543a3-d069-4698-83da-f19640197840" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="613c4871-cc84-4757-8224-de0738ac138c" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="d6abfb24-2745-429a-9245-9202fd041aa4" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="25736359-cf3a-4323-a62a-edcba98c2274" ename="findSubByPage" name="分页查询授权支付额度子信息" codecomment="分页查询授权支付额度子信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="d89e2da5-0096-4c60-a329-380e1eddae23" name="查询授权支付额度子信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvGrantpaymsgmainDto" codecomment="查询授权支付额度子信息条件DTO"/>
+    <methodParams id="c76ae789-7458-44f1-b1b4-6bfe5d747a7f" name="交易状态" ename="sstatus" type="java.lang.String"/>
+    <methodParams id="40951e43-28d0-4705-bd6f-d08676497fb5" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="e1da3a24-7756-42f9-8938-a78ff3ec8677" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="06f0752e-e2e1-4308-a811-8c00bec644b3" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="b9f2bff3-b901-426b-b99d-36b06b33b233" ename="reSendMsg" name="丢失报文的重发" codecomment="重发TIPS没有收到的报文" returntype="java.lang.String">
+    <methodParams id="33149e89-a936-4594-a6d9-5022e591b56f" name="委托日期" ename="scommitdate" type="java.lang.String" codecomment="委托日期"/>
+    <methodParams id="8a428244-8846-413e-a17b-2e711f0664e4" name="包流水号" ename="spackageno" type="java.lang.String" codecomment="包流水号"/>
+    <methodParams id="44be9762-bcd1-4a42-a963-9a2d1c6bb9b9" name="机构代码" ename="sorgcode" type="java.lang.String" codecomment="机构代码"/>
+    <methodParams id="5dbf2277-fc8b-4268-a40f-098a7b75c041" name="导入文件名称" ename="sfilename" type="java.lang.String" codecomment="导入文件名称"/>
+  </methods>
+  <methods id="f6fae0f4-b041-4f77-bd51-4cb2df0d776d" ename="findMainByPageForHis" name="分页查询授权支付额度主信息(历史表)" codecomment="分页查询授权支付额度主信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="d01ab0ef-bc7b-4d40-8a43-81ba32fc0eab" name="查询授权支付额度主信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvGrantpaymsgmainDto" codecomment="查询授权支付额度主信息条件DTO"/>
+    <methodParams id="988c4cc6-159a-47ae-b574-228893936298" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="887d5dd3-73a5-40fa-a8b0-77b2fb991181" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="87afbf48-c06c-4785-a994-0b90319819ad" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="1356a557-bf08-43d6-932b-6ab2f093c610" ename="findSubByPageForHis" name="分页查询授权支付额度子信息(历史表)" codecomment="分页查询授权支付额度子信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="77ee718a-92e1-437c-9636-d9d8165555c9" name="查询授权支付额度子信息条件DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvGrantpaymsgmainDto" codecomment="查询授权支付额度子信息条件DTO"/>
+    <methodParams id="337c01fa-2c3e-4b47-8f20-7cbeba889a16" name="交易状态" ename="sstatus" type="java.lang.String"/>
+    <methodParams id="aad0cad6-77d7-4294-b0f8-6ce75ae47984" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+    <methodParams id="cfb70cfd-c63a-433d-9ed8-f5cd1b2fe4ef" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="dede0316-f603-47d6-bcd4-b51a8ec905fa" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="d2bc1bf6-5ae8-4df8-8f37-45786e7edf1a" ename="dataexport" name="导出txt" codecomment="导出txt" returntype="java.lang.String">
+    <methodParams id="4881f058-ac74-4818-9076-cb7ffb5c1f89" name="查询授权支付额度主信息条件DTO" ename="mainDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="2b4831c0-4246-4a87-ae70-03af1c4db9ce" name="选择的表" ename="selectedtable" type="java.lang.String"/>
+  </methods>
+  <methods id="ad62c826-1c3d-4b34-a410-fcab4e18f1e5" ename="exportFile" name="导出CSV" codecomment="导出CSV" returntype="java.lang.String">
+    <methodParams id="544581c5-491f-4790-af44-14011e13d804" name="查询授权支付额度主信息条件DTO" ename="mainDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="19177ef6-2111-4bef-8eca-f3a401025817" name="选择的表" ename="selectedtable" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

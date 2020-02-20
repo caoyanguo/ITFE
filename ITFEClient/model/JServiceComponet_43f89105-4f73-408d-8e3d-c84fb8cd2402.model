@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="43f89105-4f73-408d-8e3d-c84fb8cd2402" name="参数转换服务" ename="ParamTransform">
+  <jproperties id="8f7ee86e-a0e5-4d0d-a191-49afce3515e0" key="GeneratedTime" value="1366214786911"/>
+  <refModule href="JModule_bc05c0a4-814c-4e78-8487-753154c131a5.model#bc05c0a4-814c-4e78-8487-753154c131a5"/>
+  <methods id="356347f6-eaee-4b70-bf12-bd43a2a1c67a" ename="export" name="参数导出" returntype="java.util.List">
+    <methodParams id="e8d8bcb9-183d-403d-8fa6-67a541f5f0ba" name="表名" ename="tabs" type="java.util.List"/>
+    <methodParams id="2cbaeffc-770a-40b5-be12-b796594a1fbf" name="separator" ename="separator" type="java.lang.String"/>
+    <methodParams id="3d91532a-79ce-4d2f-949f-c44e7a93ba99" name="orgcode" ename="orgcode" type="java.lang.String"/>
+    <methodExceptions id="166bd31b-d68e-4f07-9638-6e1186d4307b" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

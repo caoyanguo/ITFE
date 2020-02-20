@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="ad4e0f1f-b13e-4d6d-b09a-1d7dc249f545" isgenerated="false" name="报表自动发送参数维护" ename="billAutoSend" shared="false"/>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f3e94dcd-626a-4c5b-a142-98cd16133756" name="TBS格式参数导出" ename="ParamTransformUI">
+  <jproperties id="7f7172ec-0666-4b98-8221-dc34b11a6766" key="GeneratedTime" value="1363141652183"/>
+  <refModule href="JModule_bc05c0a4-814c-4e78-8487-753154c131a5.model#bc05c0a4-814c-4e78-8487-753154c131a5"/>
+  <model id="1ce217f3-5499-4e60-ba3b-98b2b205f7bd" name="JModelImpl-1ce217f3-5499-4e60-ba3b-98b2b205f7bd">
+    <attributes id="14b97e6c-ce85-4470-8077-0db2c4b1314b" name="tabList" type="java.util.List"/>
+    <attributes id="f12d0a43-c17d-4b95-bbaf-7a21f03a0dbf" name="checkList" type="java.util.List"/>
+    <directions id="93623b11-106d-47d6-8578-1c7fdcf86fa6" name="导出" ename="tbsParamExport"/>
+    <directions id="ee9af699-6f9b-425d-bc67-e7116d7291d2" name="全选" ename="selAll"/>
+  </model>
+  <services href="JServiceComponet_43f89105-4f73-408d-8e3d-c84fb8cd2402.model#43f89105-4f73-408d-8e3d-c84fb8cd2402"/>
+  <contentAreas id="dd9ae651-ea4a-4ba7-835b-7082d657bef9">
+    <contentareanode id="211f6322-eb6c-4339-b9f2-dc6f9c5725c9" name="选择导出分隔符" grouptitle="选择导出分隔符">
+      <widgetRefs xsi:type="model:Combo" id="9db7afe2-0dca-4310-bf49-cf0f3039368d" name="separator" binding="separator" caption="字段分隔符">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#f9c3751d-38f4-4289-a798-1ae9721c4300"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:PlaceHolder" id="cdc6e776-4b2c-4b95-b0c4-cffc82a97290" name="PlaceHolderImpl-cdc6e776-4b2c-4b95-b0c4-cffc82a97290"/>
+    </contentareanode>
+    <contentareanode id="ad62eab9-f468-4ebf-9af3-d5b5216b2999" name="参数导出" grouptitle="导出参数选择">
+      <widgetRefs xsi:type="model:Table" id="8e4ec179-6f69-4ab5-b0f1-18f0cb16d93a" name="参数类型" binding="tabList" caption="导出参数选择" showcheckbox="true" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="checkList" width="500" height="500">
+        <columnlist id="8551c356-0ff0-447d-9c8b-bd1eb7e247e7" name="参数类型" binding="svaluecmt" visible="true" caption="导出参数                         " enable="false"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="589cde21-ca8b-4e5c-9fe0-61e6a16e917f">
+    <pages id="80082990-96b5-43c8-b8cb-637a1390c4d5" name="参数导出">
+      <views id="47271da1-ee91-4b87-9cc2-707ff76a49fb" name="参数导出" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="211f6322-eb6c-4339-b9f2-dc6f9c5725c9 ad62eab9-f468-4ebf-9af3-d5b5216b2999">
+        <buttonArea id="4f148b26-2645-4d14-8708-5d71f10f8fc6" name="JButtonAreaImpl-4f148b26-2645-4d14-8708-5d71f10f8fc6">
+          <buttons id="6c338304-8ace-48b1-99de-1b59b372ff7c" name="导出" caption="导出" direction="93623b11-106d-47d6-8578-1c7fdcf86fa6"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

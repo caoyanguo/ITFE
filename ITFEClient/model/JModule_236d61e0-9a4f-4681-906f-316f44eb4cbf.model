@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="236d61e0-9a4f-4681-906f-316f44eb4cbf" name="实时扣税查询" ename="onlineTaxQuery"/>

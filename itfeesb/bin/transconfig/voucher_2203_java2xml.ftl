@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="GBK"?>
+<Voucher>
+	<Id>${Voucher.Id}</Id>	
+	<AdmDivCode>${Voucher.AdmDivCode}</AdmDivCode> 
+	<StYear>${Voucher.StYear}</StYear>
+	<VtCode>${Voucher.VtCode}</VtCode> 
+	<VouDate>${Voucher.VouDate}</VouDate>
+	<VoucherNo>${Voucher.VoucherNo}</VoucherNo>	
+	<PayBankCode>${Voucher.PayBankCode?default('')}</PayBankCode>
+	<PayBankName>${Voucher.PayBankName?default('')}</PayBankName>
+	<AgentBusinessNo>${Voucher.AgentBusinessNo}</AgentBusinessNo>
+	<OriBillNo>${Voucher.OriBillNo}</OriBillNo> 
+	<RefundType>${Voucher.RefundType}</RefundType>
+	<PayAcctNo>${Voucher.PayAcctNo}</PayAcctNo>
+	<PayAcctName>${Voucher.PayAcctName}</PayAcctName>
+	<PayAcctBankName>${Voucher.PayAcctBankName}</PayAcctBankName>
+	<PayeeAcctNo>${Voucher.PayeeAcctNo}</PayeeAcctNo>
+	<PayeeAcctName>${Voucher.PayeeAcctName}</PayeeAcctName>
+	<PayeeAcctBankName>${Voucher.PayeeAcctBankName}</PayeeAcctBankName>
+	<PayAmt>${Voucher.PayAmt}</PayAmt>
+	<Remark>${Voucher.Remark}</Remark>
+	<PayDate>${Voucher.PayDate}</PayDate>
+	<Hold1>${Voucher.Hold1}</Hold1>
+	<Hold2>${Voucher.Hold2}</Hold2>
+	<#list Voucher.DetailList as var1>
+	<DetailList>
+	  <#list var1.Detail as var>
+	  <Detail>
+	  	  <Id>${var.Id}</Id>
+		  <VoucherBillId>${var.VoucherBillId}</VoucherBillId>
+		  <VoucherNo>${var.VoucherNo}</VoucherNo>
+		  <BgtTypeCode>${var.BgtTypeCode?default('')}</BgtTypeCode>
+		  <BgtTypeName>${var.BgtTypeName?default('')}</BgtTypeName>
+		  <ProCatCode>${var.ProCatCode?default('')}</ProCatCode>
+		  <ProCatName>${var.ProCatName?default('')}</ProCatName>
+		  <PayKindCode>${var.PayKindCode?default('')}</PayKindCode>
+		  <PayKindName>${var.PayKindName?default('')}</PayKindName>
+		  <MOFDepCode>${var.MOFDepCode?default('')}</MOFDepCode>
+		  <MOFDepName>${var.MOFDepName?default('')}</MOFDepName>
+		  <AgencyCode>${var.AgencyCode}</AgencyCode>
+		  <AgencyName>${var.AgencyName}</AgencyName>
+		  <ExpFuncCode>${var.ExpFuncCode}</ExpFuncCode>
+		  <ExpFuncName>${var.ExpFuncName}</ExpFuncName>
+		  <ExpEcoCode>${var.ExpEcoCode?default('')}</ExpEcoCode>
+		  <ExpEcoName>${var.ExpEcoName?default('')}</ExpEcoName>
+		  <DepProCode>${var.DepProCode?default('')}</DepProCode>
+		  <DepProName>${var.DepProName?default('')}</DepProName>
+		  <PayAcctNo>${var.PayAcctNo}</PayAcctNo>
+		  <PayAcctName>${var.PayAcctName}</PayAcctName>
+		  <PayAcctBankName>${var.PayAcctBankName}</PayAcctBankName>
+		  <PayeeAcctNo>${var.PayeeAcctNo}</PayeeAcctNo>
+		  <PayeeAcctName>${var.PayeeAcctName}</PayeeAcctName>
+		  <PayeeAcctBankName>${var.PayeeAcctBankName}</PayeeAcctBankName>
+		  <PayeeAcctBankNo>${var.PayeeAcctBankNo}</PayeeAcctBankNo>
+	  	  <PayAmt>${var.PayAmt}</PayAmt>
+		  <Remark>${var.Remark}</Remark>	  	 
+		  <Hold1>${var.Hold1}</Hold1>
+	  	  <Hold2>${var.Hold2}</Hold2>
+		  <Hold3>${var.Hold3}</Hold3>
+		  <Hold4>${var.Hold4}</Hold4>		  
+	 </Detail>
+	</#list> 
+	</DetailList>
+	</#list> 
+</Voucher>

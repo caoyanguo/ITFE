@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:file="http://www.mulesource.org/schema/mule/file/2.2"
+	xmlns:http="http://www.mulesource.org/schema/mule/http/2.2"
+	xmlns:https="http://www.mulesource.org/schema/mule/https/2.2"
+	xmlns:jbossts="http://www.mulesource.org/schema/mule/jbossts/2.2"
+	xmlns:jms="http://www.mulesource.org/schema/mule/jms/2.2"
+	xmlns:scripting="http://www.mulesource.org/schema/mule/scripting/2.2"
+	xmlns:client="http://www.mulesource.org/schema/mule/client/2.2"
+	xmlns:ognl="http://www.mulesource.org/schema/mule/ognl/2.2" xmlns:axis="http://www.mulesource.org/schema/mule/axis/2.2"
+	xmlns:cxf="http://www.mulesource.org/schema/mule/cxf/2.2"
+	xmlns:servlet="http://www.mulesource.org/schema/mule/servlet/2.2"
+	xmlns:stdio="http://www.mulesource.org/schema/mule/stdio/2.2" xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.2"
+	xmlns:tcp="http://www.mulesource.org/schema/mule/tcp/2.2"
+	xmlns:management="http://www.mulesource.org/schema/mule/management/2.2"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:sxc="http://www.mulesource.org/schema/mule/sxc/2.2"
+	xmlns:quartz="http://www.mulesource.org/schema/mule/quartz/2.2"
+	xmlns:test="http://www.mulesource.org/schema/mule/test/2.2"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	      http://www.mulesource.org/schema/mule/ftp/2.2 http://www.mulesource.org/schema/mule/ftp/2.2/mule-ftp.xsd
+          http://www.mulesource.org/schema/mule/file/2.2 http://www.mulesource.org/schema/mule/file/2.2/mule-file.xsd
+          http://www.mulesource.org/schema/mule/http/2.2 http://www.mulesource.org/schema/mule/http/2.2/mule-http.xsd
+          http://www.mulesource.org/schema/mule/https/2.2 http://www.mulesource.org/schema/mule/https/2.2/mule-https.xsd
+          http://www.mulesource.org/schema/mule/jdbc/2.2 http://www.mulesource.org/schema/mule/jdbc/2.2/mule-jdbc.xsd
+          http://www.mulesource.org/schema/mule/scripting/2.2 http://www.mulesource.org/schema/mule/scripting/2.2/mule-scripting.xsd
+          http://www.mulesource.org/schema/mule/management/2.2 http://www.mulesource.org/schema/mule/management/2.2/mule-management.xsd
+          http://www.mulesource.org/schema/mule/client/2.2 http://www.mulesource.org/schema/mule/client/2.2/mule-client.xsd
+          http://www.mulesource.org/schema/mule/ognl/2.2 http://www.mulesource.org/schema/mule/ognl/2.2/mule-ognl.xsd
+          http://www.mulesource.org/schema/mule/quartz/2.2 http://www.mulesource.org/schema/mule/quartz/2.2/mule-quartz.xsd
+          http://www.mulesource.org/schema/mule/soap/2.2 http://www.mulesource.org/schema/mule/soap/2.2/mule-soap.xsd
+          http://www.mulesource.org/schema/mule/axis/2.2 http://www.mulesource.org/schema/mule/axis/2.2/mule-axis.xsd
+          http://www.mulesource.org/schema/mule/cxf/2.2 http://www.mulesource.org/schema/mule/cxf/2.2/mule-cxf.xsd
+          http://www.mulesource.org/schema/mule/sxc/2.2 http://www.mulesource.org/schema/mule/sxc/2.2/mule-sxc.xsd
+          http://www.mulesource.org/schema/mule/servlet/2.2 http://www.mulesource.org/schema/mule/servlet/2.2/mule-servlet.xsd
+          http://www.mulesource.org/schema/mule/core/2.2 http://www.mulesource.org/schema/mule/core/2.2/mule.xsd   
+          http://www.mulesource.org/schema/mule/stdio/2.2 http://www.mulesource.org/schema/mule/stdio/2.2/mule-stdio.xsd
+          http://www.mulesource.org/schema/mule/tcp/2.2 http://www.mulesource.org/schema/mule/tcp/2.2/mule-tcp.xsd
+          http://www.mulesource.org/schema/mule/jms/2.2 http://www.mulesource.org/schema/mule/jms/2.2/mule-jms.xsd
+		  http://www.mulesource.org/schema/mule/vm/2.2 http://www.mulesource.org/schema/mule/vm/2.2/mule-vm.xsd
+          http://www.mulesource.org/schema/mule/xml/2.2 http://www.mulesource.org/schema/mule/xml/2.2/mule-xml.xsd
+          http://www.mulesource.org/schema/mule/test/2.2 http://www.mulesource.org/schema/mule/test/2.2/mule-test.xsd
+           http://www.mulesource.org/schema/mule/quartz/2.2 http://www.mulesource.org/schema/mule/quartz/2.2/mule-quartz.xsd">
+
+	<quartz:connector name="quartzConnector1" numberOfConcurrentTransactedReceivers="1">
+		<quartz:factory-property key="org.quartz.scheduler.instanceName" value="MuleScheduler1" />
+		<quartz:factory-property key="org.quartz.threadPool.class" value="org.quartz.simpl.SimpleThreadPool" />
+		<quartz:factory-property key="org.quartz.threadPool.threadCount" value="1" />
+		<quartz:factory-property key="org.quartz.scheduler.rmi.proxy" value="false" />
+		<quartz:factory-property key="org.quartz.scheduler.rmi.export" value="false" />
+		<quartz:factory-property key="org.quartz.jobStore.class" value="org.quartz.simpl.RAMJobStore" />
+	</quartz:connector>
+
+	<model name="Timer">
+		<service name="RecordErrorInfoTimerService">
+			<inbound>
+				<quartz:inbound-endpoint repeatInterval="${recordErrorInterval}" name="recordErrorInfoTimer" jobName="RecordErrorInfoJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.common.ErrorMsgLogComponent" />
+		</service>
+		<service name="DeleteTempFilesService">
+			<inbound>
+				<quartz:inbound-endpoint  cronExpression="${deletetempfilescronexpression}" name="deleteTempFilesTimer" jobName="DeleteTempFilesJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.common.DeleteTempFilesComponent"/>
+		</service>
+		<service name="DayCutTimerService">
+			<inbound>
+				<quartz:inbound-endpoint cronExpression="${dayCutInterval}" name="dayCutInfoTimer" jobName="DayCutInfoJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.common.DayCutComponent" />
+		</service>
+		
+		<service name="DayCutTimerIncomeShareService">
+			<inbound>
+				<quartz:inbound-endpoint cronExpression="${dayCutIncomeShareInterval}" name="dayCutIncomeInfoTimer" jobName="DayCutIncomeInfoJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.common.DayCutIncomeShareComponent" />
+		</service>
+
+		<service name="CollectIncomeBillTimerService">
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" repeatInterval="${commitIncmBillInterval}" name="commitIncmBillTimer" jobName="commitIncmBillJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.common.CollectIncmBillComponent" />
+			<outbound>
+				<pass-through-router>
+					<vm:outbound-endpoint  path="commitIncomeBill" synchronous="true"/>								
+				</pass-through-router>				
+			</outbound>
+		</service>
+		
+		<service name="CommitIncomeBillTimerService">
+			<inbound>
+				<vm:inbound-endpoint  path="commitIncomeBill" synchronous="true">
+
+				</vm:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.common.CommitIncmBillComponent" />
+			<!-- 
+			<outbound>
+				<chaining-router>
+					<jms:outbound-endpoint queue="${mq.TO.PBC.BATCH}"
+						disableTemporaryReplyToDestinations="true" synchronous="false"
+						connector-ref="jmsConnector1" transformer-refs="java2xml casign string2bytes ojbect2JMS">
+						<xa-transaction action="JOIN_IF_POSSIBLE" />
+					</jms:outbound-endpoint>
+				</chaining-router>
+			</outbound>
+			 -->
+		</service>
+		
+		
+		<!-- 定时触发解包程序，在解包时间端内，每隔3分钟处理30个 -->
+		<service name="TimerProcMsgService">
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" repeatInterval="${timerprocmsg}" name="timerprocmsgs" jobName="Timerprocmsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerMsgProcComponent" />
+		</service>
+		
+		<!-- 定时触发根据入库流水更新收入明细表、汇总表 -->
+		<service name="TimerUpdateIncomeService">
+			<inbound>
+				<quartz:inbound-endpoint synchronous="true" repeatInterval="${updateIncomeDetail}" name="timerupdateincomes" jobName="Timerupdateincome">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerUpdateIncomeComponent" />
+		</service>
+		
+		<!-- 北京定时核对入库流水与报表金额
+		<service name="IncomeDetailReportCheckTimerService">
+			<inbound>
+				<quartz:inbound-endpoint cronExpression="${IncomeDetailReportCheckInterval}" name="IncomeDetailReportCheckInfoTimer" jobName="IncomeDetailReportCheckInfoJob">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.IncomeDetailReportCheckComponent" />
+		</service>-->
+		
+		 <!-- 山东一本通批量拨付Ftp定时读取任务
+		<service name="TimerReadFtpComponent">
+			<inbound>
+				<quartz:inbound-endpoint cronExpression="${ftpread}" name="ReadFtpSdService" jobName="ReadFtpSdServiceMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerReadFtpComponent" />
+		</service>-->
+		
+		<!-- 山东一本通批量拨付Ftp定时回执任务
+		<service name="TimerFtpReturnComponent">
+			<inbound>
+				<quartz:inbound-endpoint cronExpression="${ftpreturn}" name="ReturnFtpSdService" jobName="ReturnFtpSdServiceMsg">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerFtpReturnComponent" />
+		</service>-->
+		<!-- 广西检查各个国库报表是否下载完，导出数据到服务器目录
+		<service name="TimerExportReportToDirService">
+			<inbound>
+				<quartz:inbound-endpoint cronExpression="${exportreporttodir}" name="TimerExportReportToDirs" jobName="TimerExportReportToDir">
+					<quartz:event-generator-job />
+				</quartz:inbound-endpoint>
+			</inbound>
+			<component class="com.cfcc.itfe.component.TimerExportReportToDirComponent" />
+		</service>-->
+	</model>
+</mule>

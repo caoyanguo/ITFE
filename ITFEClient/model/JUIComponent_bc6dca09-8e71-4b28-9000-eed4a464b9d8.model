@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bc6dca09-8e71-4b28-9000-eed4a464b9d8" name="授权支付查询" ename="grantPaymsgQuery">
+  <jproperties id="3d0e1c32-2c34-490d-992c-797b7f4488e1" key="GeneratedTime" value="1452735188990"/>
+  <refModule href="JModule_64286626-003f-42b4-9b22-2d418f0e4b14.model#64286626-003f-42b4-9b22-2d418f0e4b14"/>
+  <model id="594db364-d0c0-4f13-b9f6-e6f6cf1bcb3b" name="JModelImpl-594db364-d0c0-4f13-b9f6-e6f6cf1bcb3b">
+    <attributes id="32550a04-f2a6-409e-8f03-cddbeebcd9ae" name="pagingcontextMain" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="398d4b2f-3689-4f57-a7a5-8e2b9199396a" name="pagingcontextSub" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="fca2584b-5742-4e86-8e16-cc64f65bef9b" name="pagingcontextMainHis" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="e98ce7b7-79f0-4c1a-af55-3172ca205744" name="pagingcontextSubHis" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="01555364-5a8a-447b-8ad4-a26d5356eb3d" viewers="a4b5e46e-3f10-40c8-8fa0-744a47f73dae" name="查询" ename="search"/>
+    <directions id="aa7037e8-6386-479d-8cc9-f36b494cd888" viewers="7e437eee-633d-4dcf-81eb-13b5c08aee56" name="返回" ename="reback"/>
+    <directions id="5b0c4437-7970-4724-b6ce-657f8ad3075f" name="主信息双击事件" ename="doubleclickMain"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="0a2be687-8cc0-4622-b6a4-0cacb20e8b9c">
+    <contentareanode id="d68e61ad-bc11-45df-aa59-1df54ff5674d" name="授权支付查询" grouptitle="授权支付查询">
+      <widgetRefs xsi:type="model:Combo" id="99ac7373-55f9-4ed5-aab0-810a3201ceb2" name="请选择要查询的表" binding="selectedtable" caption="请选择要查询的表" required="true" display="displayValue" underly="underlyValue" modelsource="tableMapperList"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="6b5baa3c-4bc3-423b-9c41-252d86473e47" name="PlaceHolderImpl-6b5baa3c-4bc3-423b-9c41-252d86473e47"/>
+      <widgetRefs xsi:type="model:Text" id="4e9c4c95-52e6-472a-8e9a-f96d65ae7b4b" name="国库代码" binding="finddto.strecode" caption="国库代码"/>
+      <widgetRefs xsi:type="model:Text" id="01012ab6-73c2-44df-b9b9-57225a9c6706" name="包流水号" binding="finddto.spackageno" caption="包流水号"/>
+      <widgetRefs xsi:type="model:Text" id="b2c931e8-7498-49e9-bb14-f7805a87d9ce" name="凭证日期" binding="finddto.svoudate" caption="凭证日期"/>
+      <widgetRefs xsi:type="model:Text" id="cfe34a2d-e445-405d-b792-a30e47985eac" name="委托日期" binding="finddto.scommitdate" caption="委托日期"/>
+      <widgetRefs xsi:type="model:Text" id="40de1718-3439-426a-8b83-4076d227ee09" name="凭证编号" binding="finddto.svoucherno" caption="凭证编号"/>
+      <widgetRefs xsi:type="model:Text" id="4e2f1e6b-1c65-42f9-9f32-dbb2912505e2" name="代理银行行号" binding="finddto.spaybankcode" caption="代理银行行号"/>
+      <widgetRefs xsi:type="model:Text" id="2307d62a-8627-4900-bc0f-b47f06113245" name="金额" binding="finddto.npayamt" caption="金额">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#fc188264-5e10-43b4-a500-1106d2f93af1"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="810cfffb-4721-4c19-aaab-2e3b752a5d2c" name="授权支付主信息列表" grouptitle="授权支付主信息列表">
+      <widgetRefs xsi:type="model:Table" id="f5f2eb89-a71e-4838-8c01-589f98af13e3" name="授权支付主信息列表" binding="pagingcontextMain" visible="true" caption="授权支付主信息列表" enable="true" tabletype="paging" refdoubleclickdirection="5b0c4437-7970-4724-b6ce-657f8ad3075f" height="280">
+        <columnlist id="358bbd8f-7659-460d-8bae-7dd6cfc6e6cf" name="凭证号" binding="svoucherno" caption="凭证号"/>
+        <columnlist id="e6961dd3-4be5-4e0f-b849-207cee9fbd69" name="凭证日期" binding="svoudate" caption="凭证日期"/>
+        <columnlist id="2ed1eccc-e286-4e50-89a0-51415b00e07e" name="支付方式" binding="spaytypename" caption="支付方式"/>
+        <columnlist id="32573b7d-ba72-4371-9d93-9c3a7f520fc0" name="收支管理名称" binding="sprocatname" caption="收支管理名称"/>
+        <columnlist id="1fb6773c-353f-4d31-b4d9-d6d02eb40e6b" name="业务处室编码" binding="smofdepcode" caption="业务处室编码"/>
+        <columnlist id="730132c5-1666-40ff-991b-93d23f10d99a" name="指标文号名称" binding="sfilenoname" caption="指标文号名称"/>
+        <columnlist id="3aecf573-7385-4786-bb1a-1c3ad1f8607b" name="结算方式名称" binding="ssetmodename" caption="结算方式名称"/>
+        <columnlist id="266bd739-45b5-49a3-b65d-1e2459c0a0e1" name="代理银行名称" binding="spaybankname" caption="代理银行名称"/>
+        <columnlist id="a8e7836d-5f5f-497a-8fee-bd82e073aa16" name="清算银行名称" binding="sclearbankname" caption="清算银行名称"/>
+        <columnlist id="48f3418c-f070-4d75-9417-6f3598265a4d" name="收款人账号" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="1146d16b-1505-4b78-8084-3929c3bdc533" name="收款人名称" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="b6df7be3-6f26-4144-9834-3cf42e604e25" name="收款人银行" binding="spayeeacctbankname" caption="收款人银行"/>
+        <columnlist id="14501171-825d-4ef1-b8f9-a4b0ddfb03a4" name="收款人银行行号" binding="spayeeacctbankno" caption="收款人银行行号"/>
+        <columnlist id="24f59072-e358-4826-a3d1-009532a64ff6" name="付款人账号" binding="spayacctno" caption="付款人账号"/>
+        <columnlist id="61364caa-ba01-4f71-81a2-1e4d7c812076" name="付款人名称" binding="spayacctname" caption="付款人名称"/>
+        <columnlist id="7fdbeeb7-b2fe-4c91-a85b-f3bb70d225d1" name="付款人银行" binding="spayacctbankname" caption="付款人银行"/>
+        <columnlist id="919b553a-0e65-455b-a996-e550e6573b43" name="用途名称" binding="spaysummaryname" caption="用途名称"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="6e5ba88a-c940-49fc-91b9-f2019614bb2f" name="授权支付明细信息列表" grouptitle="授权支付明细信息列表">
+      <widgetRefs xsi:type="model:Table" id="ae6ea617-cac2-4960-a8f8-7cb067af4265" name="授权支付明细信息列表" binding="pagingcontextSub" caption="授权支付明细信息列表" tabletype="paging" showcheckbox="false" height="200">
+        <columnlist id="5af5b4f6-0b61-4158-a1e7-67b17b34714e" name="支付明细ID" binding="sid" caption="支付明细ID"/>
+        <columnlist id="6caf391a-b046-42c0-bc3c-ef9834431051" name="财政直接支付凭证单号" binding="svoucherbillno" caption="财政直接支付凭证单号"/>
+        <columnlist id="7c2d6fbd-fd45-4180-8ac2-7507d0da05a1" name="一级预算单位编码" binding="ssupdepcode" caption="一级预算单位编码"/>
+        <columnlist id="e874b1a4-e19b-43cd-8278-2b8608244efd" name="一级预算单位名称" binding="ssupdepname" caption="一级预算单位名称"/>
+        <columnlist id="0b00cf55-6e3d-447f-8cb4-c7e1397ac0b5" name="基层预算单位编码" binding="sagencycode" caption="基层预算单位编码"/>
+        <columnlist id="73f3b15b-b524-4b9f-bd1a-c437942defff" name="基层预算单位名称" binding="sagencyname" caption="基层预算单位名称"/>
+        <columnlist id="523fb18e-ef94-472c-b828-b20117774480" name="支出功能分类科目编码" binding="sexpfunccode" caption="支出功能分类科目编码"/>
+        <columnlist id="a39275ba-f767-4e17-9d68-0d7cf0d8103c" name="支出功能分类科目名称" binding="sexpfuncname" caption="支出功能分类科目名称"/>
+        <columnlist id="f2a31bd9-ce54-47ee-91b6-cdb7924a25af" name="预算项目编码" binding="sdepprocode" caption="预算项目编码"/>
+        <columnlist id="7ac4acd9-e0b6-4cd6-9ff6-26e5ded79173" name="预算项目名称" binding="sdepproname" caption="预算项目名称"/>
+        <columnlist id="9340e36d-8a01-4ffb-8259-f9b748caca55" name="收款人账号" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="55f97641-8cac-4586-b2ba-b16defb4b2f8" name="收款人名称" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="7e34463d-5adb-4a2f-b4ad-af915b80163b" name="收款人银行" binding="spayeeacctbankname" caption="收款人银行"/>
+        <columnlist id="4d0d331a-383e-44a7-8053-000489a1995d" name="收款人银行行号" binding="spayeeacctbankno" caption="收款人银行行号"/>
+        <columnlist id="c015cdaa-9b8c-4ed0-9a90-cb878f7ab09d" name="支付金额" binding="npayamt" caption="支付金额"/>
+        <columnlist id="60ff9df6-354b-422e-886b-7d96937cb671" name="附言" binding="sremark" caption="附言"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="af413643-bed5-4dfd-a34c-c26e7a459ad7" name="授权支付主信息列表(历史表)" grouptitle="授权支付主信息列表(历史表)">
+      <widgetRefs xsi:type="model:Table" id="cd0be6d8-38fc-4f94-bfbd-dc50846c5244" name="授权支付主信息列表(历史表)" binding="pagingcontextMainHis" caption="授权支付主信息列表(历史表)" tabletype="paging" showcheckbox="false" height="280">
+        <columnlist id="9399496a-c32b-4b9b-b642-136ee3217bf1" name="凭证号" binding="svoucherno" caption="凭证号"/>
+        <columnlist id="dbee958f-3c3c-4252-8a2c-9806d99ab3ab" name="凭证日期" binding="svoudate" caption="凭证日期"/>
+        <columnlist id="79a83f6c-0001-4cfa-9342-8bc599591cbe" name="支付方式名称" binding="spaytypename" caption="支付方式名称"/>
+        <columnlist id="7c5643ad-170e-4fde-9bb8-dfacb4eafd0c" name="收支管理名称" binding="sprocatname" caption="收支管理名称"/>
+        <columnlist id="3279b0fd-3024-4e7d-a21c-ebbbe04cd2bb" name="指标文号名称" binding="sfilenoname" caption="指标文号名称"/>
+        <columnlist id="dee66ffb-deb8-4c5d-9d60-1b9721d93589" name="结算方式名称" binding="ssetmodename" caption="结算方式名称"/>
+        <columnlist id="5c86bee5-8a4e-455d-8527-2534935c3745" name="代理银行名称" binding="spaybankname" caption="代理银行名称"/>
+        <columnlist id="4750a654-d353-4684-9cd0-debe0c14642e" name="清算银行名称" binding="sclearbankname" caption="清算银行名称"/>
+        <columnlist id="0a24ac18-4d15-4187-b52c-399ff26d8702" name="收款人账号" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="c66f9bfa-3096-41e0-a5d1-8d5f5c110fbb" name="收款人名称" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="fd87dbdd-d1a7-43c9-8e11-d6221119f48b" name="收款人银行" binding="spayeeacctbankname" caption="收款人银行"/>
+        <columnlist id="476e5175-9dcc-4425-8353-8718c3ff0bd3" name="收款人银行行号" binding="spayeeacctbankno" caption="收款人银行行号"/>
+        <columnlist id="8c0a526e-5c49-432d-8a74-4a5df65176b4" name="付款人账号" binding="spayacctno" caption="付款人账号"/>
+        <columnlist id="dd3b99ed-a34f-42cb-9549-6bd98aebfa03" name="付款人名称" binding="spayacctname" caption="付款人名称"/>
+        <columnlist id="6fdbd8f4-8bdd-47a6-9251-4ef21f4452d3" name="付款人银行" binding="spayacctbankname" caption="付款人银行"/>
+        <columnlist id="922df1a8-61aa-4bf4-9800-70b6375a811f" name="用途名称" binding="spaysummaryname" caption="用途名称"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="0e23989d-3514-40b5-a86b-c1ba678a6ea7" name="授权支付明细信息列表(历史表)" grouptitle="授权支付明细信息列表(历史表)">
+      <widgetRefs xsi:type="model:Table" id="797d4008-f1a5-4960-bb82-6a54769a8951" name="授权支付明细信息列表(历史表)" binding="pagingcontextSubHis" caption="授权支付明细信息列表(历史表)" tabletype="paging" showcheckbox="false" height="200">
+        <columnlist id="675f631d-28e0-4967-a705-b46e3ffde91e" name="支付明细ID" binding="sid" caption="支付明细ID"/>
+        <columnlist id="8a2ec917-ae28-4a3c-b3f2-a1496cdda097" name="财政直接支付凭证单号" binding="svoucherbillno" caption="财政直接支付凭证单号"/>
+        <columnlist id="64f3b802-303d-49c8-b8b3-5ae750241b01" name="一级预算单位编码" binding="ssupdepcode" caption="一级预算单位编码"/>
+        <columnlist id="b29a82a7-8772-4303-858a-e4609aa8d181" name="一级预算单位名称" binding="ssupdepname" caption="一级预算单位名称"/>
+        <columnlist id="8f64aa79-3c8e-4471-bfe9-36ff310cacfb" name="基层预算单位编码" binding="sagencycode" caption="基层预算单位编码"/>
+        <columnlist id="8588f3bc-33c5-4cb4-9ab0-7cd465d00d9e" name="基层预算单位名称" binding="sagencyname" caption="基层预算单位名称"/>
+        <columnlist id="dcfadae3-748a-49de-bcdf-ea2ea31059b7" name="支出功能分类科目编码" binding="sexpfunccode" caption="支出功能分类科目编码"/>
+        <columnlist id="20d8a9a5-fd01-4a52-a3b2-b07c644bba7a" name="支出功能分类科目名称" binding="sexpfuncname" caption="支出功能分类科目名称"/>
+        <columnlist id="0346d940-a744-4488-a1e3-880202e38ee1" name="预算项目编码" binding="sdepprocode" caption="预算项目编码"/>
+        <columnlist id="3b80fcd0-c4cb-42fa-b146-36c5b68540d2" name="预算项目名称" binding="sdepproname" caption="预算项目名称"/>
+        <columnlist id="1439a49c-1257-4979-8238-a9f43bdfa03e" name="收款人账号" binding="spayeeacctno" caption="收款人账号"/>
+        <columnlist id="7516862f-bbda-4dde-881c-833c0be8929c" name="收款人名称" binding="spayeeacctname" caption="收款人名称"/>
+        <columnlist id="3e5a296e-fa50-4991-a1e5-133aad33aef1" name="收款人银行" binding="spayeeacctbankname" caption="收款人银行"/>
+        <columnlist id="7220528e-bff5-4f03-8c19-54f4f4574116" name="收款人银行行号" binding="spayeeacctbankno" caption="收款人银行行号"/>
+        <columnlist id="3b48c1a4-37ed-46c5-bb4b-6eff46ff2df5" name="支付金额" binding="npayamt" caption="支付金额"/>
+        <columnlist id="45531d97-9ba9-4403-a547-9191cb6d9df1" name="附言" binding="sremark" caption="附言"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="2420dbbe-754d-497b-8aad-81c7cb2e91a9">
+    <pages id="bd909713-783f-413d-83c2-2577f5b4201b" name="授权支付信息">
+      <views id="7e437eee-633d-4dcf-81eb-13b5c08aee56" name="授权支付查询界面" isdefault="true" contentArea="d68e61ad-bc11-45df-aa59-1df54ff5674d">
+        <buttonArea id="ec580b0d-110f-43a7-8bc8-446938cf1b0b" name="JButtonAreaImpl-ec580b0d-110f-43a7-8bc8-446938cf1b0b">
+          <buttons id="da18f1bd-f4f7-45ca-945b-eb0ce8f284b1" name="查询" caption="查询" checkrequired="true" direction="01555364-5a8a-447b-8ad4-a26d5356eb3d"/>
+        </buttonArea>
+      </views>
+      <views id="a4b5e46e-3f10-40c8-8fa0-744a47f73dae" name="授权支付信息列表" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="810cfffb-4721-4c19-aaab-2e3b752a5d2c 6e5ba88a-c940-49fc-91b9-f2019614bb2f">
+        <buttonArea id="eecb54a3-cda9-4fab-9bb3-c27bf48e78eb" name="JButtonAreaImpl-eecb54a3-cda9-4fab-9bb3-c27bf48e78eb">
+          <buttons id="7352b0b7-9c3e-4ce2-83ac-3c7aca9261c4" name="返回" caption="返回" direction="aa7037e8-6386-479d-8cc9-f36b494cd888"/>
+        </buttonArea>
+      </views>
+      <views id="a498c0c8-c1ea-4bad-b27b-9bfe19bbef22" name="授权支付信息列表(历史表)" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="af413643-bed5-4dfd-a34c-c26e7a459ad7 0e23989d-3514-40b5-a86b-c1ba678a6ea7">
+        <buttonArea id="fd4b2056-0cb9-4c2d-92d1-32573916a039" name="JButtonAreaImpl-fd4b2056-0cb9-4c2d-92d1-32573916a039">
+          <buttons id="968668e0-f72c-48a1-b92d-ca62c40d5373" name="返回" caption="返回" direction="aa7037e8-6386-479d-8cc9-f36b494cd888"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

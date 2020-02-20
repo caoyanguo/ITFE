@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="6e3e29a3-3075-4201-ae22-79da44ef4801" name="收入税票查询处理" ename="incomeDataQuery"/>

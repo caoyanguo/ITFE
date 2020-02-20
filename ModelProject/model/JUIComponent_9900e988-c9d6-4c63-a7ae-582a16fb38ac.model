@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9900e988-c9d6-4c63-a7ae-582a16fb38ac" name="导出TBS文件" ename="exportTBS">
+  <jproperties id="22aabf94-5a53-41c9-9514-4e501eeb7234" key="GeneratedTime" value="1256172485062"/>
+  <refModule href="JModule_0cf525cd-1640-4a03-b050-f9363dc5ca3a.model#0cf525cd-1640-4a03-b050-f9363dc5ca3a"/>
+  <model id="0c7ec19c-9a02-4a2c-8fe8-72b0e51dd017" name="JModelImpl-0c7ec19c-9a02-4a2c-8fe8-72b0e51dd017"/>
+  <contentAreas id="354185cf-545b-43ec-9301-0c47aa2da794">
+    <contentareanode id="5378f95f-6209-4e00-9675-bc8b02cc2474" name="录入文件信息的界面">
+      <widgetRefs xsi:type="model:Combo" id="c8079d43-fb34-4ebc-930c-b28a5cb4fe8e" name="预算种类" visible="true" caption="预算种类" enable="true"/>
+      <widgetRefs xsi:type="model:Combo" id="02cf157e-ed81-4ab7-9b33-e5cbf8498e05" name="调整期标志" visible="true" caption="调整期标志" enable="true"/>
+      <widgetRefs xsi:type="model:Combo" id="a13e5402-b8c1-4685-a871-d3b11a4df55b" name="核算主体代码" visible="true" caption="核算主体代码" enable="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="50ee3a95-a013-4d6a-a1e0-a2437da1adbe">
+    <pages id="14bfb569-4047-45fc-8263-9a74f00fc07e" name="显示页面">
+      <views id="310102c6-5119-47c6-afb0-44734f4814f6" name="录入页面" isdefault="true" contentArea="5378f95f-6209-4e00-9675-bc8b02cc2474">
+        <buttonArea id="2ba48eb9-31b5-4630-aa01-472afc4ac931" name="JButtonAreaImpl-2ba48eb9-31b5-4630-aa01-472afc4ac931">
+          <buttons id="3e57e964-2868-462a-a73c-480e099d5c81" name="生成文件" visible="true" caption="生成文件" enable="true"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

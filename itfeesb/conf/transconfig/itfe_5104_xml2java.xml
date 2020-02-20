@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead5104" beanIdRef="BatchHead5104" />
+	<jb:wiring property="Bill5104" beanIdRef="Bill5104s" />
+</jb:bean>
+<jb:bean beanId="Bill5104s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="Bill5104" />
+</jb:bean>
+<jb:bean beanId="Bill5104" class="java.util.HashMap" createOnElement="Bill5104">
+	<jb:value property="TraNo" decoder="String" data="CFX/MSG/Bill5104/TraNo" />
+	<jb:value property="VouNo" decoder="String" data="CFX/MSG/Bill5104/VouNo" />
+	<jb:value property="VouDate" decoder="String" data="CFX/MSG/Bill5104/VouDate" />
+	<jb:value property="PayerAcct" decoder="String" data="CFX/MSG/Bill5104/PayerAcct" />
+	<jb:value property="PayerName" decoder="String" data="CFX/MSG/Bill5104/PayerName" />
+	<jb:value property="PayerAddr" decoder="String" data="CFX/MSG/Bill5104/PayerAddr" />
+	<jb:value property="PayeeAcct" decoder="String" data="CFX/MSG/Bill5104/PayeeAcct" />
+	<jb:value property="PayeeName" decoder="String" data="CFX/MSG/Bill5104/PayeeName" />
+	<jb:value property="PayeeAddr" decoder="String" data="CFX/MSG/Bill5104/PayeeAddr" />
+	<jb:value property="PayeeOpnBnkNo" decoder="String" data="CFX/MSG/Bill5104/PayeeOpnBnkNo" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/Bill5104/AddWord" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/Bill5104/BudgetType" />
+	<jb:value property="TrimSign" decoder="String" data="CFX/MSG/Bill5104/TrimSign" />
+	<jb:value property="OfYear" decoder="String" data="CFX/MSG/Bill5104/OfYear" />
+	<jb:value property="BdgAdmType" decoder="String" data="CFX/MSG/Bill5104/BdgAdmType" />
+	<jb:value property="Amt" decoder="String" data="CFX/MSG/Bill5104/Amt" />
+	<jb:value property="StatInfNum" decoder="String" data="CFX/MSG/Bill5104/StatInfNum" />
+	<jb:wiring property="Detail5104" beanIdRef="Detail5104s" />
+</jb:bean>
+<jb:bean beanId="BatchHead5104" class="java.util.HashMap" createOnElement="BatchHead5104">
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BatchHead5104/TreCode" />
+	<jb:value property="BillOrg" decoder="String" data="CFX/MSG/BatchHead5104/BillOrg" />
+	<jb:value property="PayeeBankNo" decoder="String" data="CFX/MSG/BatchHead5104/PayeeBankNo" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead5104/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead5104/PackNo" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead5104/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead5104/AllAmt" />
+	<jb:value property="PayoutVouType" decoder="String" data="CFX/MSG/BatchHead5104/PayoutVouType" />
+	<jb:value property="PayMode" decoder="String" data="CFX/MSG/BatchHead5104/PayMode" />
+</jb:bean>
+<jb:bean beanId="Detail5104s" class="java.util.ArrayList" createOnElement="Bill5104">
+	<jb:wiring beanIdRef="Detail5104" />
+</jb:bean>
+<jb:bean beanId="Detail5104" class="java.util.HashMap" createOnElement="Detail5104">
+	<jb:value property="SeqNo" decoder="String" data="CFX/MSG/Bill5104/Detail5104/SeqNo" />
+	<jb:value property="BdgOrgCode" decoder="String" data="CFX/MSG/Bill5104/Detail5104/BdgOrgCode" />
+	<jb:value property="FuncSbtCode" decoder="String" data="CFX/MSG/Bill5104/Detail5104/FuncSbtCode" />
+	<jb:value property="EcnomicSubjectCode" decoder="String" data="CFX/MSG/Bill5104/Detail5104/EcnomicSubjectCode" />
+	<jb:value property="Amt" decoder="String" data="CFX/MSG/Bill5104/Detail5104/Amt" />
+	<jb:value property="AcctProp" decoder="String" data="CFX/MSG/Bill5104/Detail5104/AcctProp" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

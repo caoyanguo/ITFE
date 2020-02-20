@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK"?>
+<Voucher>
+	<Id>${Voucher.Id}</Id>
+	<AdmDivCode>${Voucher.AdmDivCode}</AdmDivCode>
+	<StYear>${Voucher.StYear}</StYear>
+	<VtCode>${Voucher.VtCode}</VtCode>
+	<VouDate>${Voucher.VouDate}</VouDate>
+	<VoucherNo>${Voucher.VoucherNo}</VoucherNo>
+	<TreCode>${Voucher.TreCode}</TreCode>
+	<ClearBankCode>${Voucher.ClearBankCode}</ClearBankCode>
+	<ClearBankName>${Voucher.ClearBankName}</ClearBankName> 
+	<ClearAccNo>${Voucher.ClearAccNo}</ClearAccNo>    
+	<ClearAccNanme>${Voucher.ClearAccNanme}</ClearAccNanme>
+	<FundTypeCode>${Voucher.FundTypeCode}</FundTypeCode>
+	<FundTypeName>${Voucher.FundTypeName}</FundTypeName>
+	<PayTypeCode>${Voucher.PayTypeCode}</PayTypeCode>
+	<PayTypeName>${Voucher.PayTypeName}</PayTypeName>
+	<BeginDate>${Voucher.BeginDate}</BeginDate>
+	<EndDate>${Voucher.EndDate}</EndDate>
+	<XCheckResult>${Voucher.XCheckResult}</XCheckResult>
+	<XCheckReason>${Voucher.XCheckReason}</XCheckReason>
+	<XAcctDate>${Voucher.XAcctDate}</XAcctDate>
+	<Hold1>${Voucher.Hold1}</Hold1>
+	<Hold2>${Voucher.Hold2}</Hold2>
+	<DetailList>
+	  <#list Voucher.DetailList.Detail as var>
+	  <Detail>
+		  	<Id>${var.Id}</Id>
+			<VoucherBillId>${var.VoucherBillId}</VoucherBillId>
+			<VoucherBillNo>${var.VoucherBillNo}</VoucherBillNo>
+			<AllNum>${var.AllNum}</AllNum>
+			<AllAmt>${var.AllAmt}</AllAmt>
+			<XAllNum>${var.XAllNum}</XAllNum>
+			<XAllAmt>${var.XAllAmt}</XAllAmt>
+			<Hold1>${var.Hold1}</Hold1>
+			<Hold2>${var.Hold2}</Hold2>
+			<Hold3>${var.Hold3}</Hold3>
+			<Hold4>${var.Hold4}</Hold4>
+	 </Detail>
+	</#list> 
+	</DetailList>
+</Voucher>

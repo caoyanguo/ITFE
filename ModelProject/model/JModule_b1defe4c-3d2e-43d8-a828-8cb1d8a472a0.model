@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1071651b-9b36-407e-99cd-5e5946325d59" name="直接支付额度查询处理" ename="directPayQuery"/>

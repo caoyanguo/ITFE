@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5cc6a8ab-209a-418d-b094-5ffc889cf318" name="财政授权支付调整凭证查询" ename="FinanceGrantPayAdjustVoucher">
+  <jproperties id="4c39cd9d-5209-48a9-b40c-1baecb9368d4" key="GeneratedTime" value="1416472087799"/>
+  <refModule href="JModule_fb4e7acb-1df7-4835-bfe1-1114249470f1.model#fb4e7acb-1df7-4835-bfe1-1114249470f1"/>
+  <model id="cb8f0048-a95a-4208-b7bd-4547e4f6c8e0" name="JModelImpl-cb8f0048-a95a-4208-b7bd-4547e4f6c8e0">
+    <attributes id="dd841ea5-fb0b-4f68-9cc6-8ede740ae38f" name="curSearchDto" type="com.cfcc.itfe.persistence.dto.TfGrantpayAdjustmainDto"/>
+    <attributes id="fdba08c7-d028-4813-8b31-15a26fca74c4" name="curSubSearchDto" type="com.cfcc.itfe.persistence.dto.TfGrantpayAdjustsubDto"/>
+    <attributes id="85e3d575-4582-4700-b123-607222d3ff3b" name="hisSearchDto" type="com.cfcc.itfe.persistence.dto.HtfGrantpayAdjustmainDto"/>
+    <attributes id="95b8cb0a-4b5e-432c-a48a-94ae9141c07e" name="hisSubSearchDto" type="com.cfcc.itfe.persistence.dto.HtfGrantpayAdjustsubDto"/>
+    <attributes id="56dbb857-fb0b-4477-a43d-b0015f0e8587" name="pagingContext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="29160e25-a5f4-4579-afbe-978929af5a34" name="enumList" type="java.util.List"/>
+    <attributes id="2c650205-7500-45f9-841e-316ad0f6b100" name="realValue" type="java.lang.String"/>
+    <directions id="6c2a5f60-0746-45b3-a678-bec79f1a60ee" name="单选" ename="singleSelect"/>
+    <directions id="437452eb-2394-43c5-8ce6-986ab61f6cae" name="双击" ename="doubleClick"/>
+    <directions id="9aefc68b-8a09-447c-a49f-bd412aa05435" viewers="25a43463-4bbe-4c52-ba3d-33f97dad5fda" name="查询" ename="searchToList"/>
+    <directions id="e40a3819-e31e-484f-b8ff-afa09e3f1c6b" viewers="a896e409-0ac9-4313-8501-a542281e5b4e" name="返回" ename="backToSearch"/>
+    <directions id="14c823e7-bb16-4d63-9428-9f5116d6aad4" name="导出文件" ename="exportFile"/>
+  </model>
+  <services href="JServiceComponet_40c23a96-0e36-43bb-a106-d260c571f783.model#40c23a96-0e36-43bb-a106-d260c571f783"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="f77c9585-ed19-4996-90ee-c31aa036d564">
+    <contentareanode id="f764db5f-1e21-47ad-95f8-4d17626fa9b8" name="财政授权支付调整凭证查询条件" grouptitle="财政授权支付调整凭证查询条件" columnnum="2">
+      <widgetRefs xsi:type="model:Combo" id="1d132e63-6a31-4ffd-a84b-745edbb8ef46" name="ComboImpl-1d132e63-6a31-4ffd-a84b-745edbb8ef46" binding="realValue" caption="请选择要查询的表" required="true" display="stypecode" underly="svalue" modelsource="enumList">
+        <labelStyle id="41435065-dcff-4b11-a834-2279706768af" name="LabelStyleImpl-41435065-dcff-4b11-a834-2279706768af" ename="LabelStyleImpl41435065-dcff-4b11-a834-2279706768af"/>
+        <componentStyle id="7c6b051f-56cc-41ab-8ced-b3ce612d2b1f" name="ComponentStyleImpl-7c6b051f-56cc-41ab-8ced-b3ce612d2b1f" ename="ComponentStyleImpl7c6b051f-56cc-41ab-8ced-b3ce612d2b1f"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:PlaceHolder" id="34d3fc9d-56aa-440c-b1cb-c2c56bff06e4" name="PlaceHolderImpl-34d3fc9d-56aa-440c-b1cb-c2c56bff06e4"/>
+      <widgetRefs xsi:type="model:Text" id="06776e5e-901b-4103-b34c-de86165c10a3" name="strecode" binding="curSearchDto.strecode" caption="国库代码" editable="true">
+        <labelStyle id="70a10b90-1c16-4000-b1e9-24a06f4ac418" name="LabelStyleImpl-70a10b90-1c16-4000-b1e9-24a06f4ac418" ename="LabelStyleImpld70a10b90-1c16-4000-b1e9-24a06f4ac418"/>
+        <componentStyle id="da726fc8-be29-4df0-8c5c-d40a05482fa1" name="ComponentStyleImpl-da726fc8-be29-4df0-8c5c-d40a05482fa1" ename="ComponentStyleImplda726fc8-be29-4df0-8c5c-d40a05482fa1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="d4776e32-f3c1-47a5-944c-2a65aa328699" name="sstatus" binding="curSearchDto.sstatus" caption="状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#89c2cf78-6be1-423b-b152-996e4cbd8051"/>
+        <labelStyle id="d4549926-fd4e-4b2f-bbc0-a41e04e96ad3" name="LabelStyleImpl-d4549926-fd4e-4b2f-bbc0-a41e04e96ad3" ename="LabelStyleImpld4549926fd4e4b2fbbc0a41e04e96ad3"/>
+        <componentStyle id="fffc88f4-ac40-4b48-afbc-dcd85dbc7fcb" name="ComponentStyleImpl-fffc88f4-ac40-4b48-afbc-dcd85dbc7fcb" ename="ComponentStyleImplfffc88f4ac404b48afbcdcd85dbc7fcb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="1bdf38c6-c823-44ce-b4ab-5347bd30160e" name="sdemo" binding="curSearchDto.sdemo" caption="描述" editable="true">
+        <labelStyle id="68d2fa3d-5def-4be4-9332-e8d429677f90" name="LabelStyleImpl-68d2fa3d-5def-4be4-9332-e8d429677f90" ename="LabelStyleImpld68d2fa3d-5def-4be4-9332-e8d429677f90"/>
+        <componentStyle id="49dce28b-4e4b-47ed-ab64-b6aa651865f1" name="ComponentStyleImpl-49dce28b-4e4b-47ed-ab64-b6aa651865f1" ename="ComponentStyleImpl49dce28b-4e4b-47ed-ab64-b6aa651865f1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="6a1752a7-3f94-480f-b9db-8f6d468d941e" name="spackageno" binding="curSearchDto.spackageno" caption="包流水号" editable="true">
+        <labelStyle id="95b01b2a-d388-48b7-83c2-f44719189ce7" name="LabelStyleImpl-95b01b2a-d388-48b7-83c2-f44719189ce7" ename="LabelStyleImpld95b01b2a-d388-48b7-83c2-f44719189ce7"/>
+        <componentStyle id="ffcd0880-a53f-4def-a268-f6c3ae5ca955" name="ComponentStyleImpl-ffcd0880-a53f-4def-a268-f6c3ae5ca955" ename="ComponentStyleImplffcd0880-a53f-4def-a268-f6c3ae5ca955"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="eaab653a-9cc2-4b4f-92be-aea4759b6456" name="sid" binding="curSearchDto.sid" caption="申请单ID" editable="true">
+        <labelStyle id="57f7094e-18b6-4952-8302-7658ed172469" name="LabelStyleImpl-57f7094e-18b6-4952-8302-7658ed172469" ename="LabelStyleImpld57f7094e-18b6-4952-8302-7658ed172469"/>
+        <componentStyle id="53b434c8-98eb-4410-ae76-353f524abd85" name="ComponentStyleImpl-53b434c8-98eb-4410-ae76-353f524abd85" ename="ComponentStyleImpl53b434c8-98eb-4410-ae76-353f524abd85"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="75573a41-f544-4263-ac9e-e344dc9b870f" name="sadmdivcode" binding="curSearchDto.sadmdivcode" caption="行政区划代码" editable="true">
+        <labelStyle id="4b1afd48-a300-4348-9951-abb3ef62fcb6" name="LabelStyleImpl-4b1afd48-a300-4348-9951-abb3ef62fcb6" ename="LabelStyleImpld4b1afd48-a300-4348-9951-abb3ef62fcb6"/>
+        <componentStyle id="7f0315b9-3e01-485c-a07d-7e5da8f37968" name="ComponentStyleImpl-7f0315b9-3e01-485c-a07d-7e5da8f37968" ename="ComponentStyleImpl7f0315b9-3e01-485c-a07d-7e5da8f37968"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e371c4af-b81a-4cbd-99fc-44e53200f279" name="sstyear" binding="curSearchDto.sstyear" caption="业务年度" editable="true">
+        <labelStyle id="badebebb-937a-47ec-8bda-eb9d7b2bc0d7" name="LabelStyleImpl-badebebb-937a-47ec-8bda-eb9d7b2bc0d7" ename="LabelStyleImpldbadebebb-937a-47ec-8bda-eb9d7b2bc0d7"/>
+        <componentStyle id="5c611e0f-517b-4561-966e-f5cff2a2c925" name="ComponentStyleImpl-5c611e0f-517b-4561-966e-f5cff2a2c925" ename="ComponentStyleImpl5c611e0f-517b-4561-966e-f5cff2a2c925"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8b2e9aa5-b877-4deb-8407-a974c9cc684c" name="svtcode" binding="curSearchDto.svtcode" caption="凭证类型编号" editable="true">
+        <labelStyle id="1f4dbb91-5e8a-4f05-baa7-82dc2a602a08" name="LabelStyleImpl-1f4dbb91-5e8a-4f05-baa7-82dc2a602a08" ename="LabelStyleImpld1f4dbb91-5e8a-4f05-baa7-82dc2a602a08"/>
+        <componentStyle id="1876342c-8d8f-4c67-aa40-6e98c0cf189b" name="ComponentStyleImpl-1876342c-8d8f-4c67-aa40-6e98c0cf189b" ename="ComponentStyleImpl1876342c-8d8f-4c67-aa40-6e98c0cf189b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="e8ebc434-2997-4874-b244-20071d3129d9" name="svoudate" binding="curSearchDto.svoudate" caption="凭证日期" editable="true">
+        <labelStyle id="7c9d6203-6d72-49cd-ab78-ec443a1b31f7" name="LabelStyleImpl-7c9d6203-6d72-49cd-ab78-ec443a1b31f7" ename="LabelStyleImpld7c9d6203-6d72-49cd-ab78-ec443a1b31f7"/>
+        <componentStyle id="6fa33e9a-1278-4f95-9339-38de712b0eb4" name="ComponentStyleImpl-6fa33e9a-1278-4f95-9339-38de712b0eb4" ename="ComponentStyleImpl6fa33e9a-1278-4f95-9339-38de712b0eb4"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="933370b8-6af8-4d81-9b8a-b6b4f1cda9dd" name="svoucherno" binding="curSearchDto.svoucherno" caption="凭证号" editable="true">
+        <labelStyle id="6f8f6e4e-392f-4ec2-91ce-079dcfe17106" name="LabelStyleImpl-6f8f6e4e-392f-4ec2-91ce-079dcfe17106" ename="LabelStyleImpld6f8f6e4e-392f-4ec2-91ce-079dcfe17106"/>
+        <componentStyle id="55650b26-7b5f-48e5-9332-a406570529a8" name="ComponentStyleImpl-55650b26-7b5f-48e5-9332-a406570529a8" ename="ComponentStyleImpl55650b26-7b5f-48e5-9332-a406570529a8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d030b25b-db3c-40eb-bc54-94d0ec1df490" name="sbgttypecode" binding="curSearchDto.sbgttypecode" caption="预算类型编码" editable="true">
+        <labelStyle id="4de1d62a-3fe7-4d96-8068-67a22a1a1948" name="LabelStyleImpl-4de1d62a-3fe7-4d96-8068-67a22a1a1948" ename="LabelStyleImpld4de1d62a-3fe7-4d96-8068-67a22a1a1948"/>
+        <componentStyle id="3e85cfca-3e4b-43be-b161-a91bc26f94bf" name="ComponentStyleImpl-3e85cfca-3e4b-43be-b161-a91bc26f94bf" ename="ComponentStyleImpl3e85cfca-3e4b-43be-b161-a91bc26f94bf"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0cbf93ba-a7c0-4a01-9532-3f0200a2ca4f" name="sbgttypename" binding="curSearchDto.sbgttypename" caption="预算类型名称" editable="true">
+        <labelStyle id="d6a67d92-c72d-4624-9d6b-5c0174415cf5" name="LabelStyleImpl-d6a67d92-c72d-4624-9d6b-5c0174415cf5" ename="LabelStyleImpldd6a67d92-c72d-4624-9d6b-5c0174415cf5"/>
+        <componentStyle id="a21c6a75-701b-4039-b3c0-81a7ec5af37e" name="ComponentStyleImpl-a21c6a75-701b-4039-b3c0-81a7ec5af37e" ename="ComponentStyleImpla21c6a75-701b-4039-b3c0-81a7ec5af37e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d5dded1c-4ef1-49fe-94ca-70474bfcdc2c" name="sfundtypecode" binding="curSearchDto.sfundtypecode" caption="资金性质编码" editable="true">
+        <labelStyle id="9881b969-d76c-47dd-8470-aaa1ff74d0db" name="LabelStyleImpl-9881b969-d76c-47dd-8470-aaa1ff74d0db" ename="LabelStyleImpld9881b969-d76c-47dd-8470-aaa1ff74d0db"/>
+        <componentStyle id="7045ffbf-e2d7-48e5-abed-639dd2935702" name="ComponentStyleImpl-7045ffbf-e2d7-48e5-abed-639dd2935702" ename="ComponentStyleImpl7045ffbf-e2d7-48e5-abed-639dd2935702"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="2920f400-2a44-4bfc-8a59-4f1f09670966" name="sfundtypename" binding="curSearchDto.sfundtypename" caption="资金性质名称" editable="true">
+        <labelStyle id="e43cede1-c091-4bb7-b071-a46f30c771d5" name="LabelStyleImpl-e43cede1-c091-4bb7-b071-a46f30c771d5" ename="LabelStyleImplde43cede1-c091-4bb7-b071-a46f30c771d5"/>
+        <componentStyle id="8b431477-a962-4427-bce1-8a8f7f614bf8" name="ComponentStyleImpl-8b431477-a962-4427-bce1-8a8f7f614bf8" ename="ComponentStyleImpl8b431477-a962-4427-bce1-8a8f7f614bf8"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="0d64e65e-e8d1-4f8f-a6d9-cff9d3550106" name="npayamt" binding="curSearchDto.npayamt" caption="汇总调整金额" editable="true">
+        <labelStyle id="85ffec3e-1f2b-4110-a31e-9cf6b09cfeea" name="LabelStyleImpl-85ffec3e-1f2b-4110-a31e-9cf6b09cfeea" ename="LabelStyleImpld85ffec3e-1f2b-4110-a31e-9cf6b09cfeea"/>
+        <componentStyle id="8527791c-619e-4823-a98f-96435e614fff" name="ComponentStyleImpl-8527791c-619e-4823-a98f-96435e614fff" ename="ComponentStyleImpl8527791c-619e-4823-a98f-96435e614fff"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d2c06e44-ea5b-4f34-955a-3e047f6168b3" name="spaybankcode" binding="curSearchDto.spaybankcode" caption="代理银行编码" editable="true">
+        <labelStyle id="83b6a421-ced1-4c85-9c4d-c61dfa472bf6" name="LabelStyleImpl-83b6a421-ced1-4c85-9c4d-c61dfa472bf6" ename="LabelStyleImpld83b6a421-ced1-4c85-9c4d-c61dfa472bf6"/>
+        <componentStyle id="1122f4c6-bbbc-49e8-9423-41f091eaa87e" name="ComponentStyleImpl-1122f4c6-bbbc-49e8-9423-41f091eaa87e" ename="ComponentStyleImpl1122f4c6-bbbc-49e8-9423-41f091eaa87e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="71cea6eb-513a-43e7-8502-a920f38cace6" name="spaybankname" binding="curSearchDto.spaybankname" caption="代理银行名称" editable="true">
+        <labelStyle id="4d928098-4981-4fab-8884-97856c83d2fd" name="LabelStyleImpl-4d928098-4981-4fab-8884-97856c83d2fd" ename="LabelStyleImpld4d928098-4981-4fab-8884-97856c83d2fd"/>
+        <componentStyle id="c8921d3a-433f-423f-b77b-d3e67b9cd00a" name="ComponentStyleImpl-c8921d3a-433f-423f-b77b-d3e67b9cd00a" ename="ComponentStyleImplc8921d3a-433f-423f-b77b-d3e67b9cd00a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="5a69df05-45cc-4452-975f-f35648297a37" name="sremark" binding="curSearchDto.sremark" caption="摘要" editable="true">
+        <labelStyle id="7a4b0572-f01e-4208-9d1b-a27b4b4a111a" name="LabelStyleImpl-7a4b0572-f01e-4208-9d1b-a27b4b4a111a" ename="LabelStyleImpld7a4b0572-f01e-4208-9d1b-a27b4b4a111a"/>
+        <componentStyle id="efaff907-54f9-4b00-903a-eab61501e7d1" name="ComponentStyleImpl-efaff907-54f9-4b00-903a-eab61501e7d1" ename="ComponentStyleImplefaff907-54f9-4b00-903a-eab61501e7d1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="ead0b944-4664-4f8d-9ae0-f7a79562616c" name="sxaccdate" binding="curSearchDto.sxaccdate" caption="处理日期" editable="true">
+        <labelStyle id="7a085778-c69c-4e22-a18f-777825accb61" name="LabelStyleImpl-7a085778-c69c-4e22-a18f-777825accb61" ename="LabelStyleImpld7a085778-c69c-4e22-a18f-777825accb61"/>
+        <componentStyle id="60a8ae5a-1e9e-4876-8b01-a352853b5263" name="ComponentStyleImpl-60a8ae5a-1e9e-4876-8b01-a352853b5263" ename="ComponentStyleImpl60a8ae5a-1e9e-4876-8b01-a352853b5263"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="4dd3816f-cfd2-414a-bde9-b754c2696298" name="财政授权支付调整凭证当前主信息查询结果" grouptitle="财政授权支付调整凭证当前主信息查询结果">
+      <widgetRefs xsi:type="model:Table" id="aa941c63-a893-44ff-9cbb-a2b96f708caa" name="curSearchResult" binding="pagingContext" tabletype="paging" refdoubleclickdirection="437452eb-2394-43c5-8ce6-986ab61f6cae" refsingleclickdirection="6c2a5f60-0746-45b3-a678-bec79f1a60ee" height="300">
+        <columnlist id="6a21b1c7-cd4e-4808-8111-14cb06dfba33" name="主键" binding="ivousrlno" caption="主键"/>
+        <columnlist id="7f58d5bf-1258-4bea-8590-760d91bca38d" name="机构代码" binding="sorgcode" caption="机构代码"/>
+        <columnlist id="06776e5e-901b-4103-b34c-de86165c10a3" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="b27ea357-f7f4-4fd4-ac55-7ef13967a84e" name="状态" binding="sstatus" caption="状态"/>
+        <columnlist id="1bdf38c6-c823-44ce-b4ab-5347bd30160e" name="描述" binding="sdemo" caption="描述"/>
+        <columnlist id="00158ae0-5a70-41eb-86fb-8183453c6474" name="系统时间" binding="tssysupdate" caption="系统时间"/>
+        <columnlist id="6a1752a7-3f94-480f-b9db-8f6d468d941e" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="eaab653a-9cc2-4b4f-92be-aea4759b6456" name="申请单ID" binding="sid" caption="申请单ID"/>
+        <columnlist id="75573a41-f544-4263-ac9e-e344dc9b870f" name="行政区划代码" binding="sadmdivcode" caption="行政区划代码"/>
+        <columnlist id="e371c4af-b81a-4cbd-99fc-44e53200f279" name="业务年度" binding="sstyear" caption="业务年度"/>
+        <columnlist id="8b2e9aa5-b877-4deb-8407-a974c9cc684c" name="凭证类型编号" binding="svtcode" caption="凭证类型编号"/>
+        <columnlist id="e8ebc434-2997-4874-b244-20071d3129d9" name="凭证日期" binding="svoudate" caption="凭证日期"/>
+        <columnlist id="933370b8-6af8-4d81-9b8a-b6b4f1cda9dd" name="凭证号" binding="svoucherno" caption="凭证号"/>
+        <columnlist id="d030b25b-db3c-40eb-bc54-94d0ec1df490" name="预算类型编码" binding="sbgttypecode" caption="预算类型编码"/>
+        <columnlist id="0cbf93ba-a7c0-4a01-9532-3f0200a2ca4f" name="预算类型名称" binding="sbgttypename" caption="预算类型名称"/>
+        <columnlist id="d5dded1c-4ef1-49fe-94ca-70474bfcdc2c" name="资金性质编码" binding="sfundtypecode" caption="资金性质编码"/>
+        <columnlist id="2920f400-2a44-4bfc-8a59-4f1f09670966" name="资金性质名称" binding="sfundtypename" caption="资金性质名称"/>
+        <columnlist id="0d64e65e-e8d1-4f8f-a6d9-cff9d3550106" name="汇总调整金额" binding="npayamt" caption="汇总调整金额"/>
+        <columnlist id="d2c06e44-ea5b-4f34-955a-3e047f6168b3" name="代理银行编码" binding="spaybankcode" caption="代理银行编码"/>
+        <columnlist id="71cea6eb-513a-43e7-8502-a920f38cace6" name="代理银行名称" binding="spaybankname" caption="代理银行名称"/>
+        <columnlist id="5a69df05-45cc-4452-975f-f35648297a37" name="摘要" binding="sremark" caption="摘要"/>
+        <columnlist id="ead0b944-4664-4f8d-9ae0-f7a79562616c" name="处理日期" binding="sxaccdate" caption="处理日期"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="27d55df0-1aee-4438-ab71-559afe439fb7" name="财政授权支付调整凭证当前子信息查询结果" grouptitle="财政授权支付调整凭证当前子信息查询结果">
+      <widgetRefs xsi:type="model:Table" id="54f1b9cb-40de-4764-8a73-f6850c11de70" name="curSubSearchResult" binding="curSubBean.pagingContext" tabletype="paging" height="300">
+        <columnlist id="aafebfc8-0cd0-460a-a478-3b6e23e375ea" name="序号" binding="sid" caption="序号"/>
+        <columnlist id="1d6cd131-6b5e-4a6a-a081-fe079eb8a4ed" name="支付凭证单号" binding="svoucherno" caption="支付凭证单号"/>
+        <columnlist id="8fe0dc5e-9f94-4c9a-867a-c954d75afb9b" name="一级预算单位编码" binding="ssupdepcode" caption="一级预算单位编码"/>
+        <columnlist id="db545fc9-c8a1-4722-bc73-9d9a0beb1476" name="一级预算单位名称" binding="ssupdepname" caption="一级预算单位名称"/>
+        <columnlist id="25c81fb3-85e9-453d-b473-f2dc9748a4b6" name="支出功能分类科目编码" binding="sexpfunccode" caption="支出功能分类科目编码"/>
+        <columnlist id="e057db3f-1e44-4448-a097-87c81336b284" name="支出功能分类科目名称" binding="sexpfuncname" caption="支出功能分类科目名称"/>
+        <columnlist id="57b6202d-4f0c-497c-8e8a-24081f1d51ea" name="支付金额" binding="npayamt" caption="支付金额"/>
+        <columnlist id="0b9620f3-06e4-4acc-b62e-bff3c48934b4" name="摘要名称" binding="spaysummaryname" caption="摘要名称"/>
+        <columnlist id="6f8bd814-0efa-4231-944f-44c6c0cb916b" name="处理结果" binding="sxdealresult" caption="处理结果"/>
+        <columnlist id="c244e2fa-f749-4157-8498-b2681df6eb55" name="附言" binding="sxaddword" caption="附言"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="7ddd0f74-e801-42e5-aa23-b3cdd5ac4a01" name="财政授权支付调整凭证历史主信息查询结果" grouptitle="财政授权支付调整凭证历史主信息查询结果">
+      <widgetRefs xsi:type="model:Table" id="854bc06d-669b-4371-882e-f76ec1f7a7a4" name="hisSearchResult" binding="hisMainBean.pagingContext" tabletype="paging" refdoubleclickdirection="437452eb-2394-43c5-8ce6-986ab61f6cae" refsingleclickdirection="6c2a5f60-0746-45b3-a678-bec79f1a60ee" height="300">
+        <columnlist id="d2054c1e-8c31-4737-b7b5-16d56b8fcf56" name="机构代码" binding="sorgcode" caption="机构代码"/>
+        <columnlist id="cf3f1de7-a8f0-4f92-ae3e-33254aaa7b0e" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="5bdfe581-2282-4869-9ec2-ba99df682891" name="状态" binding="sstatus" caption="状态"/>
+        <columnlist id="427840fb-b334-44bc-b24a-5f300cba5624" name="描述" binding="sdemo" caption="描述"/>
+        <columnlist id="562ece9a-4e4b-40d3-ae9b-4fe1c6f229bc" name="系统时间" binding="tssysupdate" caption="系统时间"/>
+        <columnlist id="ff7f2e9a-19d0-44fb-bf37-bb3cbaa61d2e" name="包流水号" binding="spackageno" caption="包流水号"/>
+        <columnlist id="0f9d4bc9-b90d-448e-be5e-e451f4d01b2a" name="申请单ID" binding="sid" caption="申请单ID"/>
+        <columnlist id="df8f9c0b-a30b-47fb-a004-d2fa86b80193" name="行政区划代码" binding="sadmdivcode" caption="行政区划代码"/>
+        <columnlist id="1994e194-3be1-43b6-9fb6-e4650a3b103a" name="业务年度" binding="sstyear" caption="业务年度"/>
+        <columnlist id="65a60a51-c47f-4fea-94fc-e9b3ab0773a0" name="凭证类型编号" binding="svtcode" caption="凭证类型编号"/>
+        <columnlist id="1c15c229-731b-4996-9249-57797d2265db" name="凭证日期" binding="svoudate" caption="凭证日期"/>
+        <columnlist id="0bb730e2-4dea-4795-a4c1-7a11fdb6796f" name="凭证号" binding="svoucherno" caption="凭证号"/>
+        <columnlist id="7225e1b3-2bed-4cc6-957f-67773b6a5148" name="预算类型编码" binding="sbgttypecode" caption="预算类型编码"/>
+        <columnlist id="53535d48-a02d-4fb3-9b23-dfffa9cc0f11" name="预算类型名称" binding="sbgttypename" caption="预算类型名称"/>
+        <columnlist id="71b95a55-a3f0-4c10-8a94-7f30cc21c43d" name="资金性质编码" binding="sfundtypecode" caption="资金性质编码"/>
+        <columnlist id="0dcc99d5-834f-42a1-86b1-cc5fd594a708" name="资金性质名称" binding="sfundtypename" caption="资金性质名称"/>
+        <columnlist id="29371718-5a5e-4d2a-986f-dcc5f3940b5e" name="汇总调整金额" binding="npayamt" caption="汇总调整金额"/>
+        <columnlist id="0f9fe900-88ee-4419-a6ca-2a876f308ecd" name="代理银行编码" binding="spaybankcode" caption="代理银行编码"/>
+        <columnlist id="051222bc-c736-41bc-9f00-e739fbdabd3d" name="代理银行名称" binding="spaybankname" caption="代理银行名称"/>
+        <columnlist id="a97203ea-c60e-4964-b1ad-6d70fa29cf6c" name="摘要" binding="sremark" caption="摘要"/>
+        <columnlist id="a7e81f07-1eeb-4cea-a9ca-1a87171c2211" name="处理日期" binding="sxaccdate" caption="处理日期"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="22bdb951-13ea-41d6-aa8a-0084299e1250" name="财政授权支付调整凭证历史子信息查询结果" grouptitle="财政授权支付调整凭证历史子信息查询结果">
+      <widgetRefs xsi:type="model:Table" id="96a76f53-f86b-4792-b014-6f08c8c7dc82" name="hisSubSearchResult" binding="hisSubBean.pagingContext" tabletype="paging" height="300">
+        <columnlist id="036d4057-4135-4bbe-8fb5-103a9aa70eff" name="序号" binding="sid" caption="序号"/>
+        <columnlist id="81f07f2f-6c83-4ac4-969d-9d28d8ba5567" name="支付凭证单号" binding="svoucherno" caption="支付凭证单号"/>
+        <columnlist id="8d941cdd-4acd-47a4-baeb-8f856c377aaa" name="一级预算单位编码" binding="ssupdepcode" caption="一级预算单位编码"/>
+        <columnlist id="71532d70-5969-4e71-ae99-eda3c38e70e5" name="一级预算单位名称" binding="ssupdepname" caption="一级预算单位名称"/>
+        <columnlist id="6d8363c3-bf3f-4bb9-9cba-98304d95d833" name="支出功能分类科目编码" binding="sexpfunccode" caption="支出功能分类科目编码"/>
+        <columnlist id="e4a0b515-1439-4013-9ca4-396eff03c2ea" name="支出功能分类科目名称" binding="sexpfuncname" caption="支出功能分类科目名称"/>
+        <columnlist id="966679aa-ca03-4182-a943-cc72309a97e0" name="支付金额" binding="npayamt" caption="支付金额"/>
+        <columnlist id="a66d751c-3e0c-40ec-942e-10cc46ee9ccb" name="摘要名称" binding="spaysummaryname" caption="摘要名称"/>
+        <columnlist id="c120049f-2bd6-4cfa-845e-f71594edc38a" name="处理结果" binding="sxdealresult" caption="处理结果"/>
+        <columnlist id="a25915fa-733e-46d3-adcd-448eb7419739" name="附言" binding="sxaddword" caption="附言"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="eba5793f-1c1a-410d-aac1-cebd5b2957f7">
+    <pages id="a118d2de-86c4-40bc-be22-3011aa1d61d5" name="财政授权支付调整凭证信息">
+      <views id="a896e409-0ac9-4313-8501-a542281e5b4e" name="财政授权支付调整凭证查询条件" isdefault="true" contentArea="f764db5f-1e21-47ad-95f8-4d17626fa9b8">
+        <buttonArea id="a5aca5ee-83a7-4b12-9526-0cc05b6b401d" name="JButtonAreaImpl-a5aca5ee-83a7-4b12-9526-0cc05b6b401d">
+          <buttons id="ea12860b-c0ba-4bde-954e-0381e81488fa" name="查询" caption="查询" direction="9aefc68b-8a09-447c-a49f-bd412aa05435"/>
+        </buttonArea>
+      </views>
+      <views id="25a43463-4bbe-4c52-ba3d-33f97dad5fda" name="财政授权支付调整凭证当前查询结果" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="4dd3816f-cfd2-414a-bde9-b754c2696298 27d55df0-1aee-4438-ab71-559afe439fb7">
+        <buttonArea id="b965f7db-98bf-4545-b470-200d0a58ae39" name="JButtonAreaImpl-b965f7db-98bf-4545-b470-200d0a58ae39">
+          <buttons id="3da24c00-2d13-417b-bb1a-890cbdc010d8" name="ButtonImpl-3da24c00-2d13-417b-bb1a-890cbdc010d8" caption="返回" direction="e40a3819-e31e-484f-b8ff-afa09e3f1c6b"/>
+          <buttons id="89964fbe-2e61-4d2c-a0e1-c5a875f1a6b6" name="ButtonImpl-89964fbe-2e61-4d2c-a0e1-c5a875f1a6b6" caption="导出文件" direction="14c823e7-bb16-4d63-9428-9f5116d6aad4"/>
+        </buttonArea>
+      </views>
+      <views id="f640a0b0-7d12-4aec-a721-2ca547dc18ed" name="财政授权支付调整凭证历史查询结果" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="7ddd0f74-e801-42e5-aa23-b3cdd5ac4a01 22bdb951-13ea-41d6-aa8a-0084299e1250">
+        <buttonArea id="8da31cc0-608f-4108-bb66-706729e23263" name="JButtonAreaImpl-8da31cc0-608f-4108-bb66-706729e23263">
+          <buttons id="472d4794-2355-41d8-85d4-fbbf3957ceba" name="ButtonImpl-472d4794-2355-41d8-85d4-fbbf3957ceba" caption="返回" direction="e40a3819-e31e-484f-b8ff-afa09e3f1c6b"/>
+          <buttons id="35adc3d3-71da-45f1-8ec8-1cb4b27451b0" name="ButtonImpl-35adc3d3-71da-45f1-8ec8-1cb4b27451b0" caption="导出文件" direction="14c823e7-bb16-4d63-9428-9f5116d6aad4"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

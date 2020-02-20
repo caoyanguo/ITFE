@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description> JAF Ormap generator </description>
+	<bean id="NamingConvention" class="com.cfcc.jaf.persistence.dao.NamingConvention">
+		<property name="conventionMock"
+			value="DTO_UNDERLINE_TO_UPPERCASE,COLUMN_IGNORE_UNDERLINE" />
+	</bean>
+	<bean id="mapGenerator.ORM.GEN.ID" class="com.cfcc.jaf.persistence.jaform.MapGenerator">
+		<!--<property name="dataTypeProcessors">
+			<bean
+				class="com.cfcc.jaf.persistence.jaform.info.type.OrcaleDtoFieldTypeProcessor" />
+		</property>
+		--><property name="dbType" value="ORACLE" />
+		<property name="databaseTables" ref="db2Tables" />
+		<!--<property name="springVersion" value="2.5"></property>
+		--><property name="tablePattern">
+			<list>
+				<value>HTR_INCOMEDAYRPT</value>
+				<value>HTR_STOCKDAYRPT</value>
+				<value>HTR_TAXORG_DEBT_REPORT</value>
+				<value>HTR_TAXORG_INCOMEDAYRPT</value>
+				<value>HTR_TAXORG_PAYOUT_REPORT</value>
+				<value>HTR_TAXORG_STOCKDAYRPT</value>
+				<value>HTV_DIRECTPAYMSGMAIN</value>
+				<value>HTV_DIRECTPAYMSGSUB</value>
+				<value>HTV_DWBK</value>
+				<value>HTV_FIN_INCOME_DETAIL</value>
+				<value>HTV_FIN_INCOMEONLINE</value>
+				<value>HTV_FIN_INCOMEONLINE_DIVIDE</value>
+				<value>HTV_FREE</value>
+				<value>HTV_GRANTPAYMSGMAIN</value>
+				<value>HTV_GRANTPAYMSGSUB</value>
+				<value>HTV_IN_CORRHANDBOOK</value>
+				<value>HTV_INFILE</value>
+				<value>HTV_INFILE_DETAIL</value>
+				<value>HTV_PAYOUTFINANCE_MAIN</value>
+				<value>HTV_PAYOUTFINANCE_SUB</value>
+				<value>HTV_PAYOUTMSGMAIN</value>
+				<value>HTV_PAYOUTMSGSUB</value>
+				<value>HTV_PAYRECK_BANK</value>
+				<value>HTV_PAYRECK_BANK_BACK</value>
+				<value>HTV_PAYRECK_BANK_BACK_LIST</value>
+				<value>HTV_PAYRECK_BANK_LIST</value>
+				<value>HTV_PBCPAY_MAIN</value>
+				<value>HTV_PBCPAY_SUB</value>
+				<value>HTV_TAX</value>
+				<value>HTV_TAX_CANCEL</value>
+				<value>HTV_TAX_ITEM</value>
+				<value>HTV_TAX_KIND</value>
+				<value>HTV_TAXORG_INCOME</value>
+				<value>HTV_VOUCHERINFO</value>
+				<value>TBS_TV_BNKPAY_MAIN</value>
+				<value>TBS_TV_BNKPAY_SUB</value>
+				<value>TBS_TV_DIRECTPAYPLAN_MAIN</value>
+				<value>TBS_TV_DIRECTPAYPLAN_SUB</value>
+				<value>TBS_TV_DWBK</value>
+				<value>TBS_TV_FREE</value>
+				<value>TBS_TV_GRANTPAYPLAN_MAIN</value>
+				<value>TBS_TV_GRANTPAYPLAN_SUB</value>
+				<value>TBS_TV_IN_CORRHANDBOOK</value>
+				<value>TBS_TV_PAYOUT</value>
+				<value>TBS_TV_PBCPAY</value>
+				<value>TD_BANK</value>
+				<value>TD_BOOKACCT_MAIN</value>
+				<value>TD_BOOKSBT</value>
+				<value>TD_CORP</value>
+				<value>TD_CORPACCT</value>
+				<value>TD_ENUMTYPE</value>
+				<value>TD_ENUMVALUE</value>
+				<value>TD_TAXORG_MERGER</value>
+				<value>TD_TAXORG_PARAM</value>
+				<value>TN_CONPAYCHECKBILL</value>
+				<value>TP_SHARE_DIVIDE</value>
+				<value>TR_INCOMEDAYRPT</value>
+				<value>TR_STOCKDAYRPT</value>
+				<value>TR_TAXORG_DEBT_REPORT</value>
+				<value>TR_TAXORG_INCOMEDAYRPT</value>
+				<value>TR_TAXORG_PAYOUT_REPORT</value>
+				<value>TR_TAXORG_STOCKDAYRPT</value>
+				<value>TS_ASSITFLAGTRANS</value>
+				<value>TS_BANKANDPAY</value>
+				<value>TS_BANKCODE</value>
+				<value>TS_BANKORGCODE</value>
+				<value>TS_BUDGETSUBJECT</value>
+				<value>TS_BUDGETSUBJECT_ADJUST</value>
+				<value>TS_BUDGETSUBJECTFORQUERY</value>
+				<value>TS_CHECKBALANCE</value>
+				<value>TS_CHECKDELOPTLOG</value>
+				<value>TS_CHECKFAILREASON</value>
+				<value>TS_CODEREGTYPE</value>
+				<value>TS_CONNECTION</value>
+				<value>TS_CONVERTASSITSIGN</value>
+				<value>TS_CONVERTAX</value>
+				<value>TS_CONVERTBANKNAME</value>
+				<value>TS_CONVERTBANKTYPE</value>
+				<value>TS_CONVERTFINORG</value>
+				<value>TS_CONVERTREA</value>
+				<value>TS_CONVERTTAXORG</value>
+				<value>TS_CONVERTTOBANK</value>
+				<value>TS_CORRREASON</value>
+				<value>TS_DRAWBACKREASON</value>
+				<value>TS_DWBK_REASON</value>
+				<value>TS_FINMOVEPAYSUB</value>
+				<value>TS_GENBANKANDRECKBANK</value>
+				<value>TS_INFOCONNORG</value>
+				<value>TS_INFOCONNORGACC</value>
+				<value>TS_INFOTAXORG</value>
+				<value>TS_ISNOPAPER</value>
+				<value>TS_MANKEY</value>
+				<value>TS_MANKEYMODE</value>
+				<value>TS_OPERATIONFORM</value>
+				<value>TS_OPERATIONMODEL</value>
+				<value>TS_OPERATIONPLACE</value>
+				<value>TS_OPERATIONTYPE</value>
+				<value>TS_ORGAN</value>
+				<value>TS_PAYACCTINFO</value>
+				<value>TS_PAYBANK</value>
+				<value>TS_STAMPPOSITION</value>
+				<value>TS_STAMPTYPE</value>
+				<value>TS_SYSBATCH</value>
+				<value>TS_SYSFUNC</value>
+				<value>TS_SYSLOG</value>
+				<value>TS_SYSPARA</value>
+				<value>TS_SYSTEM</value>
+				<value>TS_TAXORG</value>
+				<value>TS_TREASURY</value>
+				<value>TS_USERS</value>
+				<value>TS_USERSFUNC</value>
+				<value>TS_USERSTAMP</value>
+				<value>TS_USERSTAMPFUNCTION</value>
+				<value>TS_VOUCHERCOMMITAUTO</value>
+				<value>TV_AMT_CONTROL_INFO</value>
+				<value>TV_DIRECTPAYFILEMAIN</value>
+				<value>TV_DIRECTPAYFILEMAIN_TMP</value>
+				<value>TV_DIRECTPAYFILESUB</value>
+				<value>TV_DIRECTPAYFILESUB_TMP</value>
+				<value>TV_DIRECTPAYMSGMAIN</value>
+				<value>TV_DIRECTPAYMSGMAIN_SX</value>
+				<value>TV_DIRECTPAYMSGSUB</value>
+				<value>TV_DIRECTPAYMSGSUB_SX</value>
+				<value>TV_DRAWBACKDATA</value>
+				<value>TV_DRAWBACKREQ</value>
+				<value>TV_DWBK</value>
+				<value>TV_EXCEPTIONMAN</value>
+				<value>TV_FILEPACKAGEREF</value>
+				<value>TV_FILES</value>
+				<value>TV_FIN_INCOME_DETAIL</value>
+				<value>TV_FIN_INCOMEONLINE</value>
+				<value>TV_FIN_INCOMEONLINE_DIVIDE</value>
+				<value>TV_FREE</value>
+				<value>TV_GRANTPAYFILEMAIN</value>
+				<value>TV_GRANTPAYFILEMAIN_TMP</value>
+				<value>TV_GRANTPAYFILESUB</value>
+				<value>TV_GRANTPAYFILESUB_TMP</value>
+				<value>TV_GRANTPAYMSGMAIN</value>
+				<value>TV_GRANTPAYMSGMAIN_SX</value>
+				<value>TV_GRANTPAYMSGSUB</value>
+				<value>TV_GRANTPAYMSGSUB_SX</value>
+				<value>TV_IN_CORRHANDBOOK</value>
+				<value>TV_INFILE</value>
+				<value>TV_INFILE_DETAIL</value>
+				<value>TV_INFILE_TMP</value>
+				<value>TV_INFILE_TMP_COUNTRY</value>
+				<value>TV_INFILE_TMP_PLACE</value>
+				<value>TV_INFILE_TMP_PLACE_MODEL</value>
+				<value>TV_INFILE_TMP_TIPS</value>
+				<value>TV_MQMESSAGE</value>
+				<value>TV_PAYOUTFINANCE</value>
+				<value>TV_PAYOUTFINANCE_MAIN</value>
+				<value>TV_PAYOUTFINANCE_SUB</value>
+				<value>TV_PAYOUTMSGMAIN</value>
+				<value>TV_PAYOUTMSGMAIN_SX</value>
+				<value>TV_PAYOUTMSGSUB_SX</value>
+				<value>TV_PAYRECK_BANK</value>
+				<value>TV_PAYRECK_BANK_BACK</value>
+				<value>TV_PAYRECK_BANK_BACK_LIST</value>
+				<value>TV_PAYRECK_BANK_LIST</value>
+				<value>TV_PAYRECKBANK_SX</value>
+				<value>TV_PAYRECKBANKBACK_SX</value>
+				<value>TV_PAYRECKBANKBACKLIST_SX</value>
+				<value>TV_PAYRECKBANKLIST_SX</value>
+				<value>TV_PBCPAY_MAIN</value>
+				<value>TV_PBCPAY_SUB</value>
+				<value>TV_RECVLOG</value>
+				<value>TV_SENDLOG</value>
+				<value>TV_TAX</value>
+				<value>TV_TAX_CANCEL</value>
+				<value>TV_TAX_ITEM</value>
+				<value>TV_TAX_KIND</value>
+				<value>TV_TAXORG_INCOME</value>
+				<value>TV_TIPS_3201</value>
+				<value>TV_USERSCONDITION</value>
+				<value>TV_VOUCHERINFO</value>
+				<value>TV_VOUCHERINFO_SX</value>
+				<value>TV_INCOME_DETAIL_REPORT_CHECK</value>
+				<value>TV_BATCHPAY</value>
+				<value>TV_VOUCHERINFO_ALLOCATE_INCOME</value>
+				<value>TV_PAYOUTBACKMSG_MAIN</value>
+				<value>TV_PAYOUTBACKMSG_SUB</value>
+				<value>TS_TAXPAYACCT</value>
+				<value>TD_DOWNLOAD_REPORT_CHECK</value>
+				<value>TS_BILLAUTOSEND</value>
+				<value>TV_INCOMEONLINE_INCOMEONDETAIL_BLEND</value>
+				<value>HTV_INCOMEONLINE_INCOMEONDETAIL_BLEND</value>
+				<value>TF_DIRECTPAYMSGMAIN</value>
+				<value>TF_DIRECTPAYMSGSUB</value>
+				<value>TF_DIRECTPAY_ADJUSTMAIN</value>
+				<value>TF_DIRECTPAY_ADJUSTSUB</value>
+				<value>TF_PAYBANK_REFUNDMAIN</value>
+				<value>TF_PAYBANK_REFUNDSUB</value>
+				<value>TF_GRANTPAY_ADJUSTMAIN</value>
+				<value>TF_GRANTPAY_ADJUSTSUB</value>
+				<value>TF_PAYMENT_DETAILSMAIN</value>
+				<value>TF_PAYMENT_DETAILSSUB</value>
+				<value>TF_UNITRECORDMAIN</value>
+				<value>TF_UNITRECORDSUB</value>
+				<value>TF_INTERESTRATE_MSG</value>
+				<value>TF_INTEREST_DETAIL</value>
+				<value>TF_INTEREST_PARAM</value>
+				<value>HTF_DIRECTPAYMSGMAIN</value>
+				<value>HTF_DIRECTPAYMSGSUB</value>
+				<value>HTF_DIRECTPAY_ADJUSTMAIN</value>
+				<value>HTF_DIRECTPAY_ADJUSTSUB</value>
+				<value>HTF_PAYBANK_REFUNDMAIN</value>
+				<value>HTF_PAYBANK_REFUNDSUB</value>
+				<value>HTF_GRANTPAY_ADJUSTMAIN</value>
+				<value>HTF_GRANTPAY_ADJUSTSUB</value>
+				<value>HTF_PAYMENT_DETAILSMAIN</value>
+				<value>HTF_PAYMENT_DETAILSSUB</value>
+				<value>HTF_UNITRECORDMAIN</value>
+				<value>HTF_UNITRECORDSUB</value>
+				<value>TF_VOUCHER_SPLIT</value>
+				<value>TF_RECONCILE_PAYINFO_MAIN</value>
+				<value>HTF_RECONCILE_PAYINFO_MAIN</value>
+				<value>TF_RECONCILE_PAYINFO_SUB</value>
+				<value>HTF_RECONCILE_PAYINFO_SUB</value>
+				<value>TF_RECONCILE_REALDIAL_MAIN</value>
+				<value>HTF_RECONCILE_REALDIAL_MAIN</value>
+				<value>TF_RECONCILE_REALDIAL_SUB</value>
+				<value>HTF_RECONCILE_REALDIAL_SUB</value>
+				<value>TF_RECONCILE_REFUND_MAIN</value>
+				<value>HTF_RECONCILE_REFUND_MAIN</value>
+				<value>TF_RECONCILE_REFUND_SUB</value>
+				<value>HTF_RECONCILE_REFUND_SUB</value>
+				<value>TF_RECONCILE_PAYQUOTA_MAIN</value>
+				<value>HTF_RECONCILE_PAYQUOTA_MAIN</value>
+				<value>TF_RECONCILE_PAYQUOTA_SUB</value>
+				<value>HTF_RECONCILE_PAYQUOTA_SUB</value>
+				<value>TF_REPORT_INCOME_MAIN</value>
+				<value>HTF_REPORT_INCOME_MAIN</value>
+				<value>TF_REPORT_INCOME_SUB</value>
+				<value>HTF_REPORT_INCOME_SUB</value>
+				<value>TF_REPORT_DEFRAY_MAIN</value>
+				<value>HTF_REPORT_DEFRAY_MAIN</value>
+				<value>TF_REPORT_DEFRAY_SUB</value>
+				<value>HTF_REPORT_DEFRAY_SUB</value>
+				<value>TF_REPORT_DEPOSIT_MAIN</value>
+				<value>HTF_REPORT_DEPOSIT_MAIN</value>
+				<value>TF_REPORT_DEPOSIT_SUB</value>
+				<value>HTF_REPORT_DEPOSIT_SUB</value>
+				<value>TV_VOUCHERINFO_ALLOCATE_INCOME</value>
+				<value>TV_PAYOUT_DETAIL_MAIN</value>
+				<value>TV_PAYOUT_DETAIL_LIST</value>
+				<value>HTV_PAYOUT_DETAIL_MAIN</value>
+				<value>HTV_PAYOUT_DETAIL_LIST</value>
+				<value>TF_RECONCILIATION</value>
+				<value>TF_RESULT_RECONCI</value>
+				<value>TF_FUND_CLEAR_RECEIPT</value>
+				<value>TS_TBSORGSTATUS</value>
+				<value>TF_REFUND_NOTICE</value>
+				<value>T20130822_101601</value>
+				<value>T20130822_101601_EXCEPTION</value>
+				<value>TB_BILLSTORE</value>
+				<value>TF_GRANTPAYMSGMAIN</value>
+				<value>TF_GRANTPAYMSGSUB</value>
+				<value>HTF_GRANTPAYMSGMAIN</value>
+				<value>HTF_GRANTPAYMSGSUB</value>
+				<value>TR_FIN_INCOMEONLINE_DAYRPT</value>
+				<value>TS_BATCHCRTREPORTMSG</value>
+				<value>TS_JX_ACCTINFO</value>
+				<value>TS_QUERY_AMT</value>
+				<value>TS_REPORTMAIN</value>
+				<value>TS_SPECACCTINFO</value>
+				<value>TS_TAXPAYCODE</value>
+				<value>TV_GRANTPAYPLAN_MAIN</value>
+				<value>TF_FUND_APPROPRIATION</value>
+				<value>TV_NONTAXMAIN</value>
+				<value>TV_NONTAXSUB</value>
+				<value>HTV_NONTAXMAIN</value>
+				<value>HTV_NONTAXSUB</value>
+				<value>TV_PAYOUTMSGSUB</value>
+				<value>TN_CONPAYCHECKPAYBANK</value>
+				<value>TN_LEDGERDATA</value>
+				<value>TS_AUTOGENERVOUCHER</value>
+				<value>TV_PAYRECK_BIGDATA</value>
+				<value>TV_PAYRECK_BIGDATA_BACK</value>
+				<value>TV_PAYRECK_BIGDATA_LIST</value>
+				<value>TV_PAYRECK_BIGDATA_BACK_LIST</value>
+			</list>
+		</property>
+		<property name="tableSchema" value="ORCLADMIN" />
+
+		<!--==== time stamps && change number=====================-->
+		<property name="columnModifyNumber" value="I_CHGNUM" />
+		<property name="columnCreateTimeStamp" value="TS_CREATE" />
+		<property name="columnUpdateTimeStamp" value="TS_SYSUPDATE" />
+		<property name="columnChecked" value="I_CHGNUM" />
+
+		<!-- Flex生成Dto、PK、Info使用-->
+		<property name="outputPathDao"
+			value="E:\program\difanglenglian\3CODE\ITFEBuilder//src/" />
+		<property name="outputPathPk"
+			value="E:\program\difanglenglian\3CODE\ITFEBuilder//src/" />
+		<property name="outputPathDto"
+			value="E:\program\difanglenglian\3CODE\ITFEBuilder//src/" />
+		<property name="outputPathInfo"
+			value="E:\program\difanglenglian\3CODE\ITFEBuilder//src/" />
+		<property name="outputPathXml"
+			value="E:\program\difanglenglian\3CODE\ITFEBuilder//src//config/databaseconfig/ormap/ItfeOrmap.xml" />
+		<property name="packageDao" value="com.cfcc.itfe.persistence.dao" />
+		<property name="packagePk" value="com.cfcc.itfe.persistence.pk" />
+		<property name="packageDto" value="com.cfcc.itfe.persistence.dto" />
+		<property name="packageInfo" value="com.cfcc.itfe.persistence.info" />
+
+		<property name="suffixDao" value="Dao" />
+		<property name="suffixPk" value="PK" />
+		<property name="suffixDto" value="Dto" />
+		<property name="suffixInfo" value="Info" />
+
+		<!--============================   ============================-->
+		<property name="vmDao" value="com/cfcc/jaf/persistence/jaform/vm/dao2.0.vm" />
+		<property name="vmPk" value="com/cfcc/jaf/persistence/jaform/vm/pk.vm" />
+		<property name="vmDto" value="com/cfcc/jaf/persistence/jaform/vm/dto2.0.vm" />
+		<property name="vmInfo"
+			value="com/cfcc/jaf/persistence/jaform/vm/tableinfo.vm" />
+		<property name="vmOrmapxml" value="com/cfcc/jaf/persistence/jaform/vm/xml.vm" />
+
+		<!--
+			Flex生成Dto、PK、Info使用 <property name="packageFlexPk"
+			value="com.cfcc.itfe.persistency.ormap.pk" /> <property
+			name="packageFlexDto" value="com.cfcc.itfe.persistency.ormap.dto" />
+			<property name="packageFlexInfo"
+			value="com.cfcc.itfe.persistency.ormap.info" /> <property
+			name="packageFlexRegister" value="com.cfcc.tbps.register" />
+		-->
+	</bean>
+
+	<!--==================== ============================-->
+	<!--
+		<property name="parentChildrenRels"> <bean
+		class="com.cfcc.jaf.persistence.jaform.info.ParentChildrenRefs"
+		init-method="init"> <property name="refs"> <list>
+		************Start**************** <bean
+		class="com.cfcc.jaf.persistence.jaform.info.ReferenceInfo"> <property
+		name="parentTableName" value="TRL_PKG001COME_RCV_MAIN" /> <property
+		name="childTableName" value="TRL_PKG001COME_RCV_DETAIL" /> <property
+		name="keys" value="i_PkgSrlNo" /> </bean> </list> </property> </bean>
+		</property>
+	-->
+
+	<!--================= ====================-->
+	<bean id="db2Tables"
+		class="com.cfcc.jaf.persistence.jaform.db.unified.UnifiedTables">
+		<property name="dataSource" ref="jafDataSource" />
+	</bean>
+	<bean id="mySQLExecutorFactory" class="com.cfcc.jaf.persistence.jdbc.sql.SQLExecutorFactory">
+		<property name="dataSource" ref="jafDataSource" />
+		<property name="databaseType" value="ORACLE" />
+		<property name="maxRows" value="10000" />
+		<property name="exceedRowLimitStrategy" value="ignore" />
+		<property name="statistics" value="true" />
+	</bean>
+
+	<!--=================== ===============-->
+	<bean id="jafDataSource" class="com.cfcc.jaf.persistence.jdbc.core.JAFDataSource">
+		<property name="containDataSource" ref="apacheDataSource" />
+		<property name="containerTransaction">
+			<value>false</value>
+		</property>
+	</bean>
+	<bean id="apacheDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@192.168.0.3:1521/ITFEDB" />
+		<property name="username" value="ORCLADMIN" />
+		<property name="password" value="ORCLADMIN" />
+	</bean>
+
+	<!--=================== SQL Executor ======= -->
+	<bean id="SQLExecutorFactory.GLOBAL.ID" class="com.cfcc.jaf.persistence.jdbc.sql.SQLExecutorFactory">
+		<property name="dataSource" ref="jafDataSource" />
+		<property name="databaseType" value="ORACLE" />
+		<property name="maxRows" value="10000" />
+		<property name="exceedRowLimitStrategy" value="ignore" />
+		<property name="statistics" value="true" />
+	</bean>
+</beans>

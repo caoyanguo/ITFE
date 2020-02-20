@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="93249d0b-d23c-4ce1-947c-4a569823538d" name="参数导入" ename="TCBSimport">
+  <jproperties id="b423885c-5172-4763-b02b-0795900cb7a6" key="GeneratedTime" value="1399444904281"/>
+  <refModule href="JModule_dc26b6e6-d079-474a-aeef-2bb97f2e4fe5.model#dc26b6e6-d079-474a-aeef-2bb97f2e4fe5"/>
+  <methods id="bba7baeb-a493-4d3e-a307-ac1c8d13d4bc" ename="fileImport" name="文件导入" codecomment="文件导入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8baf3fd1-a36e-4b0c-b0ff-07f0616a8451" name="文件路径" ename="filePath" type="java.lang.String" codecomment="文件路径"/>
+  </methods>
+  <methods id="10a23aaf-86ac-4b23-b8d7-570beb1e9457" ename="taxFileImport" name="征收机关国库对应关系数据导入" codecomment="征收机关国库对应关系数据导入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="31bdde00-0367-49bb-a4e8-f50ff2a49679" name="文件路径" ename="filePath" type="java.lang.String" codecomment="文件路径"/>
+  </methods>
+  <methods id="4d025988-e830-41ab-8e65-865f86d974cf" ename="tdCorpImport" name="法人代码维护" codecomment="法人代码维护" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="a96ec508-8a82-4f26-84f9-7c157ea345e5" name="文件路径" ename="filePath" type="java.lang.String" codecomment="文件路径"/>
+  </methods>
+  <methods id="d15888d2-ebe9-4e27-b332-45cd502db047" ename="banknoImport" name="银行账号信息导入" codecomment="银行账号信息导入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bed4d092-89cb-4ca5-9310-976243479100" name="文件路径" ename="filePath" type="java.lang.String" codecomment="文件路径"/>
+  </methods>
+  <methods id="45f87e24-c581-47bd-843d-c19247405013" ename="bankInfoImport" name="银行账号信息导入" codecomment="银行账号信息导入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="6f38fa0f-076d-4f9a-abc9-74926d8f6bd1" name="按行读取List" ename="list" type="java.util.List" codecomment="list"/>
+  </methods>
+  <methods id="71270162-4fb1-442d-bf84-9741a7b5cf8c" ename="tbsBankImport" name="银行账号信息导入" codecomment="银行账号信息导入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="601de790-82d3-4ddb-bd78-5750deb8ca38" name="文件路徑" ename="filepath" type="java.lang.String"/>
+  </methods>
+  <methods id="a5ce2837-d7d6-4635-814e-a7fc9ba58214" ename="paramImport" name="paramImport" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="601de790-82d3-4ddb-bd78-5750deb8ca38" name="文件路徑" ename="filepath" type="java.lang.String"/>
+    <methodParams id="601de790-82d3-4ddb-bd78-5750deb8ca39" name="tabcode" ename="tabcode" type="java.lang.String"/>
+  </methods>
+  <methods id="d15888d2-ebe9-4e27-b332-45cd502db047" ename="bankCodeImport" name="二代行名行号导入" codecomment="二代行名行号导入" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bed4d092-89cb-4ca5-9310-976243479100" name="文件路径" ename="filePath" type="java.lang.String" codecomment="文件路径"/>
+  </methods>
+</model:JServiceComponent>

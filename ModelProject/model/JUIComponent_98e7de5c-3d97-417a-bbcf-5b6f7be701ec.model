@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="98e7de5c-3d97-417a-bbcf-5b6f7be701ec" name="发起凭证对账" ename="createVoucherForReport">
+  <jproperties id="59e88709-520c-4749-8033-b04b583cd1c6" key="GeneratedTime" value="1421719698232"/>
+  <refModule href="JModule_3c3eabb3-6ad2-4459-a463-c84944a005ed.model#3c3eabb3-6ad2-4459-a463-c84944a005ed"/>
+  <model id="4c9d510b-f463-41b5-8acf-7cc501c5d592" name="JModelImpl-4c9d510b-f463-41b5-8acf-7cc501c5d592">
+    <attributes id="4f882008-9a6e-4b89-860e-7d26c2e60b52" name="subVoucherType" type="java.lang.String"/>
+    <attributes id="ce6fc463-dbca-4add-ba36-e3e7df677ae2" name="treCode" type="java.lang.String"/>
+    <attributes id="f59ca20e-29d5-446c-a085-b01a70afece7" name="createVoucerDate" type="java.lang.String"/>
+    <attributes id="4c5e1a27-327e-4e46-9343-002040515ad6" name="dto" type="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+    <attributes id="f29ee5b6-fdcb-43b1-bd99-489429a35f4e" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="ee10f632-d93d-4f69-a5a6-4463be6d5d4e" name="生成凭证并发送" ename="createVoucherAndSend"/>
+    <directions id="35dcf97e-08c8-43ec-bdbf-0add62371c8a" name="全选" ename="selectAll"/>
+    <directions id="3e0b5b9b-cef5-4395-a939-851dfacbee6c" name="发送凭证电子凭证库" ename="voucherSend"/>
+    <directions id="652738a1-976f-4845-a29b-3c5546a3c344" name="查询" ename="search"/>
+    <directions id="69a15b42-5102-4932-b478-5af5c5a70ab8" viewers="6e465d6d-825a-46e6-a5de-c70a1caac6ac" name="凭证查看" ename="voucherView"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_a24dffb8-01f5-4b29-b4c5-771c24f56318.model#a24dffb8-01f5-4b29-b4c5-771c24f56318"/>
+  <services href="JServiceComponet_abb5c90f-b502-43e6-bb7b-e18011ad64e2.model#abb5c90f-b502-43e6-bb7b-e18011ad64e2"/>
+  <contentAreas id="57d7ac62-2412-4427-b546-f290299d7d92">
+    <contentareanode id="6279b2fb-722e-4c7c-a486-22caabb0c8e6" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Combo" id="e260cbaa-80ae-4b76-b045-e2d259ba53c9" name="对账类型" binding="voucherType" caption="对账类型" display="displayValue" underly="underlyValue" modelsource="voucherList"/>
+      <widgetRefs xsi:type="model:Combo" id="6807f6a7-6a97-4641-a518-de358f2d9fb4" name="凭证类型" binding="subVoucherType" caption="凭证类型" display="displayValue" underly="underlyValue" modelsource="subVoucherList"/>
+      <widgetRefs xsi:type="model:Combo" id="e0800076-041d-48a1-bc31-43ef1a2c0d43" name="国库代码" binding="treCode" caption="国库代码">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ec2596b4-e5ad-4f75-8109-9d43572c26da" name="凭证状态" binding="dto.sstatus" caption="凭证状态">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#350c233c-d0e0-4e84-9ee1-886a094edefc"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="7202e212-1585-4ea0-9da6-505854b75420" name="凭证日期" binding="dto.screatdate" caption="凭证日期"/>
+      <widgetRefs xsi:type="model:Text" id="06a1646b-4823-4087-a2aa-3b3481c5697c" name="凭证金额" binding="dto.nmoney" caption="凭证金额">
+        <widgetvalidators href="ValidatorNode_c0f952e4-88a7-450b-8035-ac678e13e57f.model#fc188264-5e10-43b4-a500-1106d2f93af1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="d3a3dac9-4e08-4d67-bc64-890e05fb3865" name="对账发起日期" binding="dto.scheckdate" caption="对账发起日期"/>
+      <widgetRefs xsi:type="model:Text" id="d480ef15-c7ff-441a-a2d1-ef6adf3185ae" name="凭证号码" binding="dto.svoucherno" caption="凭证号码"/>
+      <widgetRefs xsi:type="model:PlaceHolder" id="403ad844-e8f2-4e8b-95c6-c2edf65c6a27" name="PlaceHolderImpl-403ad844-e8f2-4e8b-95c6-c2edf65c6a27"/>
+      <widgetRefs xsi:type="model:Button" id="94d2d082-e9fd-4b13-84a0-dafef35a9da9" name="查询" caption="查询" layout="GridLayout" direction="652738a1-976f-4845-a29b-3c5546a3c344"/>
+    </contentareanode>
+    <contentareanode id="c1f87d91-da56-40da-8c27-6d343d5ea486" name="凭证查询一览表" grouptitle="凭证查询一览表">
+      <widgetRefs xsi:type="model:Table" id="83c847ea-39fb-4475-a060-dddc7d73e16e" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" showcheckbox="true" selectedrows="checkList">
+        <columnlist id="f3b73488-dc53-4a76-879d-7af881311eaf" name="svoucherno" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="52c70bdb-0dfa-4109-b708-798f94fa280b" name="strecode" binding="strecode" caption="国库代码"/>
+        <columnlist id="a720f7a0-e4cf-499e-b926-5196461b0fc9" name="sadmdivcode" binding="sadmdivcode" caption="区划代码"/>
+        <columnlist id="2e42b70a-bb04-44e6-a0f6-96ecb6a4e2f8" name="svtcode" binding="svtcode" caption="对账类型"/>
+        <columnlist id="8042be48-9a52-46ec-81cb-5748754c6e1f" name="scheckvouchertype" binding="scheckvouchertype" caption="凭证类型"/>
+        <columnlist id="d2c18848-dd8f-4814-8bd7-ca7c0e12d2ab" name="sstatus" binding="sstatus" caption="凭证状态">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#350c233c-d0e0-4e84-9ee1-886a094edefc"/>
+        </columnlist>
+        <columnlist id="39cca64d-a147-467d-8922-b34a053cdf74" name="nmoney" binding="nmoney" caption="金额"/>
+        <columnlist id="97edc91a-30c6-4d97-85f1-627d8557d99b" name="icount" binding="icount" caption="笔数"/>
+        <columnlist id="2988cad8-4a84-42ee-a3ae-942c25898615" name="screatdate" binding="screatdate" caption="凭证日期"/>
+        <columnlist id="a159caca-c205-433a-8cd9-180ffb1daa7c" name="scheckdate" binding="scheckdate" caption="对账发起日期"/>
+        <columnlist id="5c8468b6-0377-4493-8bc5-1acc50829e13" name="sdemo" binding="sdemo" caption="详细信息"/>
+        <columnlist id="7d6a3892-524c-49d0-9cff-fa0033410565" name="sreturnerrmsg" binding="sreturnerrmsg" caption="备注"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="05c66651-a698-4855-9a67-1dcbb82a264f">
+    <pages id="a3f10ad1-c8af-483f-b9ae-95ec0376788c" name="凭证每日对账业务界面">
+      <views id="5a2c7ce9-5e29-42a6-a4d6-59a037752108" name="维护界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="6279b2fb-722e-4c7c-a486-22caabb0c8e6 c1f87d91-da56-40da-8c27-6d343d5ea486">
+        <buttonArea id="87aac72e-bfa2-4c2e-bf93-f35c94917f5b" name="JButtonAreaImpl-87aac72e-bfa2-4c2e-bf93-f35c94917f5b">
+          <buttons id="6090d392-1884-4862-8983-4c13e804fc05" name="全选" caption="全选" direction="35dcf97e-08c8-43ec-bdbf-0add62371c8a"/>
+          <buttons id="64c3a751-05c7-424e-9f1f-e3336a0a6c3b" name="生成凭证" caption="生成凭证" direction="ee10f632-d93d-4f69-a5a6-4463be6d5d4e"/>
+          <buttons id="1253fa0a-a37b-4c2d-8906-056d4fd3b623" name="发送凭证" caption="发送凭证" direction="3e0b5b9b-cef5-4395-a939-851dfacbee6c"/>
+          <buttons id="2247ff1a-8164-4947-957c-8d7a0512e411" name="电子凭证还原展示" caption="电子凭证还原展示" direction="69a15b42-5102-4932-b478-5af5c5a70ab8"/>
+        </buttonArea>
+      </views>
+      <views id="6e465d6d-825a-46e6-a5de-c70a1caac6ac" name="凭证查看界面" type="ClassName" path="com.cfcc.itfe.client.sendbiz.bizcertsend.ActiveXCompositeVoucherDayCheckAccountOcx"/>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

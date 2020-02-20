@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="beb03805-6ee7-4d8d-8e8f-44645cc9e02c" name="接收业务导入确认服务组件" ename="UploadConfirm" shared="true">
+  <jproperties id="b5c959d3-ff34-4151-894b-40a0c72506f3" key="GeneratedTime" value="1395023596187"/>
+  <refModule href="JModule_57d74aac-5599-4965-be54-900a36b2a15f.model#57d74aac-5599-4965-be54-900a36b2a15f"/>
+  <methods id="b712cc57-41e5-4a4d-9a69-3817ae3292e9" ename="batchQuery" name="batchQuery" returntype="java.util.List" remark="批量销号查询">
+    <methodParams id="fd787444-c6c3-4a88-adb3-3da724e00dd1" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+    <methodParams id="3a4f57f7-d047-4b5f-bc63-2d8842a0b053" name="销号金额" ename="checkMoney" type="java.math.BigDecimal" codecomment="销号金额"/>
+  </methods>
+  <methods id="7e2706aa-46d7-4ad5-9f9f-b8e4968457d6" ename="batchConfirm" name="batchConfirm" returntype="java.lang.Integer" remark="批量销号确认提交">
+    <methodParams id="bf92fe7b-957d-4434-8725-8797f60e0a31" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+    <methodParams id="da4ea140-85a5-4a22-bcb7-70c0acdd4f37" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment=""/>
+  </methods>
+  <methods id="281ab70c-6250-45bc-b3eb-130c4d2c03f8" ename="batchDelete" name="batchDelete" returntype="java.lang.Integer" remark="批量销号删除">
+    <methodParams id="46bce419-58e5-4786-bf19-91e491abec82" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+    <methodParams id="1b5950ce-45a8-4197-948b-5e08e8169872" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment=""/>
+  </methods>
+  <methods id="90427ace-251d-4f98-bcdb-22c28bbd4012" ename="eachQuery" name="eachQuery" returntype="java.util.List" remark="逐笔销号查询">
+    <methodParams id="75fb9de5-15b5-4364-b868-52a8ddcdf9ff" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+    <methodParams id="a33e7a8c-cec2-4c51-9308-1da64345df1a" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="f6a5fe82-3463-4ca2-95bc-483f6378b89f" ename="eachConfirm" name="eachConfirm" returntype="java.lang.Integer" remark="逐笔销号确认提交">
+    <methodParams id="ea50a69e-2736-49a6-b546-4d7c4892eeae" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+    <methodParams id="3c18c71f-a3ea-4517-b209-2908219bba16" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="4e996c8d-2618-4f15-9d37-cfcbfa6cf23a" ename="directSubmit" name="directSubmit" returntype="java.lang.Integer" remark="直接提交">
+    <methodParams id="aee723f8-9306-477e-94e2-6a693dbb6e9c" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+  </methods>
+  <methods id="22402f94-a631-4577-8519-fdaabdd457f9" ename="checkAndSendMsg" name="判断文件名下是否有未销的的记录，如果没有就发送报文" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="b782eabf-6122-443e-86df-4cda74ea47e4" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment=""/>
+    <methodParams id="63aedfa3-f8e5-43c5-b686-fcf899a692c2" name="报文编号" ename="msgno" type="java.lang.String" codecomment="报文编号"/>
+    <methodParams id="5e14290c-5c76-4099-959f-4cbdf69e7523" name="表名称" ename="tablename" type="java.lang.String" codecomment="表名称"/>
+    <methodParams id="8f4a14d7-7ad3-47fa-9982-9adebe230c86" name="凭证流水号" ename="vousrlno" type="java.lang.Long" codecomment="凭证流水号"/>
+  </methods>
+  <methods id="8fce3ec5-dc1b-4ffe-9524-b72440bdd9e7" ename="eachDelete" name="eachDelete" returntype="java.lang.Integer" remark="明细删除">
+    <methodParams id="9302eca4-8dfe-4430-9487-266ce08af508" name="业务类型" ename="bizType" type="java.lang.String"/>
+    <methodParams id="f382e4d8-ba44-4289-823c-a4a3be9362ec" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="7c5954c9-f10b-4efc-b55b-87b6f77c44b4" ename="setFail" name="setFail" returntype="java.lang.Integer" remark="明细删除">
+    <methodParams id="0f075477-56cc-4767-90a1-9be8b4e4b61c" name="业务类型" ename="bizType" type="java.lang.String"/>
+    <methodParams id="307a63ee-2331-47e4-a0fc-ad25f49f51f3" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="7385ce19-5d28-4940-a571-033713e1781c" ename="applyBackDirectSubmit" name="applyBackDirectSubmit" returntype="java.lang.Integer" remark="划款申请退款直接提交">
+    <methodParams id="a7a61c3a-6fd4-4658-973c-8ac009c1c7ff" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+    <methodParams id="35f2b9a1-bca7-4784-9a8e-ae9e5a55903b" name="划款申请退款dto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="4106dffd-58ba-4710-af19-fb9a94cf835d" ename="applyBackBatchConfirm" name="applyBackBatchConfirm" returntype="java.lang.Integer" remark="划款申请退回批量销号确认提交">
+    <methodParams id="2a220fc5-dc57-492e-abbe-e541e45b5177" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+    <methodParams id="ae170499-7c29-42df-81d8-a2b9da2f6b33" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment=""/>
+    <methodParams id="78063525-abda-4e93-82bc-4293c93de6d3" name="_dto" ename="idto2" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment=""/>
+  </methods>
+  <methods id="f1f770a4-d371-4971-8eab-f579ca4d3780" ename="applyBackEachConfirm" name="applyBackEachConfirm" returntype="java.lang.Integer" remark="还款申请退回逐笔销号确认提交">
+    <methodParams id="c1b62536-4b4f-467e-8195-3392e0069cc3" name="业务类型" ename="bizType" type="java.lang.String" codecomment="业务类型"/>
+    <methodParams id="7a6b83cd-1cc2-419a-b99a-fce461dc0f26" name="idto" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="043deaa8-25b7-40d3-a4f0-8fabaaf9fe13" name="_dto" ename="idto2" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="36cb8b2b-c2d3-4538-86f5-b2b788fc3e0e" ename="getDirectGrantFileList" name="返回直接支付授权支付文件列表" returntype="java.util.List">
+    <methodParams id="d49765de-d6f7-4a0b-a0a4-ac8431fcf09c" name="文件路径" ename="sfilepath" type="java.lang.String"/>
+    <methodParams id="fe34e826-057d-4709-97a6-98a092df8987" name="业务类型" ename="sbiztype" type="java.lang.String"/>
+  </methods>
+  <methods id="f2381849-1fc5-409e-80cb-3a0a2fb8bc21" ename="addDirectGrantFile" name="加载直接支付授权支付文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="2136be50-6434-424d-8365-2ae3fe271186" name="文件所在主目录" ename="filedir" type="java.lang.String"/>
+    <methodParams id="875cbc17-99d2-4be1-82b1-66fac6230c38" name="需要加载的文件名称列表" ename="filenamelist" type="java.util.List"/>
+  </methods>
+  <methods id="977a40c3-47d3-4b7f-9ba1-777e0a025653" ename="deleteDirectGrantErorFile" name="删除错误文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="2435cbb6-dc64-4fc0-a26c-00bf5cf39a46" name="文件所在主目录" ename="mainfiledir" type="java.lang.String"/>
+    <methodParams id="cbceea9c-92b6-4a07-9c6f-3e812d4af082" name="需要删除的文件名称列表" ename="deleteFileList" type="java.util.List"/>
+  </methods>
+  <methods id="cd73ef89-d93b-4acb-9fb4-076dd378f54d" ename="delfilelist" name="删除文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="306586b5-ce76-46c1-86ad-761df762c19e" name="需要删除文件列表" ename="delfilelist" type="java.util.List"/>
+    <methodParams id="842cc248-1707-4241-b2f7-9e875c64d75b" name="删除类型" ename="deletetype" type="java.lang.String"/>
+  </methods>
+  <methods id="7c7b49ec-7310-4836-922e-8fac351f80f5" ename="ftpfileadd" name="ftp文件加载" returntype="java.util.List">
+    <methodParams id="ed9524c2-8cde-4928-9037-13155e5ec00f" name="需要加载文件列表" ename="selectAddList" type="java.util.List"/>
+  </methods>
+  <methods id="8fdb4a76-c472-4645-8954-ca3f52906249" ename="readFtpFile" name="读取ftp文件" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="3f8e7acd-f178-47ad-a0d6-8f4c450fb75d" name="读取的日期" ename="sDate" type="java.lang.String"/>
+  </methods>
+  <methods id="6dffe9bb-bcd2-47da-ac8e-f46f46695687" ename="checkSignFileForSd" name="服务器端验签转移文件" returntype="java.util.Map">
+    <methodParams id="a6d3482f-a81f-424f-949b-78ef56754b7a" name="验签文件名带路径" ename="filenamepath" type="java.lang.String"/>
+    <methodParams id="59256337-1026-4207-8202-046585df1369" name="验签临时文件名带路径" ename="tempfilenamepath" type="java.lang.String"/>
+    <methodParams id="be810744-c3e7-41a1-a75c-6ddaa6299153" name="密钥" ename="privatekey" type="java.lang.String"/>
+  </methods>
+  <methods id="3895ffde-7e59-4860-81d9-c91006fa22f0" ename="updateIdtoList" name="ftp批量加载后更新状态" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8109f6f8-3a3e-40f8-ad8e-7423bcc7cd68" name="更新的idto列表" ename="idtoList" type="java.util.List"/>
+  </methods>
+  <methods id="8896c94d-b3c2-489a-bb46-fb236e458669" ename="queryFtpReturnFileList" name="ftp查询可回执的文件" returntype="java.util.List">
+    <methodParams id="0700bf4a-5483-4807-9f77-0d952c93bbf7" name="查询dto" ename="queryDto" type="com.cfcc.itfe.persistence.dto.TvBatchpayDto"/>
+  </methods>
+  <methods id="2b22df82-579b-4beb-a8a2-85664511f52b" ename="sendReturnToFtp" name="发送回执到ftp" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="82e8bf26-ef4f-4b12-8f97-c1b6aa16ae11" name="需要发送回执的文件列表" ename="sendFileList" type="java.util.List"/>
+  </methods>
+</model:JServiceComponent>

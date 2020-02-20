@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="bb5748c5-3bfb-4ea0-b944-374154685095" name="用户信息服务组件" ename="TsUsers">
+  <jproperties id="56dc134e-3bc8-46f6-ab61-08eabb16dbbc" key="GeneratedTime" value="1378979665683"/>
+  <refModule href="JModule_61cf503c-b050-4b99-b55c-e6eee3d4260b.model#61cf503c-b050-4b99-b55c-e6eee3d4260b"/>
+  <methods id="ff73013a-2b9d-4350-980a-b44ba2c91630" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="用户信息">
+    <methodParams id="7e3265d5-22db-46df-911e-6f7d937f5c0a" name="用户信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="2e8cf1e6-8fe4-4e4e-89ba-41c0663eb568" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="7a30d526-4755-457a-be85-79602fe4fa59" name="用户信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="2e8cf1e6-8fe4-4e4e-89ba-41c0663eb568" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bdcdc7cb-1eb8-4a58-afa8-1031a3a77c19" name="用户信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="d7af9c8d-ae88-4647-b3e5-bc5d6803dcbe" ename="getSingleInfo" name="查询" returntype="com.cfcc.itfe.persistence.dto.TsUsersDto">
+    <methodParams id="fd4cd44a-fbc7-4ac7-bdf4-b444a79ec7a8" name="searchDto" ename="searchDto" type="com.cfcc.itfe.persistence.dto.TsUsersDto"/>
+  </methods>
+</model:JServiceComponent>

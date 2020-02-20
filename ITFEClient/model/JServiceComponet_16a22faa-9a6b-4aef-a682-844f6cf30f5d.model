@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="16a22faa-9a6b-4aef-a682-844f6cf30f5d" name="退库原因代码对照服务组件" ename="TsDrawbackreason" shared="true">
+  <jproperties id="99a3b1fa-37e0-4585-97b0-35a13e53aa72" key="GeneratedTime" value="1331531146296"/>
+  <refModule href="JModule_ab9a5eb6-9710-45f0-ac49-506e06d3a2a3.model#ab9a5eb6-9710-45f0-ac49-506e06d3a2a3"/>
+  <methods id="4fb87c59-09e8-49b2-afc3-50f320f46b2f" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="退库原因代码对照">
+    <methodParams id="8133a563-8bfd-46b5-bf7b-ea409aca34b2" name="退库原因代码对照" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="11e69f96-869c-42ee-9ab5-b3f00e3e98c9" ename="delInfo" name="删除" codecomment="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="25585fbb-5361-4504-9c6a-3b499343146a" name="退库原因代码对照" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="abf99e8a-5f7a-4d87-bc64-89f8d2df008b" ename="modInfo" name="修改" codecomment="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="581b42b5-aa3b-41ab-8d87-ff592f2fd73e" name="退库原因代码对照" ename="dtoInfo" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

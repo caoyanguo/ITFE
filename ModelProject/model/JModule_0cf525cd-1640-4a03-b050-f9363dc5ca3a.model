@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0cf525cd-1640-4a03-b050-f9363dc5ca3a" isgenerated="false" name="生成TBS文件" ename="MakeTbsFile" shared="false"/>

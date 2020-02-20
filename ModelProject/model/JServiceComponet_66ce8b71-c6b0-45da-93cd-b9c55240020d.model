@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="66ce8b71-c6b0-45da-93cd-b9c55240020d" name="9113收入核对包信息重发请求服务" ename="incomecheckresendrequest">
+  <jproperties id="f45d2357-78a8-4093-986b-6c78f1accc3c" key="GeneratedTime" value="1331531145671"/>
+  <refModule href="JModule_bfef4032-621d-4d86-a70b-688c8fad437a.model#bfef4032-621d-4d86-a70b-688c8fad437a"/>
+  <methods id="812fe753-da7c-485d-a174-94bbda68a9b1" ename="sendMsg" name="发送报文" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="640dad0e-f04d-426e-a989-38a83817206a" name="dto对象" ename="dto" type="com.cfcc.itfe.persistence.dto.TvSendlogDto"/>
+  </methods>
+</model:JServiceComponent>

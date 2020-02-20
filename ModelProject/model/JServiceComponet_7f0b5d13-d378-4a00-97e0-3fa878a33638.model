@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7f0b5d13-d378-4a00-97e0-3fa878a33638" name="征收机关合并参数维护服务组件" ename="tstaxorgcodemerger">
+  <jproperties id="5ce1b53b-f7d8-4121-bea4-6b647cfd9531" key="GeneratedTime" value="1365709927490"/>
+  <refModule href="JModule_c8b9587b-a0ee-4b87-bf10-b2b4091a6c08.model#c8b9587b-a0ee-4b87-bf10-b2b4091a6c08"/>
+  <methods id="23f62966-5c92-4fda-b79a-e71be6ed0f5f" ename="add" name="添加" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="265b2981-8df4-47a6-ade7-e42fa982b0ef" name="添加对象" ename="dto" type="com.cfcc.itfe.persistence.dto.TdTaxorgMergerDto"/>
+  </methods>
+  <methods id="356334ce-61d5-42ea-8fe7-13741c867913" ename="modify" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="974c1084-a740-4c06-8e9a-4ce3f6bb3104" name="修改对象" ename="dto" type="com.cfcc.itfe.persistence.dto.TdTaxorgMergerDto"/>
+    <methodParams id="52d4f696-e9b6-4c90-8498-14812a0bb9c5" name="合并前征收机关代码" ename="precode" type="java.lang.String"/>
+    <methodParams id="707ba0ce-f929-4b0d-a75f-04b445a23881" name="合并后征收机关代码" ename="aftercode" type="java.lang.String"/>
+  </methods>
+  <methods id="e2b3f37c-8d3c-435b-8ba4-0810cdfa607c" ename="delete" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="368dc67a-c0a7-4b35-a98f-92a661eb4ec6" name="删除对象" ename="dto" type="com.cfcc.itfe.persistence.dto.TdTaxorgMergerDto"/>
+  </methods>
+</model:JServiceComponent>

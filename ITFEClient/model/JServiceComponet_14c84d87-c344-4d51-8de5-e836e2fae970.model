@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="14c84d87-c344-4d51-8de5-e836e2fae970" name="数据恢复" ename="dataRestore" shared="true">
+  <jproperties id="730a7f94-cb55-437d-bb53-2364e50e51b7" key="GeneratedTime" value="1344266883860"/>
+  <refModule href="JModule_3283aa5c-9dd6-4897-bb2d-c7bf526a38ab.model#3283aa5c-9dd6-4897-bb2d-c7bf526a38ab"/>
+  <methods id="66df434e-9800-452f-9bc6-8be8b5c454ff" ename="datarestore" name="按照核算主体代码进行数据恢复" codecomment="按照核算主体代码进行数据恢复" returntype="java.lang.String" remark="按照核算主体代码进行数据恢复">
+    <methodParams id="d0be44f5-dcba-48fe-bd6a-f2fc7419cc95" name="机构代码" ename="sorgcode" type="java.lang.String" codecomment="核算主体代码"/>
+    <methodParams id="007c188b-68bf-47bd-9854-6ecea0bc8afa" name="要恢复的备份文件相对路径list" ename="relPathList" type="java.util.List" codecomment="相对file.transfer.root的路径list"/>
+  </methods>
+</model:JServiceComponent>

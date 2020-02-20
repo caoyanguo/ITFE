@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead5101" beanIdRef="BatchHead5101" />
+	<jb:wiring property="Bill5101" beanIdRef="Bill5101s" />
+</jb:bean>
+<jb:bean beanId="Bill5101s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="Bill5101" />
+</jb:bean>
+<jb:bean beanId="Bill5101" class="java.util.HashMap" createOnElement="Bill5101">
+	<jb:value property="TraNo" decoder="String" data="CFX/MSG/Bill5101/TraNo" />
+	<jb:value property="VouNo" decoder="String" data="CFX/MSG/Bill5101/VouNo" />
+	<jb:value property="VouDate" decoder="String" data="CFX/MSG/Bill5101/VouDate" />
+	<jb:value property="PayerAcct" decoder="String" data="CFX/MSG/Bill5101/PayerAcct" />
+	<jb:value property="PayerName" decoder="String" data="CFX/MSG/Bill5101/PayerName" />
+	<jb:value property="PayerAddr" decoder="String" data="CFX/MSG/Bill5101/PayerAddr" />
+	<jb:value property="Amt" decoder="String" data="CFX/MSG/Bill5101/Amt" />
+	<jb:value property="PayeeOpBkNo" decoder="String" data="CFX/MSG/Bill5101/PayeeOpBkNo" />
+	<jb:value property="PayeeAcct" decoder="String" data="CFX/MSG/Bill5101/PayeeAcct" />
+	<jb:value property="PayeeName" decoder="String" data="CFX/MSG/Bill5101/PayeeName" />
+	<jb:value property="AddWord" decoder="String" data="CFX/MSG/Bill5101/AddWord" />
+	<jb:value property="BdgOrgCode" decoder="String" data="CFX/MSG/Bill5101/BdgOrgCode" />
+	<jb:value property="BudgetOrgName" decoder="String" data="CFX/MSG/Bill5101/BudgetOrgName" />
+	<jb:value property="OfYear" decoder="String" data="CFX/MSG/Bill5101/OfYear" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/Bill5101/BudgetType" />
+	<jb:value property="TrimSign" decoder="String" data="CFX/MSG/Bill5101/TrimSign" />
+	<jb:value property="StatInfNum" decoder="String" data="CFX/MSG/Bill5101/StatInfNum" />
+	<jb:wiring property="Detail5101" beanIdRef="Detail5101s" />
+</jb:bean>
+<jb:bean beanId="BatchHead5101" class="java.util.HashMap" createOnElement="BatchHead5101">
+	<jb:value property="BillOrg" decoder="String" data="CFX/MSG/BatchHead5101/BillOrg" />
+	<jb:value property="PayeeBankNo" decoder="String" data="CFX/MSG/BatchHead5101/PayeeBankNo" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead5101/EntrustDate" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead5101/PackNo" />
+	<jb:value property="TreCode" decoder="String" data="CFX/MSG/BatchHead5101/TreCode" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead5101/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead5101/AllAmt" />
+	<jb:value property="PayoutVouType" decoder="String" data="CFX/MSG/BatchHead5101/PayoutVouType" />
+</jb:bean>
+<jb:bean beanId="Detail5101s" class="java.util.ArrayList" createOnElement="Bill5101">
+	<jb:wiring beanIdRef="Detail5101" />
+</jb:bean>
+<jb:bean beanId="Detail5101" class="java.util.HashMap" createOnElement="Detail5101">
+	<jb:value property="SeqNo" decoder="String" data="CFX/MSG/Bill5101/Detail5101/SeqNo" />
+	<jb:value property="FuncBdgSbtCode" decoder="String" data="CFX/MSG/Bill5101/Detail5101/FuncBdgSbtCode" />
+	<jb:value property="EcnomicSubjectCode" decoder="String" data="CFX/MSG/Bill5101/Detail5101/EcnomicSubjectCode" />
+	<jb:value property="BudgetPrjCode" decoder="String" data="CFX/MSG/Bill5101/Detail5101/BudgetPrjCode" />
+	<jb:value property="Amt" decoder="String" data="CFX/MSG/Bill5101/Detail5101/Amt" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

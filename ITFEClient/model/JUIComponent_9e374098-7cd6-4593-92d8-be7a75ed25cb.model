@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9e374098-7cd6-4593-92d8-be7a75ed25cb" name="数据查询" ename="DataQuery">
+  <jproperties id="79f7ccb4-ad6d-47d6-99c6-011df2d19deb" key="GeneratedTime" value="1487553953784"/>
+  <refModule href="JModule_99ca1d59-8fa5-4cec-9be4-e76f0a6d90fb.model#99ca1d59-8fa5-4cec-9be4-e76f0a6d90fb"/>
+  <model id="85afe4e8-c174-4075-b047-887be42cf302" name="JModelImpl-85afe4e8-c174-4075-b047-887be42cf302">
+    <attributes id="d296d0e5-ec93-4492-aaf1-4244e74bb89f" name="resultTable" type="java.util.List"/>
+    <attributes id="c23dda57-1f9b-4cc0-b714-07811684023c" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="8b8a6c95-0c04-4590-b99e-d6886e99ef42" name="执行" ename="execText"/>
+  </model>
+  <contentAreas id="f37d57ac-f833-46f6-82d2-dcfca5a1112d"/>
+  <pagenodes id="8d3b41c4-c2bf-4f3c-8032-df74f79bdf1b">
+    <pages id="96b161a6-25e4-4de2-ae40-16fd7822c6f4" name="数据查询">
+      <views id="64caebd7-aa80-48d0-8e42-fbfaa63ab3ad" name="JViewerImpl-64caebd7-aa80-48d0-8e42-fbfaa63ab3ad" type="className" path="com.cfcc.itfe.client.dataquery.composite.DataQueryComposite" isdefault="true"/>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

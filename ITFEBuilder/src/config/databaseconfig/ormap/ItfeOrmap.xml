@@ -1,0 +1,2248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfDirectpayAdjustmainDto" name="com.cfcc.itfe.persistence.pk.HtfDirectpayAdjustmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfDirectpayAdjustmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfDirectpayAdjustmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfDirectpayAdjustmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfDirectpayAdjustmainInfo"/>
+	  <property name="tableName" value="HTF_DIRECTPAY_ADJUSTMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfDirectpayAdjustsubDto" name="com.cfcc.itfe.persistence.pk.HtfDirectpayAdjustsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfDirectpayAdjustsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfDirectpayAdjustsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfDirectpayAdjustsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfDirectpayAdjustsubInfo"/>
+	  <property name="tableName" value="HTF_DIRECTPAY_ADJUSTSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfDirectpaymsgmainDto" name="com.cfcc.itfe.persistence.pk.HtfDirectpaymsgmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfDirectpaymsgmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfDirectpaymsgmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfDirectpaymsgmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfDirectpaymsgmainInfo"/>
+	  <property name="tableName" value="HTF_DIRECTPAYMSGMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfDirectpaymsgsubDto" name="com.cfcc.itfe.persistence.pk.HtfDirectpaymsgsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfDirectpaymsgsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfDirectpaymsgsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfDirectpaymsgsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfDirectpaymsgsubInfo"/>
+	  <property name="tableName" value="HTF_DIRECTPAYMSGSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfGrantpayAdjustmainDto" name="com.cfcc.itfe.persistence.pk.HtfGrantpayAdjustmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfGrantpayAdjustmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfGrantpayAdjustmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfGrantpayAdjustmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfGrantpayAdjustmainInfo"/>
+	  <property name="tableName" value="HTF_GRANTPAY_ADJUSTMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfGrantpayAdjustsubDto" name="com.cfcc.itfe.persistence.pk.HtfGrantpayAdjustsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfGrantpayAdjustsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfGrantpayAdjustsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfGrantpayAdjustsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfGrantpayAdjustsubInfo"/>
+	  <property name="tableName" value="HTF_GRANTPAY_ADJUSTSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfPaybankRefundmainDto" name="com.cfcc.itfe.persistence.pk.HtfPaybankRefundmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfPaybankRefundmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfPaybankRefundmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfPaybankRefundmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfPaybankRefundmainInfo"/>
+	  <property name="tableName" value="HTF_PAYBANK_REFUNDMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfPaybankRefundsubDto" name="com.cfcc.itfe.persistence.pk.HtfPaybankRefundsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfPaybankRefundsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfPaybankRefundsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfPaybankRefundsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfPaybankRefundsubInfo"/>
+	  <property name="tableName" value="HTF_PAYBANK_REFUNDSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfPaymentDetailsmainDto" name="com.cfcc.itfe.persistence.pk.HtfPaymentDetailsmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfPaymentDetailsmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfPaymentDetailsmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfPaymentDetailsmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfPaymentDetailsmainInfo"/>
+	  <property name="tableName" value="HTF_PAYMENT_DETAILSMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfPaymentDetailssubDto" name="com.cfcc.itfe.persistence.pk.HtfPaymentDetailssubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfPaymentDetailssubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfPaymentDetailssubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfPaymentDetailssubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfPaymentDetailssubInfo"/>
+	  <property name="tableName" value="HTF_PAYMENT_DETAILSSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReconcilePayinfoMainDto" name="com.cfcc.itfe.persistence.pk.HtfReconcilePayinfoMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReconcilePayinfoMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReconcilePayinfoMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReconcilePayinfoMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReconcilePayinfoMainInfo"/>
+	  <property name="tableName" value="HTF_RECONCILE_PAYINFO_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReconcilePayinfoSubDto" name="com.cfcc.itfe.persistence.pk.HtfReconcilePayinfoSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReconcilePayinfoSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReconcilePayinfoSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReconcilePayinfoSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReconcilePayinfoSubInfo"/>
+	  <property name="tableName" value="HTF_RECONCILE_PAYINFO_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReconcilePayquotaMainDto" name="com.cfcc.itfe.persistence.pk.HtfReconcilePayquotaMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReconcilePayquotaMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReconcilePayquotaMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReconcilePayquotaMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReconcilePayquotaMainInfo"/>
+	  <property name="tableName" value="HTF_RECONCILE_PAYQUOTA_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReconcilePayquotaSubDto" name="com.cfcc.itfe.persistence.pk.HtfReconcilePayquotaSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReconcilePayquotaSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReconcilePayquotaSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReconcilePayquotaSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReconcilePayquotaSubInfo"/>
+	  <property name="tableName" value="HTF_RECONCILE_PAYQUOTA_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReconcileRealdialMainDto" name="com.cfcc.itfe.persistence.pk.HtfReconcileRealdialMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReconcileRealdialMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReconcileRealdialMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReconcileRealdialMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReconcileRealdialMainInfo"/>
+	  <property name="tableName" value="HTF_RECONCILE_REALDIAL_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReconcileRealdialSubDto" name="com.cfcc.itfe.persistence.pk.HtfReconcileRealdialSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReconcileRealdialSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReconcileRealdialSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReconcileRealdialSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReconcileRealdialSubInfo"/>
+	  <property name="tableName" value="HTF_RECONCILE_REALDIAL_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReconcileRefundMainDto" name="com.cfcc.itfe.persistence.pk.HtfReconcileRefundMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReconcileRefundMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReconcileRefundMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReconcileRefundMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReconcileRefundMainInfo"/>
+	  <property name="tableName" value="HTF_RECONCILE_REFUND_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReconcileRefundSubDto" name="com.cfcc.itfe.persistence.pk.HtfReconcileRefundSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReconcileRefundSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReconcileRefundSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReconcileRefundSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReconcileRefundSubInfo"/>
+	  <property name="tableName" value="HTF_RECONCILE_REFUND_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReportDefrayMainDto" name="com.cfcc.itfe.persistence.pk.HtfReportDefrayMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReportDefrayMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReportDefrayMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReportDefrayMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReportDefrayMainInfo"/>
+	  <property name="tableName" value="HTF_REPORT_DEFRAY_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReportDefraySubDto" name="com.cfcc.itfe.persistence.pk.HtfReportDefraySubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReportDefraySubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReportDefraySubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReportDefraySubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReportDefraySubInfo"/>
+	  <property name="tableName" value="HTF_REPORT_DEFRAY_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReportDepositMainDto" name="com.cfcc.itfe.persistence.pk.HtfReportDepositMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReportDepositMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReportDepositMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReportDepositMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReportDepositMainInfo"/>
+	  <property name="tableName" value="HTF_REPORT_DEPOSIT_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReportDepositSubDto" name="com.cfcc.itfe.persistence.pk.HtfReportDepositSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReportDepositSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReportDepositSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReportDepositSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReportDepositSubInfo"/>
+	  <property name="tableName" value="HTF_REPORT_DEPOSIT_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReportIncomeMainDto" name="com.cfcc.itfe.persistence.pk.HtfReportIncomeMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReportIncomeMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReportIncomeMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReportIncomeMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReportIncomeMainInfo"/>
+	  <property name="tableName" value="HTF_REPORT_INCOME_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfReportIncomeSubDto" name="com.cfcc.itfe.persistence.pk.HtfReportIncomeSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfReportIncomeSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfReportIncomeSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfReportIncomeSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfReportIncomeSubInfo"/>
+	  <property name="tableName" value="HTF_REPORT_INCOME_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfUnitrecordmainDto" name="com.cfcc.itfe.persistence.pk.HtfUnitrecordmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfUnitrecordmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfUnitrecordmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfUnitrecordmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfUnitrecordmainInfo"/>
+	  <property name="tableName" value="HTF_UNITRECORDMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtfUnitrecordsubDto" name="com.cfcc.itfe.persistence.pk.HtfUnitrecordsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtfUnitrecordsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtfUnitrecordsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtfUnitrecordsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtfUnitrecordsubInfo"/>
+	  <property name="tableName" value="HTF_UNITRECORDSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtrIncomedayrptDto" name="com.cfcc.itfe.persistence.pk.HtrIncomedayrptPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtrIncomedayrptDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtrIncomedayrptDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtrIncomedayrptPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtrIncomedayrptInfo"/>
+	  <property name="tableName" value="HTR_INCOMEDAYRPT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtrStockdayrptDto" name="com.cfcc.itfe.persistence.pk.HtrStockdayrptPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtrStockdayrptDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtrStockdayrptDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtrStockdayrptPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtrStockdayrptInfo"/>
+	  <property name="tableName" value="HTR_STOCKDAYRPT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtrTaxorgDebtReportDto" name="com.cfcc.itfe.persistence.pk.HtrTaxorgDebtReportPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtrTaxorgDebtReportDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtrTaxorgDebtReportDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtrTaxorgDebtReportPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtrTaxorgDebtReportInfo"/>
+	  <property name="tableName" value="HTR_TAXORG_DEBT_REPORT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtrTaxorgIncomedayrptDto" name="com.cfcc.itfe.persistence.pk.HtrTaxorgIncomedayrptPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtrTaxorgIncomedayrptDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtrTaxorgIncomedayrptDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtrTaxorgIncomedayrptPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtrTaxorgIncomedayrptInfo"/>
+	  <property name="tableName" value="HTR_TAXORG_INCOMEDAYRPT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtrTaxorgPayoutReportDto" name="com.cfcc.itfe.persistence.pk.HtrTaxorgPayoutReportPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtrTaxorgPayoutReportDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtrTaxorgPayoutReportDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtrTaxorgPayoutReportPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtrTaxorgPayoutReportInfo"/>
+	  <property name="tableName" value="HTR_TAXORG_PAYOUT_REPORT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtrTaxorgStockdayrptDto" name="com.cfcc.itfe.persistence.pk.HtrTaxorgStockdayrptPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtrTaxorgStockdayrptDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtrTaxorgStockdayrptDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtrTaxorgStockdayrptPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtrTaxorgStockdayrptInfo"/>
+	  <property name="tableName" value="HTR_TAXORG_STOCKDAYRPT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvDirectpaymsgmainDto" name="com.cfcc.itfe.persistence.pk.HtvDirectpaymsgmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvDirectpaymsgmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvDirectpaymsgmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvDirectpaymsgmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvDirectpaymsgmainInfo"/>
+	  <property name="tableName" value="HTV_DIRECTPAYMSGMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvDirectpaymsgsubDto" name="com.cfcc.itfe.persistence.pk.HtvDirectpaymsgsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvDirectpaymsgsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvDirectpaymsgsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvDirectpaymsgsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvDirectpaymsgsubInfo"/>
+	  <property name="tableName" value="HTV_DIRECTPAYMSGSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvDwbkDto" name="com.cfcc.itfe.persistence.pk.HtvDwbkPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvDwbkDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvDwbkDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvDwbkPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvDwbkInfo"/>
+	  <property name="tableName" value="HTV_DWBK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvFinIncomeDetailDto" name="com.cfcc.itfe.persistence.pk.HtvFinIncomeDetailPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvFinIncomeDetailDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvFinIncomeDetailDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvFinIncomeDetailPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvFinIncomeDetailInfo"/>
+	  <property name="tableName" value="HTV_FIN_INCOME_DETAIL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvFinIncomeonlineDto" name="com.cfcc.itfe.persistence.pk.HtvFinIncomeonlinePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvFinIncomeonlineDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvFinIncomeonlineDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvFinIncomeonlinePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvFinIncomeonlineInfo"/>
+	  <property name="tableName" value="HTV_FIN_INCOMEONLINE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvFinIncomeonlineDivideDto" name="com.cfcc.itfe.persistence.pk.HtvFinIncomeonlineDividePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvFinIncomeonlineDivideDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvFinIncomeonlineDivideDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvFinIncomeonlineDividePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvFinIncomeonlineDivideInfo"/>
+	  <property name="tableName" value="HTV_FIN_INCOMEONLINE_DIVIDE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvFreeDto" name="com.cfcc.itfe.persistence.pk.HtvFreePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvFreeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvFreeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvFreePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvFreeInfo"/>
+	  <property name="tableName" value="HTV_FREE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvGrantpaymsgmainDto" name="com.cfcc.itfe.persistence.pk.HtvGrantpaymsgmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvGrantpaymsgmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvGrantpaymsgmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvGrantpaymsgmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvGrantpaymsgmainInfo"/>
+	  <property name="tableName" value="HTV_GRANTPAYMSGMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvGrantpaymsgsubDto" name="com.cfcc.itfe.persistence.pk.HtvGrantpaymsgsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvGrantpaymsgsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvGrantpaymsgsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvGrantpaymsgsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvGrantpaymsgsubInfo"/>
+	  <property name="tableName" value="HTV_GRANTPAYMSGSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvInCorrhandbookDto" name="com.cfcc.itfe.persistence.pk.HtvInCorrhandbookPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvInCorrhandbookDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvInCorrhandbookDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvInCorrhandbookPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvInCorrhandbookInfo"/>
+	  <property name="tableName" value="HTV_IN_CORRHANDBOOK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvIncomeonlineIncomeondetailBlendDto" name="com.cfcc.itfe.persistence.pk.HtvIncomeonlineIncomeondetailBlendPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvIncomeonlineIncomeondetailBlendDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvIncomeonlineIncomeondetailBlendDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvIncomeonlineIncomeondetailBlendPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvIncomeonlineIncomeondetailBlendInfo"/>
+	  <property name="tableName" value="HTV_INCOMEONLINE_INCOMEONDETAIL_BLEND"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvInfileDto" name="com.cfcc.itfe.persistence.pk.HtvInfilePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvInfileDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvInfileDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvInfilePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvInfileInfo"/>
+	  <property name="tableName" value="HTV_INFILE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvInfileDetailDto" name="com.cfcc.itfe.persistence.pk.HtvInfileDetailPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvInfileDetailDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvInfileDetailDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvInfileDetailPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvInfileDetailInfo"/>
+	  <property name="tableName" value="HTV_INFILE_DETAIL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayoutDetailListDto" name="com.cfcc.itfe.persistence.pk.HtvPayoutDetailListPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayoutDetailListDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayoutDetailListDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayoutDetailListPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayoutDetailListInfo"/>
+	  <property name="tableName" value="HTV_PAYOUT_DETAIL_LIST"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayoutDetailMainDto" name="com.cfcc.itfe.persistence.pk.HtvPayoutDetailMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayoutDetailMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayoutDetailMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayoutDetailMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayoutDetailMainInfo"/>
+	  <property name="tableName" value="HTV_PAYOUT_DETAIL_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayoutfinanceMainDto" name="com.cfcc.itfe.persistence.pk.HtvPayoutfinanceMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayoutfinanceMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayoutfinanceMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayoutfinanceMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayoutfinanceMainInfo"/>
+	  <property name="tableName" value="HTV_PAYOUTFINANCE_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayoutfinanceSubDto" name="com.cfcc.itfe.persistence.pk.HtvPayoutfinanceSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayoutfinanceSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayoutfinanceSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayoutfinanceSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayoutfinanceSubInfo"/>
+	  <property name="tableName" value="HTV_PAYOUTFINANCE_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayoutmsgmainDto" name="com.cfcc.itfe.persistence.pk.HtvPayoutmsgmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayoutmsgmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayoutmsgmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayoutmsgmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayoutmsgmainInfo"/>
+	  <property name="tableName" value="HTV_PAYOUTMSGMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayoutmsgsubDto" name="com.cfcc.itfe.persistence.pk.HtvPayoutmsgsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayoutmsgsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayoutmsgsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayoutmsgsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayoutmsgsubInfo"/>
+	  <property name="tableName" value="HTV_PAYOUTMSGSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayreckBankDto" name="com.cfcc.itfe.persistence.pk.HtvPayreckBankPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayreckBankDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayreckBankDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayreckBankPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayreckBankInfo"/>
+	  <property name="tableName" value="HTV_PAYRECK_BANK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayreckBankBackDto" name="com.cfcc.itfe.persistence.pk.HtvPayreckBankBackPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayreckBankBackDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayreckBankBackDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayreckBankBackPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayreckBankBackInfo"/>
+	  <property name="tableName" value="HTV_PAYRECK_BANK_BACK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayreckBankBackListDto" name="com.cfcc.itfe.persistence.pk.HtvPayreckBankBackListPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayreckBankBackListDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayreckBankBackListDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayreckBankBackListPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayreckBankBackListInfo"/>
+	  <property name="tableName" value="HTV_PAYRECK_BANK_BACK_LIST"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPayreckBankListDto" name="com.cfcc.itfe.persistence.pk.HtvPayreckBankListPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPayreckBankListDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPayreckBankListDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPayreckBankListPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPayreckBankListInfo"/>
+	  <property name="tableName" value="HTV_PAYRECK_BANK_LIST"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPbcpayMainDto" name="com.cfcc.itfe.persistence.pk.HtvPbcpayMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPbcpayMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPbcpayMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPbcpayMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPbcpayMainInfo"/>
+	  <property name="tableName" value="HTV_PBCPAY_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvPbcpaySubDto" name="com.cfcc.itfe.persistence.pk.HtvPbcpaySubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvPbcpaySubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvPbcpaySubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvPbcpaySubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvPbcpaySubInfo"/>
+	  <property name="tableName" value="HTV_PBCPAY_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvTaxDto" name="com.cfcc.itfe.persistence.pk.HtvTaxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvTaxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvTaxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvTaxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvTaxInfo"/>
+	  <property name="tableName" value="HTV_TAX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvTaxCancelDto" name="com.cfcc.itfe.persistence.pk.HtvTaxCancelPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvTaxCancelDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvTaxCancelDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvTaxCancelPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvTaxCancelInfo"/>
+	  <property name="tableName" value="HTV_TAX_CANCEL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvTaxItemDto" name="com.cfcc.itfe.persistence.pk.HtvTaxItemPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvTaxItemDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvTaxItemDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvTaxItemPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvTaxItemInfo"/>
+	  <property name="tableName" value="HTV_TAX_ITEM"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvTaxKindDto" name="com.cfcc.itfe.persistence.pk.HtvTaxKindPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvTaxKindDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvTaxKindDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvTaxKindPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvTaxKindInfo"/>
+	  <property name="tableName" value="HTV_TAX_KIND"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvTaxorgIncomeDto" name="com.cfcc.itfe.persistence.pk.HtvTaxorgIncomePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvTaxorgIncomeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvTaxorgIncomeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvTaxorgIncomePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvTaxorgIncomeInfo"/>
+	  <property name="tableName" value="HTV_TAXORG_INCOME"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.HtvVoucherinfoDto" name="com.cfcc.itfe.persistence.pk.HtvVoucherinfoPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.HtvVoucherinfoDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.HtvVoucherinfoDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.HtvVoucherinfoPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.HtvVoucherinfoInfo"/>
+	  <property name="tableName" value="HTV_VOUCHERINFO"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvBnkpayMainDto" name="com.cfcc.itfe.persistence.pk.TbsTvBnkpayMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvBnkpayMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvBnkpayMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvBnkpayMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvBnkpayMainInfo"/>
+	  <property name="tableName" value="TBS_TV_BNKPAY_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvBnkpaySubDto" name="com.cfcc.itfe.persistence.pk.TbsTvBnkpaySubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvBnkpaySubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvBnkpaySubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvBnkpaySubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvBnkpaySubInfo"/>
+	  <property name="tableName" value="TBS_TV_BNKPAY_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvDirectpayplanMainDto" name="com.cfcc.itfe.persistence.pk.TbsTvDirectpayplanMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvDirectpayplanMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvDirectpayplanMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvDirectpayplanMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvDirectpayplanMainInfo"/>
+	  <property name="tableName" value="TBS_TV_DIRECTPAYPLAN_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvDirectpayplanSubDto" name="com.cfcc.itfe.persistence.pk.TbsTvDirectpayplanSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvDirectpayplanSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvDirectpayplanSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvDirectpayplanSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvDirectpayplanSubInfo"/>
+	  <property name="tableName" value="TBS_TV_DIRECTPAYPLAN_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvDwbkDto" name="com.cfcc.itfe.persistence.pk.TbsTvDwbkPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvDwbkDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvDwbkDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvDwbkPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvDwbkInfo"/>
+	  <property name="tableName" value="TBS_TV_DWBK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvFreeDto" name="com.cfcc.itfe.persistence.pk.TbsTvFreePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvFreeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvFreeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvFreePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvFreeInfo"/>
+	  <property name="tableName" value="TBS_TV_FREE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvGrantpayplanMainDto" name="com.cfcc.itfe.persistence.pk.TbsTvGrantpayplanMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvGrantpayplanMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvGrantpayplanMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvGrantpayplanMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvGrantpayplanMainInfo"/>
+	  <property name="tableName" value="TBS_TV_GRANTPAYPLAN_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvGrantpayplanSubDto" name="com.cfcc.itfe.persistence.pk.TbsTvGrantpayplanSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvGrantpayplanSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvGrantpayplanSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvGrantpayplanSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvGrantpayplanSubInfo"/>
+	  <property name="tableName" value="TBS_TV_GRANTPAYPLAN_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvInCorrhandbookDto" name="com.cfcc.itfe.persistence.pk.TbsTvInCorrhandbookPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvInCorrhandbookDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvInCorrhandbookDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvInCorrhandbookPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvInCorrhandbookInfo"/>
+	  <property name="tableName" value="TBS_TV_IN_CORRHANDBOOK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvPayoutDto" name="com.cfcc.itfe.persistence.pk.TbsTvPayoutPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvPayoutDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvPayoutDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvPayoutPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvPayoutInfo"/>
+	  <property name="tableName" value="TBS_TV_PAYOUT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TbsTvPbcpayDto" name="com.cfcc.itfe.persistence.pk.TbsTvPbcpayPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TbsTvPbcpayDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TbsTvPbcpayDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TbsTvPbcpayPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TbsTvPbcpayInfo"/>
+	  <property name="tableName" value="TBS_TV_PBCPAY"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdBankDto" name="com.cfcc.itfe.persistence.pk.TdBankPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdBankDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdBankDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdBankPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdBankInfo"/>
+	  <property name="tableName" value="TD_BANK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdBookacctMainDto" name="com.cfcc.itfe.persistence.pk.TdBookacctMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdBookacctMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdBookacctMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdBookacctMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdBookacctMainInfo"/>
+	  <property name="tableName" value="TD_BOOKACCT_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdBooksbtDto" name="com.cfcc.itfe.persistence.pk.TdBooksbtPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdBooksbtDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdBooksbtDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdBooksbtPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdBooksbtInfo"/>
+	  <property name="tableName" value="TD_BOOKSBT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdCorpDto" name="com.cfcc.itfe.persistence.pk.TdCorpPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdCorpDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdCorpDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdCorpPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdCorpInfo"/>
+	  <property name="tableName" value="TD_CORP"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdCorpacctDto" name="com.cfcc.itfe.persistence.pk.TdCorpacctPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdCorpacctDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdCorpacctDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdCorpacctPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdCorpacctInfo"/>
+	  <property name="tableName" value="TD_CORPACCT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdDownloadReportCheckDto" name="com.cfcc.itfe.persistence.pk.TdDownloadReportCheckPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdDownloadReportCheckDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdDownloadReportCheckDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdDownloadReportCheckPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdDownloadReportCheckInfo"/>
+	  <property name="tableName" value="TD_DOWNLOAD_REPORT_CHECK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdEnumtypeDto" name="com.cfcc.itfe.persistence.pk.TdEnumtypePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdEnumtypeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdEnumtypeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdEnumtypePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdEnumtypeInfo"/>
+	  <property name="tableName" value="TD_ENUMTYPE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdEnumvalueDto" name="com.cfcc.itfe.persistence.pk.TdEnumvaluePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdEnumvalueDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdEnumvalueDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdEnumvaluePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdEnumvalueInfo"/>
+	  <property name="tableName" value="TD_ENUMVALUE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdTaxorgMergerDto" name="com.cfcc.itfe.persistence.pk.TdTaxorgMergerPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdTaxorgMergerDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdTaxorgMergerDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdTaxorgMergerPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdTaxorgMergerInfo"/>
+	  <property name="tableName" value="TD_TAXORG_MERGER"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TdTaxorgParamDto" name="com.cfcc.itfe.persistence.pk.TdTaxorgParamPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TdTaxorgParamDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TdTaxorgParamDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TdTaxorgParamPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TdTaxorgParamInfo"/>
+	  <property name="tableName" value="TD_TAXORG_PARAM"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfDirectpayAdjustmainDto" name="com.cfcc.itfe.persistence.pk.TfDirectpayAdjustmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfDirectpayAdjustmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfDirectpayAdjustmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfDirectpayAdjustmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfDirectpayAdjustmainInfo"/>
+	  <property name="tableName" value="TF_DIRECTPAY_ADJUSTMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfDirectpayAdjustsubDto" name="com.cfcc.itfe.persistence.pk.TfDirectpayAdjustsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfDirectpayAdjustsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfDirectpayAdjustsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfDirectpayAdjustsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfDirectpayAdjustsubInfo"/>
+	  <property name="tableName" value="TF_DIRECTPAY_ADJUSTSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfDirectpaymsgmainDto" name="com.cfcc.itfe.persistence.pk.TfDirectpaymsgmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfDirectpaymsgmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfDirectpaymsgmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfDirectpaymsgmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfDirectpaymsgmainInfo"/>
+	  <property name="tableName" value="TF_DIRECTPAYMSGMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfDirectpaymsgsubDto" name="com.cfcc.itfe.persistence.pk.TfDirectpaymsgsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfDirectpaymsgsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfDirectpaymsgsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfDirectpaymsgsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfDirectpaymsgsubInfo"/>
+	  <property name="tableName" value="TF_DIRECTPAYMSGSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfGrantpayAdjustmainDto" name="com.cfcc.itfe.persistence.pk.TfGrantpayAdjustmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfGrantpayAdjustmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfGrantpayAdjustmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfGrantpayAdjustmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfGrantpayAdjustmainInfo"/>
+	  <property name="tableName" value="TF_GRANTPAY_ADJUSTMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfGrantpayAdjustsubDto" name="com.cfcc.itfe.persistence.pk.TfGrantpayAdjustsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfGrantpayAdjustsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfGrantpayAdjustsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfGrantpayAdjustsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfGrantpayAdjustsubInfo"/>
+	  <property name="tableName" value="TF_GRANTPAY_ADJUSTSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfInterestDetailDto" name="com.cfcc.itfe.persistence.pk.TfInterestDetailPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfInterestDetailDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfInterestDetailDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfInterestDetailPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfInterestDetailInfo"/>
+	  <property name="tableName" value="TF_INTEREST_DETAIL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfInterestParamDto" name="com.cfcc.itfe.persistence.pk.TfInterestParamPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfInterestParamDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfInterestParamDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfInterestParamPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfInterestParamInfo"/>
+	  <property name="tableName" value="TF_INTEREST_PARAM"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfInterestrateMsgDto" name="com.cfcc.itfe.persistence.pk.TfInterestrateMsgPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfInterestrateMsgDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfInterestrateMsgDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfInterestrateMsgPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfInterestrateMsgInfo"/>
+	  <property name="tableName" value="TF_INTERESTRATE_MSG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfPaybankRefundmainDto" name="com.cfcc.itfe.persistence.pk.TfPaybankRefundmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfPaybankRefundmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfPaybankRefundmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfPaybankRefundmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfPaybankRefundmainInfo"/>
+	  <property name="tableName" value="TF_PAYBANK_REFUNDMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfPaybankRefundsubDto" name="com.cfcc.itfe.persistence.pk.TfPaybankRefundsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfPaybankRefundsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfPaybankRefundsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfPaybankRefundsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfPaybankRefundsubInfo"/>
+	  <property name="tableName" value="TF_PAYBANK_REFUNDSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfPaymentDetailsmainDto" name="com.cfcc.itfe.persistence.pk.TfPaymentDetailsmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfPaymentDetailsmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfPaymentDetailsmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfPaymentDetailsmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfPaymentDetailsmainInfo"/>
+	  <property name="tableName" value="TF_PAYMENT_DETAILSMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfPaymentDetailssubDto" name="com.cfcc.itfe.persistence.pk.TfPaymentDetailssubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfPaymentDetailssubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfPaymentDetailssubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfPaymentDetailssubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfPaymentDetailssubInfo"/>
+	  <property name="tableName" value="TF_PAYMENT_DETAILSSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReconcilePayinfoMainDto" name="com.cfcc.itfe.persistence.pk.TfReconcilePayinfoMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReconcilePayinfoMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReconcilePayinfoMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReconcilePayinfoMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReconcilePayinfoMainInfo"/>
+	  <property name="tableName" value="TF_RECONCILE_PAYINFO_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReconcilePayinfoSubDto" name="com.cfcc.itfe.persistence.pk.TfReconcilePayinfoSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReconcilePayinfoSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReconcilePayinfoSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReconcilePayinfoSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReconcilePayinfoSubInfo"/>
+	  <property name="tableName" value="TF_RECONCILE_PAYINFO_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReconcilePayquotaMainDto" name="com.cfcc.itfe.persistence.pk.TfReconcilePayquotaMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReconcilePayquotaMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReconcilePayquotaMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReconcilePayquotaMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReconcilePayquotaMainInfo"/>
+	  <property name="tableName" value="TF_RECONCILE_PAYQUOTA_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReconcilePayquotaSubDto" name="com.cfcc.itfe.persistence.pk.TfReconcilePayquotaSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReconcilePayquotaSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReconcilePayquotaSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReconcilePayquotaSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReconcilePayquotaSubInfo"/>
+	  <property name="tableName" value="TF_RECONCILE_PAYQUOTA_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReconcileRealdialMainDto" name="com.cfcc.itfe.persistence.pk.TfReconcileRealdialMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReconcileRealdialMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReconcileRealdialMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReconcileRealdialMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReconcileRealdialMainInfo"/>
+	  <property name="tableName" value="TF_RECONCILE_REALDIAL_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReconcileRealdialSubDto" name="com.cfcc.itfe.persistence.pk.TfReconcileRealdialSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReconcileRealdialSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReconcileRealdialSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReconcileRealdialSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReconcileRealdialSubInfo"/>
+	  <property name="tableName" value="TF_RECONCILE_REALDIAL_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReconcileRefundMainDto" name="com.cfcc.itfe.persistence.pk.TfReconcileRefundMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReconcileRefundMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReconcileRefundMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReconcileRefundMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReconcileRefundMainInfo"/>
+	  <property name="tableName" value="TF_RECONCILE_REFUND_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReconcileRefundSubDto" name="com.cfcc.itfe.persistence.pk.TfReconcileRefundSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReconcileRefundSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReconcileRefundSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReconcileRefundSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReconcileRefundSubInfo"/>
+	  <property name="tableName" value="TF_RECONCILE_REFUND_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReportDefrayMainDto" name="com.cfcc.itfe.persistence.pk.TfReportDefrayMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReportDefrayMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReportDefrayMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReportDefrayMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReportDefrayMainInfo"/>
+	  <property name="tableName" value="TF_REPORT_DEFRAY_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReportDefraySubDto" name="com.cfcc.itfe.persistence.pk.TfReportDefraySubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReportDefraySubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReportDefraySubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReportDefraySubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReportDefraySubInfo"/>
+	  <property name="tableName" value="TF_REPORT_DEFRAY_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReportDepositMainDto" name="com.cfcc.itfe.persistence.pk.TfReportDepositMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReportDepositMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReportDepositMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReportDepositMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReportDepositMainInfo"/>
+	  <property name="tableName" value="TF_REPORT_DEPOSIT_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReportDepositSubDto" name="com.cfcc.itfe.persistence.pk.TfReportDepositSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReportDepositSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReportDepositSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReportDepositSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReportDepositSubInfo"/>
+	  <property name="tableName" value="TF_REPORT_DEPOSIT_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReportIncomeMainDto" name="com.cfcc.itfe.persistence.pk.TfReportIncomeMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReportIncomeMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReportIncomeMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReportIncomeMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReportIncomeMainInfo"/>
+	  <property name="tableName" value="TF_REPORT_INCOME_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfReportIncomeSubDto" name="com.cfcc.itfe.persistence.pk.TfReportIncomeSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfReportIncomeSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfReportIncomeSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfReportIncomeSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfReportIncomeSubInfo"/>
+	  <property name="tableName" value="TF_REPORT_INCOME_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfUnitrecordmainDto" name="com.cfcc.itfe.persistence.pk.TfUnitrecordmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfUnitrecordmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfUnitrecordmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfUnitrecordmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfUnitrecordmainInfo"/>
+	  <property name="tableName" value="TF_UNITRECORDMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfUnitrecordsubDto" name="com.cfcc.itfe.persistence.pk.TfUnitrecordsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfUnitrecordsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfUnitrecordsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfUnitrecordsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfUnitrecordsubInfo"/>
+	  <property name="tableName" value="TF_UNITRECORDSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TfVoucherSplitDto" name="com.cfcc.itfe.persistence.pk.TfVoucherSplitPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TfVoucherSplitDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TfVoucherSplitDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TfVoucherSplitPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TfVoucherSplitInfo"/>
+	  <property name="tableName" value="TF_VOUCHER_SPLIT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TnConpaycheckbillDto" name="com.cfcc.itfe.persistence.pk.TnConpaycheckbillPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TnConpaycheckbillDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TnConpaycheckbillDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TnConpaycheckbillPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TnConpaycheckbillInfo"/>
+	  <property name="tableName" value="TN_CONPAYCHECKBILL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TpShareDivideDto" name="com.cfcc.itfe.persistence.pk.TpShareDividePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TpShareDivideDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TpShareDivideDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TpShareDividePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TpShareDivideInfo"/>
+	  <property name="tableName" value="TP_SHARE_DIVIDE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TrIncomedayrptDto" name="com.cfcc.itfe.persistence.pk.TrIncomedayrptPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TrIncomedayrptDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TrIncomedayrptDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TrIncomedayrptPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TrIncomedayrptInfo"/>
+	  <property name="tableName" value="TR_INCOMEDAYRPT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TrStockdayrptDto" name="com.cfcc.itfe.persistence.pk.TrStockdayrptPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TrStockdayrptDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TrStockdayrptDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TrStockdayrptPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TrStockdayrptInfo"/>
+	  <property name="tableName" value="TR_STOCKDAYRPT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TrTaxorgDebtReportDto" name="com.cfcc.itfe.persistence.pk.TrTaxorgDebtReportPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TrTaxorgDebtReportDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TrTaxorgDebtReportDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TrTaxorgDebtReportPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TrTaxorgDebtReportInfo"/>
+	  <property name="tableName" value="TR_TAXORG_DEBT_REPORT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TrTaxorgIncomedayrptDto" name="com.cfcc.itfe.persistence.pk.TrTaxorgIncomedayrptPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TrTaxorgIncomedayrptDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TrTaxorgIncomedayrptDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TrTaxorgIncomedayrptPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TrTaxorgIncomedayrptInfo"/>
+	  <property name="tableName" value="TR_TAXORG_INCOMEDAYRPT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TrTaxorgPayoutReportDto" name="com.cfcc.itfe.persistence.pk.TrTaxorgPayoutReportPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TrTaxorgPayoutReportDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TrTaxorgPayoutReportDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TrTaxorgPayoutReportPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TrTaxorgPayoutReportInfo"/>
+	  <property name="tableName" value="TR_TAXORG_PAYOUT_REPORT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TrTaxorgStockdayrptDto" name="com.cfcc.itfe.persistence.pk.TrTaxorgStockdayrptPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TrTaxorgStockdayrptDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TrTaxorgStockdayrptDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TrTaxorgStockdayrptPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TrTaxorgStockdayrptInfo"/>
+	  <property name="tableName" value="TR_TAXORG_STOCKDAYRPT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsAssitflagtransDto" name="com.cfcc.itfe.persistence.pk.TsAssitflagtransPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsAssitflagtransDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsAssitflagtransDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsAssitflagtransPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsAssitflagtransInfo"/>
+	  <property name="tableName" value="TS_ASSITFLAGTRANS"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsBankandpayDto" name="com.cfcc.itfe.persistence.pk.TsBankandpayPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsBankandpayDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsBankandpayDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsBankandpayPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsBankandpayInfo"/>
+	  <property name="tableName" value="TS_BANKANDPAY"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsBankcodeDto" name="com.cfcc.itfe.persistence.pk.TsBankcodePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsBankcodeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsBankcodeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsBankcodePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsBankcodeInfo"/>
+	  <property name="tableName" value="TS_BANKCODE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsBankorgcodeDto" name="com.cfcc.itfe.persistence.pk.TsBankorgcodePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsBankorgcodeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsBankorgcodeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsBankorgcodePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsBankorgcodeInfo"/>
+	  <property name="tableName" value="TS_BANKORGCODE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsBillautosendDto" name="com.cfcc.itfe.persistence.pk.TsBillautosendPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsBillautosendDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsBillautosendDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsBillautosendPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsBillautosendInfo"/>
+	  <property name="tableName" value="TS_BILLAUTOSEND"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsBudgetsubjectDto" name="com.cfcc.itfe.persistence.pk.TsBudgetsubjectPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsBudgetsubjectDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsBudgetsubjectDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsBudgetsubjectPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsBudgetsubjectInfo"/>
+	  <property name="tableName" value="TS_BUDGETSUBJECT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsBudgetsubjectAdjustDto" name="com.cfcc.itfe.persistence.pk.TsBudgetsubjectAdjustPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsBudgetsubjectAdjustDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsBudgetsubjectAdjustDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsBudgetsubjectAdjustPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsBudgetsubjectAdjustInfo"/>
+	  <property name="tableName" value="TS_BUDGETSUBJECT_ADJUST"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsBudgetsubjectforqueryDto" name="com.cfcc.itfe.persistence.pk.TsBudgetsubjectforqueryPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsBudgetsubjectforqueryDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsBudgetsubjectforqueryDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsBudgetsubjectforqueryPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsBudgetsubjectforqueryInfo"/>
+	  <property name="tableName" value="TS_BUDGETSUBJECTFORQUERY"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsCheckbalanceDto" name="com.cfcc.itfe.persistence.pk.TsCheckbalancePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsCheckbalanceDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsCheckbalanceDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsCheckbalancePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsCheckbalanceInfo"/>
+	  <property name="tableName" value="TS_CHECKBALANCE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsCheckdeloptlogDto" name="com.cfcc.itfe.persistence.pk.TsCheckdeloptlogPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsCheckdeloptlogDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsCheckdeloptlogDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsCheckdeloptlogPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsCheckdeloptlogInfo"/>
+	  <property name="tableName" value="TS_CHECKDELOPTLOG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsCheckfailreasonDto" name="com.cfcc.itfe.persistence.pk.TsCheckfailreasonPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsCheckfailreasonDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsCheckfailreasonDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsCheckfailreasonPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsCheckfailreasonInfo"/>
+	  <property name="tableName" value="TS_CHECKFAILREASON"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsCoderegtypeDto" name="com.cfcc.itfe.persistence.pk.TsCoderegtypePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsCoderegtypeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsCoderegtypeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsCoderegtypePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsCoderegtypeInfo"/>
+	  <property name="tableName" value="TS_CODEREGTYPE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConnectionDto" name="com.cfcc.itfe.persistence.pk.TsConnectionPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConnectionDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConnectionDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConnectionPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConnectionInfo"/>
+	  <property name="tableName" value="TS_CONNECTION"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConvertassitsignDto" name="com.cfcc.itfe.persistence.pk.TsConvertassitsignPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConvertassitsignDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConvertassitsignDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConvertassitsignPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConvertassitsignInfo"/>
+	  <property name="tableName" value="TS_CONVERTASSITSIGN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConvertaxDto" name="com.cfcc.itfe.persistence.pk.TsConvertaxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConvertaxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConvertaxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConvertaxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConvertaxInfo"/>
+	  <property name="tableName" value="TS_CONVERTAX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConvertbanknameDto" name="com.cfcc.itfe.persistence.pk.TsConvertbanknamePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConvertbanknameDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConvertbanknameDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConvertbanknamePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConvertbanknameInfo"/>
+	  <property name="tableName" value="TS_CONVERTBANKNAME"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConvertbanktypeDto" name="com.cfcc.itfe.persistence.pk.TsConvertbanktypePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConvertbanktypeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConvertbanktypeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConvertbanktypePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConvertbanktypeInfo"/>
+	  <property name="tableName" value="TS_CONVERTBANKTYPE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConvertfinorgDto" name="com.cfcc.itfe.persistence.pk.TsConvertfinorgPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConvertfinorgDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConvertfinorgDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConvertfinorgPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConvertfinorgInfo"/>
+	  <property name="tableName" value="TS_CONVERTFINORG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConvertreaDto" name="com.cfcc.itfe.persistence.pk.TsConvertreaPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConvertreaDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConvertreaDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConvertreaPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConvertreaInfo"/>
+	  <property name="tableName" value="TS_CONVERTREA"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConverttaxorgDto" name="com.cfcc.itfe.persistence.pk.TsConverttaxorgPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConverttaxorgDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConverttaxorgDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConverttaxorgPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConverttaxorgInfo"/>
+	  <property name="tableName" value="TS_CONVERTTAXORG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsConverttobankDto" name="com.cfcc.itfe.persistence.pk.TsConverttobankPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsConverttobankDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsConverttobankDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsConverttobankPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsConverttobankInfo"/>
+	  <property name="tableName" value="TS_CONVERTTOBANK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsCorrreasonDto" name="com.cfcc.itfe.persistence.pk.TsCorrreasonPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsCorrreasonDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsCorrreasonDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsCorrreasonPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsCorrreasonInfo"/>
+	  <property name="tableName" value="TS_CORRREASON"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsDrawbackreasonDto" name="com.cfcc.itfe.persistence.pk.TsDrawbackreasonPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsDrawbackreasonDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsDrawbackreasonDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsDrawbackreasonPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsDrawbackreasonInfo"/>
+	  <property name="tableName" value="TS_DRAWBACKREASON"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsDwbkReasonDto" name="com.cfcc.itfe.persistence.pk.TsDwbkReasonPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsDwbkReasonDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsDwbkReasonDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsDwbkReasonPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsDwbkReasonInfo"/>
+	  <property name="tableName" value="TS_DWBK_REASON"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsFinmovepaysubDto" name="com.cfcc.itfe.persistence.pk.TsFinmovepaysubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsFinmovepaysubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsFinmovepaysubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsFinmovepaysubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsFinmovepaysubInfo"/>
+	  <property name="tableName" value="TS_FINMOVEPAYSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsGenbankandreckbankDto" name="com.cfcc.itfe.persistence.pk.TsGenbankandreckbankPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsGenbankandreckbankDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsGenbankandreckbankDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsGenbankandreckbankPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsGenbankandreckbankInfo"/>
+	  <property name="tableName" value="TS_GENBANKANDRECKBANK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsInfoconnorgDto" name="com.cfcc.itfe.persistence.pk.TsInfoconnorgPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsInfoconnorgDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsInfoconnorgDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsInfoconnorgPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsInfoconnorgInfo"/>
+	  <property name="tableName" value="TS_INFOCONNORG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsInfoconnorgaccDto" name="com.cfcc.itfe.persistence.pk.TsInfoconnorgaccPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsInfoconnorgaccDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsInfoconnorgaccDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsInfoconnorgaccPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsInfoconnorgaccInfo"/>
+	  <property name="tableName" value="TS_INFOCONNORGACC"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsInfotaxorgDto" name="com.cfcc.itfe.persistence.pk.TsInfotaxorgPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsInfotaxorgDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsInfotaxorgDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsInfotaxorgPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsInfotaxorgInfo"/>
+	  <property name="tableName" value="TS_INFOTAXORG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsIsnopaperDto" name="com.cfcc.itfe.persistence.pk.TsIsnopaperPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsIsnopaperDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsIsnopaperDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsIsnopaperPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsIsnopaperInfo"/>
+	  <property name="tableName" value="TS_ISNOPAPER"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsMankeyDto" name="com.cfcc.itfe.persistence.pk.TsMankeyPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsMankeyDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsMankeyDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsMankeyPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsMankeyInfo"/>
+	  <property name="tableName" value="TS_MANKEY"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsMankeymodeDto" name="com.cfcc.itfe.persistence.pk.TsMankeymodePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsMankeymodeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsMankeymodeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsMankeymodePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsMankeymodeInfo"/>
+	  <property name="tableName" value="TS_MANKEYMODE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsOperationformDto" name="com.cfcc.itfe.persistence.pk.TsOperationformPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsOperationformDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsOperationformDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsOperationformPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsOperationformInfo"/>
+	  <property name="tableName" value="TS_OPERATIONFORM"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsOperationmodelDto" name="com.cfcc.itfe.persistence.pk.TsOperationmodelPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsOperationmodelDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsOperationmodelDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsOperationmodelPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsOperationmodelInfo"/>
+	  <property name="tableName" value="TS_OPERATIONMODEL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsOperationplaceDto" name="com.cfcc.itfe.persistence.pk.TsOperationplacePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsOperationplaceDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsOperationplaceDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsOperationplacePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsOperationplaceInfo"/>
+	  <property name="tableName" value="TS_OPERATIONPLACE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsOperationtypeDto" name="com.cfcc.itfe.persistence.pk.TsOperationtypePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsOperationtypeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsOperationtypeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsOperationtypePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsOperationtypeInfo"/>
+	  <property name="tableName" value="TS_OPERATIONTYPE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsOrganDto" name="com.cfcc.itfe.persistence.pk.TsOrganPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsOrganDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsOrganDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsOrganPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsOrganInfo"/>
+	  <property name="tableName" value="TS_ORGAN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsPayacctinfoDto" name="com.cfcc.itfe.persistence.pk.TsPayacctinfoPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsPayacctinfoDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsPayacctinfoDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsPayacctinfoPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsPayacctinfoInfo"/>
+	  <property name="tableName" value="TS_PAYACCTINFO"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsPaybankDto" name="com.cfcc.itfe.persistence.pk.TsPaybankPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsPaybankDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsPaybankDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsPaybankPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsPaybankInfo"/>
+	  <property name="tableName" value="TS_PAYBANK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsStamppositionDto" name="com.cfcc.itfe.persistence.pk.TsStamppositionPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsStamppositionDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsStamppositionDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsStamppositionPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsStamppositionInfo"/>
+	  <property name="tableName" value="TS_STAMPPOSITION"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsStamptypeDto" name="com.cfcc.itfe.persistence.pk.TsStamptypePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsStamptypeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsStamptypeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsStamptypePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsStamptypeInfo"/>
+	  <property name="tableName" value="TS_STAMPTYPE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsSysbatchDto" name="com.cfcc.itfe.persistence.pk.TsSysbatchPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsSysbatchDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsSysbatchDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsSysbatchPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsSysbatchInfo"/>
+	  <property name="tableName" value="TS_SYSBATCH"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsSysfuncDto" name="com.cfcc.itfe.persistence.pk.TsSysfuncPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsSysfuncDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsSysfuncDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsSysfuncPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsSysfuncInfo"/>
+	  <property name="tableName" value="TS_SYSFUNC"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsSyslogDto" name="com.cfcc.itfe.persistence.pk.TsSyslogPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsSyslogDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsSyslogDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsSyslogPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsSyslogInfo"/>
+	  <property name="tableName" value="TS_SYSLOG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsSysparaDto" name="com.cfcc.itfe.persistence.pk.TsSysparaPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsSysparaDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsSysparaDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsSysparaPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsSysparaInfo"/>
+	  <property name="tableName" value="TS_SYSPARA"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsSystemDto" name="com.cfcc.itfe.persistence.pk.TsSystemPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsSystemDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsSystemDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsSystemPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsSystemInfo"/>
+	  <property name="tableName" value="TS_SYSTEM"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsTaxorgDto" name="com.cfcc.itfe.persistence.pk.TsTaxorgPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsTaxorgDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsTaxorgDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsTaxorgPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsTaxorgInfo"/>
+	  <property name="tableName" value="TS_TAXORG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsTaxpayacctDto" name="com.cfcc.itfe.persistence.pk.TsTaxpayacctPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsTaxpayacctDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsTaxpayacctDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsTaxpayacctPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsTaxpayacctInfo"/>
+	  <property name="tableName" value="TS_TAXPAYACCT"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsTreasuryDto" name="com.cfcc.itfe.persistence.pk.TsTreasuryPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsTreasuryDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsTreasuryDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsTreasuryPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsTreasuryInfo"/>
+	  <property name="tableName" value="TS_TREASURY"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsUsersDto" name="com.cfcc.itfe.persistence.pk.TsUsersPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsUsersDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsUsersDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsUsersPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsUsersInfo"/>
+	  <property name="tableName" value="TS_USERS"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsUsersfuncDto" name="com.cfcc.itfe.persistence.pk.TsUsersfuncPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsUsersfuncDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsUsersfuncDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsUsersfuncPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsUsersfuncInfo"/>
+	  <property name="tableName" value="TS_USERSFUNC"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsUserstampDto" name="com.cfcc.itfe.persistence.pk.TsUserstampPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsUserstampDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsUserstampDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsUserstampPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsUserstampInfo"/>
+	  <property name="tableName" value="TS_USERSTAMP"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsUserstampfunctionDto" name="com.cfcc.itfe.persistence.pk.TsUserstampfunctionPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsUserstampfunctionDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsUserstampfunctionDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsUserstampfunctionPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsUserstampfunctionInfo"/>
+	  <property name="tableName" value="TS_USERSTAMPFUNCTION"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TsVouchercommitautoDto" name="com.cfcc.itfe.persistence.pk.TsVouchercommitautoPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TsVouchercommitautoDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TsVouchercommitautoDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TsVouchercommitautoPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TsVouchercommitautoInfo"/>
+	  <property name="tableName" value="TS_VOUCHERCOMMITAUTO"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvAmtControlInfoDto" name="com.cfcc.itfe.persistence.pk.TvAmtControlInfoPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvAmtControlInfoDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvAmtControlInfoDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvAmtControlInfoPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvAmtControlInfoInfo"/>
+	  <property name="tableName" value="TV_AMT_CONTROL_INFO"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvBatchpayDto" name="com.cfcc.itfe.persistence.pk.TvBatchpayPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvBatchpayDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvBatchpayDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvBatchpayPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvBatchpayInfo"/>
+	  <property name="tableName" value="TV_BATCHPAY"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDirectpayfilemainDto" name="com.cfcc.itfe.persistence.pk.TvDirectpayfilemainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDirectpayfilemainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDirectpayfilemainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDirectpayfilemainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDirectpayfilemainInfo"/>
+	  <property name="tableName" value="TV_DIRECTPAYFILEMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDirectpayfilemainTmpDto" name="com.cfcc.itfe.persistence.pk.TvDirectpayfilemainTmpPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDirectpayfilemainTmpDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDirectpayfilemainTmpDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDirectpayfilemainTmpPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDirectpayfilemainTmpInfo"/>
+	  <property name="tableName" value="TV_DIRECTPAYFILEMAIN_TMP"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDirectpayfilesubDto" name="com.cfcc.itfe.persistence.pk.TvDirectpayfilesubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDirectpayfilesubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDirectpayfilesubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDirectpayfilesubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDirectpayfilesubInfo"/>
+	  <property name="tableName" value="TV_DIRECTPAYFILESUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDirectpayfilesubTmpDto" name="com.cfcc.itfe.persistence.pk.TvDirectpayfilesubTmpPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDirectpayfilesubTmpDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDirectpayfilesubTmpDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDirectpayfilesubTmpPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDirectpayfilesubTmpInfo"/>
+	  <property name="tableName" value="TV_DIRECTPAYFILESUB_TMP"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDirectpaymsgmainDto" name="com.cfcc.itfe.persistence.pk.TvDirectpaymsgmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDirectpaymsgmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDirectpaymsgmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDirectpaymsgmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDirectpaymsgmainInfo"/>
+	  <property name="tableName" value="TV_DIRECTPAYMSGMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDirectpaymsgmainSxDto" name="com.cfcc.itfe.persistence.pk.TvDirectpaymsgmainSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDirectpaymsgmainSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDirectpaymsgmainSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDirectpaymsgmainSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDirectpaymsgmainSxInfo"/>
+	  <property name="tableName" value="TV_DIRECTPAYMSGMAIN_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDirectpaymsgsubDto" name="com.cfcc.itfe.persistence.pk.TvDirectpaymsgsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDirectpaymsgsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDirectpaymsgsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDirectpaymsgsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDirectpaymsgsubInfo"/>
+	  <property name="tableName" value="TV_DIRECTPAYMSGSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDirectpaymsgsubSxDto" name="com.cfcc.itfe.persistence.pk.TvDirectpaymsgsubSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDirectpaymsgsubSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDirectpaymsgsubSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDirectpaymsgsubSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDirectpaymsgsubSxInfo"/>
+	  <property name="tableName" value="TV_DIRECTPAYMSGSUB_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDrawbackdataDto" name="com.cfcc.itfe.persistence.pk.TvDrawbackdataPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDrawbackdataDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDrawbackdataDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDrawbackdataPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDrawbackdataInfo"/>
+	  <property name="tableName" value="TV_DRAWBACKDATA"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDrawbackreqDto" name="com.cfcc.itfe.persistence.pk.TvDrawbackreqPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDrawbackreqDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDrawbackreqDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDrawbackreqPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDrawbackreqInfo"/>
+	  <property name="tableName" value="TV_DRAWBACKREQ"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvDwbkDto" name="com.cfcc.itfe.persistence.pk.TvDwbkPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvDwbkDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvDwbkDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvDwbkPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvDwbkInfo"/>
+	  <property name="tableName" value="TV_DWBK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvExceptionmanDto" name="com.cfcc.itfe.persistence.pk.TvExceptionmanPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvExceptionmanDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvExceptionmanDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvExceptionmanPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvExceptionmanInfo"/>
+	  <property name="tableName" value="TV_EXCEPTIONMAN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvFilepackagerefDto" name="com.cfcc.itfe.persistence.pk.TvFilepackagerefPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvFilepackagerefDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvFilepackagerefDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvFilepackagerefPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvFilepackagerefInfo"/>
+	  <property name="tableName" value="TV_FILEPACKAGEREF"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvFilesDto" name="com.cfcc.itfe.persistence.pk.TvFilesPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvFilesDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvFilesDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvFilesPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvFilesInfo"/>
+	  <property name="tableName" value="TV_FILES"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvFinIncomeDetailDto" name="com.cfcc.itfe.persistence.pk.TvFinIncomeDetailPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvFinIncomeDetailDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvFinIncomeDetailDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvFinIncomeDetailPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvFinIncomeDetailInfo"/>
+	  <property name="tableName" value="TV_FIN_INCOME_DETAIL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvFinIncomeonlineDto" name="com.cfcc.itfe.persistence.pk.TvFinIncomeonlinePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvFinIncomeonlineDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvFinIncomeonlineDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvFinIncomeonlinePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvFinIncomeonlineInfo"/>
+	  <property name="tableName" value="TV_FIN_INCOMEONLINE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvFinIncomeonlineDivideDto" name="com.cfcc.itfe.persistence.pk.TvFinIncomeonlineDividePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvFinIncomeonlineDivideDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvFinIncomeonlineDivideDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvFinIncomeonlineDividePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvFinIncomeonlineDivideInfo"/>
+	  <property name="tableName" value="TV_FIN_INCOMEONLINE_DIVIDE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvFreeDto" name="com.cfcc.itfe.persistence.pk.TvFreePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvFreeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvFreeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvFreePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvFreeInfo"/>
+	  <property name="tableName" value="TV_FREE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvGrantpayfilemainDto" name="com.cfcc.itfe.persistence.pk.TvGrantpayfilemainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvGrantpayfilemainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvGrantpayfilemainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvGrantpayfilemainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvGrantpayfilemainInfo"/>
+	  <property name="tableName" value="TV_GRANTPAYFILEMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvGrantpayfilemainTmpDto" name="com.cfcc.itfe.persistence.pk.TvGrantpayfilemainTmpPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvGrantpayfilemainTmpDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvGrantpayfilemainTmpDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvGrantpayfilemainTmpPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvGrantpayfilemainTmpInfo"/>
+	  <property name="tableName" value="TV_GRANTPAYFILEMAIN_TMP"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvGrantpayfilesubDto" name="com.cfcc.itfe.persistence.pk.TvGrantpayfilesubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvGrantpayfilesubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvGrantpayfilesubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvGrantpayfilesubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvGrantpayfilesubInfo"/>
+	  <property name="tableName" value="TV_GRANTPAYFILESUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvGrantpayfilesubTmpDto" name="com.cfcc.itfe.persistence.pk.TvGrantpayfilesubTmpPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvGrantpayfilesubTmpDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvGrantpayfilesubTmpDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvGrantpayfilesubTmpPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvGrantpayfilesubTmpInfo"/>
+	  <property name="tableName" value="TV_GRANTPAYFILESUB_TMP"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvGrantpaymsgmainDto" name="com.cfcc.itfe.persistence.pk.TvGrantpaymsgmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvGrantpaymsgmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvGrantpaymsgmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvGrantpaymsgmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvGrantpaymsgmainInfo"/>
+	  <property name="tableName" value="TV_GRANTPAYMSGMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvGrantpaymsgmainSxDto" name="com.cfcc.itfe.persistence.pk.TvGrantpaymsgmainSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvGrantpaymsgmainSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvGrantpaymsgmainSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvGrantpaymsgmainSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvGrantpaymsgmainSxInfo"/>
+	  <property name="tableName" value="TV_GRANTPAYMSGMAIN_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvGrantpaymsgsubDto" name="com.cfcc.itfe.persistence.pk.TvGrantpaymsgsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvGrantpaymsgsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvGrantpaymsgsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvGrantpaymsgsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvGrantpaymsgsubInfo"/>
+	  <property name="tableName" value="TV_GRANTPAYMSGSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvGrantpaymsgsubSxDto" name="com.cfcc.itfe.persistence.pk.TvGrantpaymsgsubSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvGrantpaymsgsubSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvGrantpaymsgsubSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvGrantpaymsgsubSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvGrantpaymsgsubSxInfo"/>
+	  <property name="tableName" value="TV_GRANTPAYMSGSUB_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvInCorrhandbookDto" name="com.cfcc.itfe.persistence.pk.TvInCorrhandbookPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvInCorrhandbookDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvInCorrhandbookDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvInCorrhandbookPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvInCorrhandbookInfo"/>
+	  <property name="tableName" value="TV_IN_CORRHANDBOOK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvIncomeDetailReportCheckDto" name="com.cfcc.itfe.persistence.pk.TvIncomeDetailReportCheckPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvIncomeDetailReportCheckDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvIncomeDetailReportCheckDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvIncomeDetailReportCheckPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvIncomeDetailReportCheckInfo"/>
+	  <property name="tableName" value="TV_INCOME_DETAIL_REPORT_CHECK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvIncomeonlineIncomeondetailBlendDto" name="com.cfcc.itfe.persistence.pk.TvIncomeonlineIncomeondetailBlendPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvIncomeonlineIncomeondetailBlendDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvIncomeonlineIncomeondetailBlendDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvIncomeonlineIncomeondetailBlendPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvIncomeonlineIncomeondetailBlendInfo"/>
+	  <property name="tableName" value="TV_INCOMEONLINE_INCOMEONDETAIL_BLEND"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvInfileDto" name="com.cfcc.itfe.persistence.pk.TvInfilePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvInfileDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvInfileDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvInfilePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvInfileInfo"/>
+	  <property name="tableName" value="TV_INFILE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvInfileDetailDto" name="com.cfcc.itfe.persistence.pk.TvInfileDetailPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvInfileDetailDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvInfileDetailDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvInfileDetailPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvInfileDetailInfo"/>
+	  <property name="tableName" value="TV_INFILE_DETAIL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvInfileTmpDto" name="com.cfcc.itfe.persistence.pk.TvInfileTmpPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvInfileTmpDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvInfileTmpDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvInfileTmpPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvInfileTmpInfo"/>
+	  <property name="tableName" value="TV_INFILE_TMP"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvInfileTmpCountryDto" name="com.cfcc.itfe.persistence.pk.TvInfileTmpCountryPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvInfileTmpCountryDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvInfileTmpCountryDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvInfileTmpCountryPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvInfileTmpCountryInfo"/>
+	  <property name="tableName" value="TV_INFILE_TMP_COUNTRY"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvInfileTmpPlaceDto" name="com.cfcc.itfe.persistence.pk.TvInfileTmpPlacePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvInfileTmpPlaceDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvInfileTmpPlaceDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvInfileTmpPlacePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvInfileTmpPlaceInfo"/>
+	  <property name="tableName" value="TV_INFILE_TMP_PLACE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvInfileTmpPlaceModelDto" name="com.cfcc.itfe.persistence.pk.TvInfileTmpPlaceModelPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvInfileTmpPlaceModelDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvInfileTmpPlaceModelDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvInfileTmpPlaceModelPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvInfileTmpPlaceModelInfo"/>
+	  <property name="tableName" value="TV_INFILE_TMP_PLACE_MODEL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvInfileTmpTipsDto" name="com.cfcc.itfe.persistence.pk.TvInfileTmpTipsPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvInfileTmpTipsDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvInfileTmpTipsDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvInfileTmpTipsPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvInfileTmpTipsInfo"/>
+	  <property name="tableName" value="TV_INFILE_TMP_TIPS"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvMqmessageDto" name="com.cfcc.itfe.persistence.pk.TvMqmessagePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvMqmessageDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvMqmessageDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvMqmessagePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvMqmessageInfo"/>
+	  <property name="tableName" value="TV_MQMESSAGE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutDetailListDto" name="com.cfcc.itfe.persistence.pk.TvPayoutDetailListPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutDetailListDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutDetailListDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutDetailListPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutDetailListInfo"/>
+	  <property name="tableName" value="TV_PAYOUT_DETAIL_LIST"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutDetailMainDto" name="com.cfcc.itfe.persistence.pk.TvPayoutDetailMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutDetailMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutDetailMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutDetailMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutDetailMainInfo"/>
+	  <property name="tableName" value="TV_PAYOUT_DETAIL_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutbackmsgMainDto" name="com.cfcc.itfe.persistence.pk.TvPayoutbackmsgMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutbackmsgMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutbackmsgMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutbackmsgMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutbackmsgMainInfo"/>
+	  <property name="tableName" value="TV_PAYOUTBACKMSG_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutbackmsgSubDto" name="com.cfcc.itfe.persistence.pk.TvPayoutbackmsgSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutbackmsgSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutbackmsgSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutbackmsgSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutbackmsgSubInfo"/>
+	  <property name="tableName" value="TV_PAYOUTBACKMSG_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutfinanceDto" name="com.cfcc.itfe.persistence.pk.TvPayoutfinancePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutfinanceDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutfinanceDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutfinancePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutfinanceInfo"/>
+	  <property name="tableName" value="TV_PAYOUTFINANCE"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutfinanceMainDto" name="com.cfcc.itfe.persistence.pk.TvPayoutfinanceMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutfinanceMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutfinanceMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutfinanceMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutfinanceMainInfo"/>
+	  <property name="tableName" value="TV_PAYOUTFINANCE_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutfinanceSubDto" name="com.cfcc.itfe.persistence.pk.TvPayoutfinanceSubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutfinanceSubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutfinanceSubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutfinanceSubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutfinanceSubInfo"/>
+	  <property name="tableName" value="TV_PAYOUTFINANCE_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainDto" name="com.cfcc.itfe.persistence.pk.TvPayoutmsgmainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutmsgmainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutmsgmainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutmsgmainInfo"/>
+	  <property name="tableName" value="TV_PAYOUTMSGMAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainSxDto" name="com.cfcc.itfe.persistence.pk.TvPayoutmsgmainSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutmsgmainSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutmsgmainSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutmsgmainSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutmsgmainSxInfo"/>
+	  <property name="tableName" value="TV_PAYOUTMSGMAIN_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutmsgsubDto" name="com.cfcc.itfe.persistence.pk.TvPayoutmsgsubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutmsgsubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutmsgsubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutmsgsubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutmsgsubInfo"/>
+	  <property name="tableName" value="TV_PAYOUTMSGSUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayoutmsgsubSxDto" name="com.cfcc.itfe.persistence.pk.TvPayoutmsgsubSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayoutmsgsubSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayoutmsgsubSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayoutmsgsubSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayoutmsgsubSxInfo"/>
+	  <property name="tableName" value="TV_PAYOUTMSGSUB_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayreckBankDto" name="com.cfcc.itfe.persistence.pk.TvPayreckBankPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayreckBankDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayreckBankDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayreckBankPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayreckBankInfo"/>
+	  <property name="tableName" value="TV_PAYRECK_BANK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayreckBankBackDto" name="com.cfcc.itfe.persistence.pk.TvPayreckBankBackPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayreckBankBackDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayreckBankBackDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayreckBankBackPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayreckBankBackInfo"/>
+	  <property name="tableName" value="TV_PAYRECK_BANK_BACK"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayreckBankBackListDto" name="com.cfcc.itfe.persistence.pk.TvPayreckBankBackListPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayreckBankBackListDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayreckBankBackListDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayreckBankBackListPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayreckBankBackListInfo"/>
+	  <property name="tableName" value="TV_PAYRECK_BANK_BACK_LIST"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayreckBankListDto" name="com.cfcc.itfe.persistence.pk.TvPayreckBankListPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayreckBankListDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayreckBankListDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayreckBankListPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayreckBankListInfo"/>
+	  <property name="tableName" value="TV_PAYRECK_BANK_LIST"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayreckbankSxDto" name="com.cfcc.itfe.persistence.pk.TvPayreckbankSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayreckbankSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayreckbankSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayreckbankSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayreckbankSxInfo"/>
+	  <property name="tableName" value="TV_PAYRECKBANK_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayreckbankbackSxDto" name="com.cfcc.itfe.persistence.pk.TvPayreckbankbackSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayreckbankbackSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayreckbankbackSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayreckbankbackSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayreckbankbackSxInfo"/>
+	  <property name="tableName" value="TV_PAYRECKBANKBACK_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayreckbankbacklistSxDto" name="com.cfcc.itfe.persistence.pk.TvPayreckbankbacklistSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayreckbankbacklistSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayreckbankbacklistSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayreckbankbacklistSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayreckbankbacklistSxInfo"/>
+	  <property name="tableName" value="TV_PAYRECKBANKBACKLIST_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPayreckbanklistSxDto" name="com.cfcc.itfe.persistence.pk.TvPayreckbanklistSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPayreckbanklistSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPayreckbanklistSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPayreckbanklistSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPayreckbanklistSxInfo"/>
+	  <property name="tableName" value="TV_PAYRECKBANKLIST_SX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPbcpayMainDto" name="com.cfcc.itfe.persistence.pk.TvPbcpayMainPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPbcpayMainDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPbcpayMainDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPbcpayMainPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPbcpayMainInfo"/>
+	  <property name="tableName" value="TV_PBCPAY_MAIN"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvPbcpaySubDto" name="com.cfcc.itfe.persistence.pk.TvPbcpaySubPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvPbcpaySubDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvPbcpaySubDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvPbcpaySubPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvPbcpaySubInfo"/>
+	  <property name="tableName" value="TV_PBCPAY_SUB"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvRecvlogDto" name="com.cfcc.itfe.persistence.pk.TvRecvlogPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvRecvlogDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvRecvlogDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvRecvlogPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvRecvlogInfo"/>
+	  <property name="tableName" value="TV_RECVLOG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvSendlogDto" name="com.cfcc.itfe.persistence.pk.TvSendlogPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvSendlogDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvSendlogDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvSendlogPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvSendlogInfo"/>
+	  <property name="tableName" value="TV_SENDLOG"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvTaxDto" name="com.cfcc.itfe.persistence.pk.TvTaxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvTaxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvTaxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvTaxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvTaxInfo"/>
+	  <property name="tableName" value="TV_TAX"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvTaxCancelDto" name="com.cfcc.itfe.persistence.pk.TvTaxCancelPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvTaxCancelDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvTaxCancelDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvTaxCancelPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvTaxCancelInfo"/>
+	  <property name="tableName" value="TV_TAX_CANCEL"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvTaxItemDto" name="com.cfcc.itfe.persistence.pk.TvTaxItemPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvTaxItemDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvTaxItemDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvTaxItemPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvTaxItemInfo"/>
+	  <property name="tableName" value="TV_TAX_ITEM"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvTaxKindDto" name="com.cfcc.itfe.persistence.pk.TvTaxKindPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvTaxKindDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvTaxKindDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvTaxKindPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvTaxKindInfo"/>
+	  <property name="tableName" value="TV_TAX_KIND"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvTaxorgIncomeDto" name="com.cfcc.itfe.persistence.pk.TvTaxorgIncomePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvTaxorgIncomeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvTaxorgIncomeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvTaxorgIncomePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvTaxorgIncomeInfo"/>
+	  <property name="tableName" value="TV_TAXORG_INCOME"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvTips3201Dto" name="com.cfcc.itfe.persistence.pk.TvTips3201PK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvTips3201Dto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvTips3201Dao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvTips3201PK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvTips3201Info"/>
+	  <property name="tableName" value="TV_TIPS_3201"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvUsersconditionDto" name="com.cfcc.itfe.persistence.pk.TvUsersconditionPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvUsersconditionDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvUsersconditionDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvUsersconditionPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvUsersconditionInfo"/>
+	  <property name="tableName" value="TV_USERSCONDITION"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto" name="com.cfcc.itfe.persistence.pk.TvVoucherinfoPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvVoucherinfoDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvVoucherinfoDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvVoucherinfoPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvVoucherinfoInfo"/>
+	  <property name="tableName" value="TV_VOUCHERINFO"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvVoucherinfoAllocateIncomeDto" name="com.cfcc.itfe.persistence.pk.TvVoucherinfoAllocateIncomePK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvVoucherinfoAllocateIncomeDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvVoucherinfoAllocateIncomeDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvVoucherinfoAllocateIncomePK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvVoucherinfoAllocateIncomeInfo"/>
+	  <property name="tableName" value="TV_VOUCHERINFO_ALLOCATE_INCOME"/>	  
+  </bean>
+
+
+  <bean id="com.cfcc.itfe.persistence.dto.TvVoucherinfoSxDto" name="com.cfcc.itfe.persistence.pk.TvVoucherinfoSxPK" class="com.cfcc.jaf.persistence.jaform.config.Ormap" >
+	  <property name="dtoName" value="com.cfcc.itfe.persistence.dto.TvVoucherinfoSxDto"/>
+	  <property name="daoName" value="com.cfcc.itfe.persistence.dao.TvVoucherinfoSxDao"/>
+	  <property name="pkName" value="com.cfcc.itfe.persistence.pk.TvVoucherinfoSxPK"/>
+	  <property name="infoName" value="com.cfcc.itfe.persistence.info.TvVoucherinfoSxInfo"/>
+	  <property name="tableName" value="TV_VOUCHERINFO_SX"/>	  
+  </bean>
+
+
+
+</beans>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="29b1a479-495d-47b9-a1fb-da860fabd5e0" name="收入税票异常处理" ename="dealErrorIncome"/>

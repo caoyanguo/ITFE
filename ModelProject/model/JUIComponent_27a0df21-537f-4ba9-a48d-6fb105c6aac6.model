@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="27a0df21-537f-4ba9-a48d-6fb105c6aac6" name="退税数据查询" ename="QueryDrawback" shared="false">
+  <jproperties id="847953f2-6b1e-46bf-bfaf-e02c9416cb98" key="GeneratedTime" value="1330914018187"/>
+  <refModule href="JModule_a229031d-4fa0-4157-8688-6b7086e42a00.model#a229031d-4fa0-4157-8688-6b7086e42a00"/>
+  <model id="115830d8-1cb4-481b-97c9-3f1e8e9a4c37" name="JModelImpl-115830d8-1cb4-481b-97c9-3f1e8e9a4c37">
+    <directions id="67f9db84-8a11-4d41-be5e-1ed1567f473e" name="公共查询" ename="queryDrawback"/>
+    <directions id="d26566d2-b980-4be6-a2cd-1ae57ee8d9d1" viewers="694f9c78-735a-4e3b-ab8c-7ec2aaf67b26" name="显示申报表明细" ename="queryReportDatas"/>
+    <directions id="aa363d95-b662-4480-a177-e2cf8e5607b9" viewers="694f9c78-735a-4e3b-ab8c-7ec2aaf67b26" name="还原退库凭证" ename="backdwbkvou"/>
+    <directions id="17f43e32-9763-4ede-a60f-b7857e2b5c96" viewers="694f9c78-735a-4e3b-ab8c-7ec2aaf67b26" name="汇总退还书" ename="sumdwbkreport"/>
+    <directions id="20b3059f-a0ff-4390-a42a-55be4a8d1ce7" viewers="694f9c78-735a-4e3b-ab8c-7ec2aaf67b26" name="退税明细打印" ename="detaildwbkprint"/>
+    <directions id="5052bb91-b85f-4375-b302-669c6355dd99" viewers="60efa6f2-539d-49d8-a253-f467df4d53b2" name="发送回执报文" ename="senddwbkreport"/>
+    <directions id="5806a1c1-f4a4-4b4e-a017-cd03d77bc04e" name="取消校验" ename="cancelcheck"/>
+    <directions id="c7e2bcb8-e736-4b67-8ea7-74c42cc5f7d0" name="删除报文" ename="deletereport"/>
+    <directions id="3d776a22-2f35-4443-9d63-252625d28c71" name="生成退库退回" ename="makedwbkbackreport"/>
+    <directions id="b9581aca-565c-4e8d-816d-4d42654f5248" viewers="af6f0f05-0d0a-48ce-ab7f-9c6c55585dc5" name="返回报文查询" ename="goback"/>
+    <directions id="a0f826db-21d0-47a8-a791-8cf7ca593f80" name="全选" ename="selectAll"/>
+    <directions id="9ce981cb-8796-439f-88a6-0bb5957e7b6b" viewers="dbd16003-f688-4cb9-b96a-69e5f919e121" name="返回报文处理界面" ename="gobackproc"/>
+    <directions id="5dae6681-f727-4186-a6c7-54af948c6b77" viewers="87ac59fc-7bd3-4a72-aa05-1ce3c3e1d238" name="清算失败汇总退还书" ename="sumdwbkfailreport"/>
+    <directions id="8c60b207-1369-49ff-a50f-6387478a2669" viewers="b4740a44-066b-4d88-9137-a802ca97aa60" name="到数据页面" ename="goDataview"/>
+    <directions id="1c0cfe74-7756-4a1a-b373-f1de393ba1d0" viewers="60efa6f2-539d-49d8-a253-f467df4d53b2" name="到回执界面" ename="godwbkbackview"/>
+  </model>
+  <contentAreas id="f7aec0f3-b6a2-4206-adc2-622ad93dcf25">
+    <contentareanode id="8a979ecf-6e65-4dda-9e0b-e9121a3594ad" name="退税查询结果" grouptitle="退税查询结果">
+      <widgetRefs xsi:type="model:Table" id="251166c7-cc6f-4036-9e46-9ba8b985d66b" name="退税数据列表" visible="true" caption="退税数据列表" enable="true" tabletype="paging">
+        <columnlist id="45ba5aef-2a40-4502-b582-9bace6744714" name="发起方节点" caption="发起方节点"/>
+        <columnlist id="62005e13-2c6a-47ea-be9d-c4ee22520ea6" name="征收机关编码" caption="征收机关编码"/>
+        <columnlist id="436aa808-402d-4b0c-bbfe-c4a5f0de0c65" name="提交日期" caption="提交日期"/>
+        <columnlist id="a3c17132-c8f6-417f-a651-b545c7e4dd63" name="业务流水" caption="业务流水"/>
+        <columnlist id="c3c34b11-0fea-47d3-9016-fe1a700474d2" name="凭证编号" caption="凭证编号"/>
+        <columnlist id="d0ba5d64-8381-440c-be8f-7716537c956d" name="填发日期" caption="填发日期"/>
+        <columnlist id="6db7128a-aea8-4854-bd31-9ddcd2b28b1c" name="退款国库编码" caption="退款国库编码"/>
+        <columnlist id="aeb0e2ba-15b6-452c-b801-d4a4bfedc1f6" name="收款单位纳税人编码" caption="收款单位纳税人编码"/>
+        <columnlist id="fa7112c7-bb6b-48e3-b10a-923657278a96" name="收款单位注册类型" caption="收款单位注册类型"/>
+        <columnlist id="e6646fc1-9610-4d4a-80d6-d7c300dcb6ac" name="收款单位名称" caption="收款单位名称"/>
+        <columnlist id="dc03388f-14c3-4548-99b3-15c5661e1fe1" name="收款单位开户行" caption="收款单位开户行"/>
+        <columnlist id="9c918290-1fa5-4171-84c6-fe67ca0dd336" name="收款单位帐号" caption="收款单位帐号"/>
+        <columnlist id="39cf6dc8-66be-4fdf-a003-911f27109d35" name="退库金额" caption="退库金额"/>
+        <columnlist id="979dbbe9-e60b-499e-b4cc-ba0794717261" name="预算科目" caption="预算科目"/>
+        <columnlist id="8e475db4-28be-425d-a38f-5d93ca57c609" name="预算级次" caption="预算级次"/>
+        <columnlist id="4381e599-6297-499f-9e47-953b61180faa" name="原票编号" caption="原票编号"/>
+        <columnlist id="53b09b97-6ee2-4abe-87c0-503e2d03be96" name="原票日期" caption="原票日期"/>
+        <columnlist id="369dc284-1fd6-4dd5-83f9-e1d460c562cd" name="退回标志" caption="退回标志"/>
+        <columnlist id="9b87f020-c721-40e5-8555-31e7a4ae6f34" name="退库原因码" caption="退库原因码"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="78b12b55-c5d2-4139-bd12-c058f34c4d72" name="申报表查询结果">
+      <widgetRefs xsi:type="model:Table" id="bb038b2a-82ce-4a44-8c46-57c44150655f" name="申报表数据列表" visible="true" caption="申报表数据列表" enable="true" tabletype="paging">
+        <columnlist id="01584ad6-901e-4646-8fdf-f20864e069f2" name="申报表编号" caption="申报表编号"/>
+        <columnlist id="661d1820-36e7-4ff0-9c47-7f86066e527a" name="对应收入退还书编号" caption="对应收入退还书编号"/>
+        <columnlist id="c021d281-8156-4ed0-bd62-b10c48083301" name="纳税人识别号" caption="纳税人识别号"/>
+        <columnlist id="1b1c98cd-a6f7-4b44-b831-d5c1ce7cbcea" name="纳税人名称" caption="纳税人名称"/>
+        <columnlist id="eb243f2e-cc12-48c5-8e7f-4d9f8e530463" name="海关代码" caption="海关代码"/>
+        <columnlist id="5c5c1451-b28a-4e1c-99da-46fe5cf176a5" name="税款所属期" caption="税款所属期"/>
+        <columnlist id="d25d926d-78bd-44e8-b2e9-9bbe6492277d" name="申报日期" caption="申报日期"/>
+        <columnlist id="8e22741e-7d90-4260-8889-7e0b7a74ba33" name="免抵退出口货物销售额（美元）（当期）" caption="免抵退出口货物销售额（美元）（当期）"/>
+        <columnlist id="8d39c555-3a7e-4186-bcf8-a46b8d19dc0d" name="免抵退出口货物销售额（当期）" caption="免抵退出口货物销售额（当期）"/>
+        <columnlist id="8dd89a36-0bf9-4087-8397-cb620af78ec3" name="单证不齐销售额（当期）" caption="单证不齐销售额（当期）"/>
+        <columnlist id="e2529b6a-c6ae-4b8a-8235-156fe4648e5f" name="单证齐全销售额（当期）" caption="单证齐全销售额（当期）"/>
+        <columnlist id="9abd6ca5-0a87-47fd-89a5-d00e9a11285a" name="前期出口货物当期收齐单证销售额（当期）" caption="前期出口货物当期收齐单证销售额（当期）"/>
+        <columnlist id="f22817af-e87f-4a00-8783-816ddf208d83" name="单证齐全出口货物销售额（当期）" caption="单证齐全出口货物销售额（当期）"/>
+        <columnlist id="6a32dae8-9553-4fee-a193-e3a11c34105c" name="免税出口货物销售额（美元）（当期）" caption="免税出口货物销售额（美元）（当期）"/>
+        <columnlist id="41613670-fee9-4832-b0b7-d818ae4662e9" name="免税出口货物销售额（当期）" caption="免税出口货物销售额（当期）"/>
+        <columnlist id="7da1b1cf-cc9e-48dd-933a-d2a5c3e353a7" name="全部出口货物销售额（美元）（当期）" caption="全部出口货物销售额（美元）（当期）"/>
+        <columnlist id="7ecb3ce1-6ec9-45ab-ac22-ca1a0be4cde1" name="全部出口货物销售额（当期）" caption="全部出口货物销售额（当期）"/>
+        <columnlist id="1f9eb8cd-6b0f-4a5a-84d1-c2e1ff77666c" name="不予免抵退出口货物销售额（当期）" caption="不予免抵退出口货物销售额（当期）"/>
+        <columnlist id="ed2ce8c4-c194-4587-814e-ba0f16b2e975" name="出口销售额乘征退税率之差（当期）" caption="出口销售额乘征退税率之差（当期）"/>
+        <columnlist id="2e02ba58-c146-450a-9c8b-7cd378fb882d" name="上期结转免抵退税不得免征和抵扣税额抵减额（当期）" caption="上期结转免抵退税不得免征和抵扣税额抵减额（当期）"/>
+        <columnlist id="a0be126a-611d-486c-ba00-972fa96a880e" name="出口销售额乘退税率（当期）" caption="出口销售额乘退税率（当期）"/>
+        <columnlist id="7143e0d6-78ca-4951-997a-dda6db788cbe" name="上期结转免抵退税额抵减额（当期）" caption="上期结转免抵退税额抵减额（当期）"/>
+        <columnlist id="5ce9c73c-75b6-4e96-a02f-6a7889ee971d" name="免抵退税额抵减额（当期）" caption="免抵退税额抵减额（当期）"/>
+        <columnlist id="1127f1c2-b043-49a7-abc6-47b73395004b" name="免抵退税额（当期）" caption="免抵退税额（当期）"/>
+        <columnlist id="e176efdd-0241-462d-9563-788aea39c575" name="结转下期免抵退税额抵减额（当期）" caption="结转下期免抵退税额抵减额（当期）"/>
+        <columnlist id="16ce1d4b-edd0-4068-9ba3-f9c6a011e699" name="增值税纳税申报表期末留抵税额（当期）" caption="增值税纳税申报表期末留抵税额（当期）"/>
+        <columnlist id="21d8d269-4d49-463c-8aac-089b5049df0d" name="计算退税的期末留抵税额（当期）" caption="计算退税的期末留抵税额（当期）"/>
+        <columnlist id="14dcfcd8-a22d-4354-997f-79bb78253720" name="当期应退税额（当期）" caption="当期应退税额（当期）"/>
+        <columnlist id="c7c74507-7442-4b59-873c-dd12d1aea133" name="当期免抵税额（当期）" caption="当期免抵税额（当期）"/>
+        <columnlist id="3d1bd0de-1ea0-46fd-8c47-83d03b3c14db" name="前期单证收齐（当期）" caption="前期单证收齐（当期）"/>
+        <columnlist id="a28280ef-1c4f-4bc4-8416-249d5d97e06c" name="当期信息齐全（当期）" caption="当期信息齐全（当期）"/>
+        <columnlist id="d5908174-59a4-4554-8d3e-3065bbd5875f" name="免抵退出口货物销售额（美元）（本年累计）" caption="免抵退出口货物销售额（美元）（本年累计）"/>
+        <columnlist id="7b9add31-2614-477f-9dea-4620c44c0156" name="免抵退出口货物销售额（本年累计）" caption="免抵退出口货物销售额（本年累计）"/>
+        <columnlist id="4f07fe8b-eb96-40ca-8669-3d08efdb1c33" name="单证不齐销售额（本年累计）" caption="单证不齐销售额（本年累计）"/>
+        <columnlist id="2034aedd-920d-4dcd-88c4-6b0c49fa8f3e" name="单证齐全销售额（本年累计）" caption="单证齐全销售额（本年累计）"/>
+        <columnlist id="b1757882-aa51-4dea-889c-264a47083113" name="前期出口货物当期收齐单证销售额（本年累计）" caption="前期出口货物当期收齐单证销售额（本年累计）"/>
+        <columnlist id="f57326b3-1d17-4931-bf2a-4f6cb1b8a31e" name="单证齐全出口货物销售额（本年累计）" caption="单证齐全出口货物销售额（本年累计）"/>
+        <columnlist id="52ebfd5c-15ba-4604-a34a-1331bfd966fd" name="免税出口货物销售额（美元）（本年累计）" caption="免税出口货物销售额（美元）（本年累计）"/>
+        <columnlist id="ce16af61-f3f3-4d55-9090-b2c6fac81604" name="免税出口货物销售额（本年累计）" caption="免税出口货物销售额（本年累计）"/>
+        <columnlist id="761e09d9-4b1b-4738-8a6d-12da8c7b1858" name="全部出口货物销售额（美元）（本年累计）" caption="全部出口货物销售额（美元）（本年累计）"/>
+        <columnlist id="674a9e03-5614-4868-a588-032b1e302aa1" name="全部出口货物销售额（本年累计）" caption="全部出口货物销售额（本年累计）"/>
+        <columnlist id="348a6c7e-5148-4ddb-bdc4-52605410ed66" name="不予免抵退出口货物销售额（本年累计）" caption="不予免抵退出口货物销售额（本年累计）"/>
+        <columnlist id="57e87f30-e3bb-4a4a-86c2-26aba2fbc4a9" name="出口销售额乘征退税率之差（本年累计）" caption="出口销售额乘征退税率之差（本年累计）"/>
+        <columnlist id="c2728f1c-154c-435a-ba33-c0d5e5a6d0e5" name="上期结转免抵退税不得免征和抵扣税额抵减额（本年累计）" caption="上期结转免抵退税不得免征和抵扣税额抵减额（本年累计）"/>
+        <columnlist id="92542e82-5118-4b7c-ac70-12f485f64c1a" name="出口销售额乘退税率（本年累计）" caption="出口销售额乘退税率（本年累计）"/>
+        <columnlist id="76b66a7d-1931-4f84-8650-3ebd95619f57" name="上期结转免抵退税额抵减额（本年累计）" caption="上期结转免抵退税额抵减额（本年累计）"/>
+        <columnlist id="f24b7bd9-23e5-4687-a31f-1eac459b22ff" name="免抵退税额抵减额（本年累计）" caption="免抵退税额抵减额（本年累计）"/>
+        <columnlist id="0905a1b0-5ae0-471c-8038-10002bc4e126" name="免抵退税额（本年累计）" caption="免抵退税额（本年累计）"/>
+        <columnlist id="c73f0e87-405d-4666-b84b-de5518d6ff02" name="结转下期免抵退税额抵减额（本年累计）" caption="结转下期免抵退税额抵减额（本年累计）"/>
+        <columnlist id="bb2de1e9-b8dc-403f-994a-8f6847ae92a0" name="增值税纳税申报表期末留抵税额（本年累计）" caption="增值税纳税申报表期末留抵税额（本年累计）"/>
+        <columnlist id="0c619535-9ac6-4ec3-90a5-98edcb01c6bb" name="计算退税的期末留抵税额（本年累计）" caption="计算退税的期末留抵税额（本年累计）"/>
+        <columnlist id="448adff8-7cbe-4af5-8411-f676a0ff6d62" name="当期应退税额（本年累计）" caption="当期应退税额（本年累计）"/>
+        <columnlist id="69e53c0e-2bd3-4629-9c47-4f95cf4a3b2f" name="当期免抵税额（本年累计）" caption="当期免抵税额（本年累计）"/>
+        <columnlist id="fab0ce32-c310-4393-bd34-a01a1a1d2403" name="前期单证收齐（本年累计）" caption="前期单证收齐（本年累计）"/>
+        <columnlist id="d705c7ba-d797-466a-8e6e-a88becad283d" name="当期信息齐全（本年累计）" caption="当期信息齐全（本年累计）"/>
+        <columnlist id="56671d5c-007d-4df8-b8c5-05a3301faf54" name="出口企业经办人" caption="出口企业经办人"/>
+        <columnlist id="c6f6aa89-b613-412a-8c10-a64f114f77ce" name="财务负责人" caption="财务负责人"/>
+        <columnlist id="0e746ff6-2705-4a67-bf17-4c4974c1dbf0" name="企业负责人" caption="企业负责人"/>
+        <columnlist id="9e0e5584-82c2-4967-8baa-3905ef842f81" name="退税部门" caption="退税部门"/>
+        <columnlist id="29a9f7d4-8d0c-4457-b79d-3450d1864d09" name="受理人" caption="受理人"/>
+        <columnlist id="e09645a1-3527-4365-9c07-86aef545f3a3" name="受理日期" caption="受理日期"/>
+        <columnlist id="bd89f5fa-b888-47d2-8c61-4f1c6d7f0477" name="受理税务机关" caption="受理税务机关"/>
+        <columnlist id="c9f08144-6223-4713-a822-f94fbaeaa0f1" name="备注" caption="备注"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a19d7312-471e-4b43-9ca0-1d7c00e68ead" name="退税查询条件" grouptitle="退税查询条件">
+      <widgetRefs xsi:type="model:Combo" id="d9caff97-8883-40d9-ba96-9b15101b25dd" name="处理标志" binding="selProcFlag" visible="true" caption="处理状态" enable="true" readonly="true" display="" underly="" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#16406a7f-4c5b-4a61-a7f2-f95ece647ec9"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8ce8abb0-ebc3-43a5-9fb2-283dd7b63aee" name="批次号" visible="true" caption="批次号" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Text" id="c1bfdaaa-60ac-4608-b8d0-465b1d29cd86" name="查询日期" visible="true" caption="查询日期" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Button" id="2c9dcfaa-ba59-4d40-afdf-ef5d8b15d276" name="显示详细数据" visible="true" caption="查询" enable="true" direction="67f9db84-8a11-4d41-be5e-1ed1567f473e"/>
+    </contentareanode>
+    <contentareanode id="875e6d6a-c01e-436a-9ce7-cdcb3756f632" name="退税查询" grouptitle="查询条件" columnnum="3">
+      <widgetRefs xsi:type="model:Text" id="9d57f2b4-fb98-4178-b597-c3cfc4d69576" name="批次号" visible="true" caption="批次号" enable="true" editable="true"/>
+      <widgetRefs xsi:type="model:Text" id="5a72002a-581c-4a94-817f-4683d4a51987" name="TBS资金文件名称" visible="true" caption="资金文件名" enable="true" editable="true"/>
+    </contentareanode>
+    <contentareanode id="6102e6f7-dfb5-434e-bbd0-ad021c9ad510" name="退税回执发送" grouptitle="目前可以发送的批次">
+      <widgetRefs xsi:type="model:Table" id="092b8c76-e51c-4806-963c-2094432670a9" name="退税数据列表" visible="true" caption="退税数据列表" enable="true" tabletype="paging">
+        <columnlist id="a695e739-6904-4730-84ba-254f34aa0080" name="发起方节点" caption="核算主体代码"/>
+        <columnlist id="1d679b7e-1e9a-4e72-b47b-e39cd289da19" name="征收机关编码" caption="批次号"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="2ea0b257-9607-4d16-bab5-e68bdb6f5f72" name="报表显示界面" grouptitle="报表显示界面">
+      <jreportref id="ce4e1a22-82e9-496e-97d8-1b76cbaa9660" name="报表显示" binding="list" parammap="map"/>
+    </contentareanode>
+    <contentareanode id="fd3513ac-2d30-4702-8d8e-c8a2aacecbdf" name="通用查询条件" grouptitle="通用查询条件">
+      <widgetRefs xsi:type="model:Combo" id="c70780d2-6b2e-4db3-afdf-419ea3ef29d1" name="查询种类" binding="selQueryKind" visible="true" caption="查询种类" enable="true" readonly="true" defaultvalue="1" display="" underly="" modelsource="">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#b29f127a-e555-41d6-8405-4af269bf3f53"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="1c97452f-fc88-49fc-943f-177fd511762e" name="核销报文查询" grouptitle="核销报文查询">
+      <widgetRefs xsi:type="model:Table" id="f619cd36-a0f2-4de4-9aea-c5ec932b48ce" name="退税数据列表" visible="true" caption="退税数据列表" enable="true" tabletype="paging">
+        <columnlist id="9f864bdd-e6a1-4472-b47a-110471b7a533" name="发起方节点" caption="发起方节点"/>
+        <columnlist id="e174d494-b347-488b-a047-21021733306c" name="征收机关编码" caption="征收机关编码"/>
+        <columnlist id="18255f34-9d6a-4b94-b4ae-6a14fddab123" name="提交日期" caption="提交日期"/>
+        <columnlist id="b8993152-d8cb-4cdf-8bbe-b1d628bdf5eb" name="业务流水" caption="业务流水"/>
+        <columnlist id="707ad94c-b3d1-477e-a772-cbd3b5f0edca" name="凭证编号" caption="凭证编号"/>
+        <columnlist id="91b26116-9b9b-4c99-b6b4-33c849ff5c6c" name="填发日期" caption="填发日期"/>
+        <columnlist id="01b87132-3795-4719-bc6a-c438a2b44eee" name="退款国库编码" caption="退款国库编码"/>
+        <columnlist id="a3f67e97-ede4-44ae-998f-b906cc6e27ef" name="收款单位纳税人编码" caption="收款单位纳税人编码"/>
+        <columnlist id="3a55026c-e12a-45e6-9922-412269fd7dab" name="收款单位注册类型" caption="收款单位注册类型"/>
+        <columnlist id="4521a97e-7119-47f5-801a-565c131bbd99" name="收款单位名称" caption="收款单位名称"/>
+        <columnlist id="faebd475-5a99-4f18-829d-8e50b8e02caf" name="收款单位开户行" caption="收款单位开户行"/>
+        <columnlist id="a9e88df5-fc8a-44ce-a6cd-a0e6d6ea57fa" name="收款单位帐号" caption="收款单位帐号"/>
+        <columnlist id="30ea977c-591a-4c39-ac88-2f3a46235684" name="退库金额" caption="退库金额"/>
+        <columnlist id="9fe1c3a5-e34b-4741-ba80-135112c60a4a" name="预算科目" caption="预算科目"/>
+        <columnlist id="eb636b70-5367-42ca-9840-9b1b74006d6a" name="预算级次" caption="预算级次"/>
+        <columnlist id="cfb15ec2-8d7a-4737-a089-c3fa0097e049" name="原票编号" caption="原票编号"/>
+        <columnlist id="ad992153-f0eb-4d4a-b746-0601262fba65" name="原票日期" caption="原票日期"/>
+        <columnlist id="53c2c9d1-f65d-413c-840b-bd226d7ff5bf" name="退回标志" caption="退回标志"/>
+        <columnlist id="b3440e79-b16d-4d2c-801e-9fdab1e1f1e4" name="退库原因码" caption="退库原因码"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="032d9e6d-7bad-4504-b485-2d156116bf0a">
+    <pages id="7177cb2b-fffe-48fa-9b86-7a8e6d38b501" name="报文查询">
+      <views id="3b617e20-8146-4dd1-b5cf-fc10cd39dc5e" name="申报表查询结果">
+        <buttonArea id="7b0b2ae6-e356-4aa3-b915-3a9cbb4ccb67" name="JButtonAreaImpl-7b0b2ae6-e356-4aa3-b915-3a9cbb4ccb67">
+          <buttons id="293519c3-4d93-4b3b-bb71-9b8aa23bfa7b" name="显示详细数据" visible="true" caption="查询" enable="true" direction="67f9db84-8a11-4d41-be5e-1ed1567f473e"/>
+          <buttons id="d7aea19e-1465-44de-acb8-664bddab7870" name="显示详细数据" visible="true" caption="还原凭证" enable="true" direction="d26566d2-b980-4be6-a2cd-1ae57ee8d9d1"/>
+          <buttons id="0d4dc4f7-4f24-4ba8-9570-e966dd086633" name="打印申报表数据" visible="true" caption="打印凭证" enable="true" direction="d26566d2-b980-4be6-a2cd-1ae57ee8d9d1"/>
+          <buttons id="9a16c9a8-73a7-4630-856c-7e9ab26b37f1" name="显示详细数据" visible="true" caption="返回" enable="true" direction="b9581aca-565c-4e8d-816d-4d42654f5248"/>
+        </buttonArea>
+      </views>
+      <views id="b4740a44-066b-4d88-9137-a802ca97aa60" name="退税报文查询结果" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="a19d7312-471e-4b43-9ca0-1d7c00e68ead 8a979ecf-6e65-4dda-9e0b-e9121a3594ad">
+        <buttonArea id="a1bb5170-c723-4167-9698-6f86d7c35fee" name="JButtonAreaImpl-a1bb5170-c723-4167-9698-6f86d7c35fee">
+          <buttons id="262bef28-9207-4c98-8079-516ded8a0d60" name="显示退库明细数据" visible="true" caption="还原凭证" enable="true" direction="aa363d95-b662-4480-a177-e2cf8e5607b9"/>
+          <buttons id="572b6c9c-777a-4b7c-99a6-050f2b485e82" name="显示申报表数据" visible="true" caption="显示申报表" enable="true" direction="17f43e32-9763-4ede-a60f-b7857e2b5c96"/>
+          <buttons id="47311737-ae4e-4177-bebd-7633ecc2f481" name="生成汇总收入退还书" visible="true" caption="汇总退还书" enable="true" direction="17f43e32-9763-4ede-a60f-b7857e2b5c96"/>
+          <buttons id="8ce00eea-f7da-4181-a35d-fd44181cd0d8" name="退税数据打印" visible="true" caption="流水打印" enable="true" direction="20b3059f-a0ff-4390-a42a-55be4a8d1ce7"/>
+          <buttons id="272c9267-51d3-41bc-b6ce-7ecf47cabc3d" name="显示详细数据" visible="true" caption="返回" enable="true" direction="b9581aca-565c-4e8d-816d-4d42654f5248"/>
+        </buttonArea>
+      </views>
+      <views id="6d9a806c-b5b6-448d-95e8-e6f7896440f8" name="退税回执查询结果" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="a19d7312-471e-4b43-9ca0-1d7c00e68ead 8a979ecf-6e65-4dda-9e0b-e9121a3594ad">
+        <buttonArea id="ef3473fa-85dc-4862-8e4d-80f8492c394d" name="JButtonAreaImpl-a1bb5170-c723-4167-9698-6f86d7c35fee">
+          <buttons id="4a396cc4-ad14-48c0-9247-f19214534a8e" name="显示详细数据" visible="true" caption="查询" enable="true" direction="67f9db84-8a11-4d41-be5e-1ed1567f473e"/>
+          <buttons id="8634f26b-a548-4931-8e10-41ce65776738" name="发送回执" caption="发送回执" direction="5052bb91-b85f-4375-b302-669c6355dd99"/>
+          <buttons id="969e89b5-ae59-4ff2-b944-42986ab4fbc4" name="显示详细数据" visible="true" caption="返回" enable="true" direction="b9581aca-565c-4e8d-816d-4d42654f5248"/>
+        </buttonArea>
+      </views>
+      <views id="694f9c78-735a-4e3b-ab8c-7ec2aaf67b26" name="报表显示" isdefault="false" contentArea="2ea0b257-9607-4d16-bab5-e68bdb6f5f72">
+        <buttonArea id="7afa7cc3-65d6-4c4c-a753-d03135537ca1" name="JButtonAreaImpl-a1bb5170-c723-4167-9698-6f86d7c35fee">
+          <buttons id="963c378d-0ab4-4337-b823-8a3dd9c73fcb" name="返回" visible="true" caption="返回" enable="true" direction="8c60b207-1369-49ff-a50f-6387478a2669"/>
+        </buttonArea>
+      </views>
+      <views id="af6f0f05-0d0a-48ce-ab7f-9c6c55585dc5" name="通用查询条件" isdefault="true" contentArea="fd3513ac-2d30-4702-8d8e-c8a2aacecbdf">
+        <buttonArea id="61c61b26-4bfb-40b0-9d9b-80e5fbdeb7f1" name="JButtonAreaImpl-7b0b2ae6-e356-4aa3-b915-3a9cbb4ccb67">
+          <buttons id="add914ca-2347-4a5f-9d22-3559b07e3dc3" name="显示详细数据" visible="true" caption="查询" enable="true" direction="8c60b207-1369-49ff-a50f-6387478a2669"/>
+          <buttons id="34f4a87d-736c-4aea-8fd3-9964faed2c09" name="显示详细数据" visible="true" caption="关闭" enable="true"/>
+        </buttonArea>
+      </views>
+      <views id="490d2694-3c36-4b1c-935c-1b8b53db5535" name="TBS核销报文查询" contentArea="1c97452f-fc88-49fc-943f-177fd511762e">
+        <buttonArea id="4da9c4cf-41b4-441a-b787-659ea81385cb" name="JButtonAreaImpl-7b0b2ae6-e356-4aa3-b915-3a9cbb4ccb67">
+          <buttons id="5e9e7085-b01c-49e7-8adc-76d7a031ab49" name="显示详细数据" visible="true" caption="查询" enable="true" direction="67f9db84-8a11-4d41-be5e-1ed1567f473e"/>
+          <buttons id="aa35541d-1e79-4641-aebb-b43664a765e5" name="显示详细数据" visible="true" caption="还原凭证" enable="true" direction="d26566d2-b980-4be6-a2cd-1ae57ee8d9d1"/>
+          <buttons id="ddfdc26a-99bf-49a3-8c16-b8cc47aeb161" name="打印申报表数据" visible="true" caption="打印凭证" enable="true" direction="d26566d2-b980-4be6-a2cd-1ae57ee8d9d1"/>
+          <buttons id="348b824b-a512-4efb-bfda-d939ca62d5b8" name="显示详细数据" visible="true" caption="返回" enable="true" direction="b9581aca-565c-4e8d-816d-4d42654f5248"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="5b1d929f-79b2-4671-a247-daeabfe8a691" name="退税报文处理">
+      <views id="dbd16003-f688-4cb9-b96a-69e5f919e121" name="退税查询处理" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="875e6d6a-c01e-436a-9ce7-cdcb3756f632 8a979ecf-6e65-4dda-9e0b-e9121a3594ad">
+        <buttonArea id="018ccc55-927f-43fe-a84f-8a783d9b9270" name="JButtonAreaImpl-a1bb5170-c723-4167-9698-6f86d7c35fee">
+          <buttons id="806b27c9-efa5-4d3b-b0ac-556b718b84d7" name="打印数据流水" visible="true" caption="流水打印" enable="true" direction="5dae6681-f727-4186-a6c7-54af948c6b77"/>
+          <buttons id="c77f385c-1505-4412-8b7f-64677d8e852a" name="清算失败流水汇总凭证打印" visible="true" caption="清算失败汇总退还书" enable="true" direction="5dae6681-f727-4186-a6c7-54af948c6b77"/>
+          <buttons id="42fd0c65-4cc3-4dfd-9d74-490393975c1a" name="取消接收标志" visible="true" caption="取消校验" enable="true" direction="5806a1c1-f4a4-4b4e-a017-cd03d77bc04e"/>
+          <buttons id="367a0d24-8826-4f5e-a09a-41515b388097" name="删除" visible="true" caption="删除" enable="true" direction="c7e2bcb8-e736-4b67-8ea7-74c42cc5f7d0"/>
+          <buttons id="afb7dccc-31fe-4a57-b7d5-ef94508763f6" name="生成退库退回" visible="true" caption="生成退库退回" enable="true" direction="3d776a22-2f35-4443-9d63-252625d28c71"/>
+          <buttons id="090e3a48-d846-40d4-b6cb-425d4aad9e50" name="退税数据打印" visible="true" caption="发送回执" enable="true" direction="1c0cfe74-7756-4a1a-b373-f1de393ba1d0"/>
+        </buttonArea>
+      </views>
+      <views id="87ac59fc-7bd3-4a72-aa05-1ce3c3e1d238" name="报表显示2" isdefault="false" contentArea="2ea0b257-9607-4d16-bab5-e68bdb6f5f72">
+        <buttonArea id="e460c719-ef77-44c5-941c-ebef1b1b9ff2" name="JButtonAreaImpl-a1bb5170-c723-4167-9698-6f86d7c35fee">
+          <buttons id="736d1fed-1eb9-47af-92f5-3fbb18a6a42e" name="返回" visible="true" caption="返回" enable="true" direction="9ce981cb-8796-439f-88a6-0bb5957e7b6b"/>
+        </buttonArea>
+      </views>
+      <views id="60efa6f2-539d-49d8-a253-f467df4d53b2" name="退税查询发送回执" isdefault="false" contentArea="6102e6f7-dfb5-434e-bbd0-ad021c9ad510">
+        <buttonArea id="51adbe62-99c2-42d6-a222-d1f4c67724af" name="JButtonAreaImpl-a1bb5170-c723-4167-9698-6f86d7c35fee">
+          <buttons id="087e43d2-0aa6-41a2-9e02-36deb175edde" name="全选" visible="true" caption="全选" enable="true" direction="a0f826db-21d0-47a8-a791-8cf7ca593f80"/>
+          <buttons id="69ca6a36-0cfc-48df-9967-17d261d8eb4c" name="发送" visible="true" caption="发送" enable="true" direction="5052bb91-b85f-4375-b302-669c6355dd99"/>
+          <buttons id="76e135aa-2720-495e-8d32-b278a48cd1b3" name="返回" visible="true" caption="返回" enable="true" direction="9ce981cb-8796-439f-88a6-0bb5957e7b6b"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

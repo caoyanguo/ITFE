@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="542d7faf-1caf-4938-a37b-099e0978a5dd" name="退库税务机关服务组件" ename="TsInfotaxorg">
+  <refModule href="JModule_e9fd0afd-96fa-4ee1-ad62-21acc6ba2022.model#e9fd0afd-96fa-4ee1-ad62-21acc6ba2022"/>
+  <methods id="1fd9ab3f-19c7-49ab-8f5f-e7c9c9c9973d" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="退库税务机关">
+    <methodParams id="f2f367d3-0cfc-4952-85b2-0e29acf41014" name="退库税务机关" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="bd97d59f-a0bf-4021-b8b5-ea1f9f054cfd" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="99f3fdee-b13d-4228-8f00-157e99910063" name="退库税务机关" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+   <methods id="bd97d59f-a0bf-4021-b8b5-ea1f9f054cfd" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="7585dff9-c0b6-408f-bd9b-c5f2d5d648b5" name="退库税务机关" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

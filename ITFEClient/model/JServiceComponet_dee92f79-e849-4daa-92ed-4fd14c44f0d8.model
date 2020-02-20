@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="dee92f79-e849-4daa-92ed-4fd14c44f0d8" name="财政标志参数转化服务组件" ename="TsConvertfinorg">
+  <jproperties id="b5daaa11-3cab-4664-8ce2-c3947e9a7a2c" key="GeneratedTime" value="1331531146062"/>
+  <refModule href="JModule_6449da68-c0d7-4fd0-b543-3b918ec13ef1.model#6449da68-c0d7-4fd0-b543-3b918ec13ef1"/>
+  <methods id="05b688d2-2aca-4376-bc9c-f6cf44b27c46" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="财政标志参数转化">
+    <methodParams id="14b23cb9-dfc4-459e-b09b-0c456709dc58" name="财政标志参数转化" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="2a293d25-eb61-4fa3-b263-cab6ee16e808" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="1a2561b5-d105-4920-9dc6-7deef91e9855" name="财政标志参数转化" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="2a293d25-eb61-4fa3-b263-cab6ee16e808" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="8fafa520-a269-48a5-89d5-d3820c258e39" name="财政标志参数转化" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

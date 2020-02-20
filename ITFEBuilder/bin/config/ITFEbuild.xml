@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<project name="ITFE" default="ITFE" basedir=".">
+
+	<property name="rootPath" value="E:\ITFE" />
+	<property name="eclipse.dir" value="D:\eclipse3.4.0" />
+	<property name="svn.url" value="https://10.1.5.91:8443/svn/ITFE/ITFE" />
+	<property name="local.dir" value="E:\Test" />
+	<property name="ant_home" value="E:\software\ant" />
+	<property name="ITFEClient" value="itfe_1.0.0.jar" />
+
+	<!--服务器端3个jar 一个sharelib -->
+	<property name="ITFECommon" value="itfecommon.jar" />
+	<property name="ITFEService" value="itfeservice.jar" />
+	<property name="ITFEEsb" value="itfeesb.jar" />
+	<property name="libpath" value="${rootPath}\ITFE\sharedlibs" />
+	<!--客户端 -->
+	<path id="ITFECommon.classpath">
+		<fileset dir="${libpath}\" />
+	</path>
+	<path id="ITFEService.classpath">
+		<fileset dir="TMP_ITFE" />
+	</path>
+	<path id="ITFEEsb.classpath">
+		<fileset dir="TMP_ITFE" />
+	</path>
+	<path id="ITFEClient.classpath">
+		<fileset dir="TMP_ITFE" />
+	</path>
+	<path id="ITFEClient.lib">
+		<fileset dir="${rootPath}\ITFE\ITFEClient\lib\" />
+		<fileset dir="${eclipse.dir}/plugins">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<!--frist begin清理-->
+	<target name="clean">
+		<delete file="ITFEWeb.war" />
+		<delete file="itfe_1.0.0.jar" />
+		<delete dir="TMP_ITFE" />
+		<mkdir dir="TMP_ITFE" />
+		<delete dir="${local.dir}" />
+	    <mkdir dir="${local.dir}" />
+	</target>
+	<!--third begin-->
+	<target name="getITFEWeb.war">
+		<mkdir dir="TMP_ITFE/TMP_ITFEWeb" />
+		<copy todir="TMP_ITFE/TMP_ITFEWeb">
+			<fileset dir="${rootPath}\ITFE\ITFEWeb\WebContent" />
+		</copy>
+		<mkdir dir="TMP_ITFE/TMP_ITFEWeb/WEB-INF/classes" />
+		<javac srcdir="${rootPath}\ITFE\ITFEWeb\src" destdir="TMP_ITFE/TMP_ITFEWeb/WEB-INF/classes" debug="true" deprecation="false" optimize="true">
+			<classpath refid="ITFECommon.classpath" />
+		</javac>
+		<copy todir="TMP_ITFE/TMP_ITFEWeb/WEB-INF/lib">
+			<fileset dir="${rootPath}\ITFE\sharedlibs">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		<copy todir="TMP_ITFE/TMP_ITFEWeb/WEB-INF/lib">
+			<fileset dir="${rootPath}\ITFE\sharedlibs\ca" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\commons" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\db2" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\jaf" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\jbossts" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\jee" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\mq" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\mule" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\mx4j" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\opt\other" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\opt\xml" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\opt">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="${rootPath}\ITFE\sharedlibs\smooks" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\spring" />
+			<fileset dir="${rootPath}\ITFE\sharedlibs\yakreq" />
+		</copy>
+		<copy todir="TMP_ITFE/TMP_ITFEWeb/WEB-INF/lib">
+			<fileset dir="TMP_ITFE">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		<copy todir="TMP_ITFE/TMP_ITFEWeb/META-INF">
+			<fileset dir="${rootPath}\ITFE\ITFEWeb\WebContent\META-INF">
+				<include name="*.*" />
+			</fileset>
+		</copy>
+		<war warfile="ITFEWeb.war" webxml="TMP_ITFE/TMP_ITFEWeb/WEB-INF/web.xml" MANIFEST="TMP_ITFE/TMP_ITFEWeb/META-INF/MANIFEST.MF">
+			<fileset dir="TMP_ITFE/TMP_ITFEWeb" />
+		</war>
+		<delete dir="TMP_ITFE/TMP_ITFEWeb" />
+	</target>
+
+	<!--Second Begin-->
+	<target name="getAPP-INF">
+		<!--ITFECommon.jar-->
+		<mkdir dir="TMP_ITFE/TMP_ITFECommon" />
+		<javac srcdir="${rootPath}\ITFE\ITFECommon\gensrc" destdir="TMP_ITFE/TMP_ITFECommon" debug="true" deprecation="false" optimize="true">
+			<classpath refid="ITFECommon.classpath" />
+		</javac>
+		<javac srcdir="${rootPath}\ITFE\ITFECommon\src" destdir="TMP_ITFE/TMP_ITFECommon" debug="true" deprecation="false" optimize="true">
+			<classpath refid="ITFECommon.classpath" />
+		</javac>
+		<copy todir="TMP_ITFE/TMP_ITFECommon">
+			<fileset dir="${rootPath}\ITFE\ITFECommon\src">
+				<include name="config/**" />
+				<include name="log4j.xml" />
+				<include name="log4j.dtd" />
+			</fileset>
+		</copy>
+		<copy todir="TMP_ITFE/TMP_ITFECommon">
+			<fileset dir="${rootPath}\ITFE\ITFECommon\gensrc">
+				<include name="config/**" />
+			</fileset>
+		</copy>
+		<jar jarfile="TMP_ITFE/${ITFECommon}" basedir="TMP_ITFE/TMP_ITFECommon" />
+		<!--ITFEEsb.jar-->
+		<mkdir dir="TMP_ITFE/TMP_ITFEEsb" />
+		<javac srcdir="${rootPath}\ITFE\ITFEEsb\src" destdir="TMP_ITFE/TMP_ITFEEsb" debug="true" deprecation="false" optimize="true">
+			<classpath refid="ITFEEsb.classpath" />
+			<classpath refid="ITFECommon.classpath" />
+		</javac>
+		<copy todir="TMP_ITFE/TMP_ITFEEsb">
+			<fileset dir="${rootPath}\ITFE\ITFEEsb\src" />
+			<fileset dir="${rootPath}\ITFE\ITFEEsb\conf" />
+		</copy>
+		<jar jarfile="TMP_ITFE/${ITFEEsb}" basedir="TMP_ITFE/TMP_ITFEEsb" />
+
+		<!--ITFEService.jar-->
+		<copy todir="TMP_ITFE/ITFEService/src">
+			<fileset dir="${rootPath}\ITFE\ITFEService\gensrc\" />
+		</copy>
+		<copy todir="TMP_ITFE/ITFEService/src">
+			<fileset dir="${rootPath}\ITFE\ITFEService\src\" />
+		</copy>
+		<mkdir dir="TMP_ITFE/TMP_ITFEService" />
+		<javac srcdir="TMP_ITFE/ITFEService/src" destdir="TMP_ITFE/TMP_ITFEService" debug="true" deprecation="false" optimize="true">
+			<classpath refid="ITFEService.classpath" />
+			<classpath refid="ITFEEsb.classpath" />
+			<classpath refid="ITFECommon.classpath" />
+		</javac>
+		<jar jarfile="TMP_ITFE/${ITFEService}" basedir="TMP_ITFE/TMP_ITFEService" />
+		
+		<!--ITFEClient.jar-->
+		<copy todir="TMP_ITFE/ITFEClient/src">
+			<fileset dir="${rootPath}\ITFE\ITFEClient\src\" />
+		</copy>
+		<copy todir="TMP_ITFE/ITFEClient/src">
+			<fileset dir="${rootPath}\ITFE\ITFEClient\gensrc" />
+		</copy>
+		<mkdir dir="TMP_ITFE/TMP_ITFEClient" />
+		<javac srcdir="TMP_ITFE/ITFEClient/src" destdir="TMP_ITFE/TMP_ITFEClient" debug="true" deprecation="false" optimize="true">
+			<classpath refid="ITFEService.classpath" />
+			<classpath refid="ITFECommon.classpath" />
+			<classpath refid="ITFEClient.classpath" />
+			<classpath refid="ITFEClient.lib" />
+		</javac>
+		<copy todir="TMP_ITFE/TMP_ITFEClient">
+			<fileset dir="${rootPath}\ITFE\ITFEClient\src">
+				<include name="config/**" />
+			</fileset>
+		</copy>
+		<copy todir="TMP_ITFE/TMP_ITFEClient">
+			<fileset dir="${rootPath}\ITFE\ITFEClient\gensrc">
+				<include name="config/**" />
+				<include name="messages/**" />
+			</fileset>
+		</copy>
+		<mkdir dir="TMP_ITFE/TMP_ITFEClient/bin" />
+		<copy todir="TMP_ITFE/TMP_ITFEClient/bin">
+			<fileset dir="TMP_ITFE/TMP_ITFEClient" />
+			<fileset dir="TMP_ITFE/TMP_ITFECommon" />
+			<fileset dir="TMP_ITFE/TMP_ITFEService" />
+		</copy>
+		<copy todir="TMP_ITFE/TMP_ITFEClient">
+			<fileset dir="${rootPath}\ITFE\ITFEClient\">
+				<include name="icons/**" />
+				<include name="lib/**" />
+				<include name="model/**" />
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+		<jar jarfile="${ITFEClient}" basedir="TMP_ITFE/TMP_ITFEClient" />
+	</target>
+
+	<!-- check out the scource from the svn -->
+	<path id="ant.classpath">
+		<fileset dir="${ant_home}\lib\">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<taskdef name="svn" classname="org.tigris.subversion.svnant.SvnTask">
+		<classpath refid="ant.classpath" />
+	</taskdef>
+	<target name="checkout" description="Update package from SVN">
+		
+		<svn javahl="true" username="caoyanguo" password="1">
+			<checkout url="${svn.url}" destPath="${local.dir}" />
+		</svn>
+		<copy todir="${rootPath}">
+			<fileset dir="${local.dir}">				<exclude name="**/.svn" />
+				<exclude name="*.sql" />
+				<exclude name="*.pdm" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!--main-->
+	<!--
+		<target name="ITFE" depends="clean,getAPP-INF,getITFEWeb.war">
+		    <delete dir="TMP_ITFE" /> 
+		    <echo>创建成功</echo>
+	    </target>
+	-->
+	<target name="ITFE" depends="clean,checkout">
+		<delete dir="TMP_ITFE" />
+		<echo>创建成功</echo>
+	</target>
+</project>

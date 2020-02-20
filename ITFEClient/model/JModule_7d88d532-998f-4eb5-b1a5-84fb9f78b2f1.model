@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7d88d532-998f-4eb5-b1a5-84fb9f78b2f1" name="数据转移" ename="DataMove"/>

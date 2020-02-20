@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="0d3c11b6-7756-4539-9f10-970776c7040c" name="集中支付对账单" ename="ConPayCheckBillSearchUI">
+  <jproperties id="ce519ae9-d118-40ef-91f5-8fbe9ca1c2d9" key="GeneratedTime" value="1513220606620"/>
+  <refModule href="JModule_f9155f85-3881-4e0f-b18f-4bdc14949023.model#f9155f85-3881-4e0f-b18f-4bdc14949023"/>
+  <model id="328235f6-cd55-46df-8733-6f095dc17d3f" name="JModelImpl-328235f6-cd55-46df-8733-6f095dc17d3f">
+    <attributes id="1e8fbb6f-c293-421e-869d-4a078c489e35" name="filePath" type="java.util.List"/>
+    <directions id="7c645d16-610c-4e96-a7b7-2062bd388e67" viewers="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="查询" ename="queryBudget"/>
+    <directions id="f192de23-dd9a-4da8-8956-4f652bf0c83f" viewers="f9acdb32-8f47-45ea-82a4-b845af74d23e" name="返回" ename="goBack"/>
+    <directions id="0f0181e0-6f33-4a2b-88b0-bef03e02430d" name="导入数据" ename="dataimport"/>
+    <directions id="b5d9d6b6-05d7-4a23-a237-c4a66c048eda" name="跳转导入数据" ename="goImport"/>
+    <directions id="7e93a1c0-c090-4dfc-b58f-22934768b127" name="导出数据" ename="dataexport"/>
+    <directions id="6428b2b1-f84a-4c33-8b7e-dda5e60e5895" viewers="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="保存数据" ename="savedate"/>
+    <directions id="ee667f7a-d807-4b93-8718-fa78e7bb5f9e" viewers="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="返回" ename="returnqueryresult"/>
+    <directions id="43386e69-d5a1-4d72-9bd8-49169a69806a" viewers="4a012e70-e89c-4c03-b98f-8d6d2179134b" name="跳转查询结果" ename="goqueryresult"/>
+    <directions id="2f22e2a8-e948-46bb-8745-2260d096b431" name="清算查询" ename="queryQs"/>
+    <directions id="4509eeb8-91a8-4eb8-b379-eba4693c1774" name="额度对账单删除" ename="eddelete"/>
+    <directions id="795e7286-3b4f-4f92-ba5f-b8c818dd2f38" name="清算对账单删除" ename="qsdelete"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_24004fb7-a6a5-4b53-919e-814eb3d8b209.model#24004fb7-a6a5-4b53-919e-814eb3d8b209"/>
+  <services href="JServiceComponet_accca048-0aad-4061-974c-70e6f38e6ac7.model#accca048-0aad-4061-974c-70e6f38e6ac7"/>
+  <services href="JServiceComponet_43f89105-4f73-408d-8e3d-c84fb8cd2402.model#43f89105-4f73-408d-8e3d-c84fb8cd2402"/>
+  <contentAreas id="a341f756-2f76-4697-aa75-f9d81b466883">
+    <contentareanode id="77fe103b-5874-4804-9d31-2ba6c8bd418c" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Text" id="edf2df5b-a8ed-48b0-a694-107eed6d0d32" name="起始日期" binding="querydto.dstartdate" caption="起始日期"/>
+      <widgetRefs xsi:type="model:Text" id="a5f3e8f3-27b7-4297-ad71-ee08f0a627a1" name="结束日期" binding="querydto.denddate" caption="结束日期"/>
+      <widgetRefs xsi:type="model:Combo" id="fb7c8ee8-6022-472e-99a3-e37b25491065" name="国库主体代码" binding="strecode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4a9a0fc0-0f72-46a1-b8d1-a7fc9c3448a1" name="代理银行" binding="querydto.sbnkno" caption="代理银行" required="true" display="displayValue" underly="underlyValue" modelsource="bankcodelist"/>
+      <widgetRefs xsi:type="model:Text" id="b3d61f9a-b5d9-4833-813c-2a488925ceb8" name="预算单位代码" binding="querydto.sbdgorgcode" visible="true" caption="预算单位代码" enable="true"/>
+      <widgetRefs xsi:type="model:Text" id="42df813a-481b-413e-be5d-a19328237918" name="功能类科目代码" binding="querydto.sfuncsbtcode" visible="true" caption="功能类科目代码" enable="true"/>
+      <widgetRefs xsi:type="model:Combo" id="34588d75-ac3e-4db0-ad1d-b8d142af4ad1" name="预算种类" binding="querydto.secosbtcode" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="c02c047e-be7b-4a23-b616-99443326119f" name="额度种类" binding="querydto.camtkind" caption="额度种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8f44cc30-3b2a-4be4-b2b4-831570d20974"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="17966278-0915-4eaa-beb6-5153cb5a1d68" name="信息修改" grouptitle="信息修改">
+      <widgetRefs xsi:type="model:Text" id="754fcbb5-8464-4f89-a847-da561b27f2e2" name="起始日期" binding="editdto.dstartdate" caption="起始日期" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="75cf30d9-dd0c-4276-ad77-07cc9328f762" name="结束日期" binding="editdto.denddate" caption="结束日期" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="70332656-fd64-44d5-80aa-3f7ffc424576" name="国库主体代码" binding="editdto.strecode" caption="国库主体代码" editable="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="9c53259e-a2a1-4316-a6fc-6f92f3b8ed81" name="代理银行代码" binding="editdto.sbnkno" caption="代理银行代码" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="dca24975-a75e-40f0-8dde-96277e032c7f" name="预算单位代码" binding="editdto.sbdgorgcode" visible="true" caption="预算单位代码" enable="true" editable="false"/>
+      <widgetRefs xsi:type="model:Text" id="76739819-5ecb-4811-982f-8a1cdb51257c" name="功能类科目代码" binding="editdto.sfuncsbtcode" visible="true" caption="功能类科目代码" enable="true" editable="false"/>
+      <widgetRefs xsi:type="model:Combo" id="a7bc8d87-5caf-44d2-b2a8-7c1608e3cb8c" name="额度种类" binding="editdto.camtkind" caption="额度种类" editable="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8f44cc30-3b2a-4be4-b2b4-831570d20974"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="1d74fb3e-3146-4e13-907d-d96f3be99a87" name="上期额度余额" binding="editdto.flastmonthzeroamt" caption="上期额度余额"/>
+      <widgetRefs xsi:type="model:Text" id="2654dd10-02e6-498e-a5b1-05b1f123fb19" name="本期增加额度" binding="editdto.fcursmallamt" caption="本期增加额度"/>
+      <widgetRefs xsi:type="model:Text" id="76cb0abb-b7c6-4431-aac2-2baf7038eea3" name="本期清算额度" binding="editdto.fcurreckzeroamt" caption="本期清算额度"/>
+      <widgetRefs xsi:type="model:Text" id="f22bbaa5-c74c-4a18-9a70-31aab598a20b" name="本期额度余额" binding="editdto.fcurzeroamt" caption="本期额度余额"/>
+    </contentareanode>
+    <contentareanode id="9ed2254c-b1c3-43eb-b439-138406749c56" name="查询结果" grouptitle="查询结果">
+      <widgetRefs xsi:type="model:Table" id="51b09dfe-d37a-4514-bdd6-2dac041a0574" name="维护查询结果" binding="pagingcontext" caption="维护查询结果" message="" tabletype="paging" pagingtable="" refdoubleclickdirection="43386e69-d5a1-4d72-9bd8-49169a69806a">
+        <columnlist id="d2e4d7d0-80c1-43df-ab85-16fa73248f72" name="核算主体代码" binding="sbookorgcode" caption="核算主体代码"/>
+        <columnlist id="0bcc023f-5a18-4b03-9c40-41e41eb9ab98" name="所属国库主体代码" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="8d13b986-33af-443a-8629-d56cdb7b0c48" name="预算单位代码" binding="sbdgorgcode" caption="预算单位代码"/>
+        <columnlist id="b46aa9b4-e601-47bb-8703-5f9cfde0c091" name="预算单位名称" binding="sbdgorgname" caption="预算单位名称"/>
+        <columnlist id="66f07836-33ad-4c1c-bbed-5a751d106db8" name="代理银行代码" binding="sbnkno" caption="代理银行代码"/>
+        <columnlist id="0b5b8941-65a2-4f15-8e02-47a64135b2a5" name="预算种类" binding="secosbtcode" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="5a8c7fa8-e67e-46d9-a58a-56374ee9997a" name="功能类科目代码" binding="sfuncsbtcode" caption="功能类科目代码"/>
+        <columnlist id="a7bac14c-a27e-4dc5-a1bd-ff0f687b203f" name="额度种类" binding="camtkind" caption="额度种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8f44cc30-3b2a-4be4-b2b4-831570d20974"/>
+        </columnlist>
+        <columnlist id="c355ab31-4750-4574-a159-b8b8713c975f" name="上期额度余额" binding="flastmonthzeroamt" caption="上期额度余额"/>
+        <columnlist id="c607cd2b-fd97-4592-8c45-aad1f0895ef2" name="本期增加额度" binding="fcursmallamt" caption="本期增加额度"/>
+        <columnlist id="bb56bd90-2b41-485a-ba38-00ef834dcdca" name="本期清算额度" binding="fcurreckzeroamt" caption="本期清算额度"/>
+        <columnlist id="79cea8a3-4f69-4e1e-bd10-360c158acac7" name="本期额度余额" binding="fcurzeroamt" caption="本期额度余额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="1d70ea07-9335-4c3c-a013-fd5e6bbc60c6" name="导入数据" grouptitle="导入数据" columnnum="2">
+      <widgetRefs xsi:type="model:FileUploader" id="6e7847d4-4212-4003-82a8-a281ee36820d" name="文件路径" binding="filePath" caption="文件路径" enable="true" isdirectory="false" ismult="true"/>
+    </contentareanode>
+    <contentareanode id="4a452180-0b00-4dda-a61b-af4fefaf3ccb" name="国库代码选择" grouptitle="国库代码选择">
+      <widgetRefs xsi:type="model:Combo" id="6472c911-6c59-4322-9fdc-1718a01a8b2b" name="对账单类型" binding="searchdto.sext1" caption="对账单类型" display="displayValue" underly="underlyValue" modelsource="checktypelist"/>
+      <widgetRefs xsi:type="model:Combo" id="e1b02944-3b1a-4e64-b28e-e199d1aa241d" name="对账单月份" binding="searchdto.sext2" caption="对账单月份" display="displayValue" underly="underlyValue" modelsource="monthlist"/>
+      <widgetRefs xsi:type="model:Combo" id="fce08781-e629-45e0-899e-2ffc380faed4" name="国库主体代码" binding="strecode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="02be1f14-3231-4c73-832e-81abe40206b2" name="代理银行" binding="bankcode" caption="代理银行" display="displayValue" underly="underlyValue" modelsource="bankcodelist"/>
+      <widgetRefs xsi:type="model:Combo" id="e6ac3f2b-3ff9-44e8-a38a-2eec58acf6cb" name="支付方式" binding="searchdto.spaytypecode" caption="支付方式">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#fe3dd2bc-7527-4d01-856e-a0751c878760"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="f7cc229c-c352-4d02-b066-43c2debe5b16" name="辖属标志" binding="searchdto.sbgtlevel" caption="辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="8e1f88c6-8539-4cbb-823c-8017ba1a61b4" name="预算种类" binding="searchdto.sbgttypecode" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Textarea" id="146559a2-3dbc-4f1e-b05d-0894b730cd5a" name="TextareaImpl-146559a2-3dbc-4f1e-b05d-0894b730cd5a" binding="funcinfo" caption="功能说明" enable="false" editable="false" warp="true"/>
+    </contentareanode>
+    <contentareanode id="6abd06f1-c7ad-4504-bdac-cfce4d502afc" name="清算对账查询" grouptitle="清算对账查询">
+      <widgetRefs xsi:type="model:Combo" id="e72df6b0-a8bc-4d46-9063-4e284f1457e3" name="国库代码" binding="strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="4d0f222c-dd42-4e8e-a83b-fe634dda596c" name="代理银行" binding="searchdto.sbankcode" caption="代理银行" required="true" display="displayValue" underly="underlyValue" modelsource="bankcodelist"/>
+      <widgetRefs xsi:type="model:Combo" id="4b18ea39-9995-4f2c-98ef-ccfdd33ee05d" name="对账单月份" binding="searchdto.sext2" caption="对账单月份" display="displayValue" underly="underlyValue" modelsource="monthlist"/>
+      <widgetRefs xsi:type="model:Combo" id="c40dc51a-fad1-41ec-a1be-0488839fc1f1" name="支付方式" binding="searchdto.spaytypecode" caption="支付方式" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#fe3dd2bc-7527-4d01-856e-a0751c878760"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="96a96e82-88f4-4285-845b-5c00de384ee7" name="辖属标志" binding="searchdto.sbgtlevel" caption="辖属标志">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="37b83bf4-173b-4742-a3c1-a2f29586cc68" name="预算种类" binding="searchdto.sbgttypecode" caption="预算种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="09fdbd48-23e3-4f61-b0ed-aa574e7c7591" name="编制日期" binding="searchdto.sacctdate" caption="编制日期"/>
+      <widgetRefs xsi:type="model:Text" id="2a77ed6f-5f62-40ec-bc82-6389573fdc73" name="科目代码" binding="searchdto.ssubjectcode" caption="科目代码"/>
+    </contentareanode>
+    <contentareanode id="6ae96471-674e-4be6-b5b9-2b60c6043dfa" name="清算对账查询结果" grouptitle="清算对账查询结果">
+      <widgetRefs xsi:type="model:Table" id="9d6dbf5f-825c-4e69-81b1-d005dc63f79c" name="代理银行对账单查询结果" binding="qscontext" caption="代理银行对账单查询结果" tabletype="paging">
+        <columnlist id="96fd5a43-0048-49be-8bcf-809395c87c9a" name="机构代码" binding="sorgcode" caption="机构代码"/>
+        <columnlist id="7d5a8e2f-bc8c-4aca-b77d-7e9f7ecc59b5" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="511dc119-6baf-416b-8e88-fb804e177142" name="代理银行" binding="sbankcode" caption="代理银行">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#729a0b9d-f9e2-4a8e-a90e-1ead8f249a3f"/>
+        </columnlist>
+        <columnlist id="c0215837-f002-4396-83f5-46f83b110ff6" name="支付方式" binding="spaytypecode" caption="支付方式">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#fe3dd2bc-7527-4d01-856e-a0751c878760"/>
+        </columnlist>
+        <columnlist id="8b8ce5b8-b173-49f6-b7fe-ed11924aa490" name="辖属标志" binding="sbgtlevel" caption="辖属标志">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+        </columnlist>
+        <columnlist id="148d1bc5-1c3d-48dd-97b0-56232e3b98c1" name="预算种类" binding="sbgttypecode" caption="预算种类">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+        </columnlist>
+        <columnlist id="1067d8ce-ba8b-4211-a95f-a2aa902c56cd" name="编制日期" binding="sacctdate" caption="编制日期"/>
+        <columnlist id="a485b960-a36a-4e01-9ffa-fed58f6c2b65" name="科目代码" binding="ssubjectcode" caption="科目代码"/>
+        <columnlist id="bfb4345b-effb-4156-97bd-2bfd90b4bc70" name="科目名称" binding="ssubjectname" caption="科目名称"/>
+        <columnlist id="cf3ebb7b-05f3-46b7-90da-1e693c0d15be" name="本月发生额" binding="nmonthamt" caption="本月发生额"/>
+        <columnlist id="0efa84b3-0720-4809-9706-c121cf0a5f9c" name="本年累计" binding="nyearamt" caption="本年累计"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="0daf94f9-1b94-484e-aa80-7a07ef179e45">
+    <pages id="e919619d-7993-40a7-b894-962ffa68ef6b" name="对账单数据导入">
+      <views id="aaa36d41-20da-4841-80d3-3ce3a1c69692" name="导入数据" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="4a452180-0b00-4dda-a61b-af4fefaf3ccb 1d70ea07-9335-4c3c-a013-fd5e6bbc60c6">
+        <buttonArea id="ac063eeb-0a93-4248-881c-3423bb17131d" name="JButtonAreaImpl-3e9198d4-b420-4765-9585-1afd652b2f16">
+          <buttons id="e9660213-d8c3-478a-8aca-a60161980ba7" name="导入数据" caption="导入数据" direction="0f0181e0-6f33-4a2b-88b0-bef03e02430d"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="180f65c6-a5bd-415c-99ba-f1108638d07c" name="集中支付额度对账单查询">
+      <views id="f9acdb32-8f47-45ea-82a4-b845af74d23e" name="信息查询" isdefault="true" contentArea="77fe103b-5874-4804-9d31-2ba6c8bd418c">
+        <buttonArea id="9f682520-342a-403e-a63a-5c1c31f17798" name="JButtonAreaImpl-9f682520-342a-403e-a63a-5c1c31f17798">
+          <buttons id="1af53126-fd11-4bf9-b891-589afea589c2" name="查询" caption="查询" direction="7c645d16-610c-4e96-a7b7-2062bd388e67"/>
+          <buttons id="bc41070b-d7d5-4226-8a22-24be7836d4f7" name="删除" caption="删除" checkrequired="true" direction="4509eeb8-91a8-4eb8-b379-eba4693c1774"/>
+        </buttonArea>
+      </views>
+      <views id="fafef682-ed5d-4679-82ca-fcb6c5e4ad72" name="查询结果" contentArea="9ed2254c-b1c3-43eb-b439-138406749c56">
+        <buttonArea id="2a129b0b-daf6-49d7-9103-b2992f61e29f" name="JButtonAreaImpl-2a129b0b-daf6-49d7-9103-b2992f61e29f">
+          <buttons id="4d93a69d-118f-408f-8c3e-54f630017275" name="导出" caption="导出" direction="7e93a1c0-c090-4dfc-b58f-22934768b127"/>
+          <buttons id="f3bf9177-7a3e-4889-aa63-7087bf1d7f8f" name="返回" caption="返回" direction="f192de23-dd9a-4da8-8956-4f652bf0c83f"/>
+        </buttonArea>
+      </views>
+      <views id="4a012e70-e89c-4c03-b98f-8d6d2179134b" name="信息修改" contentArea="17966278-0915-4eaa-beb6-5153cb5a1d68">
+        <buttonArea id="bcf9827b-fd7c-455b-9fd4-b74fbd69bb6c" name="JButtonAreaImpl-bcf9827b-fd7c-455b-9fd4-b74fbd69bb6c">
+          <buttons id="94c02155-97e9-4d9a-9418-6fe939f13d3b" name="保存" caption="保存" direction="6428b2b1-f84a-4c33-8b7e-dda5e60e5895"/>
+          <buttons id="0a6c986e-ea8e-47e0-8cb2-e589aa84c0a6" name="返回" caption="返回" direction="ee667f7a-d807-4b93-8718-fa78e7bb5f9e"/>
+        </buttonArea>
+      </views>
+    </pages>
+    <pages id="2d716b1d-68b6-4a4d-b6b3-5e612fab54dd" name="集中支付清算对账单查询">
+      <views id="11100603-27fe-4fc5-9f29-5d9361f4df42" name="查询界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="6abd06f1-c7ad-4504-bdac-cfce4d502afc 6ae96471-674e-4be6-b5b9-2b60c6043dfa">
+        <buttonArea id="9858821d-0a69-43d9-bd60-948e5ff93a7f" name="JButtonAreaImpl-9858821d-0a69-43d9-bd60-948e5ff93a7f">
+          <buttons id="c62738cf-70e9-4024-9e6f-d749e4c347a1" name="查询" caption="查询" checkrequired="true" direction="2f22e2a8-e948-46bb-8745-2260d096b431"/>
+          <buttons id="12251ae8-e243-4d0e-b793-d2c91ac7051a" name="删除" caption="删除" checkrequired="true" direction="795e7286-3b4f-4f92-ba5f-b8c818dd2f38"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

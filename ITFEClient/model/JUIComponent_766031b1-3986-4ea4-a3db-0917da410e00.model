@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="766031b1-3986-4ea4-a3db-0917da410e00" name="银行账号维护" ename="TsBankcode" shared="true">
+  <jproperties id="17d47149-1a00-4a50-8c39-8aac0dc55468" key="GeneratedTime" value="1380180205281"/>
+  <refModule href="JModule_199e164a-7b29-4905-8dc4-c1295cca8a7b.model#199e164a-7b29-4905-8dc4-c1295cca8a7b"/>
+  <model id="2adbe4cc-c330-4a1f-aeda-7adb4c637e99" name="JModelImpl-2adbe4cc-c330-4a1f-aeda-7adb4c637e99">
+    <attributes id="ccda3dae-b94c-4be4-a6fb-d71294a9e6d8" name="dto" type="com.cfcc.itfe.persistence.dto.TsBankcodeDto"/>
+    <attributes id="dd67a479-64b2-496f-8de6-37fab18f5511" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="7801f7e1-123e-40d7-a925-fe668576b1f0" viewers="0ef2b769-3630-4781-abdf-1f0885d87979" name="跳转录入界面" ename="goInput"/>
+    <directions id="58828659-29d3-4023-88fe-e749bb7f7be5" name="录入保存" ename="inputSave"/>
+    <directions id="b81eb83f-bd5f-4af5-aa36-b08b165a843f" viewers="74a7ea1e-9507-48b8-bd19-f7cb9d2920cb" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="5c19629f-21ba-4c13-8e08-b27a5fd14642" name="单选" ename="singleSelect"/>
+    <directions id="d13d1469-6cbd-44d8-9781-5562ca9cf803" name="删除" ename="delete"/>
+    <directions id="7e2840f5-7d3b-4280-b8ae-df34e18e13fb" viewers="9f9f5ca5-d36a-4d77-bdaa-3da1be24dd6a" name="到修改界面" ename="goModify"/>
+    <directions id="4a4c6b2f-3cb6-4983-91ff-8e83924e76fe" name="修改保存" ename="modifySave"/>
+    <directions id="d53a9cfa-9076-48e2-b4c6-0ed7f634eef9" viewers="74a7ea1e-9507-48b8-bd19-f7cb9d2920cb" name="到查询结果界面" ename="goSearchResult"/>
+    <directions id="6b17249f-aa50-44d9-91cb-c364e56d99bf" viewers="09d27aa7-55ba-4506-8050-aabbde35b11b" name="返回到查询条件界面" ename="goSearch"/>
+  </model>
+  <services href="JServiceComponet_1b4f824a-cc30-4818-903a-4eac4bc2f518.model#1b4f824a-cc30-4818-903a-4eac4bc2f518"/>
+  <contentAreas id="9586eadc-906a-4c0a-bca1-04fab88ce34a">
+    <contentareanode id="d2842e8b-7c5c-4a09-82b0-87395b140c00" name="信息查询" grouptitle="信息查询">
+      <widgetRefs xsi:type="model:Text" id="cf6cb4e5-a9f7-4ec8-ba55-965d55afc2fe" name="sbnkcode" binding="dto.sbnkcode" caption="银行账号代码" editable="true">
+        <labelStyle id="3bffafa7-8a96-4661-8c62-9187ef65a66b" name="LabelStyleImpl-2a80dbb3-43f2-4f4d-aaf6-e73639631f35" ename="LabelStyleImpld2a80dbb3-43f2-4f4d-aaf6-e73639631f35"/>
+        <componentStyle id="56aa1285-a77f-44ab-b1ae-f275074fbf6d" name="ComponentStyleImpl-343a3442-ad4a-4177-8c5c-eb1c4bc87fae" ename="ComponentStyleImpl343a3442-ad4a-4177-8c5c-eb1c4bc87fae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="a19d58d7-9c4e-47c3-8a2e-93f2b6958def" name="sacctstatus" binding="dto.sacctstatus" caption="银行账号状态" editable="true">
+        <labelStyle id="18f6888b-c64f-4d59-994d-7bd36fbd0ac4" name="LabelStyleImpl-1199d603-da29-49ae-8790-7a2cd988d791" ename="LabelStyleImpld1199d603-da29-49ae-8790-7a2cd988d791"/>
+        <componentStyle id="ea84283b-c208-4f90-b5ad-3de544511c5e" name="ComponentStyleImpl-66234991-a94d-4e41-bde5-daab5f34e09a" ename="ComponentStyleImpl66234991-a94d-4e41-bde5-daab5f34e09a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="9d2b52af-6c64-4b10-8cb7-98c1aa42fdef" name="sbnkname" binding="dto.sbnkname" caption="银行账号名称" editable="true">
+        <labelStyle id="d61b9b3b-04d9-404c-904e-5a6d913a5440" name="LabelStyleImpl-dd7365bc-e61c-4ff9-af46-2a4d6fc422be" ename="LabelStyleImplddd7365bc-e61c-4ff9-af46-2a4d6fc422be"/>
+        <componentStyle id="a802c2ec-7c02-4521-af0c-600803e70fc7" name="ComponentStyleImpl-c2824bfe-4f0f-4808-be4a-89944f4b3c06" ename="ComponentStyleImplc2824bfe-4f0f-4808-be4a-89944f4b3c06"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="e4e578b8-ae7a-494c-9981-aa9c6cf89455" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="2221d6bd-d69f-4b4a-bcc6-1a49443994b9" name="sbnkcode" binding="dto.sbnkcode" caption="银行账号代码" editable="true" required="true">
+        <labelStyle id="2a80dbb3-43f2-4f4d-aaf6-e73639631f35" name="LabelStyleImpl-2a80dbb3-43f2-4f4d-aaf6-e73639631f35" ename="LabelStyleImpld2a80dbb3-43f2-4f4d-aaf6-e73639631f35"/>
+        <componentStyle id="343a3442-ad4a-4177-8c5c-eb1c4bc87fae" name="ComponentStyleImpl-343a3442-ad4a-4177-8c5c-eb1c4bc87fae" ename="ComponentStyleImpl343a3442-ad4a-4177-8c5c-eb1c4bc87fae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="1c2130dd-b33a-4900-9667-fc32f46f16fe" name="sacctstatus" binding="dto.sacctstatus" caption="银行账号状态" editable="true" required="true">
+        <labelStyle id="1199d603-da29-49ae-8790-7a2cd988d791" name="LabelStyleImpl-1199d603-da29-49ae-8790-7a2cd988d791" ename="LabelStyleImpld1199d603-da29-49ae-8790-7a2cd988d791"/>
+        <componentStyle id="66234991-a94d-4e41-bde5-daab5f34e09a" name="ComponentStyleImpl-66234991-a94d-4e41-bde5-daab5f34e09a" ename="ComponentStyleImpl66234991-a94d-4e41-bde5-daab5f34e09a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="7386d22c-e3f7-46c3-96cc-71945775e6b9" name="sbnkname" binding="dto.sbnkname" caption="银行账号名称" editable="true" required="true">
+        <labelStyle id="dd7365bc-e61c-4ff9-af46-2a4d6fc422be" name="LabelStyleImpl-dd7365bc-e61c-4ff9-af46-2a4d6fc422be" ename="LabelStyleImplddd7365bc-e61c-4ff9-af46-2a4d6fc422be"/>
+        <componentStyle id="c2824bfe-4f0f-4808-be4a-89944f4b3c06" name="ComponentStyleImpl-c2824bfe-4f0f-4808-be4a-89944f4b3c06" ename="ComponentStyleImplc2824bfe-4f0f-4808-be4a-89944f4b3c06"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="adce8418-5487-4e72-8d96-2ac4a905f18e" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="9b1b04f0-4007-4ced-a9f6-1ddc715a019e" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="5c19629f-21ba-4c13-8e08-b27a5fd14642">
+        <columnlist id="2221d6bd-d69f-4b4a-bcc6-1a49443994b9" name="sbnkcode" binding="sbnkcode" caption="银行账号代码"/>
+        <columnlist id="1c2130dd-b33a-4900-9667-fc32f46f16fe" name="sacctstatus" binding="sacctstatus" caption="银行账号状态"/>
+        <columnlist id="7386d22c-e3f7-46c3-96cc-71945775e6b9" name="sbnkname" binding="sbnkname" caption="银行账号名称"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="e56fbe48-babd-4def-8388-eb1eacb52387" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="2221d6bd-d69f-4b4a-bcc6-1a49443994b9" name="sbnkcode" binding="dto.sbnkcode" caption="银行账号代码" enable="false" editable="true" required="true">
+        <labelStyle id="2a80dbb3-43f2-4f4d-aaf6-e73639631f35" name="LabelStyleImpl-2a80dbb3-43f2-4f4d-aaf6-e73639631f35" ename="LabelStyleImpld2a80dbb3-43f2-4f4d-aaf6-e73639631f35"/>
+        <componentStyle id="343a3442-ad4a-4177-8c5c-eb1c4bc87fae" name="ComponentStyleImpl-343a3442-ad4a-4177-8c5c-eb1c4bc87fae" ename="ComponentStyleImpl343a3442-ad4a-4177-8c5c-eb1c4bc87fae"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="1c2130dd-b33a-4900-9667-fc32f46f16fe" name="sacctstatus" binding="dto.sacctstatus" caption="银行账号状态" enable="false" editable="true" required="true">
+        <labelStyle id="1199d603-da29-49ae-8790-7a2cd988d791" name="LabelStyleImpl-1199d603-da29-49ae-8790-7a2cd988d791" ename="LabelStyleImpld1199d603-da29-49ae-8790-7a2cd988d791"/>
+        <componentStyle id="66234991-a94d-4e41-bde5-daab5f34e09a" name="ComponentStyleImpl-66234991-a94d-4e41-bde5-daab5f34e09a" ename="ComponentStyleImpl66234991-a94d-4e41-bde5-daab5f34e09a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="7386d22c-e3f7-46c3-96cc-71945775e6b9" name="sbnkname" binding="dto.sbnkname" caption="银行账号名称" editable="true" required="true">
+        <labelStyle id="dd7365bc-e61c-4ff9-af46-2a4d6fc422be" name="LabelStyleImpl-dd7365bc-e61c-4ff9-af46-2a4d6fc422be" ename="LabelStyleImplddd7365bc-e61c-4ff9-af46-2a4d6fc422be"/>
+        <componentStyle id="c2824bfe-4f0f-4808-be4a-89944f4b3c06" name="ComponentStyleImpl-c2824bfe-4f0f-4808-be4a-89944f4b3c06" ename="ComponentStyleImplc2824bfe-4f0f-4808-be4a-89944f4b3c06"/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="970f9ab5-6720-43cd-8d3a-5432fe1b1207">
+    <pages id="169ad447-aa06-4cb9-884c-b7c7137b9aaa" name="维护银行账号维护">
+      <views id="09d27aa7-55ba-4506-8050-aabbde35b11b" name="查询界面" isdefault="true" contentArea="d2842e8b-7c5c-4a09-82b0-87395b140c00">
+        <buttonArea id="96eefc44-b70d-496c-8b6a-6dd6f8c33bae" name="JButtonAreaImpl-96eefc44-b70d-496c-8b6a-6dd6f8c33bae">
+          <buttons id="4ee5d2c8-8775-4121-b2a1-adc5807c62f1" name="searchInfo" caption="查询" direction="d53a9cfa-9076-48e2-b4c6-0ed7f634eef9"/>
+        </buttonArea>
+      </views>
+      <views id="74a7ea1e-9507-48b8-bd19-f7cb9d2920cb" name="维护界面" contentArea="adce8418-5487-4e72-8d96-2ac4a905f18e">
+        <buttonArea id="3b8cb924-7b6e-4154-920a-f3c295e7ac92" name="JButtonAreaImpl-3b8cb924-7b6e-4154-920a-f3c295e7ac92">
+          <buttons id="60873031-1eef-4ffa-9304-dffb6382bef7" name="maintenanceInput" caption="录入" direction="7801f7e1-123e-40d7-a925-fe668576b1f0"/>
+          <buttons id="4ff4200e-4f65-43a4-84b5-a9c9bd20b61a" name="maintenanceDel" caption="删除" direction="d13d1469-6cbd-44d8-9781-5562ca9cf803"/>
+          <buttons id="8daa96d6-7ae2-45ef-87c4-45f77f69eacf" name="maintenanceMod" caption="修改" direction="7e2840f5-7d3b-4280-b8ae-df34e18e13fb"/>
+          <buttons id="cecb8608-e77b-4e1f-bd31-e7f125892908" name="返回" caption="返回" direction="6b17249f-aa50-44d9-91cb-c364e56d99bf"/>
+        </buttonArea>
+      </views>
+      <views id="9f9f5ca5-d36a-4d77-bdaa-3da1be24dd6a" name="修改界面" contentArea="e56fbe48-babd-4def-8388-eb1eacb52387">
+        <buttonArea id="5bd2e1d9-2e9b-43da-9933-832cdc53c94f" name="JButtonAreaImpl-5bd2e1d9-2e9b-43da-9933-832cdc53c94f">
+          <buttons id="cc05cf69-22e9-47dc-8042-b48ce81c04f1" name="modifySave" caption="保存" checkrequired="true" direction="4a4c6b2f-3cb6-4983-91ff-8e83924e76fe"/>
+          <buttons id="6f6f1f4e-d715-4e85-a82b-c39637a51a29" name="modifyBack" caption="返回" direction="b81eb83f-bd5f-4af5-aa36-b08b165a843f"/>
+        </buttonArea>
+      </views>
+      <views id="0ef2b769-3630-4781-abdf-1f0885d87979" name="录入界面" contentArea="e4e578b8-ae7a-494c-9981-aa9c6cf89455">
+        <buttonArea id="a39ecc61-9613-4382-bf93-6f6140b38f18" name="JButtonAreaImpl-a39ecc61-9613-4382-bf93-6f6140b38f18">
+          <buttons id="5466408a-e228-4dac-b2f8-1a906c8d9cdc" name="保存" caption="保存" checkrequired="true" direction="58828659-29d3-4023-88fe-e749bb7f7be5"/>
+          <buttons id="6f6f1f4e-d715-4e85-a82b-c39637a51a29" name="modifyBack" caption="返回" direction="b81eb83f-bd5f-4af5-aa36-b08b165a843f"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

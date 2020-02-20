@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="fb26210d-20c0-475d-9a61-90cb8f58cb85" name="收付款人信息服务组件" ename="tspayacctinfo">
+  <jproperties id="3e101c6c-8bb3-43ef-8c24-e947297a3b43" key="GeneratedTime" value="1381907230796"/>
+  <refModule href="JModule_bedc8ff0-9a87-47a1-9826-b5af36f49883.model#bedc8ff0-9a87-47a1-9826-b5af36f49883"/>
+  <methods id="5c6e649d-5bb0-4ff8-a984-aff1e3dbda9c" ename="save" name="保存" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="f2094c7a-e82b-48cc-b5f3-56b2bce2272c" name="dto信息" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="84be917c-0e0a-4e01-b521-537d783edd1e" ename="mod" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="bd924f07-d5cd-4d3d-9903-86a79934fa6c" name="原始dto信息" ename="oriDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="34f7a9dc-f261-4c9b-aaff-3d11bee9e3fb" name="保存dto信息" ename="saveDto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="6fcd8da1-699f-43b7-8554-bb8aa8efdc8c" ename="del" name="删除信息" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="372ba4b1-fd1d-4e8d-a34a-3786fb529c45" name="dto信息" ename="dto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+  </methods>
+  <methods id="cb85040b-cb9a-4ad9-bc44-9aad0e84ab26" ename="verifyPayeeBankNo" name="校验代理行行号" returntype="java.lang.Boolean">
+    <methodParams id="e46652cd-a0de-460c-9da8-0e8b5855cd42" name="代理行行号" ename="agentBankNo" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

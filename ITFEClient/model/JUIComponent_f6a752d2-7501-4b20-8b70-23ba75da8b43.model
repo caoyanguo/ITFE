@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="f6a752d2-7501-4b20-8b70-23ba75da8b43" name="分科目月度汇总表(上海)" ename="budgetsubcodemonthlyreport">
+  <jproperties id="1737e8e8-51e4-4101-8ea9-e224d7109eb2" key="GeneratedTime" value="1380249087531"/>
+  <refModule href="JModule_ff78dbc9-2646-49b5-aafb-17c1e37c7cfc.model#ff78dbc9-2646-49b5-aafb-17c1e37c7cfc"/>
+  <model id="6349618a-c45b-404e-ae72-efa3fb77264e" name="JModelImpl-6349618a-c45b-404e-ae72-efa3fb77264e">
+    <directions id="6e95cc36-450b-4404-a690-d2e80c2dbc1d" name="导出" ename="export"/>
+  </model>
+  <services href="JServiceComponet_b3602247-d38f-422a-ad79-d3c0c0ce1112.model#b3602247-d38f-422a-ad79-d3c0c0ce1112"/>
+  <contentAreas id="4d3eea85-01f5-4b3e-821e-2fe219f518f5">
+    <contentareanode id="228ef5bf-58a5-4073-ada9-78279ef10eee" name="查询条件" grouptitle="查询条件">
+      <widgetRefs xsi:type="model:Combo" id="b24cfd5b-4b4a-40dc-9ec2-cdce0a5c67ca" name="报表类型" binding="reporttype" caption="报表类型" required="true" display="displayValue" underly="underlyValue" modelsource="reporttypelist"/>
+      <widgetRefs xsi:type="model:Combo" id="ae5149bf-23e5-4057-b620-3f41ab476125" name="国库代码" binding="searchdto.trecode" caption="国库代码" required="true" display="strename" underly="strecode" modelsource="trelist"/>
+      <widgetRefs xsi:type="model:Combo" id="28c2b026-5fa0-4046-98e8-c8aeaea8cd33" name="调整期标志" binding="searchdto.strimflag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="7a9e4915-db14-480e-bcfe-0974d7d78053" name="辖属标志" binding="searchdto.sbelongflag" caption="辖属标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#8502f57a-8b74-4a2a-b358-90f359c6a43b"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="2b27fd87-5fb4-47a6-be43-73b66ca637cb" name="预算级次" binding="searchdto.slevelcode" caption="预算级次" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#3d280685-50b6-49c3-b6a7-57640479b49d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="7794acda-be2d-4c5b-8b9b-fdc83f590264" name="开始时间" binding="searchdto.startdate" caption="开始时间" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="6503cb33-8f5a-48d3-8a69-640671afcc1b" name="结束时间" binding="searchdto.enddate" caption="结束时间" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="00fb94b8-e149-4c5b-9850-9f929b34c1b2" name="金额单位" binding="searchdto.moneyunit" caption="金额单位" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4becbd9c-60df-4c15-aec5-13e3c4016b00"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="dcb2e4df-d3a2-40b5-93d0-7f115ad7dbe4" name="预算科目代码" binding="subcode" caption="预算科目代码" editable="false"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="bbf6f04c-b85b-42ff-ac7b-fb614255ff04">
+    <pages id="8081dcfb-a4e0-4651-bbc0-2d7f5e9d2d07" name="分科目月度汇总表(上海)">
+      <views id="7bda7265-ed0a-4eff-8d17-e97602b06e81" name="查询" isdefault="true" genarateprocessorname="SubjectCodeByMonth" contentArea="228ef5bf-58a5-4073-ada9-78279ef10eee">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="9b6ae7f6-bc9a-4eb1-a03a-672233b71d68" name="JButtonAreaImpl-9b6ae7f6-bc9a-4eb1-a03a-672233b71d68">
+          <buttons id="a421984b-ad78-47be-9aff-5bc9bc0eeca9" name="导出" caption="导出" checkrequired="true" direction="6e95cc36-450b-4404-a690-d2e80c2dbc1d"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+</model:JUIComponent>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="fe26d4b8-f41b-42a7-b633-3a377375cea8" name="报表数据导出" ename="FinDataStatDown">
+  <jproperties id="4612c593-cf08-4237-882e-a11e7ebef693" key="GeneratedTime" value="1408093157109"/>
+  <refModule href="JModule_60dda4db-f78e-48c7-9452-98d0502ec3aa.model#60dda4db-f78e-48c7-9452-98d0502ec3aa"/>
+  <model id="121d4ffb-858a-4643-bf16-a469e349fef8" name="JModelImpl-121d4ffb-858a-4643-bf16-a469e349fef8">
+    <directions id="7fbc6d67-36d4-4072-874e-4da4784f4129" name="导出文件" ename="exportFile"/>
+    <directions id="67233671-1b99-45e1-a803-437047095831" name="全选" ename="allSelect"/>
+  </model>
+  <services href="JServiceComponet_6fd63206-5623-4c91-8fbb-27dcff109da5.model#6fd63206-5623-4c91-8fbb-27dcff109da5"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="939cc244-01b6-4c6a-bff5-11c61198fe03">
+    <contentareanode id="7ca02305-171d-44a7-847a-6801bf82b344" name="报表数据导出查询条件" grouptitle="选择导出条件">
+      <widgetRefs xsi:type="model:Combo" id="086c514c-fba1-409a-8c28-5e65460f963b" name="调整期标志" binding="sleTrimFlag" caption="调整期标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#dcc44f89-55f6-4e7f-afbc-3ddd5fef5076"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="8cdfba74-66c2-46b7-90ac-50ff074d9217" name="预算种类" binding="sleBudKind" caption="预算种类" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#faa6f709-04a4-4e16-951a-b81569f62acb"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="cbfcfc2f-e41e-4dd7-af69-1588774f0763" name="国库代码" binding="sleTreCode" caption="国库代码" required="true" display="strename" underly="strecode" modelsource="treList"/>
+      <widgetRefs xsi:type="model:Combo" id="44c919e7-b18f-4a2a-b3f5-35f0e2253090" name="征收机关代码" binding="sleTaxOrgCode" caption="征收机关代码" required="true" display="staxorgname" underly="staxorgcode" modelsource="taxorgList"/>
+      <widgetRefs xsi:type="model:Combo" id="bcc2bb4f-63c3-467b-98b0-8649b2e4db5b" name="辖属标志" binding="sleOfFlag" caption="辖属标志" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#c4a7fc97-1516-46fc-93d0-d84a56012a0d"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="db0360bd-1cbb-4c8a-b17b-71a74126d945" name="含款合计" binding="sleSumItem" caption="是否含款合计" required="true" display="svaluecmt" underly="svalue" modelsource="sumitemlist">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#42c32f92-43e0-4e63-8fd9-2f94c4ac6e1a"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="532af028-aa03-4973-affa-5dc18bdb0068" name="查询日期" binding="sdate" caption="报表日期" required="true"/>
+    </contentareanode>
+    <contentareanode id="155c370a-2830-414f-a23e-28c651850b6e" name="报表种类">
+      <widgetRefs xsi:type="model:Table" id="15f9adac-067d-40fb-982e-cbb61ac9a9bf" name="导出文件种类" binding="reportlist" caption="选择导出报表类型" showcheckbox="true" tablefacade="com.cfcc.itfe.client.common.table.SuperviseTableFacade" selectedrows="checklist" width="400" height="400">
+        <columnlist id="74b5d2aa-c0a2-44d3-969e-7d47df94779f" name="报表代码" binding="svalue" caption="报表代码   "/>
+        <columnlist id="8370aa34-ac2d-4a52-8b97-a2e4fee75901" name="报表标示" binding="sifavailable" caption="报表标示"/>
+        <columnlist id="c33b6a09-f419-4347-81e6-c1bdac657f19" name="报表名称" binding="svaluecmt" caption="  报表名称                 "/>
+      </widgetRefs>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="27d33c06-3ba7-4b29-abf8-65985b79e7c2">
+    <pages id="de6c03da-2d3c-4785-a71c-54de1ef97996" name="报表数据导出">
+      <views id="5c1cb077-77de-4a45-82d6-34680e8aa715" name="报表数据导出" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="7ca02305-171d-44a7-847a-6801bf82b344 155c370a-2830-414f-a23e-28c651850b6e">
+        <buttonArea id="6d116f2d-7860-4ea3-bb50-14e751f384df" name="JButtonAreaImpl-6d116f2d-7860-4ea3-bb50-14e751f384df">
+          <buttons id="9b325512-47dc-4414-97dc-63ae05fb2368" name="全选" caption="全选" direction="67233671-1b99-45e1-a803-437047095831"/>
+          <buttons id="97625f62-9b25-4f02-b26b-cda7fb7424e0" name="导出" caption="导出" checkrequired="true" direction="7fbc6d67-36d4-4072-874e-4da4784f4129"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#510d5574-f874-4e68-b05b-7dda72fa2e37"/>
+</model:JUIComponent>

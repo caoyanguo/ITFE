@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="$compuuid"
+	name="$compcname" ename="$compename" shared="true">
+	<refModule href="JModule_$moduleuuid" />
+	<model id="$model" name="JModelImpl-$model">
+
+		<attributes id="$attribute1" name="dto" type="$dtoclz" />
+		<attributes id="$attribute2" name="auditResDto"
+			type="com.cfcc.tas.persistency.ormap.dto.TnAuditresultindexDto" />
+		<attributes id="$attribute4" name="errorTypeList" type="java.util.ArrayList" />
+
+		<directions id="$direction1" name="正确操作" ename="currentOper">
+		</directions>
+
+		<directions id="$direction2" name="记录差错" ename="recordError">
+		</directions>
+	</model>
+<services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+
+	<contentAreas id="$area">
+		<contentareanode id="$node"
+			name="组头信息" grouptitle="组头信息" columnnum="3">
+			<widgetRefs xsi:type="model:Text"
+				id="$id1" name="$name1" caption="组头信息">
+				<labelStyle id="$labelid1"
+					name="LabelStyleImpl-$labelname1" ename="LabelStyleImpl$labelname1" />
+				<componentStyle id="componentid1"
+					name="ComponentStyleImpl-componentname1"
+					ename="ComponentStyleImplcomponentname1" />
+			</widgetRefs>
+		</contentareanode>
+
+		<contentareanode id="$node1" name="标准库信息" grouptitle="标准库信息"
+			columnnum="3">
+			#foreach($tasData in $tasList)
+			<widgetRefs xsi:type="model:Text" id="${tasData.getText()}"
+				name="${tasData.getColename()}" binding="dto.${tasData.getColename()}"
+				caption="${tasData.getColcname()}" editable="false">
+				<labelStyle id="${tasData.getLabel()}" name="LabelStyleImpl-${tasData.getLabel()}"
+					ename="LabelStyleImpl${tasData.getLabel()}" />
+				<componentStyle id="${tasData.getCompoent()}"
+					name="ComponentStyleImpl-${tasData.getCompoent()}" ename="ComponentStyleImpl${tasData.getCompoent()}" />
+			</widgetRefs>
+			#end
+		</contentareanode>
+
+		<contentareanode id="$node2" name="被监督库信息" grouptitle="被监督库信息"
+			columnnum="3">
+			#foreach($tbsData in $tbsList)
+			<widgetRefs xsi:type="model:Text" id="${tbsData.getText()}"
+				name="${tbsData.getColename()}" binding="dto.${tbsData.getColename()}"
+				caption="${tbsData.getColcname()}" editable="false">
+				<labelStyle id="${tbsData.getLabel()}" name="LabelStyleImpl-${tbsData.getLabel()}"
+					ename="LabelStyleImpld${tbsData.getLabel()}" />
+				<componentStyle id="${tbsData.getCompoent()}"
+					name="ComponentStyleImpl-${tbsData.getCompoent()}" ename="ComponentStyleImpl${tbsData.getCompoent()}" />
+			</widgetRefs>
+			#end
+		</contentareanode>
+	</contentAreas>
+
+
+	<pagenodes id="$pagenodes">
+		<pages id="$pages" name="$ctabname">
+			<views id="$views" name="$ctabname" type="" isdefault="true"
+				template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl"
+				contentArea="$node $node1 $node2">
+				<buttonArea id="$buttonarea" name="JButtonAreaImpl-$buttonarea">
+					<buttons id="$buttons1" name="OK" caption="正确" direction="$direction1" />
+					<buttons id="$buttons2" name="error" caption="差错记录"
+						direction="$direction2" />
+				</buttonArea>
+			</views>
+		</pages>
+	</pagenodes>
+</model:JUIComponent>

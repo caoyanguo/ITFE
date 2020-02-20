@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="35106a01-de00-4330-820c-a5f5a3e7280d" name="计息统计信息" ename="InterestrateMsgQuery">
+  <jproperties id="c1e7a000-d846-404b-adbf-5fae724e07a6" key="GeneratedTime" value="1443409760680"/>
+  <refModule href="JModule_566b9487-de98-4125-bbd2-0b49ba32fff5.model#566b9487-de98-4125-bbd2-0b49ba32fff5"/>
+  <model id="41fc6f08-f482-4da3-b316-f855a9f9ae69" name="JModelImpl-41fc6f08-f482-4da3-b316-f855a9f9ae69">
+    <attributes id="801e158b-bdef-48d5-8d0a-063795362f7a" name="interestRateList" type="java.util.List"/>
+    <attributes id="88070c6f-d06d-45a6-92c4-c56a8c6e7676" name="interestVoucherList" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="88eb9bf1-3f19-45c3-af97-1011bf3618ca" name="finddto" type="com.cfcc.itfe.persistence.dto.TfInterestrateMsgDto"/>
+    <attributes id="fa73da31-5448-46a8-a09d-56f65f124384" name="interestDetailDto" type="com.cfcc.itfe.persistence.dto.TfInterestDetailDto"/>
+    <attributes id="b55fff0f-4291-4c12-a74c-17bbf9691bd4" name="reportPath" type="java.lang.String"/>
+    <attributes id="e8c22b68-c76c-4ff7-8bf6-dbdc9e430aa4" name="reportresult" type="java.util.List"/>
+    <attributes id="e99c7b1d-0204-45c1-91d1-ef9568cc610c" name="reportmap" type="java.util.Map"/>
+    <directions id="f4ed25a5-3971-4380-b3d2-3a41522d17f9" viewers="71d31c78-6bc5-4978-ad81-1b160adfa24c" name="查询列表事件" ename="searchList"/>
+    <directions id="c9ae0618-76c3-411f-aa18-ead110662d7b" viewers="932025c7-eea8-47ff-94aa-50f8dbc91996" name="返回查询界面" ename="rebackSearch"/>
+    <directions id="c9b7ea2d-e92e-4ec1-b383-88c55f54b405" name="计息" ename="interestRate"/>
+    <directions id="49792f2c-765c-4fa5-95cf-07b869d139f6" name="主信息双击事件" ename="doubleclickMain"/>
+    <directions id="f887ee23-c601-4112-a348-ce81c2546545" viewers="58302150-98b1-4929-b3d2-8708591219fe" name="跳转计息报表展示" ename="goshowreport"/>
+    <directions id="c84b584b-3af3-4602-ac42-0c8f80231a08" viewers="71d31c78-6bc5-4978-ad81-1b160adfa24c" name="计息报表展示返回" ename="goreportback"/>
+    <directions id="0dca60ca-3bc1-4dae-9a1e-7471b6b9aa14" name="数据导出" ename="dataExport"/>
+  </model>
+  <services href="JServiceComponet_97099c20-8426-49c9-a304-184ac3a8137a.model#97099c20-8426-49c9-a304-184ac3a8137a"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="1e089acb-fcce-41c2-a7c3-728ee9b7becc">
+    <contentareanode id="7604a786-2563-41b0-9f6b-9d6afad4ff97" name="计息统计信息查询界面" grouptitle="计息统计信息查询界面">
+      <widgetRefs xsi:type="model:Text" id="5965154f-19b1-46a6-8a3d-7af8522b2c2f" name="年度" binding="finddto.syear" caption="年度" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="79e75f50-b9f9-454b-8626-9b0160f200f2" name="季度" binding="finddto.squarter" caption="季度">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#301cf790-fe2b-4c67-b152-904ab06762b1"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="12f95732-275e-44ed-938d-0e186cff6891" name="行别" binding="finddto.sbanktype" caption="行别"/>
+    </contentareanode>
+    <contentareanode id="ffc1acb3-2173-4529-9af0-6c6a332ee9db" name="计息统计信息列表" grouptitle="计息统计信息列表" visible="true">
+      <widgetRefs xsi:type="model:Table" id="20ed3da9-ab9b-4a87-88fa-b7094a66a747" name="TableImpl-20ed3da9-ab9b-4a87-88fa-b7094a66a747" binding="interestRateList" tabletype="" selectedrows="" refdoubleclickdirection="49792f2c-765c-4fa5-95cf-07b869d139f6" height="225">
+        <columnlist id="429bd36e-bddf-4009-bbdb-6d198f6259ef" name="年度" binding="syear" caption="年度"/>
+        <columnlist id="397bcf06-8908-4d6a-b842-5164603f5f5b" name="季度" binding="squarter" caption="季度">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#301cf790-fe2b-4c67-b152-904ab06762b1"/>
+        </columnlist>
+        <columnlist id="4d910087-c736-4b54-9702-6329496300b1" name="季度开始日期" binding="sstartdate" caption="季度开始日期"/>
+        <columnlist id="a734f137-711e-47b4-a4f7-06206fedf7d3" name="季度截止日期" binding="senddate" caption="季度截止日期"/>
+        <columnlist id="71aa5ff0-3651-49ef-a16b-85cac39ca5b4" name="行别" binding="sbanktype" caption="行别"/>
+        <columnlist id="5e21a02c-e13f-4f77-b958-36a767a983d3" name="利息积数" binding="ninterestratecount" caption="利息积数"/>
+        <columnlist id="245cc358-c1d2-4466-af45-e01d7caa5b20" name="利率（%）" binding="ninterestrates" caption="利率（%）"/>
+        <columnlist id="0a04e85a-05b9-4504-86b6-af1f2aaeff2b" name="利息" binding="ninterestvalue" caption="利息"/>
+        <columnlist id="9f220c82-ec9a-4325-8274-2e221221a9cf" name="业务类型" binding="sstatus" caption="业务类型"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="e4e5548f-47fd-4bc5-a35b-981dd70062f8" name="计息基数信息列表" grouptitle="计息基数信息列表">
+      <widgetRefs xsi:type="model:Table" id="6bbc6ff9-13ca-4449-9c7c-8fa4fbd4f241" name="TableImpl-6bbc6ff9-13ca-4449-9c7c-8fa4fbd4f241" binding="interestVoucherList" tabletype="paging" height="255">
+        <columnlist id="9b86a47a-41f8-4390-a4e9-786f8cd3b3f3" name="行别" binding="sbanktype" visible="false" caption="行别"/>
+        <columnlist id="3a0db0f9-cc26-41a1-8bfe-59f7af15ed38" name="行号" binding="sbankno" caption="行号"/>
+        <columnlist id="5c30d34f-3e24-4933-a39b-bd72dd440341" name="凭证编号" binding="svoucherno" caption="凭证编号"/>
+        <columnlist id="83298c96-5cb9-44ee-ac0c-db44a24c4773" name="支付凭证单号" binding="sext3" caption="支付凭证单号"/>
+        <columnlist id="24f6f042-54c7-4fa2-8524-defd15e022c6" name="商行处理日期" binding="sinterestdate" caption="商行处理日期"/>
+        <columnlist id="2520ea71-71c4-484d-9bdb-991c0df537d9" name="清算日期" binding="sliquidationdate" caption="清算日期"/>
+        <columnlist id="43f823c5-9c40-4808-869d-6dd5032b1c73" name="计息金额" binding="nmoney" caption="计息金额"/>
+        <columnlist id="3b64a211-779b-47cb-b5ae-c2832f421e5e" name="凭证类型" binding="svouchertype" caption="凭证类型"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="41fee37d-69ff-4e2e-894a-2d60ce92aa62" name="报表显示界面" grouptitle="">
+      <jreportref id="95969c00-8e21-46f9-bab9-4094558db870" name="计息统计报表" reportpath="reportPath" binding="reportresult" parammap="reportmap" width="0" height="0"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="90fee94c-ceb4-4790-bfa7-bc20df91401b">
+    <pages id="44ca501c-c7a5-4087-8d60-12f6dea46512" name="计息统计信息">
+      <views id="932025c7-eea8-47ff-94aa-50f8dbc91996" name="计息统计信息查询界面" isdefault="true" contentArea="7604a786-2563-41b0-9f6b-9d6afad4ff97">
+        <buttonArea id="0ef6514e-24b0-481b-a9f0-2277be22aa50" name="JButtonAreaImpl-0ef6514e-24b0-481b-a9f0-2277be22aa50">
+          <buttons id="5592f658-5b29-459d-b48e-899f2206618a" name="计息" caption="计息" direction="c9b7ea2d-e92e-4ec1-b383-88c55f54b405"/>
+          <buttons id="8e182182-fd20-4038-a3cf-602a3fe9c7b7" name="查询" caption="查询" checkrequired="true" direction="f4ed25a5-3971-4380-b3d2-3a41522d17f9"/>
+        </buttonArea>
+      </views>
+      <views id="71d31c78-6bc5-4978-ad81-1b160adfa24c" name="计息统计信息列表" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="ffc1acb3-2173-4529-9af0-6c6a332ee9db e4e5548f-47fd-4bc5-a35b-981dd70062f8">
+        <buttonArea id="3bf4f1ba-90d3-415a-aa92-93ce499c94e3" name="JButtonAreaImpl-3bf4f1ba-90d3-415a-aa92-93ce499c94e3">
+          <buttons id="aa3316dd-d5d4-4721-b3c3-8d7bc08029e3" name="报表显示" caption="报表显示" direction="f887ee23-c601-4112-a348-ce81c2546545"/>
+          <buttons id="6126604f-81b8-446a-bb28-ea30d6a43a2f" name="导出" caption="导出" direction="0dca60ca-3bc1-4dae-9a1e-7471b6b9aa14"/>
+          <buttons id="8350bfd9-aeb2-4f91-90bf-5d952fdc96ee" name="返回" caption="返回" direction="c9ae0618-76c3-411f-aa18-ead110662d7b"/>
+        </buttonArea>
+      </views>
+      <views id="58302150-98b1-4929-b3d2-8708591219fe" name="计息报表展示" contentArea="41fee37d-69ff-4e2e-894a-2d60ce92aa62">
+        <buttonArea id="ca5bb931-106b-4f0a-9bb3-0434aebb5af3" name="JButtonAreaImpl-ca5bb931-106b-4f0a-9bb3-0434aebb5af3">
+          <buttons id="d5eba3bd-a0d5-4a11-af22-07c1d6446920" name="返回" caption="返回" direction="c84b584b-3af3-4602-ac42-0c8f80231a08"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+  <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#f1b3782c-7190-4ede-8194-7c819304d738"/>
+</model:JUIComponent>

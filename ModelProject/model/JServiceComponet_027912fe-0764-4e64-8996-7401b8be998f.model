@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="027912fe-0764-4e64-8996-7401b8be998f" name="商行办理支付划款申请查询处理服务" ename="commApplyPayQuery">
+  <jproperties id="670a211e-4df6-4cf0-9922-f37251283c4c" key="GeneratedTime" value="1433834990955"/>
+  <refModule href="JModule_772aba57-6e0e-4a69-9d68-00b56d43213e.model#772aba57-6e0e-4a69-9d68-00b56d43213e"/>
+  <methods id="1840ce3f-4e32-4431-8234-7a4d49525c4f" ename="findMainByPage" name="商行办理支付划款申请主体信息" codecomment="商行办理支付划款申请主体信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="9b1f45f6-28ac-4440-a1de-11cb5458d6b7" name="商行办理支付划款申请主体信息DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPayreckBankDto" codecomment="商行办理支付划款申请主体信息DTO"/>
+    <methodParams id="42b10fbb-53d0-429d-8d31-0c70c169614f" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="4c471879-e544-48b8-8618-08dcb370d0b2" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="03079321-d142-47ff-bda0-eab57dcc40bb" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="0bf00c20-342d-458c-8266-c5e3436f52ec" ename="findSubByPage" name="商行办理支付划款申请明细信息" codecomment="商行办理支付划款申请明细信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="0dafebe6-e380-4a95-b718-578c726f63d8" name="商行办理支付划款申请明细信息DTO" ename="mainDto" type="com.cfcc.itfe.persistence.dto.TvPayreckBankDto" codecomment="商行办理支付划款申请明细信息DTO"/>
+    <methodParams id="78fb4891-1e4b-4870-b6ea-becb40332d4b" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="f55a0a14-d687-4429-9be0-b688943f478b" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="6e712b72-52e3-4862-a64f-740d6ca0dc68" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="a8c89b79-55b8-4d32-a3d7-84fe100e0bed" ename="findMainByPageForHis" name="商行办理支付划款申请主体信息(历史表)" codecomment="商行办理支付划款申请主体信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="bc4010a3-ed00-4f7f-8aed-19e2cb549e32" name="商行办理支付划款申请主体信息DTO(历史表)" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvPayreckBankDto" codecomment="商行办理支付划款申请主体信息DTO(历史表)"/>
+    <methodParams id="3581c69b-670a-4f83-ac03-a1d78a2223ae" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="7d028611-08a8-4c70-97db-b54751a7cd33" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="f82b5fd4-a53d-4d5a-ac1e-0be3e526fc63" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="5dee1a37-efe3-4ade-8395-a5dcf8f16365" ename="findSubByPageForHis" name="商行办理支付划款申请明细信息(历史表)" codecomment="商行办理支付划款申请明细信息(历史表)" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="ff2ea43a-8320-43f6-88c0-d8fdb1a91c46" name="商行办理支付划款申请明细信息DTO(历史表)" ename="mainDto" type="com.cfcc.itfe.persistence.dto.HtvPayreckBankDto" codecomment="商行办理支付划款申请明细信息DTO(历史表)"/>
+    <methodParams id="e5c77221-9c2b-4a10-a5bc-2f19e7c7f419" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求"/>
+    <methodParams id="22dcc3ea-1232-4036-a38e-285cbfd51698" name="科目代码" ename="expfunccode" type="java.lang.String"/>
+    <methodParams id="734e9873-f913-42ee-b451-e06385948f97" name="明细金额" ename="payamt" type="java.lang.String"/>
+  </methods>
+  <methods id="fd94b110-2044-4d8c-bd68-9fa1a7d42a75" ename="exportCommApplyPay" name="导出txt" returntype="java.lang.String">
+    <methodParams id="f362d251-46c0-4e05-9428-b1112f690b51" name="查询dto" ename="findidto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="9ca4f812-fabb-433c-8c59-e4c713635fa3" name="查询当前表历史表" ename="selecttable" type="java.lang.String"/>
+  </methods>
+  <methods id="c80c6cbd-c37d-47dc-bb43-3184613a4092" ename="exportFile" name="导出CSV" codecomment="导出CSV" returntype="java.lang.String">
+    <methodParams id="00cdf436-ca64-4285-aeed-7bc8a0f0b1b0" name="查询dto" ename="findidto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="345866c2-bada-48d8-b8b6-a3334e8d781b" name="查询当前表历史表" ename="selecttable" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

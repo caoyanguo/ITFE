@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="12ed9d73-19b5-404d-beed-223b1654424e" name="查询金额区间维护" ename="TsQueryAmt">
+  <jproperties id="d1c2c1b5-d96f-4d58-a37c-b18b045b9a40" key="GeneratedTime" value="1429694253357"/>
+  <refModule href="JModule_3db43b51-bd78-41e5-82ef-6e214027ba4a.model#3db43b51-bd78-41e5-82ef-6e214027ba4a"/>
+  <model id="4040f904-c658-45e5-98f8-78507b81f001" name="JModelImpl-4040f904-c658-45e5-98f8-78507b81f001">
+    <attributes id="952b0528-81fc-475a-953a-9aaf542f0543" name="dto" type="com.cfcc.itfe.persistence.dto.TsQueryAmtDto"/>
+    <attributes id="07f8823c-492f-4d92-bf94-03e1ab6020ff" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="d9c75470-7874-4851-b08f-e6435aec0866" name="moneyUnit" type="java.lang.String"/>
+    <directions id="30038633-4e60-4df4-be06-251bdd0a4b03" viewers="d581a51c-2d3c-4cbb-822d-ba88a1c377dd" name="跳转录入界面" ename="goInput"/>
+    <directions id="4cedab7e-4ddf-4d92-a475-b1b6c375082e" viewers="736683f6-da25-4482-919d-5d14cf293713" name="录入保存" ename="insertSave"/>
+    <directions id="daa6fe8c-cc27-48b2-94d5-ae3ef32a06b4" viewers="736683f6-da25-4482-919d-5d14cf293713" name="返回到维护界面" ename="goBackMaintenance"/>
+    <directions id="aea646f3-db89-49a4-96f2-7bce1f33a6fc" name="单选" ename="singleSelect"/>
+    <directions id="cd66e956-2149-402b-bc22-631ebb75a03c" name="删除" ename="delete"/>
+    <directions id="83117bfd-c8d5-4f7c-a623-05f76863d5cc" viewers="c8c92f2e-62d7-44cd-ac22-af0723178641" name="跳转修改界面" ename="goModify"/>
+    <directions id="abaa7f55-6e64-472b-af01-4506099760e3" viewers="736683f6-da25-4482-919d-5d14cf293713" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_b1a40cd8-2177-459c-b21d-8c946775aea9.model#b1a40cd8-2177-459c-b21d-8c946775aea9"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="b84c3ea5-244e-4118-8fd8-b69c33c3f6d5">
+    <contentareanode id="b6c8d001-e5dd-40f3-b95b-d361637abcf7" name="录入界面">
+      <widgetRefs xsi:type="model:Combo" id="e7c989eb-8c90-4aea-928e-1892e05c690f" name="国库主体代码" binding="dto.strecode" caption="国库主体代码" editable="true" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6362ad5c-4f23-442b-afd8-4d617987ab4f" name="业务类型" binding="dto.sbiztype" caption="业务类型" required="true" display="svaluecmt" underly="stypecode" modelsource="biztypelist"/>
+      <widgetRefs xsi:type="model:Text" id="7797aebd-ea15-40dd-837a-2a35f192e0d5" name="samtflag" binding="dto.samtflag" caption="金额区间标识" enable="true" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="9941bd45-0f76-4c53-bb21-f2d328b1dd4f" name="金额单位" binding="moneyUnit" caption="金额单位" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4becbd9c-60df-4c15-aec5-13e3c4016b00"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="7388ccb9-f3f1-4968-b584-027827bec718" name="fstatamt" binding="dto.fstatamt" visible="true" caption="金额下限" enable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="cfe73f6e-0e7e-4efe-b66c-34413174ceb5" name="fendamt" binding="dto.fendamt" visible="true" caption="金额上限" enable="true" required="true"/>
+    </contentareanode>
+    <contentareanode id="c1f14e25-f2ee-4c94-95a2-1505c92830fb" name="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="067a087a-14a9-408c-8f56-f0b200d7c9b7" name="维护查询结果" binding="pagingcontext" caption="维护查询结果" tabletype="paging" refsingleclickdirection="aea646f3-db89-49a4-96f2-7bce1f33a6fc">
+        <columnlist id="dfec74f5-3ef7-414c-a192-888311162698" name="strecode" binding="strecode" caption="国库主体代码"/>
+        <columnlist id="7dc3fbcd-ef78-4900-bf17-8618a7ee2694" name="sbiztype" binding="sbiztype" caption="业务类型"/>
+        <columnlist id="7526eec6-f63a-480f-ac9c-ef3358082bdb" name="samtflag" binding="samtflag" caption="金额区间标识"/>
+        <columnlist id="caa43f9f-db52-4e18-9361-8697a372240f" name="fstatamt" binding="fstatamt" visible="true" caption="金额下限" enable="true"/>
+        <columnlist id="e302af69-cc32-4c7b-8f4c-5c618aa1444a" name="fendamt" binding="fendamt" caption="金额上限"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="e9f10840-0669-4184-a7a4-c99216a2277c" name="修改界面">
+      <widgetRefs xsi:type="model:Combo" id="514aa57b-bd6c-412b-b6e4-5d2124a4bc29" name="国库主体代码" binding="dto.strecode" caption="国库主体代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="204d9916-3c8b-46d8-bc6a-816462b0b847" name="业务类型" binding="dto.sbiztype" caption="业务类型" display="svaluecmt" underly="stypecode" modelsource="biztypelist"/>
+      <widgetRefs xsi:type="model:Text" id="4619a4ac-f6bc-4a17-99dd-7914e7e1609b" name="samtflag" binding="dto.samtflag" visible="true" caption="金额区间标识" enable="true" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="965a46bc-b035-4098-9183-37f39aea00ec" name="金额单位" binding="moneyUnit" caption="金额单位" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#4becbd9c-60df-4c15-aec5-13e3c4016b00"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="8947cd0d-605b-47d2-ab31-d36eb95998d3" name="fstatamt" binding="dto.fstatamt" caption="金额下限" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5039349b-2983-450e-8315-056e3d7581cd" name="fendamt" binding="dto.fendamt" visible="true" caption="金额上限" enable="true" required="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="62bc794d-6c05-456c-82b4-dab430b54342">
+    <pages id="0ed357c7-e88f-4384-9657-8a360295c3f6" name="参数维护信息">
+      <views id="736683f6-da25-4482-919d-5d14cf293713" name="维护界面" isdefault="true" contentArea="c1f14e25-f2ee-4c94-95a2-1505c92830fb">
+        <buttonArea id="5e6e7a2c-b65a-4ea8-8137-430cce418912" name="JButtonAreaImpl-5e6e7a2c-b65a-4ea8-8137-430cce418912">
+          <buttons id="1a62466f-9441-499f-a6d7-13f83f165ad3" name="录入" caption="录入" direction="30038633-4e60-4df4-be06-251bdd0a4b03"/>
+          <buttons id="e48c9d9f-4d39-433e-95b3-ac97da96f2f3" name="删除" caption="删除" direction="cd66e956-2149-402b-bc22-631ebb75a03c"/>
+          <buttons id="fb05a81f-9bac-4043-b435-62994694219d" name="修改" caption="修改" direction="83117bfd-c8d5-4f7c-a623-05f76863d5cc"/>
+        </buttonArea>
+      </views>
+      <views id="d581a51c-2d3c-4cbb-822d-ba88a1c377dd" name="录入界面" contentArea="b6c8d001-e5dd-40f3-b95b-d361637abcf7">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="8e385182-b937-4d93-a91c-216f20ded955" name="JButtonAreaImpl-8e385182-b937-4d93-a91c-216f20ded955">
+          <buttons id="31e38bf0-7e61-4474-9711-4a612c21ede5" name="录入保存" caption="保存" checkrequired="true" direction="4cedab7e-4ddf-4d92-a475-b1b6c375082e"/>
+          <buttons id="cec405bc-851a-4a13-b24b-752f634172eb" name="返回" caption="返回" direction="daa6fe8c-cc27-48b2-94d5-ae3ef32a06b4"/>
+        </buttonArea>
+      </views>
+      <views id="c8c92f2e-62d7-44cd-ac22-af0723178641" name="修改界面" contentArea="e9f10840-0669-4184-a7a4-c99216a2277c">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="c280c79d-cf76-41c6-b786-51aa82568ea3" name="JButtonAreaImpl-8e385182-b937-4d93-a91c-216f20ded95">
+          <buttons id="9c3cc8b1-3047-4f5f-9226-41f4faa08a69" name="修改保存" caption="保存" direction="abaa7f55-6e64-472b-af01-4506099760e3"/>
+          <buttons id="5f260b8e-4363-4ce3-a9b1-7bd9b665173b" name="返回" caption="返回" direction="daa6fe8c-cc27-48b2-94d5-ae3ef32a06b4"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

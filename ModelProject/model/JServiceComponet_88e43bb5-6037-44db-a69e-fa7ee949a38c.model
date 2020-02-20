@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="88e43bb5-6037-44db-a69e-fa7ee949a38c" name="对账信息服务组件" ename="TfReconciliation">
+  <jproperties id="5e9325ba-74b4-4a1b-8e21-ed5040e20acd" key="GeneratedTime" value="1491286715991"/>
+  <refModule href="JModule_f0c9c799-c534-4dda-a43b-45de98da3d6d.model#f0c9c799-c534-4dda-a43b-45de98da3d6d"/>
+  <methods id="5ef1e441-20ca-46e0-a7fd-e75d0b1ae3eb" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="对账信息">
+    <methodParams id="2c0ff20c-9c46-455c-bb0e-3143278c191f" name="对账信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+    <methodExceptions id="297b5d89-dda5-4f28-9942-61eab049a33f" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="a17fb07a-dfc2-4918-90f3-c0cba68e21cb" ename="findInfo" name="查询" codecomment="查询" returntype="java.util.List" remark="对账信息查询">
+    <methodParams id="02bde336-248b-46d0-a172-6e3a06378b25" name="对账信息" ename="classInfo" type="java.lang.Class" codecomment="codecomment信息"/>
+    <methodExceptions id="f56bfd1c-f19f-4dd7-b1fc-64ddbc803d89" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="5042e216-e995-4f60-a3db-94a04a8fb392" ename="findInfo" name="查询" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="14db737f-57a0-4571-80b7-d768d9589b21" name="类" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="875a57a4-c4c4-4906-9e64-5f37000ff0cc" name="请求" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodExceptions id="525a6d39-e1c8-4ba3-9d86-db6ee95e9c03" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="2c80213b-73b8-40c4-8fc0-2ef198bad5ee" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="2e1444d4-0e35-47b6-af51-0e9a47e61d40" name="对账信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+    <methodExceptions id="3a34c417-91b0-451b-a66f-37c3ab43fa03" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="86d3e079-0106-4673-b182-6fa99fbbe65a" ename="modifyInfo" name="修改" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto">
+    <methodParams id="eae23d28-d07d-445c-bb5d-fd47e30bd2a0" name="对账信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+    <methodExceptions id="8b5f407b-a4fd-4394-8398-2f4054b02ea5" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="63444887-adf4-4aca-b2fd-62acf6f7c5eb" ename="submitInfo" name="提交" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto">
+    <methodParams id="b13f842a-a81a-4315-bed2-cbe742bf5890" name="对账信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+    <methodExceptions id="281f6f5c-be33-4242-a611-36a507aa5279" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="7bd1f42c-d714-4ad5-bdb6-2925bbf3720b" ename="checkInfo" name="审批" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto">
+    <methodParams id="7e4cb742-9a94-41fc-8e74-54a80c399012" name="对账信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+    <methodExceptions id="d15b83c7-c2e0-44c9-ab6c-3a35e1e80116" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

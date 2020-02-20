@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK"?>
+<Voucher>
+	<Id>${Voucher.Id}</Id>
+	<AdmDivCode>${Voucher.AdmDivCode}</AdmDivCode> 
+	<StYear>${Voucher.StYear}</StYear>
+	<VtCode>${Voucher.VtCode}</VtCode> 
+	<VouDate>${Voucher.VouDate}</VouDate>
+	<VoucherNo>${Voucher.VoucherNo}</VoucherNo> 
+	<BillKind>${Voucher.BillKind}</BillKind>
+	<ReportDate>${Voucher.ReportDate}</ReportDate>
+	<FinOrgCode>${Voucher.FinOrgCode}</FinOrgCode>
+	<TreCode>${Voucher.TreCode}</TreCode>
+	<TreName>${Voucher.TreName}</TreName>
+	<SumMoney>${Voucher.SumMoney}</SumMoney>
+	<BgtTypeCode>${Voucher.BgtTypeCode}</BgtTypeCode>
+	<BgtTypeName>${Voucher.BgtTypeName}</BgtTypeName>
+	<BelongFlag>${Voucher.BelongFlag}</BelongFlag>
+	<TrimFlag>${Voucher.TrimFlag}</TrimFlag>
+	<PayType>${Voucher.PayType}</PayType>
+	<Hold1>${Voucher.Hold1}</Hold1>
+	<Hold2>${Voucher.Hold2}</Hold2>
+	<#list Voucher.DetailList as var1>
+	<DetailList>
+	  <#list var1.Detail as var>
+	  <Detail>
+		  <ExpFuncCode>${var.ExpFuncCode}</ExpFuncCode>
+		  <ExpFuncName>${var.ExpFuncName}</ExpFuncName>
+		  <DayAmt>${var.DayAmt}</DayAmt>
+		  <TenDayAmt>${var.TenDayAmt}</TenDayAmt>
+		  <MonthAmt>${var.MonthAmt}</MonthAmt>
+		  <QuarterAmt>${var.QuarterAmt}</QuarterAmt>
+	  	  <YearAmt>${var.YearAmt}</YearAmt>
+		  <Hold1>${var.Hold1}</Hold1>
+	  	  <Hold2>${var.Hold2}</Hold2>
+		  <Hold3>${var.Hold3}</Hold3>
+		  <Hold4>${var.Hold4}</Hold4>		  
+	 </Detail>
+	</#list> 
+	</DetailList>
+	</#list> 
+</Voucher>

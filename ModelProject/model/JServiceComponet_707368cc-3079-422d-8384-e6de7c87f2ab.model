@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="707368cc-3079-422d-8384-e6de7c87f2ab" name="代理库清算回执服务组件" ename="TfFundClearReceipt">
+  <jproperties id="5187ea19-a96e-47cd-9ab6-99a7c9a9225f" key="GeneratedTime" value="1509179458528"/>
+  <refModule href="JModule_bae41fa4-5c6d-4092-97d9-e94d1b4b27e6.model#bae41fa4-5c6d-4092-97d9-e94d1b4b27e6"/>
+  <methods id="0afe3d67-fd73-4447-8a72-155b22d9cfe3" ename="findInfo" name="查询" codecomment="查询" returntype="java.util.List" remark="代理库清算回执查询">
+    <methodParams id="9938b4e0-72b0-420b-9215-a1fe3229196f" name="代理库清算回执" ename="classInfo" type="java.lang.Class" codecomment="codecomment信息"/>
+    <methodExceptions id="907cdb16-0b5f-4f5a-9d09-6132a0042739" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+  <methods id="b6c26beb-e91b-45bd-906c-149b6990fa92" ename="findInfo" name="查询" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="77fb846a-25d0-487b-b3de-efd6fe7dfd08" name="类" ename="idto" type="com.cfcc.jaf.persistence.jaform.parent.IDto"/>
+    <methodParams id="ccb8158d-a7a2-4e66-947f-d29c5959fc60" name="请求" ename="request" type="com.cfcc.jaf.common.page.PageRequest"/>
+    <methodExceptions id="a14753e2-9b37-4948-be26-b96d8f4bf0f4" type="com.cfcc.itfe.exception.ITFEBizException"/>
+  </methods>
+</model:JServiceComponent>

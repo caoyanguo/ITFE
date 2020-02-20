@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+	<MSG>
+		<SingleReturn2001>
+			<OriTaxOrgCode>${cfx.MSG.SingleReturn2001.OriTaxOrgCode}</OriTaxOrgCode>
+			<OriTraNo>${cfx.MSG.SingleReturn2001.OriTraNo}</OriTraNo>
+			<OriEntrustDate>${cfx.MSG.SingleReturn2001.OriEntrustDate}</OriEntrustDate>
+			<TaxVouNo>${cfx.MSG.SingleReturn2001.TaxVouNo}</TaxVouNo>
+			<TaxDate>${cfx.MSG.SingleReturn2001.TaxDate}</TaxDate>
+			<Result>${cfx.MSG.SingleReturn2001.Result}</Result>
+			<AddWord>${cfx.MSG.SingleReturn2001.AddWord}</AddWord>
+		</SingleReturn2001>
+	</MSG>
+</CFX>

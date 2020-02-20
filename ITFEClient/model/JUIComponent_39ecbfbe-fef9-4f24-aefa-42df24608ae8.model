@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="39ecbfbe-fef9-4f24-aefa-42df24608ae8" name="会计账号表维护" ename="TdBookacctMain" shared="true">
+  <jproperties id="45cd6846-3fed-4d59-83bc-a77098a4ee8b" key="GeneratedTime" value="1380182597734"/>
+  <refModule href="JModule_9969d8fd-6883-44e6-86e5-437e0d7b4814.model#9969d8fd-6883-44e6-86e5-437e0d7b4814"/>
+  <model id="758f86ce-7789-498b-b5f0-5a06045a7168" name="JModelImpl-758f86ce-7789-498b-b5f0-5a06045a7168">
+    <attributes id="28bcde3e-8be3-485a-beaf-cccfb533ee5c" name="dto" type="com.cfcc.itfe.persistence.dto.TdBookacctMainDto"/>
+    <attributes id="076c3190-a76f-4eac-a446-43d7c1040ff1" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <attributes id="c8c28628-01d3-4d7a-aed4-33353c35affe" name="finddto" type="com.cfcc.itfe.persistence.dto.TdBookacctMainDto"/>
+    <directions id="218084d3-8f68-4c99-9256-32ce8493cd3d" viewers="e3f739d1-b309-4e41-81dc-09c2d4176b93" name="跳转录入界面" ename="goInput"/>
+    <directions id="62e70961-29c8-414c-b58b-21d6f7520af6" name="录入保存" ename="inputSave"/>
+    <directions id="996cc542-ba97-4f4e-8218-bd8076e52d88" viewers="a31ba79f-ac60-4d99-aace-878c8d809caf" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="fc09a388-8c15-42f7-b2a0-1f1b6e52c18a" name="单选" ename="singleSelect"/>
+    <directions id="1ad258a7-6425-4a8b-862e-3b0daafa4e5e" name="删除" ename="delete"/>
+    <directions id="ba95f791-f156-4d0a-9b9c-355e9bea1aec" viewers="72263f4f-090c-4931-a4cf-c4dc734c7ce3" name="到修改界面" ename="goModify"/>
+    <directions id="96a61411-a89b-461b-8f26-c1ff1a3d1817" name="修改保存" ename="modifySave"/>
+    <directions id="d13cbcee-eb6d-4953-8e73-c6c3d95ec4b7" viewers="a31ba79f-ac60-4d99-aace-878c8d809caf" name="查询" ename="searchRs"/>
+    <directions id="d177d42c-2365-419b-bd83-e0bd41f580a1" viewers="89002a2e-9aab-4898-904f-b4a0f2e17178" name="返回查询界面" ename="rebackSearch"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <services href="JServiceComponet_b46020c6-b5ec-4ca9-b9a1-ecba83edc048.model#b46020c6-b5ec-4ca9-b9a1-ecba83edc048"/>
+  <contentAreas id="8e19cec1-97eb-44d3-92bd-a0668cb5af93">
+    <contentareanode id="d8fb0363-ccae-409b-b214-1a7f3e457099" name="信息录入" grouptitle="信息录入" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="b359ed9a-cffb-45f9-ac8c-d70fb4399a1e" name="sbookacct" binding="dto.sbookacct" caption="会计账号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="b39c01c5-a132-4a51-aaf9-a36bb01d2788" name="sbookacctname" binding="dto.sbookacctname" caption="会计账户名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="1a310201-09ad-4c16-801a-acdf7d36d9bb" name="sbookacctsht" binding="dto.sbookacctsht" caption="会计账户简码"/>
+      <widgetRefs xsi:type="model:Text" id="641d6d22-89e9-47f8-bb38-feb6adaed30a" name="sofbooksbtcode" extpoperties="" binding="dto.sofbooksbtcode" caption="所属会计科目代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="e58bab59-23e5-4dfc-8235-ef3074dccc59" name="cactgenstyle" binding="dto.cactgenstyle" caption="帐户生成方式" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="13403c9e-0a41-4b58-ba64-ee2fd32df2ee" name="dopenacct" binding="dto.dopenacct" caption="开户日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="c20cf878-6f0f-4a82-add4-d42f4e0dee1e" name="dcancelacct" binding="dto.dcancelacct" caption="销户日期"/>
+      <widgetRefs xsi:type="model:Text" id="bf05390f-6bdd-4c61-abf5-792e82edef09" name="cacctprop" binding="dto.cacctprop" caption="账户性质"/>
+      <widgetRefs xsi:type="model:Text" id="a2a85013-70ce-471c-86fa-4ff12a1d7fd2" name="cbookclass" binding="dto.cbookclass" caption="核算类别" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="3f1f15e8-cba5-4c40-9d62-5baa8451fd29" name="cbalanceprop" binding="dto.cbalanceprop" caption="余额性质" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="bd99e716-1e4b-495f-a663-fda77d942307" name="cbalanceort" binding="dto.cbalanceort" caption="余额方向" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5d2d4e65-a6a3-4bef-a1a0-ab862acce1f0" name="cbalancectrl" binding="dto.cbalancectrl" caption="余额控制" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="1a25df3c-e758-45d6-809f-523465818c62" name="fpredateswitchbalance" binding="dto.fpredateswitchbalance" caption="日切前余额"/>
+      <widgetRefs xsi:type="model:Text" id="d4ac0e4f-fcf0-4a7b-b479-79ec94fbe1b6" name="cinterestflag" binding="dto.cinterestflag" caption="计息标志" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="340b9ddb-1344-43ae-aaac-fddb666f2ebe" name="iinteresttypeno" binding="dto.iinteresttypeno" caption="计息类型号"/>
+      <widgetRefs xsi:type="model:Text" id="5ccd4a7b-8a58-429a-ad93-b8eb1547b43f" name="dstartinterest" binding="dto.dstartinterest" caption="起息日期"/>
+      <widgetRefs xsi:type="model:Text" id="5853cad9-90b6-41fe-b064-e09201258cde" name="sspecialorgcode" binding="dto.sspecialorgcode" caption="专用机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="b60b8234-1822-482e-8ff4-1af1eb7e897e" name="isubacctnum" binding="dto.isubacctnum" caption="子账户数"/>
+      <widgetRefs xsi:type="model:Text" id="e8c5a3de-4c4b-499b-bb69-10b9d56dced2" name="softrecode" binding="dto.softrecode" caption="所属国库主体代码"/>
+      <widgetRefs xsi:type="model:Text" id="e49c9bc0-d4ef-427b-8d7f-b85fff9a5ea8" name="cwaitreckflag" binding="dto.cwaitreckflag" caption="是否待报解/待清算" required="true"/>
+    </contentareanode>
+    <contentareanode id="e16ca4cf-7a71-480a-8544-053c2a6e1519" name="维护查询结果" grouptitle="维护查询结果">
+      <widgetRefs xsi:type="model:Table" id="52659230-7f85-48f1-be05-52f606ddba8f" name="maintenanceResult" binding="pagingcontext" caption="维护查询结果" tabletype="paging" pagingtable="" refsingleclickdirection="fc09a388-8c15-42f7-b2a0-1f1b6e52c18a">
+        <columnlist id="d4f3f158-cb9d-4706-86e0-5b8133b74fa0" name="sbookorgcode" binding="sbookorgcode" caption="核算主体代码"/>
+        <columnlist id="9e3ec464-53ad-4b5a-abce-c6c1fe68d2fd" name="sbookacct" binding="sbookacct" caption="会计账号"/>
+        <columnlist id="3b810834-3589-4599-9cf7-6afb1061bfaf" name="sbookacctname" binding="sbookacctname" caption="会计账户名称"/>
+        <columnlist id="df978ca3-2a87-498f-8940-310e6961e4fa" name="sbookacctsht" binding="sbookacctsht" caption="会计账户简码"/>
+        <columnlist id="1be81515-9082-4a2e-830d-3e2ae40b50ab" name="sofbooksbtcode" extpoperties="" binding="sofbooksbtcode" caption="所属会计科目代码"/>
+        <columnlist id="01c518c3-d2f0-444d-bf3f-aaac00e4d505" name="cactgenstyle" binding="cactgenstyle" caption="帐户生成方式"/>
+        <columnlist id="56be52a8-2ed3-444c-b2fd-bd3f6775e163" name="dopenacct" binding="dopenacct" caption="开户日期"/>
+        <columnlist id="cf3ab804-d24e-46ba-94c2-c5347a3725e8" name="dcancelacct" binding="dcancelacct" caption="销户日期"/>
+        <columnlist id="a7454989-35bd-4d6e-993f-25185463cf2b" name="cacctprop" binding="cacctprop" caption="账户性质"/>
+        <columnlist id="ff8dea8d-1d9f-4771-b5ea-d128554b3082" name="cbookclass" binding="cbookclass" caption="核算类别"/>
+        <columnlist id="c4fce5dd-a7cc-4b5b-82d5-3d1e19cbc5e0" name="cbalanceprop" binding="cbalanceprop" caption="余额性质"/>
+        <columnlist id="05538280-6947-4941-b3e7-93c60f8fa3bd" name="cbalanceort" binding="cbalanceort" caption="余额方向"/>
+        <columnlist id="8c355bb7-d7d5-42e4-aeb2-efa907c2be98" name="cbalancectrl" binding="cbalancectrl" caption="余额控制"/>
+        <columnlist id="35223627-b6ed-4656-9761-21f20a8e6ae2" name="fpredateswitchbalance" binding="fpredateswitchbalance" caption="日切前余额"/>
+        <columnlist id="a38d52ac-c5f4-428b-8283-60dcda1a77ee" name="cinterestflag" binding="cinterestflag" caption="计息标志"/>
+        <columnlist id="0751f2fd-baa5-443a-a971-7fd25748adf4" name="iinteresttypeno" binding="iinteresttypeno" caption="计息类型号"/>
+        <columnlist id="64701acd-f45b-472b-8ae3-82c81ce1cda5" name="dstartinterest" binding="dstartinterest" caption="起息日期"/>
+        <columnlist id="a0af7d75-e9b7-4d54-8e6e-5b595c67fc62" name="sspecialorgcode" binding="sspecialorgcode" caption="专用机构代码"/>
+        <columnlist id="bdf6ec6b-cd37-423c-aeca-38976cca476d" name="isubacctnum" binding="isubacctnum" caption="子账户数"/>
+        <columnlist id="9a3ec4d8-0a33-42b6-b547-274402ba3a13" name="softrecode" binding="softrecode" caption="所属国库主体代码"/>
+        <columnlist id="7c0e646a-775a-4006-b7fd-934f753aed41" name="cwaitreckflag" binding="cwaitreckflag" caption="是否待报解/待清算">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#d100127a-bfaa-4bca-be04-61a0be3a9816"/>
+        </columnlist>
+        <columnlist id="ae04fe90-62f4-40a5-84e9-1dfa1bc94993" name="tssysupdate" binding="tssysupdate" caption="系统更新时间"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="75615e19-89f0-4bbe-a0b1-2d49389cb2e3" name="信息修改" grouptitle="信息修改" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="7d333159-16f3-4575-bded-28087d08d29b" name="sbookorgcode" binding="dto.sbookorgcode" caption="核算主体代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="29a6fff9-ce20-4d2f-9874-88315ddf3c57" name="sbookacct" binding="dto.sbookacct" caption="会计账号" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="385fd8f7-8060-4d78-814f-2c5e7717977d" name="sbookacctname" binding="dto.sbookacctname" caption="会计账户名称" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="5f7cc335-b5be-4981-bae1-45527c69f43f" name="sbookacctsht" binding="dto.sbookacctsht" caption="会计账户简码"/>
+      <widgetRefs xsi:type="model:Text" id="7537b581-e4d5-4e31-a3d9-d10bb35ad7aa" name="sofbooksbtcode" extpoperties="" binding="dto.sofbooksbtcode" caption="所属会计科目代码" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="d24d3da0-2dc5-46ef-a1a8-d4091a37c2cf" name="cactgenstyle" binding="dto.cactgenstyle" caption="帐户生成方式" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="ed02989b-f126-478c-8b0a-5b695b9b8385" name="dopenacct" binding="dto.dopenacct" caption="开户日期" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="7fa2dc71-8f75-49af-951b-20bedb917efe" name="dcancelacct" binding="dto.dcancelacct" caption="销户日期"/>
+      <widgetRefs xsi:type="model:Text" id="79410f38-ae02-49f5-a9e8-fb91d2f61bb8" name="cacctprop" binding="dto.cacctprop" caption="账户性质"/>
+      <widgetRefs xsi:type="model:Text" id="e47cb28d-2c16-4538-8d62-dce7a9bf9b2b" name="cbookclass" binding="dto.cbookclass" caption="核算类别" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="dc53cff6-1528-439c-9d1a-3db81d1812f9" name="cbalanceprop" binding="dto.cbalanceprop" caption="余额性质" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="404af17c-996d-41f7-8619-6abcaf6647fd" name="cbalanceort" binding="dto.cbalanceort" caption="余额方向" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="fc826fb4-9657-4e54-bb52-5be7497d9049" name="cbalancectrl" binding="dto.cbalancectrl" caption="余额控制" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="941293b7-bf41-44af-9f83-1c28bc15e511" name="fpredateswitchbalance" binding="dto.fpredateswitchbalance" caption="日切前余额"/>
+      <widgetRefs xsi:type="model:Text" id="ea7b51a0-b5db-495f-b16e-26d08e2b0cf3" name="cinterestflag" binding="dto.cinterestflag" caption="计息标志" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="8a882359-36ec-4259-84e1-b380607f91ae" name="iinteresttypeno" binding="dto.iinteresttypeno" caption="计息类型号"/>
+      <widgetRefs xsi:type="model:Text" id="f006c7b5-88ad-44c6-bd1f-dca82ac15fbd" name="dstartinterest" binding="dto.dstartinterest" caption="起息日期"/>
+      <widgetRefs xsi:type="model:Text" id="37963e47-ccf5-4e4d-b40b-35934221b65a" name="sspecialorgcode" binding="dto.sspecialorgcode" caption="专用机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="c7678d39-f71d-4e3e-a90b-ea8297fcad4b" name="isubacctnum" binding="dto.isubacctnum" caption="子账户数"/>
+      <widgetRefs xsi:type="model:Text" id="133d4dea-fd59-4758-b708-8d7a50e2566a" name="softrecode" binding="dto.softrecode" caption="所属国库主体代码"/>
+      <widgetRefs xsi:type="model:Text" id="155914f5-b736-4b2c-b359-b9c2f4426c23" name="cwaitreckflag" binding="dto.cwaitreckflag" caption="是否待报解/待清算" required="true"/>
+    </contentareanode>
+    <contentareanode id="adc50888-931a-4f87-ad54-bf292e0e0f29" name="查询条件" grouptitle="查询条件" columnnum="2">
+      <widgetRefs xsi:type="model:Text" id="e2548615-f9f6-48a2-8643-d8dc58d6f2ad" name="sbookacct" binding="finddto.sbookacct" caption="会计账号"/>
+      <widgetRefs xsi:type="model:Text" id="a625a1e1-0e77-47c4-9cb9-eb65ceddc711" name="sbookacctname" binding="finddto.sbookacctname" caption="会计账户名称"/>
+      <widgetRefs xsi:type="model:Text" id="051f2253-177e-4704-ab46-a1758695e480" name="sbookacctsht" binding="finddto.sbookacctsht" caption="会计账户简码"/>
+      <widgetRefs xsi:type="model:Text" id="acab2cf1-9b07-4d83-8eea-819b6a079454" name="sofbooksbtcode" extpoperties="" binding="finddto.sofbooksbtcode" caption="所属会计科目代码"/>
+      <widgetRefs xsi:type="model:Text" id="7a1283e5-bee8-4faf-bffb-d52d6b7327a9" name="cactgenstyle" binding="finddto.cactgenstyle" caption="帐户生成方式"/>
+      <widgetRefs xsi:type="model:Text" id="99f3084c-f52f-4204-ae7e-727eaa4c1830" name="dopenacct" binding="finddto.dopenacct" caption="开户日期"/>
+      <widgetRefs xsi:type="model:Text" id="62ac2718-6b85-4a48-b572-2013dfd9f47d" name="dcancelacct" binding="finddto.dcancelacct" caption="销户日期"/>
+      <widgetRefs xsi:type="model:Text" id="9653dbb9-b2e6-420b-8d2d-81f62ca62f73" name="cacctprop" binding="finddto.cacctprop" caption="账户性质"/>
+      <widgetRefs xsi:type="model:Text" id="fb0111b3-7885-4a1f-9e86-7e2389385d4c" name="cbookclass" binding="finddto.cbookclass" caption="核算类别"/>
+      <widgetRefs xsi:type="model:Text" id="fa422968-16a5-4fb9-aa77-b7743e36f20f" name="cbalanceprop" binding="finddto.cbalanceprop" caption="余额性质"/>
+      <widgetRefs xsi:type="model:Text" id="a0346b12-42a3-416a-bb4a-3f33b47ff8de" name="cbalanceort" binding="finddto.cbalanceort" caption="余额方向"/>
+      <widgetRefs xsi:type="model:Text" id="1bf43d21-8531-4c88-a4c1-8eef6a8c41d8" name="cbalancectrl" binding="finddto.cbalancectrl" caption="余额控制"/>
+      <widgetRefs xsi:type="model:Text" id="18281b72-ef59-4b3b-9919-90d2a047accf" name="fpredateswitchbalance" binding="finddto.fpredateswitchbalance" caption="日切前余额"/>
+      <widgetRefs xsi:type="model:Text" id="13a18cff-fca7-478b-a5ca-4d9894e3becc" name="cinterestflag" binding="finddto.cinterestflag" caption="计息标志"/>
+      <widgetRefs xsi:type="model:Text" id="b2496002-9afc-4055-86c7-a96cc7c2173e" name="iinteresttypeno" binding="finddto.iinteresttypeno" caption="计息类型号"/>
+      <widgetRefs xsi:type="model:Text" id="40f50948-10ed-4090-b9a0-f5b89002e988" name="dstartinterest" binding="finddto.dstartinterest" caption="起息日期"/>
+      <widgetRefs xsi:type="model:Text" id="bfe95c7c-2a4c-49e4-abdd-5decff470935" name="sspecialorgcode" binding="finddto.sspecialorgcode" caption="专用机构代码"/>
+      <widgetRefs xsi:type="model:Text" id="f497eba6-8977-49e5-a899-ea0c129139c1" name="isubacctnum" binding="finddto.isubacctnum" caption="子账户数"/>
+      <widgetRefs xsi:type="model:Text" id="31467931-2782-4b39-98f1-e1a5223a3b09" name="softrecode" binding="finddto.softrecode" caption="所属国库主体代码"/>
+      <widgetRefs xsi:type="model:Text" id="1c4a170b-61de-497e-90d2-5737d10600ed" name="cwaitreckflag" binding="finddto.cwaitreckflag" caption="是否待报解/待清算"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="ce10fc09-6631-4578-bbbd-bf322382221e">
+    <pages id="8695bf32-30f2-45ed-a4ee-f72e6ce87033" name="会计账号表维护">
+      <views id="89002a2e-9aab-4898-904f-b4a0f2e17178" name="查询界面" isdefault="true" contentArea="adc50888-931a-4f87-ad54-bf292e0e0f29">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="0a00841d-805d-4300-af6b-cd9ac6f3dfa1" name="JButtonAreaImpl-0a00841d-805d-4300-af6b-cd9ac6f3dfa1">
+          <buttons id="bad73af9-b788-4bec-852c-be2b4f10475b" name="查询" caption="查询" direction="d13cbcee-eb6d-4953-8e73-c6c3d95ec4b7"/>
+        </buttonArea>
+      </views>
+      <views id="a31ba79f-ac60-4d99-aace-878c8d809caf" name="维护界面" contentArea="e16ca4cf-7a71-480a-8544-053c2a6e1519">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="93a5badd-af82-4ba6-89c2-f83fdae7ddcf" name="JButtonAreaImpl-93a5badd-af82-4ba6-89c2-f83fdae7ddcf">
+          <buttons id="c0471872-2011-4fa4-8b24-470d1f88604b" name="录入" caption="录入" direction="218084d3-8f68-4c99-9256-32ce8493cd3d"/>
+          <buttons id="e40af7d7-39c6-43b8-ae7d-aefe04e02384" name="删除" caption="删除" direction="1ad258a7-6425-4a8b-862e-3b0daafa4e5e"/>
+          <buttons id="acd5c83d-f759-4b8b-b239-91ad01033a59" name="修改" caption="修改" direction="ba95f791-f156-4d0a-9b9c-355e9bea1aec"/>
+          <buttons id="5392cf50-ea02-4569-9233-b44c6077309a" name="返回" caption="返回" direction="d177d42c-2365-419b-bd83-e0bd41f580a1"/>
+        </buttonArea>
+      </views>
+      <views id="72263f4f-090c-4931-a4cf-c4dc734c7ce3" name="修改界面" contentArea="75615e19-89f0-4bbe-a0b1-2d49389cb2e3">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="92694512-9157-4281-8d32-e7e23c5a503f" name="JButtonAreaImpl-92694512-9157-4281-8d32-e7e23c5a503f">
+          <buttons id="973259c6-cae1-447a-867f-af985443e725" name="保存" caption="保存" checkrequired="true" direction="96a61411-a89b-461b-8f26-c1ff1a3d1817"/>
+          <buttons id="acc2c1dc-f51a-4edb-949a-b1d6f1f849a7" name="返回" caption="返回" direction="996cc542-ba97-4f4e-8218-bd8076e52d88"/>
+        </buttonArea>
+      </views>
+      <views id="e3f739d1-b309-4e41-81dc-09c2d4176b93" name="录入界面" contentArea="d8fb0363-ccae-409b-b214-1a7f3e457099">
+        <refuiprocessors href="UiProcessorsNode_48993b95-20ec-4bc0-bffa-4fd62486692e.model#14c32cd6-047f-4b7e-87e9-0cccf8f7cc2f"/>
+        <buttonArea id="9b007a89-502e-41d6-9276-fe6d896297e4" name="JButtonAreaImpl-9b007a89-502e-41d6-9276-fe6d896297e4">
+          <buttons id="1248795c-8483-4921-9def-c58458b056a2" name="保存" caption="保存" checkrequired="true" direction="62e70961-29c8-414c-b58b-21d6f7520af6"/>
+          <buttons id="45198dd5-5296-46a6-88eb-accf7d5a4628" name="返回" caption="返回" direction="996cc542-ba97-4f4e-8218-bd8076e52d88"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

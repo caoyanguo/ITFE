@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="cd3bbf39-ca58-4e29-91e7-e679fdfc7353" name="财政调拨支出预算科目维护" ename="TsFinmovepaysub">
+  <jproperties id="5da1ad52-eff0-4db6-a5d3-878d3c642a3e" key="GeneratedTime" value="1567751047791"/>
+  <refModule href="JModule_5652109e-b12f-40ea-8532-c1fc940a7bb9.model#5652109e-b12f-40ea-8532-c1fc940a7bb9"/>
+  <model id="088369ad-44fa-4e74-bbd3-9d71e9a076f2" name="JModelImpl-088369ad-44fa-4e74-bbd3-9d71e9a076f2">
+    <attributes id="b2498bac-e177-409f-99ef-c7479a687b23" name="dto" type="com.cfcc.itfe.persistence.dto.TsFinmovepaysubDto"/>
+    <attributes id="0c95d765-fc87-4763-a2c0-0f36e58c0c68" name="pagingContext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="ee0dfd92-d1fb-4fe4-8b98-5ba08be646e8" viewers="912ebf7d-34cc-4a97-b8f4-26d03a4ba19c" name="转到财政调拨支出录入" ename="toFinmovepaysave"/>
+    <directions id="457f2abe-7175-46c3-bb4b-bde3c6a34eda" name="财政调拨支出删除" ename="finmovepayDelete"/>
+    <directions id="09d8f586-73c2-402d-88f3-66402378d0ed" viewers="1dfcd493-23e5-4478-a62b-285180b19acf" name="转到财政调拨支出修改" ename="toFinmovepaymodify"/>
+    <directions id="c808d192-74bf-4d81-aa7d-0749a6f8bf2c" viewers="86358fb9-06cd-4ac2-89cc-2ff79cf55c37" name="财政调拨支出录入" ename="finmovepaySave"/>
+    <directions id="333f2b8d-d365-4fb2-ad18-f3b3fd104460" viewers="86358fb9-06cd-4ac2-89cc-2ff79cf55c37" name="转到财政调拨指出列表" ename="toFinmovepaylist"/>
+    <directions id="129850a8-800e-45ac-a021-da6a7c5bb6f7" viewers="86358fb9-06cd-4ac2-89cc-2ff79cf55c37" name="财政调拨支出修改" ename="finmovepayModify"/>
+    <directions id="715bfe16-9144-488f-91d6-9a4e1bff96c9" name="单击选中对象" ename="clickSelect"/>
+  </model>
+  <services href="JServiceComponet_0aac7b3e-8f34-4e52-80d3-8b886b63a0da.model#0aac7b3e-8f34-4e52-80d3-8b886b63a0da"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="5826b3a4-1644-483e-ba0e-9d8d6896ef9c">
+    <contentareanode id="991738c5-32db-46e7-94d7-83e1145af9ec" name="财政调拨支出列表" grouptitle="财政调拨支出列表">
+      <widgetRefs xsi:type="model:Table" id="1772c98d-5b8f-427f-837c-6ce42ed55067" name="财政调拨支出列表" binding="pagingContext" visible="true" caption="财政调拨支出列表" enable="true" editable="false" tabletype="paging" refsingleclickdirection="715bfe16-9144-488f-91d6-9a4e1bff96c9">
+        <columnlist id="e545a34b-fb5f-475e-85a4-3996d7cf4125" name="核算主体代码" binding="sorgcode" visible="true" caption="核算主体代码" enable="true" editable="false"/>
+        <columnlist id="858eb19e-24c2-477b-9e87-2379e10349e0" name="修改前科目代码" binding="ssubjectcode" visible="true" caption="修改前科目代码" enable="true" editable="false"/>
+        <columnlist id="a531681f-4923-4ffc-ae78-4b4d60e4538a" name="修改后科目代码" binding="ssubjectname" visible="true" caption="修改后科目代码" enable="true" editable="false"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="a4f4c42f-876f-45ac-b36d-829c4880c2b7" name="财政调拨支出录入" grouptitle="财政调拨支出录入">
+      <widgetRefs xsi:type="model:Text" id="88fd9228-2760-40ff-890d-c88d33052636" name="核算主体代码" binding="updto.sorgcode" visible="true" caption="核算主体代码" enable="false" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="98d80bb0-9ecd-4b92-a701-e06b6c2f80b0" name="修改前科目代码" binding="updto.ssubjectcode" visible="true" caption="修改前科目代码" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="d6e7ac21-c1dc-4544-9e7a-ee665a80c5ad" name="修改后科目代码" binding="updto.ssubjectname" visible="true" caption="修改后科目代码" enable="true" editable="true" required="true"/>
+    </contentareanode>
+    <contentareanode id="598a18bf-4577-4308-ae14-f67a1a75554e" name="财政调拨支出修改" grouptitle="财政调拨支出修改">
+      <widgetRefs xsi:type="model:Text" id="d6ca8e04-4dc8-415c-a483-b124e5eae0a8" name="核算主体代码" binding="updto.sorgcode" visible="true" caption="核算主体代码" enable="false" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="aa92fae3-5bf0-4ab9-ae53-d53076beefed" name="修改前科目代码" binding="updto.ssubjectcode" visible="true" caption="修改前科目代码" enable="true" editable="true" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="34cb8fc6-a8ec-4165-96fa-32e915281966" name="修改后科目代码" binding="updto.ssubjectname" visible="true" caption="修改后科目代码" enable="true" editable="true" required="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="2f5ff1ba-ae1a-4822-9784-2ec3adba1779">
+    <pages id="4968f926-6bfe-4725-8a21-56277c337c3d" name="财政调拨支出界面">
+      <views id="86358fb9-06cd-4ac2-89cc-2ff79cf55c37" name="财政调拨指出列表" isdefault="true" contentArea="991738c5-32db-46e7-94d7-83e1145af9ec">
+        <buttonArea id="ab24d8d0-2d25-4076-8e8a-3edf7aab0b75" name="JButtonAreaImpl-ab24d8d0-2d25-4076-8e8a-3edf7aab0b75">
+          <buttons id="ef02df38-6fab-4f8f-8e1b-c07ea1516050" name="录入" visible="true" caption="录入" enable="true" editable="false" direction="ee0dfd92-d1fb-4fe4-8b98-5ba08be646e8"/>
+          <buttons id="4e46639a-0271-403e-937b-ce8578690240" name="删除" visible="true" caption="删除" enable="true" editable="false" direction="457f2abe-7175-46c3-bb4b-bde3c6a34eda"/>
+          <buttons id="0455bc59-fafd-45d2-a826-568fc63a65dc" name="修改" visible="true" caption="修改" enable="true" editable="false" direction="09d8f586-73c2-402d-88f3-66402378d0ed"/>
+        </buttonArea>
+      </views>
+      <views id="912ebf7d-34cc-4a97-b8f4-26d03a4ba19c" name="财政调拨支出录入" contentArea="a4f4c42f-876f-45ac-b36d-829c4880c2b7">
+        <buttonArea id="0fb559f6-6c08-4e28-bd90-bbc58ddd6e79" name="JButtonAreaImpl-0fb559f6-6c08-4e28-bd90-bbc58ddd6e79">
+          <buttons id="b5738808-ca5a-4b5c-8874-f4732145b3de" name="保存" visible="true" caption="保存" enable="true" editable="false" checkrequired="true" direction="c808d192-74bf-4d81-aa7d-0749a6f8bf2c"/>
+          <buttons id="1ab16d7f-8875-4030-9f55-27d383cde6a7" name="返回" visible="true" caption="返回" enable="true" editable="false" direction="333f2b8d-d365-4fb2-ad18-f3b3fd104460"/>
+        </buttonArea>
+      </views>
+      <views id="1dfcd493-23e5-4478-a62b-285180b19acf" name="财政调拨支出修改" contentArea="598a18bf-4577-4308-ae14-f67a1a75554e">
+        <buttonArea id="700d09fb-0491-4000-b1ba-60ec278554cb" name="JButtonAreaImpl-0fb559f6-6c08-4e28-bd90-bbc58ddd6e79">
+          <buttons id="6d6e829f-af1e-4f33-8cce-ffa80660b09e" name="提交" visible="true" caption="提交" enable="true" editable="false" checkrequired="true" direction="129850a8-800e-45ac-a021-da6a7c5bb6f7"/>
+          <buttons id="2664ff49-181a-4c56-b3d1-dc4cbff8946f" name="返回" visible="true" caption="返回" enable="true" editable="false" direction="333f2b8d-d365-4fb2-ad18-f3b3fd104460"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

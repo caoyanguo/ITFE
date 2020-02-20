@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8b4d8f2f-e756-4ee1-96f7-4200ba456a95" name="导出回执给国税" ename="ExpRecTotaxOrg" shared="false">
+  <jproperties id="96197e91-d84b-4e6b-bb5f-33a115fa5b4c" key="GeneratedTime" value="1256468868390"/>
+  <refModule href="JModule_a60b23f2-ce4c-4bfb-8501-4ea050f0bed4.model#a60b23f2-ce4c-4bfb-8501-4ea050f0bed4"/>
+  <methods id="dabefd33-1eeb-436e-8f94-48616bd7757e" ename="exportRece" name="生成回执" codecomment="生成回执" returntype="java.util.ArrayList">
+    <methodParams id="ba2c2182-18af-4456-94b1-138a69836ccf" name="批次号列表" ename="batchNum" type="java.util.ArrayList" codecomment="批次号列表"/>
+  </methods>
+</model:JServiceComponent>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="3d164807-851d-4803-aed8-4b035fe58aca" name="转发银行服务组件" ename="TsConverttobank">
+  <jproperties id="411bf13f-4b9c-4497-9a63-090865fe7a07" key="GeneratedTime" value="1330485996312"/>
+  <refModule href="JModule_7741fe02-eef5-4677-aa2a-3021d35772ab.model#7741fe02-eef5-4677-aa2a-3021d35772ab"/>
+  <methods id="c90bfb54-104c-4975-9d33-38ad0a1b79e6" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="转发银行">
+    <methodParams id="22d9a9fc-4a12-4bb5-90ac-e24f14433e29" name="转发银行" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="fa271c6e-9cec-4edb-86fc-e90f0baa2d78" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="840a89d4-3ea2-45a6-a602-d68272dcd31c" name="转发银行" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="fa271c6e-9cec-4edb-86fc-e90f0baa2d78" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="5e44451b-a134-4844-b384-24c76c06c7bc" name="转发银行" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+</model:JServiceComponent>

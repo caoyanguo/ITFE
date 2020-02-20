@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK"?>
+<CFX>
+	<HEAD>
+		<VER>${cfx.HEAD.VER}</VER>
+		<SRC>${cfx.HEAD.SRC}</SRC>
+		<DES>${cfx.HEAD.DES}</DES>
+		<APP>${cfx.HEAD.APP}</APP>
+		<MsgNo>${cfx.HEAD.MsgNo}</MsgNo>
+		<MsgID>${cfx.HEAD.MsgID}</MsgID>
+		<MsgRef>${cfx.HEAD.MsgRef}</MsgRef>
+		<WorkDate>${cfx.HEAD.WorkDate}</WorkDate>
+	</HEAD>
+	<MSG>
+		<BillHead3139>
+			<FinOrgCode>${cfx.MSG.BillHead3139.FinOrgCode}</FinOrgCode>
+			<TreCode>${cfx.MSG.BillHead3139.TreCode}</TreCode>
+			<InTreDate>${cfx.MSG.BillHead3139.InTreDate}</InTreDate>
+			<PackNo>${cfx.MSG.BillHead3139.PackNo}</PackNo>
+			<ChildPackNum>${cfx.MSG.BillHead3139.ChildPackNum}</ChildPackNum>
+			<CurPackNo>${cfx.MSG.BillHead3139.CurPackNo}</CurPackNo>
+			<TaxAllNum>${cfx.MSG.BillHead3139.TaxAllNum}</TaxAllNum>
+			<DrawBackAllNum>${cfx.MSG.BillHead3139.DrawBackAllNum}</DrawBackAllNum>
+			<CorrAllNum>${cfx.MSG.BillHead3139.CorrAllNum}</CorrAllNum>
+			<FreeAllNum>${cfx.MSG.BillHead3139.FreeAllNum}</FreeAllNum>
+		</BillHead3139>
+		<#list cfx.MSG.Bill3139 as var1>
+		<Bill3139>
+			<TaxOrgCode>${var1.TaxOrgCode}</TaxOrgCode>
+			<ExportVouType>${var1.ExportVouType}</ExportVouType>
+			<ExpTaxVouNo>${var1.ExpTaxVouNo}</ExpTaxVouNo>
+			<BudgetType>${var1.BudgetType}</BudgetType>
+			<BudgetLevelCode>${var1.BudgetLevelCode}</BudgetLevelCode>
+			<BudgetSubjectCode>${var1.BudgetSubjectCode}</BudgetSubjectCode>
+			<TraAmt>${var1.TraAmt}</TraAmt>
+			<Origin>${var1.Origin}</Origin>
+		</Bill3139>
+		</#list>
+	</MSG>
+</CFX>

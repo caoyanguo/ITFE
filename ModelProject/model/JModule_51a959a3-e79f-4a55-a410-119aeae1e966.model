@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="51a959a3-e79f-4a55-a410-119aeae1e966" name="发送报表对账" ename="sendReportReconciliation"/>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="1b4f824a-cc30-4818-903a-4eac4bc2f518" name="银行账号维护服务组件" ename="TsBankcode">
+  <jproperties id="30eac2fd-e7f3-488d-bcb4-1b1cdd39f111" key="GeneratedTime" value="1330485996343"/>
+  <refModule href="JModule_199e164a-7b29-4905-8dc4-c1295cca8a7b.model#199e164a-7b29-4905-8dc4-c1295cca8a7b"/>
+  <methods id="8b4f0e6c-12c6-4a9f-b182-fdb6f27d3eaa" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="银行账号维护">
+    <methodParams id="e482ad09-ba00-4041-b5b3-a6bce5d498e1" name="银行账号维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="b1a42c41-19da-4be0-bf31-b17d311dae8f" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="f539831b-3a0f-418a-9bad-19124cd0f721" name="银行账号维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="b1a42c41-19da-4be0-bf31-b17d311dae8f" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="953dfce5-a2ec-4c92-b771-b5c92d768d95" name="银行账号维护" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="信息"/>
+  </methods>
+  <methods id="1a3d267d-31c3-49a2-9369-14db4157dacf" ename="findBanknoByPage" name="分页查询银行账号信息" codecomment="分页查询银行账号信息" returntype="com.cfcc.jaf.common.page.PageResponse">
+    <methodParams id="6ea78112-4c1b-4ded-ba16-de7c73b209b4" name="查询银行账号信息条件DTO" ename="findDto" type="com.cfcc.itfe.persistence.dto.TsBankcodeDto" codecomment="查询银行账号信息条件DTO"/>
+    <methodParams id="29c87195-d876-40d9-9f6a-a9bf4a388d62" name="分页请求" ename="pageRequest" type="com.cfcc.jaf.common.page.PageRequest" codecomment="分页请求参数"/>
+  </methods>
+</model:JServiceComponent>

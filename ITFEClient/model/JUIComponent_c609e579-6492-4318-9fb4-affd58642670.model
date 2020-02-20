@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c609e579-6492-4318-9fb4-affd58642670" name="电子凭证参数维护" ename="voucherAuto" shared="true">
+  <jproperties id="56779695-1620-4d5f-98ae-d670bbab5b5c" key="GeneratedTime" value="1508133881034"/>
+  <refModule href="JModule_6d3127c7-5e5e-43cf-8bbc-e1a8c5f4ef76.model#6d3127c7-5e5e-43cf-8bbc-e1a8c5f4ef76"/>
+  <model id="9c9ba692-3282-48cd-a9b3-517afa879960" name="JModelImpl-9c9ba692-3282-48cd-a9b3-517afa879960">
+    <attributes id="0ae8f709-b63b-4aab-81ca-250b6fa939dc" name="voucherAutodto" type="com.cfcc.itfe.persistence.dto.TsVouchercommitautoDto"/>
+    <attributes id="4280701b-b89b-4faa-95f7-6e477d273613" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="05646b33-4ac3-49ed-9f12-75e14f0cbaf4" viewers="ade4bf33-5a5d-4cf5-a14a-555686a4cb23" name="跳转录入界面" ename="goInput"/>
+    <directions id="07025b8d-fde5-4236-b035-db3b45743f15" viewers="0f87a1c8-5a05-4f23-9978-84027e433444" name="录入保存" ename="inputSave"/>
+    <directions id="a78f86ba-68af-4416-b65d-47a4d8e7f618" viewers="0f87a1c8-5a05-4f23-9978-84027e433444" name="返回到维护界面" ename="backMaintenance"/>
+    <directions id="8689f779-be96-49f7-be13-d92cdc9ad943" name="单选" ename="singleSelect"/>
+    <directions id="05e96b18-12c9-4e82-84ea-f12c20e680ce" name="删除" ename="delete"/>
+    <directions id="ebd05ef6-994f-4330-920b-459dcf0d237b" viewers="dce308cf-7c27-40ff-9bf4-d3a29da247cd" name="到修改界面" ename="goModify"/>
+    <directions id="b0ae4c28-1236-4a7a-9cf0-eda9f0ac5b11" viewers="0f87a1c8-5a05-4f23-9978-84027e433444" name="修改保存" ename="modifySave"/>
+  </model>
+  <services href="JServiceComponet_e9e06f07-774b-4bf7-9eff-cc46772f05aa.model#e9e06f07-774b-4bf7-9eff-cc46772f05aa"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="14697431-3365-4a9f-a709-f8f08e606fac">
+    <contentareanode id="a324bb77-d2e9-4ca0-a4a9-3b4058bdd418" name="信息录入" grouptitle="信息录入">
+      <widgetRefs xsi:type="model:Text" id="6e9fb979-81de-4671-b75c-9ab10244bbae" name="sorgcode" binding="voucherAutodto.sorgcode" caption="核算主体代码" enable="false" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="c3495fd3-04d3-4b4a-8e95-cc9b523692b3" name="国库代码" binding="voucherAutodto.strecode" caption="国库代码" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="8b99cdf5-bd4c-49a0-9c2e-c7d07bfeef15" name="凭证类型" binding="voucherAutodto.svtcode" caption="凭证类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="155a72c7-017e-43cf-9118-4aaf085491a0" name="是否自动读取" binding="voucherAutodto.sreadauto" caption="是否自动读取" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="e8c67278-4bf5-4477-8e77-c5f1b67ee48a" name="是否自动回单" binding="voucherAutodto.sreturnvoucherauto" caption="是否自动回单" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="ea5e781a-aab7-47a4-8ead-ed29df13cd53" name="是否自动提交TIPS" binding="voucherAutodto.scommitauto" caption="是否自动提交TIPS">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="a8edd27f-a828-48f7-a2a4-41830b3a6005" name="是否自动签章" binding="voucherAutodto.sstampauto" caption="是否自动签章">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="7619e558-53b5-4c13-bf84-7f3bfb9a0309" name="是否前置发起" binding="voucherAutodto.sreturbacknauto" caption="是否前置发起">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#0c4fde9a-bd2b-4496-9b31-aabb64f50e5e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="bfe29bf7-f8a6-48f2-a51e-924f4d734187" name="凭证联数" binding="voucherAutodto.sjointcount" caption="凭证联数" required="true"/>
+    </contentareanode>
+    <contentareanode id="6a0dc90f-420f-4097-a6dc-751e91a60df0" name="维护查询结果" grouptitle="参数查询一览表">
+      <widgetRefs xsi:type="model:Table" id="839e3803-db88-4caf-a94c-1bc65d9a801f" name="maintenanceResult" binding="pagingcontext" tabletype="paging" refsingleclickdirection="8689f779-be96-49f7-be13-d92cdc9ad943">
+        <columnlist id="c7ec9a99-fb09-4fe0-95c2-3072f45714a0" name="核算主体代码" binding="sorgcode" caption="核算主体代码"/>
+        <columnlist id="c2828029-93bb-4c20-915c-eaeae16c4661" name="国库代码" binding="strecode" caption="国库代码"/>
+        <columnlist id="a69a31dc-2fdf-4eef-aa5e-fcd6d32e5b1c" name="凭证类型" binding="svtcode" caption="凭证类型">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+        </columnlist>
+        <columnlist id="a723b515-6f54-455d-b25c-6cd5a054f290" name="是否自动读取" binding="sreadauto" caption="是否自动读取">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+        </columnlist>
+        <columnlist id="aa3bea85-6316-422f-a8c1-a3895b58161f" name="是否自动回单" binding="sreturnvoucherauto" caption="是否自动回单">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+        </columnlist>
+        <columnlist id="d543c0fe-d066-421f-830d-45632dc5f6aa" name="凭证联数" binding="sjointcount" caption="凭证联数"/>
+        <columnlist id="d24d6bf6-3b49-4027-bbd0-6a1f6b038732" name="是否自动提交TIPS" binding="scommitauto" caption="是否自动提交TIPS">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+        </columnlist>
+        <columnlist id="f56e382a-7c5d-4fc1-9e5c-a64fe9ce2e0f" name="是否自动签章" binding="sstampauto" caption="是否自动签章">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+        </columnlist>
+        <columnlist id="95b4ac68-8869-48b9-b929-14a3a801715e" name="是否前置发起" binding="sreturbacknauto" caption="是否前置发起">
+          <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#0c4fde9a-bd2b-4496-9b31-aabb64f50e5e"/>
+        </columnlist>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="318299f9-9e45-43fd-88e4-cda0253442fb" name="信息修改" grouptitle="信息修改">
+      <widgetRefs xsi:type="model:Text" id="246bb6eb-36b3-429e-956c-be0008c34a97" name="sorgcode" binding="voucherAutodto.sorgcode" caption="核算主体代码" enable="false" required="true"/>
+      <widgetRefs xsi:type="model:Combo" id="5b0cb77a-caff-4f02-9468-8d8527acf2a9" name="国库代码" binding="voucherAutodto.strecode" caption="国库代码" enable="false" editable="false">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#ddec9b41-360b-4273-8fec-f465f64bc3d7"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="894c27bc-1671-4db8-b0b0-e4c9eb712354" name="凭证类型" binding="voucherAutodto.svtcode" caption="凭证类型" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#7799c091-bd40-43f5-83a5-c744bb7f4582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="b5bef59e-b438-492e-969e-9adcdc76dbf4" name="是否自动读取" binding="voucherAutodto.sreadauto" caption="是否自动读取" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="2d94b0d7-3ccc-40bf-8020-32c358490b8a" name="是否自动回单" binding="voucherAutodto.sreturnvoucherauto" caption="是否自动回单" required="true">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="53d93626-34e4-409d-8e6f-72654e037b96" name="是否自动提交TIPS" binding="voucherAutodto.scommitauto" caption="是否自动提交TIPS">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="6570077f-2d5b-4943-b56c-ec9ed5b59739" name="是否自动签章" binding="voucherAutodto.sstampauto" caption="是否自动签章">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#41d39d21-50ff-4926-9aef-58708c840582"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Combo" id="a938364e-46ee-43de-a6af-4acce78848fb" name="是否前置发起" binding="voucherAutodto.sreturbacknauto" caption="是否前置发起">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#0c4fde9a-bd2b-4496-9b31-aabb64f50e5e"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:Text" id="52edfc18-59c5-4238-80ef-811e62f43873" name="凭证联数" binding="voucherAutodto.sjointcount" caption="凭证联数" required="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="1b3397f5-a9f1-4c5e-8f31-b2c6b406e6b2">
+    <pages id="60f36d6f-ec76-4d10-a6e8-b4be68689fc3" name="维护凭证自动处理参数">
+      <views id="0f87a1c8-5a05-4f23-9978-84027e433444" name="维护界面" isdefault="true" contentArea="6a0dc90f-420f-4097-a6dc-751e91a60df0">
+        <buttonArea id="c4980715-d197-442c-bdfb-35b5b6d79aa2" name="JButtonAreaImpl-c4980715-d197-442c-bdfb-35b5b6d79aa2">
+          <buttons id="23c29f9b-d6aa-4d01-8b67-f67d846b6c52" name="maintenanceInput" caption="录入" required="true" direction="05646b33-4ac3-49ed-9f12-75e14f0cbaf4"/>
+          <buttons id="b29bbbe2-107c-4053-a6d9-97923d05ff76" name="maintenanceDel" caption="删除" direction="05e96b18-12c9-4e82-84ea-f12c20e680ce"/>
+          <buttons id="22bbbb6c-4507-44aa-bd9c-be9dbc2d4c45" name="maintenanceMod" caption="修改" direction="ebd05ef6-994f-4330-920b-459dcf0d237b"/>
+        </buttonArea>
+      </views>
+      <views id="dce308cf-7c27-40ff-9bf4-d3a29da247cd" name="修改界面" contentArea="318299f9-9e45-43fd-88e4-cda0253442fb">
+        <buttonArea id="e2ac602a-9492-4d28-82de-d698bb700135" name="JButtonAreaImpl-e2ac602a-9492-4d28-82de-d698bb700135">
+          <buttons id="339a0a0a-9371-4026-8cd3-8670be75871e" name="modifySave" caption="保存" required="true" checkrequired="true" direction="b0ae4c28-1236-4a7a-9cf0-eda9f0ac5b11"/>
+          <buttons id="68924c32-2648-4878-9eee-09261083f382" name="modifyBack" caption="返回" direction="a78f86ba-68af-4416-b65d-47a4d8e7f618"/>
+        </buttonArea>
+      </views>
+      <views id="ade4bf33-5a5d-4cf5-a14a-555686a4cb23" name="录入界面" contentArea="a324bb77-d2e9-4ca0-a4a9-3b4058bdd418">
+        <buttonArea id="cead332e-6f80-4dc9-9243-b6fe9740aefc" name="JButtonAreaImpl-cead332e-6f80-4dc9-9243-b6fe9740aefc">
+          <buttons id="3ab78b3f-58d2-4f01-820a-31e9f6a651df" name="inputSave" caption="保存" required="true" checkrequired="true" direction="07025b8d-fde5-4236-b035-db3b45743f15"/>
+          <buttons id="36fada4e-7c50-49fa-b9bc-67e72324d2ff" name="modifyBack" caption="返回" direction="a78f86ba-68af-4416-b65d-47a4d8e7f618"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

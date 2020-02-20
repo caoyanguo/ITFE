@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="315e8034-3ab2-4103-acb7-1d2d2f3ba401" name="用户权限维护" ename="TsUsersfunc" shared="true"/>

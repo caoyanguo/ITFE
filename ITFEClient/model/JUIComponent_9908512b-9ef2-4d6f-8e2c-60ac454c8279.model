@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="9908512b-9ef2-4d6f-8e2c-60ac454c8279" name="生成TBS文件" ename="CreateTBSUI" shared="false">
+  <jproperties id="47ae2b5f-9a6b-42dc-9901-70ca4de02763" key="GeneratedTime" value="1330497802984"/>
+  <refModule href="JModule_0cf525cd-1640-4a03-b050-f9363dc5ca3a.model#0cf525cd-1640-4a03-b050-f9363dc5ca3a"/>
+  <model id="7c5f1f01-3edb-40ad-bced-4957e34c0654" name="JModelImpl-7c5f1f01-3edb-40ad-bced-4957e34c0654"/>
+  <contentAreas id="41269d0d-8d4d-40fc-8f85-ac4f81878bed">
+    <contentareanode id="b8d9a0fb-30e2-4f4d-aa4a-4803266818fc" name="生成TBS文件界面">
+      <widgetRefs xsi:type="model:Combo" id="4417c093-b2df-4c92-838a-dff40e92a3c8" name="预选种类" visible="true" caption="预选种类" enable="true" readonly="true"/>
+      <widgetRefs xsi:type="model:Combo" id="f19c26d8-2f0a-4f06-a5a9-513150e6bf8f" name="调整期标志" visible="true" caption="调整期标志" enable="true" readonly="true"/>
+      <widgetRefs xsi:type="model:Combo" id="0a02ff5b-7919-49bb-9ae3-890b7a289a4b" name="核算主体代码" visible="true" caption="核算主体代码" enable="true" readonly="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="8ddc4f93-eb19-4033-8313-b2bef4afbf64">
+    <pages id="392ae7e9-ee6f-4a68-9e05-8bb892d1e706" name="生成TBS文件">
+      <views id="5981d9fa-bc2b-4fdc-a2e7-2153319fad8b" name="生成TBS文件" isdefault="true" contentArea="b8d9a0fb-30e2-4f4d-aa4a-4803266818fc">
+        <buttonArea id="75cc2bcf-94cf-4244-b22a-84416bceddb8" name="JButtonAreaImpl-75cc2bcf-94cf-4244-b22a-84416bceddb8">
+          <buttons id="652f62c4-ebec-41aa-8299-855b8f251793" name="生成文件" visible="true" caption="生成文件" enable="true"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

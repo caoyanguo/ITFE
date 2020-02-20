@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="7b9ea0db-b552-460f-979f-320ab2e98c82" name="查询支出报表广东" ename="selectRecordGD" shared="true">
+  <jproperties id="d81969f1-20c9-470f-b9e3-35633d327910" key="GeneratedTime" value="1453374804650"/>
+  <refModule href="JModule_a63ebdc9-05e7-4b8b-8839-cf0bc125f3f1.model#a63ebdc9-05e7-4b8b-8839-cf0bc125f3f1"/>
+  <methods id="80e9de9f-45bf-4a55-92d6-e67a91941476" ename="selectGroupResultByCondition" name="根据条件查询分组结果" returntype="java.util.List">
+    <methodParams id="1747255a-d2ff-4198-91d2-96920fa319b6" name="查询sql" ename="sql" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>

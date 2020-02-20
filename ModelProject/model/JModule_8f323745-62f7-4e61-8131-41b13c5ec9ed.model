@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JModule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="8f323745-62f7-4e61-8131-41b13c5ec9ed" name="发送业务对账回单" ename="recvBusinessReconciliation"/>

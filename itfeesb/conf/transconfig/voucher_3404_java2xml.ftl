@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<Voucher>
+	<Id>${Voucher.Id}</Id>
+	<AdmDivCode>${Voucher.AdmDivCode}</AdmDivCode> 
+	<StYear>${Voucher.StYear}</StYear>
+	<VtCode>${Voucher.VtCode}</VtCode> 
+	<VouDate>${Voucher.VouDate}</VouDate>
+	<AcctDate>${Voucher.AcctDate}</AcctDate>
+	<VoucherNo>${Voucher.VoucherNo}</VoucherNo>
+	<PeriodType>正常业务</PeriodType>
+	<PeriodTypeCode>01</PeriodTypeCode> 	
+	<Hold1>${Voucher.Hold1}</Hold1>
+	<Hold2>${Voucher.Hold2}</Hold2>
+	<DetailList>
+	  <#list Voucher.DetailList.Detail as var>
+	  <Detail>
+	  	<Id>${var.Id}</Id>
+	  	<BankCode>${var.BankCode}</BankCode>
+		<TreName>${var.TreName}</TreName>
+		<AcctCode>${var.AcctCode}</AcctCode>
+		<AcctName>${var.AcctName}</AcctName>
+		<CourseType>库存</CourseType>
+		<YesterdayBalance>${var.YesterdayBalance}</YesterdayBalance>
+		<TodayReceipt>${var.TodayReceipt}</TodayReceipt>
+		<TodayPay>${var.TodayPay}</TodayPay>
+		<TodayBalance>${var.TodayBalance}</TodayBalance>
+		<Hold1>${var.Hold1}</Hold1>
+	  	<Hold2>${var.Hold2}</Hold2>
+	  	<Hold3>${var.Hold3}</Hold3>
+	  	<Hold4>${var.Hold4}</Hold4>	  
+	 </Detail>
+	</#list> 
+	</DetailList>  
+</Voucher>

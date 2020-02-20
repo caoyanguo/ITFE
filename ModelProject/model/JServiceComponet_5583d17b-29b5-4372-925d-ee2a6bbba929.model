@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="5583d17b-29b5-4372-925d-ee2a6bbba929" name="特殊查询科目维护服务组件" ename="TsBudgetsubjectForQuery">
+  <jproperties id="5acb305e-c998-4325-b55b-5a2d1be9bf4c" key="GeneratedTime" value="1337413971187"/>
+  <refModule href="JModule_0ce9901c-1aef-4773-a53e-5b182196b1ee.model#0ce9901c-1aef-4773-a53e-5b182196b1ee"/>
+  <methods id="0d4d56eb-6b1c-402f-a087-3f506551aa69" ename="addInfo" name="增加" codecomment="增加" returntype="com.cfcc.jaf.persistence.jaform.parent.IDto" remark="增加">
+    <methodParams id="ec3e3fec-0b43-4d10-9fb7-bc47b03aef2a" name="特殊查询科目信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="特殊查询科目信息"/>
+  </methods>
+  <methods id="a0854a28-15e8-444d-86c9-9dca56446563" ename="delInfo" name="删除" returntype="com.cfcc.devplatform.customtype.Void" remark="删除">
+    <methodParams id="36617760-283b-410f-b3e8-e92d31c84a35" name="特殊查询科目信息" ename="dtoInfo" type="com.cfcc.jaf.persistence.jaform.parent.IDto" codecomment="特殊查询科目信息"/>
+  </methods>
+  <methods id="adfc1768-3a20-4683-a489-ea2d5c62f881" ename="modInfo" name="修改" returntype="com.cfcc.devplatform.customtype.Void">
+    <methodParams id="546821d3-a7fb-4480-aa18-0b43425e3261" name="特殊查询科目信息" ename="dtoInfo" codecomment="特殊查询科目信息"/>
+  </methods>
+</model:JServiceComponent>

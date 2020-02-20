@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="10cb312c-4fd7-4aae-8317-37e0de7a8406" name="文件接口转换" ename="taxFileConverUI">
+  <jproperties id="2fb841d7-16de-4c4e-a2f4-65edadee8760" key="GeneratedTime" value="1363986920936"/>
+  <refModule href="JModule_cfe69140-5e1e-45e1-a12c-ae216d05d4a7.model#cfe69140-5e1e-45e1-a12c-ae216d05d4a7"/>
+  <model id="89c07f7b-ff18-45d2-a3d4-399ffcf4806a" name="JModelImpl-89c07f7b-ff18-45d2-a3d4-399ffcf4806a">
+    <attributes id="441f89cb-35fe-4d6f-8966-1ccf0a1ff09b" name="files" type="java.util.List"/>
+    <directions id="4dcb0aec-8f6a-4e07-a01c-7c7775f0d255" name="接口转换" ename="fileConvert"/>
+  </model>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="bbbf1998-1f2c-4a51-8a4d-40e6392e5899">
+    <contentareanode id="42d4d8df-d061-404a-8fa0-8a62bda0514f" name="文件接口转换">
+      <widgetRefs xsi:type="model:FileUploader" id="3918c347-ef9c-4084-9787-238a4d7b25bf" name="fileName" binding="files" caption="文件选择" isdirectory="false" ismult="true"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="c1afacb9-bdfd-4e2b-b62f-2bc465352346">
+    <pages id="c34f67a9-5558-4fe0-a328-e78572335b79" name="JPageImpl-c34f67a9-5558-4fe0-a328-e78572335b79">
+      <views id="7d30ed17-e9b4-4ee8-bd25-189b669e176a" name="文件转换" isdefault="true" contentArea="42d4d8df-d061-404a-8fa0-8a62bda0514f">
+        <buttonArea id="a67a660b-3592-4c58-898c-ac0cbb8cf710" name="JButtonAreaImpl-a67a660b-3592-4c58-898c-ac0cbb8cf710">
+          <buttons id="062ccc4c-9f30-4eb8-afa5-120e50f8f23a" name="btn" caption="转换" direction="4dcb0aec-8f6a-4e07-a01c-7c7775f0d255"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

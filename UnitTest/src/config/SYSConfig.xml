@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="SYSCONFIG" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<!--
+				// VER 版本号 public static String VER; // SRC 发起节点代码 public static
+				String SRC; // DES 接收节点代码 public static String DES; // APP 应用名称
+			-->
+			<map>
+				<entry key="VER" value="${VER}" />
+				<!--SRC 发起节点代码 -->
+				<entry key="SRC" value="${SRC}" />
+				<entry key="DES" value="${DES}" />
+				<entry key="APP" value="${APP}" />
+				<entry key="Reserve" value="${Reserve}" />
+				<entry key="errorInfoPath" value="${errorInfoPath}" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="CAUtil.ID" class="com.cfcc.yak.security.ca.SoftCAUtil"
+		scope="singleton" init-method="init">
+		<property name="dsignFile" value="${dsignFile}" />
+		<property name="dsingDN" value="${dsingDN}" />
+	</bean>
+
+	<bean id="FileUtil.ITFE.ID" class="com.cfcc.itfe.util.FileUtil">
+		<property name="statistics">
+			<value>true</value>
+		</property>
+	</bean>
+
+	<bean id="fileSystemConfig.ITFE.ID"
+		class="com.cfcc.jaf.core.service.filetransfer.support.FileSystemConfig">
+		<property name="transferSize">
+			<value>1024000</value>
+		</property>
+		<property name="root">
+			<value>${file.util.root}/temp/</value>
+		</property>
+	</bean>
+
+	<!-- xmltojava报文配置信息列表 -->
+	<bean id="xml2javaMsgConfig" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+			    <entry key="1001" value="classpath:/transconfig/itfe_1001_xml2java.xml" />
+				<entry key="1021" value="classpath:/transconfig/itfe_1021_xml2java.xml" />
+				<entry key="1102" value="classpath:/transconfig/itfe_1102_xml2java.xml" />
+				<entry key="1104" value="classpath:/transconfig/itfe_1104_xml2java.xml" />
+				<entry key="1105" value="classpath:/transconfig/itfe_1105_xml2java.xml" />
+				<entry key="2102" value="classpath:/transconfig/itfe_2102_xml2java.xml" />
+				<entry key="2001" value="classpath:/transconfig/itfe_2001_xml2java.xml" />
+				<entry key="2021" value="classpath:/transconfig/itfe_2021_xml2java.xml" />
+				<entry key="9110" value="classpath:/transconfig/itfe_9110_xml2java.xml" />
+				<entry key="9120" value="classpath:/transconfig/itfe_9120_xml2java.xml" />
+				<entry key="9121" value="classpath:/transconfig/itfe_9121_xml2java.xml" />
+				<entry key="9122" value="classpath:/transconfig/itfe_9122_xml2java.xml" />
+				<entry key="9007" value="classpath:/transconfig/itfe_9007_xml2java.xml" />
+				<entry key="9009" value="classpath:/transconfig/itfe_9009_xml2java.xml" />
+				<entry key="3123" value="classpath:/transconfig/itfe_3123_xml2java.xml" />
+				<entry key="3124" value="classpath:/transconfig/itfe_3124_xml2java.xml" />
+				<entry key="3128" value="classpath:/transconfig/itfe_3128_xml2java.xml" />
+				<entry key="3129" value="classpath:/transconfig/itfe_3129_xml2java.xml" />
+				<entry key="3136" value="classpath:/transconfig/itfe_3136_xml2java.xml" />
+				<entry key="3139" value="classpath:/transconfig/itfe_3139_xml2java.xml" />
+				<entry key="3131" value="classpath:/transconfig/itfe_3131_xml2java.xml" />
+				<entry key="3133" value="classpath:/transconfig/itfe_3133_xml2java.xml" />
+				<entry key="3134" value="classpath:/transconfig/itfe_3134_xml2java.xml" />
+				<entry key="3135" value="classpath:/transconfig/itfe_3135_xml2java.xml" />
+				<entry key="3200" value="classpath:/transconfig/itfe_3200_xml2java.xml" />
+				<entry key="3201" value="classpath:/transconfig/itfe_3201_xml2java.xml" />
+				<entry key="3190" value="classpath:/transconfig/itfe_3190_xml2java.xml" />
+				<entry key="9113" value="classpath:/transconfig/itfe_9113_xml2java.xml" />
+				<entry key="9116" value="classpath:/transconfig/itfe_9116_xml2java.xml" />
+				<entry key="9117" value="classpath:/transconfig/itfe_9117_xml2java.xml" />
+				<entry key="3133" value="classpath:/transconfig/itfe_3133_xml2java.xml" />
+				<entry key="9105" value="classpath:/transconfig/itfe_9105_xml2java.xml" />
+				<entry key="9004" value="classpath:/transconfig/itfe_9004_xml2java.xml" />
+				<entry key="9005" value="classpath:/transconfig/itfe_9005_xml2java.xml" />
+				<entry key="5001" value="classpath:/transconfig/itfe_5001_xml2java.xml" />
+				<entry key="5002" value="classpath:/transconfig/itfe_5002_xml2java.xml" />
+				<entry key="5003" value="classpath:/transconfig/itfe_5003_xml2java.xml" />
+				<entry key="9114" value="classpath:/transconfig/itfe_9114_xml2java.xml" />
+				<entry key="9115" value="classpath:/transconfig/itfe_9115_xml2java.xml" />
+				<entry key="3122" value="classpath:/transconfig/itfe_3122_xml2java.xml" />
+				<entry key="1024" value="classpath:/transconfig/itfe_1024_xml2java.xml" />
+				<entry key="3126" value="classpath:/transconfig/itfe_3126_xml2java.xml" />
+				<entry key="1025" value="classpath:/transconfig/itfe_1025_xml2java.xml" />
+				<entry key="3127" value="classpath:/transconfig/itfe_3127_xml2java.xml" />
+				<entry key="9003" value="classpath:/transconfig/itfe_9003_xml2java.xml" />
+				<entry key="2201_IN" value="classpath:/transconfig/itfe_2201_xml2java.xml" />
+				<entry key="2202_IN" value="classpath:/transconfig/itfe_2202_xml2java.xml" />
+				<entry key="3143" value="classpath:/transconfig/itfe_3143_xml2java.xml" />
+				<entry key="3144" value="classpath:/transconfig/itfe_3144_xml2java.xml" />
+				<entry key="3145" value="classpath:/transconfig/itfe_3145_xml2java.xml" />
+				<entry key="9100" value="classpath:/transconfig/itfe_9100_xml2java.xml" />
+				<entry key="9101" value="classpath:/transconfig/itfe_9101_xml2java.xml" />
+				<entry key="9106" value="classpath:/transconfig/itfe_9106_xml2java.xml" />
+				<entry key="5101" value="classpath:/transconfig/itfe_5101_xml2java.xml" />
+				<entry key="5102" value="classpath:/transconfig/itfe_5102_xml2java.xml" />
+				<entry key="5103" value="classpath:/transconfig/itfe_5103_xml2java.xml" />
+				<!--
+				<entry key="9102" value="classpath:/transconfig/itfe_9102_xml2java.xml" />
+				<entry key="9103" value="classpath:/transconfig/itfe_9103_xml2java.xml" />
+				<entry key="9104" value="classpath:/transconfig/itfe_9104_xml2java.xml" />
+				-->
+				
+			</map>
+		</property>
+	</bean>
+
+	<!-- javatoxml报文配置信息列表 -->
+	<bean id="java2xmlMsgConfig" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+				<entry key="1103" value="itfe_1103_java2xml.ftl" />
+				<entry key="1104" value="itfe_1104_java2xml.ftl" />
+				<entry key="11042" value="itfe_11042_java2xml.ftl" />
+				<entry key="1105" value="itfe_1105_java2xml.ftl" />
+				<entry key="1106" value="itfe_1106_java2xml.ftl" />
+				<entry key="11062" value="itfe_11062_java2xml.ftl" />
+				<entry key="1024" value="itfe_1024_java2xml.ftl" />
+				<entry key="1025" value="itfe_1025_java2xml.ftl" />
+				<entry key="11052" value="itfe_11052_java2xml.ftl" />
+				<entry key="7211" value="itfe_7211_java2xml.ftl" />
+				<entry key="5001" value="itfe_5001_java2xml.ftl" />
+				<entry key="5002" value="itfe_5002_java2xml.ftl" />
+				<entry key="5003" value="itfe_5003_java2xml.ftl" />
+				<entry key="5101" value="itfe_5101_java2xml.ftl" />
+				<entry key="5102" value="itfe_5102_java2xml.ftl" />
+				<entry key="5103" value="itfe_5103_java2xml.ftl" />
+				<entry key="5104" value="itfe_5104_java2xml.ftl" />
+				<entry key="5112" value="itfe_5112_java2xml.ftl" />
+				<entry key="9003" value="itfe_9003_java2xml.ftl" />
+				<entry key="9005" value="itfe_9005_java2xml.ftl" />
+				<entry key="9006" value="itfe_9006_java2xml.ftl" />
+				<entry key="9008" value="itfe_9008_java2xml.ftl" />
+				<entry key="9105" value="itfe_9105_java2xml.ftl" />
+				<!--<entry key="9101" value="itfe_9101_java2xml.ftl" />
+				<entry key="9102" value="itfe_9102_java2xml.ftl" />
+				<entry key="9103" value="itfe_9103_java2xml.ftl" />
+				<entry key="9104" value="itfe_9104_java2xml.ftl" />
+				-->
+				<entry key="9111" value="itfe_9111_java2xml.ftl" />
+				<entry key="9113" value="itfe_9113_java2xml.ftl" />
+				<entry key="9116" value="itfe_9116_java2xml.ftl" />
+				<entry key="9117" value="itfe_9117_java2xml.ftl" />
+				<entry key="9120" value="itfe_9120_java2xml.ftl" />
+				<entry key="9121" value="itfe_9121_java2xml.ftl" />
+				<entry key="1001" value="itfe_1001_java2xml.ftl" />
+				<entry key="1102" value="itfe_1102_java2xml.ftl" />
+				<entry key="1021" value="itfe_1021_java2xml.ftl" />
+				<entry key="2001" value="itfe_2001_java2xml.ftl" />
+				<entry key="2021" value="itfe_2021_java2xml.ftl" />
+				<entry key="2102" value="itfe_2102_java2xml.ftl" />
+				<entry key="2201" value="itfe_2201_java2xml.ftl" />
+				<entry key="2202" value="itfe_2202_java2xml.ftl" />
+				<entry key="3143" value="itfe_3143_java2xml.ftl" />
+				<entry key="3144" value="itfe_3144_java2xml.ftl" />
+				<entry key="3145" value="itfe_3145_java2xml.ftl" />
+				<entry key="1104_OUT" value="itfe_1104_java2xml.ftl" />
+				<entry key="1105_OUT" value="itfe_1105_java2xml.ftl" />
+				<entry key="5102_OUT" value="itfe_5102_java2xml.ftl" />
+				<entry key="5103_OUT" value="itfe_5103_java2xml.ftl" />
+				<entry key="5101_OUT" value="itfe_5101_java2xml.ftl" />
+				<entry key="VOUCHER_3401" value="voucher_3401_java2xml.ftl" />
+				<entry key="VOUCHER_3402" value="voucher_3402_java2xml.ftl" />
+				<entry key="VOUCHER_3453" value="voucher_3453_java2xml.ftl" />
+				<entry key="VOUCHER_3454" value="voucher_3454_java2xml.ftl" />
+				<entry key="VOUCHER_3455" value="voucher_3455_java2xml.ftl" />
+				<entry key="VOUCHER_3501" value="voucher_3501_java2xml.ftl" />
+				<entry key="VOUCHER_3502" value="voucher_3502_java2xml.ftl" />
+				<entry key="VOUCHER_3507" value="voucher_3507_java2xml.ftl" />
+				<entry key="VOUCHER_3508" value="voucher_3508_java2xml.ftl" />
+				<entry key="VOUCHER_3208" value="voucher_3208_java2xml.ftl" />
+				<entry key="VOUCHER_3503" value="voucher_3503_java2xml.ftl" />
+				<entry key="VOUCHER_3504" value="voucher_3504_java2xml.ftl" />
+				<entry key="VOUCHER_3505" value="voucher_3505_java2xml.ftl" />
+				<entry key="VOUCHER_3506" value="voucher_3506_java2xml.ftl" />
+				<entry key="VOUCHER_3551" value="voucher_3551_java2xml.ftl" />
+				<entry key="VOUCHER_3552" value="voucher_3552_java2xml.ftl" />
+				<entry key="VOUCHER_3553" value="voucher_3553_java2xml.ftl" />
+				<entry key="VOUCHER_3554" value="voucher_3554_java2xml.ftl" />
+				<entry key="VOUCHER_3452" value="voucher_3452_java2xml.ftl" />
+				<entry key="VOUCHER_3251" value="voucher_3251_java2xml.ftl" />
+				<entry key="VOUCHER_3562" value="voucher_3562_java2xml.ftl" />
+				<entry key="VOUCHER_3560" value="voucher_3560_java2xml.ftl" />
+				<entry key="VOUCHER_4004" value="voucher_4004_java2xml.ftl" />
+				<entry key="VOUCHER_4005" value="voucher_4005_java2xml.ftl" />
+				<entry key="VOUCHER_4006" value="voucher_4006_java2xml.ftl" />
+				<entry key="VOUCHER_3210" value="voucher_3210_java2xml.ftl" />
+				<entry key="VOUCHER_3403" value="voucher_3403_java2xml.ftl" />
+				<entry key="VOUCHER_3404" value="voucher_3404_java2xml.ftl" />
+				<entry key="VOUCHER_3405" value="voucher_3405_java2xml.ftl" />
+				<entry key="VOUCHER_3406" value="voucher_3406_java2xml.ftl" />
+				<entry key="VOUCHER_3507" value="voucher_3507_java2xml.ftl" />
+				<entry key="VOUCHER_3508" value="voucher_3508_java2xml.ftl" />
+				<entry key="VOUCHER_3509" value="voucher_3509_java2xml.ftl" />
+				<entry key="VOUCHER_3510" value="voucher_3510_java2xml.ftl" />
+				<entry key="VOUCHER_3511" value="voucher_3511_java2xml.ftl" />
+				<entry key="VOUCHER_3512" value="voucher_3512_java2xml.ftl" />
+				<entry key="VOUCHER_3513" value="voucher_3513_java2xml.ftl" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="ITFE.CONFIG" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+			    
+				<entry key="ITFE_NAME" value="ITFE" />
+				<!-- 系统文件根路径 -->
+				<entry key="FILE_ROOT_PATH" value="${file.util.root}/temp/" />
+				<!-- 地税文件APP服务器路径 -->
+				<!--  entry key="FILE_PLACE_PATH" value="\\11.48.17.8/" -->
+				<!-- 每次取出的 最大记录数 -->
+				<entry key="MAX_RECORD_RRETRIEVE" value="1000" />
+				<!-- 每包最大的记录数 -->
+				<entry key="CHARSET_NAME" value="GBK" />
+				<!-- 文件缓冲区大小 -->
+				<entry key="FILE_BUF_SIZE" value="1024" />
+				<!-- 文件上传路径 -->
+				<entry key="FILE_UPLOAD" value="ITFEDATA/" />
+				<!-- 文件解压缩路径 -->
+				<entry key="FILE_UNZIP_PATH" value="ITFEDATA/" />
+				<entry key="default_pwd" value="99999999" />
+				<!--  系统管理员-->
+				<entry key="ADMIN" value="admin" />
+				<!--  数据库别名-->
+				<entry key="DB_ALIAS" value="${db.alias}" />
+				<!--  数据库名称-->
+				<entry key="DB_USERNAME" value="${db.username}" />
+				<!--  数据库密码-->
+				<entry key="DB_PASSWORD" value="${db.password}" />
+				<!--  源节点-->
+				<entry key="SRC_NODE" value="${SRC}" />
+				<!--  目标节点-->
+				<entry key="DES_NODE" value="${DES}" />
+				<!--  每次提交记录数量-->
+				<entry key="COMMIT_NUM" value="${commitIncmBillNum}" />
+				<!-- 接收报文文件路径 -->
+				<entry key="MSG_FILE_RECV_PATH" value="${file.util.root}/temp/${received.orgMsg.file.path}" />
+				<!-- 发送报文文件路径 -->
+				<entry key="MSG_FILE_SEND_PATH" value="${file.util.root}/temp/${sent.newMsg.file.path}" />
+				<!-- 报文临时文件保留的最大月数 -->
+				<entry key="MSG_LOG_FILE_RESERVE_MONTHS" value="${deletetempfilesreservemonths}" />
+				<!--TIPS是否采用新接口-->
+				<entry key="IFNEWINTERFACE" value="${ifnewinterface}" />
+				<!--是否给财政转发报文-->
+				<entry key="IFSENDMSGTOFIN" value="${ifsendmsgtofin}" />
+					<!--程序版本-->
+				<!--<entry key="EDITION" value="${edition}" />
+				--><!-- 客户端版本号 -->
+				<entry key="CLIENTEDITION" value="${clientedition}"/>
+				<!--入库流水是否更新电子税票-->
+				<entry key="IFUPDATETAXVOU" value="${ifupdatetaxvou}" />
+				<!-- 实拨资金批量销号是否强制禁止使用 -->
+				<entry key="IFSTOPPAYOUTSUBMIT" value="${ifstoppayoutsubmit}" />
+				<!-- 是否进行国库级次与预算级次的校验 -->
+				<entry key="IFVERIFYTRELEVEL" value="${ifverifytrelevel}" />
+				<!-- 是否对征收机关代码、辅助标志进行转换 0不转换 1 转换 -->
+				<entry key="ISCONVERT" value="${isconvert}" />
+				<!-- 申请退款是否自动生成原凭证编号 -->
+				<entry key="IFAUTOGENORIVOUNO" value="1" />
+				<!-- 是否根据行名补录行号： 0 不补录（默认值）、1 补录（上海用） -->
+				<entry key="ISMATCHBANKNAME" value="${ismatchbankname}" />
+				<!--设定中国人民银行的网间互联平台(或TIPS系统外部网关)节点代码标识 -->
+				<entry key="PBCNODECODE" value="${mq.PBCNODE_TIPS}" />
+				<!-- TIPS队列管理器名称 -->
+				<entry key="MGRNAME" value="${mq.QM_TIPS}" />
+				<entry key="CAVALIDDATE" value="${cavaliddate}" />
+				<!--凭证库服务地址-->
+				<entry key="WEBSERVICE_URL" value="${webservice.url}" />
+				<!--OCX访问凭证库服务地址-->
+				<entry key="OCXSERVICE_URL" value="${ocxservice.url}" />
+				<!--OCX访问凭证库服务地址-->
+				<entry key="OCXSERVICE_STAMPURL" value="${ocxservice.stampurl}" />
+				<!-- 客户端访问OCX服务是否使用代理 -->
+				<entry key="OCXSERVICE_ISCLIENTPROXY" value="${ocxservice.isClientProxy}" />
+				<!--报表数据发送财政端WebService地址-->
+				<entry key="FINSERVICE_URL" value="${finservice.url}" />
+				<!-- 是否校验额度数据-->
+				<entry key="ISCHECKPAYPLAN" value="${ischeckpayplan}" />
+				<!--是否比对数据-->
+				<entry key="ISCOMPAREDATA" value="${iscomparedata}" />
+				<!--是否进行实拨资金调拨科目校验0 -不校验 1校验-->
+				<entry key="CHECKPAYOUTSUBJECT" value="${checkpayoutsubject}" />
+				<!--系统标示-->
+				<entry key="SYSFLAG" value="${sysflag}" />
+				<!--是否通过前置提交划款申请-->
+				<entry key="ISITFECOMMIT" value="${isitfecommit}" />
+				<!--转讫章签章方式-->
+				<entry key="ROTARYSTAMP" value="${rotarystamp}" />
+				<!--公章签章方式-->
+				<entry key="OFFICIALSTAMP" value="${officialstamp}" />
+				<!--登录方式-->
+				<entry key="LOGINTYPE" value="${logintype}" />
+				<!--财政批量队列名-->
+				<entry key="MQTOMOFBATCH" value="${mq.TO.MOF.BATCH}" />
+				<!--财政实时队列名-->
+				<entry key="MQTOMOFONLINE" value="${mq.TO.MOF.ONLINE}" />
+				<!--山东一本通批量拨付开始-->
+				<entry key="FTPIPSTRING" value="${ftpipstring}" />
+				<entry key="FTPUSERSTRING" value="${ftpuserstring}" />
+				<entry key="FTPPASSWORDSTRING" value="${ftppasswordstring}" />
+				<entry key="FTPPATHSTRING" value="${ftppathstring}" />
+				<entry key="LOCALPATHSTRING" value="${localpathstring}" />
+				<entry key="FTPUPLOADPATH" value="${ftpuploadpath}" />
+				<!--山东一本通批量拨付结束-->
+				<!--公共配置参数防止一直加参数,例如：上海无纸化,sh,-->
+				<entry key="PUBLICPARAM" value="${publicparam}" />
+			</map>
+		</property>
+	</bean>
+	
+	<!--定时处理的报文列表 ，该列表不能删除，value字段预留可以做扩展使用使用-->
+	<bean id="TimerbizVoucherMsgNo" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+			    <!--凭证报文 -->
+				<entry key="5207" value="5207"/>	<!--实拨拨款凭证 -->
+				<entry key="5106" value="5106"/>	<!--财政授权支付汇总清算额度通知单 -->
+				<entry key="5108" value="5108"/>	<!--财政直接支付汇总清算额度通知单 -->
+				<entry key="2301" value="2301"/>	<!--申请划款凭证回单（2301） -->
+				<entry key="2302" value="2302"/>	<!--申请退款凭证回单（2302） -->
+				<entry key="5209" value="5209"/>	<!--收入退付凭证（5209） -->
+			</map>
+		</property>
+	</bean>
+	
+	<!--前置处理报文列表 -->
+	<bean id="MsgNoConfig" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+			    <!--业务报文 -->
+				<entry key="1001" value="1001" />
+				<entry key="1102" value="1102" />
+				<entry key="2102" value="2102" />
+				<entry key="9100" value="9100" />
+				<entry key="9101" value="9101" />
+				<entry key="9106" value="9106" />
+				<entry key="1104" value="1104" />
+				<entry key="11042" value="11042" />
+				<entry key="1104_OUT" value="1104_OUT" />
+				<entry key="1105_OUT" value="1105_OUT" />
+				<entry key="1105" value="1105" />
+				<entry key="11052" value="11052" />
+				<entry key="1106" value="1106" />
+				<entry key="11062" value="11062" />
+				<entry key="2001" value="2001" />
+				<entry key="1021" value="1021" />
+				<entry key="2021" value="2021" />
+				<entry key="1024" value="1024" />
+				<entry key="1024_OUT" value="1024_OUT" />
+				<entry key="1025" value="1025" />
+				<entry key="1025_OUT" value="1025_OUT" />
+				<entry key="5104" value="5104" />
+				<entry key="5102" value="5102" />
+				<entry key="5103" value="5103" />
+				<entry key="5101" value="5101" />
+				<entry key="5102_OUT" value="5102_OUT" />
+				<entry key="5103_OUT" value="5103_OUT" />
+				<entry key="5101_OUT" value="5101_OUT" />
+				<entry key="3146" value="3146" />
+				<entry key="3145" value="3145" />
+				<entry key="3135" value="3135" />
+				<entry key="3134" value="3134" />
+				<entry key="3131" value="3131" />
+				<entry key="5112" value="5112" />
+				<entry key="3136" value="3136" />
+				<entry key="1103" value="1103" />
+				<entry key="7211" value="7211" />
+				<entry key="3126" value="3126" />
+				<entry key="1025" value="1025" />
+				<entry key="3127" value="3127" />
+				<entry key="5001" value="5001" />
+				<entry key="5002" value="5002" />
+				<entry key="5002_OUT" value="5002_OUT" />
+				<entry key="5003" value="5003" />
+				<entry key="5003_OUT" value="5003_OUT" />
+				<entry key="5001_OUT" value="5001_OUT" />
+				<entry key="3128" value="3128" />
+				<entry key="3139" value="3139" />
+				<entry key="3123" value="3123" />
+				<entry key="3124" value="3124" />
+				<entry key="3129" value="3129" />
+				<entry key="3190" value="3190" />
+				<entry key="3133" value="3133" />
+				<entry key="5102" value="5102" />
+				<entry key="5003" value="5003" />
+				<entry key="9003" value="9003" />
+				<entry key="9003_OUT" value="9003_OUT" />
+				<entry key="9004" value="9004" />
+				<entry key="9005" value="9005" />
+				<entry key="9005_OUT" value="9005_OUT" />
+				<entry key="9006" value="9006" />
+				<entry key="9006_OUT" value="9006_OUT" />
+				<entry key="9008" value="9008" />
+				<entry key="9008_OUT" value="9008_OUT" />
+				<entry key="9111" value="9111" />
+				<entry key="9113" value="9113" />
+				<entry key="9110" value="9110" />
+				<entry key="9120" value="9120" />
+				<entry key="9121" value="9121" />
+				<entry key="9122" value="9122" />
+				<entry key="9007" value="9007" />
+				<entry key="9009" value="9009" />
+				<entry key="3200" value="3200" />
+				<entry key="3201" value="3201" />
+				<entry key="3122" value="3122" />
+				<entry key="9116" value="9116" />
+				<entry key="9117" value="9117" />
+				<entry key="9116_OUT" value="9116_OUT" />
+				<entry key="9117_OUT" value="9117_OUT" />
+				<entry key="9120_OUT" value="9120_OUT" />
+				<entry key="9113_OUT" value="9113_OUT" />
+				<entry key="9100" value="9100" />
+				<entry key="9101" value="9101" />
+				<entry key="9102" value="9102" />
+				<entry key="9103" value="9103" />
+				<entry key="9104" value="9104" />
+				<entry key="9105" value="9105" />
+				<entry key="9105_OUT" value="9105_OUT" />
+				<entry key="RESEND" value="RESEND" />
+				<entry key="FILE" value="FILE" />
+				<entry key="9114" value="9114" />
+				<entry key="9115" value="9115" />
+				<entry key="2201" value="2201" />
+				<entry key="2202" value="2202" />
+				<entry key="2201_IN" value="2201_IN" />
+				<entry key="2202_IN" value="2202_IN" />
+				<entry key="3143" value="3143" />
+				<entry key="3144" value="3144" />
+			</map>
+		</property>
+	</bean>
+	
+	<!--前置处理业务报文列表 -->
+	<bean id="BizMsgNo" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+			    <!--业务报文 -->
+				<entry key="1104" value="TV_DWBK" />
+				<entry key="1105" value="TV_IN_CORRHANDBOOK" />
+				<entry key="1106" value="TV_FREE" />
+				<entry key="5101" value="TV_PAYOUTMSGMAIN" />
+				<entry key="5103" value="TV_GRANTPAYMSGMAIN" />
+				<entry key="5102" value="TV_DIRECTPAYMSGMAIN" />
+				<entry key="5112" value="TV_PAYOUTFINANCE_MAIN" />
+				<entry key="7211" value="TV_INFILE" />
+				<entry key="5104" value="TV_PBCPAY_MAIN" />
+				<entry key="2201" value="TV_PAYRECK_BANK" />
+				<entry key="2202" value="TV_PAYRECK_BANK_BACK" />
+			</map>
+		</property>
+	</bean>
+	
+	<!--前置解包定时触发时间，可以根据需要调整报文处理的时间，已经采取了定时定量处理，全天处理也没有问题-->
+	<bean id="TimerProcMsg" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+				<entry key="01:00:00" value="09:30:00" />
+				<entry key="10:00:00" value="14:30:00" />
+				<entry key="14:30:00" value="23:00:00" /> 
+				<!--<entry key="01:00:00" value="23:00:00" />-->
+			</map>
+		</property>
+	</bean>
+	
+	<!--定时汇总合并征收机关报表,此处只能配置一个时间-->
+	<bean id="TimerCollectTaxOrgBill" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+				<entry key="07:00:00" value="09:30:00" />
+			</map>
+		</property>
+	</bean>
+	
+	<!--定时处理的报文列表 ，该列表不能删除，value字段预留可以做扩展使用使用-->
+	<bean id="TimerBizMsgNo" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+			    <!--业务报文 -->
+				<entry key="3122" value="3122" />
+				<entry key="3126" value="3126" />
+				<entry key="3127" value="3127" />
+				<entry key="3128" value="3128" />
+				<entry key="3129" value="3129" />
+				<entry key="3139" value="3139" />
+			</map>
+		</property>
+	</bean>
+	
+	<!--每种业务的加密方式：0-不加密 1山东格式逐行加密 2、山西的加密方式 3、电子签名方式4、SM3 5、其他-->
+	<bean id="encryptMode" class="org.springframework.beans.factory.config.MapFactoryBean">
+		<property name="sourceMap">
+			<map>
+			    <!--地方横联处理的业务报文 -->
+				<entry key="01" value="${biz_01}" /><!--直接额度-->
+				<entry key="02" value="${biz_02}" /><!--授权额度-->
+				<entry key="11" value="${biz_11}" /><!--预算收入-->
+				<entry key="13" value="${biz_13}" /><!--预算退库-->
+				<entry key="15" value="${biz_15}" /><!--预算更正-->
+				<entry key="17" value="${biz_17}" /><!--预算支出-->
+				<entry key="23" value="${biz_23}" /><!--调拨支出-->
+				<entry key="33" value="${biz_33}" /><!--人行直接支付-->
+				<entry key="20" value="${biz_20}" /><!--批量拨付业务-->
+				<entry key="1106" value="${biz_1106}" /><!--免抵调业务-->
+				<entry key="25" value="${biz_25}" /><!--直接支付清算-->
+				<entry key="26" value="${biz_26}" /><!--直接支付退回清算-->
+				<entry key="27" value="${biz_27}" /><!--授权支付清算-->
+				<entry key="28" value="${biz_28}" /><!--授权支付退回清算-->
+			</map>
+		</property>
+	</bean>
+	<!--统一个业务可能有不同的操作通过 配置实现地方特色功能表示-->
+	<bean id="AreaMode"
+		class="com.cfcc.itfe.util.AreaSpecUtil">
+		<property name="area">
+			<value>${area}</value>
+		</property>
+		<property name="sysflag">
+			<value>${sysflag}</value>
+		</property>
+    </bean>
+    
+    <bean id="FileRootPathUtil"
+		class="com.cfcc.itfe.util.FileRootPathUtil">
+		<property name="root">
+			<value>${file.util.root}/temp/</value>
+		</property>
+    </bean>
+	
+</beans>

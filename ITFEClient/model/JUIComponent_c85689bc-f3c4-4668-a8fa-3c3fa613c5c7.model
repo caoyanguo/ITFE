@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JUIComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="c85689bc-f3c4-4668-a8fa-3c3fa613c5c7" name="查询支出报表三广东" ename="selectRecordThreeGD">
+  <jproperties id="ee010d4f-fa64-4a9a-8b89-51103b771e6b" key="GeneratedTime" value="1453431098498"/>
+  <refModule href="JModule_f8e4fa2a-c56c-43e2-9ae3-bd9d4d142725.model#f8e4fa2a-c56c-43e2-9ae3-bd9d4d142725"/>
+  <model id="9a215616-e5a3-448c-a733-2b5dfd37ca7c" name="JModelImpl-9a215616-e5a3-448c-a733-2b5dfd37ca7c">
+    <attributes id="dec0844e-da6e-4409-9cd8-9e75f57850c8" name="searchDto" type="com.cfcc.itfe.persistence.dto.TvPayreckBankDto"/>
+    <attributes id="40bc5af7-1099-4d02-a349-94ff97c333a2" name="pagingcontext" type="com.cfcc.jaf.rcp.control.table.PagingContext"/>
+    <directions id="8267e469-ab09-4585-ab9a-5784d29d91fc" name="查询" ename="queryInfo"/>
+    <directions id="d8e8370f-7ed4-464b-a9bf-96aa44f8df92" viewers="7d370489-97b1-4907-80ef-289d27cf5a16" name="打印" ename="queryPrint"/>
+    <directions id="686c2086-3510-4d34-8282-12ca615fd375" viewers="f470d271-2bc0-4f71-9bb0-fe771ea46214" name="返回" ename="backQuery"/>
+  </model>
+  <services href="JServiceComponet_7b9ea0db-b552-460f-979f-320ab2e98c82.model#7b9ea0db-b552-460f-979f-320ab2e98c82"/>
+  <services href="JServiceComponet_e6176445-818a-4b4d-959d-1c4784d1e351.model#e6176445-818a-4b4d-959d-1c4784d1e351"/>
+  <contentAreas id="1f28ef22-20ea-425b-81ac-f26184429719">
+    <contentareanode id="2c6543af-2c7f-4728-a731-8fd5281a6e63" name="查询条件">
+      <widgetRefs xsi:type="model:Text" id="ab0c336b-4ee7-4537-9ca2-fd6e3390cfbd" name="年度" binding="searchDto.sofyear" caption="年度" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="93aafefb-961a-4aaf-a80e-d68e30ac7fe7" name="开户银行" binding="searchDto.sagentacctbankname" caption="开户银行" required="true"/>
+      <widgetRefs xsi:type="model:Text" id="93d898a2-7661-42d3-b8a5-13d55317341a" name="预算单位" binding="searchListDto.ssupdepname" caption="预算单位"/>
+      <widgetRefs xsi:type="model:Text" id="dc8a0a68-828c-4b0a-afdd-7ca692712064" name="预算科目" binding="searchListDto.sfuncbdgsbtcode" caption="预算科目"/>
+      <widgetRefs xsi:type="model:Combo" id="74e36728-dcf4-42f2-9fef-aadde89ee794" name="集中支付种类" binding="searchDto.spaymode" caption="集中支付种类">
+        <enum href="EnumNode_e05b666d-f3d4-46b9-a3d6-8c24175a9bdc.model#fe3dd2bc-7527-4d01-856e-a0751c878760"/>
+      </widgetRefs>
+      <widgetRefs xsi:type="model:PlaceHolder" id="7627226e-4e3d-473a-b560-66bd6be2d1a4" name="PlaceHolderImpl-7627226e-4e3d-473a-b560-66bd6be2d1a4"/>
+      <widgetRefs xsi:type="model:Button" id="4e0f42be-8408-409d-b8fd-a9b9118df640" name="查询" caption="查询" layout="GridLayout" direction="8267e469-ab09-4585-ab9a-5784d29d91fc"/>
+      <widgetRefs xsi:type="model:Button" id="d03a2331-1f01-40dd-89aa-2ad913bb443c" name="打印" caption="打印" layout="GridLayout" direction="d8e8370f-7ed4-464b-a9bf-96aa44f8df92"/>
+    </contentareanode>
+    <contentareanode id="4d748122-9b44-49b1-afcb-932534475f5d" name="查询结果">
+      <widgetRefs xsi:type="model:Table" id="fdca9e47-e3c7-49df-ac96-ab83f7065693" name="TableImpl-fdca9e47-e3c7-49df-ac96-ab83f7065693" binding="resultList">
+        <columnlist id="1b4961a8-a9d6-4a78-b2b7-64aef4f82df5" name="月份" binding="sfinorgcode" caption="月份"/>
+        <columnlist id="b8e1dcb7-d4bf-4f09-84e5-496e5a248107" name="预算单位代码" binding="spayeracct" caption="预算单位代码"/>
+        <columnlist id="492e252a-013b-4e3f-a996-e82f4469f20a" name="预算单位名称" binding="spayername" caption="预算单位名称"/>
+        <columnlist id="07a1d4f9-0260-404e-bd84-4228e669cec3" name="预算科目代码" binding="spayeeacct" caption="预算科目代码"/>
+        <columnlist id="d2bb759b-78c6-415e-92e7-1fa616e8c8d0" name="预算科目名称" binding="spayeename" caption="预算科目名称"/>
+        <columnlist id="b18945d3-38f4-43f9-8456-9dd6cd63bc46" name="开户银行" binding="sagentacctbankname" caption="开户银行"/>
+        <columnlist id="e710070b-4de5-441a-9c73-81b6dc63493b" name="集中支付种类" binding="spaymode" caption="集中支付种类"/>
+        <columnlist id="db762bcb-6fa3-4db6-80fa-2bb064159cc0" name="支付金额" binding="famt" caption="支付金额"/>
+      </widgetRefs>
+    </contentareanode>
+    <contentareanode id="57875670-80f1-4f39-8078-f54bac88be72" name="打印界面">
+      <jreportref id="6c4456ec-f297-402f-b968-64b10ea31a64" name="打印界面" reportpath="reportPath" binding="reportlist" parammap="reportmap"/>
+    </contentareanode>
+  </contentAreas>
+  <pagenodes id="7a33b6df-378c-4bfa-a6e9-ac7d8dc201ee">
+    <pages id="384eb56e-d386-4e01-980d-8a14f50c143b" name="JPageImpl-384eb56e-d386-4e01-980d-8a14f50c143b">
+      <views id="f470d271-2bc0-4f71-9bb0-fe771ea46214" name="查询界面" isdefault="true" template="com.cfcc.jaf.rcp.template.viewerimpl.OnePageMultiViewersImpl" contentArea="2c6543af-2c7f-4728-a731-8fd5281a6e63 4d748122-9b44-49b1-afcb-932534475f5d"/>
+      <views id="7d370489-97b1-4907-80ef-289d27cf5a16" name="打印界面" contentArea="57875670-80f1-4f39-8078-f54bac88be72">
+        <buttonArea id="1421a8f4-d351-4e03-8c2a-f02cd7aed7b1" name="JButtonAreaImpl-1421a8f4-d351-4e03-8c2a-f02cd7aed7b1">
+          <buttons id="399d253d-8d27-40ae-89e0-695741544dfe" name="返回" caption="返回" direction="686c2086-3510-4d34-8282-12ca615fd375"/>
+        </buttonArea>
+      </views>
+    </pages>
+  </pagenodes>
+</model:JUIComponent>

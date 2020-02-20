@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+<jb:bean beanId="CFX" class="java.util.HashMap" createOnElement="CFX">
+	<jb:wiring property="HEAD" beanIdRef="HEAD" />
+	<jb:wiring property="MSG" beanIdRef="MSG" />
+</jb:bean>
+<jb:bean beanId="MSG" class="java.util.HashMap" createOnElement="MSG">
+	<jb:wiring property="BatchHead3140" beanIdRef="BatchHead3140" />
+	<jb:wiring property="RetTreasury3140" beanIdRef="RetTreasury3140s" />
+</jb:bean>
+<jb:bean beanId="BatchHead3140" class="java.util.HashMap" createOnElement="BatchHead3140">
+	<jb:value property="FinOrgCode" decoder="String" data="CFX/MSG/BatchHead3140/FinOrgCode" />
+	<jb:value property="DrawBackTreCode" decoder="String" data="CFX/MSG/BatchHead3140/DrawBackTreCode" />
+	<jb:value property="PackNo" decoder="String" data="CFX/MSG/BatchHead3140/PackNo" />
+	<jb:value property="EntrustDate" decoder="String" data="CFX/MSG/BatchHead3140/EntrustDate" />
+	<jb:value property="AllNum" decoder="String" data="CFX/MSG/BatchHead3140/AllNum" />
+	<jb:value property="AllAmt" decoder="String" data="CFX/MSG/BatchHead3140/AllAmt" />
+	<jb:value property="ChildPackNum" decoder="String" data="CFX/MSG/BatchHead3140/ChildPackNum" />
+	<jb:value property="CurPackNo" decoder="String" data="CFX/MSG/BatchHead3140/CurPackNo" />
+	<jb:value property="CurPackNum" decoder="String" data="CFX/MSG/BatchHead3140/CurPackNum" />
+	<jb:value property="CurPackAmt" decoder="String" data="CFX/MSG/BatchHead3140/CurPackAmt" />
+</jb:bean>
+<jb:bean beanId="RetTreasury3140s" class="java.util.ArrayList" createOnElement="MSG">
+	<jb:wiring beanIdRef="RetTreasury3140" />
+</jb:bean>
+<jb:bean beanId="RetTreasury3140" class="java.util.HashMap" createOnElement="RetTreasury3140">
+	<jb:value property="TraNo" decoder="String" data="CFX/MSG/RetTreasury3140/TraNo" />
+	<jb:value property="TaxOrgCode" decoder="String" data="CFX/MSG/RetTreasury3140/TaxOrgCode" />
+	<jb:value property="PayeeBankNo" decoder="String" data="CFX/MSG/RetTreasury3140/PayeeBankNo" />
+	<jb:value property="PayeeOpBkCode" decoder="String" data="CFX/MSG/RetTreasury3140/PayeeOpBkCode" />
+	<jb:value property="PayeeAcct" decoder="String" data="CFX/MSG/RetTreasury3140/PayeeAcct" />
+	<jb:value property="PayeeName" decoder="String" data="CFX/MSG/RetTreasury3140/PayeeName" />
+	<jb:value property="TaxPayCode" decoder="String" data="CFX/MSG/RetTreasury3140/TaxPayCode" />
+	<jb:value property="TaxPayName" decoder="String" data="CFX/MSG/RetTreasury3140/TaxPayName" />
+	<jb:value property="DrawBackVouNo" decoder="String" data="CFX/MSG/RetTreasury3140/DrawBackVouNo" />
+	<jb:value property="ElectroTaxVouNo" decoder="String" data="CFX/MSG/RetTreasury3140/ElectroTaxVouNo" />
+	<jb:value property="OriTaxVouNo" decoder="String" data="CFX/MSG/RetTreasury3140/OriTaxVouNo" />
+	<jb:value property="TraAmt" decoder="String" data="CFX/MSG/RetTreasury3140/TraAmt" />
+	<jb:value property="BillDate" decoder="String" data="CFX/MSG/RetTreasury3140/BillDate" />
+	<jb:value property="CorpCode" decoder="String" data="CFX/MSG/RetTreasury3140/CorpCode" />
+	<jb:value property="BudgetType" decoder="String" data="CFX/MSG/RetTreasury3140/BudgetType" />
+	<jb:value property="BudgetSubjectCode" decoder="String" data="CFX/MSG/RetTreasury3140/BudgetSubjectCode" />
+	<jb:value property="BudgetLevelCode" decoder="String" data="CFX/MSG/RetTreasury3140/BudgetLevelCode" />
+	<jb:value property="TrimSign" decoder="String" data="CFX/MSG/RetTreasury3140/TrimSign" />
+	<jb:value property="ViceSign" decoder="String" data="CFX/MSG/RetTreasury3140/ViceSign" />
+	<jb:value property="DrawBackReasonCode" decoder="String" data="CFX/MSG/RetTreasury3140/DrawBackReasonCode" />
+	<jb:value property="DrawBackVou" decoder="String" data="CFX/MSG/RetTreasury3140/DrawBackVou" />
+	<jb:value property="ExamOrg" decoder="String" data="CFX/MSG/RetTreasury3140/ExamOrg" />
+	<jb:value property="AuthNo" decoder="String" data="CFX/MSG/RetTreasury3140/AuthNo" />
+	<jb:value property="TransType" decoder="String" data="CFX/MSG/RetTreasury3140/TransType" />
+	<jb:value property="OpStat" decoder="String" data="CFX/MSG/RetTreasury3140/OpStat" />
+</jb:bean>
+
+<import file="xml2javahead.xml" />
+</smooks-resource-list>

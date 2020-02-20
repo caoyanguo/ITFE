@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<model:JServiceComponent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http:///com/cfcc/devplatform/model.ecore" id="45a6adbc-2eb7-4d7d-9296-650f1e0958ad" name="查询服务组件" ename="bizdatasearch">
+  <jproperties id="dcee0a8c-fe77-4966-8b86-796a50c92157" key="GeneratedTime" value="1338369614456"/>
+  <refModule href="JModule_814e9ac0-1631-4525-9f4b-556c7c75654e.model#814e9ac0-1631-4525-9f4b-556c7c75654e"/>
+  <methods id="5c7c5417-e217-4cfe-b8bb-101c03a28c74" ename="getResult" name="获取查询结果" returntype="java.util.List">
+    <methodParams id="85f37aae-b697-40e6-8226-5b5cf0de8ed0" name="查询sql" ename="sql" type="java.lang.String"/>
+  </methods>
+</model:JServiceComponent>
